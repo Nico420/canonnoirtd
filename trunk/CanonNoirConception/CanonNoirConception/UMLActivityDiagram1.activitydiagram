@@ -1,5 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="2f187204-d54d-4b39-8067-b53412dcc8de" name="Activity1" linkedPackageId="b5f15eda-af73-48d8-a712-71bec0e254e1" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <ownedCommentsInternal>
+    <comment Id="62563d8a-f2ec-453d-84e7-eb7ae75728ef">
+      <elementDefinition Id="a2981087-b7f7-4b23-97d1-770368184746" />
+      <body>un duel consiste en un échange de Tir entre deux navires : le navire attaquant tire le premier. S'il réussit, le du</body>
+      <annotatedElements>
+        <opaqueActionMoniker Id="3a9faef1-a82b-4e0c-8186-bbe78cdb29b9" LastKnownName="Duel" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
   <packagedElements>
     <activityRootModelHasActivity>
       <activity Id="af470cf1-dd39-403a-8dfa-865525c404b1" name="Activity1" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
@@ -14,34 +23,16 @@
               </controlFlow>
             </flowNodeTargets>
           </initialNode>
-          <opaqueAction Id="6e9a9b33-e41b-4ebc-94f1-00db6ba0abe9" name="Choisir couleur" isLeaf="false">
-            <elementDefinition Id="7c1d5e6b-9a65-4bce-8018-c82056cb5157" />
-            <flowNodeTargets>
-              <controlFlow Id="92645583-fa19-4a2c-8206-ba04fd961cef" isLeaf="false">
-                <opaqueActionMoniker Id="b9f4ff22-a7cf-464c-8bd5-01d1e4531daa" LastKnownName="Lancer dés" />
-                <elementDefinition Id="fc71d3d8-c7e3-44d8-937b-fd0d8c766d3d" />
-              </controlFlow>
-            </flowNodeTargets>
-          </opaqueAction>
-          <opaqueAction Id="b9f4ff22-a7cf-464c-8bd5-01d1e4531daa" name="Lancer dés" isLeaf="false">
-            <elementDefinition Id="70263e68-d05c-437c-b277-360436b9f3f8" />
-            <flowNodeTargets>
-              <controlFlow Id="a903db5b-1d85-4f30-b778-7f0ccec3b391" isLeaf="false">
-                <opaqueActionMoniker Id="b7b1a589-7a04-4924-a45f-4e851ab96b73" LastKnownName="Premier joueur lance les dés" />
-                <elementDefinition Id="09636f6a-ff89-4103-a831-e301d6e8c204" />
-              </controlFlow>
-            </flowNodeTargets>
-          </opaqueAction>
           <opaqueAction Id="b7b1a589-7a04-4924-a45f-4e851ab96b73" name="Premier joueur lance les dés" isLeaf="false">
             <elementDefinition Id="f1b50d18-59c8-4ef2-b642-47dc7588484c" />
             <flowNodeTargets>
               <controlFlow Id="cbca7c5d-556f-4d65-bf53-c0540063c5b9" isLeaf="false">
-                <opaqueActionMoniker Id="1015631a-9116-4ca6-a59b-3fdb8ba78928" LastKnownName="Premier joueur choisit case finale" />
+                <opaqueActionMoniker Id="1015631a-9116-4ca6-a59b-3fdb8ba78928" LastKnownName="Joueur courant choisit case finale" />
                 <elementDefinition Id="f6d8cf80-3f13-49ad-acbc-202939cf7546" />
               </controlFlow>
             </flowNodeTargets>
           </opaqueAction>
-          <opaqueAction Id="1015631a-9116-4ca6-a59b-3fdb8ba78928" name="Premier joueur choisit case finale" isLeaf="false">
+          <opaqueAction Id="1015631a-9116-4ca6-a59b-3fdb8ba78928" name="Joueur courant choisit case finale" isLeaf="false">
             <elementDefinition Id="70f6d91d-6f7f-408a-a99a-fe25316fd037" />
             <flowNodeTargets>
               <controlFlow Id="c77dfb50-e190-4adc-8890-d8e9216ca7bd" isLeaf="false">
@@ -53,27 +44,283 @@
           <decisionNode Id="f46b1f00-4350-4769-8359-85b3e537a7f9" name="Decision1" isLeaf="false">
             <elementDefinition Id="cc3945bb-1abe-4299-9202-c5b6a03eb739" />
             <flowNodeTargets>
-              <controlFlow Id="b0474803-e67e-47a3-82d1-3897514661f9" guard="Case mer" isLeaf="false">
-                <opaqueActionMoniker Id="92734a52-aa6a-45ea-bea5-538c4a6e4575" LastKnownName="Joueur suivant lance les dés" />
-                <elementDefinition Id="0fc52b2a-6ecc-4b86-856f-938182d66788" />
+              <controlFlow Id="2c6b3461-9284-4233-8a64-5b0f290dfa49" guard="Case mer" isLeaf="false">
+                <decisionNodeMoniker Id="27538003-3650-4fb4-a395-801656186fd1" LastKnownName="Decision3" />
+                <elementDefinition Id="0c82bc5d-5a27-484e-8d50-f5c4f860f7e9" />
+              </controlFlow>
+              <controlFlow Id="a19b9eee-6a03-4c40-99f4-f4792c5b8489" guard="Case Canon" isLeaf="false">
+                <acceptEventActionMoniker Id="681b96c9-70fc-40ef-a9a2-061ca58a6b50" LastKnownName="Choisir sur qui tirer" />
+                <elementDefinition Id="7890c3c9-53e2-4a71-b22c-a28ec7846b4a" />
+              </controlFlow>
+              <controlFlow Id="7436fd1b-26d8-43c6-bac0-15df6a8c8bef" guard="Case Trésor" isLeaf="false">
+                <decisionNodeMoniker Id="9bc27aba-0dc4-4002-aadb-c771667157b1" LastKnownName="Decision2" />
+                <elementDefinition Id="0171c798-fd9f-49db-85dd-a43679cf0061" />
+              </controlFlow>
+              <controlFlow Id="86842000-4ed0-478b-819b-76ce3b3c7714" guard="Case Port" isLeaf="false">
+                <decisionNodeMoniker Id="6ec8514b-0656-45b2-8d3a-c747524a72a8" LastKnownName="Decision8" />
+                <elementDefinition Id="5bfa3ddc-145b-4ea6-9744-d90e4851933b" />
               </controlFlow>
             </flowNodeTargets>
           </decisionNode>
           <opaqueAction Id="92734a52-aa6a-45ea-bea5-538c4a6e4575" name="Joueur suivant lance les dés" isLeaf="false">
             <elementDefinition Id="b9ca6579-efbc-4089-b53b-7acd72fd850c" />
-          </opaqueAction>
-          <opaqueAction Id="4e9700f3-e729-4247-88a4-a848eb1e60d1" name="Action1" isLeaf="false">
-            <elementDefinition Id="446edd9b-6b5a-45ef-8c20-40b489edc4ae" />
+            <flowNodeTargets>
+              <controlFlow Id="34d68f5a-169b-4b14-afc4-00af236523d7" isLeaf="false">
+                <opaqueActionMoniker Id="1015631a-9116-4ca6-a59b-3fdb8ba78928" LastKnownName="Joueur courant choisit case finale" />
+                <elementDefinition Id="9240df03-2266-4623-82e2-3dd0551385cd" />
+              </controlFlow>
+            </flowNodeTargets>
           </opaqueAction>
           <acceptEventAction Id="b79ef456-cb4d-412e-856c-d4ef24ff9c6c" name="Attente Nb Joueur" isLeaf="false" isUnmarshall="false">
             <elementDefinition Id="e349b50b-74f8-45ec-8e37-e458ec5715e7" />
             <flowNodeTargets>
-              <controlFlow Id="29a0c9f0-3ac8-4c5a-9c8f-1e74db6d8e41" isLeaf="false">
-                <opaqueActionMoniker Id="6e9a9b33-e41b-4ebc-94f1-00db6ba0abe9" LastKnownName="Choisir couleur" />
-                <elementDefinition Id="f768cd82-af03-44be-b4dd-deb9920546a4" />
+              <controlFlow Id="98907f2d-852a-4e9d-a20b-409ff9412866" isLeaf="false">
+                <acceptEventActionMoniker Id="c4ce163b-b6e1-4088-b0ee-2535ffefbcf5" LastKnownName="Choisir couleur" />
+                <elementDefinition Id="4b11e9df-ab69-4ad9-aa9c-9680bc0821ee" />
               </controlFlow>
             </flowNodeTargets>
           </acceptEventAction>
+          <decisionNode Id="9bc27aba-0dc4-4002-aadb-c771667157b1" name="Decision2" isLeaf="false">
+            <elementDefinition Id="4736bfef-e4da-43fe-9f79-83593e461619" />
+            <flowNodeTargets>
+              <controlFlow Id="b58b1ee2-c8cd-4085-a693-2ab94d463242" guard="Bateau est caravelle ou frégate" isLeaf="false">
+                <decisionNodeMoniker Id="c6cdfcea-a688-461a-b65c-550926ce0c10" LastKnownName="Decision10" />
+                <elementDefinition Id="a2d2aa52-3fdd-4e6e-8fd2-1a187616ec60" />
+              </controlFlow>
+              <controlFlow Id="c1d08b40-799a-490c-a73c-d499aeac4c43" guard="Bateau est radeau" isLeaf="false">
+                <opaqueActionMoniker Id="92734a52-aa6a-45ea-bea5-538c4a6e4575" LastKnownName="Joueur suivant lance les dés" />
+                <elementDefinition Id="c858b6ea-eb4e-4cec-b8cf-2d9199ef2784" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <acceptEventAction Id="3b43703e-ffbf-46b5-91f2-808ebdd54585" name="Choix de l'angle de tir" isLeaf="false" isUnmarshall="false">
+            <elementDefinition Id="fc2ff575-aaab-49d2-8f0b-02e66fcbc0b4" />
+            <flowNodeTargets>
+              <controlFlow Id="89eb6085-6491-4b8c-878c-aa3b2fb8e6e2" isLeaf="false">
+                <acceptEventActionMoniker Id="49fe956a-24b6-4f8e-ac5f-505382dcd371" LastKnownName="Choix de la puissance de tir" />
+                <elementDefinition Id="230a8d64-3c2a-42de-865b-482b49de9d1d" />
+              </controlFlow>
+            </flowNodeTargets>
+          </acceptEventAction>
+          <acceptEventAction Id="49fe956a-24b6-4f8e-ac5f-505382dcd371" name="Choix de la puissance de tir" isLeaf="false" isUnmarshall="false">
+            <elementDefinition Id="b5eb6896-c2f1-48d0-87cf-ea5e7e6b871e" />
+            <flowNodeTargets>
+              <controlFlow Id="f9a2fce9-ab48-4099-bfeb-66fd145ca6eb" isLeaf="false">
+                <opaqueActionMoniker Id="503a790b-7ea0-4b27-9137-c208af00307f" LastKnownName="Tir" />
+                <elementDefinition Id="52cb6947-8a1c-4e62-b3c5-448620e101dc" />
+              </controlFlow>
+            </flowNodeTargets>
+          </acceptEventAction>
+          <decisionNode Id="27538003-3650-4fb4-a395-801656186fd1" name="Decision3" isLeaf="false">
+            <elementDefinition Id="b9472867-879a-4221-bce7-59bf80131b87" />
+            <flowNodeTargets>
+              <controlFlow Id="5487c850-91f9-4307-8e98-cd1a5c423e90" guard="Case pas en bordure" isLeaf="false">
+                <opaqueActionMoniker Id="92734a52-aa6a-45ea-bea5-538c4a6e4575" LastKnownName="Joueur suivant lance les dés" />
+                <elementDefinition Id="7ae65ea8-5683-4157-af78-a8512dfb4749" />
+              </controlFlow>
+              <controlFlow Id="d8dadd9d-38e1-4b98-a33b-aa46bbdfd27f" guard="Case en bordure" isLeaf="false">
+                <decisionNodeMoniker Id="5f7b1d8f-a90e-450b-8c75-29a3f1125b4f" LastKnownName="Decision4" />
+                <elementDefinition Id="1650bdc0-651d-4a78-8186-ff36f1121048" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <decisionNode Id="5f7b1d8f-a90e-450b-8c75-29a3f1125b4f" name="Decision4" isLeaf="false">
+            <elementDefinition Id="819535a6-a371-433c-9ea2-3f144a10bfba" />
+            <flowNodeTargets>
+              <controlFlow Id="41853bd1-8715-41ad-bc5d-ac8fed76617f" guard="Pas de joueur attaquable" isLeaf="false">
+                <opaqueActionMoniker Id="92734a52-aa6a-45ea-bea5-538c4a6e4575" LastKnownName="Joueur suivant lance les dés" />
+                <elementDefinition Id="9d3faa33-b7e1-46c9-81f1-d37ea0c968f2" />
+              </controlFlow>
+              <controlFlow Id="460a4df1-365d-4ea8-8c16-adf4b3acec5e" guard="Joueur attaquable" isLeaf="false">
+                <opaqueActionMoniker Id="3a9faef1-a82b-4e0c-8186-bbe78cdb29b9" LastKnownName="Duel" />
+                <elementDefinition Id="4c4dd8b4-c36a-44dd-9690-52f95f837416" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="503a790b-7ea0-4b27-9137-c208af00307f" name="Tir" isLeaf="false">
+            <elementDefinition Id="8830c20b-9c8a-4485-be02-5bc536e82358" />
+            <flowNodeTargets>
+              <controlFlow Id="6fe8bd87-fe7d-42b2-b6d4-507b257ba3ef" isLeaf="false">
+                <decisionNodeMoniker Id="e50d455f-3f8d-4ddc-9cea-5666772c00b9" LastKnownName="Decision5" />
+                <elementDefinition Id="52c0e41a-fd92-41e1-8bba-0b3c53c30d09" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="e50d455f-3f8d-4ddc-9cea-5666772c00b9" name="Decision5" isLeaf="false">
+            <elementDefinition Id="26db51f3-cd24-42a5-bde1-e53aa64ce10a" />
+            <flowNodeTargets>
+              <controlFlow Id="42534f6d-bae2-4b2a-ac5d-657619071338" guard="Manqué" isLeaf="false">
+                <opaqueActionMoniker Id="92734a52-aa6a-45ea-bea5-538c4a6e4575" LastKnownName="Joueur suivant lance les dés" />
+                <elementDefinition Id="8b8006f4-a84a-4530-8f1b-801cd4b65aa4" />
+              </controlFlow>
+              <controlFlow Id="78a9ed47-b6f9-4b80-bb3b-361bdb52fff0" guard="Réussi" isLeaf="false">
+                <decisionNodeMoniker Id="84783104-c012-46b1-894b-35f6921882b5" LastKnownName="Decision6" />
+                <elementDefinition Id="0dd356b5-04c4-400b-b9f6-4d98456f843a" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="c2a56fa6-f1ac-4907-90c0-cc2eb7ee5ddd" name="Récupérer Trésor" isLeaf="false">
+            <elementDefinition Id="f4e04565-ad05-41c9-8510-ee75349a0d3a" />
+            <flowNodeTargets>
+              <controlFlow Id="098e1990-5bab-44cf-a1ea-3e3e3429e152" isLeaf="false">
+                <opaqueActionMoniker Id="b5ab96a4-7a67-497a-9555-a5a3c06639ec" LastKnownName="Dégrader bateau touché" />
+                <elementDefinition Id="e20f1dd6-8298-475b-bb35-9f3789c90a74" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <acceptEventAction Id="681b96c9-70fc-40ef-a9a2-061ca58a6b50" name="Choisir sur qui tirer" isLeaf="false" isUnmarshall="false">
+            <elementDefinition Id="17e673e5-b0de-4e42-ad12-73b4fdf3f748" />
+            <flowNodeTargets>
+              <controlFlow Id="796cb159-cae4-4c67-8f98-deee2bfea286" isLeaf="false">
+                <acceptEventActionMoniker Id="3b43703e-ffbf-46b5-91f2-808ebdd54585" LastKnownName="Choix de l'angle de tir" />
+                <elementDefinition Id="b1f8bdc4-25f6-4e32-953d-8e189893e59f" />
+              </controlFlow>
+            </flowNodeTargets>
+          </acceptEventAction>
+          <opaqueAction Id="b5ab96a4-7a67-497a-9555-a5a3c06639ec" name="Dégrader bateau touché" isLeaf="false">
+            <elementDefinition Id="534ad574-2647-4f46-be19-ee9c1459c9fc" />
+            <flowNodeTargets>
+              <controlFlow Id="448388b6-bf2d-4b82-93a0-82aac4904a07" isLeaf="false">
+                <opaqueActionMoniker Id="92734a52-aa6a-45ea-bea5-538c4a6e4575" LastKnownName="Joueur suivant lance les dés" />
+                <elementDefinition Id="aaffba70-bfed-4926-a880-32de32e5c17e" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="2b269804-c13c-47df-b7af-13e31b4c5704" name="Déposer trésor" isLeaf="false">
+            <elementDefinition Id="7be29c31-0cfc-4214-96b3-1d53d2cdf2e1" />
+            <flowNodeTargets>
+              <controlFlow Id="a9703981-d5ec-4f55-8e62-2852a94e239b" isLeaf="false">
+                <decisionNodeMoniker Id="a92e797f-7e6a-45df-bce2-d845ab9d7595" LastKnownName="Decision9" />
+                <elementDefinition Id="27e24bcf-7b4d-418a-8580-3215990c75c1" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="84783104-c012-46b1-894b-35f6921882b5" name="Decision6" isLeaf="false">
+            <elementDefinition Id="ba544328-3cb4-445d-9257-bea1fd3a67ea" />
+            <flowNodeTargets>
+              <controlFlow Id="39d7b522-d5ec-4614-a083-e295043b706d" guard="Trésor sur navire touché" isLeaf="false">
+                <decisionNodeMoniker Id="dc7d3e84-8cb5-4d54-864c-1aec088c6ddb" LastKnownName="Decision7" />
+                <elementDefinition Id="a2dbe475-2b09-4b15-ba95-72caa1cc3843" />
+              </controlFlow>
+              <controlFlow Id="d80a80b5-fd79-4b7c-8142-515e14589968" guard="Pas de trésor sur navire touché" isLeaf="false">
+                <opaqueActionMoniker Id="b5ab96a4-7a67-497a-9555-a5a3c06639ec" LastKnownName="Dégrader bateau touché" />
+                <elementDefinition Id="9d6a618b-af6b-40dd-936f-4bb67c3d8a5e" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <decisionNode Id="dc7d3e84-8cb5-4d54-864c-1aec088c6ddb" name="Decision7" isLeaf="false">
+            <elementDefinition Id="8eca9def-10ae-4e48-9cf0-65ea3568725e" />
+            <flowNodeTargets>
+              <controlFlow Id="c3d3696b-6075-4607-b022-9f05507fbde0" guard="Frégate" isLeaf="false">
+                <opaqueActionMoniker Id="c2a56fa6-f1ac-4907-90c0-cc2eb7ee5ddd" LastKnownName="Récupérer Trésor" />
+                <elementDefinition Id="c9625b3d-53d3-4fa3-9bf9-59ef273ca493" />
+              </controlFlow>
+              <controlFlow Id="2abec8da-7a62-46ec-a2de-875355764822" guard="Caravelle" isLeaf="false">
+                <opaqueActionMoniker Id="b5ab96a4-7a67-497a-9555-a5a3c06639ec" LastKnownName="Dégrader bateau touché" />
+                <elementDefinition Id="8f343beb-83a1-48f4-bb88-87a8d43b3949" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="2738ef19-69e4-4db1-84fc-82a28939f185" name="Passer en caravelle" isLeaf="false">
+            <elementDefinition Id="3399f66e-7d01-4e17-91eb-434935ea0855" />
+            <flowNodeTargets>
+              <controlFlow Id="5628f1d2-f654-4c28-9204-7d7fdc263252" isLeaf="false">
+                <opaqueActionMoniker Id="92734a52-aa6a-45ea-bea5-538c4a6e4575" LastKnownName="Joueur suivant lance les dés" />
+                <elementDefinition Id="932bcd9f-0803-4d6d-9e65-c3b9761e5b0b" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="6ec8514b-0656-45b2-8d3a-c747524a72a8" name="Decision8" isLeaf="false">
+            <elementDefinition Id="712997af-1b30-4bd0-8f00-f861fede9f80" />
+            <flowNodeTargets>
+              <controlFlow Id="7fabeae7-249b-41d8-9b5b-6b0bd8aa0dc2" guard="Trésor à bord" isLeaf="false">
+                <opaqueActionMoniker Id="2b269804-c13c-47df-b7af-13e31b4c5704" LastKnownName="Déposer trésor" />
+                <elementDefinition Id="d3d4bf13-8787-4fe3-9b67-a182c1e7b8e1" />
+              </controlFlow>
+              <controlFlow Id="45274d5e-41a9-4984-af8a-21a072c0aa53" guard="Pas de trésor à bord" isLeaf="false">
+                <opaqueActionMoniker Id="2738ef19-69e4-4db1-84fc-82a28939f185" LastKnownName="Passer en caravelle" />
+                <elementDefinition Id="f9d138c3-e2e2-4adb-9170-14e186d96b1c" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <acceptEventAction Id="c4ce163b-b6e1-4088-b0ee-2535ffefbcf5" name="Choisir couleur" isLeaf="false" isUnmarshall="false">
+            <elementDefinition Id="185b096d-3f93-4a09-a2d0-175041ed49bf" />
+            <flowNodeTargets>
+              <controlFlow Id="2c67032f-1c54-46c6-901f-e206d370ff8f" isLeaf="false">
+                <acceptEventActionMoniker Id="c961e42f-f895-4325-ae5c-35f8ed88000b" LastKnownName="Lancer dés" />
+                <elementDefinition Id="696ba8a7-002f-40cf-8a11-d65703eaaa8d" />
+              </controlFlow>
+            </flowNodeTargets>
+          </acceptEventAction>
+          <acceptEventAction Id="c961e42f-f895-4325-ae5c-35f8ed88000b" name="Lancer dés" isLeaf="false" isUnmarshall="false">
+            <elementDefinition Id="8baaf526-3c58-4b3c-a60d-93a4f309bc0d" />
+            <flowNodeTargets>
+              <controlFlow Id="e1acb48f-920c-4c14-af33-f11fafe293e0" isLeaf="false">
+                <opaqueActionMoniker Id="b7b1a589-7a04-4924-a45f-4e851ab96b73" LastKnownName="Premier joueur lance les dés" />
+                <elementDefinition Id="b8d8267a-e7f8-4589-ba4a-f87bd3cb683b" />
+              </controlFlow>
+            </flowNodeTargets>
+          </acceptEventAction>
+          <decisionNode Id="a92e797f-7e6a-45df-bce2-d845ab9d7595" name="Decision9" isLeaf="false">
+            <elementDefinition Id="425656e4-9832-48f3-adf8-5f940db13ae5" />
+            <flowNodeTargets>
+              <controlFlow Id="1e48c8cf-7c52-4708-b069-69c3bfacf785" guard="Score du joueur &lt;3" isLeaf="false">
+                <opaqueActionMoniker Id="2738ef19-69e4-4db1-84fc-82a28939f185" LastKnownName="Passer en caravelle" />
+                <elementDefinition Id="7c1546cc-fa02-43c7-b0fa-5a28925735e7" />
+              </controlFlow>
+              <controlFlow Id="06424b69-b409-4007-a36b-1de8eb7c2120" guard="Score du joueur =3" isLeaf="false">
+                <activityFinalNodeMoniker Id="5d4c61f6-2c94-4712-919f-8d8dcea010af" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="2510a071-499c-448c-b70f-e641e838df93" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <activityFinalNode Id="5d4c61f6-2c94-4712-919f-8d8dcea010af" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="d3887f13-a366-45f4-bde3-cffba8ffdf00" />
+          </activityFinalNode>
+          <decisionNode Id="c6cdfcea-a688-461a-b65c-550926ce0c10" name="Decision10" isLeaf="false">
+            <elementDefinition Id="82578f92-8dbb-4e0c-bf0a-c1ea1dcce66b" />
+            <flowNodeTargets>
+              <controlFlow Id="26d7c3d4-f482-4a8d-8e7a-c30abc6ed7bc" guard="Trésor à bord" isLeaf="false">
+                <opaqueActionMoniker Id="92734a52-aa6a-45ea-bea5-538c4a6e4575" LastKnownName="Joueur suivant lance les dés" />
+                <elementDefinition Id="faf371b4-3be9-4595-b985-8dec792c1c2d" />
+              </controlFlow>
+              <controlFlow Id="8107d3c6-fa55-4ff5-997d-e309d7515947" guard="Pas de trésor à bord" isLeaf="false">
+                <decisionNodeMoniker Id="1026233c-0747-4b40-a821-fb3df1d29f1c" LastKnownName="Decision11" />
+                <elementDefinition Id="094f0b1a-e5e6-4d71-a7a6-e3a7fc03c031" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <decisionNode Id="1026233c-0747-4b40-a821-fb3df1d29f1c" name="Decision11" isLeaf="false">
+            <elementDefinition Id="f17beedf-9997-45bd-b342-9a4035056635" />
+            <flowNodeTargets>
+              <controlFlow Id="eafa8167-0dd6-4970-bb5d-9c10dc52cf95" guard="Trésor disponible" isLeaf="false">
+                <opaqueActionMoniker Id="a097d50d-f3f0-41af-aa33-263e4e5ed0a0" LastKnownName="Prendre trésor" />
+                <elementDefinition Id="80592c4e-ff2a-4628-99c1-39c8195fe343" />
+              </controlFlow>
+              <controlFlow Id="3add9460-0934-4cc8-a03b-397b126aa60d" guard="Pas de trésor disponible" isLeaf="false">
+                <opaqueActionMoniker Id="92734a52-aa6a-45ea-bea5-538c4a6e4575" LastKnownName="Joueur suivant lance les dés" />
+                <elementDefinition Id="79752be9-7fdd-41e5-8e1d-a7a8fe05290e" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="a097d50d-f3f0-41af-aa33-263e4e5ed0a0" name="Prendre trésor" isLeaf="false">
+            <elementDefinition Id="31e91015-ef4d-4fd5-ae72-2248b68db1c9" />
+            <flowNodeTargets>
+              <controlFlow Id="20c53007-01a5-4523-bb52-72a8c6b590f5" isLeaf="false">
+                <opaqueActionMoniker Id="92734a52-aa6a-45ea-bea5-538c4a6e4575" LastKnownName="Joueur suivant lance les dés" />
+                <elementDefinition Id="cb822542-0407-411d-b16e-0bf56be4be4b" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="3a9faef1-a82b-4e0c-8186-bbe78cdb29b9" name="Duel" isLeaf="false">
+            <elementDefinition Id="333b0d39-7f29-4e3a-bdf8-215c62de4da5" />
+            <flowNodeTargets>
+              <controlFlow Id="8d5239a4-3fea-43ce-a162-f433d40e934f" isLeaf="false">
+                <opaqueActionMoniker Id="92734a52-aa6a-45ea-bea5-538c4a6e4575" LastKnownName="Joueur suivant lance les dés" />
+                <elementDefinition Id="42adff12-6e75-4194-bc1c-9e10cb4f0442" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
         </nodes>
       </activity>
     </activityRootModelHasActivity>
