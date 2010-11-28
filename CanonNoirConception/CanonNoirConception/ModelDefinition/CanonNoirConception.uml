@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
   dslVersion="1.0.0.0"
   Id="62a60c90-a0aa-4993-b691-f2e0518db317"
   name="CanonNoirConception" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -24,6 +24,32 @@
           LastKnownName="Duel"
           LastKnownLocation="CanonNoirConception.uml" />
       </annotatedElements>
+    </comment>
+    <comment
+      Id="ba2db8bd-8a58-4631-b9d1-c1640aabe9f5">
+      <body>On affiche  un canevas qui contient des images
+</body>
+      <annotatedElements>
+        <classMoniker
+          Id="81e0c9e5-64fa-4d7b-8cd5-b572747aa41c"
+          LastKnownName="Affichage"
+          LastKnownLocation="CanonNoirConception.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="3d555529-7060-4e2b-b1de-c3c47b17e406">
+      <body>typeCase renvoie le type de la case : Normale Port Canon Trésor</body>
+      <annotatedElements>
+        <classMoniker
+          Id="7041591b-d06a-4619-b6b3-8f6b0fc788ce"
+          LastKnownName="Case"
+          LastKnownLocation="CanonNoirConception.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="a2c729ea-95e5-4526-a784-6e64c3e5690d">
+      <body>Facade : plein de get
+</body>
     </comment>
   </ownedCommentsInternal>
   <packagedElements>
@@ -1359,6 +1385,16 @@
             aggregation="None"
             isComposite="false" />
         </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="d1917dcb-6652-42cc-b358-94f204070d43"
+            name="setnbJoueurs"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -1535,6 +1571,30 @@
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false" />
+          <operation
+            Id="941ce5e2-0507-4e68-8ed2-1e31da5f9577"
+            name="choisirAngle"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="f35ab2d9-3fd1-44a8-80da-0a4d1e91e1b0"
+            name="choisirPuiss"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="07b88346-0627-4ee4-9f6e-179b356bfba0"
+            name="choisirCible"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -1631,16 +1691,8 @@
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
-            Id="275cf13b-4c0f-49ce-bfe2-a0d6908e84bc"
-            name="estNavigable"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="04933eab-badd-4b40-90e4-cf90d84df732"
-            name="estAuBord"
+            Id="071df85c-94c4-4a6e-96fa-9bfb4e35babe"
+            name="typeCase"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -1717,6 +1769,24 @@
               LastKnownLocation="CanonNoirConception.uml" />
           </generalization>
         </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="4802d092-672f-4c8a-bc91-630536b910b3"
+            name="estAuBord"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="5ebb4b03-4863-4cdf-a756-6d90ba694296"
+            name="estNavigable"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -1736,7 +1806,7 @@
             isAbstract="false">
             <classMoniker
               Id="425e4dd5-2870-48ad-9fb4-1b14f52fad5f"
-              LastKnownName="Joueur1"
+              LastKnownName="Joueur"
               LastKnownLocation="CanonNoirConception.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -1788,7 +1858,7 @@
             isAbstract="false">
             <classMoniker
               Id="c37fe224-1ab9-40c7-8f02-4a11010534bd"
-              LastKnownName="De1"
+              LastKnownName="De"
               LastKnownLocation="CanonNoirConception.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -1866,7 +1936,20 @@
                   isDerived="false"
                   isDerivedUnion="false"
                   aggregation="None"
-                  isComposite="true" />
+                  isComposite="true">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="3f79f5b8-4a2b-42ab-a4bb-380b19a3416c"
+                      name="Lower"
+                      value="88" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="a1fc0050-7f77-4d17-a08d-3b1ca5b3ddac"
+                      name="Upper"
+                      value="88" />
+                  </upperValueInternal>
+                </memberEnd>
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
@@ -1900,7 +1983,7 @@
     <packageHasNamedElement>
       <class
         Id="425e4dd5-2870-48ad-9fb4-1b14f52fad5f"
-        name="Joueur1"
+        name="Joueur"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
@@ -2031,7 +2114,7 @@
     <packageHasNamedElement>
       <class
         Id="c37fe224-1ab9-40c7-8f02-4a11010534bd"
-        name="De1"
+        name="De"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
@@ -2244,7 +2327,333 @@
             </relationshipOwnedElementsInternal>
           </association>
         </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="a91dbe5b-35a4-452a-b7e5-fec4195ebaad"
+            name="dossier image"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="914f18f4-a13e-4a55-9aa4-edce04811aa4"
+            name="canevas"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="58940d77-1594-4da5-ad86-501c27dda8d7"
+            name="miseAjour"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="ee28d58f-e68d-4cc1-8e23-3f1dab9c26f4"
+            name="init"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="21e3cca4-c1f0-4690-8419-e105d0a694f1"
+            name="sendClic"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
       </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <interaction
+        Id="4b9ee002-b41a-429e-9280-8f8a66c35a22"
+        name="Sequence1"
+        collapseFragmentsFlag="false"
+        isActiveClass="false"
+        isAbstract="false"
+        isLeaf="false"
+        isReentrant="false">
+        <fragments>
+          <behaviorExecutionSpecification
+            Id="69b0858f-53d9-4db7-b941-747dee5b8ed6"
+            name="BehaviorExecutionSpecification1">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="519616ab-b43a-40ac-bcc0-003ed474ec8d"
+                LastKnownName=": Case"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="2f6f8244-3764-4c4c-acb6-43dddefe740f"
+                LastKnownName="ExecutionOccurrenceSpecification2"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="469a6aca-4b32-4723-8e5b-0470b44c3b88"
+                LastKnownName="ExecutionOccurrenceSpecification1"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="29b935f9-9ace-44c3-9c7e-0b1de7b3d85a"
+                LastKnownName="MessageOccurrenceSpecification2"
+                LastKnownLocation="CanonNoirConception.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="bebb3747-b963-45cf-b5ed-113f9fa923b6"
+                LastKnownName="MessageOccurrenceSpecification3"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="469a6aca-4b32-4723-8e5b-0470b44c3b88"
+            name="ExecutionOccurrenceSpecification1">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="99fba1cb-1f96-4ee6-8e1c-14f93c0bf00d"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CanonNoirConception.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="519616ab-b43a-40ac-bcc0-003ed474ec8d"
+                LastKnownName=": Case"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="e49a6aad-97a3-4b44-93f4-3cfbf380b62b"
+            name="MessageOccurrenceSpecification1">
+            <covered>
+              <lifelineMoniker
+                Id="384e55a9-bd3b-48e1-b759-dab21880bd99"
+                LastKnownName="Joueur"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="29b935f9-9ace-44c3-9c7e-0b1de7b3d85a"
+            name="MessageOccurrenceSpecification2">
+            <covered>
+              <lifelineMoniker
+                Id="519616ab-b43a-40ac-bcc0-003ed474ec8d"
+                LastKnownName=": Case"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="bebb3747-b963-45cf-b5ed-113f9fa923b6"
+            name="MessageOccurrenceSpecification3">
+            <covered>
+              <lifelineMoniker
+                Id="519616ab-b43a-40ac-bcc0-003ed474ec8d"
+                LastKnownName=": Case"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="fee16d40-aab3-4c81-9c9e-54a3a68da25f"
+            name="MessageOccurrenceSpecification4">
+            <covered>
+              <lifelineMoniker
+                Id="384e55a9-bd3b-48e1-b759-dab21880bd99"
+                LastKnownName="Joueur"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="2f6f8244-3764-4c4c-acb6-43dddefe740f"
+            name="ExecutionOccurrenceSpecification2">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="83a57594-6b4b-4095-a61b-d1243aa74625"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CanonNoirConception.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="519616ab-b43a-40ac-bcc0-003ed474ec8d"
+                LastKnownName=": Case"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+        </fragments>
+        <lifelines>
+          <lifeline
+            Id="384e55a9-bd3b-48e1-b759-dab21880bd99"
+            name="Joueur"
+            isActor="true"
+            lifelineDisplayName="Joueur">
+            <represents>
+              <propertyMoniker
+                Id="c7d95396-1fdf-4996-b6b6-4f16dae9f8d8"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </represents>
+            <topLevelOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="e49a6aad-97a3-4b44-93f4-3cfbf380b62b"
+                LastKnownName="MessageOccurrenceSpecification1"
+                LastKnownLocation="CanonNoirConception.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="fee16d40-aab3-4c81-9c9e-54a3a68da25f"
+                LastKnownName="MessageOccurrenceSpecification4"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="519616ab-b43a-40ac-bcc0-003ed474ec8d"
+            name=": Case"
+            isActor="false"
+            lifelineDisplayName=": Case">
+            <represents>
+              <propertyMoniker
+                Id="430d7ab5-9fbd-4598-8afc-9d14070ce097"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </represents>
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="469a6aca-4b32-4723-8e5b-0470b44c3b88"
+                LastKnownName="ExecutionOccurrenceSpecification1"
+                LastKnownLocation="CanonNoirConception.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="2f6f8244-3764-4c4c-acb6-43dddefe740f"
+                LastKnownName="ExecutionOccurrenceSpecification2"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="1503f404-20fd-4b07-8ad9-3de9f171f20a"
+            name=": Bateau"
+            isActor="false"
+            lifelineDisplayName=": Bateau">
+            <represents>
+              <propertyMoniker
+                Id="79bbb031-b8cf-4090-8792-a7e8ff03e1e1"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </represents>
+          </lifeline>
+        </lifelines>
+        <messages>
+          <message
+            Id="12c0d96f-4acf-41c0-a983-1267b485c812"
+            name="Message1"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="e49a6aad-97a3-4b44-93f4-3cfbf380b62b"
+                LastKnownName="MessageOccurrenceSpecification1"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="29b935f9-9ace-44c3-9c7e-0b1de7b3d85a"
+                LastKnownName="MessageOccurrenceSpecification2"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="633b0459-888a-4fe4-88bb-11dae929e574"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="bebb3747-b963-45cf-b5ed-113f9fa923b6"
+                LastKnownName="MessageOccurrenceSpecification3"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="fee16d40-aab3-4c81-9c9e-54a3a68da25f"
+                LastKnownName="MessageOccurrenceSpecification4"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </receiveEvent>
+          </message>
+        </messages>
+        <ownedAttributesInternal>
+          <property
+            Id="c7d95396-1fdf-4996-b6b6-4f16dae9f8d8"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <actorMoniker
+                Id="4421bcae-f450-4ead-b5fc-ec5b676b6700"
+                LastKnownName="Joueur"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="430d7ab5-9fbd-4598-8afc-9d14070ce097"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="7041591b-d06a-4619-b6b3-8f6b0fc788ce"
+                LastKnownName="Case"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="79bbb031-b8cf-4090-8792-a7e8ff03e1e1"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="8b0d99da-c28d-48e7-867c-6b974592dc21"
+                LastKnownName="Bateau"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="99fba1cb-1f96-4ee6-8e1c-14f93c0bf00d"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="83a57594-6b4b-4095-a61b-d1243aa74625"
+        name="ExecutionEvent" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
