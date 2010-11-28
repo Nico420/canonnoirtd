@@ -1,0 +1,695 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner"
+  dslVersion="1.0.0.0"
+  Id="62a60c90-a0aa-4993-b691-f2e0518db317"
+  name="CanonNoirConception" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <packagedElements>
+    <packageHasNamedElement>
+      <actor
+        Id="4421bcae-f450-4ead-b5fc-ec5b676b6700"
+        name="Joueur"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="44a58672-f4ba-4a54-8153-698c5ee20274"
+            isDerived="false"
+            sourceEndRoleName="Joueur"
+            targetEndRoleName="Choisi une couleur"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="08e1cfe0-c65f-4ee1-9516-72697cc89f20"
+              LastKnownName="Choisi une couleur"
+              LastKnownLocation="CanonNoirConception.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2c5a1a07-5700-41cd-b539-4ef99e167b81"
+                  name="Joueur"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="da2e00ae-7a11-48d0-89f2-2718c9eeda7e"
+                  name="Choisi une couleur"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="8617b1bd-b16a-47a0-b695-14fffe0fdce1"
+            isDerived="false"
+            sourceEndRoleName="Joueur"
+            targetEndRoleName="Lance le dé"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="3ef34576-8e88-4365-9db0-0e6e6a2fccfa"
+              LastKnownName="Lance le ou les dé(s)"
+              LastKnownLocation="CanonNoirConception.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="64ce1396-2614-440b-b0ef-826b6514c92a"
+                  name="Joueur"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="659bf369-dc0a-474c-9f97-b472d6829326"
+                  name="Lance le dé"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="c8900016-1977-4912-9192-5fed367cdbef"
+            isDerived="false"
+            sourceEndRoleName="Joueur"
+            targetEndRoleName="Tir au Canon"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="0641b51b-c1e6-4130-b5af-e65f9da2d178"
+              LastKnownName="Choisir un angle de tir"
+              LastKnownLocation="CanonNoirConception.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="20f6ad52-d268-4419-9a85-5fd76bb87f1e"
+                  name="Joueur"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="219d9766-2dfe-46eb-8495-134c783ecabf"
+                  name="Tir au Canon"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="15f9e0c2-b568-4e61-98cf-8f0531d81db7"
+            isDerived="false"
+            sourceEndRoleName="Joueur"
+            targetEndRoleName="Déplace son bateau"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="120822ed-58f6-442e-ba13-4d208d3c4d46"
+              LastKnownName="Déplace son bateau"
+              LastKnownLocation="CanonNoirConception.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="18524a0a-eb71-4027-b38c-39a1ab3eee70"
+                  name="Joueur"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="381c3ae5-3229-4768-9cac-6870f9f67873"
+                  name="Déplace son bateau"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="ff15baee-34bc-405f-8542-f878923ec5ad"
+            isDerived="false"
+            sourceEndRoleName="Joueur"
+            targetEndRoleName="Lancé le dé pour choisir qui commence"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="9699221d-f919-45e8-ba87-d613f19c1a93"
+              LastKnownName="Lancé le dé pour choisir qui commence"
+              LastKnownLocation="CanonNoirConception.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c6d42786-67c8-40df-947d-68c6707053a4"
+                  name="Joueur"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="932d8d8b-8857-4083-8e57-ee731991e04c"
+                  name="Lancé le dé pour choisir qui commence"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="ce81c33b-b875-412f-aac6-4b0dd0625ed5"
+            isDerived="false"
+            sourceEndRoleName="Joueur"
+            targetEndRoleName="Choisir le nombre de joueur"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="004b9628-ac1d-4bc8-bff4-b1713040bad9"
+              LastKnownName="Choisir le nombre de joueurs"
+              LastKnownLocation="CanonNoirConception.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="bef8f3ec-4565-4332-8ac7-f142d0a50dfa"
+                  name="Joueur"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3eacc588-cd32-4464-9536-7058fa3fc028"
+                  name="Choisir le nombre de joueur"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="08c365c2-fcfc-416c-9663-713e12ef6edb"
+            isDerived="false"
+            sourceEndRoleName="Joueur"
+            targetEndRoleName="Choisir une puissance de tir"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="68484fee-60c0-4a0e-978e-603256152f39"
+              LastKnownName="Choisir une puissance de tir"
+              LastKnownLocation="CanonNoirConception.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8547dc6f-4f2e-4451-8182-f36927ed8fa8"
+                  name="Joueur"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7873a59e-8c28-47d9-9373-b228a57385c5"
+                  name="Choisir une puissance de tir"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="c497dd2e-e026-4e59-934f-ded60ff8c289"
+            isDerived="false"
+            sourceEndRoleName="Joueur"
+            targetEndRoleName="Lancé le dé pour choisir qui commence"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="27e669b4-5a02-440e-957a-414b6696a3c6"
+              LastKnownName="Lancer le dé pour choisir qui commence"
+              LastKnownLocation="CanonNoirConception.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0600df46-d7e9-4878-8be2-3d6de1a38605"
+                  name="Joueur"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="98a3672b-bd53-464f-9a97-25e71bd601fe"
+                  name="Lancé le dé pour choisir qui commence"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="dee0404b-b8b0-4293-b21c-b7b0a6e0efac"
+            isDerived="false"
+            sourceEndRoleName="Joueur"
+            targetEndRoleName="Lancer dés pour déplacement"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="b8c12a39-e3da-4aa5-a4dc-2888071c67dc"
+              LastKnownName="Lancer dés pour déplacement"
+              LastKnownLocation="CanonNoirConception.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b3eaf620-1f50-4f5c-9612-3b5235b8b251"
+                  name="Joueur"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="aad00dc3-1916-40c9-b6b2-f7d2d7063948"
+                  name="Lancer dés pour déplacement"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="08e1cfe0-c65f-4ee1-9516-72697cc89f20"
+        name="Choisi une couleur"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="5d40cc58-e819-4a5d-8658-73fe643d1cd3"
+            LastKnownName="Initialisatiion"
+            LastKnownLocation="CanonNoirConception.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="3ef34576-8e88-4365-9db0-0e6e6a2fccfa"
+        name="Lance le ou les dé(s)"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="28a1df41-8cb1-4fcc-b7df-6f359c7f6261">
+            <useCaseMoniker
+              Id="120822ed-58f6-442e-ba13-4d208d3c4d46"
+              LastKnownName="Déplace son bateau"
+              LastKnownLocation="CanonNoirConception.uml" />
+          </dependency>
+        </suppliersInternal>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="0641b51b-c1e6-4130-b5af-e65f9da2d178"
+        name="Choisir un angle de tir"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="bba35d16-1ab5-44e2-9e58-14381e32d487">
+            <useCaseMoniker
+              Id="68484fee-60c0-4a0e-978e-603256152f39"
+              LastKnownName="Choisir une puissance de tir"
+              LastKnownLocation="CanonNoirConception.uml" />
+          </dependency>
+        </suppliersInternal>
+        <subjects>
+          <subsystemMoniker
+            Id="31b50ef0-b65f-463f-b637-faa1d0f0d6b2"
+            LastKnownName="Tir au Canon"
+            LastKnownLocation="CanonNoirConception.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="120822ed-58f6-442e-ba13-4d208d3c4d46"
+        name="Déplace son bateau"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="021ab9e2-4fc7-407c-ab88-354c6130957f"
+            LastKnownName="Déplacement"
+            LastKnownLocation="CanonNoirConception.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="021ab9e2-4fc7-407c-ab88-354c6130957f"
+        name="Déplacement"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="5d40cc58-e819-4a5d-8658-73fe643d1cd3"
+        name="Initialisatiion"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="9699221d-f919-45e8-ba87-d613f19c1a93"
+        name="Lancé le dé pour choisir qui commence"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="ab5f36a6-da36-456b-9ea2-ccd6c01ee0cd">
+            <useCaseMoniker
+              Id="c09f2c5d-e85d-4611-86b1-15d66dcdeba9"
+              LastKnownName="Relancer tant qu' il y a égalité entre les plus hauts scores"
+              LastKnownLocation="CanonNoirConception.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="004b9628-ac1d-4bc8-bff4-b1713040bad9"
+        name="Choisir le nombre de joueurs"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="94e5945e-25fb-45b8-8032-a922ab3c2555">
+            <useCaseMoniker
+              Id="08e1cfe0-c65f-4ee1-9516-72697cc89f20"
+              LastKnownName="Choisi une couleur"
+              LastKnownLocation="CanonNoirConception.uml" />
+          </dependency>
+        </suppliersInternal>
+        <subjects>
+          <subsystemMoniker
+            Id="5d40cc58-e819-4a5d-8658-73fe643d1cd3"
+            LastKnownName="Initialisatiion"
+            LastKnownLocation="CanonNoirConception.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="31b50ef0-b65f-463f-b637-faa1d0f0d6b2"
+        name="Tir au Canon"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="68484fee-60c0-4a0e-978e-603256152f39"
+        name="Choisir une puissance de tir"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="21a6aeb4-d307-4303-bdf9-ee9e5db5c704">
+            <useCaseMoniker
+              Id="470d0409-74d9-461e-b091-b4fb284d2852"
+              LastKnownName="Faire Feu"
+              LastKnownLocation="CanonNoirConception.uml" />
+          </dependency>
+        </suppliersInternal>
+        <subjects>
+          <subsystemMoniker
+            Id="31b50ef0-b65f-463f-b637-faa1d0f0d6b2"
+            LastKnownName="Tir au Canon"
+            LastKnownLocation="CanonNoirConception.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="470d0409-74d9-461e-b091-b4fb284d2852"
+        name="Faire Feu"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="57e2d28f-0232-4084-a3e8-bd651c741b07"
+        name="Moteur"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="1a4cd977-83f3-4c48-a4ed-7959b4f74f03"
+            isDerived="false"
+            sourceEndRoleName="Moteur"
+            targetEndRoleName="Faire Feu"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="470d0409-74d9-461e-b091-b4fb284d2852"
+              LastKnownName="Faire Feu"
+              LastKnownLocation="CanonNoirConception.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7b8d78cd-615c-498a-be6c-d2f825848948"
+                  name="Moteur"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5b714905-6e17-4a1e-a11e-d2d4213ce473"
+                  name="Faire Feu"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="c09f2c5d-e85d-4611-86b1-15d66dcdeba9"
+        name="Relancer tant qu' il y a égalité entre les plus hauts scores"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="6c22f44b-16bf-45f7-82be-f5d412d7c5b4">
+            <useCaseMoniker
+              Id="27e669b4-5a02-440e-957a-414b6696a3c6"
+              LastKnownName="Lancer le dé pour choisir qui commence"
+              LastKnownLocation="CanonNoirConception.uml" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker
+            Id="5d40cc58-e819-4a5d-8658-73fe643d1cd3"
+            LastKnownName="Initialisatiion"
+            LastKnownLocation="CanonNoirConception.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="cbf2d6c3-1bc7-40c4-b629-78ca30524a77"
+        name="Lancer dés"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="27e669b4-5a02-440e-957a-414b6696a3c6"
+        name="Lancer le dé pour choisir qui commence"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="120bf742-31a2-4ce8-86bf-5e43e56ee7e1"
+            isSubstitutable="false">
+            <useCaseMoniker
+              Id="cbf2d6c3-1bc7-40c4-b629-78ca30524a77"
+              LastKnownName="Lancer dés"
+              LastKnownLocation="CanonNoirConception.uml" />
+          </generalization>
+        </generalsInternal>
+        <subjects>
+          <subsystemMoniker
+            Id="5d40cc58-e819-4a5d-8658-73fe643d1cd3"
+            LastKnownName="Initialisatiion"
+            LastKnownLocation="CanonNoirConception.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="b8c12a39-e3da-4aa5-a4dc-2888071c67dc"
+        name="Lancer dés pour déplacement"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="8109170e-b03e-4f67-8a67-d0206610b63a">
+            <useCaseMoniker
+              Id="120822ed-58f6-442e-ba13-4d208d3c4d46"
+              LastKnownName="Déplace son bateau"
+              LastKnownLocation="CanonNoirConception.uml" />
+          </dependency>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization
+            Id="79a7ee72-6ca7-41a3-85a5-9264329c03ee"
+            isSubstitutable="false">
+            <useCaseMoniker
+              Id="cbf2d6c3-1bc7-40c4-b629-78ca30524a77"
+              LastKnownName="Lancer dés"
+              LastKnownLocation="CanonNoirConception.uml" />
+          </generalization>
+        </generalsInternal>
+        <subjects>
+          <subsystemMoniker
+            Id="021ab9e2-4fc7-407c-ab88-354c6130957f"
+            LastKnownName="Déplacement"
+            LastKnownLocation="CanonNoirConception.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="94f54e8f-4c3e-4b35-a3a2-c808e144760f"
+        name="Class1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>

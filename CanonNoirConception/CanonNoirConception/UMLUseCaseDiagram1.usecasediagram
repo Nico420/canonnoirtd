@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="461ae871-f4e3-415d-8cd9-1952bf0eed75" name="UMLUseCaseDiagram1" linkedPackageId="f444a39a-f8ca-46fc-99bc-4bf7093e3f3a" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="e80349c6-1513-4b5a-86c7-777e52827989" name="Joueur" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="4421bcae-f450-4ead-b5fc-ec5b676b6700" />
+        <targetEnds>
+          <association Id="17f09844-eafb-438b-993c-339a67568a21" isDerived="false" sourceEndRoleName="Joueur" targetEndRoleName="Choisi une couleur" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="c67510be-33ec-422b-a680-84304ccccbfa" LastKnownName="Choisi une couleur" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3cea9fe9-77c9-4fd4-a039-348da2d4ed9b" name="Joueur" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="2c5a1a07-5700-41cd-b539-4ef99e167b81" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9844ee93-7a62-4535-92c8-801767aaf05e" name="Choisi une couleur" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="da2e00ae-7a11-48d0-89f2-2718c9eeda7e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="44a58672-f4ba-4a54-8153-698c5ee20274" />
+          </association>
+          <association Id="bcb0bbdd-e21d-4f42-860a-b7a7360af774" isDerived="false" sourceEndRoleName="Joueur" targetEndRoleName="Tir au Canon" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="8a251a14-70a0-4fa2-a629-14bc4ce34ce8" LastKnownName="Choisir un angle de tir" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d440764e-a834-4efe-bd8b-64a8d6551e32" name="Joueur" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="20f6ad52-d268-4419-9a85-5fd76bb87f1e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5ac06bbd-06c3-482f-819d-4be30058840c" name="Tir au Canon" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="219d9766-2dfe-46eb-8495-134c783ecabf" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="c8900016-1977-4912-9192-5fed367cdbef" />
+          </association>
+          <association Id="91da3383-d6b0-43ae-a70a-11092161dc1b" isDerived="false" sourceEndRoleName="Joueur" targetEndRoleName="Déplace son bateau" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="b7b6ecbe-3420-45af-9f23-84abdfa3eb2b" LastKnownName="Déplace son bateau" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7bd4cb8f-fe06-4658-ac53-422c150753bd" name="Joueur" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="18524a0a-eb71-4027-b38c-39a1ab3eee70" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9b6bb10f-fd52-4b3b-849f-22bf27d9cd5d" name="Déplace son bateau" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="381c3ae5-3229-4768-9cac-6870f9f67873" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="15f9e0c2-b568-4e61-98cf-8f0531d81db7" />
+          </association>
+          <association Id="5e0ed473-f0e2-48f1-834c-9e5f58daba7a" isDerived="false" sourceEndRoleName="Joueur" targetEndRoleName="Choisir le nombre de joueur" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="27b98252-5b2e-48f1-a142-16612f3cefe4" LastKnownName="Choisir le nombre de joueurs" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="031d790a-084b-4d9e-a402-661ac4d067ec" name="Joueur" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="bef8f3ec-4565-4332-8ac7-f142d0a50dfa" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f6e8bca4-f2ac-4a53-94a9-3f6122cee793" name="Choisir le nombre de joueur" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="3eacc588-cd32-4464-9536-7058fa3fc028" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="ce81c33b-b875-412f-aac6-4b0dd0625ed5" />
+          </association>
+          <association Id="01ca481a-dd03-4663-826e-c5348e4b5cbd" isDerived="false" sourceEndRoleName="Joueur" targetEndRoleName="Choisir une puissance de tir" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="f684de89-aa67-4cf7-9875-3f326de8c294" LastKnownName="Choisir une puissance de tir" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2bfcbe07-8bfe-4362-997e-eb56513d979e" name="Joueur" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="8547dc6f-4f2e-4451-8182-f36927ed8fa8" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9ff73518-d906-479d-a62d-9ed6ce6a9816" name="Choisir une puissance de tir" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="7873a59e-8c28-47d9-9373-b228a57385c5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="08c365c2-fcfc-416c-9663-713e12ef6edb" />
+          </association>
+          <association Id="6161eb32-f006-42a5-b0ce-bf81c10a21ab" isDerived="false" sourceEndRoleName="Joueur" targetEndRoleName="Lancé le dé pour choisir qui commence" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="4e9b4fc4-78dc-4d1f-95a7-ce554db71ca8" LastKnownName="Lancer le dé pour choisir qui commence" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="dc16a31c-b4fb-4dce-8d4e-653be5b5a1a4" name="Joueur" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="0600df46-d7e9-4878-8be2-3d6de1a38605" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5b11593d-2828-474b-9341-df9d78621b36" name="Lancé le dé pour choisir qui commence" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="98a3672b-bd53-464f-9a97-25e71bd601fe" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="c497dd2e-e026-4e59-934f-ded60ff8c289" />
+          </association>
+          <association Id="93de3f95-e447-4de9-b0f9-2f9ac830372f" isDerived="false" sourceEndRoleName="Joueur" targetEndRoleName="Lancer dés pour déplacement" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="9c22a810-5130-467a-80db-f52d4aca3e90" LastKnownName="Lancer dés pour déplacement" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9aa71efd-8a14-41a3-9a5b-791efabab0db" name="Joueur" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="b3eaf620-1f50-4f5c-9612-3b5235b8b251" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b5043569-4c15-44d0-bd61-d05c4da8ed8e" name="Lancer dés pour déplacement" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="aad00dc3-1916-40c9-b6b2-f7d2d7063948" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="dee0404b-b8b0-4293-b21c-b7b0a6e0efac" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="c67510be-33ec-422b-a680-84304ccccbfa" name="Choisi une couleur" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="08e1cfe0-c65f-4ee1-9516-72697cc89f20" />
+        <subjects>
+          <subsystemMoniker Id="5edac75e-c952-49e8-b04c-f3be81808b61" LastKnownName="Initialisatiion" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="8a251a14-70a0-4fa2-a629-14bc4ce34ce8" name="Choisir un angle de tir" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0641b51b-c1e6-4130-b5af-e65f9da2d178" />
+        <suppliersInternal>
+          <dependency Id="00e950a8-6381-4c99-805a-734a3df80964">
+            <useCaseMoniker Id="f684de89-aa67-4cf7-9875-3f326de8c294" LastKnownName="Choisir une puissance de tir" />
+            <elementDefinition Id="bba35d16-1ab5-44e2-9e58-14381e32d487" />
+          </dependency>
+        </suppliersInternal>
+        <subjects>
+          <subsystemMoniker Id="08406f09-e317-4961-8f9a-69fcaea77e27" LastKnownName="Tir au Canon" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="b7b6ecbe-3420-45af-9f23-84abdfa3eb2b" name="Déplace son bateau" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="120822ed-58f6-442e-ba13-4d208d3c4d46" />
+        <subjects>
+          <subsystemMoniker Id="6546be9b-fa68-4cb2-8f3f-4828cbd14592" LastKnownName="Déplacement" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="6546be9b-fa68-4cb2-8f3f-4828cbd14592" name="Déplacement" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="021ab9e2-4fc7-407c-ab88-354c6130957f" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="5edac75e-c952-49e8-b04c-f3be81808b61" name="Initialisatiion" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="5d40cc58-e819-4a5d-8658-73fe643d1cd3" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="27b98252-5b2e-48f1-a142-16612f3cefe4" name="Choisir le nombre de joueurs" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="004b9628-ac1d-4bc8-bff4-b1713040bad9" />
+        <suppliersInternal>
+          <dependency Id="e09a8fad-e7be-450e-a939-56d6f31e39cf">
+            <useCaseMoniker Id="c67510be-33ec-422b-a680-84304ccccbfa" LastKnownName="Choisi une couleur" />
+            <elementDefinition Id="94e5945e-25fb-45b8-8032-a922ab3c2555" />
+          </dependency>
+        </suppliersInternal>
+        <subjects>
+          <subsystemMoniker Id="5edac75e-c952-49e8-b04c-f3be81808b61" LastKnownName="Initialisatiion" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="08406f09-e317-4961-8f9a-69fcaea77e27" name="Tir au Canon" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="31b50ef0-b65f-463f-b637-faa1d0f0d6b2" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="f684de89-aa67-4cf7-9875-3f326de8c294" name="Choisir une puissance de tir" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="68484fee-60c0-4a0e-978e-603256152f39" />
+        <subjects>
+          <subsystemMoniker Id="08406f09-e317-4961-8f9a-69fcaea77e27" LastKnownName="Tir au Canon" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="52edcd35-66fb-4b83-82ed-bcf55e20879c" name="Relancer tant qu' il y a égalité entre les plus hauts scores" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c09f2c5d-e85d-4611-86b1-15d66dcdeba9" />
+        <extendedCases>
+          <extend Id="b43beece-9ad6-4911-89be-2c87ee4bb751">
+            <useCaseMoniker Id="4e9b4fc4-78dc-4d1f-95a7-ce554db71ca8" LastKnownName="Lancer le dé pour choisir qui commence" />
+            <elementDefinition Id="6c22f44b-16bf-45f7-82be-f5d412d7c5b4" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="5edac75e-c952-49e8-b04c-f3be81808b61" LastKnownName="Initialisatiion" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <useCaseModelRootHasTypes>
+      <useCase Id="2d1f2255-e848-4c15-b82b-c47a97a73de6" name="Lancer dés" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="cbf2d6c3-1bc7-40c4-b629-78ca30524a77" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="4e9b4fc4-78dc-4d1f-95a7-ce554db71ca8" name="Lancer le dé pour choisir qui commence" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="27e669b4-5a02-440e-957a-414b6696a3c6" />
+        <generalsInternal>
+          <generalization Id="2fc40a64-aaa1-4cd4-89a9-4b44ceaf153f" isSubstitutable="false">
+            <useCaseMoniker Id="2d1f2255-e848-4c15-b82b-c47a97a73de6" LastKnownName="Lancer dés" />
+            <elementDefinition Id="120bf742-31a2-4ce8-86bf-5e43e56ee7e1" />
+          </generalization>
+        </generalsInternal>
+        <subjects>
+          <subsystemMoniker Id="5edac75e-c952-49e8-b04c-f3be81808b61" LastKnownName="Initialisatiion" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="9c22a810-5130-467a-80db-f52d4aca3e90" name="Lancer dés pour déplacement" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b8c12a39-e3da-4aa5-a4dc-2888071c67dc" />
+        <suppliersInternal>
+          <dependency Id="74eaabc1-f35f-4745-9ab7-e50fff7b47bf">
+            <useCaseMoniker Id="b7b6ecbe-3420-45af-9f23-84abdfa3eb2b" LastKnownName="Déplace son bateau" />
+            <elementDefinition Id="8109170e-b03e-4f67-8a67-d0206610b63a" />
+          </dependency>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization Id="536e4d86-a82b-4289-a446-8e4952be0c2a" isSubstitutable="false">
+            <useCaseMoniker Id="2d1f2255-e848-4c15-b82b-c47a97a73de6" LastKnownName="Lancer dés" />
+            <elementDefinition Id="79a7ee72-6ca7-41a3-85a5-9264329c03ee" />
+          </generalization>
+        </generalsInternal>
+        <subjects>
+          <subsystemMoniker Id="6546be9b-fa68-4cb2-8f3f-4828cbd14592" LastKnownName="Déplacement" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="f444a39a-f8ca-46fc-99bc-4bf7093e3f3a" name="CanonNoirConception">
+    <elementDefinition Id="62a60c90-a0aa-4993-b691-f2e0518db317" />
+  </package>
+</useCaseModelRoot>

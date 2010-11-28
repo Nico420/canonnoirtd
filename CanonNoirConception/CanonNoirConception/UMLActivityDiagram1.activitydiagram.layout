@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="UMLActivityDiagram1">
+  <activityRootModelMoniker Id="2f187204-d54d-4b39-8067-b53412dcc8de" />
+  <nestedChildShapes>
+    <initialNodeShape Id="7f3c4b69-29a4-4e0e-8d2e-7d118b9584ad" absoluteBounds="4, 1.125, 0.125, 0.125" customColor="89, 89, 89">
+      <initialNodeMoniker Id="0b55f41f-ecd8-4b18-9e3f-04d28a55d915" LastKnownName="Initial1" />
+    </initialNodeShape>
+    <actionShape Id="67d0fdf3-0ff8-44e9-b85c-4b8aef6eb20a" absoluteBounds="3.5, 2.75, 1.125, 0.375" customColor="161, 199, 231">
+      <opaqueActionMoniker Id="ec578829-d9ae-4abe-b247-3c6be5864548" LastKnownName="Choisir couleur" />
+    </actionShape>
+    <actionShape Id="8a3eddd3-6155-4e2b-b284-ecb9abe0ea5f" absoluteBounds="3.5, 3.5, 1.125, 0.375" customColor="161, 199, 231">
+      <opaqueActionMoniker Id="08e291e2-739d-4ae4-84f3-979e4f6e16e0" LastKnownName="Lancer dés" />
+    </actionShape>
+    <controlFlowConnector edgePoints="[(4.0625 : 3.125); (4.0625 : 3.5)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="Black">
+      <controlFlowMoniker Id="43c01d42-2f3b-44a9-aae8-3c530194ace8" />
+      <relativeChildShapes />
+      <nodes>
+        <actionShapeMoniker Id="67d0fdf3-0ff8-44e9-b85c-4b8aef6eb20a" />
+        <actionShapeMoniker Id="8a3eddd3-6155-4e2b-b284-ecb9abe0ea5f" />
+      </nodes>
+    </controlFlowConnector>
+    <actionShape Id="b77f8bd9-a2a1-4117-82f3-acd4857e833e" absoluteBounds="3.375, 4.375, 1.375, 0.625" customColor="161, 199, 231">
+      <opaqueActionMoniker Id="a3eab83e-8cdf-457f-b250-8c35bce23d4b" LastKnownName="Premier joueur lance les dés" />
+    </actionShape>
+    <controlFlowConnector edgePoints="[(4.03125 : 3.875); (4.03125 : 4.375)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="Black">
+      <controlFlowMoniker Id="8cddb9ad-6cd4-45ee-b169-236fe21520f5" />
+      <relativeChildShapes />
+      <nodes>
+        <actionShapeMoniker Id="8a3eddd3-6155-4e2b-b284-ecb9abe0ea5f" />
+        <actionShapeMoniker Id="b77f8bd9-a2a1-4117-82f3-acd4857e833e" />
+      </nodes>
+    </controlFlowConnector>
+    <commentShape Id="3c98f776-77c7-4f16-8d46-f6bad6582366" absoluteBounds="4.625, 3.75, 1.375, 0.375" customColor="251, 247, 200">
+      <commentMoniker Id="c4d7999d-7995-447d-a0b2-b7f900f6f83c" />
+      <relativeChildShapes />
+    </commentShape>
+    <actionShape Id="3abdcbe7-7516-4054-aed1-a273e59cffa8" absoluteBounds="3.5, 5.375, 1.125, 0.375" customColor="161, 199, 231">
+      <opaqueActionMoniker Id="1210bed2-7de2-4ead-be09-4d4665cbc76b" LastKnownName="Premier joueur choisit case finale" />
+    </actionShape>
+    <controlFlowConnector edgePoints="[(4.0625 : 5); (4.0625 : 5.375)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="Black">
+      <controlFlowMoniker Id="31f47c21-b30e-4125-8697-255d79ad401c" />
+      <relativeChildShapes />
+      <nodes>
+        <actionShapeMoniker Id="b77f8bd9-a2a1-4117-82f3-acd4857e833e" />
+        <actionShapeMoniker Id="3abdcbe7-7516-4054-aed1-a273e59cffa8" />
+      </nodes>
+    </controlFlowConnector>
+    <decisionNodeShape Id="91edfa7a-b60e-4e20-b91b-4bf707eb694d" absoluteBounds="3.875, 6.125, 0.375, 0.375" customColor="185, 212, 238">
+      <decisionNodeMoniker Id="6ae22968-12a3-4401-99e2-9155a3a38585" LastKnownName="Decision1" />
+      <relativeChildShapes />
+    </decisionNodeShape>
+    <controlFlowConnector edgePoints="[(4.0625 : 5.75); (4.0625 : 6.125)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="Black">
+      <controlFlowMoniker Id="dcdf914a-667a-4b88-9ce8-4e5540173398" />
+      <relativeChildShapes />
+      <nodes>
+        <actionShapeMoniker Id="3abdcbe7-7516-4054-aed1-a273e59cffa8" />
+        <decisionNodeShapeMoniker Id="91edfa7a-b60e-4e20-b91b-4bf707eb694d" />
+      </nodes>
+    </controlFlowConnector>
+    <actionShape Id="14e450e7-1744-4f6b-9f9f-35f538622baf" absoluteBounds="2.125, 6.875, 1.125, 0.375" customColor="161, 199, 231">
+      <opaqueActionMoniker Id="47e3d67c-b5c2-4a8e-8a24-dff4f05101fa" LastKnownName="Joueur suivant lance les dés" />
+    </actionShape>
+    <controlFlowConnector edgePoints="[(4.0625 : 6.5); (4.0625 : 6.685625); (3.3125 : 6.685625); (3.3125 : 7.0625); (3.25 : 7.0625)]" manuallyRouted="true" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="Black">
+      <controlFlowMoniker Id="5c9b2e90-946d-4352-b45a-ce4bc9bd9fae" />
+      <relativeChildShapes />
+      <nodes>
+        <decisionNodeShapeMoniker Id="91edfa7a-b60e-4e20-b91b-4bf707eb694d" />
+        <actionShapeMoniker Id="14e450e7-1744-4f6b-9f9f-35f538622baf" />
+      </nodes>
+    </controlFlowConnector>
+    <actionShape Id="39a1a928-2aeb-4871-ac87-8bfa15150c6f" absoluteBounds="4.25, 7, 1.125, 0.375" customColor="161, 199, 231">
+      <opaqueActionMoniker Id="1741a897-5e69-4de3-abd5-6e7fdb6cb301" LastKnownName="Action1" />
+    </actionShape>
+    <acceptEventActionShape Id="4a757844-ca50-4487-8f1b-f13c80cee53c" absoluteBounds="3.5, 1.875, 1.125, 0.375" customColor="185, 212, 238">
+      <acceptEventActionMoniker Id="14aa9e14-a406-4734-abfd-6fea92482163" LastKnownName="Attente Nb Joueur" />
+    </acceptEventActionShape>
+    <controlFlowConnector edgePoints="[(4.0625 : 1.25); (4.0625 : 1.875)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="Black">
+      <controlFlowMoniker Id="085c7c78-c48b-4d70-abf9-f0425eb6a8e9" />
+      <relativeChildShapes />
+      <nodes>
+        <initialNodeShapeMoniker Id="7f3c4b69-29a4-4e0e-8d2e-7d118b9584ad" />
+        <acceptEventActionShapeMoniker Id="4a757844-ca50-4487-8f1b-f13c80cee53c" />
+      </nodes>
+    </controlFlowConnector>
+    <controlFlowConnector edgePoints="[(4.0625 : 2.25); (4.0625 : 2.75)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="Black">
+      <controlFlowMoniker Id="fcc7e9d6-955d-4dbf-a778-0b2953f6a60a" />
+      <relativeChildShapes />
+      <nodes>
+        <acceptEventActionShapeMoniker Id="4a757844-ca50-4487-8f1b-f13c80cee53c" />
+        <actionShapeMoniker Id="67d0fdf3-0ff8-44e9-b85c-4b8aef6eb20a" />
+      </nodes>
+    </controlFlowConnector>
+  </nestedChildShapes>
+</activityDiagram>
