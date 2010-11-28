@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="a606b521-860e-4b72-8e2a-ce598690c9be" name="UMLClassDiagram1" linkedPackageId="ba48968a-64e8-42e4-b4e1-7b952d7c2fda" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="a606b521-860e-4b72-8e2a-ce598690c9be" name="UMLClassDiagram1" linkedPackageId="ba48968a-64e8-42e4-b4e1-7b952d7c2fda" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <ownedCommentsInternal>
     <comment Id="97dd757a-22e8-410a-b2df-9590591aad95">
       <elementDefinition Id="facdd64c-98eb-434c-8d85-cf12539f0ce8" />
@@ -8,6 +8,26 @@
       <annotatedElements>
         <classMoniker Id="33444d13-82cc-4896-a690-132cff3bf378" LastKnownName="Adaptateur" />
       </annotatedElements>
+    </comment>
+    <comment Id="8b96d1d5-eeec-4487-8714-bc57a677e22a">
+      <elementDefinition Id="ba2db8bd-8a58-4631-b9d1-c1640aabe9f5" />
+      <body>On affiche  un canevas qui contient des images
+</body>
+      <annotatedElements>
+        <classMoniker Id="e3a0d95e-f88c-4625-bc0f-e9a3ee5232b2" LastKnownName="Affichage" />
+      </annotatedElements>
+    </comment>
+    <comment Id="78da7608-bda4-449b-83bf-c2a3d35c3f4d">
+      <elementDefinition Id="3d555529-7060-4e2b-b1de-c3c47b17e406" />
+      <body>typeCase renvoie le type de la case : Normale Port Canon Trésor</body>
+      <annotatedElements>
+        <classMoniker Id="31b20bfc-58d3-472a-bb59-7a4ba7ac779b" LastKnownName="Case" />
+      </annotatedElements>
+    </comment>
+    <comment Id="ccee1d98-7a59-4e2b-8840-36ce656462bd">
+      <elementDefinition Id="a2c729ea-95e5-4526-a784-6e64c3e5690d" />
+      <body>Facade : plein de get
+</body>
     </comment>
   </ownedCommentsInternal>
   <packagedElements>
@@ -37,6 +57,11 @@
             <elementDefinition Id="a4010318-f145-421d-9f96-a2c201999ffe" />
           </property>
         </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="b9f195ee-8e2d-43f7-9156-54d48ee41443" name="setnbJoueurs" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d1917dcb-6652-42cc-b358-94f204070d43" />
+          </operation>
+        </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
@@ -131,6 +156,15 @@
           <operation Id="a36fbcad-143a-4ca1-a769-2374fc132612" name="gerer" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="97200bbb-d94a-457d-8fba-3cb7795fd581" />
           </operation>
+          <operation Id="059b1a11-18c7-47c4-b403-f3ce1ee751b5" name="choisirAngle" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="941ce5e2-0507-4e68-8ed2-1e31da5f9577" />
+          </operation>
+          <operation Id="cb1b2077-fe00-493a-92ad-5df0c7363e7e" name="choisirPuiss" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="f35ab2d9-3fd1-44a8-80da-0a4d1e91e1b0" />
+          </operation>
+          <operation Id="84bc5648-37f8-48e7-ab5d-3fb4a2ddbbf6" name="choisirCible" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="07b88346-0627-4ee4-9f6e-179b356bfba0" />
+          </operation>
         </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
@@ -174,11 +208,8 @@
           </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
-          <operation Id="211f04de-75f4-45d0-8b6f-ddfdfdb1af10" name="estNavigable" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="275cf13b-4c0f-49ce-bfe2-a0d6908e84bc" />
-          </operation>
-          <operation Id="0be836bc-edbc-4f4d-97e7-bfcfe1a940fb" name="estAuBord" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="04933eab-badd-4b40-90e4-cf90d84df732" />
+          <operation Id="1c22e19b-3f0d-4d1a-a5ad-48b472a9db51" name="typeCase" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="071df85c-94c4-4a6e-96fa-9bfb4e35babe" />
           </operation>
         </ownedOperationsInternal>
       </class>
@@ -219,6 +250,14 @@
             <elementDefinition Id="72774c5a-2f51-41fc-b0e5-735a2804db25" />
           </generalization>
         </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="3b4a2f1f-071f-4241-b66c-7c0abc275dbf" name="estAuBord" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="4802d092-672f-4c8a-bc91-630536b910b3" />
+          </operation>
+          <operation Id="fa4066f4-3ea7-4ece-a103-40b86425a7ac" name="estNavigable" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="5ebb4b03-4863-4cdf-a756-6d90ba694296" />
+          </operation>
+        </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
@@ -226,7 +265,7 @@
         <elementDefinition Id="7e710002-2373-4f87-99a7-8877c5900ce2" />
         <targetEnds>
           <association Id="44d4fd92-deb9-4fb7-9766-30f4772697da" isDerived="false" sourceEndRoleName="Plateau" targetEndRoleName="Joueur" isLeaf="false" isAbstract="false">
-            <classMoniker Id="958a565e-31c8-4660-88e3-20602ea1ec42" LastKnownName="Joueur1" />
+            <classMoniker Id="958a565e-31c8-4660-88e3-20602ea1ec42" LastKnownName="Joueur" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="9e665018-f089-4ac6-a79d-de1ac2d4332a" name="Plateau" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -252,7 +291,7 @@
             <elementDefinition Id="a472deac-a5a0-49b0-8ae4-6431c71c4921" />
           </association>
           <association Id="30f1cd93-90fa-4639-bbd7-3d5190b23d96" isDerived="false" sourceEndRoleName="Plateau" targetEndRoleName="De" isLeaf="false" isAbstract="false">
-            <classMoniker Id="8cfffe58-ae55-41ed-be09-c421b3915502" LastKnownName="De1" />
+            <classMoniker Id="8cfffe58-ae55-41ed-be09-c421b3915502" LastKnownName="De" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="bb686bdd-440a-43a6-833f-880c8c8439eb" name="Plateau" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
@@ -287,6 +326,16 @@
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd Id="985d7c7e-349a-4eb1-9b24-e55bd63c2b7f" name="Case" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <lowerValueInternal>
+                    <literalString Id="961d457f-4f8f-42bf-af65-83f12017e126" name="Lower" value="88">
+                      <elementDefinition Id="3f79f5b8-4a2b-42ab-a4bb-380b19a3416c" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="c64771f4-e215-4135-92c2-1a05467f3724" name="Upper" value="88">
+                      <elementDefinition Id="a1fc0050-7f77-4d17-a08d-3b1ca5b3ddac" />
+                    </literalString>
+                  </upperValueInternal>
                   <elementDefinition Id="4b2acc01-b7b0-479d-a2a1-621fecc215fa" />
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -305,7 +354,7 @@
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
-      <class Id="958a565e-31c8-4660-88e3-20602ea1ec42" name="Joueur1" isAbstract="false" isLeaf="false" isActiveClass="false">
+      <class Id="958a565e-31c8-4660-88e3-20602ea1ec42" name="Joueur" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="425e4dd5-2870-48ad-9fb4-1b14f52fad5f" />
         <targetEnds>
           <association Id="604e065b-cd49-4c5e-8a6d-9b11aa1f4934" isDerived="false" sourceEndRoleName="Joueur" targetEndRoleName="Bateau" isLeaf="false" isAbstract="false">
@@ -362,7 +411,7 @@
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
-      <class Id="8cfffe58-ae55-41ed-be09-c421b3915502" name="De1" isAbstract="false" isLeaf="false" isActiveClass="false">
+      <class Id="8cfffe58-ae55-41ed-be09-c421b3915502" name="De" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="c37fe224-1ab9-40c7-8f02-4a11010534bd" />
         <ownedAttributesInternal>
           <property Id="c932d6f6-cfa3-4137-901d-961394daf928" name="int numero" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -457,6 +506,25 @@
             <elementDefinition Id="a9ccaf98-9c94-4d15-bd04-86812b8d389a" />
           </association>
         </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="a5611a18-da75-4c57-90ea-dc0eab3b2896" name="dossier image" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="a91dbe5b-35a4-452a-b7e5-fec4195ebaad" />
+          </property>
+          <property Id="60616a18-3f23-47e9-a6d1-bce733be1efe" name="canevas" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="914f18f4-a13e-4a55-9aa4-edce04811aa4" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="38de4e78-0739-45bc-96ee-0b151f33e83a" name="miseAjour" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="58940d77-1594-4da5-ad86-501c27dda8d7" />
+          </operation>
+          <operation Id="f5095993-bda9-489b-a7d5-3a6d3da057fc" name="init" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ee28d58f-e68d-4cc1-8e23-3f1dab9c26f4" />
+          </operation>
+          <operation Id="ab87e3e0-25b5-45b8-bb24-d157ccb36b66" name="sendClic" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="21e3cca4-c1f0-4690-8419-e105d0a694f1" />
+          </operation>
+        </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
   </packagedElements>
