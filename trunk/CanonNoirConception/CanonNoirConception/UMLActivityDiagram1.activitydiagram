@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="2f187204-d54d-4b39-8067-b53412dcc8de" name="Activity1" linkedPackageId="28cfb29d-a9eb-45eb-93f7-1eea8afcfc15" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <ownedCommentsInternal>
+    <comment Id="c4d7999d-7995-447d-a0b2-b7f900f6f83c">
+      <elementDefinition Id="00eb5bcd-b8e7-49e6-b7e2-bfb96c23368c" />
+      <body>Détermine l'ordre de commencement</body>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="5061bfbd-465e-4b6f-ba9d-a607e3ec7918">
+      <profileInstance Id="5d886149-febd-4282-bb19-33f21f62aa19" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="05492a14-3e92-4bc9-9a68-127511c2c6bd">
+      <profileInstance Id="c10d4201-5bb8-4967-abc2-525613eb53d9" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="0c805016-fc4e-46a5-9dfe-cc2645b6abf2" name="Activity1" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="7263e054-3f2d-4f84-87f2-0e408d3ba43e" />
+        <nodes>
+          <initialNode Id="0b55f41f-ecd8-4b18-9e3f-04d28a55d915" name="Initial1" isLeaf="false">
+            <elementDefinition Id="543212eb-b52c-4145-8a11-ea515f40f703" />
+            <flowNodeTargets>
+              <controlFlow Id="085c7c78-c48b-4d70-abf9-f0425eb6a8e9" isLeaf="false">
+                <acceptEventActionMoniker Id="14aa9e14-a406-4734-abfd-6fea92482163" LastKnownName="Attente Nb Joueur" />
+                <elementDefinition Id="46fa4b41-39f6-4ffe-aca6-83ba9752f1b9" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction Id="ec578829-d9ae-4abe-b247-3c6be5864548" name="Choisir couleur" isLeaf="false">
+            <elementDefinition Id="10b0b98d-d780-497f-ad35-19e7758dc23c" />
+            <flowNodeTargets>
+              <controlFlow Id="43c01d42-2f3b-44a9-aae8-3c530194ace8" isLeaf="false">
+                <opaqueActionMoniker Id="08e291e2-739d-4ae4-84f3-979e4f6e16e0" LastKnownName="Lancer dés" />
+                <elementDefinition Id="230dd5bc-10f3-4c0d-90c1-23afa1d237cd" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="08e291e2-739d-4ae4-84f3-979e4f6e16e0" name="Lancer dés" isLeaf="false">
+            <elementDefinition Id="cf4f27d3-fd88-4cac-83e0-c5b9bd9affbd" />
+            <flowNodeTargets>
+              <controlFlow Id="8cddb9ad-6cd4-45ee-b169-236fe21520f5" isLeaf="false">
+                <opaqueActionMoniker Id="a3eab83e-8cdf-457f-b250-8c35bce23d4b" LastKnownName="Premier joueur lance les dés" />
+                <elementDefinition Id="2c09f7f2-41f5-498f-9ad0-4adeda1062d6" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="a3eab83e-8cdf-457f-b250-8c35bce23d4b" name="Premier joueur lance les dés" isLeaf="false">
+            <elementDefinition Id="af8d5fd6-8b36-4711-b932-512de0a3a53e" />
+            <flowNodeTargets>
+              <controlFlow Id="31f47c21-b30e-4125-8697-255d79ad401c" isLeaf="false">
+                <opaqueActionMoniker Id="1210bed2-7de2-4ead-be09-4d4665cbc76b" LastKnownName="Premier joueur choisit case finale" />
+                <elementDefinition Id="ec85d560-3aa7-4827-a81a-f820eb3fd010" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="1210bed2-7de2-4ead-be09-4d4665cbc76b" name="Premier joueur choisit case finale" isLeaf="false">
+            <elementDefinition Id="952d510e-dbe1-448d-b298-cdde8ec743d0" />
+            <flowNodeTargets>
+              <controlFlow Id="dcdf914a-667a-4b88-9ce8-4e5540173398" isLeaf="false">
+                <decisionNodeMoniker Id="6ae22968-12a3-4401-99e2-9155a3a38585" LastKnownName="Decision1" />
+                <elementDefinition Id="4619a1f7-b003-4631-b42f-fa2eada6beda" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="6ae22968-12a3-4401-99e2-9155a3a38585" name="Decision1" isLeaf="false">
+            <elementDefinition Id="7db5d97b-3fb2-452a-aa89-732138f8d0d1" />
+            <flowNodeTargets>
+              <controlFlow Id="5c9b2e90-946d-4352-b45a-ce4bc9bd9fae" guard="Case mer" isLeaf="false">
+                <opaqueActionMoniker Id="47e3d67c-b5c2-4a8e-8a24-dff4f05101fa" LastKnownName="Joueur suivant lance les dés" />
+                <elementDefinition Id="ff7d26cb-d0a4-4189-9944-f97fe372529f" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="47e3d67c-b5c2-4a8e-8a24-dff4f05101fa" name="Joueur suivant lance les dés" isLeaf="false">
+            <elementDefinition Id="7583ccfe-f06c-4493-8997-e15ffaafaeff" />
+          </opaqueAction>
+          <opaqueAction Id="1741a897-5e69-4de3-abd5-6e7fdb6cb301" name="Action1" isLeaf="false">
+            <elementDefinition Id="651f9808-e101-48ad-bf93-d6fd06d5419b" />
+          </opaqueAction>
+          <acceptEventAction Id="14aa9e14-a406-4734-abfd-6fea92482163" name="Attente Nb Joueur" isLeaf="false" isUnmarshall="false">
+            <elementDefinition Id="c827bf4c-af68-41de-ac6b-111d850383a5" />
+            <flowNodeTargets>
+              <controlFlow Id="fcc7e9d6-955d-4dbf-a778-0b2953f6a60a" isLeaf="false">
+                <opaqueActionMoniker Id="ec578829-d9ae-4abe-b247-3c6be5864548" LastKnownName="Choisir couleur" />
+                <elementDefinition Id="b8788871-3963-4e55-93c3-6d16182977f8" />
+              </controlFlow>
+            </flowNodeTargets>
+          </acceptEventAction>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="28cfb29d-a9eb-45eb-93f7-1eea8afcfc15" name="Projet">
+    <elementDefinition Id="38d123a2-14f6-4673-9d4f-713fbbfe446a" />
+  </package>
+</activityRootModel>
