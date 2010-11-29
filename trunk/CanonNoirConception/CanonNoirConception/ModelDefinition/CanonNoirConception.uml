@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
   dslVersion="1.0.0.0"
   Id="62a60c90-a0aa-4993-b691-f2e0518db317"
   name="CanonNoirConception" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -3244,296 +3244,76 @@
         isReentrant="false">
         <fragments>
           <behaviorExecutionSpecification
-            Id="69b0858f-53d9-4db7-b941-747dee5b8ed6"
-            name="BehaviorExecutionSpecification1">
+            Id="63937e39-4b65-450d-a302-f2f5a18bdf64"
+            name="BehaviorExecutionSpecification6">
             <coveredLifelines>
               <lifelineMoniker
-                Id="519616ab-b43a-40ac-bcc0-003ed474ec8d"
-                LastKnownName=": Moteur"
+                Id="075f38f2-85dc-46e4-b0db-d2e5f7017428"
+                LastKnownName=": Windows"
                 LastKnownLocation="CanonNoirConception.uml" />
             </coveredLifelines>
             <finish>
               <executionOccurrenceSpecificationMoniker
-                Id="2f6f8244-3764-4c4c-acb6-43dddefe740f"
-                LastKnownName="ExecutionOccurrenceSpecification2"
+                Id="383e0e8a-82c3-46c7-b6ec-b3e653734ffd"
+                LastKnownName="ExecutionOccurrenceSpecification12"
                 LastKnownLocation="CanonNoirConception.uml" />
             </finish>
             <start>
               <executionOccurrenceSpecificationMoniker
-                Id="469a6aca-4b32-4723-8e5b-0470b44c3b88"
-                LastKnownName="ExecutionOccurrenceSpecification1"
+                Id="08866c42-60cc-463d-963f-704d38bc43ea"
+                LastKnownName="ExecutionOccurrenceSpecification11"
                 LastKnownLocation="CanonNoirConception.uml" />
             </start>
             <nestedOccurrences>
               <messageOccurrenceSpecificationMoniker
-                Id="29b935f9-9ace-44c3-9c7e-0b1de7b3d85a"
-                LastKnownName="MessageOccurrenceSpecification2"
+                Id="b6335b62-33e6-4615-99c4-6b53b2eb9f32"
+                LastKnownName="MessageOccurrenceSpecification20"
                 LastKnownLocation="CanonNoirConception.uml" />
               <messageOccurrenceSpecificationMoniker
-                Id="49b092a9-d8f0-4600-9166-50d958af24fb"
-                LastKnownName="MessageOccurrenceSpecification9"
+                Id="afd9e5e4-79c7-435a-9ec1-0a9ec068ba4c"
+                LastKnownName="MessageOccurrenceSpecification23"
                 LastKnownLocation="CanonNoirConception.uml" />
               <messageOccurrenceSpecificationMoniker
-                Id="849c1e75-146c-4491-9f76-3c19d0ba3094"
-                LastKnownName="MessageOccurrenceSpecification12"
+                Id="3eb90a34-8b40-48b6-8546-c4bed15b43fa"
+                LastKnownName="MessageOccurrenceSpecification26"
                 LastKnownLocation="CanonNoirConception.uml" />
               <messageOccurrenceSpecificationMoniker
-                Id="bebb3747-b963-45cf-b5ed-113f9fa923b6"
-                LastKnownName="MessageOccurrenceSpecification3"
+                Id="6cf3749e-fa99-47f8-9cd7-44777853ae39"
+                LastKnownName="MessageOccurrenceSpecification21"
                 LastKnownLocation="CanonNoirConception.uml" />
             </nestedOccurrences>
           </behaviorExecutionSpecification>
           <executionOccurrenceSpecification
-            Id="469a6aca-4b32-4723-8e5b-0470b44c3b88"
-            name="ExecutionOccurrenceSpecification1">
+            Id="08866c42-60cc-463d-963f-704d38bc43ea"
+            name="ExecutionOccurrenceSpecification11">
             <event>
               <executionOccurrenceSpecificationReferencesEvent>
                 <executionEventMoniker
-                  Id="99fba1cb-1f96-4ee6-8e1c-14f93c0bf00d"
+                  Id="23f9a2cd-b395-42ed-9c13-abdeb6d3ec6d"
                   LastKnownName="ExecutionEvent"
                   LastKnownLocation="CanonNoirConception.uml" />
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
               <lifelineMoniker
-                Id="519616ab-b43a-40ac-bcc0-003ed474ec8d"
-                LastKnownName=": Moteur"
+                Id="075f38f2-85dc-46e4-b0db-d2e5f7017428"
+                LastKnownName=": Windows"
                 LastKnownLocation="CanonNoirConception.uml" />
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="e49a6aad-97a3-4b44-93f4-3cfbf380b62b"
-            name="MessageOccurrenceSpecification1">
+            Id="b6335b62-33e6-4615-99c4-6b53b2eb9f32"
+            name="MessageOccurrenceSpecification20">
             <covered>
               <lifelineMoniker
-                Id="384e55a9-bd3b-48e1-b759-dab21880bd99"
-                LastKnownName="Joueur"
+                Id="075f38f2-85dc-46e4-b0db-d2e5f7017428"
+                LastKnownName=": Windows"
                 LastKnownLocation="CanonNoirConception.uml" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="29b935f9-9ace-44c3-9c7e-0b1de7b3d85a"
-            name="MessageOccurrenceSpecification2">
-            <covered>
-              <lifelineMoniker
-                Id="519616ab-b43a-40ac-bcc0-003ed474ec8d"
-                LastKnownName=": Moteur"
-                LastKnownLocation="CanonNoirConception.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <behaviorExecutionSpecification
-            Id="e15815c3-e5f9-4dd5-9d0a-000f47c20812"
-            name="BehaviorExecutionSpecification3">
-            <coveredLifelines>
-              <lifelineMoniker
-                Id="1503f404-20fd-4b07-8ad9-3de9f171f20a"
-                LastKnownName=": Bateau"
-                LastKnownLocation="CanonNoirConception.uml" />
-            </coveredLifelines>
-            <finish>
-              <executionOccurrenceSpecificationMoniker
-                Id="91ccce12-c988-40f6-aae3-afd2836ed2cd"
-                LastKnownName="ExecutionOccurrenceSpecification6"
-                LastKnownLocation="CanonNoirConception.uml" />
-            </finish>
-            <start>
-              <executionOccurrenceSpecificationMoniker
-                Id="5fb92d6c-12c5-4f5d-8950-ca1e5f767824"
-                LastKnownName="ExecutionOccurrenceSpecification5"
-                LastKnownLocation="CanonNoirConception.uml" />
-            </start>
-            <nestedOccurrences>
-              <messageOccurrenceSpecificationMoniker
-                Id="2f25f82f-b4c0-421e-8b84-49116579e49c"
-                LastKnownName="MessageOccurrenceSpecification10"
-                LastKnownLocation="CanonNoirConception.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="76a61197-8ba3-4b3d-922a-6012a70e5b20"
-                LastKnownName="MessageOccurrenceSpecification11"
-                LastKnownLocation="CanonNoirConception.uml" />
-            </nestedOccurrences>
-          </behaviorExecutionSpecification>
-          <executionOccurrenceSpecification
-            Id="5fb92d6c-12c5-4f5d-8950-ca1e5f767824"
-            name="ExecutionOccurrenceSpecification5">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="3c34f7ea-c98e-4d9e-ac7a-f3c40293ed08"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="CanonNoirConception.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="1503f404-20fd-4b07-8ad9-3de9f171f20a"
-                LastKnownName=": Bateau"
-                LastKnownLocation="CanonNoirConception.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="2f25f82f-b4c0-421e-8b84-49116579e49c"
-            name="MessageOccurrenceSpecification10">
-            <covered>
-              <lifelineMoniker
-                Id="1503f404-20fd-4b07-8ad9-3de9f171f20a"
-                LastKnownName=": Bateau"
-                LastKnownLocation="CanonNoirConception.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="49b092a9-d8f0-4600-9166-50d958af24fb"
-            name="MessageOccurrenceSpecification9">
-            <covered>
-              <lifelineMoniker
-                Id="519616ab-b43a-40ac-bcc0-003ed474ec8d"
-                LastKnownName=": Moteur"
-                LastKnownLocation="CanonNoirConception.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="849c1e75-146c-4491-9f76-3c19d0ba3094"
-            name="MessageOccurrenceSpecification12">
-            <covered>
-              <lifelineMoniker
-                Id="519616ab-b43a-40ac-bcc0-003ed474ec8d"
-                LastKnownName=": Moteur"
-                LastKnownLocation="CanonNoirConception.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="76a61197-8ba3-4b3d-922a-6012a70e5b20"
-            name="MessageOccurrenceSpecification11">
-            <covered>
-              <lifelineMoniker
-                Id="1503f404-20fd-4b07-8ad9-3de9f171f20a"
-                LastKnownName=": Bateau"
-                LastKnownLocation="CanonNoirConception.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <executionOccurrenceSpecification
-            Id="91ccce12-c988-40f6-aae3-afd2836ed2cd"
-            name="ExecutionOccurrenceSpecification6">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="0d5fce9e-44b5-451c-887e-3cb2466a5762"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="CanonNoirConception.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="1503f404-20fd-4b07-8ad9-3de9f171f20a"
-                LastKnownName=": Bateau"
-                LastKnownLocation="CanonNoirConception.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="fee16d40-aab3-4c81-9c9e-54a3a68da25f"
-            name="MessageOccurrenceSpecification4">
-            <covered>
-              <lifelineMoniker
-                Id="384e55a9-bd3b-48e1-b759-dab21880bd99"
-                LastKnownName="Joueur"
-                LastKnownLocation="CanonNoirConception.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="bebb3747-b963-45cf-b5ed-113f9fa923b6"
-            name="MessageOccurrenceSpecification3">
-            <covered>
-              <lifelineMoniker
-                Id="519616ab-b43a-40ac-bcc0-003ed474ec8d"
-                LastKnownName=": Moteur"
-                LastKnownLocation="CanonNoirConception.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <executionOccurrenceSpecification
-            Id="2f6f8244-3764-4c4c-acb6-43dddefe740f"
-            name="ExecutionOccurrenceSpecification2">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="83a57594-6b4b-4095-a61b-d1243aa74625"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="CanonNoirConception.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="519616ab-b43a-40ac-bcc0-003ed474ec8d"
-                LastKnownName=": Moteur"
-                LastKnownLocation="CanonNoirConception.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <behaviorExecutionSpecification
-            Id="384ce02b-9f9b-46d1-8639-57b662ee3fd8"
-            name="BehaviorExecutionSpecification4">
-            <coveredLifelines>
-              <lifelineMoniker
-                Id="519616ab-b43a-40ac-bcc0-003ed474ec8d"
-                LastKnownName=": Moteur"
-                LastKnownLocation="CanonNoirConception.uml" />
-            </coveredLifelines>
-            <finish>
-              <executionOccurrenceSpecificationMoniker
-                Id="a591b965-df67-4b5c-be3b-9b9523b51b4c"
-                LastKnownName="ExecutionOccurrenceSpecification8"
-                LastKnownLocation="CanonNoirConception.uml" />
-            </finish>
-            <start>
-              <executionOccurrenceSpecificationMoniker
-                Id="511e40e7-e819-44c7-b55c-33835010e8b6"
-                LastKnownName="ExecutionOccurrenceSpecification7"
-                LastKnownLocation="CanonNoirConception.uml" />
-            </start>
-            <nestedOccurrences>
-              <messageOccurrenceSpecificationMoniker
-                Id="ebaa8105-bc9f-4a95-b0df-4c9ebcabc160"
-                LastKnownName="MessageOccurrenceSpecification14"
-                LastKnownLocation="CanonNoirConception.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="508b4765-8171-4817-a6df-e153adfd57b4"
-                LastKnownName="MessageOccurrenceSpecification15"
-                LastKnownLocation="CanonNoirConception.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="29548645-5338-43f3-bca1-22c8da56ce4a"
-                LastKnownName="MessageOccurrenceSpecification18"
-                LastKnownLocation="CanonNoirConception.uml" />
-            </nestedOccurrences>
-          </behaviorExecutionSpecification>
-          <executionOccurrenceSpecification
-            Id="511e40e7-e819-44c7-b55c-33835010e8b6"
-            name="ExecutionOccurrenceSpecification7">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="2d736490-bbc6-4004-8015-ce69fa2fd4d1"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="CanonNoirConception.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="519616ab-b43a-40ac-bcc0-003ed474ec8d"
-                LastKnownName=": Moteur"
-                LastKnownLocation="CanonNoirConception.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="ebaa8105-bc9f-4a95-b0df-4c9ebcabc160"
-            name="MessageOccurrenceSpecification14">
-            <covered>
-              <lifelineMoniker
-                Id="519616ab-b43a-40ac-bcc0-003ed474ec8d"
-                LastKnownName=": Moteur"
-                LastKnownLocation="CanonNoirConception.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="9299b591-9c33-4f70-8c8f-96d6c44247a5"
-            name="MessageOccurrenceSpecification13">
+            Id="da43d2ff-9b29-45a0-af6f-b942519e4b11"
+            name="MessageOccurrenceSpecification19">
             <covered>
               <lifelineMoniker
                 Id="384e55a9-bd3b-48e1-b759-dab21880bd99"
@@ -3542,102 +3322,122 @@
             </covered>
           </messageOccurrenceSpecification>
           <behaviorExecutionSpecification
-            Id="27fcb35a-f5b9-4804-b148-cc170539d088"
-            name="BehaviorExecutionSpecification5">
+            Id="964bb40f-4c24-4bfe-9ec9-065899926e52"
+            name="BehaviorExecutionSpecification7">
             <coveredLifelines>
               <lifelineMoniker
-                Id="1503f404-20fd-4b07-8ad9-3de9f171f20a"
-                LastKnownName=": Bateau"
+                Id="519616ab-b43a-40ac-bcc0-003ed474ec8d"
+                LastKnownName=": Facade"
                 LastKnownLocation="CanonNoirConception.uml" />
             </coveredLifelines>
             <finish>
               <executionOccurrenceSpecificationMoniker
-                Id="d1138c89-868c-453a-bf51-dbc234a45078"
-                LastKnownName="ExecutionOccurrenceSpecification10"
+                Id="da36eabe-0564-4061-99c5-25f1015b124e"
+                LastKnownName="ExecutionOccurrenceSpecification14"
                 LastKnownLocation="CanonNoirConception.uml" />
             </finish>
             <start>
               <executionOccurrenceSpecificationMoniker
-                Id="05c3d727-3631-4eb1-b47b-771e5712bb44"
-                LastKnownName="ExecutionOccurrenceSpecification9"
+                Id="f25aed5b-0b3a-476d-acbb-eae3018725de"
+                LastKnownName="ExecutionOccurrenceSpecification13"
                 LastKnownLocation="CanonNoirConception.uml" />
             </start>
             <nestedOccurrences>
               <messageOccurrenceSpecificationMoniker
-                Id="dccadcf6-2e52-41ab-bcf3-cf4cbd6f8690"
-                LastKnownName="MessageOccurrenceSpecification16"
+                Id="4819e41d-b2f4-489f-867e-aa424d6f2804"
+                LastKnownName="MessageOccurrenceSpecification24"
                 LastKnownLocation="CanonNoirConception.uml" />
               <messageOccurrenceSpecificationMoniker
-                Id="aa25797b-7fba-47f8-a7b8-1a1d47048d3c"
-                LastKnownName="MessageOccurrenceSpecification17"
+                Id="35aaa79a-26a0-4dbf-abcb-ccd36c961e88"
+                LastKnownName="MessageOccurrenceSpecification27"
+                LastKnownLocation="CanonNoirConception.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="714ae612-7dbb-4723-a150-5a28cb27fae5"
+                LastKnownName="MessageOccurrenceSpecification30"
+                LastKnownLocation="CanonNoirConception.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="f04aaa7d-5e06-4acb-a734-5ffc8f663a36"
+                LastKnownName="MessageOccurrenceSpecification25"
                 LastKnownLocation="CanonNoirConception.uml" />
             </nestedOccurrences>
           </behaviorExecutionSpecification>
           <executionOccurrenceSpecification
-            Id="05c3d727-3631-4eb1-b47b-771e5712bb44"
-            name="ExecutionOccurrenceSpecification9">
+            Id="f25aed5b-0b3a-476d-acbb-eae3018725de"
+            name="ExecutionOccurrenceSpecification13">
             <event>
               <executionOccurrenceSpecificationReferencesEvent>
                 <executionEventMoniker
-                  Id="752ad7b0-f9df-4923-b2ab-0d3d5e3924fa"
+                  Id="e3bb54d3-2ffb-4787-9ad2-81a7f52a4386"
                   LastKnownName="ExecutionEvent"
                   LastKnownLocation="CanonNoirConception.uml" />
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
               <lifelineMoniker
-                Id="1503f404-20fd-4b07-8ad9-3de9f171f20a"
-                LastKnownName=": Bateau"
+                Id="519616ab-b43a-40ac-bcc0-003ed474ec8d"
+                LastKnownName=": Facade"
                 LastKnownLocation="CanonNoirConception.uml" />
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="508b4765-8171-4817-a6df-e153adfd57b4"
-            name="MessageOccurrenceSpecification15">
+            Id="4819e41d-b2f4-489f-867e-aa424d6f2804"
+            name="MessageOccurrenceSpecification24">
             <covered>
               <lifelineMoniker
                 Id="519616ab-b43a-40ac-bcc0-003ed474ec8d"
-                LastKnownName=": Moteur"
+                LastKnownName=": Facade"
                 LastKnownLocation="CanonNoirConception.uml" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="dccadcf6-2e52-41ab-bcf3-cf4cbd6f8690"
-            name="MessageOccurrenceSpecification16">
+            Id="afd9e5e4-79c7-435a-9ec1-0a9ec068ba4c"
+            name="MessageOccurrenceSpecification23">
             <covered>
+              <lifelineMoniker
+                Id="075f38f2-85dc-46e4-b0db-d2e5f7017428"
+                LastKnownName=": Windows"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="ca0abdc6-cd9c-4eea-afe3-3d5269aba248"
+            name="BehaviorExecutionSpecification8">
+            <coveredLifelines>
               <lifelineMoniker
                 Id="1503f404-20fd-4b07-8ad9-3de9f171f20a"
-                LastKnownName=": Bateau"
-                LastKnownLocation="CanonNoirConception.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="aa25797b-7fba-47f8-a7b8-1a1d47048d3c"
-            name="MessageOccurrenceSpecification17">
-            <covered>
-              <lifelineMoniker
-                Id="1503f404-20fd-4b07-8ad9-3de9f171f20a"
-                LastKnownName=": Bateau"
-                LastKnownLocation="CanonNoirConception.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="29548645-5338-43f3-bca1-22c8da56ce4a"
-            name="MessageOccurrenceSpecification18">
-            <covered>
-              <lifelineMoniker
-                Id="519616ab-b43a-40ac-bcc0-003ed474ec8d"
                 LastKnownName=": Moteur"
                 LastKnownLocation="CanonNoirConception.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="3e1d9854-6e2a-4a51-9cd9-a12b2c12624c"
+                LastKnownName="ExecutionOccurrenceSpecification16"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="0f3c89f0-f06e-4fad-a197-5ea5f4b2ef7b"
+                LastKnownName="ExecutionOccurrenceSpecification15"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="3039e9ca-b387-4d05-a7a5-1b8fa06c1a7d"
+                LastKnownName="MessageOccurrenceSpecification28"
+                LastKnownLocation="CanonNoirConception.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="ccc9c8cf-8a5a-4254-8118-e0f08ad6ee5d"
+                LastKnownName="MessageOccurrenceSpecification29"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
           <executionOccurrenceSpecification
-            Id="d1138c89-868c-453a-bf51-dbc234a45078"
-            name="ExecutionOccurrenceSpecification10">
+            Id="0f3c89f0-f06e-4fad-a197-5ea5f4b2ef7b"
+            name="ExecutionOccurrenceSpecification15">
             <event>
               <executionOccurrenceSpecificationReferencesEvent>
                 <executionEventMoniker
-                  Id="adebfb60-e2a9-4608-9d4c-0895e996fecd"
+                  Id="974b6c80-cda8-42fa-8ed8-ff24e329575b"
                   LastKnownName="ExecutionEvent"
                   LastKnownLocation="CanonNoirConception.uml" />
               </executionOccurrenceSpecificationReferencesEvent>
@@ -3645,17 +3445,95 @@
             <covered>
               <lifelineMoniker
                 Id="1503f404-20fd-4b07-8ad9-3de9f171f20a"
-                LastKnownName=": Bateau"
+                LastKnownName=": Moteur"
                 LastKnownLocation="CanonNoirConception.uml" />
             </covered>
           </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="3039e9ca-b387-4d05-a7a5-1b8fa06c1a7d"
+            name="MessageOccurrenceSpecification28">
+            <covered>
+              <lifelineMoniker
+                Id="1503f404-20fd-4b07-8ad9-3de9f171f20a"
+                LastKnownName=": Moteur"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="35aaa79a-26a0-4dbf-abcb-ccd36c961e88"
+            name="MessageOccurrenceSpecification27">
+            <covered>
+              <lifelineMoniker
+                Id="519616ab-b43a-40ac-bcc0-003ed474ec8d"
+                LastKnownName=": Facade"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="ccc9c8cf-8a5a-4254-8118-e0f08ad6ee5d"
+            name="MessageOccurrenceSpecification29">
+            <covered>
+              <lifelineMoniker
+                Id="1503f404-20fd-4b07-8ad9-3de9f171f20a"
+                LastKnownName=": Moteur"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="714ae612-7dbb-4723-a150-5a28cb27fae5"
+            name="MessageOccurrenceSpecification30">
+            <covered>
+              <lifelineMoniker
+                Id="519616ab-b43a-40ac-bcc0-003ed474ec8d"
+                LastKnownName=": Facade"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
           <executionOccurrenceSpecification
-            Id="a591b965-df67-4b5c-be3b-9b9523b51b4c"
-            name="ExecutionOccurrenceSpecification8">
+            Id="3e1d9854-6e2a-4a51-9cd9-a12b2c12624c"
+            name="ExecutionOccurrenceSpecification16">
             <event>
               <executionOccurrenceSpecificationReferencesEvent>
                 <executionEventMoniker
-                  Id="e6683c00-e7df-41b7-88a7-9201202c7bb6"
+                  Id="03e1afc3-446f-484b-a7c6-4f25afa9d48a"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CanonNoirConception.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="1503f404-20fd-4b07-8ad9-3de9f171f20a"
+                LastKnownName=": Moteur"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="f04aaa7d-5e06-4acb-a734-5ffc8f663a36"
+            name="MessageOccurrenceSpecification25">
+            <covered>
+              <lifelineMoniker
+                Id="519616ab-b43a-40ac-bcc0-003ed474ec8d"
+                LastKnownName=": Facade"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="3eb90a34-8b40-48b6-8546-c4bed15b43fa"
+            name="MessageOccurrenceSpecification26">
+            <covered>
+              <lifelineMoniker
+                Id="075f38f2-85dc-46e4-b0db-d2e5f7017428"
+                LastKnownName=": Windows"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="da36eabe-0564-4061-99c5-25f1015b124e"
+            name="ExecutionOccurrenceSpecification14">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="6c42055e-2dc7-4ae9-a75b-01b73d2da1d4"
                   LastKnownName="ExecutionEvent"
                   LastKnownLocation="CanonNoirConception.uml" />
               </executionOccurrenceSpecificationReferencesEvent>
@@ -3663,7 +3541,385 @@
             <covered>
               <lifelineMoniker
                 Id="519616ab-b43a-40ac-bcc0-003ed474ec8d"
+                LastKnownName=": Facade"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="6cf3749e-fa99-47f8-9cd7-44777853ae39"
+            name="MessageOccurrenceSpecification21">
+            <covered>
+              <lifelineMoniker
+                Id="075f38f2-85dc-46e4-b0db-d2e5f7017428"
+                LastKnownName=": Windows"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="248faed0-9024-4b0b-aa1f-4906b911f4ed"
+            name="MessageOccurrenceSpecification22">
+            <covered>
+              <lifelineMoniker
+                Id="384e55a9-bd3b-48e1-b759-dab21880bd99"
+                LastKnownName="Joueur"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="383e0e8a-82c3-46c7-b6ec-b3e653734ffd"
+            name="ExecutionOccurrenceSpecification12">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="bde5171c-6b1a-4841-8a30-824777312975"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CanonNoirConception.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="075f38f2-85dc-46e4-b0db-d2e5f7017428"
+                LastKnownName=": Windows"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="73bd79e2-2910-4d4f-be1e-7ac23b38d7d5"
+            name="BehaviorExecutionSpecification9">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="075f38f2-85dc-46e4-b0db-d2e5f7017428"
+                LastKnownName=": Windows"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="d74f4a5b-7a9f-406f-823a-9bc4c7fac9c1"
+                LastKnownName="ExecutionOccurrenceSpecification18"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="1e88ecc7-f648-4669-88cc-cd762da2e7a8"
+                LastKnownName="ExecutionOccurrenceSpecification17"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="edfa37e7-1508-44fd-9df3-1204bd3ce6f3"
+                LastKnownName="MessageOccurrenceSpecification32"
+                LastKnownLocation="CanonNoirConception.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="f515ce42-8645-46ab-b930-cff8eef31a8d"
+                LastKnownName="MessageOccurrenceSpecification35"
+                LastKnownLocation="CanonNoirConception.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="a92649cd-c649-4f89-bf2e-097b45561627"
+                LastKnownName="MessageOccurrenceSpecification38"
+                LastKnownLocation="CanonNoirConception.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="5857a006-5af4-4580-8a02-6b6621edd047"
+                LastKnownName="MessageOccurrenceSpecification33"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="1e88ecc7-f648-4669-88cc-cd762da2e7a8"
+            name="ExecutionOccurrenceSpecification17">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="b00bc605-d6c4-43b9-8f28-bf0cf4a0cb51"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CanonNoirConception.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="075f38f2-85dc-46e4-b0db-d2e5f7017428"
+                LastKnownName=": Windows"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="22a73195-0fc9-4cee-954d-b12f5e7f8b12"
+            name="MessageOccurrenceSpecification31">
+            <covered>
+              <lifelineMoniker
+                Id="384e55a9-bd3b-48e1-b759-dab21880bd99"
+                LastKnownName="Joueur"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="edfa37e7-1508-44fd-9df3-1204bd3ce6f3"
+            name="MessageOccurrenceSpecification32">
+            <covered>
+              <lifelineMoniker
+                Id="075f38f2-85dc-46e4-b0db-d2e5f7017428"
+                LastKnownName=": Windows"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="464630c4-e169-4e01-8c6d-37ae23bbf297"
+            name="BehaviorExecutionSpecification10">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="519616ab-b43a-40ac-bcc0-003ed474ec8d"
+                LastKnownName=": Facade"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="f42fbbff-3bcd-4922-aca7-27576b3035b8"
+                LastKnownName="ExecutionOccurrenceSpecification20"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="af29dc05-3476-4bf7-a4f1-42571ac1cc6b"
+                LastKnownName="ExecutionOccurrenceSpecification19"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="ce6d2397-f690-470a-b291-3d616fe00031"
+                LastKnownName="MessageOccurrenceSpecification36"
+                LastKnownLocation="CanonNoirConception.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="e7cbde93-4ea5-4e89-b550-559507c3ef11"
+                LastKnownName="MessageOccurrenceSpecification39"
+                LastKnownLocation="CanonNoirConception.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="1a0427c6-acbe-40f9-ad01-ef928ae9c1e0"
+                LastKnownName="MessageOccurrenceSpecification42"
+                LastKnownLocation="CanonNoirConception.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="85eb2bf7-7f5c-4d1a-ab78-f3f8b9f269fa"
+                LastKnownName="MessageOccurrenceSpecification37"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="af29dc05-3476-4bf7-a4f1-42571ac1cc6b"
+            name="ExecutionOccurrenceSpecification19">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="ba444290-20af-4342-8fc5-870ad78325b5"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CanonNoirConception.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="519616ab-b43a-40ac-bcc0-003ed474ec8d"
+                LastKnownName=": Facade"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="ce6d2397-f690-470a-b291-3d616fe00031"
+            name="MessageOccurrenceSpecification36">
+            <covered>
+              <lifelineMoniker
+                Id="519616ab-b43a-40ac-bcc0-003ed474ec8d"
+                LastKnownName=": Facade"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="f515ce42-8645-46ab-b930-cff8eef31a8d"
+            name="MessageOccurrenceSpecification35">
+            <covered>
+              <lifelineMoniker
+                Id="075f38f2-85dc-46e4-b0db-d2e5f7017428"
+                LastKnownName=": Windows"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="5a4c0bf5-1076-46e1-9c15-3b23b5e65f6c"
+            name="BehaviorExecutionSpecification11">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="1503f404-20fd-4b07-8ad9-3de9f171f20a"
                 LastKnownName=": Moteur"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="ee9b2131-7c02-4d3f-847d-f198b928766e"
+                LastKnownName="ExecutionOccurrenceSpecification22"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="61170265-6404-4969-8f4f-d27ad38f723c"
+                LastKnownName="ExecutionOccurrenceSpecification21"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="8278d654-9877-4dee-969a-4e0a49909ba5"
+                LastKnownName="MessageOccurrenceSpecification40"
+                LastKnownLocation="CanonNoirConception.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="841fe6a6-842a-4fb5-b6af-14cf30767535"
+                LastKnownName="MessageOccurrenceSpecification41"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="61170265-6404-4969-8f4f-d27ad38f723c"
+            name="ExecutionOccurrenceSpecification21">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="9308148c-82d8-4e40-b03d-fa23d9e8500f"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CanonNoirConception.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="1503f404-20fd-4b07-8ad9-3de9f171f20a"
+                LastKnownName=": Moteur"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="8278d654-9877-4dee-969a-4e0a49909ba5"
+            name="MessageOccurrenceSpecification40">
+            <covered>
+              <lifelineMoniker
+                Id="1503f404-20fd-4b07-8ad9-3de9f171f20a"
+                LastKnownName=": Moteur"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="e7cbde93-4ea5-4e89-b550-559507c3ef11"
+            name="MessageOccurrenceSpecification39">
+            <covered>
+              <lifelineMoniker
+                Id="519616ab-b43a-40ac-bcc0-003ed474ec8d"
+                LastKnownName=": Facade"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="841fe6a6-842a-4fb5-b6af-14cf30767535"
+            name="MessageOccurrenceSpecification41">
+            <covered>
+              <lifelineMoniker
+                Id="1503f404-20fd-4b07-8ad9-3de9f171f20a"
+                LastKnownName=": Moteur"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="1a0427c6-acbe-40f9-ad01-ef928ae9c1e0"
+            name="MessageOccurrenceSpecification42">
+            <covered>
+              <lifelineMoniker
+                Id="519616ab-b43a-40ac-bcc0-003ed474ec8d"
+                LastKnownName=": Facade"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="ee9b2131-7c02-4d3f-847d-f198b928766e"
+            name="ExecutionOccurrenceSpecification22">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="012503d0-7632-49ab-af68-81e8c37643a0"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CanonNoirConception.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="1503f404-20fd-4b07-8ad9-3de9f171f20a"
+                LastKnownName=": Moteur"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="85eb2bf7-7f5c-4d1a-ab78-f3f8b9f269fa"
+            name="MessageOccurrenceSpecification37">
+            <covered>
+              <lifelineMoniker
+                Id="519616ab-b43a-40ac-bcc0-003ed474ec8d"
+                LastKnownName=": Facade"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="a92649cd-c649-4f89-bf2e-097b45561627"
+            name="MessageOccurrenceSpecification38">
+            <covered>
+              <lifelineMoniker
+                Id="075f38f2-85dc-46e4-b0db-d2e5f7017428"
+                LastKnownName=": Windows"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="f42fbbff-3bcd-4922-aca7-27576b3035b8"
+            name="ExecutionOccurrenceSpecification20">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="fa29c50e-6502-4e3f-940a-188ec4837246"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CanonNoirConception.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="519616ab-b43a-40ac-bcc0-003ed474ec8d"
+                LastKnownName=": Facade"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="c045d379-cb87-4a93-a6e0-be307b8178ce"
+            name="MessageOccurrenceSpecification34">
+            <covered>
+              <lifelineMoniker
+                Id="384e55a9-bd3b-48e1-b759-dab21880bd99"
+                LastKnownName="Joueur"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="5857a006-5af4-4580-8a02-6b6621edd047"
+            name="MessageOccurrenceSpecification33">
+            <covered>
+              <lifelineMoniker
+                Id="075f38f2-85dc-46e4-b0db-d2e5f7017428"
+                LastKnownName=": Windows"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="d74f4a5b-7a9f-406f-823a-9bc4c7fac9c1"
+            name="ExecutionOccurrenceSpecification18">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="2b56a221-6886-44fd-868b-61d90c34db9e"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CanonNoirConception.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="075f38f2-85dc-46e4-b0db-d2e5f7017428"
+                LastKnownName=": Windows"
                 LastKnownLocation="CanonNoirConception.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -3681,24 +3937,52 @@
             </represents>
             <topLevelOccurrences>
               <messageOccurrenceSpecificationMoniker
-                Id="e49a6aad-97a3-4b44-93f4-3cfbf380b62b"
-                LastKnownName="MessageOccurrenceSpecification1"
+                Id="da43d2ff-9b29-45a0-af6f-b942519e4b11"
+                LastKnownName="MessageOccurrenceSpecification19"
                 LastKnownLocation="CanonNoirConception.uml" />
               <messageOccurrenceSpecificationMoniker
-                Id="fee16d40-aab3-4c81-9c9e-54a3a68da25f"
-                LastKnownName="MessageOccurrenceSpecification4"
+                Id="248faed0-9024-4b0b-aa1f-4906b911f4ed"
+                LastKnownName="MessageOccurrenceSpecification22"
                 LastKnownLocation="CanonNoirConception.uml" />
               <messageOccurrenceSpecificationMoniker
-                Id="9299b591-9c33-4f70-8c8f-96d6c44247a5"
-                LastKnownName="MessageOccurrenceSpecification13"
+                Id="22a73195-0fc9-4cee-954d-b12f5e7f8b12"
+                LastKnownName="MessageOccurrenceSpecification31"
+                LastKnownLocation="CanonNoirConception.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="c045d379-cb87-4a93-a6e0-be307b8178ce"
+                LastKnownName="MessageOccurrenceSpecification34"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="075f38f2-85dc-46e4-b0db-d2e5f7017428"
+            name=": Windows"
+            isActor="false"
+            lifelineDisplayName=": Windows">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="08866c42-60cc-463d-963f-704d38bc43ea"
+                LastKnownName="ExecutionOccurrenceSpecification11"
+                LastKnownLocation="CanonNoirConception.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="383e0e8a-82c3-46c7-b6ec-b3e653734ffd"
+                LastKnownName="ExecutionOccurrenceSpecification12"
+                LastKnownLocation="CanonNoirConception.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="1e88ecc7-f648-4669-88cc-cd762da2e7a8"
+                LastKnownName="ExecutionOccurrenceSpecification17"
+                LastKnownLocation="CanonNoirConception.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="d74f4a5b-7a9f-406f-823a-9bc4c7fac9c1"
+                LastKnownName="ExecutionOccurrenceSpecification18"
                 LastKnownLocation="CanonNoirConception.uml" />
             </topLevelOccurrences>
           </lifeline>
           <lifeline
             Id="519616ab-b43a-40ac-bcc0-003ed474ec8d"
-            name=": Moteur"
+            name=": Facade"
             isActor="false"
-            lifelineDisplayName=": Moteur">
+            lifelineDisplayName=": Facade">
             <represents>
               <propertyMoniker
                 Id="430d7ab5-9fbd-4598-8afc-9d14070ce097"
@@ -3706,28 +3990,28 @@
             </represents>
             <topLevelOccurrences>
               <executionOccurrenceSpecificationMoniker
-                Id="469a6aca-4b32-4723-8e5b-0470b44c3b88"
-                LastKnownName="ExecutionOccurrenceSpecification1"
+                Id="f25aed5b-0b3a-476d-acbb-eae3018725de"
+                LastKnownName="ExecutionOccurrenceSpecification13"
                 LastKnownLocation="CanonNoirConception.uml" />
               <executionOccurrenceSpecificationMoniker
-                Id="2f6f8244-3764-4c4c-acb6-43dddefe740f"
-                LastKnownName="ExecutionOccurrenceSpecification2"
+                Id="da36eabe-0564-4061-99c5-25f1015b124e"
+                LastKnownName="ExecutionOccurrenceSpecification14"
                 LastKnownLocation="CanonNoirConception.uml" />
               <executionOccurrenceSpecificationMoniker
-                Id="511e40e7-e819-44c7-b55c-33835010e8b6"
-                LastKnownName="ExecutionOccurrenceSpecification7"
+                Id="af29dc05-3476-4bf7-a4f1-42571ac1cc6b"
+                LastKnownName="ExecutionOccurrenceSpecification19"
                 LastKnownLocation="CanonNoirConception.uml" />
               <executionOccurrenceSpecificationMoniker
-                Id="a591b965-df67-4b5c-be3b-9b9523b51b4c"
-                LastKnownName="ExecutionOccurrenceSpecification8"
+                Id="f42fbbff-3bcd-4922-aca7-27576b3035b8"
+                LastKnownName="ExecutionOccurrenceSpecification20"
                 LastKnownLocation="CanonNoirConception.uml" />
             </topLevelOccurrences>
           </lifeline>
           <lifeline
             Id="1503f404-20fd-4b07-8ad9-3de9f171f20a"
-            name=": Bateau"
+            name=": Moteur"
             isActor="false"
-            lifelineDisplayName=": Bateau">
+            lifelineDisplayName=": Moteur">
             <represents>
               <propertyMoniker
                 Id="79bbb031-b8cf-4090-8792-a7e8ff03e1e1"
@@ -3735,155 +4019,250 @@
             </represents>
             <topLevelOccurrences>
               <executionOccurrenceSpecificationMoniker
-                Id="5fb92d6c-12c5-4f5d-8950-ca1e5f767824"
-                LastKnownName="ExecutionOccurrenceSpecification5"
+                Id="0f3c89f0-f06e-4fad-a197-5ea5f4b2ef7b"
+                LastKnownName="ExecutionOccurrenceSpecification15"
                 LastKnownLocation="CanonNoirConception.uml" />
               <executionOccurrenceSpecificationMoniker
-                Id="91ccce12-c988-40f6-aae3-afd2836ed2cd"
-                LastKnownName="ExecutionOccurrenceSpecification6"
+                Id="3e1d9854-6e2a-4a51-9cd9-a12b2c12624c"
+                LastKnownName="ExecutionOccurrenceSpecification16"
                 LastKnownLocation="CanonNoirConception.uml" />
               <executionOccurrenceSpecificationMoniker
-                Id="05c3d727-3631-4eb1-b47b-771e5712bb44"
-                LastKnownName="ExecutionOccurrenceSpecification9"
+                Id="61170265-6404-4969-8f4f-d27ad38f723c"
+                LastKnownName="ExecutionOccurrenceSpecification21"
                 LastKnownLocation="CanonNoirConception.uml" />
               <executionOccurrenceSpecificationMoniker
-                Id="d1138c89-868c-453a-bf51-dbc234a45078"
-                LastKnownName="ExecutionOccurrenceSpecification10"
+                Id="ee9b2131-7c02-4d3f-847d-f198b928766e"
+                LastKnownName="ExecutionOccurrenceSpecification22"
                 LastKnownLocation="CanonNoirConception.uml" />
             </topLevelOccurrences>
           </lifeline>
         </lifelines>
         <messages>
           <message
-            Id="12c0d96f-4acf-41c0-a983-1267b485c812"
-            name="Lance les dés"
+            Id="225a4cdb-714b-4bfc-8d1d-68f1896510ff"
+            name="Cliquer sur les Dés"
             messageKind="Complete"
             messageSort="SynchCall"
             createSelfMessage="false">
             <sendEvent>
               <messageOccurrenceSpecificationMoniker
-                Id="e49a6aad-97a3-4b44-93f4-3cfbf380b62b"
-                LastKnownName="MessageOccurrenceSpecification1"
+                Id="da43d2ff-9b29-45a0-af6f-b942519e4b11"
+                LastKnownName="MessageOccurrenceSpecification19"
                 LastKnownLocation="CanonNoirConception.uml" />
             </sendEvent>
             <receiveEvent>
               <messageOccurrenceSpecificationMoniker
-                Id="29b935f9-9ace-44c3-9c7e-0b1de7b3d85a"
-                LastKnownName="MessageOccurrenceSpecification2"
+                Id="b6335b62-33e6-4615-99c4-6b53b2eb9f32"
+                LastKnownName="MessageOccurrenceSpecification20"
                 LastKnownLocation="CanonNoirConception.uml" />
             </receiveEvent>
           </message>
           <message
-            Id="633b0459-888a-4fe4-88bb-11dae929e574"
-            name="Propose les cases disponibles"
+            Id="8b7f2029-5e54-4e8b-9dcd-42360aa6e6e3"
+            name="affiche les cases cliquables"
             messageKind="Complete"
             messageSort="Reply"
             createSelfMessage="false">
             <sendEvent>
               <messageOccurrenceSpecificationMoniker
-                Id="bebb3747-b963-45cf-b5ed-113f9fa923b6"
-                LastKnownName="MessageOccurrenceSpecification3"
+                Id="6cf3749e-fa99-47f8-9cd7-44777853ae39"
+                LastKnownName="MessageOccurrenceSpecification21"
                 LastKnownLocation="CanonNoirConception.uml" />
             </sendEvent>
             <receiveEvent>
               <messageOccurrenceSpecificationMoniker
-                Id="fee16d40-aab3-4c81-9c9e-54a3a68da25f"
-                LastKnownName="MessageOccurrenceSpecification4"
+                Id="248faed0-9024-4b0b-aa1f-4906b911f4ed"
+                LastKnownName="MessageOccurrenceSpecification22"
                 LastKnownLocation="CanonNoirConception.uml" />
             </receiveEvent>
           </message>
           <message
-            Id="4f970b98-a3d0-492e-8021-a769a1ee8d5b"
-            name="Regarde la position des bateaux du joueur"
+            Id="c7fe3d2e-6c8d-472c-9815-ec58d35ce528"
+            name="Demande la valeur des dés"
             messageKind="Complete"
             messageSort="SynchCall"
             createSelfMessage="false">
             <sendEvent>
               <messageOccurrenceSpecificationMoniker
-                Id="49b092a9-d8f0-4600-9166-50d958af24fb"
-                LastKnownName="MessageOccurrenceSpecification9"
+                Id="afd9e5e4-79c7-435a-9ec1-0a9ec068ba4c"
+                LastKnownName="MessageOccurrenceSpecification23"
                 LastKnownLocation="CanonNoirConception.uml" />
             </sendEvent>
             <receiveEvent>
               <messageOccurrenceSpecificationMoniker
-                Id="2f25f82f-b4c0-421e-8b84-49116579e49c"
-                LastKnownName="MessageOccurrenceSpecification10"
+                Id="4819e41d-b2f4-489f-867e-aa424d6f2804"
+                LastKnownName="MessageOccurrenceSpecification24"
                 LastKnownLocation="CanonNoirConception.uml" />
             </receiveEvent>
           </message>
           <message
-            Id="3471f5da-20b2-4ad6-b427-10f5329dbff6"
-            name="Calcule les cases accesible"
+            Id="b1beea16-2650-4827-818a-e4609fcb1b44"
+            name="Les cases cliquables"
             messageKind="Complete"
             messageSort="Reply"
             createSelfMessage="false">
             <sendEvent>
               <messageOccurrenceSpecificationMoniker
-                Id="76a61197-8ba3-4b3d-922a-6012a70e5b20"
-                LastKnownName="MessageOccurrenceSpecification11"
+                Id="f04aaa7d-5e06-4acb-a734-5ffc8f663a36"
+                LastKnownName="MessageOccurrenceSpecification25"
                 LastKnownLocation="CanonNoirConception.uml" />
             </sendEvent>
             <receiveEvent>
               <messageOccurrenceSpecificationMoniker
-                Id="849c1e75-146c-4491-9f76-3c19d0ba3094"
-                LastKnownName="MessageOccurrenceSpecification12"
+                Id="3eb90a34-8b40-48b6-8546-c4bed15b43fa"
+                LastKnownName="MessageOccurrenceSpecification26"
                 LastKnownLocation="CanonNoirConception.uml" />
             </receiveEvent>
           </message>
           <message
-            Id="c64db624-a04e-491e-aaa0-240ac547c42e"
-            name="Choisit une des cases à déplacer"
-            messageKind="Complete"
-            messageSort="AsynchCall"
-            createSelfMessage="false">
-            <sendEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="9299b591-9c33-4f70-8c8f-96d6c44247a5"
-                LastKnownName="MessageOccurrenceSpecification13"
-                LastKnownLocation="CanonNoirConception.uml" />
-            </sendEvent>
-            <receiveEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="ebaa8105-bc9f-4a95-b0df-4c9ebcabc160"
-                LastKnownName="MessageOccurrenceSpecification14"
-                LastKnownLocation="CanonNoirConception.uml" />
-            </receiveEvent>
-          </message>
-          <message
-            Id="13d611ad-7057-4aa4-977c-eb5ba81f0a91"
-            name="Déplace le bateau à la case donnée"
+            Id="92b5f954-b32b-429e-9f4b-cb0bfe41e750"
+            name="Calcul les positions possibles"
             messageKind="Complete"
             messageSort="SynchCall"
             createSelfMessage="false">
             <sendEvent>
               <messageOccurrenceSpecificationMoniker
-                Id="508b4765-8171-4817-a6df-e153adfd57b4"
-                LastKnownName="MessageOccurrenceSpecification15"
+                Id="35aaa79a-26a0-4dbf-abcb-ccd36c961e88"
+                LastKnownName="MessageOccurrenceSpecification27"
                 LastKnownLocation="CanonNoirConception.uml" />
             </sendEvent>
             <receiveEvent>
               <messageOccurrenceSpecificationMoniker
-                Id="dccadcf6-2e52-41ab-bcf3-cf4cbd6f8690"
-                LastKnownName="MessageOccurrenceSpecification16"
+                Id="3039e9ca-b387-4d05-a7a5-1b8fa06c1a7d"
+                LastKnownName="MessageOccurrenceSpecification28"
                 LastKnownLocation="CanonNoirConception.uml" />
             </receiveEvent>
           </message>
           <message
-            Id="2be8b85a-26de-413a-b8e8-22664f1435c1"
-            name="Le nouvel état du moteur"
+            Id="de280140-ce84-4255-a568-cb3d71a839d3"
+            name="Les cases accessbile"
             messageKind="Complete"
             messageSort="Reply"
             createSelfMessage="false">
             <sendEvent>
               <messageOccurrenceSpecificationMoniker
-                Id="aa25797b-7fba-47f8-a7b8-1a1d47048d3c"
-                LastKnownName="MessageOccurrenceSpecification17"
+                Id="ccc9c8cf-8a5a-4254-8118-e0f08ad6ee5d"
+                LastKnownName="MessageOccurrenceSpecification29"
                 LastKnownLocation="CanonNoirConception.uml" />
             </sendEvent>
             <receiveEvent>
               <messageOccurrenceSpecificationMoniker
-                Id="29548645-5338-43f3-bca1-22c8da56ce4a"
-                LastKnownName="MessageOccurrenceSpecification18"
+                Id="714ae612-7dbb-4723-a150-5a28cb27fae5"
+                LastKnownName="MessageOccurrenceSpecification30"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="a1064291-14e0-46f5-9550-c6e56687488f"
+            name="Clique sur une case"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="22a73195-0fc9-4cee-954d-b12f5e7f8b12"
+                LastKnownName="MessageOccurrenceSpecification31"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="edfa37e7-1508-44fd-9df3-1204bd3ce6f3"
+                LastKnownName="MessageOccurrenceSpecification32"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="60d76bc7-5083-4e4c-a7cc-dbbef0399b40"
+            name="affiche la nouvelle position du bateau"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="5857a006-5af4-4580-8a02-6b6621edd047"
+                LastKnownName="MessageOccurrenceSpecification33"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="c045d379-cb87-4a93-a6e0-be307b8178ce"
+                LastKnownName="MessageOccurrenceSpecification34"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="a6862930-1278-43b9-a89e-b512d6891328"
+            name="Transmet les coordonneés"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="f515ce42-8645-46ab-b930-cff8eef31a8d"
+                LastKnownName="MessageOccurrenceSpecification35"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="ce6d2397-f690-470a-b291-3d616fe00031"
+                LastKnownName="MessageOccurrenceSpecification36"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="03e7be5f-9804-41fe-932e-4317106a0c25"
+            name="Nouvelles coordonnées du bateau"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="85eb2bf7-7f5c-4d1a-ab78-f3f8b9f269fa"
+                LastKnownName="MessageOccurrenceSpecification37"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="a92649cd-c649-4f89-bf2e-097b45561627"
+                LastKnownName="MessageOccurrenceSpecification38"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="2cbeeee6-4287-4fe3-8afe-870d9fdda61c"
+            name="Déplace le bateau"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="e7cbde93-4ea5-4e89-b550-559507c3ef11"
+                LastKnownName="MessageOccurrenceSpecification39"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="8278d654-9877-4dee-969a-4e0a49909ba5"
+                LastKnownName="MessageOccurrenceSpecification40"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="3abef73e-b9d3-4ab4-baab-fcba33b44fdd"
+            name="Nouvelle case su bateau"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="841fe6a6-842a-4fb5-b6af-14cf30767535"
+                LastKnownName="MessageOccurrenceSpecification41"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="1a0427c6-acbe-40f9-ad01-ef928ae9c1e0"
+                LastKnownName="MessageOccurrenceSpecification42"
                 LastKnownLocation="CanonNoirConception.uml" />
             </receiveEvent>
           </message>
@@ -3915,9 +4294,9 @@
             aggregation="None"
             isComposite="false">
             <type_NamedElement>
-              <actorMoniker
-                Id="57e2d28f-0232-4084-a3e8-bd651c741b07"
-                LastKnownName="Moteur"
+              <classMoniker
+                Id="650991dd-e7e1-4897-82ec-6fe56717bb36"
+                LastKnownName="Facade"
                 LastKnownLocation="CanonNoirConception.uml" />
             </type_NamedElement>
           </property>
@@ -3931,24 +4310,14 @@
             aggregation="None"
             isComposite="false">
             <type_NamedElement>
-              <classMoniker
-                Id="8b0d99da-c28d-48e7-867c-6b974592dc21"
-                LastKnownName="Bateau"
+              <actorMoniker
+                Id="57e2d28f-0232-4084-a3e8-bd651c741b07"
+                LastKnownName="Moteur"
                 LastKnownLocation="CanonNoirConception.uml" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
       </interaction>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="99fba1cb-1f96-4ee6-8e1c-14f93c0bf00d"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="83a57594-6b4b-4095-a61b-d1243aa74625"
-        name="ExecutionEvent" />
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
@@ -4719,32 +5088,1676 @@
     </packageHasNamedElement>
     <packageHasNamedElement>
       <executionEvent
-        Id="3c34f7ea-c98e-4d9e-ac7a-f3c40293ed08"
+        Id="23f9a2cd-b395-42ed-9c13-abdeb6d3ec6d"
         name="ExecutionEvent" />
     </packageHasNamedElement>
     <packageHasNamedElement>
       <executionEvent
-        Id="0d5fce9e-44b5-451c-887e-3cb2466a5762"
+        Id="bde5171c-6b1a-4841-8a30-824777312975"
         name="ExecutionEvent" />
     </packageHasNamedElement>
     <packageHasNamedElement>
       <executionEvent
-        Id="2d736490-bbc6-4004-8015-ce69fa2fd4d1"
+        Id="e3bb54d3-2ffb-4787-9ad2-81a7f52a4386"
         name="ExecutionEvent" />
     </packageHasNamedElement>
     <packageHasNamedElement>
       <executionEvent
-        Id="e6683c00-e7df-41b7-88a7-9201202c7bb6"
+        Id="6c42055e-2dc7-4ae9-a75b-01b73d2da1d4"
         name="ExecutionEvent" />
     </packageHasNamedElement>
     <packageHasNamedElement>
       <executionEvent
-        Id="752ad7b0-f9df-4923-b2ab-0d3d5e3924fa"
+        Id="974b6c80-cda8-42fa-8ed8-ff24e329575b"
         name="ExecutionEvent" />
     </packageHasNamedElement>
     <packageHasNamedElement>
       <executionEvent
-        Id="adebfb60-e2a9-4608-9d4c-0895e996fecd"
+        Id="03e1afc3-446f-484b-a7c6-4f25afa9d48a"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="b00bc605-d6c4-43b9-8f28-bf0cf4a0cb51"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="2b56a221-6886-44fd-868b-61d90c34db9e"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="ba444290-20af-4342-8fc5-870ad78325b5"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="fa29c50e-6502-4e3f-940a-188ec4837246"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="9308148c-82d8-4e40-b03d-fa23d9e8500f"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="012503d0-7632-49ab-af68-81e8c37643a0"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <interaction
+        Id="d452c4bc-df53-4759-9a0c-8978709678e5"
+        name="Sequence2"
+        collapseFragmentsFlag="false"
+        isActiveClass="false"
+        isAbstract="false"
+        isLeaf="false"
+        isReentrant="false">
+        <fragments>
+          <behaviorExecutionSpecification
+            Id="d0a68630-428f-4bfd-a1b9-915b1396e058"
+            name="BehaviorExecutionSpecification6">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="0c14c18e-24f0-416e-b4b0-e59c52544a04"
+                LastKnownName=": Windows"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="76ece45a-759a-4a70-a041-f03ecad19ce6"
+                LastKnownName="ExecutionOccurrenceSpecification12"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="f2d4ec1d-ce5b-4541-9540-e2f807952b71"
+                LastKnownName="ExecutionOccurrenceSpecification11"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="d636d071-8f81-45ef-bb85-934595aaf212"
+                LastKnownName="MessageOccurrenceSpecification20"
+                LastKnownLocation="CanonNoirConception.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="acff0a63-ae34-4c5c-a9d0-79dd469871a2"
+                LastKnownName="MessageOccurrenceSpecification23"
+                LastKnownLocation="CanonNoirConception.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="d792485c-e8d6-4893-894a-bb1322f88426"
+                LastKnownName="MessageOccurrenceSpecification26"
+                LastKnownLocation="CanonNoirConception.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="813066fd-dc27-42f0-a0ab-2abbc5c24b07"
+                LastKnownName="MessageOccurrenceSpecification21"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="f2d4ec1d-ce5b-4541-9540-e2f807952b71"
+            name="ExecutionOccurrenceSpecification11">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="5525a988-2503-4061-9cf9-3f182e7c7c30"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CanonNoirConception.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="0c14c18e-24f0-416e-b4b0-e59c52544a04"
+                LastKnownName=": Windows"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="d636d071-8f81-45ef-bb85-934595aaf212"
+            name="MessageOccurrenceSpecification20">
+            <covered>
+              <lifelineMoniker
+                Id="0c14c18e-24f0-416e-b4b0-e59c52544a04"
+                LastKnownName=": Windows"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="e69bc54d-d642-406e-822e-accf3c470a64"
+            name="MessageOccurrenceSpecification19">
+            <covered>
+              <lifelineMoniker
+                Id="77fb8f23-80fe-450f-abf1-85906eda4790"
+                LastKnownName="Joueur"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="bc942c8b-73a7-495e-9585-2b5c1efa5a59"
+            name="BehaviorExecutionSpecification7">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="d4732313-aeaf-430d-aad2-5bfeb8f64fc0"
+                LastKnownName=": Facade"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="078b247c-888f-4c1b-9473-3f9b3c7ee711"
+                LastKnownName="ExecutionOccurrenceSpecification14"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="d611238a-d5d4-4777-b959-d284c2d907ef"
+                LastKnownName="ExecutionOccurrenceSpecification13"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="4a52138e-f056-4a02-84c3-43ac06ba8fd9"
+                LastKnownName="MessageOccurrenceSpecification24"
+                LastKnownLocation="CanonNoirConception.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="e1bbf81c-9eba-45a9-a2f7-cdfd75763495"
+                LastKnownName="MessageOccurrenceSpecification27"
+                LastKnownLocation="CanonNoirConception.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="7e6cdfd0-17d8-47a9-846c-2fb66202ae5d"
+                LastKnownName="MessageOccurrenceSpecification30"
+                LastKnownLocation="CanonNoirConception.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="97a01db1-0b9f-4e35-9f0f-3ab2a195d923"
+                LastKnownName="MessageOccurrenceSpecification25"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="d611238a-d5d4-4777-b959-d284c2d907ef"
+            name="ExecutionOccurrenceSpecification13">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="9629d94a-658c-4c60-8832-9652904bca3d"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CanonNoirConception.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="d4732313-aeaf-430d-aad2-5bfeb8f64fc0"
+                LastKnownName=": Facade"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="acff0a63-ae34-4c5c-a9d0-79dd469871a2"
+            name="MessageOccurrenceSpecification23">
+            <covered>
+              <lifelineMoniker
+                Id="0c14c18e-24f0-416e-b4b0-e59c52544a04"
+                LastKnownName=": Windows"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="4a52138e-f056-4a02-84c3-43ac06ba8fd9"
+            name="MessageOccurrenceSpecification24">
+            <covered>
+              <lifelineMoniker
+                Id="d4732313-aeaf-430d-aad2-5bfeb8f64fc0"
+                LastKnownName=": Facade"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="aef3c661-7011-4f17-b29a-ac0c0baf3fb5"
+            name="BehaviorExecutionSpecification8">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="22135980-a625-43ef-99ed-c98a023378a9"
+                LastKnownName=": Moteur"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="c2d3247b-b0ee-4ca5-ac6b-b2432a86d006"
+                LastKnownName="ExecutionOccurrenceSpecification16"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="66ff5d93-f668-45a1-8375-b01091328f51"
+                LastKnownName="ExecutionOccurrenceSpecification15"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="ecdf6eb1-edef-4a65-80da-17ae176bd632"
+                LastKnownName="MessageOccurrenceSpecification28"
+                LastKnownLocation="CanonNoirConception.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="016fa8d6-7c70-40f0-8c70-249acac0a9e3"
+                LastKnownName="MessageOccurrenceSpecification29"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="66ff5d93-f668-45a1-8375-b01091328f51"
+            name="ExecutionOccurrenceSpecification15">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="751f11e3-a080-40a9-a0ac-8843dc3f2dc6"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CanonNoirConception.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="22135980-a625-43ef-99ed-c98a023378a9"
+                LastKnownName=": Moteur"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="ecdf6eb1-edef-4a65-80da-17ae176bd632"
+            name="MessageOccurrenceSpecification28">
+            <covered>
+              <lifelineMoniker
+                Id="22135980-a625-43ef-99ed-c98a023378a9"
+                LastKnownName=": Moteur"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="e1bbf81c-9eba-45a9-a2f7-cdfd75763495"
+            name="MessageOccurrenceSpecification27">
+            <covered>
+              <lifelineMoniker
+                Id="d4732313-aeaf-430d-aad2-5bfeb8f64fc0"
+                LastKnownName=": Facade"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="016fa8d6-7c70-40f0-8c70-249acac0a9e3"
+            name="MessageOccurrenceSpecification29">
+            <covered>
+              <lifelineMoniker
+                Id="22135980-a625-43ef-99ed-c98a023378a9"
+                LastKnownName=": Moteur"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="7e6cdfd0-17d8-47a9-846c-2fb66202ae5d"
+            name="MessageOccurrenceSpecification30">
+            <covered>
+              <lifelineMoniker
+                Id="d4732313-aeaf-430d-aad2-5bfeb8f64fc0"
+                LastKnownName=": Facade"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="c2d3247b-b0ee-4ca5-ac6b-b2432a86d006"
+            name="ExecutionOccurrenceSpecification16">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="beddde2f-17f4-43a7-ad0a-4ad0d286f166"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CanonNoirConception.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="22135980-a625-43ef-99ed-c98a023378a9"
+                LastKnownName=": Moteur"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="d792485c-e8d6-4893-894a-bb1322f88426"
+            name="MessageOccurrenceSpecification26">
+            <covered>
+              <lifelineMoniker
+                Id="0c14c18e-24f0-416e-b4b0-e59c52544a04"
+                LastKnownName=": Windows"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="97a01db1-0b9f-4e35-9f0f-3ab2a195d923"
+            name="MessageOccurrenceSpecification25">
+            <covered>
+              <lifelineMoniker
+                Id="d4732313-aeaf-430d-aad2-5bfeb8f64fc0"
+                LastKnownName=": Facade"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="078b247c-888f-4c1b-9473-3f9b3c7ee711"
+            name="ExecutionOccurrenceSpecification14">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="0d727402-6250-45e0-a688-c1a52014065a"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CanonNoirConception.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="d4732313-aeaf-430d-aad2-5bfeb8f64fc0"
+                LastKnownName=": Facade"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="8ee3d69d-a088-4b19-a460-bd74599ce807"
+            name="MessageOccurrenceSpecification22">
+            <covered>
+              <lifelineMoniker
+                Id="77fb8f23-80fe-450f-abf1-85906eda4790"
+                LastKnownName="Joueur"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="813066fd-dc27-42f0-a0ab-2abbc5c24b07"
+            name="MessageOccurrenceSpecification21">
+            <covered>
+              <lifelineMoniker
+                Id="0c14c18e-24f0-416e-b4b0-e59c52544a04"
+                LastKnownName=": Windows"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="76ece45a-759a-4a70-a041-f03ecad19ce6"
+            name="ExecutionOccurrenceSpecification12">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="851965c2-b0e4-4b1e-85c8-e3356f0ffda8"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CanonNoirConception.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="0c14c18e-24f0-416e-b4b0-e59c52544a04"
+                LastKnownName=": Windows"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="6cb2cc74-a8db-4730-9c94-9f517aa3d11f"
+            name="BehaviorExecutionSpecification14">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="0c14c18e-24f0-416e-b4b0-e59c52544a04"
+                LastKnownName=": Windows"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="fef9769b-7700-4bb3-9ca6-96811c88a3d1"
+                LastKnownName="ExecutionOccurrenceSpecification28"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="4b41e4b5-e3da-4904-ac8e-421b7cc0805b"
+                LastKnownName="ExecutionOccurrenceSpecification27"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="3004fc40-060b-4718-8eac-38d5b5295231"
+                LastKnownName="MessageOccurrenceSpecification50"
+                LastKnownLocation="CanonNoirConception.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="2d4db36d-fffd-4364-b4a6-fdfb08ed0729"
+                LastKnownName="MessageOccurrenceSpecification53"
+                LastKnownLocation="CanonNoirConception.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="485dbeef-402d-4265-8000-b0c569d82d18"
+                LastKnownName="MessageOccurrenceSpecification56"
+                LastKnownLocation="CanonNoirConception.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="bef72899-766a-4b7a-8893-a06e421a4433"
+                LastKnownName="MessageOccurrenceSpecification51"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="4b41e4b5-e3da-4904-ac8e-421b7cc0805b"
+            name="ExecutionOccurrenceSpecification27">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="ea7e265c-aadc-440c-828e-e3b09fcbf407"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CanonNoirConception.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="0c14c18e-24f0-416e-b4b0-e59c52544a04"
+                LastKnownName=": Windows"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="8952d479-4a72-4ad9-b1f5-217bee476eca"
+            name="MessageOccurrenceSpecification49">
+            <covered>
+              <lifelineMoniker
+                Id="77fb8f23-80fe-450f-abf1-85906eda4790"
+                LastKnownName="Joueur"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="3004fc40-060b-4718-8eac-38d5b5295231"
+            name="MessageOccurrenceSpecification50">
+            <covered>
+              <lifelineMoniker
+                Id="0c14c18e-24f0-416e-b4b0-e59c52544a04"
+                LastKnownName=": Windows"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="d98c53f6-7ee1-4888-8508-ebb8d158440e"
+            name="BehaviorExecutionSpecification15">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="d4732313-aeaf-430d-aad2-5bfeb8f64fc0"
+                LastKnownName=": Facade"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="fbae7b46-6d3c-491f-8da8-8990b3052094"
+                LastKnownName="ExecutionOccurrenceSpecification30"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="f9c6f98d-6005-4f97-9db8-d1f18e1e5ee9"
+                LastKnownName="ExecutionOccurrenceSpecification29"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="586c2c40-0198-48bf-853b-fe92931ecee8"
+                LastKnownName="MessageOccurrenceSpecification54"
+                LastKnownLocation="CanonNoirConception.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="96c78c37-a2c3-44fa-bace-77937be4932b"
+                LastKnownName="MessageOccurrenceSpecification57"
+                LastKnownLocation="CanonNoirConception.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="122c1405-429f-45ef-a6fd-dde9c953fc34"
+                LastKnownName="MessageOccurrenceSpecification55"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="f9c6f98d-6005-4f97-9db8-d1f18e1e5ee9"
+            name="ExecutionOccurrenceSpecification29">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="55aa1e78-9030-4868-aa4a-20d9f9e95fa3"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CanonNoirConception.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="d4732313-aeaf-430d-aad2-5bfeb8f64fc0"
+                LastKnownName=": Facade"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="586c2c40-0198-48bf-853b-fe92931ecee8"
+            name="MessageOccurrenceSpecification54">
+            <covered>
+              <lifelineMoniker
+                Id="d4732313-aeaf-430d-aad2-5bfeb8f64fc0"
+                LastKnownName=": Facade"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="2d4db36d-fffd-4364-b4a6-fdfb08ed0729"
+            name="MessageOccurrenceSpecification53">
+            <covered>
+              <lifelineMoniker
+                Id="0c14c18e-24f0-416e-b4b0-e59c52544a04"
+                LastKnownName=": Windows"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="b17c6140-8354-4148-81f0-347a28f77473"
+            name="BehaviorExecutionSpecification16">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="22135980-a625-43ef-99ed-c98a023378a9"
+                LastKnownName=": Moteur"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="5375e980-95ec-42ff-afe1-0f3d87dbc39a"
+                LastKnownName="ExecutionOccurrenceSpecification32"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="f395c2ce-2f97-4543-a187-f866eecfd4d8"
+                LastKnownName="ExecutionOccurrenceSpecification31"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="ed29cc0c-ac6e-4eec-85a1-1c589fbc4753"
+                LastKnownName="MessageOccurrenceSpecification58"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="f395c2ce-2f97-4543-a187-f866eecfd4d8"
+            name="ExecutionOccurrenceSpecification31">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="c3fadfd1-aa92-44e3-aff3-a0afd86b48d7"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CanonNoirConception.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="22135980-a625-43ef-99ed-c98a023378a9"
+                LastKnownName=": Moteur"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="96c78c37-a2c3-44fa-bace-77937be4932b"
+            name="MessageOccurrenceSpecification57">
+            <covered>
+              <lifelineMoniker
+                Id="d4732313-aeaf-430d-aad2-5bfeb8f64fc0"
+                LastKnownName=": Facade"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="ed29cc0c-ac6e-4eec-85a1-1c589fbc4753"
+            name="MessageOccurrenceSpecification58">
+            <covered>
+              <lifelineMoniker
+                Id="22135980-a625-43ef-99ed-c98a023378a9"
+                LastKnownName=": Moteur"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="122c1405-429f-45ef-a6fd-dde9c953fc34"
+            name="MessageOccurrenceSpecification55">
+            <covered>
+              <lifelineMoniker
+                Id="d4732313-aeaf-430d-aad2-5bfeb8f64fc0"
+                LastKnownName=": Facade"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="485dbeef-402d-4265-8000-b0c569d82d18"
+            name="MessageOccurrenceSpecification56">
+            <covered>
+              <lifelineMoniker
+                Id="0c14c18e-24f0-416e-b4b0-e59c52544a04"
+                LastKnownName=": Windows"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="fbae7b46-6d3c-491f-8da8-8990b3052094"
+            name="ExecutionOccurrenceSpecification30">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="20b51d55-ff4c-4789-b2db-bff6227a1da0"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CanonNoirConception.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="d4732313-aeaf-430d-aad2-5bfeb8f64fc0"
+                LastKnownName=": Facade"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="5375e980-95ec-42ff-afe1-0f3d87dbc39a"
+            name="ExecutionOccurrenceSpecification32">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="d3f212cf-e53e-4de3-b782-c61146d97e66"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CanonNoirConception.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="22135980-a625-43ef-99ed-c98a023378a9"
+                LastKnownName=": Moteur"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="099a5c37-5837-486a-937d-eb1271631b7d"
+            name="MessageOccurrenceSpecification52">
+            <covered>
+              <lifelineMoniker
+                Id="77fb8f23-80fe-450f-abf1-85906eda4790"
+                LastKnownName="Joueur"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="bef72899-766a-4b7a-8893-a06e421a4433"
+            name="MessageOccurrenceSpecification51">
+            <covered>
+              <lifelineMoniker
+                Id="0c14c18e-24f0-416e-b4b0-e59c52544a04"
+                LastKnownName=": Windows"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="fef9769b-7700-4bb3-9ca6-96811c88a3d1"
+            name="ExecutionOccurrenceSpecification28">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="5becd082-db45-4b59-8432-98795e47c93d"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CanonNoirConception.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="0c14c18e-24f0-416e-b4b0-e59c52544a04"
+                LastKnownName=": Windows"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="da12f795-24fe-47b3-b579-ae5f415e5b8a"
+            name="BehaviorExecutionSpecification10">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="0c14c18e-24f0-416e-b4b0-e59c52544a04"
+                LastKnownName=": Windows"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="696c0293-60c1-4ab9-ac03-85e5be24a792"
+                LastKnownName="ExecutionOccurrenceSpecification20"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="7b4acb89-a95f-4424-be10-e5623bf56615"
+                LastKnownName="ExecutionOccurrenceSpecification19"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="c411991d-3e90-41d6-83fa-2819a3e4d4ba"
+                LastKnownName="MessageOccurrenceSpecification34"
+                LastKnownLocation="CanonNoirConception.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="4d36eada-b3e0-4a07-a085-617b3d7b3d78"
+                LastKnownName="MessageOccurrenceSpecification59"
+                LastKnownLocation="CanonNoirConception.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="3ec93b93-4e06-4ad5-8596-e320908874dd"
+                LastKnownName="MessageOccurrenceSpecification62"
+                LastKnownLocation="CanonNoirConception.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="002dd7ed-7ff9-42a7-bade-124af1ea8621"
+                LastKnownName="MessageOccurrenceSpecification35"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="7b4acb89-a95f-4424-be10-e5623bf56615"
+            name="ExecutionOccurrenceSpecification19">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="d76bdafd-99c9-4c16-9e02-1b3ca2d24bf5"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CanonNoirConception.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="0c14c18e-24f0-416e-b4b0-e59c52544a04"
+                LastKnownName=": Windows"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="c411991d-3e90-41d6-83fa-2819a3e4d4ba"
+            name="MessageOccurrenceSpecification34">
+            <covered>
+              <lifelineMoniker
+                Id="0c14c18e-24f0-416e-b4b0-e59c52544a04"
+                LastKnownName=": Windows"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="6088f829-be20-460c-aedc-6ce271ed9dd3"
+            name="MessageOccurrenceSpecification33">
+            <covered>
+              <lifelineMoniker
+                Id="77fb8f23-80fe-450f-abf1-85906eda4790"
+                LastKnownName="Joueur"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="93e09b51-1e96-4bcf-844b-c71f3062b890"
+            name="BehaviorExecutionSpecification17">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="d4732313-aeaf-430d-aad2-5bfeb8f64fc0"
+                LastKnownName=": Facade"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="77d547de-3294-4292-8c31-74b39eb687f7"
+                LastKnownName="ExecutionOccurrenceSpecification34"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="bf707472-c75d-429c-b9e9-75f53d9885c1"
+                LastKnownName="ExecutionOccurrenceSpecification33"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="b42af3c0-57c1-4b6c-8406-662d6e4033ea"
+                LastKnownName="MessageOccurrenceSpecification60"
+                LastKnownLocation="CanonNoirConception.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="480de50d-1bbc-4fa7-9f7c-db95698e83cc"
+                LastKnownName="MessageOccurrenceSpecification65"
+                LastKnownLocation="CanonNoirConception.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="d9d882a3-55cc-49ee-8ffd-fea1cdc337f2"
+                LastKnownName="MessageOccurrenceSpecification68"
+                LastKnownLocation="CanonNoirConception.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="b79a02f4-ebcf-4e4a-a9b3-b023b3b7aa69"
+                LastKnownName="MessageOccurrenceSpecification61"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="bf707472-c75d-429c-b9e9-75f53d9885c1"
+            name="ExecutionOccurrenceSpecification33">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="2cb23e9d-e649-4e76-a04e-5c5bb26b7b44"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CanonNoirConception.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="d4732313-aeaf-430d-aad2-5bfeb8f64fc0"
+                LastKnownName=": Facade"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="b42af3c0-57c1-4b6c-8406-662d6e4033ea"
+            name="MessageOccurrenceSpecification60">
+            <covered>
+              <lifelineMoniker
+                Id="d4732313-aeaf-430d-aad2-5bfeb8f64fc0"
+                LastKnownName=": Facade"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="4d36eada-b3e0-4a07-a085-617b3d7b3d78"
+            name="MessageOccurrenceSpecification59">
+            <covered>
+              <lifelineMoniker
+                Id="0c14c18e-24f0-416e-b4b0-e59c52544a04"
+                LastKnownName=": Windows"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="0981ed80-d190-4398-a0d6-3e99b46275bc"
+            name="BehaviorExecutionSpecification19">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="22135980-a625-43ef-99ed-c98a023378a9"
+                LastKnownName=": Moteur"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="21dae756-6ca0-49e4-a457-569fbdf984ff"
+                LastKnownName="ExecutionOccurrenceSpecification38"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="f757cd4c-6754-4bc1-a739-dedff2ef2c99"
+                LastKnownName="ExecutionOccurrenceSpecification37"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="0c6e869b-e8f0-4461-a309-e2fc5c316a6a"
+                LastKnownName="MessageOccurrenceSpecification66"
+                LastKnownLocation="CanonNoirConception.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="e7938f23-20d4-46b5-887b-e678ccd16d1f"
+                LastKnownName="MessageOccurrenceSpecification67"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="f757cd4c-6754-4bc1-a739-dedff2ef2c99"
+            name="ExecutionOccurrenceSpecification37">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="4375931f-38d0-48bb-b151-d2f74f0b5405"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CanonNoirConception.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="22135980-a625-43ef-99ed-c98a023378a9"
+                LastKnownName=": Moteur"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="0c6e869b-e8f0-4461-a309-e2fc5c316a6a"
+            name="MessageOccurrenceSpecification66">
+            <covered>
+              <lifelineMoniker
+                Id="22135980-a625-43ef-99ed-c98a023378a9"
+                LastKnownName=": Moteur"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="480de50d-1bbc-4fa7-9f7c-db95698e83cc"
+            name="MessageOccurrenceSpecification65">
+            <covered>
+              <lifelineMoniker
+                Id="d4732313-aeaf-430d-aad2-5bfeb8f64fc0"
+                LastKnownName=": Facade"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="e7938f23-20d4-46b5-887b-e678ccd16d1f"
+            name="MessageOccurrenceSpecification67">
+            <covered>
+              <lifelineMoniker
+                Id="22135980-a625-43ef-99ed-c98a023378a9"
+                LastKnownName=": Moteur"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="d9d882a3-55cc-49ee-8ffd-fea1cdc337f2"
+            name="MessageOccurrenceSpecification68">
+            <covered>
+              <lifelineMoniker
+                Id="d4732313-aeaf-430d-aad2-5bfeb8f64fc0"
+                LastKnownName=": Facade"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="21dae756-6ca0-49e4-a457-569fbdf984ff"
+            name="ExecutionOccurrenceSpecification38">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="a325a08b-06ac-4aba-b16e-16837ca42863"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CanonNoirConception.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="22135980-a625-43ef-99ed-c98a023378a9"
+                LastKnownName=": Moteur"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="b79a02f4-ebcf-4e4a-a9b3-b023b3b7aa69"
+            name="MessageOccurrenceSpecification61">
+            <covered>
+              <lifelineMoniker
+                Id="d4732313-aeaf-430d-aad2-5bfeb8f64fc0"
+                LastKnownName=": Facade"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="3ec93b93-4e06-4ad5-8596-e320908874dd"
+            name="MessageOccurrenceSpecification62">
+            <covered>
+              <lifelineMoniker
+                Id="0c14c18e-24f0-416e-b4b0-e59c52544a04"
+                LastKnownName=": Windows"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="77d547de-3294-4292-8c31-74b39eb687f7"
+            name="ExecutionOccurrenceSpecification34">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="2af66dc2-7e6b-479a-a32c-85c103e6e5ff"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CanonNoirConception.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="d4732313-aeaf-430d-aad2-5bfeb8f64fc0"
+                LastKnownName=": Facade"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="002dd7ed-7ff9-42a7-bade-124af1ea8621"
+            name="MessageOccurrenceSpecification35">
+            <covered>
+              <lifelineMoniker
+                Id="0c14c18e-24f0-416e-b4b0-e59c52544a04"
+                LastKnownName=": Windows"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="8e396c27-3c43-496d-9957-8207840e3ef1"
+            name="MessageOccurrenceSpecification36">
+            <covered>
+              <lifelineMoniker
+                Id="77fb8f23-80fe-450f-abf1-85906eda4790"
+                LastKnownName="Joueur"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="696c0293-60c1-4ab9-ac03-85e5be24a792"
+            name="ExecutionOccurrenceSpecification20">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="f4c0628c-07d7-4c18-adf6-dd001feda3cd"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CanonNoirConception.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="0c14c18e-24f0-416e-b4b0-e59c52544a04"
+                LastKnownName=": Windows"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+        </fragments>
+        <lifelines>
+          <lifeline
+            Id="77fb8f23-80fe-450f-abf1-85906eda4790"
+            name="Joueur"
+            isActor="true"
+            lifelineDisplayName="Joueur">
+            <represents>
+              <propertyMoniker
+                Id="54e03806-c8f3-4225-8652-82437af3dff7"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </represents>
+            <topLevelOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="e69bc54d-d642-406e-822e-accf3c470a64"
+                LastKnownName="MessageOccurrenceSpecification19"
+                LastKnownLocation="CanonNoirConception.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="8ee3d69d-a088-4b19-a460-bd74599ce807"
+                LastKnownName="MessageOccurrenceSpecification22"
+                LastKnownLocation="CanonNoirConception.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="8952d479-4a72-4ad9-b1f5-217bee476eca"
+                LastKnownName="MessageOccurrenceSpecification49"
+                LastKnownLocation="CanonNoirConception.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="099a5c37-5837-486a-937d-eb1271631b7d"
+                LastKnownName="MessageOccurrenceSpecification52"
+                LastKnownLocation="CanonNoirConception.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="6088f829-be20-460c-aedc-6ce271ed9dd3"
+                LastKnownName="MessageOccurrenceSpecification33"
+                LastKnownLocation="CanonNoirConception.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="8e396c27-3c43-496d-9957-8207840e3ef1"
+                LastKnownName="MessageOccurrenceSpecification36"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="0c14c18e-24f0-416e-b4b0-e59c52544a04"
+            name=": Windows"
+            isActor="false"
+            lifelineDisplayName=": Windows">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="f2d4ec1d-ce5b-4541-9540-e2f807952b71"
+                LastKnownName="ExecutionOccurrenceSpecification11"
+                LastKnownLocation="CanonNoirConception.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="76ece45a-759a-4a70-a041-f03ecad19ce6"
+                LastKnownName="ExecutionOccurrenceSpecification12"
+                LastKnownLocation="CanonNoirConception.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="4b41e4b5-e3da-4904-ac8e-421b7cc0805b"
+                LastKnownName="ExecutionOccurrenceSpecification27"
+                LastKnownLocation="CanonNoirConception.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="fef9769b-7700-4bb3-9ca6-96811c88a3d1"
+                LastKnownName="ExecutionOccurrenceSpecification28"
+                LastKnownLocation="CanonNoirConception.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="7b4acb89-a95f-4424-be10-e5623bf56615"
+                LastKnownName="ExecutionOccurrenceSpecification19"
+                LastKnownLocation="CanonNoirConception.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="696c0293-60c1-4ab9-ac03-85e5be24a792"
+                LastKnownName="ExecutionOccurrenceSpecification20"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="d4732313-aeaf-430d-aad2-5bfeb8f64fc0"
+            name=": Facade"
+            isActor="false"
+            lifelineDisplayName=": Facade">
+            <represents>
+              <propertyMoniker
+                Id="d0d8567c-360d-48a4-b471-f0b70177090d"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </represents>
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="d611238a-d5d4-4777-b959-d284c2d907ef"
+                LastKnownName="ExecutionOccurrenceSpecification13"
+                LastKnownLocation="CanonNoirConception.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="078b247c-888f-4c1b-9473-3f9b3c7ee711"
+                LastKnownName="ExecutionOccurrenceSpecification14"
+                LastKnownLocation="CanonNoirConception.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="f9c6f98d-6005-4f97-9db8-d1f18e1e5ee9"
+                LastKnownName="ExecutionOccurrenceSpecification29"
+                LastKnownLocation="CanonNoirConception.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="fbae7b46-6d3c-491f-8da8-8990b3052094"
+                LastKnownName="ExecutionOccurrenceSpecification30"
+                LastKnownLocation="CanonNoirConception.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="bf707472-c75d-429c-b9e9-75f53d9885c1"
+                LastKnownName="ExecutionOccurrenceSpecification33"
+                LastKnownLocation="CanonNoirConception.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="77d547de-3294-4292-8c31-74b39eb687f7"
+                LastKnownName="ExecutionOccurrenceSpecification34"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="22135980-a625-43ef-99ed-c98a023378a9"
+            name=": Moteur"
+            isActor="true"
+            lifelineDisplayName=": Moteur">
+            <represents>
+              <propertyMoniker
+                Id="e05eb4cf-f2f1-4116-b6c8-2db20bd97a58"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </represents>
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="66ff5d93-f668-45a1-8375-b01091328f51"
+                LastKnownName="ExecutionOccurrenceSpecification15"
+                LastKnownLocation="CanonNoirConception.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="c2d3247b-b0ee-4ca5-ac6b-b2432a86d006"
+                LastKnownName="ExecutionOccurrenceSpecification16"
+                LastKnownLocation="CanonNoirConception.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="f395c2ce-2f97-4543-a187-f866eecfd4d8"
+                LastKnownName="ExecutionOccurrenceSpecification31"
+                LastKnownLocation="CanonNoirConception.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="5375e980-95ec-42ff-afe1-0f3d87dbc39a"
+                LastKnownName="ExecutionOccurrenceSpecification32"
+                LastKnownLocation="CanonNoirConception.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="f757cd4c-6754-4bc1-a739-dedff2ef2c99"
+                LastKnownName="ExecutionOccurrenceSpecification37"
+                LastKnownLocation="CanonNoirConception.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="21dae756-6ca0-49e4-a457-569fbdf984ff"
+                LastKnownName="ExecutionOccurrenceSpecification38"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+        </lifelines>
+        <messages>
+          <message
+            Id="30f6652e-3250-4fbf-8303-7b9770f89632"
+            name="Choisit une cible"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="e69bc54d-d642-406e-822e-accf3c470a64"
+                LastKnownName="MessageOccurrenceSpecification19"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="d636d071-8f81-45ef-bb85-934595aaf212"
+                LastKnownName="MessageOccurrenceSpecification20"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="94f8183e-2979-4743-a592-dfa0f95345d0"
+            name="Transmet les coordonnées de la cible"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="acff0a63-ae34-4c5c-a9d0-79dd469871a2"
+                LastKnownName="MessageOccurrenceSpecification23"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="4a52138e-f056-4a02-84c3-43ac06ba8fd9"
+                LastKnownName="MessageOccurrenceSpecification24"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="75b0a737-90f7-4318-9ba6-997ffdaefda3"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="e1bbf81c-9eba-45a9-a2f7-cdfd75763495"
+                LastKnownName="MessageOccurrenceSpecification27"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="ecdf6eb1-edef-4a65-80da-17ae176bd632"
+                LastKnownName="MessageOccurrenceSpecification28"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="c84cad36-ed3f-406b-9af7-897245b05aec"
+            name="le relief entre les deux bateaux"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="016fa8d6-7c70-40f0-8c70-249acac0a9e3"
+                LastKnownName="MessageOccurrenceSpecification29"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="7e6cdfd0-17d8-47a9-846c-2fb66202ae5d"
+                LastKnownName="MessageOccurrenceSpecification30"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="68c614af-d9e3-429c-9197-f4e38d676036"
+            name="les infos du combat"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="97a01db1-0b9f-4e35-9f0f-3ab2a195d923"
+                LastKnownName="MessageOccurrenceSpecification25"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="d792485c-e8d6-4893-894a-bb1322f88426"
+                LastKnownName="MessageOccurrenceSpecification26"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="036c3b87-ba53-48ab-8b05-3f3a36a855d9"
+            name="affiche le mode combat"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="813066fd-dc27-42f0-a0ab-2abbc5c24b07"
+                LastKnownName="MessageOccurrenceSpecification21"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="8ee3d69d-a088-4b19-a460-bd74599ce807"
+                LastKnownName="MessageOccurrenceSpecification22"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="4432af02-16c7-4a70-9a69-60b6042aab79"
+            name="Choisit l'angle de tir"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="6088f829-be20-460c-aedc-6ce271ed9dd3"
+                LastKnownName="MessageOccurrenceSpecification33"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="c411991d-3e90-41d6-83fa-2819a3e4d4ba"
+                LastKnownName="MessageOccurrenceSpecification34"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="2ef90c3c-6ba5-4bd2-9807-a2c49776d51a"
+            name="Le résultat du tir"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="002dd7ed-7ff9-42a7-bade-124af1ea8621"
+                LastKnownName="MessageOccurrenceSpecification35"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="8e396c27-3c43-496d-9957-8207840e3ef1"
+                LastKnownName="MessageOccurrenceSpecification36"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="5021102c-9d2e-4261-9140-196dcd14a75f"
+            name="Clique pour la puissance"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="8952d479-4a72-4ad9-b1f5-217bee476eca"
+                LastKnownName="MessageOccurrenceSpecification49"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="3004fc40-060b-4718-8eac-38d5b5295231"
+                LastKnownName="MessageOccurrenceSpecification50"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="27718f94-1c58-4770-ad36-3befcf803269"
+            name="Affiche la puissance avec la valeur"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="bef72899-766a-4b7a-8893-a06e421a4433"
+                LastKnownName="MessageOccurrenceSpecification51"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="099a5c37-5837-486a-937d-eb1271631b7d"
+                LastKnownName="MessageOccurrenceSpecification52"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="6a2938c4-37a1-4aa9-8062-3e585ee01814"
+            name="Transmet la valeur de la puissance"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="2d4db36d-fffd-4364-b4a6-fdfb08ed0729"
+                LastKnownName="MessageOccurrenceSpecification53"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="586c2c40-0198-48bf-853b-fe92931ecee8"
+                LastKnownName="MessageOccurrenceSpecification54"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="4e57a88b-f539-4bab-855e-56744057d62e"
+            name="La valeur de la puissance"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="122c1405-429f-45ef-a6fd-dde9c953fc34"
+                LastKnownName="MessageOccurrenceSpecification55"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="485dbeef-402d-4265-8000-b0c569d82d18"
+                LastKnownName="MessageOccurrenceSpecification56"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="4bc253f0-a6b7-4ce4-8565-46137230de88"
+            name="Stkce la puissance"
+            messageKind="Complete"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="96c78c37-a2c3-44fa-bace-77937be4932b"
+                LastKnownName="MessageOccurrenceSpecification57"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="ed29cc0c-ac6e-4eec-85a1-1c589fbc4753"
+                LastKnownName="MessageOccurrenceSpecification58"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="be259ea8-e14c-4e42-90d1-12ca11d6a95c"
+            name="Transmet l'angle de tir"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="4d36eada-b3e0-4a07-a085-617b3d7b3d78"
+                LastKnownName="MessageOccurrenceSpecification59"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="b42af3c0-57c1-4b6c-8406-662d6e4033ea"
+                LastKnownName="MessageOccurrenceSpecification60"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="3f613040-386a-4ab0-a7c6-28a0e880c2b7"
+            name="Les infos du tir"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="b79a02f4-ebcf-4e4a-a9b3-b023b3b7aa69"
+                LastKnownName="MessageOccurrenceSpecification61"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="3ec93b93-4e06-4ad5-8596-e320908874dd"
+                LastKnownName="MessageOccurrenceSpecification62"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="22824ec2-4c5e-4055-b0f7-1e1d1c518931"
+            name="Stocke l'angle"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="480de50d-1bbc-4fa7-9f7c-db95698e83cc"
+                LastKnownName="MessageOccurrenceSpecification65"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="0c6e869b-e8f0-4461-a309-e2fc5c316a6a"
+                LastKnownName="MessageOccurrenceSpecification66"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="754d8183-0d8c-45c6-a85e-89f2c3608b0f"
+            name="Les infos du tir"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="e7938f23-20d4-46b5-887b-e678ccd16d1f"
+                LastKnownName="MessageOccurrenceSpecification67"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="d9d882a3-55cc-49ee-8ffd-fea1cdc337f2"
+                LastKnownName="MessageOccurrenceSpecification68"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </receiveEvent>
+          </message>
+        </messages>
+        <ownedAttributesInternal>
+          <property
+            Id="54e03806-c8f3-4225-8652-82437af3dff7"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <actorMoniker
+                Id="4421bcae-f450-4ead-b5fc-ec5b676b6700"
+                LastKnownName="Joueur"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="d0d8567c-360d-48a4-b471-f0b70177090d"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="650991dd-e7e1-4897-82ec-6fe56717bb36"
+                LastKnownName="Facade"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="e05eb4cf-f2f1-4116-b6c8-2db20bd97a58"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <actorMoniker
+                Id="57e2d28f-0232-4084-a3e8-bd651c741b07"
+                LastKnownName="Moteur"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="9629d94a-658c-4c60-8832-9652904bca3d"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="0d727402-6250-45e0-a688-c1a52014065a"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="751f11e3-a080-40a9-a0ac-8843dc3f2dc6"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="beddde2f-17f4-43a7-ad0a-4ad0d286f166"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="5525a988-2503-4061-9cf9-3f182e7c7c30"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="851965c2-b0e4-4b1e-85c8-e3356f0ffda8"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="d76bdafd-99c9-4c16-9e02-1b3ca2d24bf5"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="f4c0628c-07d7-4c18-adf6-dd001feda3cd"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="ea7e265c-aadc-440c-828e-e3b09fcbf407"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="5becd082-db45-4b59-8432-98795e47c93d"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="55aa1e78-9030-4868-aa4a-20d9f9e95fa3"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="20b51d55-ff4c-4789-b2db-bff6227a1da0"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="c3fadfd1-aa92-44e3-aff3-a0afd86b48d7"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="d3f212cf-e53e-4de3-b782-c61146d97e66"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="2cb23e9d-e649-4e76-a04e-5c5bb26b7b44"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="2af66dc2-7e6b-479a-a32c-85c103e6e5ff"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="4375931f-38d0-48bb-b151-d2f74f0b5405"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="a325a08b-06ac-4aba-b16e-16837ca42863"
         name="ExecutionEvent" />
     </packageHasNamedElement>
   </packagedElements>
