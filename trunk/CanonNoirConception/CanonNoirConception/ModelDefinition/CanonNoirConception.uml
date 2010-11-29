@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm12="http://schemas.microsoft.com/dsltools/UseCaseModel"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel"
   dslVersion="1.0.0.0"
   Id="62a60c90-a0aa-4993-b691-f2e0518db317"
   name="CanonNoirConception" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -64,7 +64,7 @@
             isAbstract="false">
             <useCaseMoniker
               Id="08e1cfe0-c65f-4ee1-9516-72697cc89f20"
-              LastKnownName="Choisi une couleur"
+              LastKnownName="Choisir un port"
               LastKnownLocation="CanonNoirConception.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -181,7 +181,7 @@
             isAbstract="false">
             <useCaseMoniker
               Id="120822ed-58f6-442e-ba13-4d208d3c4d46"
-              LastKnownName="Déplace son bateau"
+              LastKnownName="Choisir la case finale du déplacement du bateau"
               LastKnownLocation="CanonNoirConception.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -337,7 +337,7 @@
             isAbstract="false">
             <useCaseMoniker
               Id="27e669b4-5a02-440e-957a-414b6696a3c6"
-              LastKnownName="Lancer le dé pour choisir qui commence"
+              LastKnownName="Lancer dés pour déterminer ordre des joueurs"
               LastKnownLocation="CanonNoirConception.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -412,7 +412,7 @@
     <packageHasNamedElement>
       <useCase
         Id="08e1cfe0-c65f-4ee1-9516-72697cc89f20"
-        name="Choisi une couleur"
+        name="Choisir un port"
         isAbstract="false"
         isLeaf="false">
         <subjects>
@@ -434,7 +434,7 @@
             Id="28a1df41-8cb1-4fcc-b7df-6f359c7f6261">
             <useCaseMoniker
               Id="120822ed-58f6-442e-ba13-4d208d3c4d46"
-              LastKnownName="Déplace son bateau"
+              LastKnownName="Choisir la case finale du déplacement du bateau"
               LastKnownLocation="CanonNoirConception.uml" />
           </dependency>
         </suppliersInternal>
@@ -466,13 +466,13 @@
     <packageHasNamedElement>
       <useCase
         Id="120822ed-58f6-442e-ba13-4d208d3c4d46"
-        name="Déplace son bateau"
+        name="Choisir la case finale du déplacement du bateau"
         isAbstract="false"
         isLeaf="false">
         <subjects>
           <subsystemMoniker
             Id="021ab9e2-4fc7-407c-ab88-354c6130957f"
-            LastKnownName="Déplacement"
+            LastKnownName="Navigation"
             LastKnownLocation="CanonNoirConception.uml" />
         </subjects>
       </useCase>
@@ -480,7 +480,7 @@
     <packageHasNamedElement>
       <subsystem
         Id="021ab9e2-4fc7-407c-ab88-354c6130957f"
-        name="Déplacement"
+        name="Navigation"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false" />
@@ -521,7 +521,7 @@
             Id="94e5945e-25fb-45b8-8032-a922ab3c2555">
             <useCaseMoniker
               Id="08e1cfe0-c65f-4ee1-9516-72697cc89f20"
-              LastKnownName="Choisi une couleur"
+              LastKnownName="Choisir un port"
               LastKnownLocation="CanonNoirConception.uml" />
           </dependency>
         </suppliersInternal>
@@ -631,7 +631,7 @@
             Id="6c22f44b-16bf-45f7-82be-f5d412d7c5b4">
             <useCaseMoniker
               Id="27e669b4-5a02-440e-957a-414b6696a3c6"
-              LastKnownName="Lancer le dé pour choisir qui commence"
+              LastKnownName="Lancer dés pour déterminer ordre des joueurs"
               LastKnownLocation="CanonNoirConception.uml" />
           </extend>
         </extendedCases>
@@ -653,7 +653,7 @@
     <packageHasNamedElement>
       <useCase
         Id="27e669b4-5a02-440e-957a-414b6696a3c6"
-        name="Lancer le dé pour choisir qui commence"
+        name="Lancer dés pour déterminer ordre des joueurs"
         isAbstract="false"
         isLeaf="false">
         <generalsInternal>
@@ -685,7 +685,7 @@
             Id="8109170e-b03e-4f67-8a67-d0206610b63a">
             <useCaseMoniker
               Id="120822ed-58f6-442e-ba13-4d208d3c4d46"
-              LastKnownName="Déplace son bateau"
+              LastKnownName="Choisir la case finale du déplacement du bateau"
               LastKnownLocation="CanonNoirConception.uml" />
           </dependency>
         </suppliersInternal>
@@ -702,7 +702,7 @@
         <subjects>
           <subsystemMoniker
             Id="021ab9e2-4fc7-407c-ab88-354c6130957f"
-            LastKnownName="Déplacement"
+            LastKnownName="Navigation"
             LastKnownLocation="CanonNoirConception.uml" />
         </subjects>
       </useCase>
