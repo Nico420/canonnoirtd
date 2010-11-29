@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="461ae871-f4e3-415d-8cd9-1952bf0eed75" name="UMLUseCaseDiagram1" linkedPackageId="f444a39a-f8ca-46fc-99bc-4bf7093e3f3a" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="461ae871-f4e3-415d-8cd9-1952bf0eed75" name="UMLUseCaseDiagram1" linkedPackageId="f444a39a-f8ca-46fc-99bc-4bf7093e3f3a" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
   <packagedElements>
     <useCaseModelRootHasTypes>
       <actor Id="e80349c6-1513-4b5a-86c7-777e52827989" name="Joueur" isAbstract="false" isLeaf="false">
         <elementDefinition Id="4421bcae-f450-4ead-b5fc-ec5b676b6700" />
         <targetEnds>
           <association Id="17f09844-eafb-438b-993c-339a67568a21" isDerived="false" sourceEndRoleName="Joueur" targetEndRoleName="Choisi une couleur" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="c67510be-33ec-422b-a680-84304ccccbfa" LastKnownName="Choisi une couleur" />
+            <useCaseMoniker Id="c67510be-33ec-422b-a680-84304ccccbfa" LastKnownName="Choisir un port" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="3cea9fe9-77c9-4fd4-a039-348da2d4ed9b" name="Joueur" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -38,7 +38,7 @@
             <elementDefinition Id="c8900016-1977-4912-9192-5fed367cdbef" />
           </association>
           <association Id="91da3383-d6b0-43ae-a70a-11092161dc1b" isDerived="false" sourceEndRoleName="Joueur" targetEndRoleName="Déplace son bateau" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="b7b6ecbe-3420-45af-9f23-84abdfa3eb2b" LastKnownName="Déplace son bateau" />
+            <useCaseMoniker Id="b7b6ecbe-3420-45af-9f23-84abdfa3eb2b" LastKnownName="Choisir la case finale du déplacement du bateau" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="7bd4cb8f-fe06-4658-ac53-422c150753bd" name="Joueur" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -86,7 +86,7 @@
             <elementDefinition Id="08c365c2-fcfc-416c-9663-713e12ef6edb" />
           </association>
           <association Id="6161eb32-f006-42a5-b0ce-bf81c10a21ab" isDerived="false" sourceEndRoleName="Joueur" targetEndRoleName="Lancé le dé pour choisir qui commence" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="4e9b4fc4-78dc-4d1f-95a7-ce554db71ca8" LastKnownName="Lancer le dé pour choisir qui commence" />
+            <useCaseMoniker Id="4e9b4fc4-78dc-4d1f-95a7-ce554db71ca8" LastKnownName="Lancer dés pour déterminer ordre des joueurs" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="dc16a31c-b4fb-4dce-8d4e-653be5b5a1a4" name="Joueur" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -121,7 +121,7 @@
       </actor>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <useCase Id="c67510be-33ec-422b-a680-84304ccccbfa" name="Choisi une couleur" isAbstract="false" isLeaf="false">
+      <useCase Id="c67510be-33ec-422b-a680-84304ccccbfa" name="Choisir un port" isAbstract="false" isLeaf="false">
         <elementDefinition Id="08e1cfe0-c65f-4ee1-9516-72697cc89f20" />
         <subjects>
           <subsystemMoniker Id="5edac75e-c952-49e8-b04c-f3be81808b61" LastKnownName="Initialisatiion" />
@@ -143,15 +143,15 @@
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <useCase Id="b7b6ecbe-3420-45af-9f23-84abdfa3eb2b" name="Déplace son bateau" isAbstract="false" isLeaf="false">
+      <useCase Id="b7b6ecbe-3420-45af-9f23-84abdfa3eb2b" name="Choisir la case finale du déplacement du bateau" isAbstract="false" isLeaf="false">
         <elementDefinition Id="120822ed-58f6-442e-ba13-4d208d3c4d46" />
         <subjects>
-          <subsystemMoniker Id="6546be9b-fa68-4cb2-8f3f-4828cbd14592" LastKnownName="Déplacement" />
+          <subsystemMoniker Id="6546be9b-fa68-4cb2-8f3f-4828cbd14592" LastKnownName="Navigation" />
         </subjects>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <subsystem Id="6546be9b-fa68-4cb2-8f3f-4828cbd14592" name="Déplacement" isAbstract="false" isLeaf="false" isActiveClass="false">
+      <subsystem Id="6546be9b-fa68-4cb2-8f3f-4828cbd14592" name="Navigation" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="021ab9e2-4fc7-407c-ab88-354c6130957f" />
       </subsystem>
     </useCaseModelRootHasTypes>
@@ -165,7 +165,7 @@
         <elementDefinition Id="004b9628-ac1d-4bc8-bff4-b1713040bad9" />
         <suppliersInternal>
           <dependency Id="e09a8fad-e7be-450e-a939-56d6f31e39cf">
-            <useCaseMoniker Id="c67510be-33ec-422b-a680-84304ccccbfa" LastKnownName="Choisi une couleur" />
+            <useCaseMoniker Id="c67510be-33ec-422b-a680-84304ccccbfa" LastKnownName="Choisir un port" />
             <elementDefinition Id="94e5945e-25fb-45b8-8032-a922ab3c2555" />
           </dependency>
         </suppliersInternal>
@@ -192,7 +192,7 @@
         <elementDefinition Id="c09f2c5d-e85d-4611-86b1-15d66dcdeba9" />
         <extendedCases>
           <extend Id="b43beece-9ad6-4911-89be-2c87ee4bb751">
-            <useCaseMoniker Id="4e9b4fc4-78dc-4d1f-95a7-ce554db71ca8" LastKnownName="Lancer le dé pour choisir qui commence" />
+            <useCaseMoniker Id="4e9b4fc4-78dc-4d1f-95a7-ce554db71ca8" LastKnownName="Lancer dés pour déterminer ordre des joueurs" />
             <elementDefinition Id="6c22f44b-16bf-45f7-82be-f5d412d7c5b4" />
           </extend>
         </extendedCases>
@@ -207,7 +207,7 @@
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <useCase Id="4e9b4fc4-78dc-4d1f-95a7-ce554db71ca8" name="Lancer le dé pour choisir qui commence" isAbstract="false" isLeaf="false">
+      <useCase Id="4e9b4fc4-78dc-4d1f-95a7-ce554db71ca8" name="Lancer dés pour déterminer ordre des joueurs" isAbstract="false" isLeaf="false">
         <elementDefinition Id="27e669b4-5a02-440e-957a-414b6696a3c6" />
         <generalsInternal>
           <generalization Id="2fc40a64-aaa1-4cd4-89a9-4b44ceaf153f" isSubstitutable="false">
@@ -225,7 +225,7 @@
         <elementDefinition Id="b8c12a39-e3da-4aa5-a4dc-2888071c67dc" />
         <suppliersInternal>
           <dependency Id="74eaabc1-f35f-4745-9ab7-e50fff7b47bf">
-            <useCaseMoniker Id="b7b6ecbe-3420-45af-9f23-84abdfa3eb2b" LastKnownName="Déplace son bateau" />
+            <useCaseMoniker Id="b7b6ecbe-3420-45af-9f23-84abdfa3eb2b" LastKnownName="Choisir la case finale du déplacement du bateau" />
             <elementDefinition Id="8109170e-b03e-4f67-8a67-d0206610b63a" />
           </dependency>
         </suppliersInternal>
@@ -236,7 +236,7 @@
           </generalization>
         </generalsInternal>
         <subjects>
-          <subsystemMoniker Id="6546be9b-fa68-4cb2-8f3f-4828cbd14592" LastKnownName="Déplacement" />
+          <subsystemMoniker Id="6546be9b-fa68-4cb2-8f3f-4828cbd14592" LastKnownName="Navigation" />
         </subjects>
       </useCase>
     </useCaseModelRootHasTypes>
