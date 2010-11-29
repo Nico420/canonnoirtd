@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm12="http://schemas.microsoft.com/dsltools/UseCaseModel"
   dslVersion="1.0.0.0"
   Id="62a60c90-a0aa-4993-b691-f2e0518db317"
   name="CanonNoirConception" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -45,11 +45,6 @@
           LastKnownName="Case"
           LastKnownLocation="CanonNoirConception.uml" />
       </annotatedElements>
-    </comment>
-    <comment
-      Id="a2c729ea-95e5-4526-a784-6e64c3e5690d">
-      <body>Facade : plein de get
-</body>
     </comment>
   </ownedCommentsInternal>
   <packagedElements>
@@ -748,30 +743,15 @@
           </initialNode>
           <opaqueAction
             Id="f1b50d18-59c8-4ef2-b642-47dc7588484c"
-            name="Premier joueur lance les dés"
+            name="Joueur lance les dés"
             isLeaf="false">
             <flowNodeTargets>
               <controlFlow
-                Id="f6d8cf80-3f13-49ad-acbc-202939cf7546"
+                Id="1b473afa-73aa-45e3-b087-3ba29862c54b"
                 isLeaf="false">
-                <opaqueActionMoniker
-                  Id="70f6d91d-6f7f-408a-a99a-fe25316fd037"
-                  LastKnownName="Joueur courant choisit case finale"
-                  LastKnownLocation="CanonNoirConception.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </opaqueAction>
-          <opaqueAction
-            Id="70f6d91d-6f7f-408a-a99a-fe25316fd037"
-            name="Joueur courant choisit case finale"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="5f97c102-075f-473d-9757-4390a3aed02d"
-                isLeaf="false">
-                <decisionNodeMoniker
-                  Id="cc3945bb-1abe-4299-9202-c5b6a03eb739"
-                  LastKnownName="Decision1"
+                <mergeNodeMoniker
+                  Id="85877440-5368-4fa5-91e3-5ebc2a73ae20"
+                  LastKnownName="Merge1"
                   LastKnownLocation="CanonNoirConception.uml" />
               </controlFlow>
             </flowNodeTargets>
@@ -825,11 +805,11 @@
             isLeaf="false">
             <flowNodeTargets>
               <controlFlow
-                Id="9240df03-2266-4623-82e2-3dd0551385cd"
+                Id="ed25a377-7440-4d75-bee5-51eaa18a09a5"
                 isLeaf="false">
                 <opaqueActionMoniker
-                  Id="70f6d91d-6f7f-408a-a99a-fe25316fd037"
-                  LastKnownName="Joueur courant choisit case finale"
+                  Id="f1b50d18-59c8-4ef2-b642-47dc7588484c"
+                  LastKnownName="Joueur lance les dés"
                   LastKnownLocation="CanonNoirConception.uml" />
               </controlFlow>
             </flowNodeTargets>
@@ -845,7 +825,7 @@
                 isLeaf="false">
                 <acceptEventActionMoniker
                   Id="185b096d-3f93-4a09-a2d0-175041ed49bf"
-                  LastKnownName="Choisir couleur"
+                  LastKnownName="Choisir port"
                   LastKnownLocation="CanonNoirConception.uml" />
               </controlFlow>
             </flowNodeTargets>
@@ -1150,7 +1130,7 @@
           </decisionNode>
           <acceptEventAction
             Id="185b096d-3f93-4a09-a2d0-175041ed49bf"
-            name="Choisir couleur"
+            name="Choisir port"
             isLeaf="false"
             isUnmarshall="false">
             <flowNodeTargets>
@@ -1159,14 +1139,14 @@
                 isLeaf="false">
                 <acceptEventActionMoniker
                   Id="8baaf526-3c58-4b3c-a60d-93a4f309bc0d"
-                  LastKnownName="Lancer dés"
+                  LastKnownName="Lancer dés pour ordre"
                   LastKnownLocation="CanonNoirConception.uml" />
               </controlFlow>
             </flowNodeTargets>
           </acceptEventAction>
           <acceptEventAction
             Id="8baaf526-3c58-4b3c-a60d-93a4f309bc0d"
-            name="Lancer dés"
+            name="Lancer dés pour ordre"
             isLeaf="false"
             isUnmarshall="false">
             <flowNodeTargets>
@@ -1175,7 +1155,7 @@
                 isLeaf="false">
                 <opaqueActionMoniker
                   Id="f1b50d18-59c8-4ef2-b642-47dc7588484c"
-                  LastKnownName="Premier joueur lance les dés"
+                  LastKnownName="Joueur lance les dés"
                   LastKnownLocation="CanonNoirConception.uml" />
               </controlFlow>
             </flowNodeTargets>
@@ -1289,6 +1269,78 @@
               </controlFlow>
             </flowNodeTargets>
           </opaqueAction>
+          <acceptEventAction
+            Id="2ab3ead2-2ed3-4f72-bd4f-c5472b0e4d2d"
+            name="Joueur courant choisit case finale"
+            isLeaf="false"
+            isUnmarshall="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="094b8470-5b4c-41a1-b9e4-d70f0a10a748"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="cc3945bb-1abe-4299-9202-c5b6a03eb739"
+                  LastKnownName="Decision1"
+                  LastKnownLocation="CanonNoirConception.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </acceptEventAction>
+          <decisionNode
+            Id="61dfa41e-eacd-4366-a71b-c973ff806f34"
+            name="Decision12"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="41aad07a-e11d-4bef-8e70-46b22d6303f8"
+                guard="nbJoueur &gt;=3"
+                isLeaf="false">
+                <acceptEventActionMoniker
+                  Id="2ab3ead2-2ed3-4f72-bd4f-c5472b0e4d2d"
+                  LastKnownName="Joueur courant choisit case finale"
+                  LastKnownLocation="CanonNoirConception.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="68ee7983-bd72-4b5e-8d56-be58da871eb9"
+                guard="nbJoueur=2"
+                isLeaf="false">
+                <acceptEventActionMoniker
+                  Id="e3f33e5b-4956-47c9-96c6-40a4e022d331"
+                  LastKnownName="Choisir bateau à déplacer"
+                  LastKnownLocation="CanonNoirConception.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <acceptEventAction
+            Id="e3f33e5b-4956-47c9-96c6-40a4e022d331"
+            name="Choisir bateau à déplacer"
+            isLeaf="false"
+            isUnmarshall="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="0af771e7-4d9f-4e2d-8315-80af670cad84"
+                isLeaf="false">
+                <acceptEventActionMoniker
+                  Id="2ab3ead2-2ed3-4f72-bd4f-c5472b0e4d2d"
+                  LastKnownName="Joueur courant choisit case finale"
+                  LastKnownLocation="CanonNoirConception.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </acceptEventAction>
+          <mergeNode
+            Id="85877440-5368-4fa5-91e3-5ebc2a73ae20"
+            name="Merge1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="956a24c5-1f03-4618-b8cb-75aaa726517d"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="61dfa41e-eacd-4366-a71b-c973ff806f34"
+                  LastKnownName="Decision12"
+                  LastKnownLocation="CanonNoirConception.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </mergeNode>
         </nodes>
       </activity>
     </packageHasNamedElement>
@@ -1327,7 +1379,7 @@
     <packageHasNamedElement>
       <class
         Id="435af1d3-52ef-46fc-9e94-3789738e80e5"
-        name="Moteur1"
+        name="Moteur"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
@@ -1371,11 +1423,195 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="376172e7-1854-462e-8b9f-a11c017f1f70"
+            isDerived="false"
+            sourceEndRoleName="Moteur"
+            targetEndRoleName="Plateau"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="7e710002-2373-4f87-99a7-8877c5900ce2"
+              LastKnownName="Plateau"
+              LastKnownLocation="CanonNoirConception.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="613cb28d-08be-4cae-bb3b-e827cacff0d0"
+                  name="Moteur"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="277b89a1-a0b8-4362-a03a-3b64f83faf0a"
+                  name="Plateau"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="b61a13d0-e040-421f-be03-2a5ed44d0154"
+            isDerived="false"
+            sourceEndRoleName="Moteur"
+            targetEndRoleName="Etat"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="b86bc395-3792-44ac-82f4-e834c70b31e1"
+              LastKnownName="Etat"
+              LastKnownLocation="CanonNoirConception.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e085c941-e75c-4adb-82b1-23d0d3466ff1"
+                  name="Moteur"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="bfcdda65-0c14-45a7-8d53-5f43c7bbfc64"
+                  name="Etat"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="2be664e5-c18e-4e68-9901-550b57da2e1f"
+            isDerived="false"
+            sourceEndRoleName="Moteur"
+            targetEndRoleName="De"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="c37fe224-1ab9-40c7-8f02-4a11010534bd"
+              LastKnownName="De"
+              LastKnownLocation="CanonNoirConception.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="40e485e1-df16-4a89-9499-9450569d5d3b"
+                  name="Moteur"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e56db09e-a556-4800-b962-976a3a19dd7a"
+                  name="De"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="746273df-781a-40d9-b0d5-6690d0d2340b"
+                      name="Lower"
+                      value="2" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="f618e963-0a4d-4725-be94-c999fb619538"
+                      name="Upper"
+                      value="2" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="e1af9a97-79f3-4d4a-8cb7-0625929f5307"
+            isDerived="false"
+            sourceEndRoleName="Moteur"
+            targetEndRoleName="Joueur"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="425e4dd5-2870-48ad-9fb4-1b14f52fad5f"
+              LastKnownName="Joueur"
+              LastKnownLocation="CanonNoirConception.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c7eb7880-8fd1-4ec5-983e-c949674ca2a9"
+                  name="Moteur"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="30bf597a-1c2e-4b8c-8b22-4536ac78b3d2"
+                  name="Joueur"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="e871f781-321e-40c9-a53e-16c303ba698c"
+                      name="Lower"
+                      value="2" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="01fc2e59-08e0-45b7-9f3d-9c44c3915c66"
+                      name="Upper"
+                      value="4" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="a4010318-f145-421d-9f96-a2c201999ffe"
             name="nbJoueurs"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -1383,7 +1619,52 @@
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
-            isComposite="false" />
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="db97d7b1-773c-4348-85ef-601a7bc0463d"
+                LastKnownName="int"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="bb0e2187-1f6a-4dae-9851-d78d400acdf7"
+            name="ordreJoueurs"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="39fb73f7-d8b4-4742-af5f-3b21ccf04d63"
+                LastKnownName="int[]"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="543e0ec0-cc32-4677-b0de-79ec65f04c5c"
+            name="joueurCourant"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="db97d7b1-773c-4348-85ef-601a7bc0463d"
+                LastKnownName="int"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
@@ -1394,6 +1675,49 @@
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false" />
+          <operation
+            Id="7360cc61-29fa-4f96-8eba-0d462d16edcf"
+            name="setEtat"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="fc5fd9ba-ed96-4716-b256-37696c49d092"
+                  name="Etat e"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="e1ce953f-f9df-42a8-b96d-c114daa5930b"
+            name="deplacerBateau"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b61fa9fe-2331-4cb5-8111-c3be856f5a34"
+                  name="Bateau b"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="46e5680a-f79d-4818-bb73-e645221967b6"
+                  name="Case dest"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -1404,15 +1728,53 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="f5051a3a-b84d-44f2-b981-9f5c3f02457b"
+            name="message"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="3b6b2b9c-832e-4895-a675-8784a0c7564c"
+                LastKnownName="string"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
             Id="48baf01a-7d3d-41cb-9db4-afaea7ad5356"
-            name="gerer"
+            name="execute"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false" />
+          <operation
+            Id="9be34a90-c278-458f-90a1-33978d058672"
+            name="setMessage"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="330e44c2-f1df-4f0e-85ee-29a5aa0ceb86"
+                  name="string mes"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -1436,7 +1798,7 @@
         <ownedOperationsInternal>
           <operation
             Id="51ac4851-065e-43f2-b27d-c3be67dcfa87"
-            name="gerer"
+            name="execute"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -1448,7 +1810,7 @@
     <packageHasNamedElement>
       <class
         Id="401c1f2e-5063-45a7-be88-61c8c8617231"
-        name="ChoisirCouleur"
+        name="ChoisirPort"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
@@ -1462,23 +1824,10 @@
               LastKnownLocation="CanonNoirConception.uml" />
           </generalization>
         </generalsInternal>
-        <ownedAttributesInternal>
-          <property
-            Id="53b8e4ea-49c7-4920-b5a8-f3989d863be1"
-            name="vector&lt;Color&gt;"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false" />
-        </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
             Id="79d1a5df-de86-4c42-82cb-0c690e1d5777"
-            name="gerer"
+            name="execute"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -1507,7 +1856,7 @@
         <ownedOperationsInternal>
           <operation
             Id="c6040ff0-4f23-493a-bcb1-b32977e458dd"
-            name="gerer"
+            name="execute"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -1536,7 +1885,64 @@
         <ownedOperationsInternal>
           <operation
             Id="89c93abf-da05-4b07-a69a-8454a89a2d9a"
-            name="gerer"
+            name="execute"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="36b8e101-0189-4456-b87d-97fa7851dbe4"
+            name="getCasesAccessibles"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a0e4d45f-9f51-4a51-813e-156244b9b8ae"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="1596e3a9-494b-4365-8c53-06ce836a08a2"
+                      LastKnownName="vector&lt;Case&gt;"
+                      LastKnownLocation="CanonNoirConception.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="09870991-3f32-45c0-93c0-f03ea9544376"
+            name="deplacer"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ddff0690-2587-459c-87e2-63686fcc25bf"
+                  name="int x"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2ae02254-821d-4b51-b096-aecef62af6e8"
+                  name="int y"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="6fd2eca0-98de-465c-901e-a0fab36310cc"
+            name="selectionBateauADeplacer"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -1565,7 +1971,7 @@
         <ownedOperationsInternal>
           <operation
             Id="97200bbb-d94a-457d-8fba-3cb7795fd581"
-            name="gerer"
+            name="execute"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -1669,6 +2075,7 @@
           <property
             Id="3c596a08-f26c-4096-a21b-9ae2edc4ec62"
             name="hauteur"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -1676,10 +2083,18 @@
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
-            isComposite="false" />
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="db97d7b1-773c-4348-85ef-601a7bc0463d"
+                LastKnownName="int"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </type_NamedElement>
+          </property>
           <property
             Id="52e71757-0351-46f3-a14f-264b98cfd9ca"
             name="nbTresors"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -1687,7 +2102,14 @@
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
-            isComposite="false" />
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="db97d7b1-773c-4348-85ef-601a7bc0463d"
+                LastKnownName="int"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
@@ -1698,6 +2120,54 @@
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false" />
+          <operation
+            Id="58089dba-04a9-4ae2-9a20-aba1131dbd10"
+            name="estNavigable"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6a4e10b4-5332-41bd-a0d1-8f4f1985b2f2"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="ec6b03bb-8a49-4c10-bb56-ccb31e2b4ee8"
+                      LastKnownName="bool"
+                      LastKnownLocation="CanonNoirConception.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="4225897f-d90f-465b-9aa3-a537e73df184"
+            name="estAccessible"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="132cf70e-0a15-4496-8e5a-d0c9004d342c"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="ec6b03bb-8a49-4c10-bb56-ccb31e2b4ee8"
+                      LastKnownName="bool"
+                      LastKnownLocation="CanonNoirConception.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -1741,6 +2211,7 @@
           <property
             Id="d0cabd63-54f0-4ade-87d6-17a2835be293"
             name="couleur"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -1748,8 +2219,25 @@
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
-            isComposite="false" />
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="db97d7b1-773c-4348-85ef-601a7bc0463d"
+                LastKnownName="int"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="2e1223f7-ee5d-4b26-a173-a250b4b74972"
+            name="getCouleur"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -1777,7 +2265,23 @@
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
-            isQuery="false" />
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="22f44d39-f77c-4f7b-b56e-b58c3970a029"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="ec6b03bb-8a49-4c10-bb56-ccb31e2b4ee8"
+                      LastKnownName="bool"
+                      LastKnownLocation="CanonNoirConception.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
           <operation
             Id="5ebb4b03-4863-4cdf-a756-6d90ba694296"
             name="estNavigable"
@@ -1785,7 +2289,23 @@
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
-            isQuery="false" />
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b7c02a2f-05a9-4d90-8423-b1866219ba62"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="ec6b03bb-8a49-4c10-bb56-ccb31e2b4ee8"
+                      LastKnownName="bool"
+                      LastKnownLocation="CanonNoirConception.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -1797,110 +2317,6 @@
         isLeaf="false"
         isActiveClass="false">
         <targetEnds>
-          <association
-            Id="a472deac-a5a0-49b0-8ae4-6431c71c4921"
-            isDerived="false"
-            sourceEndRoleName="Plateau"
-            targetEndRoleName="Joueur"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="425e4dd5-2870-48ad-9fb4-1b14f52fad5f"
-              LastKnownName="Joueur"
-              LastKnownLocation="CanonNoirConception.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="9b67035d-9639-46d2-81d4-4c9982f2e1ab"
-                  name="Plateau"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="7a6de757-64c7-43ca-a1b1-6a07e18cc3ad"
-                  name="Joueur"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="dab7053d-c158-407b-9dc9-0228fa0bcf5a"
-                      name="Lower"
-                      value="*" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="86ee5258-aff1-4caf-a35e-6fc68638ee8d"
-                      name="Upper"
-                      value="*" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
-            Id="69f981c6-8ef0-4b02-920f-7f7e5663cb16"
-            isDerived="false"
-            sourceEndRoleName="Plateau"
-            targetEndRoleName="De"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="c37fe224-1ab9-40c7-8f02-4a11010534bd"
-              LastKnownName="De"
-              LastKnownLocation="CanonNoirConception.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="07b871c4-4d2d-4b13-a4fe-c170d9944304"
-                  name="Plateau"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="Shared"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="ca4b747e-4d14-4ffc-b33f-e715421ba3c7"
-                  name="De"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="c265b8bf-d0da-4c3c-b60e-a7668fad9e08"
-                      name="Lower"
-                      value="2" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="cfb45a8a-65b4-41dc-ae79-33ad6d0655f1"
-                      name="Upper"
-                      value="2" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
           <association
             Id="2fa5779a-96e3-4e78-8576-d74527623c54"
             isDerived="false"
@@ -1957,7 +2373,8 @@
         <ownedAttributesInternal>
           <property
             Id="5fa94cfe-b3b2-4cf1-b43e-e0a73beb3c69"
-            name="int longueur"
+            name="longueur"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -1965,10 +2382,18 @@
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
-            isComposite="false" />
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="db97d7b1-773c-4348-85ef-601a7bc0463d"
+                LastKnownName="int"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </type_NamedElement>
+          </property>
           <property
             Id="ea6791ee-f59b-4659-a645-2d2ede402abc"
-            name="int largeur"
+            name="largeur"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -1976,8 +2401,71 @@
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
-            isComposite="false" />
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="db97d7b1-773c-4348-85ef-601a7bc0463d"
+                LastKnownName="int"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="97afac14-fc50-4d57-806c-5bf690ce0674"
+            name="int getLargeur"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="a41095e9-6ecd-4ce4-bd9a-1103606c49ee"
+            name="int getLongueur"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="42324490-770b-4071-b3ae-62d513e15f35"
+            name="getCase"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1838c03c-8c55-4134-b1c7-7f398b8b6297"
+                  name="int x"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a7ebc5e8-c4d6-4829-8bf1-2db9c18e9684"
+                  name="int y"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="225f797e-80f1-4c93-9e95-fd31ccabf5e1"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="7041591b-d06a-4619-b6b3-8f6b0fc788ce"
+                      LastKnownName="Case"
+                      LastKnownLocation="CanonNoirConception.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -1989,7 +2477,7 @@
         isActiveClass="false">
         <targetEnds>
           <association
-            Id="24e08b7c-6a0c-4752-9021-f277baf4dda5"
+            Id="dfb9b01b-66a6-4f2e-8bf7-84747527f104"
             isDerived="false"
             sourceEndRoleName="Joueur"
             targetEndRoleName="Bateau"
@@ -2002,20 +2490,20 @@
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="5ede28f7-f436-4186-bfa3-cb958936172e"
+                  Id="ba624e82-ac2e-42ea-b782-e7b01d88a259"
                   name="Joueur"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
                   isDerived="false"
                   isDerivedUnion="false"
-                  aggregation="None"
+                  aggregation="Shared"
                   isComposite="false"
                   isNavigableOwned="false" />
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="b7b603d8-1f10-4ebd-803a-9b17e9f0f84f"
+                  Id="efbf78e8-aee8-4f87-8d51-56e46a989b73"
                   name="Bateau"
                   isLeaf="false"
                   isStatic="false"
@@ -2026,13 +2514,13 @@
                   isComposite="false">
                   <lowerValueInternal>
                     <literalString
-                      Id="b5c99f25-0d9f-4045-ace8-5854dc744221"
+                      Id="f5ec3774-9445-4bd0-adec-448d77e7da2f"
                       name="Lower"
                       value="1" />
                   </lowerValueInternal>
                   <upperValueInternal>
                     <literalString
-                      Id="c7fa658d-8dac-47ba-b664-690dedfe1721"
+                      Id="9542179b-4e6d-4768-b14c-d22a373b7894"
                       name="Upper"
                       value="2" />
                   </upperValueInternal>
@@ -2043,30 +2531,9 @@
         </targetEnds>
         <ownedAttributesInternal>
           <property
-            Id="13f46b8a-457a-440c-9610-d2db48168cee"
-            name="Case caseCourante"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false" />
-          <property
-            Id="2d6a19e3-c891-4e8c-bf12-cd33b4a42c76"
-            name="Case caseCourante2"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false" />
-          <property
             Id="7eb110ce-e425-4d24-a0a6-2c2f4ba9ad06"
             name="score"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -2074,8 +2541,44 @@
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
-            isComposite="false" />
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="db97d7b1-773c-4348-85ef-601a7bc0463d"
+                LastKnownName="int"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="0a12d6cd-fade-47a1-81f6-b49e60685257"
+            name="num"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="db97d7b1-773c-4348-85ef-601a7bc0463d"
+                LastKnownName="int"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="6363380e-5d7b-4dc1-943c-56ea94e382b3"
+            name="int getScore"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -2085,10 +2588,104 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="1373e0eb-b22b-4f91-884e-b7f74b86d5da"
+            isDerived="false"
+            sourceEndRoleName="Bateau"
+            targetEndRoleName="Case"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="7041591b-d06a-4619-b6b3-8f6b0fc788ce"
+              LastKnownName="Case"
+              LastKnownLocation="CanonNoirConception.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="cad445a9-6b9a-428a-b95e-065cc0de33ad"
+                  name="Bateau"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="ebe1399a-5679-48ee-81e2-72401a9c012d"
+                      name="Lower"
+                      value="0" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="465bc5b7-a75f-469a-93bd-247e2918c47f"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f92e0361-5190-459e-ba51-5b80b4cc02ee"
+                  name="Case"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="fab4ba93-551e-456f-ac00-82c26a8c152c"
+            isDerived="false"
+            sourceEndRoleName="Bateau"
+            targetEndRoleName="CasePort"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="3e86de06-8f1f-4210-930f-7ef55fc7ea8d"
+              LastKnownName="CasePort"
+              LastKnownLocation="CanonNoirConception.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="49c4de95-4436-47fb-ada6-5e2a91764e32"
+                  name="Bateau"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e4e94b9a-3dd1-4b95-837d-5176c02a4e9b"
+                  name="CasePort"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="0275b706-8b71-4499-ab3d-8a1a77666dee"
             name="nbDes"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -2096,10 +2693,18 @@
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
-            isComposite="false" />
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="db97d7b1-773c-4348-85ef-601a7bc0463d"
+                LastKnownName="int"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </type_NamedElement>
+          </property>
           <property
             Id="04f96f97-5e54-4e12-839e-87e019bf9980"
-            name="typeBateau"
+            name="typeBateaux"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -2107,8 +2712,69 @@
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
-            isComposite="false" />
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="db97d7b1-773c-4348-85ef-601a7bc0463d"
+                LastKnownName="int"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="4549d6ad-51ff-4a86-aaf4-11161019776d"
+            name="TresorABord"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="ec6b03bb-8a49-4c10-bb56-ccb31e2b4ee8"
+                LastKnownName="bool"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="84e844ab-7c12-4312-8931-f9030fa4525f"
+            name="void deplacer"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5ac510ed-52e7-46a3-8ff0-0e8d6810a60a"
+                  name="int x"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6e692308-6625-4791-87dd-be982a2eac9e"
+                  name="int y"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="7a91e555-3cdb-47a3-b8e7-2e23b32d44be"
+            name="getTresorABord : bool"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -2121,7 +2787,8 @@
         <ownedAttributesInternal>
           <property
             Id="f068860e-5093-42e1-9d15-8d6efd8229ac"
-            name="int numero"
+            name="numero"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -2129,12 +2796,27 @@
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
-            isComposite="false" />
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="db97d7b1-773c-4348-85ef-601a7bc0463d"
+                LastKnownName="int"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
             Id="6b3a8edf-b984-4bfe-9056-4ce0c4eb5f72"
             name="lancerDe"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="877ee7b1-d717-4971-9e28-fcd5fa1ddcb3"
+            name="getNum"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -2186,89 +2868,223 @@
                   isDerived="false"
                   isDerivedUnion="false"
                   aggregation="None"
-                  isComposite="false" />
+                  isComposite="false"
+                  isNavigableOwned="false" />
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
           <association
-            Id="fd0f99a1-672b-49f1-8ac0-5d916de5ad0c"
+            Id="9a8d7d40-e9eb-4a08-ac77-06f011c93527"
             isDerived="false"
             sourceEndRoleName="Facade"
-            targetEndRoleName="Moteur1"
+            targetEndRoleName="Moteur"
             isLeaf="false"
             isAbstract="false">
             <classMoniker
               Id="435af1d3-52ef-46fc-9e94-3789738e80e5"
-              LastKnownName="Moteur1"
+              LastKnownName="Moteur"
               LastKnownLocation="CanonNoirConception.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="ee0fa88e-8c22-4e57-b991-f63dd656fe53"
+                  Id="1913b9c0-8f83-4642-b198-18855876fdbf"
                   name="Facade"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
                   isDerived="false"
                   isDerivedUnion="false"
-                  aggregation="None"
+                  aggregation="Composite"
                   isComposite="false"
                   isNavigableOwned="false" />
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="c78dddbc-22fd-42eb-96e4-7f862ebeba15"
-                  name="Moteur1"
+                  Id="a949bd56-425b-45b2-a47f-4e3b6e5f4371"
+                  name="Moteur"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
                   isDerived="false"
                   isDerivedUnion="false"
                   aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
-            Id="d7ad195e-836d-4d1f-96c3-6b4660fd1253"
-            isDerived="false"
-            sourceEndRoleName="Facade"
-            targetEndRoleName="Plateau"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="7e710002-2373-4f87-99a7-8877c5900ce2"
-              LastKnownName="Plateau"
-              LastKnownLocation="CanonNoirConception.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="db120842-8b0b-4e1c-a3dd-2a08be17cfdf"
-                  name="Facade"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="a09cae11-f634-4a70-9c8e-93438b66984d"
-                  name="Plateau"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
+                  isComposite="true" />
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
         </targetEnds>
+        <ownedOperationsInternal>
+          <operation
+            Id="1e5d5a1a-d13f-475a-a620-4ad9a96dae6b"
+            name="activerDes"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="7b020eb2-5b56-47a1-a103-83969fdc5237"
+            name="desactiverDes"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="0be6b1c7-9ab7-4e07-97aa-031d5616823d"
+            name="activerCases"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="a6346188-f4da-4aaf-89b6-a450a10116af"
+            name="desactiverCases"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="5bd4339a-6bd0-4036-9b70-7f80432be40e"
+            name="activerPorts"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="aa674772-3dfe-46f4-b05f-3d86f47ab7c8"
+                  name="CasePort[] portsLibres"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="b9f13cda-dcb8-4857-8d84-98c512c7ad60"
+            name="getPositionsBateaux"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ba5b87be-1e12-4492-a810-59e90dc33d43"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="f31edf8f-a309-44aa-b128-15b82e2bdd36"
+                      LastKnownName="vector&lt;pair&lt;int,int&gt;&gt;"
+                      LastKnownLocation="CanonNoirConception.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="1bcb7a40-3ce7-4bcd-8e4a-2185ba1d6637"
+            name="getMessage"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="bf702edb-3bf6-4c2c-912b-4f80b85dc1dc"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="3b6b2b9c-832e-4895-a675-8784a0c7564c"
+                      LastKnownName="string"
+                      LastKnownLocation="CanonNoirConception.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="17581480-f00d-403e-9ffe-6e72de2cdc47"
+            name="getValeursDes"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="55df3291-9cfd-4967-ad45-057ccc4129f7"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="3c296f2b-476c-4110-86a1-deac536e14c0"
+                      LastKnownName="pair&lt;int,int&gt;"
+                      LastKnownLocation="CanonNoirConception.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="de6b6d8e-9ba9-4f64-b45c-cf99b7878e89"
+            name="afficheCurseurAngle"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="9c7204f5-084a-4710-9dc0-db9f85ff088f"
+            name="afficheCurseurPuissance"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="e4d224dc-cf4a-4d37-92b7-2c84d3fbf7e0"
+            name="getRelief"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b8755ea7-f235-480d-8230-b57268bb5e01"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="39fb73f7-d8b4-4742-af5f-3b21ccf04d63"
+                      LastKnownName="int[]"
+                      LastKnownLocation="CanonNoirConception.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="bc7533a7-33b2-4b98-9a11-786fbc9997e6"
+            name="afficheGagnant"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -2309,13 +3125,51 @@
                   isDerived="false"
                   isDerivedUnion="false"
                   aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
+                  isComposite="false" />
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="0fa7a0f3-b7de-4155-a695-e6dd664782e7"
                   name="Adaptateur"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="06b0be46-0715-431a-82bc-4cc9fda2b87d"
+            isDerived="false"
+            sourceEndRoleName="Affichage"
+            targetEndRoleName="WPF"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="c3d16004-4bc5-443e-87d8-a7a0a4e364d9"
+              LastKnownName="WPF"
+              LastKnownLocation="CanonNoirConception.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="92ebf5ff-fa45-4bb9-85fe-8b5266e70f69"
+                  name="Affichage"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ccb28c1b-268e-4100-87c6-0c37d693b650"
+                  name="WPF"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -2354,7 +3208,7 @@
         <ownedOperationsInternal>
           <operation
             Id="58940d77-1594-4da5-ad86-501c27dda8d7"
-            name="miseAjour"
+            name="void miseAjour"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -2370,7 +3224,7 @@
             isQuery="false" />
           <operation
             Id="21e3cca4-c1f0-4690-8419-e105d0a694f1"
-            name="sendClic"
+            name="void sendClic"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -2389,6 +3243,46 @@
         isLeaf="false"
         isReentrant="false">
         <fragments>
+          <messageOccurrenceSpecification
+            Id="e49a6aad-97a3-4b44-93f4-3cfbf380b62b"
+            name="MessageOccurrenceSpecification1">
+            <covered>
+              <lifelineMoniker
+                Id="384e55a9-bd3b-48e1-b759-dab21880bd99"
+                LastKnownName="Joueur"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="bebb3747-b963-45cf-b5ed-113f9fa923b6"
+            name="MessageOccurrenceSpecification3">
+            <covered>
+              <lifelineMoniker
+                Id="519616ab-b43a-40ac-bcc0-003ed474ec8d"
+                LastKnownName=": Case"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="29b935f9-9ace-44c3-9c7e-0b1de7b3d85a"
+            name="MessageOccurrenceSpecification2">
+            <covered>
+              <lifelineMoniker
+                Id="519616ab-b43a-40ac-bcc0-003ed474ec8d"
+                LastKnownName=": Case"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="fee16d40-aab3-4c81-9c9e-54a3a68da25f"
+            name="MessageOccurrenceSpecification4">
+            <covered>
+              <lifelineMoniker
+                Id="384e55a9-bd3b-48e1-b759-dab21880bd99"
+                LastKnownName="Joueur"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
           <behaviorExecutionSpecification
             Id="69b0858f-53d9-4db7-b941-747dee5b8ed6"
             name="BehaviorExecutionSpecification1">
@@ -2439,46 +3333,6 @@
                 LastKnownLocation="CanonNoirConception.uml" />
             </covered>
           </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="e49a6aad-97a3-4b44-93f4-3cfbf380b62b"
-            name="MessageOccurrenceSpecification1">
-            <covered>
-              <lifelineMoniker
-                Id="384e55a9-bd3b-48e1-b759-dab21880bd99"
-                LastKnownName="Joueur"
-                LastKnownLocation="CanonNoirConception.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="29b935f9-9ace-44c3-9c7e-0b1de7b3d85a"
-            name="MessageOccurrenceSpecification2">
-            <covered>
-              <lifelineMoniker
-                Id="519616ab-b43a-40ac-bcc0-003ed474ec8d"
-                LastKnownName=": Case"
-                LastKnownLocation="CanonNoirConception.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="bebb3747-b963-45cf-b5ed-113f9fa923b6"
-            name="MessageOccurrenceSpecification3">
-            <covered>
-              <lifelineMoniker
-                Id="519616ab-b43a-40ac-bcc0-003ed474ec8d"
-                LastKnownName=": Case"
-                LastKnownLocation="CanonNoirConception.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="fee16d40-aab3-4c81-9c9e-54a3a68da25f"
-            name="MessageOccurrenceSpecification4">
-            <covered>
-              <lifelineMoniker
-                Id="384e55a9-bd3b-48e1-b759-dab21880bd99"
-                LastKnownName="Joueur"
-                LastKnownLocation="CanonNoirConception.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
           <executionOccurrenceSpecification
             Id="2f6f8244-3764-4c4c-acb6-43dddefe740f"
             name="ExecutionOccurrenceSpecification2">
@@ -2654,6 +3508,773 @@
       <executionEvent
         Id="83a57594-6b4b-4095-a61b-d1243aa74625"
         name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="702d0dc7-e901-41ee-9c71-bd23c064a165"
+        name="TirerCanon"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="58800b71-f3a0-4617-baae-942fbe9ada3d"
+            isSubstitutable="false">
+            <classMoniker
+              Id="b86bc395-3792-44ac-82f4-e834c70b31e1"
+              LastKnownName="Etat"
+              LastKnownLocation="CanonNoirConception.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="98bfbda9-d3b2-4afc-95dd-69848ba273a1"
+            name="angle"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="db97d7b1-773c-4348-85ef-601a7bc0463d"
+                LastKnownName="int"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="03cfb0e1-5170-45fc-be41-2abf15773f35"
+            name="puissance"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="db97d7b1-773c-4348-85ef-601a7bc0463d"
+                LastKnownName="int"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="3cccb254-7d5b-44bb-bcfc-e42f30d9bf00"
+            name="joueurAttaquant"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="db97d7b1-773c-4348-85ef-601a7bc0463d"
+                LastKnownName="int"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="46149743-0861-44f4-9a85-76ce1a114967"
+            name="joueurAttaque"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="db97d7b1-773c-4348-85ef-601a7bc0463d"
+                LastKnownName="int"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="e064ce08-7937-466a-bc2f-2d80593d8e87"
+            name="execute"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="ae81d42b-26f8-4485-a3fc-0e2fb68a65da"
+            name="choisirAngle"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="c7f9d5da-83d5-4b0b-8c3b-eecfce546c97"
+            name="choisirPuissance"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="5c80a4ca-c4c8-4908-a75f-00ecc182d2af"
+            name="choisirCible"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="a3c9b230-bada-49fc-9c1d-0fe9f5a6ebc1"
+            name="faireTir"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="43b92f01-76e8-4419-be97-a9910a552804"
+            name="tirReussi"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="b4a6374b-6ac8-4883-b782-abedfafda53b"
+            name="effectuerChangements"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="484e4181-a0a4-4c2e-ae71-264c5e953cb4"
+            name="calculerRelief"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="11d72b04-18f8-40e1-97a4-2db7ad811b58"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="39fb73f7-d8b4-4742-af5f-3b21ccf04d63"
+                      LastKnownName="int[]"
+                      LastKnownLocation="CanonNoirConception.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="f240c1b8-0212-473e-bd28-15b3b6ef72c6"
+        name="TirCanonUnique"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="5a503251-e76a-4a4f-819f-7fd76a06e7de"
+            isSubstitutable="false">
+            <classMoniker
+              Id="702d0dc7-e901-41ee-9c71-bd23c064a165"
+              LastKnownName="TirerCanon"
+              LastKnownLocation="CanonNoirConception.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="8e4ba5ce-b7a8-41d8-9a57-2d5de7cb7901"
+            name="void choisirCible"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="83d1182f-4c41-4301-bd3a-7c822ec64578"
+        name="TirCanonDuel"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="2b5d9c02-e5be-45bc-b58f-ddc8a5a4f1a1"
+            isSubstitutable="false">
+            <classMoniker
+              Id="702d0dc7-e901-41ee-9c71-bd23c064a165"
+              LastKnownName="TirerCanon"
+              LastKnownLocation="CanonNoirConception.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="bb748bdb-14fe-4a55-b25a-3339bbd93502"
+            name="void choisirCible"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="c3d16004-4bc5-443e-87d8-a7a0a4e364d9"
+        name="WPF"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="db97d7b1-773c-4348-85ef-601a7bc0463d"
+        name="int" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="cb5384f6-8a9f-450b-85b7-9dfe5e9798cd"
+        name="PartieGagnee"
+        isAbstract="false"
+        isLeaf="true"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="698339ac-c8e5-4822-af67-6bc66652e4fd"
+            isSubstitutable="false">
+            <classMoniker
+              Id="b86bc395-3792-44ac-82f4-e834c70b31e1"
+              LastKnownName="Etat"
+              LastKnownLocation="CanonNoirConception.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="c83c4328-9789-4ec5-bcd7-32e96cdbbf82"
+            name="int joueurGagnant"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="76c26df1-9b95-402d-821a-ee75fd94c33d"
+            name="afficherGagnant"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="c19922ec-e0f9-4e9f-8a81-8c093363d7e7"
+            name="execute"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="7c4ce4d7-5503-45d1-a922-0fcc802aa48f"
+        name="PartieGagnee1"
+        isAbstract="false"
+        isLeaf="true"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="e4832b8c-7791-45c2-bccc-fb03980954f0"
+            name="int joueurGagnant"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="392cf37f-da90-477c-81d8-4fa9b4d460b6"
+            name="executerPanel"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b5a652c5-c4a1-4f94-a59c-c4b0d00a7ec5"
+                  name="numBouton"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="db97d7b1-773c-4348-85ef-601a7bc0463d"
+                      LastKnownName="int"
+                      LastKnownLocation="CanonNoirConception.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="9d4b4030-5027-4727-ba15-6e1b68452047"
+            name="executerPlateau"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="46027ef3-4752-47ef-8094-403eab21fd5f"
+                  name="dx"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="db97d7b1-773c-4348-85ef-601a7bc0463d"
+                      LastKnownName="int"
+                      LastKnownLocation="CanonNoirConception.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a6137eed-0478-4711-af9f-5ef6c888352e"
+                  name="dy"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="db97d7b1-773c-4348-85ef-601a7bc0463d"
+                      LastKnownName="int"
+                      LastKnownLocation="CanonNoirConception.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="34f9f022-ddb2-4402-b3ac-7e3ee5ab01c9"
+        name="PartieGagnee2"
+        isAbstract="false"
+        isLeaf="true"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="7909ce2c-663b-4c14-846f-e58d283d8098"
+            name="int joueurGagnant"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="374ac6fb-f993-4a4e-bb4f-e42114a64054"
+            name="executerPanel"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9c73823a-ad74-4cf5-b079-d11882ac2857"
+                  name="numBouton"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="db97d7b1-773c-4348-85ef-601a7bc0463d"
+                      LastKnownName="int"
+                      LastKnownLocation="CanonNoirConception.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="fe4ca5bb-d7c5-4c45-ab6c-14f8a56aa7bd"
+            name="executerPlateau"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4b803623-7407-4aa1-b93b-68cad7727af9"
+                  name="dx"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="db97d7b1-773c-4348-85ef-601a7bc0463d"
+                      LastKnownName="int"
+                      LastKnownLocation="CanonNoirConception.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="58857001-af78-439b-946f-6a9929fd7682"
+                  name="dy"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="db97d7b1-773c-4348-85ef-601a7bc0463d"
+                      LastKnownName="int"
+                      LastKnownLocation="CanonNoirConception.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="91c84b4c-fd16-4133-93bb-cade4296220e"
+        name="PartieGagnee3"
+        isAbstract="false"
+        isLeaf="true"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="b64e922b-152d-467a-8425-d9cd365867d9"
+            name="int joueurGagnant"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="c8311e81-2d2b-4406-abcc-163a530c8fda"
+            name="executerPanel"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ab1ba975-789b-426a-9ba7-1b46dfdb2490"
+                  name="numBouton"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="db97d7b1-773c-4348-85ef-601a7bc0463d"
+                      LastKnownName="int"
+                      LastKnownLocation="CanonNoirConception.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="784dff9c-496c-4760-a4d8-103e9a77c8f4"
+            name="executerPlateau"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="482a2c5e-fe4a-4ad2-99b2-aecb2e679a50"
+                  name="dx"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="db97d7b1-773c-4348-85ef-601a7bc0463d"
+                      LastKnownName="int"
+                      LastKnownLocation="CanonNoirConception.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="861abfcf-4ea8-4510-81c8-cee5a85cfb6c"
+                  name="dy"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="db97d7b1-773c-4348-85ef-601a7bc0463d"
+                      LastKnownName="int"
+                      LastKnownLocation="CanonNoirConception.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="9ee769e6-bf23-46a3-abaf-434280bbcdc5"
+        name="PartieGagnee4"
+        isAbstract="false"
+        isLeaf="true"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="03964d47-6bf5-42ca-9006-056044ff596e"
+            name="int joueurGagnant"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="e1c25538-8f96-4300-80eb-28c7c7052734"
+            name="executerPanel"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="291ec384-e402-4a61-b53b-fedd0ada7dcd"
+                  name="numBouton"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="db97d7b1-773c-4348-85ef-601a7bc0463d"
+                      LastKnownName="int"
+                      LastKnownLocation="CanonNoirConception.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="f8e78aca-f733-450f-ac37-6ee97c61f874"
+            name="executerPlateau"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1f7b6b09-433b-4395-8e79-841c48281f17"
+                  name="dx"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="db97d7b1-773c-4348-85ef-601a7bc0463d"
+                      LastKnownName="int"
+                      LastKnownLocation="CanonNoirConception.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7ace89a6-746b-4695-bfbd-042b60e8e47e"
+                  name="dy"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="db97d7b1-773c-4348-85ef-601a7bc0463d"
+                      LastKnownName="int"
+                      LastKnownLocation="CanonNoirConception.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="39fb73f7-d8b4-4742-af5f-3b21ccf04d63"
+        name="int[]" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="ec6b03bb-8a49-4c10-bb56-ccb31e2b4ee8"
+        name="bool" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="cc2bc3cf-54ed-48ef-a113-cc99e59ee551"
+        name="vector&lt;Color&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="9d6ae555-f949-4877-bcec-11f8bb9aac57"
+        name="SetOrdreJoueurs"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="d970c19a-0f00-40f5-a289-376fd4ab5603"
+            isSubstitutable="false">
+            <classMoniker
+              Id="b06e2dfb-c6f5-4502-bf0f-116da4bed769"
+              LastKnownName="LancerDes"
+              LastKnownLocation="CanonNoirConception.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="00ab2825-9640-4319-8e61-08e2e2f1d79c"
+            name="setOrdreJoueurs"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f56eb85b-fcbe-4c50-8150-b0699ae66af7"
+                  name="int j"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="54cf9fb5-aa78-406d-b511-a5a49c5efe88"
+            name="lancerDes"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="60379d96-1393-40f5-8261-c903765ac9d0"
+        name="LancerDésDéplacement"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="d26c648c-0da2-48a9-a03c-c1468103d050"
+            isSubstitutable="false">
+            <classMoniker
+              Id="b06e2dfb-c6f5-4502-bf0f-116da4bed769"
+              LastKnownName="LancerDes"
+              LastKnownLocation="CanonNoirConception.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="29ae29b0-376d-4926-8919-80feae4e8640"
+            name="lancerDes"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="1596e3a9-494b-4365-8c53-06ce836a08a2"
+        name="vector&lt;Case&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="f31edf8f-a309-44aa-b128-15b82e2bdd36"
+        name="vector&lt;pair&lt;int,int&gt;&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="3b6b2b9c-832e-4895-a675-8784a0c7564c"
+        name="string" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="12b12dc7-671e-41c2-b06f-2a07c4f7b341"
+        name="std::string" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="3c296f2b-476c-4110-86a1-deac536e14c0"
+        name="pair&lt;int,int&gt;" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

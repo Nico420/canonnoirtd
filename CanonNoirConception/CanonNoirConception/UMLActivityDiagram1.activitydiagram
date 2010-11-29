@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="2f187204-d54d-4b39-8067-b53412dcc8de" name="Activity1" linkedPackageId="b5f15eda-af73-48d8-a712-71bec0e254e1" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm12="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="2f187204-d54d-4b39-8067-b53412dcc8de" name="Activity1" linkedPackageId="b5f15eda-af73-48d8-a712-71bec0e254e1" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
   <ownedCommentsInternal>
     <comment Id="62563d8a-f2ec-453d-84e7-eb7ae75728ef">
       <elementDefinition Id="a2981087-b7f7-4b23-97d1-770368184746" />
@@ -23,21 +23,12 @@
               </controlFlow>
             </flowNodeTargets>
           </initialNode>
-          <opaqueAction Id="b7b1a589-7a04-4924-a45f-4e851ab96b73" name="Premier joueur lance les dés" isLeaf="false">
+          <opaqueAction Id="b7b1a589-7a04-4924-a45f-4e851ab96b73" name="Joueur lance les dés" isLeaf="false">
             <elementDefinition Id="f1b50d18-59c8-4ef2-b642-47dc7588484c" />
             <flowNodeTargets>
-              <controlFlow Id="cbca7c5d-556f-4d65-bf53-c0540063c5b9" isLeaf="false">
-                <opaqueActionMoniker Id="1015631a-9116-4ca6-a59b-3fdb8ba78928" LastKnownName="Joueur courant choisit case finale" />
-                <elementDefinition Id="f6d8cf80-3f13-49ad-acbc-202939cf7546" />
-              </controlFlow>
-            </flowNodeTargets>
-          </opaqueAction>
-          <opaqueAction Id="1015631a-9116-4ca6-a59b-3fdb8ba78928" name="Joueur courant choisit case finale" isLeaf="false">
-            <elementDefinition Id="70f6d91d-6f7f-408a-a99a-fe25316fd037" />
-            <flowNodeTargets>
-              <controlFlow Id="c77dfb50-e190-4adc-8890-d8e9216ca7bd" isLeaf="false">
-                <decisionNodeMoniker Id="f46b1f00-4350-4769-8359-85b3e537a7f9" LastKnownName="Decision1" />
-                <elementDefinition Id="5f97c102-075f-473d-9757-4390a3aed02d" />
+              <controlFlow Id="39f0ac88-2aea-45b5-8c5f-d520569eb0ef" isLeaf="false">
+                <mergeNodeMoniker Id="5f54763c-0408-46c1-aae4-ea08b6b8458d" LastKnownName="Merge1" />
+                <elementDefinition Id="1b473afa-73aa-45e3-b087-3ba29862c54b" />
               </controlFlow>
             </flowNodeTargets>
           </opaqueAction>
@@ -65,9 +56,9 @@
           <opaqueAction Id="92734a52-aa6a-45ea-bea5-538c4a6e4575" name="Joueur suivant lance les dés" isLeaf="false">
             <elementDefinition Id="b9ca6579-efbc-4089-b53b-7acd72fd850c" />
             <flowNodeTargets>
-              <controlFlow Id="34d68f5a-169b-4b14-afc4-00af236523d7" isLeaf="false">
-                <opaqueActionMoniker Id="1015631a-9116-4ca6-a59b-3fdb8ba78928" LastKnownName="Joueur courant choisit case finale" />
-                <elementDefinition Id="9240df03-2266-4623-82e2-3dd0551385cd" />
+              <controlFlow Id="174db50f-574a-47bc-9c99-f0575854e403" isLeaf="false">
+                <opaqueActionMoniker Id="b7b1a589-7a04-4924-a45f-4e851ab96b73" LastKnownName="Joueur lance les dés" />
+                <elementDefinition Id="ed25a377-7440-4d75-bee5-51eaa18a09a5" />
               </controlFlow>
             </flowNodeTargets>
           </opaqueAction>
@@ -75,7 +66,7 @@
             <elementDefinition Id="e349b50b-74f8-45ec-8e37-e458ec5715e7" />
             <flowNodeTargets>
               <controlFlow Id="98907f2d-852a-4e9d-a20b-409ff9412866" isLeaf="false">
-                <acceptEventActionMoniker Id="c4ce163b-b6e1-4088-b0ee-2535ffefbcf5" LastKnownName="Choisir couleur" />
+                <acceptEventActionMoniker Id="c4ce163b-b6e1-4088-b0ee-2535ffefbcf5" LastKnownName="Choisir port" />
                 <elementDefinition Id="4b11e9df-ab69-4ad9-aa9c-9680bc0821ee" />
               </controlFlow>
             </flowNodeTargets>
@@ -243,20 +234,20 @@
               </controlFlow>
             </flowNodeTargets>
           </decisionNode>
-          <acceptEventAction Id="c4ce163b-b6e1-4088-b0ee-2535ffefbcf5" name="Choisir couleur" isLeaf="false" isUnmarshall="false">
+          <acceptEventAction Id="c4ce163b-b6e1-4088-b0ee-2535ffefbcf5" name="Choisir port" isLeaf="false" isUnmarshall="false">
             <elementDefinition Id="185b096d-3f93-4a09-a2d0-175041ed49bf" />
             <flowNodeTargets>
               <controlFlow Id="2c67032f-1c54-46c6-901f-e206d370ff8f" isLeaf="false">
-                <acceptEventActionMoniker Id="c961e42f-f895-4325-ae5c-35f8ed88000b" LastKnownName="Lancer dés" />
+                <acceptEventActionMoniker Id="c961e42f-f895-4325-ae5c-35f8ed88000b" LastKnownName="Lancer dés pour ordre" />
                 <elementDefinition Id="696ba8a7-002f-40cf-8a11-d65703eaaa8d" />
               </controlFlow>
             </flowNodeTargets>
           </acceptEventAction>
-          <acceptEventAction Id="c961e42f-f895-4325-ae5c-35f8ed88000b" name="Lancer dés" isLeaf="false" isUnmarshall="false">
+          <acceptEventAction Id="c961e42f-f895-4325-ae5c-35f8ed88000b" name="Lancer dés pour ordre" isLeaf="false" isUnmarshall="false">
             <elementDefinition Id="8baaf526-3c58-4b3c-a60d-93a4f309bc0d" />
             <flowNodeTargets>
               <controlFlow Id="e1acb48f-920c-4c14-af33-f11fafe293e0" isLeaf="false">
-                <opaqueActionMoniker Id="b7b1a589-7a04-4924-a45f-4e851ab96b73" LastKnownName="Premier joueur lance les dés" />
+                <opaqueActionMoniker Id="b7b1a589-7a04-4924-a45f-4e851ab96b73" LastKnownName="Joueur lance les dés" />
                 <elementDefinition Id="b8d8267a-e7f8-4589-ba4a-f87bd3cb683b" />
               </controlFlow>
             </flowNodeTargets>
@@ -321,6 +312,46 @@
               </controlFlow>
             </flowNodeTargets>
           </opaqueAction>
+          <acceptEventAction Id="bac7c4dc-48c5-417d-a4a3-1e00567dd71c" name="Joueur courant choisit case finale" isLeaf="false" isUnmarshall="false">
+            <elementDefinition Id="2ab3ead2-2ed3-4f72-bd4f-c5472b0e4d2d" />
+            <flowNodeTargets>
+              <controlFlow Id="a0252ed8-95a4-4c9c-a8aa-ad75a42ec387" isLeaf="false">
+                <decisionNodeMoniker Id="f46b1f00-4350-4769-8359-85b3e537a7f9" LastKnownName="Decision1" />
+                <elementDefinition Id="094b8470-5b4c-41a1-b9e4-d70f0a10a748" />
+              </controlFlow>
+            </flowNodeTargets>
+          </acceptEventAction>
+          <decisionNode Id="7619ba40-c1ec-488e-bb93-a1b5bead9b13" name="Decision12" isLeaf="false">
+            <elementDefinition Id="61dfa41e-eacd-4366-a71b-c973ff806f34" />
+            <flowNodeTargets>
+              <controlFlow Id="4099482a-bacb-40cd-84ef-090eaba077df" guard="nbJoueur &gt;=3" isLeaf="false">
+                <acceptEventActionMoniker Id="bac7c4dc-48c5-417d-a4a3-1e00567dd71c" LastKnownName="Joueur courant choisit case finale" />
+                <elementDefinition Id="41aad07a-e11d-4bef-8e70-46b22d6303f8" />
+              </controlFlow>
+              <controlFlow Id="06c74392-cbe7-4590-9d7b-68bf295b0521" guard="nbJoueur=2" isLeaf="false">
+                <acceptEventActionMoniker Id="950cb489-a962-4e56-8030-27d3947e237b" LastKnownName="Choisir bateau à déplacer" />
+                <elementDefinition Id="68ee7983-bd72-4b5e-8d56-be58da871eb9" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <acceptEventAction Id="950cb489-a962-4e56-8030-27d3947e237b" name="Choisir bateau à déplacer" isLeaf="false" isUnmarshall="false">
+            <elementDefinition Id="e3f33e5b-4956-47c9-96c6-40a4e022d331" />
+            <flowNodeTargets>
+              <controlFlow Id="b2d33e80-40ec-4c07-bde2-1277bcd8ff52" isLeaf="false">
+                <acceptEventActionMoniker Id="bac7c4dc-48c5-417d-a4a3-1e00567dd71c" LastKnownName="Joueur courant choisit case finale" />
+                <elementDefinition Id="0af771e7-4d9f-4e2d-8315-80af670cad84" />
+              </controlFlow>
+            </flowNodeTargets>
+          </acceptEventAction>
+          <mergeNode Id="5f54763c-0408-46c1-aae4-ea08b6b8458d" name="Merge1" isLeaf="false">
+            <elementDefinition Id="85877440-5368-4fa5-91e3-5ebc2a73ae20" />
+            <flowNodeTargets>
+              <controlFlow Id="ce44a72a-6adb-4c68-88cd-2914b0c8af0e" isLeaf="false">
+                <decisionNodeMoniker Id="7619ba40-c1ec-488e-bb93-a1b5bead9b13" LastKnownName="Decision12" />
+                <elementDefinition Id="956a24c5-1f03-4618-b8cb-75aaa726517d" />
+              </controlFlow>
+            </flowNodeTargets>
+          </mergeNode>
         </nodes>
       </activity>
     </activityRootModelHasActivity>
