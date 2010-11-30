@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="a606b521-860e-4b72-8e2a-ce598690c9be" name="UMLClassDiagram1" linkedPackageId="ba48968a-64e8-42e4-b4e1-7b952d7c2fda" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="a606b521-860e-4b72-8e2a-ce598690c9be" name="UMLClassDiagram1" linkedPackageId="ba48968a-64e8-42e4-b4e1-7b952d7c2fda" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <ownedCommentsInternal>
     <comment Id="97dd757a-22e8-410a-b2df-9590591aad95">
       <elementDefinition Id="facdd64c-98eb-434c-8d85-cf12539f0ce8" />
@@ -538,8 +538,21 @@
           </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
-          <operation Id="fa4c638a-7206-47a6-8f12-00a31a62436c" name="int getScore" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+          <operation Id="fa4c638a-7206-47a6-8f12-00a31a62436c" name="getScore" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="6363380e-5d7b-4dc1-943c-56ea94e382b3" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="6aa30489-1902-42ec-bfe0-d82ea666152c" direction="Return" isUnique="false">
+                  <elementDefinition Id="84a10e1c-7a04-462e-966f-6d9b4b10ec42" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="6ac86a59-23b4-4846-89d1-1eb5789b9053" LastKnownName="int" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="b49263fa-763d-4d09-98dd-aac6bf9b4fb6" name="getNum : int" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="f34c15e7-dce6-407a-9c5e-5f57f29ae449" />
           </operation>
         </ownedOperationsInternal>
       </class>
@@ -775,6 +788,12 @@
           <operation Id="00044a50-604e-486b-953c-9141098cabe4" name="afficheGagnant" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="bc7533a7-33b2-4b98-9a11-786fbc9997e6" />
           </operation>
+          <operation Id="b00767ac-6529-4c69-939b-9789ff84cebf" name="activerBateaux" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="82d3a1b8-e7e9-4aa8-aaed-e1c64237fe90" />
+          </operation>
+          <operation Id="f5092001-80dc-4669-a8bd-ddaae9a9701f" name="afficheTir" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="fad00f4c-e96f-4de5-bbd1-ee3043f0e7d2" />
+          </operation>
         </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
@@ -813,14 +832,38 @@
           </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
-          <operation Id="38de4e78-0739-45bc-96ee-0b151f33e83a" name="void miseAjour" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+          <operation Id="38de4e78-0739-45bc-96ee-0b151f33e83a" name="miseAjour" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="58940d77-1594-4da5-ad86-501c27dda8d7" />
           </operation>
           <operation Id="f5095993-bda9-489b-a7d5-3a6d3da057fc" name="init" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="ee28d58f-e68d-4cc1-8e23-3f1dab9c26f4" />
           </operation>
-          <operation Id="ab87e3e0-25b5-45b8-bb24-d157ccb36b66" name="void sendClic" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+          <operation Id="ab87e3e0-25b5-45b8-bb24-d157ccb36b66" name="sendClickLancerDes" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="21e3cca4-c1f0-4690-8419-e105d0a694f1" />
+          </operation>
+          <operation Id="e9b2eedf-bee4-4fdd-afed-3cb1d3adec61" name="sendClick2Joueurs" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e52e8470-0744-4386-ae42-144ec3c4360d" />
+          </operation>
+          <operation Id="a9ed3ec1-642c-4897-97e7-810df03a4d6f" name="sendClick3Joueurs" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e2f30ebc-85c2-48ce-be2f-b0b8262fc4e1" />
+          </operation>
+          <operation Id="10fc257d-c9e4-4738-b950-d4a907bb90a5" name="sendClick4Joueurs" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="3aae1fea-be67-4045-95b1-99c2ea8c5ff2" />
+          </operation>
+          <operation Id="c6c86a15-1037-49ec-a7cf-d6ac471cd662" name="sendClickCase" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="17dc7491-6407-4d06-bd46-147a992718b4" />
+          </operation>
+          <operation Id="6835dde4-76d9-4f0f-81b4-81f94386d1dd" name="sendClickChoisirPort" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="be282ffd-926b-4ff0-b3bb-32c8ce915d5a" />
+          </operation>
+          <operation Id="b06a2e20-8557-4bc8-8b61-7cb0855ca676" name="sendClickBateau" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="0f5b51a8-b328-4ed6-837c-bba10167f064" />
+          </operation>
+          <operation Id="a33aeee3-7662-43a7-9190-9bd2b28050f7" name="sendAngle" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="cd4e0de3-7a11-4309-b337-ec975f780a2a" />
+          </operation>
+          <operation Id="c1e0e1d2-de71-484b-b5b9-cee768ca6eed" name="sendPuissance" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="69d070ec-f791-456f-b872-2df95e770755" />
           </operation>
         </ownedOperationsInternal>
       </class>
@@ -859,18 +902,21 @@
               <referencedTypeMoniker Id="6ac86a59-23b4-4846-89d1-1eb5789b9053" LastKnownName="int" />
             </type_NamedElement>
           </property>
+          <property Id="b006737b-0fb1-4ee8-9e76-f97cdcb6f08b" name="tirReussi" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="cf67c7de-1c51-40f4-8e0e-d6a5009b9e0e" />
+          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation Id="d202d0db-6602-4c7c-956d-ab5a5a4d357e" name="execute" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="e064ce08-7937-466a-bc2f-2d80593d8e87" />
           </operation>
-          <operation Id="fe51fb5d-6cb6-45e3-99ce-fdf91c4e7070" name="choisirAngle" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+          <operation Id="fe51fb5d-6cb6-45e3-99ce-fdf91c4e7070" name="setAngle" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="ae81d42b-26f8-4485-a3fc-0e2fb68a65da" />
           </operation>
-          <operation Id="e74935cb-ff59-4858-9457-e627d377d68e" name="choisirPuissance" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+          <operation Id="e74935cb-ff59-4858-9457-e627d377d68e" name="setPuissance" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="c7f9d5da-83d5-4b0b-8c3b-eecfce546c97" />
           </operation>
-          <operation Id="ececc952-e1a4-4f49-9fac-3d49aa128445" name="choisirCible" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+          <operation Id="ececc952-e1a4-4f49-9fac-3d49aa128445" name="setCible" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="5c80a4ca-c4c8-4908-a75f-00ecc182d2af" />
           </operation>
           <operation Id="4bb6e202-bc3f-4db5-82ee-512f7dc2434a" name="faireTir" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
@@ -908,8 +954,11 @@
           </generalization>
         </generalsInternal>
         <ownedOperationsInternal>
-          <operation Id="6fb0d350-f05c-422a-b93e-cb1a1bbf095f" name="void choisirCible" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+          <operation Id="6fb0d350-f05c-422a-b93e-cb1a1bbf095f" name="setCible" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="8e4ba5ce-b7a8-41d8-9a57-2d5de7cb7901" />
+          </operation>
+          <operation Id="ec829c02-2440-4c35-bd5c-cc05fb4679ff" name="execute" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="92a31bc6-0f64-4e90-87d4-5cdbb09555b6" />
           </operation>
         </ownedOperationsInternal>
       </class>
@@ -923,9 +972,30 @@
             <elementDefinition Id="2b5d9c02-e5be-45bc-b58f-ddc8a5a4f1a1" />
           </generalization>
         </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="5f528cf4-bae4-40a0-a234-59dba3b58084" name="bool premierTir" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="71aeb6e9-14a1-43fb-aed6-5c5313d51589" />
+          </property>
+        </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation Id="9a2fa419-82ef-4b5a-8b63-49bdd1542bdb" name="void choisirCible" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="bb748bdb-14fe-4a55-b25a-3339bbd93502" />
+          </operation>
+          <operation Id="7ad0d42c-faae-481e-b958-31283c2588da" name="estPremierTir" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e9b4ffbd-bd8e-428b-a313-c73092a84e83" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="26874fc0-f9d1-4924-8979-0fa5793d237d" direction="Return" isUnique="false">
+                  <elementDefinition Id="fdab5202-8c17-48ef-aaf7-c4d565e04089" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="fa9a34f1-46fc-4121-acd5-41b743152871" LastKnownName="bool" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="c50aa0d2-338d-4003-bf06-166ba29cf810" name="execute" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="06ba6a6c-3333-43ff-a59f-966d0298e8f4" />
           </operation>
         </ownedOperationsInternal>
       </class>
@@ -992,6 +1062,9 @@
           <operation Id="ef5de88d-b860-47a3-8473-4d9b0eae03d1" name="lancerDes" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="54cf9fb5-aa78-406d-b511-a5a49c5efe88" />
           </operation>
+          <operation Id="4d8b9fae-5118-47b6-8347-612a717f3df0" name="execute" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="102e7653-8bb5-4db8-a84d-126f507ee442" />
+          </operation>
         </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
@@ -1007,6 +1080,9 @@
         <ownedOperationsInternal>
           <operation Id="fd1025a5-9814-422d-bb8d-f5c3cdc485fb" name="lancerDes" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="29ae29b0-376d-4926-8919-80feae4e8640" />
+          </operation>
+          <operation Id="e42e2c29-b9ca-4cd5-9dcb-d5f80d31e527" name="execute" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="b0beea85-8fee-4c4e-9952-43b6fc84f6fe" />
           </operation>
         </ownedOperationsInternal>
       </class>
