@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner"
   dslVersion="1.0.0.0"
   Id="62a60c90-a0aa-4993-b691-f2e0518db317"
   name="CanonNoirConception" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -3756,49 +3756,7 @@
         name="Adaptateur"
         isAbstract="false"
         isLeaf="false"
-        isActiveClass="false">
-        <targetEnds>
-          <association
-            Id="0c2e90b5-6f11-43f3-91f8-b23fc88458bc"
-            isDerived="false"
-            sourceEndRoleName="Adaptateur"
-            targetEndRoleName="Affichage"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="81e0c9e5-64fa-4d7b-8cd5-b572747aa41c"
-              LastKnownName="Affichage"
-              LastKnownLocation="CanonNoirConception.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="2b29f049-19fa-4353-90b7-8cd7784e3e7e"
-                  name="Adaptateur"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="Composite"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="616eb9a8-1bee-42bd-926b-7898a3442c6f"
-                  name="Affichage"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="true" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-        </targetEnds>
-      </class>
+        isActiveClass="false" />
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
@@ -3844,6 +3802,45 @@
                   isDerivedUnion="false"
                   aggregation="None"
                   isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="1353fc22-3724-4381-91b1-e4f1666da609"
+            isDerived="false"
+            sourceEndRoleName="Affichage"
+            targetEndRoleName="Adaptateur"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="37ba5e2c-b3fd-4962-9b49-63cd4efb8c9c"
+              LastKnownName="Adaptateur"
+              LastKnownLocation="CanonNoirConception.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ddbd3e2a-1533-488b-b797-3f7bcba01697"
+                  name="Affichage"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="750984ab-b496-40b7-9084-9ee4950012c0"
+                  name="Adaptateur"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true" />
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
@@ -7944,6 +7941,434 @@
       <undefinedType
         Id="57655e18-ad75-467c-be5a-d29bc3a6f0ce"
         name="positionCase" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="d3d3cea8-6a79-4844-bb58-d6e801734d94"
+        name="Exécutable"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <requiredInterface
+            Id="a8e1b621-7a45-424d-95b3-67005e2d7eb0"
+            name="Port1"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="false"
+            isBehavior="false">
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="8c4f8b02-2710-459d-b5cf-2700d90b293f"
+                LastKnownName="suit les instructions"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </type_NamedElement>
+          </requiredInterface>
+        </ownedAttributesInternal>
+      </component>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="cfe99b7f-9db8-4d45-b731-550e005b5496"
+        name="fen : Affichage"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <providedInterface
+            Id="ecde12ca-5fd6-49a7-b78d-000ff2685ed5"
+            name="Port1"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="false"
+            isBehavior="false">
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="0ffbcc44-1eb0-4609-8788-03e53b79f7f0"
+                LastKnownName="fournit"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </type_NamedElement>
+          </providedInterface>
+        </ownedAttributesInternal>
+      </component>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="7d975b5a-f928-4fdf-817a-dbac94b79eb6"
+        name="fac : Facade"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <requiredInterface
+            Id="a7a68df6-e687-4064-8691-742852a728df"
+            name="Port1"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="false"
+            isBehavior="false">
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="b06c350b-7357-4813-9b19-7d1026476465"
+                LastKnownName="traite les données"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </type_NamedElement>
+          </requiredInterface>
+          <requiredInterface
+            Id="7accc4ef-9006-4d42-9103-b57270874a95"
+            name="Port2"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="false"
+            isBehavior="false">
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="edfb9167-fdd5-4992-ad15-420bbcbe25c6"
+                LastKnownName="récupère événement"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </type_NamedElement>
+          </requiredInterface>
+          <providedInterface
+            Id="668926dd-022e-4090-b984-451f9f746099"
+            name="Port3"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="false"
+            isBehavior="false">
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="c7e08877-1606-4809-b493-cb23ad7ac406"
+                LastKnownName="met à jour les éléments"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </type_NamedElement>
+          </providedInterface>
+        </ownedAttributesInternal>
+      </component>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="34e3e2ef-774e-44e5-ae1c-0e259086e4e6"
+        name="Adaptateur"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="7a16bf62-f921-401e-85e6-f5544460e73c">
+            <componentMoniker
+              Id="cfe99b7f-9db8-4d45-b731-550e005b5496"
+              LastKnownName="fen : Affichage"
+              LastKnownLocation="CanonNoirConception.uml" />
+          </dependency>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <providedInterface
+            Id="38f2049e-128b-4500-8861-6c1d69a4cf4f"
+            name="Port1"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="false"
+            isBehavior="false">
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="ffea386d-b7f2-49c1-aa76-0f3837f49160"
+                LastKnownName="transmet événement"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </type_NamedElement>
+          </providedInterface>
+          <requiredInterface
+            Id="7e5bdd76-580c-48b4-a938-a947bdfce5f2"
+            name="Port2"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="false"
+            isBehavior="false">
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="de212d1a-e943-4210-a5cd-dd96404ef762"
+                LastKnownName="reçoit changements"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </type_NamedElement>
+          </requiredInterface>
+        </ownedAttributesInternal>
+      </component>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="59fd0b40-c836-442c-8808-99c7b423ad2c"
+        name="mot : Moteur"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <providedInterface
+            Id="b9573b6e-be16-437f-9eba-c273dbf26416"
+            name="Port1"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="false"
+            isBehavior="false">
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="1fe02445-c0ff-48a2-940c-897a8fbba58d"
+                LastKnownName="interroge"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </type_NamedElement>
+          </providedInterface>
+          <part
+            Id="ca3125e7-51a0-4be3-a63d-96ab34f1a3ef"
+            name="de1,de2 : De"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="Composite"
+            isComposite="true">
+            <type_NamedElement>
+              <componentMoniker
+                Id="630baf9f-dcfc-4141-87bd-7ba64a1f3786"
+                LastKnownName="Component1"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </type_NamedElement>
+          </part>
+          <part
+            Id="53f7990e-debe-4e50-9be6-f74ece63c2bc"
+            name="j1,j2,(j3,j4) : Joueur"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="Composite"
+            isComposite="true">
+            <type_NamedElement>
+              <componentMoniker
+                Id="0a3798b0-ea45-4618-8423-48979f308ee2"
+                LastKnownName="Component2"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </type_NamedElement>
+          </part>
+          <part
+            Id="43f6fa26-8b43-4fb1-930a-702a427f68bc"
+            name="p1 : Plateau"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="Composite"
+            isComposite="true">
+            <type_NamedElement>
+              <componentMoniker
+                Id="cf32e94a-7aa1-414f-9e6b-257b65948840"
+                LastKnownName="Component3"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </type_NamedElement>
+          </part>
+          <part
+            Id="0d23b3d6-6e4c-4ec4-b256-3c0e1beea961"
+            name="etat : Etat"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="Composite"
+            isComposite="true">
+            <type_NamedElement>
+              <componentMoniker
+                Id="94e34d9e-79c7-4817-bc93-bb6be812758c"
+                LastKnownName="Component4"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </type_NamedElement>
+          </part>
+        </ownedAttributesInternal>
+      </component>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="8c4f8b02-2710-459d-b5cf-2700d90b293f"
+        name="suit les instructions"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="87a5ea8c-51b9-41a3-8962-8e5d136ede30"
+        name="Interface2"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="0ffbcc44-1eb0-4609-8788-03e53b79f7f0"
+        name="fournit"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="1fe02445-c0ff-48a2-940c-897a8fbba58d"
+        name="interroge"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="9e57b52e-072e-4927-b3fb-20908bffa821"
+        name="Interface4"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="61511eb1-6b14-4e62-8715-66435e0cc379"
+        name="Interface5"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="b06c350b-7357-4813-9b19-7d1026476465"
+        name="traite les données"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="630baf9f-dcfc-4141-87bd-7ba64a1f3786"
+        name="Component1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="0a3798b0-ea45-4618-8423-48979f308ee2"
+        name="Component2"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="cf32e94a-7aa1-414f-9e6b-257b65948840"
+        name="Component3"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="94e34d9e-79c7-4817-bc93-bb6be812758c"
+        name="Component4"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="edfb9167-fdd5-4992-ad15-420bbcbe25c6"
+        name="récupère événement"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="ffea386d-b7f2-49c1-aa76-0f3837f49160"
+        name="transmet événement"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="7374adc9-7ab0-4967-a99c-59bcd6d21498"
+        name="Interface7"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="4b249ee2-fa77-41c3-ba5e-da946bf9272e"
+        name="Interface8"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="de212d1a-e943-4210-a5cd-dd96404ef762"
+        name="reçoit changements"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="2bdce88e-ef9a-4526-a77f-60fe928c76b8"
+        name="Interface10"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="8b88f3a4-b535-42d4-9e38-0fa83791c69b"
+        name="Interface11"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="a4b7da38-0f06-4688-b534-40edaac0d35e"
+        name="Interface12"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="c7e08877-1606-4809-b493-cb23ad7ac406"
+        name="met à jour les éléments"
+        isAbstract="false"
+        isLeaf="false" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
