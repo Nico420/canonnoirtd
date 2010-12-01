@@ -4794,6 +4794,30 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
+          <operation
+            Id="b9b8db52-a6ec-4836-8d14-f5b06397076c"
+            name="calculerTir"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="005dea0f-eb58-4770-b942-4606a75f431f"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="f31edf8f-a309-44aa-b128-15b82e2bdd36"
+                      LastKnownName="vector&lt;pair&lt;int,int&gt;&gt;"
+                      LastKnownLocation="CanonNoirConception.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -4864,7 +4888,7 @@
         <ownedAttributesInternal>
           <property
             Id="71aeb6e9-14a1-43fb-aed6-5c5313d51589"
-            name="bool premierTir"
+            name="premierTir"
             visibility="Private"
             isLeaf="false"
             isStatic="false"
@@ -4873,12 +4897,19 @@
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
-            isComposite="false" />
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="ec6b03bb-8a49-4c10-bb56-ccb31e2b4ee8"
+                LastKnownName="bool"
+                LastKnownLocation="CanonNoirConception.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
             Id="bb748bdb-14fe-4a55-b25a-3339bbd93502"
-            name="void choisirCible"
+            name="choisirCible"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -4916,6 +4947,24 @@
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false" />
+          <operation
+            Id="cf4192a3-bff3-47d2-ae9e-7b2049cc03d5"
+            name="setJoueurOppose"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f5dbc1af-4ae5-4b57-9ed7-46298a5d481f"
+                  name="int num"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
