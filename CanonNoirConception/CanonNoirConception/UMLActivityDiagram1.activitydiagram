@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm12="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="2f187204-d54d-4b39-8067-b53412dcc8de" name="Activity1" linkedPackageId="b5f15eda-af73-48d8-a712-71bec0e254e1" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="2f187204-d54d-4b39-8067-b53412dcc8de" name="Activity1" linkedPackageId="b5f15eda-af73-48d8-a712-71bec0e254e1" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
   <ownedCommentsInternal>
     <comment Id="62563d8a-f2ec-453d-84e7-eb7ae75728ef">
       <elementDefinition Id="a2981087-b7f7-4b23-97d1-770368184746" />
-      <body>un duel consiste en un échange de Tir entre deux navires : le navire attaquant tire le premier. S'il réussit, le du</body>
+      <body>un duel consiste en un échange de tirs entre deux navires : le navire attaquant tire le premier. S'il réussit, le duel s'arrête, avec les changements qui s'en suivent, sinon, le joueur attaqué devient attaquant.</body>
       <annotatedElements>
         <opaqueActionMoniker Id="3a9faef1-a82b-4e0c-8186-bbe78cdb29b9" LastKnownName="Duel" />
       </annotatedElements>
@@ -18,7 +18,7 @@
             <elementDefinition Id="20db44d8-a9cf-4218-a12a-470bad5a5dee" />
             <flowNodeTargets>
               <controlFlow Id="22c7bddb-aecb-482c-aae7-16ccdf7664c7" isLeaf="false">
-                <acceptEventActionMoniker Id="b79ef456-cb4d-412e-856c-d4ef24ff9c6c" LastKnownName="Attente Nb Joueur" />
+                <acceptEventActionMoniker Id="b79ef456-cb4d-412e-856c-d4ef24ff9c6c" LastKnownName="Choix nombre de joueurs" />
                 <elementDefinition Id="5e9dc18f-3407-469b-af5c-b05e22d832f7" />
               </controlFlow>
             </flowNodeTargets>
@@ -26,9 +26,9 @@
           <opaqueAction Id="b7b1a589-7a04-4924-a45f-4e851ab96b73" name="Joueur lance les dés" isLeaf="false">
             <elementDefinition Id="f1b50d18-59c8-4ef2-b642-47dc7588484c" />
             <flowNodeTargets>
-              <controlFlow Id="39f0ac88-2aea-45b5-8c5f-d520569eb0ef" isLeaf="false">
-                <mergeNodeMoniker Id="5f54763c-0408-46c1-aae4-ea08b6b8458d" LastKnownName="Merge1" />
-                <elementDefinition Id="1b473afa-73aa-45e3-b087-3ba29862c54b" />
+              <controlFlow Id="0b7ff4bf-c4e3-45fd-b30d-aa047d7de737" isLeaf="false">
+                <mergeNodeMoniker Id="20ebfdb6-d11f-4592-bbb7-6448ba31f78f" LastKnownName="Merge1" />
+                <elementDefinition Id="3e5f4bcb-a5a9-493d-b87b-e9b48029677e" />
               </controlFlow>
             </flowNodeTargets>
           </opaqueAction>
@@ -40,7 +40,7 @@
                 <elementDefinition Id="0c82bc5d-5a27-484e-8d50-f5c4f860f7e9" />
               </controlFlow>
               <controlFlow Id="a19b9eee-6a03-4c40-99f4-f4792c5b8489" guard="Case Canon" isLeaf="false">
-                <acceptEventActionMoniker Id="681b96c9-70fc-40ef-a9a2-061ca58a6b50" LastKnownName="Choisir sur qui tirer" />
+                <acceptEventActionMoniker Id="681b96c9-70fc-40ef-a9a2-061ca58a6b50" LastKnownName="Choisir la cible" />
                 <elementDefinition Id="7890c3c9-53e2-4a71-b22c-a28ec7846b4a" />
               </controlFlow>
               <controlFlow Id="7436fd1b-26d8-43c6-bac0-15df6a8c8bef" guard="Case Trésor" isLeaf="false">
@@ -56,17 +56,17 @@
           <opaqueAction Id="92734a52-aa6a-45ea-bea5-538c4a6e4575" name="Joueur suivant lance les dés" isLeaf="false">
             <elementDefinition Id="b9ca6579-efbc-4089-b53b-7acd72fd850c" />
             <flowNodeTargets>
-              <controlFlow Id="174db50f-574a-47bc-9c99-f0575854e403" isLeaf="false">
-                <opaqueActionMoniker Id="b7b1a589-7a04-4924-a45f-4e851ab96b73" LastKnownName="Joueur lance les dés" />
-                <elementDefinition Id="ed25a377-7440-4d75-bee5-51eaa18a09a5" />
+              <controlFlow Id="8c3821ca-6a77-4c9c-af8c-df4ea0c90c0c" isLeaf="false">
+                <mergeNodeMoniker Id="20ebfdb6-d11f-4592-bbb7-6448ba31f78f" LastKnownName="Merge1" />
+                <elementDefinition Id="ef4eb569-4a44-4387-886a-350769a54d3c" />
               </controlFlow>
             </flowNodeTargets>
           </opaqueAction>
-          <acceptEventAction Id="b79ef456-cb4d-412e-856c-d4ef24ff9c6c" name="Attente Nb Joueur" isLeaf="false" isUnmarshall="false">
+          <acceptEventAction Id="b79ef456-cb4d-412e-856c-d4ef24ff9c6c" name="Choix nombre de joueurs" isLeaf="false" isUnmarshall="false">
             <elementDefinition Id="e349b50b-74f8-45ec-8e37-e458ec5715e7" />
             <flowNodeTargets>
               <controlFlow Id="98907f2d-852a-4e9d-a20b-409ff9412866" isLeaf="false">
-                <acceptEventActionMoniker Id="c4ce163b-b6e1-4088-b0ee-2535ffefbcf5" LastKnownName="Choisir port" />
+                <acceptEventActionMoniker Id="c4ce163b-b6e1-4088-b0ee-2535ffefbcf5" LastKnownName="Choix du port pour chaque joueur" />
                 <elementDefinition Id="4b11e9df-ab69-4ad9-aa9c-9680bc0821ee" />
               </controlFlow>
             </flowNodeTargets>
@@ -159,7 +159,7 @@
               </controlFlow>
             </flowNodeTargets>
           </opaqueAction>
-          <acceptEventAction Id="681b96c9-70fc-40ef-a9a2-061ca58a6b50" name="Choisir sur qui tirer" isLeaf="false" isUnmarshall="false">
+          <acceptEventAction Id="681b96c9-70fc-40ef-a9a2-061ca58a6b50" name="Choisir la cible" isLeaf="false" isUnmarshall="false">
             <elementDefinition Id="17e673e5-b0de-4e42-ad12-73b4fdf3f748" />
             <flowNodeTargets>
               <controlFlow Id="796cb159-cae4-4c67-8f98-deee2bfea286" isLeaf="false">
@@ -234,16 +234,16 @@
               </controlFlow>
             </flowNodeTargets>
           </decisionNode>
-          <acceptEventAction Id="c4ce163b-b6e1-4088-b0ee-2535ffefbcf5" name="Choisir port" isLeaf="false" isUnmarshall="false">
+          <acceptEventAction Id="c4ce163b-b6e1-4088-b0ee-2535ffefbcf5" name="Choix du port pour chaque joueur" isLeaf="false" isUnmarshall="false">
             <elementDefinition Id="185b096d-3f93-4a09-a2d0-175041ed49bf" />
             <flowNodeTargets>
               <controlFlow Id="2c67032f-1c54-46c6-901f-e206d370ff8f" isLeaf="false">
-                <acceptEventActionMoniker Id="c961e42f-f895-4325-ae5c-35f8ed88000b" LastKnownName="Lancer dés pour ordre" />
+                <acceptEventActionMoniker Id="c961e42f-f895-4325-ae5c-35f8ed88000b" LastKnownName="Lancer dés pour ordre de commencement" />
                 <elementDefinition Id="696ba8a7-002f-40cf-8a11-d65703eaaa8d" />
               </controlFlow>
             </flowNodeTargets>
           </acceptEventAction>
-          <acceptEventAction Id="c961e42f-f895-4325-ae5c-35f8ed88000b" name="Lancer dés pour ordre" isLeaf="false" isUnmarshall="false">
+          <acceptEventAction Id="c961e42f-f895-4325-ae5c-35f8ed88000b" name="Lancer dés pour ordre de commencement" isLeaf="false" isUnmarshall="false">
             <elementDefinition Id="8baaf526-3c58-4b3c-a60d-93a4f309bc0d" />
             <flowNodeTargets>
               <controlFlow Id="e1acb48f-920c-4c14-af33-f11fafe293e0" isLeaf="false">
@@ -324,11 +324,11 @@
           <decisionNode Id="7619ba40-c1ec-488e-bb93-a1b5bead9b13" name="Decision12" isLeaf="false">
             <elementDefinition Id="61dfa41e-eacd-4366-a71b-c973ff806f34" />
             <flowNodeTargets>
-              <controlFlow Id="4099482a-bacb-40cd-84ef-090eaba077df" guard="nbJoueur &gt;=3" isLeaf="false">
+              <controlFlow Id="4099482a-bacb-40cd-84ef-090eaba077df" guard="nbJoueurs &gt; 2" isLeaf="false">
                 <acceptEventActionMoniker Id="bac7c4dc-48c5-417d-a4a3-1e00567dd71c" LastKnownName="Joueur courant choisit case finale" />
                 <elementDefinition Id="41aad07a-e11d-4bef-8e70-46b22d6303f8" />
               </controlFlow>
-              <controlFlow Id="06c74392-cbe7-4590-9d7b-68bf295b0521" guard="nbJoueur=2" isLeaf="false">
+              <controlFlow Id="06c74392-cbe7-4590-9d7b-68bf295b0521" guard="nbJoueurs = 2" isLeaf="false">
                 <acceptEventActionMoniker Id="950cb489-a962-4e56-8030-27d3947e237b" LastKnownName="Choisir bateau à déplacer" />
                 <elementDefinition Id="68ee7983-bd72-4b5e-8d56-be58da871eb9" />
               </controlFlow>
@@ -343,12 +343,12 @@
               </controlFlow>
             </flowNodeTargets>
           </acceptEventAction>
-          <mergeNode Id="5f54763c-0408-46c1-aae4-ea08b6b8458d" name="Merge1" isLeaf="false">
-            <elementDefinition Id="85877440-5368-4fa5-91e3-5ebc2a73ae20" />
+          <mergeNode Id="20ebfdb6-d11f-4592-bbb7-6448ba31f78f" name="Merge1" isLeaf="false">
+            <elementDefinition Id="c398b50f-76c2-4208-8363-e29eee1b945c" />
             <flowNodeTargets>
-              <controlFlow Id="ce44a72a-6adb-4c68-88cd-2914b0c8af0e" isLeaf="false">
+              <controlFlow Id="9bd4b392-9052-4410-840d-cef6ef0065a2" isLeaf="false">
                 <decisionNodeMoniker Id="7619ba40-c1ec-488e-bb93-a1b5bead9b13" LastKnownName="Decision12" />
-                <elementDefinition Id="956a24c5-1f03-4618-b8cb-75aaa726517d" />
+                <elementDefinition Id="f0659f08-29ee-46a5-8d1f-f971b94c2c0f" />
               </controlFlow>
             </flowNodeTargets>
           </mergeNode>
