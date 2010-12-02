@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" dslVersion="1.0.0.0" Id="a606b521-860e-4b72-8e2a-ce598690c9be" name="UMLClassDiagram1" linkedPackageId="ba48968a-64e8-42e4-b4e1-7b952d7c2fda" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="a606b521-860e-4b72-8e2a-ce598690c9be" name="UMLClassDiagram1" linkedPackageId="ba48968a-64e8-42e4-b4e1-7b952d7c2fda" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <ownedCommentsInternal>
     <comment Id="97dd757a-22e8-410a-b2df-9590591aad95">
       <elementDefinition Id="facdd64c-98eb-434c-8d85-cf12539f0ce8" />
@@ -362,9 +362,6 @@
           </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
-          <operation Id="1c22e19b-3f0d-4d1a-a5ad-48b472a9db51" name="typeCase" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="071df85c-94c4-4a6e-96fa-9bfb4e35babe" />
-          </operation>
           <operation Id="168a1501-f756-4ed4-a575-6102e8c50d5f" name="estNavigable" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="58089dba-04a9-4ae2-9a20-aba1131dbd10" />
             <ownedParameters>
@@ -373,6 +370,35 @@
                   <elementDefinition Id="6a4e10b4-5332-41bd-a0d1-8f4f1985b2f2" />
                   <type_NamedElement>
                     <referencedTypeMoniker Id="fa9a34f1-46fc-4121-acd5-41b743152871" LastKnownName="bool" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="113154b1-91e6-470c-bcf4-380ae9a19b16" name="libereCase" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="258da7c7-b906-4eb6-b843-c5c37bc9e440" />
+          </operation>
+          <operation Id="aa37951d-abef-4cb8-b908-3f1731bb0adb" name="getHauteur" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="816cd2f4-29ac-4c07-a8ff-928f504f569d" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="d0e9b8e5-8f48-403b-ab98-04eff7281fbf" direction="Return" isUnique="false">
+                  <elementDefinition Id="de6e51c7-e7ff-4fca-804d-1a4fadc75a95" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="6ac86a59-23b4-4846-89d1-1eb5789b9053" LastKnownName="int" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="1a9eb79f-0e30-41e8-849c-aa16eac12802" name="getEtat" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="506dec56-b9f3-41ee-ab7d-fdd033e95465" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="7264b92b-d0fd-4a51-9086-ba9e0f6f842b" direction="Return" isUnique="false">
+                  <elementDefinition Id="6f2799bc-e430-4c47-9759-122d7171c390" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="8cd66bac-a261-4782-87d7-c37919d739dc" LastKnownName="Etat" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -600,6 +626,67 @@
                   <type_NamedElement>
                     <referencedTypeMoniker Id="bfbd7f21-e86e-41d8-8167-843f5fbd4d45" LastKnownName="Case" />
                   </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="6488ed7a-5ed6-4d68-9faa-6a11662e52f3" name="libereCase" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="abf45441-8416-48a8-9aa1-28f12f949983" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="e58cf003-441e-4763-a858-8d891589be6d" name="int x" direction="In" isUnique="false">
+                  <elementDefinition Id="24c05a09-0c06-49d5-ba8c-1ff5ce3b8955" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="d4dad25f-b96c-4b8f-ac07-01e8e1c0c49b" name="int y" direction="In" isUnique="false">
+                  <elementDefinition Id="390ffdab-6774-47e5-8e91-34f63b95f670" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="069468a2-9cc6-4afc-8a28-7ab25ca50ed6" name="getEtat" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ace240b0-0113-408b-b14d-aca2f0da50ab" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="93561865-4b99-4ed2-b953-cc140e6984dc" direction="Return" isUnique="false">
+                  <elementDefinition Id="1decf600-934e-4d40-997a-7024b6b23655" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="8cd66bac-a261-4782-87d7-c37919d739dc" LastKnownName="Etat" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="c6591a2e-e67c-48a4-b6db-adbe55c13b59" name="int x" direction="In" isUnique="false">
+                  <elementDefinition Id="1c00dec3-c420-4f52-b81e-89fab501c9e7" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="aea76ff9-b20f-4b6b-b833-0f48115fe461" name="int y" direction="In" isUnique="false">
+                  <elementDefinition Id="4c753f37-c0d3-4ea9-97e4-c8c83e903b1f" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="a45658b4-8934-4945-8b30-55ec4f686fe0" name="estNavigable" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="287db59d-523c-4c9e-be9a-3929afa162c4" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="231270c7-312d-478e-877c-3fab9d29559d" direction="Return" isUnique="false">
+                  <elementDefinition Id="aa66e924-7331-4459-aacd-60c82c8a2fc7" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="fa9a34f1-46fc-4121-acd5-41b743152871" LastKnownName="bool" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="2465cb14-bf2d-4f47-a155-1d23218af8c2" name="int x" direction="In" isUnique="false">
+                  <elementDefinition Id="8f740575-4fe6-49a1-b77c-83971932e2a0" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="9a0faabd-c17f-4ecf-bea9-e53027d7b828" name="inty" direction="In" isUnique="false">
+                  <elementDefinition Id="c9976c05-36b0-4efd-bd52-9b558a50d3e6" />
                 </parameter>
               </operationHasOwnedParameters>
             </ownedParameters>
@@ -873,14 +960,14 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
-          <operation Id="6bf07bf9-02d6-443f-900c-2d56855b080b" name="getPositionsBateaux" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+          <operation Id="6bf07bf9-02d6-443f-900c-2d56855b080b" name="getBateaux" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="b9f13cda-dcb8-4857-8d84-98c512c7ad60" />
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter Id="f922f00c-9dd9-4902-8c61-6cc710c84ba1" direction="Return" isUnique="false">
                   <elementDefinition Id="ba5b87be-1e12-4492-a810-59e90dc33d43" />
                   <type_NamedElement>
-                    <referencedTypeMoniker Id="4f151931-fb76-4bdc-b749-ed18577339bd" LastKnownName="vector&lt;pair&lt;int,int&gt;&gt;" />
+                    <referencedTypeMoniker Id="7b53ef2d-4885-466f-9c9b-05410674a158" LastKnownName="vector&lt;Bateau&gt;" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -1124,8 +1211,8 @@
             <elementDefinition Id="dfaf7bc5-84c6-4fc5-a23d-e3e1b143fcbd" />
             <ownedParameters>
               <operationHasOwnedParameters>
-                <parameter Id="3cbbf6aa-cf06-4ef1-af46-65cd57881784" name="int ang" direction="In" isUnique="false">
-                  <elementDefinition Id="7291e213-c065-4c8b-8f3f-e1e7ab563d91" />
+                <parameter Id="1e4de34a-c3ad-4198-9dbd-8f4518154277" name="int angle" direction="In" isUnique="false">
+                  <elementDefinition Id="fbc38767-6b10-4c2b-a970-4377ffa9f86f" />
                 </parameter>
               </operationHasOwnedParameters>
             </ownedParameters>
@@ -1142,6 +1229,31 @@
           </operation>
           <operation Id="b615a8aa-9c11-45d9-a524-bc50e0700e7e" name="lancerDes" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="56894345-def8-448f-88e7-a6579bc1cf7e" />
+          </operation>
+          <operation Id="08f36aab-0069-4db8-a016-ea5f943f06c9" name="setCible" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c0e343fb-5444-4f09-960e-180947bc26b2" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="612c71db-51fa-44e9-bbd1-8179ea55eeac" name="int nb" direction="In" isUnique="false">
+                  <elementDefinition Id="7f05acb5-0a70-4c0e-b3f5-644a42135303" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="402e5853-efcc-4ca5-a7be-3290bf5e758c" name="setDeplacement" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e276421c-ed87-4db2-9445-9d2657a40078" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="f1bd1ec6-b4a3-4c47-8453-266684821c9e" name="int x" direction="In" isUnique="false">
+                  <elementDefinition Id="9239e1f3-36ab-49ae-9e35-34d6973413f8" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="e560d81e-3f55-42c4-a50c-16ae98ee6642" name="int y" direction="In" isUnique="false">
+                  <elementDefinition Id="e54cd6eb-a7cf-4fcd-bca4-32de57836b45" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
           </operation>
         </ownedOperationsInternal>
       </class>
@@ -1192,16 +1304,6 @@
           </operation>
           <operation Id="e9b2eedf-bee4-4fdd-afed-3cb1d3adec61" name="sendClickNbJoueurs" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="e52e8470-0744-4386-ae42-144ec3c4360d" />
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter Id="149faf07-f785-441a-92e2-10c38508b721" direction="Return" isUnique="false">
-                  <elementDefinition Id="2229af02-1f18-4f6a-a569-ddfb577b5eed" />
-                  <type_NamedElement>
-                    <referencedTypeMoniker Id="6ac86a59-23b4-4846-89d1-1eb5789b9053" LastKnownName="int" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
           </operation>
           <operation Id="c6c86a15-1037-49ec-a7cf-d6ac471cd662" name="sendClickCase" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="17dc7491-6407-4d06-bd46-147a992718b4" />
@@ -1257,6 +1359,21 @@
           </property>
           <property Id="b006737b-0fb1-4ee8-9e76-f97cdcb6f08b" name="tirReussi" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="cf67c7de-1c51-40f4-8e0e-d6a5009b9e0e" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="fa9a34f1-46fc-4121-acd5-41b743152871" LastKnownName="bool" />
+            </type_NamedElement>
+          </property>
+          <property Id="d8ef3399-0dbe-4f12-8e5d-080a4cd3ae77" name="positionAttaquant" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="a33e9cf1-6b7c-4d57-b1cc-5210147507cd" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="9cc08f3a-ee65-4f1c-996e-89805f533d5e" LastKnownName="pair&lt;int,int&gt;" />
+            </type_NamedElement>
+          </property>
+          <property Id="7af22042-ae44-4ec6-9b45-146b3db66eee" name="positionAttaque" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="2982e419-feb8-4966-9a99-e5f54f01939b" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="1101d50f-ac11-478d-bef1-082c695d868d" LastKnownName="pair&lt;int,int&gt;" />
+            </type_NamedElement>
           </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
@@ -1426,6 +1543,9 @@
                 </parameter>
               </operationHasOwnedParameters>
             </ownedParameters>
+          </operation>
+          <operation Id="35bef77a-3e3d-44f6-8263-5067f11f9963" name="echangeDuel" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="b4493d05-65e3-4225-8689-e8b5790eac58" />
           </operation>
         </ownedOperationsInternal>
       </class>
@@ -1669,6 +1789,21 @@
     </packageHasNamedElement>
     <packageHasNamedElement>
       <referencedType Id="071d2cf3-9815-4cee-8965-f83578f2a7bc" name="pair&lt;int,int&gt;" isAbstract="false" isLeaf="false" cachedFullName="pair&lt;int,int&gt;">
+        <elementDefinition Id="3c296f2b-476c-4110-86a1-deac536e14c0" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="7b53ef2d-4885-466f-9c9b-05410674a158" name="vector&lt;Bateau&gt;" isAbstract="false" isLeaf="false" cachedFullName="vector&lt;Bateau&gt;">
+        <elementDefinition Id="90de6c73-4ad7-4c91-8fab-089c79641494" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="1101d50f-ac11-478d-bef1-082c695d868d" name="pair&lt;int,int&gt;" isAbstract="false" isLeaf="false" cachedFullName="pair&lt;int,int&gt;">
+        <elementDefinition Id="3c296f2b-476c-4110-86a1-deac536e14c0" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="9cc08f3a-ee65-4f1c-996e-89805f533d5e" name="pair&lt;int,int&gt;" isAbstract="false" isLeaf="false" cachedFullName="pair&lt;int,int&gt;">
         <elementDefinition Id="3c296f2b-476c-4110-86a1-deac536e14c0" />
       </referencedType>
     </packageHasNamedElement>

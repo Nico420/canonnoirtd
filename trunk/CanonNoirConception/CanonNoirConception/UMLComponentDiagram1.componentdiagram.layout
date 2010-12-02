@@ -102,5 +102,16 @@
         <componentShapeMoniker Id="984d00d2-e3e5-419e-9080-f615c1ea5913" />
       </nodes>
     </dependencyConnector>
+    <componentShape Id="df39a624-6793-4977-875b-cc6bf9fc316c" isExpanded="false" absoluteBounds="6.375, 4.375, 1.5, 0.7" customColor="161, 199, 231" whiteBoxBoundsHeight="0.95" whiteBoxBoundsWidth="1.5" blackBoxBoundsHeight="0.7" blackBoxBoundsWidth="1.5" whiteBoxTopEdgeShapesCount="0" whiteBoxRightEdgeShapesCount="0" whiteBoxBottomEdgeShapesCount="0" whiteBoxLeftEdgeShapesCount="0" blackBoxTopEdgeShapesCount="0" blackBoxRightEdgeShapesCount="0" blackBoxBottomEdgeShapesCount="0" blackBoxLeftEdgeShapesCount="0" whiteBoxSettingsInitialized="true" blackBoxSettingsInitialized="true">
+      <componentMoniker Id="c599585b-4517-41e7-ae25-d1145cc0a5e9" LastKnownName="STL" />
+    </componentShape>
+    <dependencyConnector edgePoints="[(6.375 : 4.72291674613953); (5.62083333333333 : 4.72291674613953)]" fixedFrom="Caller" fixedTo="Caller" customColor="Black">
+      <dependencyMoniker Id="30a47510-ddf9-481c-9ee6-ef2bbff934b3" />
+      <relativeChildShapes />
+      <nodes>
+        <componentShapeMoniker Id="df39a624-6793-4977-875b-cc6bf9fc316c" />
+        <componentShapeMoniker Id="e516fab7-5f0d-4a62-92fd-a5545ade791b" />
+      </nodes>
+    </dependencyConnector>
   </nestedChildShapes>
 </componentDiagram>
