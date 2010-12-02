@@ -1,5 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<<<<<<< .mine
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel"
+=======
 <modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
+>>>>>>> .r34
   dslVersion="1.0.0.0"
   Id="62a60c90-a0aa-4993-b691-f2e0518db317"
   name="CanonNoirConception" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -406,6 +410,123 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="4a401eb0-eec4-486b-a998-978277f5e813"
+            isDerived="false"
+            sourceEndRoleName="Joueur"
+            targetEndRoleName="Choisir Cible"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="4094d781-ef97-4b38-9529-b8ab84ec5cce"
+              LastKnownName="Choisir Cible"
+              LastKnownLocation="CanonNoirConception.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a30ca332-e5d2-45aa-a2d2-9ad31d72a07c"
+                  name="Joueur"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7db45ee4-3b7b-47c7-880b-18b81ca2ea17"
+                  name="Choisir Cible"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="23bac603-120d-454b-8ab7-45a3b2b0a67f"
+            isDerived="false"
+            sourceEndRoleName="Joueur"
+            targetEndRoleName="Choisir un angle de tir1"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="b73c677b-2c8d-404e-9be5-afcdb67b9dde"
+              LastKnownName="Choisir un angle de tir1"
+              LastKnownLocation="CanonNoirConception.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="53fade56-ad61-4534-b3db-74320da4952f"
+                  name="Joueur"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4e8a75f7-11ee-42c8-9367-0cd43c77195a"
+                  name="Choisir un angle de tir1"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="c8d8b8a6-d66e-40e6-bb6c-558fff62f4a5"
+            isDerived="false"
+            sourceEndRoleName="Joueur"
+            targetEndRoleName="Choisir une puissance de tir1"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="c7cc11a3-af07-41ff-b622-0ba50df7db81"
+              LastKnownName="Choisir une puissance de tir1"
+              LastKnownLocation="CanonNoirConception.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="04c00347-5026-4ea3-be63-6afecf189282"
+                  name="Joueur"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="acd2e7b2-e24e-4151-87a6-39df6985752a"
+                  name="Choisir une puissance de tir1"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
       </actor>
     </packageHasNamedElement>
@@ -415,6 +536,15 @@
         name="Choisir un port"
         isAbstract="false"
         isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="205e52df-25bf-4b13-8a2e-927b8190c3fb">
+            <useCaseMoniker
+              Id="27e669b4-5a02-440e-957a-414b6696a3c6"
+              LastKnownName="Lancer dés pour déterminer ordre des joueurs"
+              LastKnownLocation="CanonNoirConception.uml" />
+          </dependency>
+        </suppliersInternal>
         <subjects>
           <subsystemMoniker
             Id="5d40cc58-e819-4a5d-8658-73fe643d1cd3"
@@ -458,7 +588,7 @@
         <subjects>
           <subsystemMoniker
             Id="31b50ef0-b65f-463f-b637-faa1d0f0d6b2"
-            LastKnownName="Tir au Canon"
+            LastKnownName="Tir au Canon unique"
             LastKnownLocation="CanonNoirConception.uml" />
         </subjects>
       </useCase>
@@ -536,7 +666,7 @@
     <packageHasNamedElement>
       <subsystem
         Id="31b50ef0-b65f-463f-b637-faa1d0f0d6b2"
-        name="Tir au Canon"
+        name="Tir au Canon unique"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false" />
@@ -559,7 +689,7 @@
         <subjects>
           <subsystemMoniker
             Id="31b50ef0-b65f-463f-b637-faa1d0f0d6b2"
-            LastKnownName="Tir au Canon"
+            LastKnownName="Tir au Canon unique"
             LastKnownLocation="CanonNoirConception.uml" />
         </subjects>
       </useCase>
@@ -635,12 +765,6 @@
               LastKnownLocation="CanonNoirConception.uml" />
           </extend>
         </extendedCases>
-        <subjects>
-          <subsystemMoniker
-            Id="5d40cc58-e819-4a5d-8658-73fe643d1cd3"
-            LastKnownName="Initialisatiion"
-            LastKnownLocation="CanonNoirConception.uml" />
-        </subjects>
       </useCase>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -8621,6 +8745,76 @@
         isAbstract="false"
         isLeaf="false" />
     </packageHasNamedElement>
+<<<<<<< .mine
+    <packageHasNamedElement>
+      <subsystem
+        Id="168dbb46-ed6b-4aad-8586-c0fc0481bd94"
+        name="Duel"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="b73c677b-2c8d-404e-9be5-afcdb67b9dde"
+        name="Choisir un angle de tir1"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="d1ae010d-474c-42eb-963a-e42aa020d10e">
+            <useCaseMoniker
+              Id="c7cc11a3-af07-41ff-b622-0ba50df7db81"
+              LastKnownName="Choisir une puissance de tir1"
+              LastKnownLocation="CanonNoirConception.uml" />
+          </dependency>
+        </suppliersInternal>
+        <subjects>
+          <subsystemMoniker
+            Id="168dbb46-ed6b-4aad-8586-c0fc0481bd94"
+            LastKnownName="Duel"
+            LastKnownLocation="CanonNoirConception.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="c7cc11a3-af07-41ff-b622-0ba50df7db81"
+        name="Choisir une puissance de tir1"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="168dbb46-ed6b-4aad-8586-c0fc0481bd94"
+            LastKnownName="Duel"
+            LastKnownLocation="CanonNoirConception.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="4094d781-ef97-4b38-9529-b8ab84ec5cce"
+        name="Choisir Cible"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="364664bc-e4e4-4f19-9da3-e2a4f55b4bd8">
+            <useCaseMoniker
+              Id="b73c677b-2c8d-404e-9be5-afcdb67b9dde"
+              LastKnownName="Choisir un angle de tir1"
+              LastKnownLocation="CanonNoirConception.uml" />
+          </dependency>
+        </suppliersInternal>
+        <subjects>
+          <subsystemMoniker
+            Id="168dbb46-ed6b-4aad-8586-c0fc0481bd94"
+            LastKnownName="Duel"
+            LastKnownLocation="CanonNoirConception.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+=======
     <packageHasNamedElement>
       <undefinedType
         Id="90de6c73-4ad7-4c91-8fab-089c79641494"
@@ -8644,6 +8838,7 @@
         </suppliersInternal>
       </component>
     </packageHasNamedElement>
+>>>>>>> .r34
   </packagedElements>
   <primitiveType
     Id="220a3521-e091-4221-bae9-3ef9018e845c"
