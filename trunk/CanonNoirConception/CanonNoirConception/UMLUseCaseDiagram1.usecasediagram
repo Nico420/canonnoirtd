@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="461ae871-f4e3-415d-8cd9-1952bf0eed75" name="UMLUseCaseDiagram1" linkedPackageId="f444a39a-f8ca-46fc-99bc-4bf7093e3f3a" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="461ae871-f4e3-415d-8cd9-1952bf0eed75" name="UMLUseCaseDiagram1" linkedPackageId="f444a39a-f8ca-46fc-99bc-4bf7093e3f3a" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
   <packagedElements>
     <useCaseModelRootHasTypes>
       <actor Id="e80349c6-1513-4b5a-86c7-777e52827989" name="Joueur" isAbstract="false" isLeaf="false">
@@ -117,53 +117,21 @@
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="dee0404b-b8b0-4293-b21c-b7b0a6e0efac" />
           </association>
-          <association Id="765efb1a-2992-4105-90f7-2cb7b495c483" isDerived="false" sourceEndRoleName="Joueur" targetEndRoleName="Choisir Cible" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="71eef012-26e4-4983-ad53-a5b340c82cc3" LastKnownName="Choisir Cible" />
+          <association Id="171e0858-72e4-49e5-b592-05da1c11143f" isDerived="false" sourceEndRoleName="Joueur" targetEndRoleName="Choisir Cible" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="e4b41ecf-24e8-488f-9956-1686ad808c0a" LastKnownName="Choisir Cible" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
-                <memberEnd Id="0505dcb7-90ac-4a98-86fe-e83dfd19de28" name="Joueur" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="a30ca332-e5d2-45aa-a2d2-9ad31d72a07c" />
+                <memberEnd Id="cb68f5ab-e622-4362-ab5f-0c8d338bcc64" name="Joueur" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="9e312b1f-a29e-4996-8b2f-e3e23471b7e7" />
                 </memberEnd>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
-                <memberEnd Id="06970b11-fcee-4baa-b0a0-4771e4b2999a" name="Choisir Cible" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="7db45ee4-3b7b-47c7-880b-18b81ca2ea17" />
+                <memberEnd Id="9505a8f8-6bac-42cf-956c-da2e39d343f9" name="Choisir Cible" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="8d3b98ae-7877-422e-b01d-94b3243144f7" />
                 </memberEnd>
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
-            <elementDefinition Id="4a401eb0-eec4-486b-a998-978277f5e813" />
-          </association>
-          <association Id="417cf4b0-8fe8-4bee-8a78-c3c4c96e9a71" isDerived="false" sourceEndRoleName="Joueur" targetEndRoleName="Choisir un angle de tir1" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="407b7f4d-600c-4ba5-bf96-47e4d7a483d4" LastKnownName="Choisir un angle de tir1" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd Id="76500262-5f36-456d-a0fd-88f92db8a6ac" name="Joueur" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="53fade56-ad61-4534-b3db-74320da4952f" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd Id="6856ee14-032e-47bb-b9a0-551442595a88" name="Choisir un angle de tir1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="4e8a75f7-11ee-42c8-9367-0cd43c77195a" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-            <elementDefinition Id="23bac603-120d-454b-8ab7-45a3b2b0a67f" />
-          </association>
-          <association Id="007532da-24d6-407d-b629-9127c8d1713c" isDerived="false" sourceEndRoleName="Joueur" targetEndRoleName="Choisir une puissance de tir1" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="126c4a8c-b02e-40e0-8133-f433e8652eea" LastKnownName="Choisir une puissance de tir1" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd Id="55c66d76-d0d5-4c93-9bd9-3341fa4ec4d7" name="Joueur" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="04c00347-5026-4ea3-be63-6afecf189282" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd Id="3dc58772-2d65-42a8-80ee-e5518c5f75b9" name="Choisir une puissance de tir1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="acd2e7b2-e24e-4151-87a6-39df6985752a" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-            <elementDefinition Id="c8d8b8a6-d66e-40e6-bb6c-558fff62f4a5" />
+            <elementDefinition Id="2cd396c4-fe7c-4fb6-bb2b-190e02fbf30d" />
           </association>
         </targetEnds>
       </actor>
@@ -172,9 +140,9 @@
       <useCase Id="c67510be-33ec-422b-a680-84304ccccbfa" name="Choisir un port" isAbstract="false" isLeaf="false">
         <elementDefinition Id="08e1cfe0-c65f-4ee1-9516-72697cc89f20" />
         <suppliersInternal>
-          <dependency Id="b9fc7e1b-1a5d-4991-86e7-59b4338f9dd9">
+          <dependency Id="716515c5-b3f3-43c3-b5de-6397a1d58cb7">
             <useCaseMoniker Id="4e9b4fc4-78dc-4d1f-95a7-ce554db71ca8" LastKnownName="Lancer dés pour déterminer ordre des joueurs" />
-            <elementDefinition Id="205e52df-25bf-4b13-8a2e-927b8190c3fb" />
+            <elementDefinition Id="1004299c-599c-4798-b02d-9cf57df748f2" />
           </dependency>
         </suppliersInternal>
         <subjects>
@@ -192,7 +160,7 @@
           </dependency>
         </suppliersInternal>
         <subjects>
-          <subsystemMoniker Id="08406f09-e317-4961-8f9a-69fcaea77e27" LastKnownName="Tir au Canon unique" />
+          <subsystemMoniker Id="08406f09-e317-4961-8f9a-69fcaea77e27" LastKnownName="Tir au Canon" />
         </subjects>
       </useCase>
     </useCaseModelRootHasTypes>
@@ -229,7 +197,7 @@
       </useCase>
     </packageHasNamedElement>
     <useCaseModelRootHasTypes>
-      <subsystem Id="08406f09-e317-4961-8f9a-69fcaea77e27" name="Tir au Canon unique" isAbstract="false" isLeaf="false" isActiveClass="false">
+      <subsystem Id="08406f09-e317-4961-8f9a-69fcaea77e27" name="Tir au Canon" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="31b50ef0-b65f-463f-b637-faa1d0f0d6b2" />
       </subsystem>
     </useCaseModelRootHasTypes>
@@ -237,7 +205,7 @@
       <useCase Id="f684de89-aa67-4cf7-9875-3f326de8c294" name="Choisir une puissance de tir" isAbstract="false" isLeaf="false">
         <elementDefinition Id="68484fee-60c0-4a0e-978e-603256152f39" />
         <subjects>
-          <subsystemMoniker Id="08406f09-e317-4961-8f9a-69fcaea77e27" LastKnownName="Tir au Canon unique" />
+          <subsystemMoniker Id="08406f09-e317-4961-8f9a-69fcaea77e27" LastKnownName="Tir au Canon" />
         </subjects>
       </useCase>
     </packageHasNamedElement>
@@ -281,43 +249,21 @@
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <subsystem Id="7539e211-a24e-4248-88a1-34fcd16e9ae8" name="Duel" isAbstract="false" isLeaf="false" isActiveClass="false">
-        <elementDefinition Id="168dbb46-ed6b-4aad-8586-c0fc0481bd94" />
+      <subsystem Id="91e805be-154d-4315-a44a-2e8b50c7647b" name="Duel" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="b18005f2-df97-44e0-ad00-ad173f2da604" />
       </subsystem>
     </useCaseModelRootHasTypes>
     <packageHasNamedElement>
-      <useCase Id="407b7f4d-600c-4ba5-bf96-47e4d7a483d4" name="Choisir un angle de tir1" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="b73c677b-2c8d-404e-9be5-afcdb67b9dde" />
+      <useCase Id="e4b41ecf-24e8-488f-9956-1686ad808c0a" name="Choisir Cible" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="69f5628a-e7c0-41e3-ab37-6d88dd437696" />
         <suppliersInternal>
-          <dependency Id="79abff49-3a45-416b-82aa-d461f9e13b28">
-            <useCaseMoniker Id="126c4a8c-b02e-40e0-8133-f433e8652eea" LastKnownName="Choisir une puissance de tir1" />
-            <elementDefinition Id="d1ae010d-474c-42eb-963a-e42aa020d10e" />
+          <dependency Id="ad28ea46-3fad-4698-82b4-5a60e5de12be">
+            <useCaseMoniker Id="8a251a14-70a0-4fa2-a629-14bc4ce34ce8" LastKnownName="Choisir un angle de tir" />
+            <elementDefinition Id="3e8dbe7c-89d6-426e-823d-708ed9fc0bf4" />
           </dependency>
         </suppliersInternal>
         <subjects>
-          <subsystemMoniker Id="7539e211-a24e-4248-88a1-34fcd16e9ae8" LastKnownName="Duel" />
-        </subjects>
-      </useCase>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <useCase Id="126c4a8c-b02e-40e0-8133-f433e8652eea" name="Choisir une puissance de tir1" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="c7cc11a3-af07-41ff-b622-0ba50df7db81" />
-        <subjects>
-          <subsystemMoniker Id="7539e211-a24e-4248-88a1-34fcd16e9ae8" LastKnownName="Duel" />
-        </subjects>
-      </useCase>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <useCase Id="71eef012-26e4-4983-ad53-a5b340c82cc3" name="Choisir Cible" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="4094d781-ef97-4b38-9529-b8ab84ec5cce" />
-        <suppliersInternal>
-          <dependency Id="b8aed51a-d3d8-4da0-bc37-020c57150082">
-            <useCaseMoniker Id="407b7f4d-600c-4ba5-bf96-47e4d7a483d4" LastKnownName="Choisir un angle de tir1" />
-            <elementDefinition Id="364664bc-e4e4-4f19-9da3-e2a4f55b4bd8" />
-          </dependency>
-        </suppliersInternal>
-        <subjects>
-          <subsystemMoniker Id="7539e211-a24e-4248-88a1-34fcd16e9ae8" LastKnownName="Duel" />
+          <subsystemMoniker Id="91e805be-154d-4315-a44a-2e8b50c7647b" LastKnownName="Duel" />
         </subjects>
       </useCase>
     </packageHasNamedElement>
