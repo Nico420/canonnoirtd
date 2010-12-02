@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="2f187204-d54d-4b39-8067-b53412dcc8de" name="Activity1" linkedPackageId="b5f15eda-af73-48d8-a712-71bec0e254e1" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" xmlns:dm12="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="2f187204-d54d-4b39-8067-b53412dcc8de" name="Activity1" linkedPackageId="b5f15eda-af73-48d8-a712-71bec0e254e1" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
   <ownedCommentsInternal>
     <comment Id="62563d8a-f2ec-453d-84e7-eb7ae75728ef">
       <elementDefinition Id="a2981087-b7f7-4b23-97d1-770368184746" />
-      <body>un duel consiste en un échange de tirs entre deux navires : le navire attaquant tire le premier. S'il réussit, le duel s'arrête, avec les changements qui s'en suivent, sinon, le joueur attaqué devient attaquant.</body>
+      <body>un duel consiste en un échange de tirs entre deux navires : le navire attaquant tire le premier. S'il réussit, le duel s'arrête, avec les changements qui s'en suivent, sinon, le joueur attaqué devient attaquant. Quoiqu'il arrive ensuite, le duel s'arrête.</body>
       <annotatedElements>
         <opaqueActionMoniker Id="3a9faef1-a82b-4e0c-8186-bbe78cdb29b9" LastKnownName="Duel" />
       </annotatedElements>
@@ -288,7 +288,7 @@
                 <opaqueActionMoniker Id="a097d50d-f3f0-41af-aa33-263e4e5ed0a0" LastKnownName="Prendre trésor" />
                 <elementDefinition Id="80592c4e-ff2a-4628-99c1-39c8195fe343" />
               </controlFlow>
-              <controlFlow Id="3add9460-0934-4cc8-a03b-397b126aa60d" guard="Pas de trésor disponible" isLeaf="false">
+              <controlFlow Id="3add9460-0934-4cc8-a03b-397b126aa60d" guard="Trésor indisponible" isLeaf="false">
                 <opaqueActionMoniker Id="92734a52-aa6a-45ea-bea5-538c4a6e4575" LastKnownName="Joueur suivant lance les dés" />
                 <elementDefinition Id="79752be9-7fdd-41e5-8e1d-a7a8fe05290e" />
               </controlFlow>
