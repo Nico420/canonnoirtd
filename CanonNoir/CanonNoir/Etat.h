@@ -15,7 +15,7 @@ class Etat
 
 	public :
 
-		string message;
+		String message;
 
 	private :
 
@@ -26,7 +26,7 @@ class Etat
 	public :
 
 		virtual void execute();
-		virtual void setMessage(object string mes);
+		virtual void setMessage(String mes);
 
 }; 
 
