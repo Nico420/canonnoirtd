@@ -1,0 +1,21 @@
+﻿La génération a démarré 04/12/2010 17:24:12.
+     1>Projet "C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\CanonNoir\CanonNoir.vcxproj" sur le nœud 2 (build cible(s)).
+     1>PrepareForBuild:
+         Création du répertoire "C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\Debug\".
+       InitializeBuildStatus:
+         Création de "Debug\CanonNoir.unsuccessfulbuild", car "AlwaysCreate" a été spécifié.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Joueur.cpp
+         Joueur.cpp
+       ManifestResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\CanonNoir.exe.embed.manifest.res" Debug\CanonNoir_manifest.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\Debug\CanonNoir.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\CanonNoir.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\Debug\CanonNoir.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\Debug\CanonNoir.lib" /MACHINE:X86 Debug\CanonNoir.exe.embed.manifest.res
+         Debug\Joueur.obj
+     1>MSVCRTD.lib(crtexew.obj) : error LNK2019: symbole externe non résolu _WinMain@16 référencé dans la fonction ___tmainCRTStartup
+     1>C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\Debug\CanonNoir.exe : fatal error LNK1120: 1 externes non résolus
+     1>Génération du projet "C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\CanonNoir\CanonNoir.vcxproj" terminée (build cible(s)) -- ÉCHEC.
+
+ÉCHEC de la build.
+
+Temps écoulé 00:00:01.69
