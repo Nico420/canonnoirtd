@@ -4,6 +4,8 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+#include "Etat.h"
+#include "Case.h"
 
 class CaseCanon : public Case
 {
@@ -24,7 +26,7 @@ class CaseCanon : public Case
 
 	public :
 
-		override Etat getEtat();
+		Etat getEtat();
 
 }; 
 
