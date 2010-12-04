@@ -74,7 +74,62 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Adaptateur.cpp" />
+    <ClCompile Include="Affichage.cpp" />
+    <ClCompile Include="AttenteNbJoueurs.cpp" />
+    <ClCompile Include="Bateau.cpp" />
+    <ClCompile Include="Caravelle.cpp" />
+    <ClCompile Include="Case.cpp" />
+    <ClCompile Include="CaseCanon.cpp" />
+    <ClCompile Include="CaseNormale.cpp" />
+    <ClCompile Include="CasePort.cpp" />
+    <ClCompile Include="CaseTresor.cpp" />
+    <ClCompile Include="ChoisirPort.cpp" />
+    <ClCompile Include="De.cpp" />
+    <ClCompile Include="Etat.cpp" />
+    <ClCompile Include="Facade.cpp" />
+    <ClCompile Include="Fregate.cpp" />
     <ClCompile Include="Joueur.cpp" />
+    <ClCompile Include="LancerDes.cpp" />
+    <ClCompile Include="LancerDesDeplacement.cpp" />
+    <ClCompile Include="Moteur.cpp" />
+    <ClCompile Include="Navigation.cpp" />
+    <ClCompile Include="PartieGagnee.cpp" />
+    <ClCompile Include="Plateau.cpp" />
+    <ClCompile Include="Radeau.cpp" />
+    <ClCompile Include="SetOrdreJoueurs.cpp" />
+    <ClCompile Include="TirCanon.cpp" />
+    <ClCompile Include="TirCanonDuel.cpp" />
+    <ClCompile Include="TirCanonUnique.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Adaptateur.h" />
+    <ClInclude Include="Affichage.h" />
+    <ClInclude Include="AttenteNbJoueurs.h" />
+    <ClInclude Include="Bateau.h" />
+    <ClInclude Include="Caravelle.h" />
+    <ClInclude Include="Case.h" />
+    <ClInclude Include="CaseCanon.h" />
+    <ClInclude Include="CaseNormale.h" />
+    <ClInclude Include="CasePort.h" />
+    <ClInclude Include="CaseTresor.h" />
+    <ClInclude Include="ChoisirPort.h" />
+    <ClInclude Include="De.h" />
+    <ClInclude Include="Etat.h" />
+    <ClInclude Include="Facade.h" />
+    <ClInclude Include="Fregate.h" />
+    <ClInclude Include="Joueur.h" />
+    <ClInclude Include="LancerDes.h" />
+    <ClInclude Include="LancerDesDeplacement.h" />
+    <ClInclude Include="Moteur.h" />
+    <ClInclude Include="Navigation.h" />
+    <ClInclude Include="PartieGagnee.h" />
+    <ClInclude Include="Plateau.h" />
+    <ClInclude Include="Radeau.h" />
+    <ClInclude Include="SetOrdreJoueurs.h" />
+    <ClInclude Include="TirCanonDuel.h" />
+    <ClInclude Include="TirCanonUnique.h" />
+    <ClInclude Include="TirerCanon.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
