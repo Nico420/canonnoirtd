@@ -4,34 +4,24 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+#include "Case.h"
+#include "Etat.h"
 
 class Plateau
 {
 	private :
-
 		int longueur;
 		int largeur;
-
-	protected :
-
-
+		Case* tab_case; 
+	
 	public :
-
-
-	private :
-
-
-	protected :
-
-
-	public :
-
-		virtual int getLargeur();
-		virtual int getLongueur();
-		virtual Case getCase(object int x, object int y);
-		virtual void libereCase(object int x, object int y);
-		virtual Etat getEtat(object int x, object int y);
-		virtual bool estNavigable(object int x, object inty);
+		Plateau(int lo,int la);
+		inline virtual int getLargeur(){return this->largeur;}
+		inline virtual int getLongueur(){return this->longueur;}
+		Case getCase(int x, int y);
+		void libereCase(int x,int y);
+		Etat getEtat(int x,int y);
+		bool estNavigable(int x,int y);
 
 }; 
 

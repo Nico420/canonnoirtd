@@ -6,10 +6,11 @@
 //------------------------------------------------------------------------------
 
 /// <remarks>typeCase renvoie le type de la case : Normale Port Canon Trésor</remarks>
+#include "Etat.h"
+
 class Case
 {
 	private :
-
 		int hauteur;
 		bool estNavigable;
 
@@ -27,10 +28,10 @@ class Case
 
 	public :
 
-		virtual bool estNavigable();
+		virtual inline bool estNavigable(){return this->hauteur>0;}
 		virtual void libereCase();
-		virtual int getHauteur();
-		virtual Etat getEtat();
+		inline int getHauteur(){return this->hauteur;}
+		Etat getEtat();
 
 }; 
 

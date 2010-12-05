@@ -5,33 +5,32 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+#include "Plateau.h"
+
 class Plateau
 {
-	private :
+	
+	Plateau::Plateau(int lo, int la){
+			longueur=lo;
+			largeur=la;
+			tab_case = new Case[lo*la];
+		}
 
-		int longueur;
-		int largeur;
+	Case Plateau::getCase(int x, int y){
+		return this->tab_case[x*longueur+y];
+	}
+	void Plateau::libereCase(int x,int y){
+		
+	}
 
-	protected :
+	Etat Plateau::getEtat(int x, int y){
+		;
+	}
 
-
-	public :
-
-
-	private :
-
-
-	protected :
-
-
-	public :
-
-		virtual int getLargeur();
-		virtual int getLongueur();
-		virtual Case getCase(object int x, object int y);
-		virtual void libereCase(object int x, object int y);
-		virtual Etat getEtat(object int x, object int y);
-		virtual bool estNavigable(object int x, object inty);
+	bool Plateau::estNavigable(int x, int y){
+		;
+	}
+	
 
 }; 
 
