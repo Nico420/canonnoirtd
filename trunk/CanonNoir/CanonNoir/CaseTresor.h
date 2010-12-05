@@ -13,13 +13,9 @@ class CaseTresor : public Case
 
 		int nbTresors;
 
-
-
-
 	public :
 
 		inline int getNbTresors(){return nbTresors;}
 		Etat getEtat();
-
 }; 
 

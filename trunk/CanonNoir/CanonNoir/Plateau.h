@@ -10,9 +10,9 @@
 class Plateau
 {
 	private :
-		int longueur;
-		int largeur;
-		Case tab_case[11][8]; 
+		const int longueur=11;
+		const int largeur=8;
+		Case tab_case[longueur][largeur]; 
 	
 	public :
 		Plateau(int lo,int la);
