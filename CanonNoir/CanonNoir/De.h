@@ -5,28 +5,23 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+#include <stdlib.h>
+#include <stdio.h>
+#include <time.h>
+
 class De
 {
 	private :
-
 		int numero;
 
-	protected :
-
-
 	public :
-
-
-	private :
-
-
-	protected :
-
-
-	public :
-
-		virtual void lancerDe();
-		virtual void getNum();
+		De(int nb);
+		~De();
+		void lancerDe();
+		int getNum() const;
 
 }; 
 
+inline int De::getNum() const{
+	return numero;
+}
