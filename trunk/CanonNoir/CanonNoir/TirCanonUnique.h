@@ -4,6 +4,7 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+#include "TirerCanon.h"
 
 class TirCanonUnique : public TirerCanon
 {
@@ -23,9 +24,9 @@ class TirCanonUnique : public TirerCanon
 
 
 	public :
-
-		override void setCible(object int num);
-		override void execute();
+		TirCanonUnique();
+		void setCible(int num);
+		void execute();
 
 }; 
 

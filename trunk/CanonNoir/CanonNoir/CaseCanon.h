@@ -9,23 +9,8 @@
 
 class CaseCanon : public Case
 {
-	private :
-
-
-	protected :
-
 
 	public :
-
-
-	private :
-
-
-	protected :
-
-
-	public :
-
 		Etat getEtat();
 
 }; 

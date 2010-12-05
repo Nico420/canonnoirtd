@@ -4,29 +4,15 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-#include "Etat.h"
-#include "Case.h"
+#include "CaseCanon.h"
+#include "TirCanonUnique.h"
 
 class CaseCanon : public Case
 {
-	private :
-
-
-	protected :
-
-
 	public :
-
-
-	private :
-
-
-	protected :
-
-
-	public :
-
-		Etat getEtat();
+		Etat CaseCanon::getEtat(){
+			return TirCanonUnique();
+		}
 
 }; 
 

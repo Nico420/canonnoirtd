@@ -4,6 +4,7 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+#include "Case.h"
 
 class CasePort : public Case
 {
@@ -25,9 +26,9 @@ class CasePort : public Case
 
 	public :
 
-		virtual void getCouleur();
-		override bool estNavigable();
-		override Etat getEtat();
+		inline int getCouleur(){return couleur;};
+		bool estNavigable();
+		Etat getEtat();
 
 }; 
 

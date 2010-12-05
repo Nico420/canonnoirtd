@@ -4,29 +4,15 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+#include "Case.h"
+#include"LancerDesDeplacement.h"
 
 class CaseTresor : public Case
 {
-	private :
-
-		int nbTresors;
-
-	protected :
-
-
 	public :
-
-
-	private :
-
-
-	protected :
-
-
-	public :
-
-		virtual void getNbTresors : int();
-		override Etat getEtat();
-
+		Etat CaseTresor::getEtat(){
+			Etat e = LancerDesDeplacement();
+			return e;
+		}
 }; 
 
