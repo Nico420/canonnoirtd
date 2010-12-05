@@ -4,30 +4,21 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+#include "CasePort.h"
+#include "LancerDesDeplacement.h"
 
 class CasePort : public Case
 {
-	private :
-
-		int couleur;
-
-	protected :
-
-
 	public :
-
-
-	private :
-
-
-	protected :
-
-
-	public :
-
-		virtual void getCouleur();
-		override bool estNavigable();
-		override Etat getEtat();
+		
+		bool estNavigable(){
+			Case::getEstNavigable(); //Test si une case port est navigable.
+			//Vérifier si un bateau peut aller sur un port qui n'a pas sa couleur.
+		}
+		Etat CasePort::getEtat(){
+			Etat e = LancerDesDeplacement();
+			return e;
+		}
 
 }; 
 

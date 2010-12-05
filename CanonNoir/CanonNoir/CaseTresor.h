@@ -5,28 +5,21 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+#include "Case.h"
+
 class CaseTresor : public Case
 {
 	private :
 
 		int nbTresors;
 
-	protected :
 
-
-	public :
-
-
-	private :
-
-
-	protected :
 
 
 	public :
 
-		virtual void getNbTresors : int();
-		override Etat getEtat();
+		inline int getNbTresors(){return nbTresors;}
+		Etat getEtat();
 
 }; 
 

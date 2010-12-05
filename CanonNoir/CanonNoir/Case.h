@@ -28,10 +28,10 @@ class Case
 
 	public :
 
-		virtual inline bool estNavigable(){return this->hauteur>0;}
+		virtual inline bool getEstNavigable() const {return estNavigable;}
+		virtual inline void setEstNavigable(bool b){estNavigable=b;}
 		virtual void libereCase();
 		inline int getHauteur(){return this->hauteur;}
 		Etat getEtat();
 
-}; 
-
+};
