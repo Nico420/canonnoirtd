@@ -4,6 +4,9 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+#include "CaseNormale.h"
+#include "Case.h"
+#include"LancerDesDeplacement.h"
 
 class CaseNormale : public Case
 {
@@ -24,9 +27,13 @@ class CaseNormale : public Case
 
 	public :
 
-		virtual bool estAuBord();
-		override bool estNavigable();
-		override Etat getEtat();
-
+		virtual bool estAuBord(); //On ne peut pas implémenter cette méthode, il faut la remonter dans PLateau.
+		bool CaseNormale::estNavigable(){return Case::estNavigable();}
+		//Renvoie l'état dans lequel doit être le moteur après cett case !
+		Etat CaseNormale::getEtat(){
+			//Appeler le changement de joueur ?
+			Etat e = LancerDesDeplacement();
+			return e;
+		}
 }; 
 

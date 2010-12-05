@@ -4,6 +4,7 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+#include "LancerDes.h";
 
 class LancerDesDeplacement : public LancerDes
 {
@@ -23,9 +24,9 @@ class LancerDesDeplacement : public LancerDes
 
 
 	public :
-
+		LancerDesDeplacement();
 		virtual void lancerDes();
-		override void execute();
+		void execute();
 
 }; 
 

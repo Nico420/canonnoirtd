@@ -5,28 +5,15 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+
 class CaseNormale : public Case
 {
-	private :
-
-
-	protected :
-
-
-	public :
-
-
-	private :
-
-
-	protected :
-
 
 	public :
 
 		virtual bool estAuBord();
-		override bool estNavigable();
-		override Etat getEtat();
+		inline bool estNavigable();
+		virtual Etat getEtat();
 
 }; 
 

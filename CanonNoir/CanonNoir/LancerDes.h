@@ -4,6 +4,7 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+#include "Etat.h"
 
 class LancerDes : public Etat
 {
@@ -23,8 +24,7 @@ class LancerDes : public Etat
 
 
 	public :
-
-		override void execute();
+	void execute();
 
 }; 
 

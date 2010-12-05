@@ -5,31 +5,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-/// <remarks>typeCase renvoie le type de la case : Normale Port Canon Trésor</remarks>
+#include "Case.h"
+
 class Case
 {
-	private :
-
-		int hauteur;
-		bool estNavigable;
-
-	protected :
-
 
 	public :
-
-
-	private :
-
-
-	protected :
-
-
-	public :
-
-		virtual bool estNavigable();
 		virtual void libereCase();
-		virtual int getHauteur();
 		virtual Etat getEtat();
 
 }; 
