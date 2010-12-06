@@ -6,28 +6,15 @@
 //------------------------------------------------------------------------------
 
 #pragma once
+#include "Bateau.h"
 
 class Fregate : public Bateau
 {
-	private :
-
-
-	protected :
-
-
 	public :
 
-
-	private :
-
-
-	protected :
-
-
-	public :
-
-		override void donneTresor();
-		override void enleveTresor();
+		Fregate(bool tres, int posx, int posy, int posPortx, int posPorty);
+		~Fregate();
+		Bateau* degraderBateau();
 
 }; 
 

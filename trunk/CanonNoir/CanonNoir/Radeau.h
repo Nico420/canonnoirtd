@@ -6,30 +6,15 @@
 //------------------------------------------------------------------------------
 
 #pragma once
-
 #include "Bateau.h"
 
 class Radeau : public Bateau
 {
-	private :
-
-
-	protected :
-
-
 	public :
 
-
-	private :
-
-
-	protected :
-
-
-	public :
-
-		void donneTresor();
-		void enleveTresor();
+		Radeau(int posx, int posy, int posPortx, int posPorty);
+		~Radeau();
+		Bateau* degraderBateau();
 
 }; 
 
