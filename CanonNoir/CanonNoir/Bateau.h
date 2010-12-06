@@ -5,14 +5,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+#pragma once
+
+#include <stdlib>
+#include <pair>
+
 class Bateau
 {
 	private :
 
 		int nbDes;
 		bool tresorABord;
-		pair<int,int> position;
-		pair<int,int> positionPort;
+		std::pair<int,int> position;
+		std::pair<int,int> positionPort;
 
 	protected :
 
@@ -28,9 +33,9 @@ class Bateau
 
 	public :
 
-		virtual void deplacer(object int x, object int y);
+		virtual void deplacer(int x, int y);
 		virtual bool tresorABord();
-		virtual void setBateau(object int bat);
+		virtual void setBateau(int bat);
 		virtual void enleveTresor();
 		virtual void donneTresor();
 		virtual pair<int,int> getPosition();

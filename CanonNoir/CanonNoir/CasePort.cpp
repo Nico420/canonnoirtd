@@ -7,18 +7,13 @@
 #include "CasePort.h"
 #include "LancerDesDeplacement.h"
 
-class CasePort : public Case
-{
-	public :
-		
-		bool estNavigable(){
-			Case::getEstNavigable(); //Test si une case port est navigable.
+bool CasePort::getEstNavigable(){
+	return this->estNavigable; //Test si une case port est navigable.
 			//Vérifier si un bateau peut aller sur un port qui n'a pas sa couleur.
-		}
-		Etat CasePort::getEtat(){
+}
+
+Etat CasePort::getEtat(){
 			Etat e = LancerDesDeplacement();
 			return e;
 		}
-
-}; 
 

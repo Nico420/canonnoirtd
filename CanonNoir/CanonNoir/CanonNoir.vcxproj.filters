@@ -93,7 +93,7 @@
     <ClCompile Include="TirCanonUnique.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="TirCanon.cpp">
+    <ClCompile Include="TirerCanon.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>

@@ -7,12 +7,4 @@
 
 #include "Case.h"
 
-class Case
-{
-
-	public :
-		virtual void libereCase();
-		virtual Etat getEtat();
-
-}; 
 

@@ -5,28 +5,21 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+#pragma once
+
+#include <string>
+
 class Etat
 {
-	private :
-
-
-	protected :
-
-
 	public :
 
-		String message;
+		
+		std::string message;
 
-	private :
-
-
-	protected :
-
-
-	public :
-
+		Etat() : message(""){};
+		Etat(std::string mess) : message(mess){};
 		virtual void execute();
-		virtual void setMessage(String mes);
+		virtual void setMessage(std::string mes);
 
 }; 
 

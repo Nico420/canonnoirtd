@@ -4,14 +4,17 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+
+#pragma once
+
 #include "Case.h"
 #include "Etat.h"
 
 class Plateau
 {
 	private :
-		const int longueur=11;
-		const int largeur=8;
+		static const int longueur=11;
+		static const int largeur=8;
 		Case tab_case[longueur][largeur]; 
 	
 	public :
@@ -20,7 +23,7 @@ class Plateau
 		inline virtual int getLongueur(){return this->longueur;}
 		Case getCase(int x, int y){return tab_case[x][y];}
 		void libereCase(int x,int y);
-		Etat getEtat(int x,int y);
+		Etat& getEtat(int x,int y);
 		bool estNavigable(int x,int y);
 
 }; 

@@ -5,6 +5,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+#pragma once
+
 #include "Case.h"
 
 class CaseTresor : public Case

@@ -5,12 +5,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+#pragma once
+#include "Bateau.h"
+#include "Case.h"
+
 class Moteur
 {
 	private :
 
 		int nbJoueurs;
-		int[] ordreJoueurs;
+		int ordreJoueurs [4];
 		int joueurCourant;
 
 	protected :
@@ -27,11 +31,11 @@ class Moteur
 
 	public :
 
-		virtual void setNbJoueurs(object int nb);
-		virtual void setEtat(object Etat e);
-		virtual void deplacerBateau(object Bateau b, object Case dest);
+		virtual void setNbJoueurs(int nb);
+		virtual void setEtat(Etat& e);
+		virtual void deplacerBateau(Bateau& b, Case& dest);
 		virtual void execute();
-		virtual int getNbJoueurs();
+		int getNbJoueurs();
 
 }; 
 

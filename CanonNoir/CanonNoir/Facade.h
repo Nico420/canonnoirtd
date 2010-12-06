@@ -5,6 +5,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+#pragma once
+
+#include <vector>
+#include "Bateau.h"
+
 class Facade
 {
 	private :
@@ -24,34 +29,34 @@ class Facade
 
 	public :
 
-		virtual bool activerDes();
-		virtual bool activerCases();
-		virtual bool activerPorts();
-		virtual vector<Bateau> getBateaux();
-		virtual string getMessage();
-		virtual int[] getValeursDes();
-		virtual bool afficheCurseurAngle();
-		virtual bool afficheCurseurPuissance();
-		virtual vector<pair<int,int>> getRelief();
-		virtual bool afficheGagnant();
-		virtual bool activerBateaux();
-		virtual bool afficheTir();
-		virtual void init();
-		virtual int getNbJoueurs();
-		virtual bool getAttenteNbJoueurs();
-		virtual int[] getScores();
-		virtual int getNbDes();
-		virtual void setNbJoueurs(object int nb);
-		virtual int[] getPortsLibres();
-		virtual bool afficheBateaux();
-		virtual bool afficheRelief();
-		virtual bool afficheScores();
-		virtual bool afficheDes();
-		virtual void setAngle(object int angle);
-		virtual void setPuissance(object int puissance);
-		virtual void lancerDes();
-		virtual void setCible(object int nb);
-		virtual void setDeplacement(object int x, object int y);
+		bool activerDes();
+		bool activerCases();
+		bool activerPorts();
+		std::vector<Bateau> getBateaux();
+		std::string getMessage();
+		int* getValeursDes();
+		bool afficheCurseurAngle();
+		bool afficheCurseurPuissance();
+		std::vector<std::pair<int,int>> getRelief();
+		bool afficheGagnant();
+		bool activerBateaux();
+		bool afficheTir();
+		void init();
+		int getNbJoueurs();
+		bool getAttenteNbJoueurs();
+		int* getScores();
+		int getNbDes();
+		void setNbJoueurs(int nb);
+		int* getPortsLibres();
+		bool afficheBateaux();
+		bool afficheRelief();
+		bool afficheScores();
+		bool afficheDes();
+		void setAngle(int angle);
+		void setPuissance(int puissance);
+		void lancerDes();
+		void setCible(int nb);
+		void setDeplacement(int x, int y);
 
 }; 
 

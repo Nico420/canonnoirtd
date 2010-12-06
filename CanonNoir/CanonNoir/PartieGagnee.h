@@ -5,6 +5,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+#pragma once
+#include "Etat.h"
 class PartieGagnee : public Etat
 {
 	private :
@@ -26,7 +28,7 @@ class PartieGagnee : public Etat
 	public :
 
 		void afficherGagnant();
-		override void execute();
+		void execute();
 		int getGagnant();
 
 }; 

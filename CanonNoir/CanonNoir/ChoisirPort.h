@@ -5,29 +5,26 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+#pragma once
+#include "Etat.h"
+
 class ChoisirPort : public Etat
 {
 	private :
 
-		int[] portsLibres;
-
-	protected :
-
+		int portsLibres [4];
 
 	public :
 
-
-	private :
-
-
-	protected :
-
-
-	public :
-
-		override void execute();
-		virtual void setPortsLibres(object int[] pl);
-		virtual int[] getPortsLibres();
+		ChoisirPort();
+		ChoisirPort(std::string mess);
+		void execute();
+		void setPortsLibres(int* pl);
+		int* getPortsLibres();
 
 }; 
+
+inline int* ChoisirPort::getPortsLibres(){
+	return portsLibres;
+}
 
