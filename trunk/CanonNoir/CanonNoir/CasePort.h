@@ -4,6 +4,9 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+
+#pragma once
+
 #include "Case.h"
 
 class CasePort : public Case
@@ -12,22 +15,10 @@ class CasePort : public Case
 
 		int couleur;
 
-	protected :
-
-
-	public :
-
-
-	private :
-
-
-	protected :
-
-
 	public :
 
 		inline int getCouleur(){return couleur;};
-		bool estNavigable();
+		bool getEstNavigable();
 		Etat getEtat();
 
 }; 

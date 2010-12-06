@@ -8,32 +8,14 @@
 #include "Case.h"
 #include"LancerDesDeplacement.h"
 
-class CaseNormale : public Case
-{
-	private :
 
 
-	protected :
-
-
-	public :
-
-
-	private :
-
-
-	protected :
-
-
-	public :
-
-		virtual bool estAuBord(); //On ne peut pas implémenter cette méthode, il faut la remonter dans PLateau.
-		bool CaseNormale::estNavigable(){return Case::estNavigable();}
+bool CaseNormale::estAuBord(){return false;} //On ne peut pas implémenter cette méthode, il faut la remonter dans PLateau.
+		bool CaseNormale::getEstNavigable(){return this->estNavigable;}
 		//Renvoie l'état dans lequel doit être le moteur après cett case !
 		Etat CaseNormale::getEtat(){
 			//Appeler le changement de joueur ?
 			Etat e = LancerDesDeplacement();
 			return e;
 		}
-}; 
 

@@ -9,5 +9,5 @@ De::~De(){
 
 void De::lancerDe(){
 	srand((unsigned)time(0));
-	numero = rand() % 6 + 1;
+	numero = (rand()*numero) % 6 + 1;
 }

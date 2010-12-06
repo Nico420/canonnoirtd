@@ -5,6 +5,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+#pragma once
+
+#include "Case.h"
 
 class CaseNormale : public Case
 {
@@ -12,8 +15,8 @@ class CaseNormale : public Case
 	public :
 
 		virtual bool estAuBord();
-		inline bool estNavigable();
-		virtual Etat getEtat();
+		inline bool getEstNavigable();
+		Etat getEtat();
 
 }; 
 

@@ -5,6 +5,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+#pragma once
+
 class SetOrdreJoueurs : public LancerDes
 {
 	private :

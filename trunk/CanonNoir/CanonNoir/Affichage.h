@@ -9,6 +9,9 @@
 /// On affiche  un canevas qui contient des images
 /// 
 /// </remarks>
+
+#pragma once
+
 class Affichage
 {
 	private :
@@ -19,8 +22,8 @@ class Affichage
 
 	public :
 
-		object dossier image;
-		object canevas;
+		//object dossier image;
+		//object canevas;
 
 	private :
 

@@ -4,6 +4,9 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+
+#pragma once
+
 #include "Etat.h"
 
 class LancerDes : public Etat

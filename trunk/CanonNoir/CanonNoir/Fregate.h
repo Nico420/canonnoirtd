@@ -5,6 +5,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+#pragma once
+
 class Fregate : public Bateau
 {
 	private :

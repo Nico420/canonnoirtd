@@ -9,6 +9,9 @@
 /// Permet de séparer complétement l'affichage du reste
 /// 
 /// </remarks>
+
+#pragma once
+
 class Adaptateur
 {
 	private :

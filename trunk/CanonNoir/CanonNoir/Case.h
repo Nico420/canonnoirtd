@@ -6,16 +6,18 @@
 //------------------------------------------------------------------------------
 
 /// <remarks>typeCase renvoie le type de la case : Normale Port Canon Trésor</remarks>
+#pragma once
+
+#ifndef CASE_H
+#define CASE_H
+
 #include "Etat.h"
 
 class Case
 {
-	private :
+	protected :
 		int hauteur;
 		bool estNavigable;
-
-	protected :
-
 
 	public :
 
@@ -35,3 +37,4 @@ class Case
 		Etat getEtat();
 
 };
+#endif

@@ -7,12 +7,7 @@
 #include "CaseCanon.h"
 #include "TirCanonUnique.h"
 
-class CaseCanon : public Case
-{
-	public :
 		Etat CaseCanon::getEtat(){
 			return TirCanonUnique();
 		}
-
-}; 
 

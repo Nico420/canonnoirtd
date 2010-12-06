@@ -5,6 +5,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+#pragma once
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>

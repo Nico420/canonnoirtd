@@ -5,6 +5,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+#pragma once
+
+#include "Case.h"
+#include <vector>
+
 class Navigation : public Etat
 {
 	private :
@@ -24,10 +29,10 @@ class Navigation : public Etat
 
 	public :
 
-		override void execute();
-		virtual vector<Case> getCasesAccessibles();
-		virtual void deplacer(object int x, object int y);
-		virtual void selectionBateauADeplacer();
+		void execute();
+		std::vector<Case> getCasesAccessibles();
+		void deplacer(int x, int y);
+		void selectionBateauADeplacer();
 
 }; 
 

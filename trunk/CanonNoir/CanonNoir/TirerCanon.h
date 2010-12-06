@@ -5,6 +5,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+#pragma once
+
+#include <vector>
+
 class TirerCanon : public Etat
 {
 	private :
@@ -14,8 +18,8 @@ class TirerCanon : public Etat
 		int joueurAttaquant;
 		int joueurAttaque;
 		bool tirReussi;
-		pair<int,int> positionAttaquant;
-		pair<int,int> positionAttaque;
+		std::pair<int,int> positionAttaquant;
+		std::pair<int,int> positionAttaque;
 
 	protected :
 
@@ -31,16 +35,16 @@ class TirerCanon : public Etat
 
 	public :
 
-		override void execute();
-		virtual void setAngle(object int ang);
-		virtual void setPuissance(object int puis);
-		virtual void setCible(object int num);
-		virtual void faireTir();
-		virtual bool tirReussi();
-		virtual void effectuerChangements();
-		virtual int[] calculerRelief();
-		virtual bool tirFini();
-		virtual vector<pair<int,int>> calculerTir();
+		void execute();
+		void setAngle(int ang);
+		void setPuissance(int puis);
+		void setCible(int num);
+		void faireTir();
+		bool getTirReussi();
+		void effectuerChangements();
+		int* calculerRelief();
+		bool tirFini();
+		std::vector<std::pair<int,int>> calculerTir();
 
 }; 
 

@@ -5,6 +5,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+#pragma once
+
+#include "Bateau.h"
+
 class Radeau : public Bateau
 {
 	private :
@@ -24,8 +28,8 @@ class Radeau : public Bateau
 
 	public :
 
-		override void donneTresor();
-		override void enleveTresor();
+		void donneTresor();
+		void enleveTresor();
 
 }; 
 

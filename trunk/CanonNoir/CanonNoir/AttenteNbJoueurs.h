@@ -5,26 +5,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+#pragma once
+
+#include "Etat.h"
+
 class AttenteNbJoueurs : public Etat
 {
-	private :
-
-
-	protected :
-
-
 	public :
-
-
-	private :
-
-
-	protected :
-
-
-	public :
-
-		override void execute();
+		AttenteNbJoueurs();
+		AttenteNbJoueurs(std::string mess);
+		void execute();
 
 }; 
 
