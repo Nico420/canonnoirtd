@@ -13,8 +13,8 @@ class Radeau : public Bateau
 	public :
 
 		Radeau(int posx, int posy, int posPortx, int posPorty);
+		Radeau(const Bateau* bat);
 		~Radeau();
-		Bateau* degraderBateau();
 
 }; 
 

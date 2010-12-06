@@ -13,8 +13,8 @@ class Fregate : public Bateau
 	public :
 
 		Fregate(bool tres, int posx, int posy, int posPortx, int posPorty);
+		Fregate(const Bateau* bat);
 		~Fregate();
-		Bateau* degraderBateau();
 
 }; 
 
