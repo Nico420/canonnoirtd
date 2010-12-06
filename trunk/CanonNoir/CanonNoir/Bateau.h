@@ -24,8 +24,6 @@ class Bateau
 		virtual ~Bateau();
 		void deplacer(int x, int y);
 		virtual bool aTresorABord() const;
-		//virtual void setBateau(int bat);
-		virtual Bateau* degraderBateau() = 0;
 		virtual void enleveTresor();
 		virtual void donneTresor();
 		std::pair<int,int> getPosition() const;
