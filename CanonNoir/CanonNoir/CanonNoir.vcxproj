@@ -98,7 +98,6 @@
     <ClCompile Include="Plateau.cpp" />
     <ClCompile Include="Radeau.cpp" />
     <ClCompile Include="SetOrdreJoueurs.cpp" />
-    <ClCompile Include="TirerCanon.cpp" />
     <ClCompile Include="TirCanonDuel.cpp" />
     <ClCompile Include="TirCanonUnique.cpp" />
   </ItemGroup>

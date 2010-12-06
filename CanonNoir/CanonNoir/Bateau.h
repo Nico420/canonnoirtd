@@ -6,40 +6,53 @@
 //------------------------------------------------------------------------------
 
 #pragma once
-
-#include <stdlib>
-#include <pair>
+#include <utility>
 
 class Bateau
 {
-	private :
+	protected :
 
 		int nbDes;
 		bool tresorABord;
 		std::pair<int,int> position;
 		std::pair<int,int> positionPort;
 
-	protected :
-
-
 	public :
 
-
-	private :
-
-
-	protected :
-
-
-	public :
-
-		virtual void deplacer(int x, int y);
-		virtual bool tresorABord();
-		virtual void setBateau(int bat);
+		Bateau();
+		Bateau(int nbDes, bool tres, int posx, int posy, int posPortx, int posPorty);
+		virtual ~Bateau();
+		void deplacer(int x, int y);
+		virtual bool aTresorABord() const;
+		//virtual void setBateau(int bat);
+		virtual Bateau* degraderBateau() = 0;
 		virtual void enleveTresor();
 		virtual void donneTresor();
-		virtual pair<int,int> getPosition();
-		virtual pair<int,int> getPositionPort();
+		std::pair<int,int> getPosition() const;
+		std::pair<int,int> getPositionPort() const;
 
 }; 
 
+inline bool Bateau::aTresorABord() const{
+	return tresorABord;
+}
+
+inline void Bateau::enleveTresor(){
+	tresorABord = false;
+}
+
+inline void Bateau::donneTresor(){
+	tresorABord = true;
+}
+
+inline std::pair<int,int> Bateau::getPosition() const{
+	return position;
+}
+
+inline std::pair<int,int> Bateau::getPositionPort() const{
+	return positionPort;
+}
+
+inline void Bateau::deplacer(int x, int y){
+	position.first = x; position.second = y;
+}

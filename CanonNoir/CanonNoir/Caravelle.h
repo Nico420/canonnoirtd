@@ -6,30 +6,14 @@
 //------------------------------------------------------------------------------
 
 #pragma once
-
 #include "Bateau.h"
 
 class Caravelle : public Bateau
 {
-	private :
-
-
-	protected :
-
-
 	public :
 
+		Caravelle(bool tres, int posx, int posy, int posPortx, int posPorty);
+		~Caravelle();
+		Bateau* degraderBateau();
 
-	private :
-
-
-	protected :
-
-
-	public :
-
-		void donneTresor();
-		void enleveTresor();
-
-}; 
-
+};

@@ -6,30 +6,30 @@
 //------------------------------------------------------------------------------
 
 #pragma once
+#include "Bateau.h"
+#include <map>
 
 class Joueur
 {
 	private :
 
-		int score;
+		std::map<int,int> score;
 		int num;
-
-	protected :
-
-
+		Bateau* bateaux [2];
+		
 	public :
 
-
-	private :
-
-
-	protected :
-
-
-	public :
-
-		virtual int getScore();
-		virtual void getNum : int();
+		Joueur(int num,int nbBat,int nbPort1,int nbPort2=0);
+		~Joueur();
+		std::map<int,int> getScore() const;
+		int getNum() const;
 
 }; 
 
+inline std::map<int,int> Joueur::getScore() const{
+	return score;
+}
+
+inline int Joueur::getNum() const{
+	return num;
+}
