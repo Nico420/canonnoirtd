@@ -11,9 +11,13 @@
 
 class LancerDes : public Etat
 {
+	protected :
+		std::string message;
+		Moteur* moteur;
+
 	public :
-		LancerDes();
-		LancerDes(std::string mess,Moteur* mot);
+		LancerDes() : message(""),moteur(NULL){};
+		LancerDes(std::string mess,Moteur* mot) : message(mess),moteur(mot){};
 		void execute();
 
 }; 

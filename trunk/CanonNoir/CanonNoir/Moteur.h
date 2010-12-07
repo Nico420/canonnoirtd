@@ -8,8 +8,8 @@
 #ifndef MOTEUR_H
 #define MOTEUR_H
 #pragma once
-#include "Bateau.h"
-#include "Case.h"
+#include "Joueur.h"
+#include "Plateau.h"
 #include "Etat.h"
 
 class Moteur

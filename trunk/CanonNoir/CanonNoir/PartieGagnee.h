@@ -10,23 +10,15 @@
 class PartieGagnee : public Etat
 {
 	private :
-
 		int gagnant;
 
 	protected :
-
-
-	public :
-
-
-	private :
-
-
-	protected :
-
+		std::string message;
+		Moteur* moteur;
 
 	public :
-
+		PartieGagnee() : message(""),moteur(NULL){};
+		PartieGagnee(std::string mess,Moteur* mot) : message(mess),moteur(mot){};
 		void afficherGagnant();
 		void execute();
 		int getGagnant();
