@@ -12,23 +12,13 @@
 
 class Navigation : public Etat
 {
-	private :
-
-
 	protected :
-
+		std::string message;
+		Moteur* moteur;
 
 	public :
-
-
-	private :
-
-
-	protected :
-
-
-	public :
-
+		Navigation() : message(""){};
+		Navigation(std::string mess,Moteur* mot) : message(mess),moteur(mot){};
 		void execute();
 		std::vector<Case> getCasesAccessibles();
 		void deplacer(int x, int y);

@@ -11,9 +11,13 @@
 
 class AttenteNbJoueurs : public Etat
 {
+	protected :
+		std::string message;
+		Moteur* moteur;
+
 	public :
-		AttenteNbJoueurs();
-		AttenteNbJoueurs(std::string mess,Moteur* mot);
+		AttenteNbJoueurs() : message(""),moteur(NULL){};
+		AttenteNbJoueurs(std::string mess,Moteur* mot) : message(mess),moteur(mot){};
 		void execute();
 
 }; 

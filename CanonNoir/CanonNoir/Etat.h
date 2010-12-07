@@ -14,14 +14,8 @@
 
 class Etat
 {
-	protected :
-		std::string message;
-		Moteur* moteur;
-
 	public :
 
-		Etat() : message(""),moteur(NULL){};
-		Etat(std::string mess,Moteur* mot) : message(mess),moteur(mot){};
 		virtual void execute() = 0;
 		void setMessage(std::string mes);
 		std::string getMessage() const;

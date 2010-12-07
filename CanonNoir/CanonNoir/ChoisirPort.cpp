@@ -1,13 +1,5 @@
 #include "ChoisirPort.h"
 
-ChoisirPort::ChoisirPort(){
-	this->Etat::Etat();
-}
-
-ChoisirPort::ChoisirPort(std::string mess,Moteur* mot){
-	this->Etat::Etat(mess,mot);
-}
-
 void ChoisirPort::execute(){
 	int joueurCourant = this->moteur->getJoueurCourant();
 	int nbJoueurs = this->moteur->getNbJoueurs();

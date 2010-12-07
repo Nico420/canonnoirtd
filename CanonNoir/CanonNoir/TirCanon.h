@@ -22,19 +22,12 @@ class TirerCanon : public Etat
 		std::pair<int,int> positionAttaque;
 
 	protected :
-
-
-	public :
-
-
-	private :
-
-
-	protected :
-
+		std::string message;
+		Moteur* moteur;
 
 	public :
-
+		TirerCanon();
+		TirerCanon(std::string mess,Moteur* mot);
 		void execute();
 		void setAngle(int ang);
 		void setPuissance(int puis);

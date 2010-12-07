@@ -11,13 +11,15 @@
 class ChoisirPort : public Etat
 {
 	private :
-
 		int* portsLibres;
 
-	public :
+	protected :
+		std::string message;
+		Moteur* moteur;
 
-		ChoisirPort();
-		ChoisirPort(std::string mess,Moteur* mot);
+	public :
+		ChoisirPort() : message(""),moteur(NULL){};
+		ChoisirPort(std::string mess,Moteur* mot) : message(mess),moteur(mot){};
 		void execute();
 		void setPortsLibres(int* pl);
 		int* getPortsLibres();
