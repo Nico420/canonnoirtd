@@ -8,27 +8,16 @@
 #pragma once
 
 #include <vector>
-#include "Bateau.h"
+#include "Moteur.h"
 
 class Facade
 {
 	private :
-
-
-	protected :
-
+		Moteur motor;
 
 	public :
-
-
-	private :
-
-
-	protected :
-
-
-	public :
-
+		Facade();
+		~Facade();
 		bool activerDes();
 		bool activerCases();
 		bool activerPorts();

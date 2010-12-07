@@ -16,8 +16,8 @@ class Etat
 {
 	public :
 
-		virtual void execute() = 0;
-		virtual void setMessage(std::string mes) = 0;
+		virtual void execute();
+		virtual void setMessage(std::string mes);
 		//virtual std::string getMessage() const;
 
 };

@@ -16,7 +16,6 @@
 class Moteur
 {
 	private :
-
 		int nbJoueurs;
 		int ordreJoueurs [4];
 		int joueurCourant;
@@ -24,7 +23,8 @@ class Moteur
 		class Etat* etats [6];
 
 	public :
-
+		Moteur();
+		~Moteur();
 		void setNbJoueurs(int nb);
 		void setEtat(Etat& e);
 		void deplacerBateau(Bateau& b, Case& dest);

@@ -6,6 +6,8 @@
 //------------------------------------------------------------------------------
 
 #pragma once
+#ifndef RADEAU_H
+#define RADEAU_H
 #include "Bateau.h"
 
 class Radeau : public Bateau
@@ -13,8 +15,9 @@ class Radeau : public Bateau
 	public :
 
 		Radeau(int posx, int posy, int posPortx, int posPorty);
-		Radeau(const Bateau* bat);
+		Radeau(const Bateau& bat);
 		~Radeau();
 
 }; 
 
+#endif
