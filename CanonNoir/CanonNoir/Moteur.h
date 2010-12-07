@@ -11,6 +11,7 @@
 #include "Joueur.h"
 #include "Plateau.h"
 #include "Etat.h"
+#include "De.h"
 
 class Moteur
 {
@@ -19,7 +20,8 @@ class Moteur
 		int nbJoueurs;
 		int ordreJoueurs [4];
 		int joueurCourant;
-		Etat* etats [6];
+		De des [2];
+		class Etat* etats [6];
 
 	public :
 
