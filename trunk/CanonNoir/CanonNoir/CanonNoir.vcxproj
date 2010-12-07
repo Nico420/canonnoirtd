@@ -98,6 +98,7 @@
     <ClCompile Include="Plateau.cpp" />
     <ClCompile Include="Radeau.cpp" />
     <ClCompile Include="SetOrdreJoueurs.cpp" />
+    <ClCompile Include="TirCanon.cpp" />
     <ClCompile Include="TirCanonDuel.cpp" />
     <ClCompile Include="TirCanonUnique.cpp" />
   </ItemGroup>
@@ -126,9 +127,8 @@
     <ClInclude Include="Plateau.h" />
     <ClInclude Include="Radeau.h" />
     <ClInclude Include="SetOrdreJoueurs.h" />
+    <ClInclude Include="TirCanon.h" />
     <ClInclude Include="TirCanonDuel.h" />
-    <ClInclude Include="TirCanonUnique.h" />
-    <ClInclude Include="TirerCanon.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
