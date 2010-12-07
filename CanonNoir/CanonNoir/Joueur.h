@@ -15,7 +15,7 @@ class Joueur
 
 		std::map<int,int> score;
 		int num;
-		Bateau* bateaux [2];
+		Bateau bateaux [2];
 		
 	public :
 

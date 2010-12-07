@@ -5,6 +5,7 @@ De::De(int nb){
 }
 
 De::~De(){
+	numero = 1;
 }
 
 void De::lancerDe(){

@@ -17,6 +17,7 @@ class De
 		int numero;
 
 	public :
+		De();
 		De(int nb);
 		~De();
 		void lancerDe();

@@ -6,6 +6,8 @@
 //------------------------------------------------------------------------------
 
 #pragma once
+#ifndef BATEAU_H
+#define BATEAU_H
 #include <utility>
 
 class Bateau
@@ -54,3 +56,5 @@ inline std::pair<int,int> Bateau::getPositionPort() const{
 inline void Bateau::deplacer(int x, int y){
 	position.first = x; position.second = y;
 }
+
+#endif

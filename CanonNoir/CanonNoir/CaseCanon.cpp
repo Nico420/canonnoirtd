@@ -7,7 +7,11 @@
 #include "CaseCanon.h"
 #include "TirCanonUnique.h"
 
-		Etat& CaseCanon::getEtat(){
-			return TirCanonUnique();
-		}
+CaseCanon::CaseCanon(){
+	this->Case::Case();
+}
+
+Etat& CaseCanon::getEtat(){
+	return TirCanonUnique();
+}
 
