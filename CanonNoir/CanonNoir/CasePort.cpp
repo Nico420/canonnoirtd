@@ -12,8 +12,8 @@ bool CasePort::getEstNavigable(){
 			//Vérifier si un bateau peut aller sur un port qui n'a pas sa couleur.
 }
 
-Etat CasePort::getEtat(){
-			Etat e = LancerDesDeplacement();
+Etat& CasePort::getEtat(){
+			LancerDesDeplacement e = LancerDesDeplacement();
 			return e;
 		}
 
