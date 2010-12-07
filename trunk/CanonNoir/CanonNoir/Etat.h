@@ -17,17 +17,9 @@ class Etat
 	public :
 
 		virtual void execute() = 0;
-		void setMessage(std::string mes);
-		std::string getMessage() const;
+		virtual void setMessage(std::string mes) = 0;
+		//virtual std::string getMessage() const;
 
 };
-
-inline std::string Etat::getMessage() const{
-	return message;
-}
-
-inline void Etat::setMessage(std::string mes){
-	this->message = mes;
-}
 
 #endif

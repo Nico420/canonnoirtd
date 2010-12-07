@@ -8,8 +8,9 @@
 #pragma once
 
 #include <vector>
+#include "Etat.h"
 
-class TirerCanon : public Etat
+class TirCanon : public Etat
 {
 	private :
 
@@ -26,8 +27,8 @@ class TirerCanon : public Etat
 		Moteur* moteur;
 
 	public :
-		TirerCanon();
-		TirerCanon(std::string mess,Moteur* mot);
+		TirCanon();
+		TirCanon(std::string mess,Moteur* mot);
 		void execute();
 		void setAngle(int ang);
 		void setPuissance(int puis);

@@ -7,28 +7,18 @@
 
 #pragma once
 
+#include "LancerDes.h"
+
 class SetOrdreJoueurs : public LancerDes
 {
-	private :
-
-
 	protected :
-
+		std::string message;
+		Moteur* moteur;
 
 	public :
+		SetOrdreJoueurs();
+		SetOrdreJoueurs(std::string mess,Moteur* mot) : message(mess),moteur(mot){};
+		void setOrdreJoueurs(int j);
+		void execute();
 
-
-	private :
-
-
-	protected :
-
-
-	public :
-
-		virtual void setOrdreJoueurs(object int j);
-		virtual void lancerDes();
-		override void execute();
-
-}; 
-
+};
