@@ -5,9 +5,12 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+#ifndef MOTEUR_H
+#define MOTEUR_H
 #pragma once
 #include "Bateau.h"
 #include "Case.h"
+#include "Etat.h"
 
 class Moteur
 {
@@ -16,26 +19,30 @@ class Moteur
 		int nbJoueurs;
 		int ordreJoueurs [4];
 		int joueurCourant;
-
-	protected :
-
+		Etat* etats [6];
 
 	public :
 
-
-	private :
-
-
-	protected :
-
-
-	public :
-
-		virtual void setNbJoueurs(int nb);
-		virtual void setEtat(Etat& e);
-		virtual void deplacerBateau(Bateau& b, Case& dest);
-		virtual void execute();
-		int getNbJoueurs();
+		void setNbJoueurs(int nb);
+		void setEtat(Etat& e);
+		void deplacerBateau(Bateau& b, Case& dest);
+		void execute();
+		int getNbJoueurs() const;
+		int getJoueurCourant() const;
+		void setJoueurCourant(int jc);
 
 }; 
 
+inline int Moteur::getNbJoueurs() const{
+	return nbJoueurs;
+}
+
+inline int Moteur::getJoueurCourant() const{
+	return joueurCourant;
+}
+
+inline void Moteur::setJoueurCourant(int jc){
+	this->joueurCourant = jc;
+}
+
+#endif
