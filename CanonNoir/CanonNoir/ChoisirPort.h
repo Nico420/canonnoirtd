@@ -17,7 +17,7 @@ class ChoisirPort : public Etat
 	public :
 
 		ChoisirPort();
-		ChoisirPort(std::string mess);
+		ChoisirPort(std::string mess,Moteur* mot);
 		void execute();
 		void setPortsLibres(int* pl);
 		int* getPortsLibres();
@@ -27,4 +27,3 @@ class ChoisirPort : public Etat
 inline int* ChoisirPort::getPortsLibres(){
 	return portsLibres;
 }
-

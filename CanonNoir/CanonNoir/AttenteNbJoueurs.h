@@ -13,8 +13,7 @@ class AttenteNbJoueurs : public Etat
 {
 	public :
 		AttenteNbJoueurs();
-		AttenteNbJoueurs(std::string mess);
+		AttenteNbJoueurs(std::string mess,Moteur* mot);
 		void execute();
 
 }; 
-

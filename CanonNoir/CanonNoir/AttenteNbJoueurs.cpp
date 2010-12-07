@@ -1,13 +1,13 @@
 #include "AttenteNbJoueurs.h"
 
 AttenteNbJoueurs::AttenteNbJoueurs(){
-	Etat::Etat();
+	this->Etat::Etat();
 }
 
-AttenteNbJoueurs::AttenteNbJoueurs(std::string mess){
-	Etat::Etat(mess);
+AttenteNbJoueurs::AttenteNbJoueurs(std::string mess,Moteur* mot){
+	this->Etat::Etat(mess,mot);
 }
 
 void AttenteNbJoueurs::execute(){
-
+	this->setMessage("Choisir le nombre de joueurs.");
 }

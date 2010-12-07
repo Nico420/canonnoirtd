@@ -7,19 +7,33 @@
 
 #pragma once
 
+#ifndef ETAT_H
+#define ETAT_H
 #include <string>
+#include "Moteur.h"
 
 class Etat
 {
+	protected :
+		std::string message;
+		Moteur* moteur;
+
 	public :
 
-		
-		std::string message;
+		Etat() : message(""),moteur(NULL){};
+		Etat(std::string mess,Moteur* mot) : message(mess),moteur(mot){};
+		virtual void execute() = 0;
+		void setMessage(std::string mes);
+		std::string getMessage() const;
 
-		Etat() : message(""){};
-		Etat(std::string mess) : message(mess){};
-		virtual void execute();
-		virtual void setMessage(std::string mes);
+};
 
-}; 
+inline std::string Etat::getMessage() const{
+	return message;
+}
 
+inline void Etat::setMessage(std::string mes){
+	this->message = mes;
+}
+
+#endif
