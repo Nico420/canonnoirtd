@@ -11,23 +11,10 @@
 
 class LancerDes : public Etat
 {
-	private :
-
-
-	protected :
-
-
 	public :
-
-
-	private :
-
-
-	protected :
-
-
-	public :
-	void execute();
+		LancerDes();
+		LancerDes(std::string mess,Moteur* mot);
+		void execute();
 
 }; 
 

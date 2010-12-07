@@ -12,7 +12,7 @@ class ChoisirPort : public Etat
 {
 	private :
 
-		int portsLibres [4];
+		int* portsLibres;
 
 	public :
 
@@ -25,5 +25,9 @@ class ChoisirPort : public Etat
 }; 
 
 inline int* ChoisirPort::getPortsLibres(){
-	return portsLibres;
+	return this->portsLibres;
+}
+
+void ChoisirPort::setPortsLibres(int* pl){
+	this->portsLibres = pl;
 }
