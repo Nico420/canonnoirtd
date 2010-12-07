@@ -13,9 +13,9 @@
 bool CaseNormale::estAuBord(){return false;} //On ne peut pas implémenter cette méthode, il faut la remonter dans PLateau.
 		bool CaseNormale::getEstNavigable(){return this->estNavigable;}
 		//Renvoie l'état dans lequel doit être le moteur après cett case !
-		Etat CaseNormale::getEtat(){
+		Etat& CaseNormale::getEtat(){
 			//Appeler le changement de joueur ?
-			Etat e = LancerDesDeplacement();
+			LancerDesDeplacement e = LancerDesDeplacement();
 			return e;
 		}
 

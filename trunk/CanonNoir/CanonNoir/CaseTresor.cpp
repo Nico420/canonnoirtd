@@ -10,9 +10,8 @@
 class CaseTresor : public Case
 {
 	public :
-		Etat CaseTresor::getEtat(){
-			Etat e = LancerDesDeplacement();
-			return e;
+		Etat& CaseTresor::getEtat(){	
+			return LancerDesDeplacement();
 		}
 }; 
 

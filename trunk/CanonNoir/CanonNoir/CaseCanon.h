@@ -13,7 +13,7 @@ class CaseCanon : public Case
 {
 
 	public :
-		Etat getEtat();
+		class Etat& getEtat();
 
 }; 
 

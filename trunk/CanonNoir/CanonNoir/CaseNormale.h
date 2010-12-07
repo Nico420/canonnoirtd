@@ -16,7 +16,7 @@ class CaseNormale : public Case
 
 		virtual bool estAuBord();
 		inline bool getEstNavigable();
-		Etat getEtat();
+		class Etat& getEtat();
 
 }; 
 

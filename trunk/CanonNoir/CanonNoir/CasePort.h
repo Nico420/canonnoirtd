@@ -19,7 +19,7 @@ class CasePort : public Case
 
 		inline int getCouleur(){return couleur;};
 		bool getEstNavigable();
-		Etat getEtat();
+		class Etat& getEtat();
 
 }; 
 

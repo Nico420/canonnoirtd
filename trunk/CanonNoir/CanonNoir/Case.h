@@ -21,20 +21,10 @@ class Case
 
 	public :
 
-
-	private :
-
-
-	protected :
-
-
-	public :
-
-		virtual inline bool getEstNavigable() const {return estNavigable;}
-		virtual inline void setEstNavigable(bool b){estNavigable=b;}
+		virtual inline bool getEstNavigable() const {return estNavigable;};
+		virtual inline void setEstNavigable(bool b){estNavigable=b;};
 		virtual void libereCase();
-		inline int getHauteur(){return this->hauteur;}
-		Etat getEtat();
-
+		inline int getHauteur(){return this->hauteur;};
+		class Etat& getEtat();
 };
 #endif
