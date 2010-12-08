@@ -21,6 +21,7 @@ class Case
 
 	public :
 
+		Case():hauteur(0),estNavigable(false){};
 		virtual inline bool getEstNavigable() const {return estNavigable;};
 		virtual inline void setEstNavigable(bool b){estNavigable=b;};
 		virtual void libereCase();
