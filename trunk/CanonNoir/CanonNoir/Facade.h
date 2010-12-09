@@ -5,15 +5,17 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-#pragma once
+#ifndef FACADE_H
+#define FACADE_H
 
+#pragma once
 #include <vector>
 #include "Moteur.h"
 
 class Facade
 {
 	private :
-		Moteur motor;
+		Moteur* motor;
 
 	public :
 		Facade();
@@ -49,3 +51,4 @@ class Facade
 
 }; 
 
+#endif

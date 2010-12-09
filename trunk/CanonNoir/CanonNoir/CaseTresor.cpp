@@ -10,6 +10,7 @@ CaseTresor::CaseTresor(){
 	this->Case::Case();
 }
 
-int CaseTresor::getEtat() const{	
-	return 0;
+CaseTresor::CaseTresor(int nbtres){
+	this->Case::Case(0,true);
+	this->nbTresors = nbtres;
 }

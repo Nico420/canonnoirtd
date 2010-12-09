@@ -8,10 +8,6 @@
 #include "TirCanonUnique.h"
 
 CaseCanon::CaseCanon(){
-	this->Case::Case();
-}
-
-int CaseCanon::getEtat() const{
-	return 0;
+	this->Case::Case(0,true);
 }
 

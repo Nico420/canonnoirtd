@@ -4,6 +4,8 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+#ifndef CHOISIRPORT_H
+#define CHOISIRPORT_H
 
 #pragma once
 #include "Etat.h"
@@ -33,3 +35,5 @@ inline int* ChoisirPort::getPortsLibres(){
 void ChoisirPort::setPortsLibres(int* pl){
 	this->portsLibres = pl;
 }
+
+#endif

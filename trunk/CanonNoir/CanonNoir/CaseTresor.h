@@ -18,12 +18,17 @@ class CaseTresor : public Case
 
 	public :
 		CaseTresor();
+		CaseTresor(int nbtres);
 		int getNbTresors() const;
 		int getEtat() const;
 }; 
 
 inline int CaseTresor::getNbTresors() const{
 	return this->nbTresors;
+}
+
+inline int CaseTresor::getEtat() const{
+	return LANCERDESDEPLACEMENT;
 }
 
 #endif

@@ -13,12 +13,20 @@
 
 class CaseNormale : public Case
 {
+	private :
+		bool auBord;
 	public :
 		CaseNormale();
+		CaseNormale(int haut,bool nav,bool aubord);
+		//Faire un constructeur avec auBord, pour connaitre directement les cases au bord.
 		bool estAuBord() const;
 		bool getEstNavigable() const;
 		int getEtat() const;
 
 };
+
+inline bool CaseNormale::estAuBord() const{
+	return auBord;
+}
 
 #endif

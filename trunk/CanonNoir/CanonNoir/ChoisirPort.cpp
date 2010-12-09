@@ -1,4 +1,5 @@
 #include "ChoisirPort.h"
+#include "Moteur.h"
 
 void ChoisirPort::execute(){
 	int joueurCourant = this->moteur->getJoueurCourant();
