@@ -1,0 +1,22 @@
+﻿La génération a démarré 09/12/2010 23:48:06.
+     1>Projet "C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\Wrapper\Wrapper.vcxproj" sur le nœud 2 (build cible(s)).
+     1>InitializeBuildStatus:
+         Mise à jour de l'horodatage "Debug\Wrapper.unsuccessfulbuild".
+       GenerateTargetFrameworkMonikerAttribute:
+       La cible est ignorée "GenerateTargetFrameworkMonikerAttribute", car tous les fichiers de sortie sont à jour par rapport aux fichiers d'entrée.
+       ClCompile:
+         Toutes les sorties sont à jour.
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDLL /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\Wrapper.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt Wrapper.cpp /clr:nostdlib 
+         Wrapper.cpp
+     1>c:\users\nicolas\documents\insa\canonnoirtd\canonnoir\wrapper\Wrapper.h(4): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
+     1>c:\users\nicolas\documents\insa\canonnoirtd\canonnoir\wrapper\Wrapper.h(12): error C2143: erreur de syntaxe : absence de ';' avant '*'
+     1>c:\users\nicolas\documents\insa\canonnoirtd\canonnoir\wrapper\Wrapper.h(12): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+     1>c:\users\nicolas\documents\insa\canonnoirtd\canonnoir\wrapper\Wrapper.h(12): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+     1>c:\users\nicolas\documents\insa\canonnoirtd\canonnoir\wrapper\Wrapper.h(14): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+     1>c:\users\nicolas\documents\insa\canonnoirtd\canonnoir\wrapper\Wrapper.h(18): warning C4183: 'WrapperNbjoueurs' : type de retour manquant ; fonction membre retournant 'int' prise par défaut
+     1>Wrapper.cpp(7): fatal error C1075: fin de fichier rencontrée avant que l'élément accolade '{' gauche de 'c:\users\nicolas\documents\insa\canonnoirtd\canonnoir\wrapper\Wrapper.h(7)' soit équilibré
+     1>Génération du projet "C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\Wrapper\Wrapper.vcxproj" terminée (build cible(s)) -- ÉCHEC.
+
+ÉCHEC de la build.
+
+Temps écoulé 00:00:00.51
