@@ -12,9 +12,10 @@ CaseNormale::CaseNormale(){
 	this->Case::Case();
 }
 
-bool CaseNormale::estAuBord() const{
-	return false;
-} //On ne peut pas implémenter cette méthode, il faut la remonter dans PLateau.
+CaseNormale::CaseNormale(int haut,bool nav,bool aubord){
+	this->Case::Case(haut,nav);
+	this->auBord;
+}
 
 bool CaseNormale::getEstNavigable() const{
 	return this->estNavigable;
@@ -22,7 +23,10 @@ bool CaseNormale::getEstNavigable() const{
 
 //Renvoie l'état dans lequel doit être le moteur après cette case !
 int CaseNormale::getEtat() const{
-	//Appeler le changement de joueur ?
-	return 0;
+	if(auBord){
+		return TIRCANONDUEL;
+	}
+	else{
+		return LANCERDESDEPLACEMENT;
+	}
 }
-

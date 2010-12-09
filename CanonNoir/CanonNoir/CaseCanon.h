@@ -17,6 +17,10 @@ class CaseCanon : public Case
 		CaseCanon();
 		int getEtat() const;
 
-}; 
+};
+
+inline int CaseCanon::getEtat() const{
+	return TIRCANONUNIQUE;
+}
 
 #endif

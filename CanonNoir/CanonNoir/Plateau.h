@@ -9,7 +9,6 @@
 #define PLATEAU_H
 
 #pragma once
-#include "Moteur.h"
 #include "Case.h"
 #include <vector>
 

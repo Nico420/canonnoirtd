@@ -4,18 +4,18 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+#ifndef ETAT_H
+#define ETAT_H
 
 #pragma once
 
-#ifndef ETAT_H
-#define ETAT_H
 #include <string>
-#include "Moteur.h"
+class Moteur;
 
 class Etat
 {
 	public :
-
+		Etat();
 		virtual void execute();
 		virtual void setMessage(std::string mes);
 		//virtual std::string getMessage() const;

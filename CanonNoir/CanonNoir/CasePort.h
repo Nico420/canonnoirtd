@@ -28,4 +28,9 @@ inline int CasePort::getCouleur() const{
 	this->couleur;
 }
 
+//Penser à vérifier le score du joueur car s'il a 3 trésors dans ce port, Etat PartieGagnee !
+inline int CasePort::getEtat() const{
+	return LANCERDESDEPLACEMENT;
+}
+
 #endif
