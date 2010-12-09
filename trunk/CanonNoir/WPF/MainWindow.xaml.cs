@@ -19,38 +19,16 @@ namespace WPF
     /// </summary>
     public partial class MainWindow : Window
     {
-        bool test=true;
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        private void canvas1_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            if (test)
-            {
-                button3.Content = "17";
-                test = false;
-            }
-            else
-            {
-                button3.Content = "15";
-                test = true;
-            }
-        }
-
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            if (test)
-            {
-                button3.Content = "17";
-                test = false;
-            }
-            else
-            {
-                button3.Content = "15";
-                test = true;
-            }
+            Init.Visibility = System.Windows.Visibility.Hidden;
+            Jeu.Visibility = System.Windows.Visibility.Visible;
         }
+
     }
 }
