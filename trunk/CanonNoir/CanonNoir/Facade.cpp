@@ -5,5 +5,4 @@ Facade::Facade(){
 }
 
 Facade::~Facade(){
-	delete motor;
 }

@@ -4,16 +4,20 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-#include "CasePort.h"
-#include "LancerDesDeplacement.h"
+#pragma once
 
-bool CasePort::getEstNavigable(){
+#include "CasePort.h"
+
+CasePort::CasePort(){
+	this->CasePort::CasePort();
+}
+
+bool CasePort::getEstNavigable() const{
 	return this->estNavigable; //Test si une case port est navigable.
 			//Vérifier si un bateau peut aller sur un port qui n'a pas sa couleur.
 }
 
-Etat& CasePort::getEtat(){
-			LancerDesDeplacement e = LancerDesDeplacement();
-			return e;
-		}
+int CasePort::getEtat() const{
+	return 0;
+}
 

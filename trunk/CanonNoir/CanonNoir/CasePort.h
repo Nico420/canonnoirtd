@@ -5,21 +5,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-#pragma once
+#ifndef CASEPORT_H
+#define CASEPORT_H
 
+#pragma once
 #include "Case.h"
 
 class CasePort : public Case
 {
 	private :
-
 		int couleur;
 
 	public :
-
-		inline int getCouleur(){return couleur;};
-		bool getEstNavigable();
-		class Etat& getEtat();
+		CasePort();
+		int getCouleur() const;
+		bool getEstNavigable() const;
+		int getEtat() const;
 
 }; 
 
+inline int CasePort::getCouleur() const{
+	this->couleur;
+}
+
+#endif
