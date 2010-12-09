@@ -4,14 +4,12 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-#include "Case.h"
-#include"LancerDesDeplacement.h"
+#include "CaseTresor.h"
 
-class CaseTresor : public Case
-{
-	public :
-		Etat& CaseTresor::getEtat(){	
-			return LancerDesDeplacement();
-		}
-}; 
+CaseTresor::CaseTresor(){
+	this->Case::Case();
+}
 
+int CaseTresor::getEtat() const{	
+	return 0;
+}

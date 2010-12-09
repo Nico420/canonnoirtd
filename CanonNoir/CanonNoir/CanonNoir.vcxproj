@@ -129,6 +129,7 @@
     <ClInclude Include="SetOrdreJoueurs.h" />
     <ClInclude Include="TirCanon.h" />
     <ClInclude Include="TirCanonDuel.h" />
+    <ClInclude Include="TirCanonUnique.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

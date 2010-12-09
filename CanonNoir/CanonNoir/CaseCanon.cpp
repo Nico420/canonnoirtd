@@ -11,7 +11,7 @@ CaseCanon::CaseCanon(){
 	this->Case::Case();
 }
 
-Etat& CaseCanon::getEtat(){
-	return TirCanonUnique();
+int CaseCanon::getEtat() const{
+	return 0;
 }
 

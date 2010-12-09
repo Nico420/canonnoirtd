@@ -4,18 +4,25 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+#pragma once
+
 #include "CaseNormale.h"
-#include "Case.h"
-#include"LancerDesDeplacement.h"
 
+CaseNormale::CaseNormale(){
+	this->Case::Case();
+}
 
+bool CaseNormale::estAuBord() const{
+	return false;
+} //On ne peut pas implémenter cette méthode, il faut la remonter dans PLateau.
 
-bool CaseNormale::estAuBord(){return false;} //On ne peut pas implémenter cette méthode, il faut la remonter dans PLateau.
-		bool CaseNormale::getEstNavigable(){return this->estNavigable;}
-		//Renvoie l'état dans lequel doit être le moteur après cett case !
-		Etat& CaseNormale::getEtat(){
-			//Appeler le changement de joueur ?
-			LancerDesDeplacement e = LancerDesDeplacement();
-			return e;
-		}
+bool CaseNormale::getEstNavigable() const{
+	return this->estNavigable;
+}
+
+//Renvoie l'état dans lequel doit être le moteur après cette case !
+int CaseNormale::getEtat() const{
+	//Appeler le changement de joueur ?
+	return 0;
+}
 

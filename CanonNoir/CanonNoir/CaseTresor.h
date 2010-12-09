@@ -5,19 +5,25 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-#pragma once
+#ifndef CASETRESOR_H
+#define CASETRESOR_H
 
+#pragma once
 #include "Case.h"
 
 class CaseTresor : public Case
 {
 	private :
-
 		int nbTresors;
 
 	public :
-
-		inline int getNbTresors(){return nbTresors;}
-		class Etat& getEtat();
+		CaseTresor();
+		int getNbTresors() const;
+		int getEtat() const;
 }; 
 
+inline int CaseTresor::getNbTresors() const{
+	return this->nbTresors;
+}
+
+#endif

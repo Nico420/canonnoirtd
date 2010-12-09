@@ -5,18 +5,20 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-#pragma once
+#ifndef CASENORMALE_H
+#define CASENORMALE_H
 
+#pragma once
 #include "Case.h"
 
 class CaseNormale : public Case
 {
-
 	public :
+		CaseNormale();
+		bool estAuBord() const;
+		bool getEstNavigable() const;
+		int getEtat() const;
 
-		virtual bool estAuBord();
-		inline bool getEstNavigable();
-		class Etat& getEtat();
+};
 
-}; 
-
+#endif

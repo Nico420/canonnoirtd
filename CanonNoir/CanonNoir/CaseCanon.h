@@ -5,16 +5,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-#pragma once
+#ifndef CASECANON_H
+#define CASECANON_H
 
+#pragma once
 #include "Case.h"
 
 class CaseCanon : public Case
 {
-
 	public :
 		CaseCanon();
-		class Etat& getEtat();
+		int getEtat() const;
 
 }; 
 
+#endif

@@ -27,7 +27,7 @@ class Moteur
 		~Moteur();
 		void setNbJoueurs(int nb);
 		void setEtat(Etat& e);
-		void deplacerBateau(Bateau& b, Case& dest);
+		void deplacerBateau(Bateau& b,int destx,int desty);
 		void execute();
 		int getNbJoueurs() const;
 		int getJoueurCourant() const;

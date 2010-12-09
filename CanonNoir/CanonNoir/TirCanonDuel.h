@@ -6,8 +6,9 @@
 //------------------------------------------------------------------------------
 
 #pragma once
+#include "TirCanon.h"
 
-class TirCanonDuel : public TirerCanon
+class TirCanonDuel : public TirCanon
 {
 	private :
 
@@ -29,8 +30,8 @@ class TirCanonDuel : public TirerCanon
 
 		virtual void choisirCible();
 		virtual bool estPremierTir();
-		override void execute();
-		virtual void setJoueurOppose(object int num);
+		void execute();
+		virtual void setJoueurOppose(int num);
 		virtual void echangeDuel();
 
 }; 

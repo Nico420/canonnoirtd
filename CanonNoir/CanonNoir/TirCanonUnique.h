@@ -7,9 +7,9 @@
 
 #pragma once
 
-#include "TirerCanon.h"
+#include "TirCanon.h"
 
-class TirCanonUnique : public TirerCanon
+class TirCanonUnique : public TirCanon
 {
 	private :
 
