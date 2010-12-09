@@ -27,8 +27,4 @@ inline int CaseTresor::getNbTresors() const{
 	return this->nbTresors;
 }
 
-inline int CaseTresor::getEtat() const{
-	return LANCERDESDEPLACEMENT;
-}
-
 #endif

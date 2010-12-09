@@ -15,8 +15,6 @@ class Case
 	protected :
 		int hauteur;
 		bool estNavigable;
-		enum Etats { ATTENTENBJOUEURS=1,CHOISIRPORT=2,SETORDREJOUEURS=3,LANCERDESDEPLACEMENT=4,NAVIGATION=5,
-			TIRCANONDUEL=6,TIRCANONUNIQUE=7,PARTIEGAGNEE=8 };
 
 	public :
 

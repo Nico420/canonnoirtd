@@ -5,6 +5,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 #include "CaseTresor.h"
+#include "Moteur.h"
 
 CaseTresor::CaseTresor(){
 	this->Case::Case();
@@ -13,4 +14,8 @@ CaseTresor::CaseTresor(){
 CaseTresor::CaseTresor(int nbtres){
 	this->Case::Case(0,true);
 	this->nbTresors = nbtres;
+}
+
+int CaseTresor::getEtat() const{
+	return Moteur::LANCERDESDEPLACEMENT;
 }

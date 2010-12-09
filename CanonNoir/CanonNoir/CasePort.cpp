@@ -7,6 +7,7 @@
 #pragma once
 
 #include "CasePort.h"
+#include "Moteur.h"
 
 CasePort::CasePort(){
 	this->Case::Case();
@@ -17,3 +18,7 @@ bool CasePort::getEstNavigable() const{
 			//Vérifier si un bateau peut aller sur un port qui n'a pas sa couleur.
 }
 
+//Penser à vérifier le score du joueur car s'il a 3 trésors dans ce port, Etat PartieGagnee !
+int CasePort::getEtat() const{
+	return Moteur::LANCERDESDEPLACEMENT;
+}

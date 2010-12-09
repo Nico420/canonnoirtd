@@ -7,6 +7,7 @@
 #pragma once
 
 #include "CaseNormale.h"
+#include "Moteur.h"
 
 CaseNormale::CaseNormale(){
 	this->Case::Case();
@@ -24,9 +25,9 @@ bool CaseNormale::getEstNavigable() const{
 //Renvoie l'état dans lequel doit être le moteur après cette case !
 int CaseNormale::getEtat() const{
 	if(auBord){
-		return TIRCANONDUEL;
+		return Moteur::TIRCANONDUEL;
 	}
 	else{
-		return LANCERDESDEPLACEMENT;
+		return Moteur::LANCERDESDEPLACEMENT;
 	}
 }
