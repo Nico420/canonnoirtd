@@ -12,6 +12,7 @@ void ChoisirPort::execute(){
 	else{
 		mes +=  ", lancer les dés pour déterminer l'ordre des joueurs.";
 		this->setMessage(mes);
+		this->moteur->setEtat(Moteur::SETORDREJOUEURS);
 	}
 	this->moteur->setJoueurCourant((joueurCourant+1)%nbJoueurs);
 }

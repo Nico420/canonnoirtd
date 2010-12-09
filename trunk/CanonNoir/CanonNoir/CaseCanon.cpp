@@ -5,9 +5,12 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 #include "CaseCanon.h"
-#include "TirCanonUnique.h"
+#include "Moteur.h"
 
 CaseCanon::CaseCanon(){
 	this->Case::Case(0,true);
 }
 
+int CaseCanon::getEtat() const{
+	return Moteur::TIRCANONUNIQUE;
+}

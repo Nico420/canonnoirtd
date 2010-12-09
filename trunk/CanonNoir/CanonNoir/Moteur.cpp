@@ -1,13 +1,21 @@
 #include "Moteur.h"
+#include "AttenteNbJoueurs.h"
+#include "ChoisirPort.h"
+#include "SetOrdreJoueurs.h"
+#include "LancerDesDeplacement.h"
+#include "Navigation.h"
+#include "TirCanonDuel.h"
+#include "TirCanonUnique.h"
+#include "PartieGagnee.h"
 
 Moteur::Moteur(){
 	this->nbJoueurs = 0;
-	this->joueurCourant = -1;
+	this->joueurCourant = 1;
 	this->des[0] = De::De();
 	this->des[1] = De::De();
 	this->plateau = Plateau::Plateau();
 	for(int i=0;i<6;i++){
-		this->etats[i] = new Etat();
+		this->etat= new AttenteNbJoueurs();
 	}
 }
 
@@ -15,5 +23,41 @@ Moteur::~Moteur(){
 }
 
 void Moteur::setNbJoueurs(int nb){
+	this->nbJoueurs = nb;
+	this->setEtat(CHOISIRPORT);
+	this->execute();
+}
 
+void Moteur::setEtat(int e){
+	delete this->etat;
+	switch(e) {
+		case ATTENTENBJOUEURS:
+			this->etat = new AttenteNbJoueurs();
+			break;
+		case CHOISIRPORT:
+			this->etat = new ChoisirPort();
+			break; 
+		case SETORDREJOUEURS: 
+			this->etat = new SetOrdreJoueurs();
+			break;
+		case LANCERDESDEPLACEMENT:
+			this->etat = new LancerDesDeplacement();
+			break;
+		case NAVIGATION:
+			this->etat = new Navigation();
+			break;
+		case TIRCANONDUEL:
+			this->etat = new TirCanonDuel();
+			break;
+		case TIRCANONUNIQUE:
+			this->etat = new TirCanonUnique();
+			break;
+		case PARTIEGAGNEE:
+			this->etat = new PartieGagnee();
+			break;
+	}
+}
+
+void Moteur::execute(){
+	this->etat->execute();
 }

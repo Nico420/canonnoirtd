@@ -15,7 +15,6 @@ class Moteur;
 class Etat
 {
 	public :
-		Etat();
 		virtual void execute();
 		virtual void setMessage(std::string mes);
 		//virtual std::string getMessage() const;

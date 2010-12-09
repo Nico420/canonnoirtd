@@ -13,7 +13,7 @@
 class ChoisirPort : public Etat
 {
 	private :
-		int* portsLibres;
+		int portsLibres [4];
 
 	protected :
 		std::string message;
@@ -23,7 +23,7 @@ class ChoisirPort : public Etat
 		ChoisirPort() : message(""),moteur(NULL){};
 		ChoisirPort(std::string mess,Moteur* mot) : message(mess),moteur(mot){};
 		void execute();
-		void setPortsLibres(int* pl);
+		void setPortsLibres(int i);
 		int* getPortsLibres();
 
 }; 
@@ -32,8 +32,8 @@ inline int* ChoisirPort::getPortsLibres(){
 	return this->portsLibres;
 }
 
-void ChoisirPort::setPortsLibres(int* pl){
-	this->portsLibres = pl;
+inline void ChoisirPort::setPortsLibres(int i){
+	//a redef
 }
 
 #endif

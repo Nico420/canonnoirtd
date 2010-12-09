@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include "LancerDes.h";
+#include "LancerDes.h"
 
 class LancerDesDeplacement : public LancerDes
 {

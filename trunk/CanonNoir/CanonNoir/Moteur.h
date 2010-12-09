@@ -23,7 +23,7 @@ class Moteur
 		De des [2];
 		std::vector<Joueur> joueurs;
 		Plateau plateau;
-		Etat* etats [6];
+		Etat* etat;
 
 	public :
 		Moteur();
@@ -35,7 +35,8 @@ class Moteur
 		int getNbJoueurs() const;
 		int getJoueurCourant() const;
 		void setJoueurCourant(int jc);
-
+		enum Etats { ATTENTENBJOUEURS=1,CHOISIRPORT=2,SETORDREJOUEURS=3,LANCERDESDEPLACEMENT=4,NAVIGATION=5,
+			TIRCANONDUEL=6,TIRCANONUNIQUE=7,PARTIEGAGNEE=8 };
 };
 
 inline int Moteur::getNbJoueurs() const{

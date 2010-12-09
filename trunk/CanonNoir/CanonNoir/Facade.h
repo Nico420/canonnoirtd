@@ -37,7 +37,6 @@ class Facade
 		bool getAttenteNbJoueurs();
 		int* getScores();
 		int getNbDes();
-		void setNbJoueurs(int nb);
 		int* getPortsLibres();
 		bool afficheBateaux();
 		bool afficheRelief();
@@ -49,6 +48,8 @@ class Facade
 		void setCible(int nb);
 		void setDeplacement(int x, int y);
 
+		void setNbJoueurs(int nb);
+		void setClick(int x,int y);
 }; 
 
 #endif
