@@ -28,6 +28,12 @@ void Moteur::setNbJoueurs(int nb){
 	this->execute();
 }
 
+void Moteur::setClick(int x,int y){
+	this->click.first = x;
+	this->click.second = y;
+	this->execute();
+}
+
 void Moteur::setEtat(int e){
 	delete this->etat;
 	switch(e) {
