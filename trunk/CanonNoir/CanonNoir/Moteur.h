@@ -38,6 +38,7 @@ class Moteur
 		void setClick(int x,int y);
 		int getJoueurCourant() const;
 		void setJoueurCourant(int jc);
+		Etat* getEtat() const;
 		enum Etats { ATTENTENBJOUEURS=1,CHOISIRPORT=2,SETORDREJOUEURS=3,LANCERDESDEPLACEMENT=4,NAVIGATION=5,
 			TIRCANONDUEL=6,TIRCANONUNIQUE=7,PARTIEGAGNEE=8 };
 };
@@ -49,10 +50,6 @@ inline int Moteur::getNbJoueurs() const{
 inline std::pair<int,int> Moteur::getClick() const{
 	return this->click;
 }
-inline void Moteur::setClick(int x,int y){
-	this->click.first = x;
-	this->click.second = y;
-}
 
 inline int Moteur::getJoueurCourant() const{
 	return joueurCourant;
@@ -60,6 +57,10 @@ inline int Moteur::getJoueurCourant() const{
 
 inline void Moteur::setJoueurCourant(int jc){
 	this->joueurCourant = jc;
+}
+
+inline Etat* Moteur::getEtat() const{
+	return this->etat;
 }
 
 #endif

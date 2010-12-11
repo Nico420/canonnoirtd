@@ -17,6 +17,8 @@ class Etat
 	public :
 		virtual void execute();
 		virtual void setMessage(std::string mes);
+		virtual int* getPortsLibres() const;
+		virtual std::string getMessage() const;
 		//virtual std::string getMessage() const;
 
 };

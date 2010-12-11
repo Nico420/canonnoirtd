@@ -18,6 +18,12 @@ class AttenteNbJoueurs : public Etat
 	public :
 		AttenteNbJoueurs() : message(""),moteur(NULL){};
 		AttenteNbJoueurs(std::string mess,Moteur* mot) : message(mess),moteur(mot){};
+		~AttenteNbJoueurs();
+		std::string getMessage() const;
 		void execute();
 
 }; 
+
+std::string AttenteNbJoueurs::getMessage() const{
+	return this->message;
+}

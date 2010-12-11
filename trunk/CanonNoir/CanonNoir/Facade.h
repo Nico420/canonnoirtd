@@ -10,12 +10,23 @@
 
 #pragma once
 #include <vector>
+#include <typeinfo>
 #include "Moteur.h"
 
 class Facade
 {
 	private :
 		Moteur* motor;
+
+		bool affichePlateau;
+		bool afficheCanon;
+		std::string message;
+		bool afficheAttenteNbJoueurs;
+		bool afficheJeuNormal;
+		bool activeDe1;
+		bool activeDe2;
+		bool activeLancerDes;
+		int* portsLibres;
 
 	public :
 		Facade();
@@ -41,7 +52,7 @@ class Facade
 		bool afficheBateaux();
 		bool afficheRelief();
 		bool afficheScores();
-		bool afficheDes();
+		bool affichePortsLibres();
 		void setAngle(int angle);
 		void setPuissance(int puissance);
 		void lancerDes();
@@ -51,9 +62,5 @@ class Facade
 		void setNbJoueurs(int nb);
 		void setClick(int x,int y);
 };
-
-inline void Facade::setNbJoueurs(int nb){
-	this->motor->setNbJoueurs(nb);
-}
 
 #endif
