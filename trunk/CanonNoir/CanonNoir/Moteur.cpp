@@ -11,15 +11,15 @@
 Moteur::Moteur(){
 	this->nbJoueurs = 0;
 	this->joueurCourant = 1;
-	this->des[0] = De::De();
-	this->des[1] = De::De();
+	this->click = std::make_pair(0,0);
+	this->des.first = De::De();
+	this->des.second = De::De();
 	this->plateau = Plateau::Plateau();
-	for(int i=0;i<6;i++){
-		this->etat= new AttenteNbJoueurs();
-	}
+	this->etat= new AttenteNbJoueurs();
 }
 
 Moteur::~Moteur(){
+	delete this->etat;
 }
 
 void Moteur::setNbJoueurs(int nb){

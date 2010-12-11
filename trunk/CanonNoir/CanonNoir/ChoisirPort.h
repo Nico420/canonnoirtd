@@ -20,8 +20,8 @@ class ChoisirPort : public Etat
 		Moteur* moteur;
 
 	public :
-		ChoisirPort() : message(""),moteur(NULL){};
-		ChoisirPort(std::string mess,Moteur* mot) : message(mess),moteur(mot){};
+		ChoisirPort();
+		ChoisirPort(std::string mess,Moteur* mot);
 		void execute();
 		void setPortsLibres(int i);
 		int* getPortsLibres();
@@ -33,7 +33,7 @@ inline int* ChoisirPort::getPortsLibres(){
 }
 
 inline void ChoisirPort::setPortsLibres(int i){
-	//a redef
+	this->portsLibres[i-1] = 0;
 }
 
 #endif

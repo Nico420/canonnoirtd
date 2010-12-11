@@ -20,7 +20,8 @@ class Moteur
 		int nbJoueurs;
 		std::vector<int> ordreJoueurs;
 		int joueurCourant;
-		De des [2];
+		std::pair<int,int> click;
+		std::pair<De,De> des;
 		std::vector<Joueur> joueurs;
 		Plateau plateau;
 		Etat* etat;
@@ -33,6 +34,8 @@ class Moteur
 		void deplacerBateau(Bateau& b,int destx,int desty);
 		void execute();
 		int getNbJoueurs() const;
+		std::pair<int,int> getClick()const;
+		void setClick(int x,int y);
 		int getJoueurCourant() const;
 		void setJoueurCourant(int jc);
 		enum Etats { ATTENTENBJOUEURS=1,CHOISIRPORT=2,SETORDREJOUEURS=3,LANCERDESDEPLACEMENT=4,NAVIGATION=5,
@@ -41,6 +44,14 @@ class Moteur
 
 inline int Moteur::getNbJoueurs() const{
 	return nbJoueurs;
+}
+
+inline std::pair<int,int> Moteur::getClick() const{
+	return this->click;
+}
+inline void Moteur::setClick(int x,int y){
+	this->click.first = x;
+	this->click.second = y;
 }
 
 inline int Moteur::getJoueurCourant() const{
