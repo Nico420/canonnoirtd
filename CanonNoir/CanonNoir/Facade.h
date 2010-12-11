@@ -50,6 +50,10 @@ class Facade
 
 		void setNbJoueurs(int nb);
 		void setClick(int x,int y);
-}; 
+};
+
+inline void Facade::setNbJoueurs(int nb){
+	this->motor->setNbJoueurs(nb);
+}
 
 #endif
