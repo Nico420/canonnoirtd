@@ -11,9 +11,20 @@ namespace Wrapper {
 		private: 
 			AttenteNbJoueur* nbJoueurW;
 	public:
-		WrapperNbjoueurs(){nbJoueurW=AttenteNbJoueurs_New();
-		~WrapperNbjoueurs(){AttenteNbJoueurs_Delete(nbJoueurW)};
+		WrapperNbjoueurs(){
+			nbJoueurW=AttenteNbJoueurs_New();
+		};
+
+		~WrapperNbjoueurs(){
+			AttenteNbJoueurs_Delete(nbJoueurW)
+		};
+
+		System::Void setNbJoueur(int a){
+			nbJoueurW->setNbJoueur(a);
+		};
 	protected:
-		!WrapperNbjoueurs(){AttenteNbJoueurs_Delete(nbJoueurW)};
+		!WrapperNbjoueurs(){
+			AttenteNbJoueurs_Delete(nbJoueurW);
+		};
 	};
 }

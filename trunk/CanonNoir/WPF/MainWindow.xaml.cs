@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+//using Wrapper;
 
 namespace WPF
 {
@@ -19,16 +20,36 @@ namespace WPF
     /// </summary>
     public partial class MainWindow : Window
     {
+        //WrapperNbJoueur nbJ;
         public MainWindow()
         {
             InitializeComponent();
+            //nbJ = new WrapperNbJoueur();
         }
 
+        private void test(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("TEST" + Mouse.GetPosition(canvas1));
+        }
         private void button1_Click(object sender, RoutedEventArgs e)
         {
             Init.Visibility = System.Windows.Visibility.Hidden;
             Jeu.Visibility = System.Windows.Visibility.Visible;
+            //nbJ.setNbJoueur(2);
         }
+            private void button2_Click(object sender, RoutedEventArgs e)
+        {
+            Init.Visibility = System.Windows.Visibility.Hidden;
+            Jeu.Visibility = System.Windows.Visibility.Visible;
+            //nbJ.setNbJoueur(3);
+        }
+        private void button3_Click(object sender, RoutedEventArgs e)
+        {
+            Init.Visibility = System.Windows.Visibility.Hidden;
+            Jeu.Visibility = System.Windows.Visibility.Visible;
+            //nbJ.setNbJoueur(4);
+        }
+
 
     }
 }
