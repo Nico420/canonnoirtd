@@ -4,11 +4,6 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-#ifndef ETAT_H
-#define ETAT_H
-
-#pragma once
-
 #define WANTDLLEXP
 
 #ifdef WANTDLLEXP		//exportation dll 
@@ -19,6 +14,11 @@
 		#define EXTERNC 
 		
 #endif
+
+#ifndef ETAT_H
+#define ETAT_H
+
+#pragma once
 
 #include <string>
 class Moteur;
