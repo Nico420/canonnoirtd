@@ -7,9 +7,12 @@
 
 #pragma once
 
-#include "Etat.h"
+#include <iostream>
 
-class AttenteNbJoueurs : public Etat
+#include "Etat.h"
+using namespace std;
+
+class DLL AttenteNbJoueurs : public Etat
 {
 	protected :
 		std::string message;
@@ -24,6 +27,9 @@ class AttenteNbJoueurs : public Etat
 
 }; 
 
-std::string AttenteNbJoueurs::getMessage() const{
+inline std::string AttenteNbJoueurs::getMessage() const{
 	return this->message;
 }
+
+EXTERNC DLL AttenteNbJoueurs* AttenteNbJoueurs_New();
+EXTERNC DLL void setNbJoueur(int a);

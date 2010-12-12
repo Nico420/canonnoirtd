@@ -9,6 +9,17 @@
 
 #pragma once
 
+#define WANTDLLEXP
+
+#ifdef WANTDLLEXP		//exportation dll 
+		#define DLL  __declspec( dllexport ) 
+		#define EXTERNC extern "C"
+#else
+		#define DLL		//standard
+		#define EXTERNC 
+		
+#endif
+
 #include <string>
 class Moteur;
 
