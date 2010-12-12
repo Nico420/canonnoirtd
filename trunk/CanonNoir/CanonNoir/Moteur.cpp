@@ -38,28 +38,28 @@ void Moteur::setEtat(int e){
 	delete this->etat;
 	switch(e) {
 		case ATTENTENBJOUEURS:
-			this->etat = new AttenteNbJoueurs();
+			this->etat = new AttenteNbJoueurs("",this);
 			break;
 		case CHOISIRPORT:
-			this->etat = new ChoisirPort();
+			this->etat = new ChoisirPort("",this);
 			break; 
 		case SETORDREJOUEURS: 
-			this->etat = new SetOrdreJoueurs();
+			this->etat = new SetOrdreJoueurs("",this);
 			break;
 		case LANCERDESDEPLACEMENT:
-			this->etat = new LancerDesDeplacement();
+			this->etat = new LancerDesDeplacement("",this);
 			break;
 		case NAVIGATION:
-			this->etat = new Navigation();
+			this->etat = new Navigation("",this);
 			break;
 		case TIRCANONDUEL:
-			this->etat = new TirCanonDuel();
+			this->etat = new TirCanonDuel("",this);
 			break;
 		case TIRCANONUNIQUE:
-			this->etat = new TirCanonUnique();
+			this->etat = new TirCanonUnique("",this);
 			break;
 		case PARTIEGAGNEE:
-			this->etat = new PartieGagnee();
+			this->etat = new PartieGagnee("",this);
 			break;
 	}
 }

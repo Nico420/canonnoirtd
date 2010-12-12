@@ -27,7 +27,8 @@ class TirCanonDuel : public TirCanon
 
 
 	public :
-
+		TirCanonDuel();
+		TirCanonDuel(std::string mess,Moteur* mot);
 		virtual void choisirCible();
 		virtual bool estPremierTir();
 		void execute();

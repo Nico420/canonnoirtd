@@ -28,6 +28,7 @@ class TirCanonUnique : public TirCanon
 
 	public :
 		TirCanonUnique();
+		TirCanonUnique(std::string mess,Moteur* mot);
 		void setCible(int num);
 		void execute();
 
