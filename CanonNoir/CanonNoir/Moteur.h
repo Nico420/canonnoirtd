@@ -39,6 +39,7 @@ class Moteur
 		int getJoueurCourant() const;
 		void setJoueurCourant(int jc);
 		Etat* getEtat() const;
+		const Plateau& getPlateau() const;
 		enum Etats { ATTENTENBJOUEURS=1,CHOISIRPORT=2,SETORDREJOUEURS=3,LANCERDESDEPLACEMENT=4,NAVIGATION=5,
 			TIRCANONDUEL=6,TIRCANONUNIQUE=7,PARTIEGAGNEE=8 };
 };
@@ -61,6 +62,10 @@ inline void Moteur::setJoueurCourant(int jc){
 
 inline Etat* Moteur::getEtat() const{
 	return this->etat;
+}
+
+inline const Plateau& Moteur::getPlateau() const{
+	return this->plateau;
 }
 
 #endif

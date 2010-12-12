@@ -25,8 +25,10 @@ class Facade
 		bool afficheJeuNormal;
 		bool activeDe1;
 		bool activeDe2;
+		bool activeCases;
 		bool activeLancerDes;
-		int* portsLibres;
+		int* casesActivesX;
+		int* casesActivesY;
 
 	public :
 		Facade();
