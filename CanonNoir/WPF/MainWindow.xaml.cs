@@ -29,25 +29,35 @@ namespace WPF
 
         private void test(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("TEST" + Mouse.GetPosition(canvas1));
+            MessageBox.Show("TEST " + Mouse.GetPosition(canvas1));
+            Window1 w = new Window1();
+            w.Show();
+        }
+        private void init_Jeu()
+        {
+            Init.Visibility = System.Windows.Visibility.Hidden;
+            System.Windows.Thickness t = new Thickness(4, 40, 0, 0);
+            Jeu.Margin = t;
+            Jeu.Visibility = System.Windows.Visibility.Visible;
         }
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            Init.Visibility = System.Windows.Visibility.Hidden;
-            Jeu.Visibility = System.Windows.Visibility.Visible;
+            this.init_Jeu();
             //nbJ.setNbJoueur(2);
         }
             private void button2_Click(object sender, RoutedEventArgs e)
         {
-            Init.Visibility = System.Windows.Visibility.Hidden;
-            Jeu.Visibility = System.Windows.Visibility.Visible;
+            this.init_Jeu();
             //nbJ.setNbJoueur(3);
         }
         private void button3_Click(object sender, RoutedEventArgs e)
         {
-            Init.Visibility = System.Windows.Visibility.Hidden;
-            Jeu.Visibility = System.Windows.Visibility.Visible;
+            this.init_Jeu();
             //nbJ.setNbJoueur(4);
+        }
+        private void fullscreen(object sender, RoutedEventArgs e)
+        {
+            this.WindowState= System.Windows.WindowState.Maximized;
         }
 
 
