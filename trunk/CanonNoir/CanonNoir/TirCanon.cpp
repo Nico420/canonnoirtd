@@ -23,3 +23,6 @@ TirCanon::TirCanon(std::string mess,Moteur* mot){
 	this->message = mess;
 	this->moteur = mot;
 }
+
+void TirCanon::execute(){
+}

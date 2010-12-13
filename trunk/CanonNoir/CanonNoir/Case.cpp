@@ -9,3 +9,7 @@ void Case::libereCase(){
 	this->hauteur=0;
 
 }
+
+int Case::getEtat() const{
+	return 0;
+}

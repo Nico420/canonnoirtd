@@ -22,12 +22,12 @@ class DLL AttenteNbJoueurs : public Etat
 		AttenteNbJoueurs() : message(""),moteur(NULL){};
 		AttenteNbJoueurs(std::string mess,Moteur* mot) : message(mess),moteur(mot){};
 		~AttenteNbJoueurs();
-		std::string getMessage() const;
+		string getMessage() const;
 		void execute();
 
 }; 
 
-inline std::string AttenteNbJoueurs::getMessage() const{
+inline string AttenteNbJoueurs::getMessage() const{
 	return this->message;
 }
 

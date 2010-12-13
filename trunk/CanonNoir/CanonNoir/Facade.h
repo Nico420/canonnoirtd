@@ -27,6 +27,8 @@ class Facade
 		bool activeDe2;
 		bool activeCases;
 		bool activeLancerDes;
+		int de1;
+		int de2;
 		int* casesActivesX;
 		int* casesActivesY;
 
@@ -57,12 +59,12 @@ class Facade
 		bool affichePortsLibres();
 		void setAngle(int angle);
 		void setPuissance(int puissance);
-		void lancerDes();
 		void setCible(int nb);
 		void setDeplacement(int x, int y);
 
 		void setNbJoueurs(int nb);
 		void setClick(int x,int y);
+		void lancerDes();
 };
 
 #endif

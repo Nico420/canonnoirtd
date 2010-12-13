@@ -9,6 +9,9 @@ ChoisirPort::ChoisirPort(){
 		this->portsLibres[i] = 1;
 	}
 	this->compteur = 0;
+	this->port1 = 0;
+	this->port2 = 0;
+	this->etatsuivant = 0;
 }
 
 ChoisirPort::ChoisirPort(Moteur* mot){
@@ -18,9 +21,13 @@ ChoisirPort::ChoisirPort(Moteur* mot){
 		this->portsLibres[i] = 1;
 	}
 	this->compteur = 0;
+	this->port1 = 0;
+	this->port2 = 0;
+	this->etatsuivant = Moteur::CHOISIRPORT;
 }
 
 ChoisirPort::~ChoisirPort(){
+	delete this->portsLibres;
 }
 
 bool ChoisirPort::estLibre(int i) const{
@@ -46,16 +53,22 @@ void ChoisirPort::execute(){
 				this->moteur->addJoueur(joueurCourant-1,joueurCourant,1,nbport);
 			}
 			else{
-
+				if(this->compteur==1) this->port1 = nbport;
+				if(this->compteur==2) this->port2 = nbport;
+				else if(this->compteur==3) this->moteur->addJoueur(joueurCourant-1,joueurCourant,2,this->port1,nbport);
 			}
 			mes +=  ", choisir un port.";
 			this->setMessage(mes);
 			this->setPortsLibres(nbport);
 		}
 		else{
+			if(nbJoueurs==2) this->moteur->addJoueur(joueurCourant-1,joueurCourant,2,this->port2,nbport);
+			else this->moteur->addJoueur(joueurCourant-1,joueurCourant,1,nbport);
 			mes +=  ", lancer les dés pour déterminer l'ordre des joueurs.";
 			this->setMessage(mes);
-			this->moteur->setEtat(Moteur::SETORDREJOUEURS);
+			this->etatsuivant = Moteur::SETORDREJOUEURS;
 		}
 	}
+	else mes +=  ", choisir un port.";
+	this->setMessage(mes);
 }

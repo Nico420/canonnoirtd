@@ -1,11 +1,14 @@
 #include "De.h"
 
+De::De(){
+	numero = 1;
+}
+
 De::De(int nb){
 	numero = nb;
 }
 
 De::~De(){
-	numero = 1;
 }
 
 void De::lancerDe(){

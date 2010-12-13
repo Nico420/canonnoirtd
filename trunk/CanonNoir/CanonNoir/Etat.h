@@ -30,6 +30,7 @@ class Etat
 		virtual void setMessage(std::string mes);
 		virtual int* getPortsLibres() const;
 		virtual std::string getMessage() const;
+		virtual int getEtat() const;
 		//virtual std::string getMessage() const;
 
 };

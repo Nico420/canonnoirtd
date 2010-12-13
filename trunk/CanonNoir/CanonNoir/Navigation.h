@@ -8,6 +8,7 @@
 #pragma once
 
 #include "Case.h"
+#include "Etat.h"
 #include <vector>
 
 class Navigation : public Etat
