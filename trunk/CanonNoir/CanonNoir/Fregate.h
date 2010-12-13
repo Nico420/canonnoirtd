@@ -13,7 +13,7 @@
 class Fregate : public Bateau
 {
 	public :
-
+		Fregate();
 		Fregate(bool tres, int posx, int posy, int posPortx, int posPorty);
 		Fregate(const Bateau& bat);
 		~Fregate();

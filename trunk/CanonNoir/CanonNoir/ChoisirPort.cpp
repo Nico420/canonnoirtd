@@ -8,14 +8,16 @@ ChoisirPort::ChoisirPort(){
 	for(int i=0;i<4;i++){
 		this->portsLibres[i] = 1;
 	}
+	this->compteur = 0;
 }
 
-ChoisirPort::ChoisirPort(std::string mess,Moteur* mot){
-	this->message = mess;
+ChoisirPort::ChoisirPort(Moteur* mot){
+	this->message = "";
 	this->moteur = mot;
 	for(int i=0;i<4;i++){
 		this->portsLibres[i] = 1;
 	}
+	this->compteur = 0;
 }
 
 ChoisirPort::~ChoisirPort(){
@@ -37,7 +39,15 @@ void ChoisirPort::execute(){
 	else if(x==1 && y==8) nbport = 3;
 	else if(x==11 && y==8) nbport = 4;
 	if(nbport!=0 && this->estLibre(nbport)){
-		if(joueurCourant<nbJoueurs-1 || (nbJoueurs==2 && joueurCourant==1)){
+		this->compteur++;
+		this->moteur->setJoueurCourant((joueurCourant+1)%(nbJoueurs+1));
+		if(joueurCourant<nbJoueurs || (nbJoueurs==2 && this->compteur<4)){
+			if(nbJoueurs>2){
+				this->moteur->addJoueur(joueurCourant-1,joueurCourant,1,nbport);
+			}
+			else{
+
+			}
 			mes +=  ", choisir un port.";
 			this->setMessage(mes);
 			this->setPortsLibres(nbport);
@@ -47,6 +57,5 @@ void ChoisirPort::execute(){
 			this->setMessage(mes);
 			this->moteur->setEtat(Moteur::SETORDREJOUEURS);
 		}
-		this->moteur->setJoueurCourant((joueurCourant+1)%nbJoueurs);
 	}
 }

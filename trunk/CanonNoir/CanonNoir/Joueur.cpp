@@ -4,6 +4,12 @@
 #include "Radeau.h"
 #include <typeinfo>
 
+Joueur::Joueur(){
+	this->num = 0;
+	this->bateaux[0] = Caravelle();
+	this->bateaux[1] = Caravelle();
+}
+
 Joueur::Joueur(int num,int nbBat,int nbPort1,int nbPort2){
 	this->num = num;
 	this->score[nbPort1] = 0;
