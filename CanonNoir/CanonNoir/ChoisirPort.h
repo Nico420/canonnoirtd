@@ -14,6 +14,7 @@ class ChoisirPort : public Etat
 {
 	private :
 		int* portsLibres;
+		int compteur;
 
 	protected :
 		std::string message;
@@ -21,7 +22,7 @@ class ChoisirPort : public Etat
 
 	public :
 		ChoisirPort();
-		ChoisirPort(std::string mess,Moteur* mot);
+		ChoisirPort(Moteur* mot);
 		~ChoisirPort();
 		void execute();
 		void setPortsLibres(int i);

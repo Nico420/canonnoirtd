@@ -1,5 +1,9 @@
 #include "Radeau.h"
 
+Radeau::Radeau(){
+	this->Bateau::Bateau();
+}
+
 Radeau::Radeau(int posx, int posy, int posPortx, int posPorty){
 	this->Bateau::Bateau(1,false,posx,posy,posPortx,posPorty);
 }

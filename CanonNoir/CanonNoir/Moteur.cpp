@@ -41,7 +41,7 @@ void Moteur::setEtat(int e){
 			this->etat = new AttenteNbJoueurs("",this);
 			break;
 		case CHOISIRPORT:
-			this->etat = new ChoisirPort("",this);
+			this->etat = new ChoisirPort(this);
 			break; 
 		case SETORDREJOUEURS: 
 			this->etat = new SetOrdreJoueurs("",this);
@@ -66,4 +66,8 @@ void Moteur::setEtat(int e){
 
 void Moteur::execute(){
 	this->etat->execute();
+}
+
+void Moteur::addJoueur(int ind,int num,int nbBat,int nbPort1,int nbPort2){
+	this->joueurs[ind] = Joueur::Joueur(num,nbBat,nbPort1,nbPort2=0);
 }

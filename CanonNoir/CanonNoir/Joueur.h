@@ -18,7 +18,7 @@ class Joueur
 		Bateau bateaux [2];
 		
 	public :
-
+		Joueur();
 		Joueur(int num,int nbBat,int nbPort1,int nbPort2=0);
 		~Joueur();
 		void degraderBateau(int x,int y);

@@ -40,6 +40,7 @@ class Moteur
 		void setJoueurCourant(int jc);
 		Etat* getEtat() const;
 		const Plateau& getPlateau() const;
+		void addJoueur(int ind,int num,int nbBat,int nbPort1,int nbPort2=0);
 		enum Etats { ATTENTENBJOUEURS=1,CHOISIRPORT=2,SETORDREJOUEURS=3,LANCERDESDEPLACEMENT=4,NAVIGATION=5,
 			TIRCANONDUEL=6,TIRCANONUNIQUE=7,PARTIEGAGNEE=8 };
 };
