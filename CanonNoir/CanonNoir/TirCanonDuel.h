@@ -14,18 +14,6 @@ class TirCanonDuel : public TirCanon
 
 		bool premierTir;
 
-	protected :
-
-
-	public :
-
-
-	private :
-
-
-	protected :
-
-
 	public :
 		TirCanonDuel();
 		TirCanonDuel(std::string mess,Moteur* mot);

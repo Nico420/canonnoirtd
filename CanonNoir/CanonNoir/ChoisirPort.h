@@ -15,6 +15,9 @@ class ChoisirPort : public Etat
 	private :
 		int* portsLibres;
 		int compteur;
+		int port1;
+		int port2;
+		int etatsuivant;
 
 	protected :
 		std::string message;
@@ -29,6 +32,7 @@ class ChoisirPort : public Etat
 		int* getPortsLibres() const;
 		bool estLibre(int i) const;
 		std::string getMessage() const;
+		int getEtat() const;
 
 }; 
 
@@ -42,6 +46,10 @@ inline void ChoisirPort::setPortsLibres(int i){
 
 inline std::string ChoisirPort::getMessage() const{
 	return this->message;
+}
+
+inline int ChoisirPort::getEtat() const{
+	return this->etatsuivant;
 }
 
 #endif

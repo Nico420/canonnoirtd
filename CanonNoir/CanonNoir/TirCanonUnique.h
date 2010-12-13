@@ -13,19 +13,6 @@ class TirCanonUnique : public TirCanon
 {
 	private :
 
-
-	protected :
-
-
-	public :
-
-
-	private :
-
-
-	protected :
-
-
 	public :
 		TirCanonUnique();
 		TirCanonUnique(std::string mess,Moteur* mot);

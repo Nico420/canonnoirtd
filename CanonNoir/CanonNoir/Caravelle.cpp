@@ -16,5 +16,4 @@ Caravelle::Caravelle(const Bateau* bat){
 }
 
 Caravelle::~Caravelle(){
-
 }

@@ -18,7 +18,7 @@ class LancerDes : public Etat
 	public :
 		LancerDes() : message(""),moteur(NULL){};
 		LancerDes(std::string mess,Moteur* mot) : message(mess),moteur(mot){};
-		virtual void execute() = 0;
+		virtual void execute();
 
 }; 
 
