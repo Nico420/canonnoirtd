@@ -6,25 +6,25 @@ using namespace System;
 
 namespace Wrapper {
 
-	public ref class WrapperNbJoueurs
+	public ref class WrapperFacade
 	{
 		private: 
-			AttenteNbJoueur* nbJoueurW;
+			Facade* FacadeW;
 	public:
-		WrapperNbjoueurs(){
-			nbJoueurW=AttenteNbJoueurs_New();
+		WrapperFacade(){
+			FacadeW=AttenteNbJoueurs_New();
 		};
 
 		~WrapperNbjoueurs(){
-			AttenteNbJoueurs_Delete(nbJoueurW)
+			AttenteNbJoueurs_Delete(FacadeW)
 		};
 
 		System::Void setNbJoueur(int a){
-			nbJoueurW->setNbJoueur(a);
+			FacadeW->setNbJoueur(a);
 		};
 	protected:
 		!WrapperNbjoueurs(){
-			AttenteNbJoueurs_Delete(nbJoueurW);
+			Facade_Delete(FacadeW);
 		};
 	};
 }
