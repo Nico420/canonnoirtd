@@ -1,7 +1,8 @@
 // Wrapper.h
 
-#pragma once
-#include "../CanonNoir/AttenteNbJoueurs.h";
+#include "../CanonNoir/Facade.h"
+#pragma comment (lib,"CanonNoir.lib")
+
 using namespace System;
 
 namespace Wrapper {
@@ -12,18 +13,67 @@ namespace Wrapper {
 			Facade* FacadeW;
 	public:
 		WrapperFacade(){
-			FacadeW=AttenteNbJoueurs_New();
+			FacadeW=Facade_New();
 		};
 
-		~WrapperNbjoueurs(){
-			AttenteNbJoueurs_Delete(FacadeW)
+		~WrapperFacade(){
+			Facade_Delete(FacadeW);
 		};
 
-		System::Void setNbJoueur(int a){
-			FacadeW->setNbJoueur(a);
+		System::Void setNbJoueurs(int a){
+			FacadeW->setNbJoueurs(a);
 		};
+
+		System::Void setAngle(int a){
+			FacadeW->setAngle(a);
+		};
+
+		bool activerDes(){
+			return FacadeW->activerDes();
+		};
+		bool activerCases(){
+			return FacadeW->activerCases();
+		};
+		bool activerPorts(){
+			return FacadeW->activerPorts();
+		};
+		bool afficheCurseurAngle(){
+			return FacadeW->afficheCurseurAngle();
+		};
+		bool afficheCurseurPuissance(){
+			return FacadeW->afficheCurseurPuissance();
+		};
+		std::vector<std::pair<int,int>> getRelief();
+		bool afficheGagnant(){
+			return FacadeW->afficheGagnant();
+		};
+		bool activerBateaux(){
+			return FacadeW->activerBateaux();
+		};
+		bool afficheTir(){
+			return FacadeW->afficheTir();
+		};
+		void init();
+		int getNbJoueurs(){
+			return FacadeW->getNbJoueurs();
+		};
+		bool getAttenteNbJoueurs(){
+			return FacadeW->getAttenteNbJoueurs();
+		};
+		int* getScores();
+		int getNbDes();
+		int* getPortsLibres();
+		bool afficheBateaux();
+		bool afficheRelief();
+		bool afficheScores();
+		bool affichePortsLibres();
+		void setPuissance(int puissance);
+		void setCible(int nb);
+		void setDeplacement(int x, int y);
+		void setClick(int x,int y);
+		void lancerDes();
 	protected:
-		!WrapperNbjoueurs(){
+		!WrapperFacade(){
 			Facade_Delete(FacadeW);
 		};
 	};

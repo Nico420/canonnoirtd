@@ -1,4 +1,4 @@
-﻿La génération a démarré 12/12/2010 15:42:38.
+﻿La génération a démarré 14/12/2010 19:59:22.
      1>Projet "C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\Wrapper\Wrapper.vcxproj" sur le nœud 2 (build cible(s)).
      1>InitializeBuildStatus:
          Mise à jour de l'horodatage "Debug\Wrapper.unsuccessfulbuild".
@@ -8,15 +8,26 @@
          Toutes les sorties sont à jour.
          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDLL /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\Wrapper.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt Wrapper.cpp /clr:nostdlib 
          Wrapper.cpp
-     1>c:\users\nicolas\documents\insa\canonnoirtd\canonnoir\wrapper\Wrapper.h(4): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
-     1>c:\users\nicolas\documents\insa\canonnoirtd\canonnoir\wrapper\Wrapper.h(12): error C2143: erreur de syntaxe : absence de ';' avant '*'
-     1>c:\users\nicolas\documents\insa\canonnoirtd\canonnoir\wrapper\Wrapper.h(12): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
-     1>c:\users\nicolas\documents\insa\canonnoirtd\canonnoir\wrapper\Wrapper.h(12): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
-     1>c:\users\nicolas\documents\insa\canonnoirtd\canonnoir\wrapper\Wrapper.h(14): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
-     1>c:\users\nicolas\documents\insa\canonnoirtd\canonnoir\wrapper\Wrapper.h(18): warning C4183: 'WrapperNbjoueurs' : type de retour manquant ; fonction membre retournant 'int' prise par défaut
-     1>Wrapper.cpp(7): fatal error C1075: fin de fichier rencontrée avant que l'élément accolade '{' gauche de 'c:\users\nicolas\documents\insa\canonnoirtd\canonnoir\wrapper\Wrapper.h(7)' soit équilibré
+     1>c:\users\nicolas\documents\insa\canonnoirtd\canonnoir\wrapper\../CanonNoir/Facade.h(34): warning C4251: 'Facade::message' : class 'std::basic_string<_Elem,_Traits,_Ax>' nécessite une interface DLL pour être utilisé(e) par les clients de class 'Facade'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>,
+                     _Ax=std::allocator<char>
+                 ]
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDLL /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /TP /analyze- /errorReport:prompt "C:\Users\Nicolas\AppData\Local\Temp\.NETFramework,Version=v4.0.AssemblyAttributes.cpp"
+         .NETFramework,Version=v4.0.AssemblyAttributes.cpp
+       ResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /D _UNICODE /D UNICODE /l"0x0409" /nologo /fo"Debug\app.res" app.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\Debug\Wrapper.dll" /INCREMENTAL /NOLOGO /MANIFEST /ManifestFile:"Debug\Wrapper.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\Debug\Wrapper.pdb" /ASSEMBLYDEBUG /TLBID:1 /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 /DLL Debug\app.res
+         Debug\AssemblyInfo.obj
+         Debug\Stdafx.obj
+         Debug\Wrapper.obj
+         "Debug\.NETFramework,Version=v4.0.AssemblyAttributes.obj"
+     1>LINK : fatal error LNK1104: impossible d'ouvrir le fichier 'CanonNoir.lib'
      1>Génération du projet "C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\Wrapper\Wrapper.vcxproj" terminée (build cible(s)) -- ÉCHEC.
 
 ÉCHEC de la build.
 
-Temps écoulé 00:00:00.51
+Temps écoulé 00:00:01.91
