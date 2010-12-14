@@ -7,7 +7,7 @@
             <ColumnDefinition Width="284*" />
             <ColumnDefinition Width="594*" />
         </Grid.ColumnDefinitions>
-        <TextBlock Height="23" HorizontalAlignment="Left" Margin="262,25,0,0" Name="textBlock2" Text="JEU DU CANON NOIR" VerticalAlignment="Top" TextAlignment="Center" FontWeight="Bold" FontSize="12" Grid.ColumnSpan="2" FontStyle="Italic" />
+        <TextBlock Height="23" HorizontalAlignment="Center" Margin="0,25,0,0" Name="textBlock2" Text="JEU DU CANON NOIR" VerticalAlignment="Top" TextAlignment="Center" FontWeight="Bold" FontSize="12" Grid.ColumnSpan="2" FontStyle="Italic" />
         <Canvas Height="459" MouseLeftButtonDown="test" HorizontalAlignment="Left" Margin="142,44,0,0" Name="canvas1" VerticalAlignment="Top" Width="652" Grid.ColumnSpan="2">
             <Image Source="Images/plateau.jpg" Width="652" Height="459" Stretch="UniformToFill"/>
             <Grid Height="459" Name="grid1" Width="636" Background="{Binding}">

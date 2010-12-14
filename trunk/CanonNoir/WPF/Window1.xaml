@@ -8,6 +8,9 @@
             <TextBlock Text="Choissiez l'angle de Tir !" Width="99" Height="30" TextTrimming="None" TextWrapping="WrapWithOverflow" />
             <Image Name="angle" Source="Images/select_angle.png" Margin="0,20,0,0" MouseLeftButtonDown="choixAngle" ></Image>
         </StackPanel>
-        
+        <StackPanel Visibility="Hidden" Height="152" HorizontalAlignment="Left" Margin="232,72,0,0" Name="puissance" VerticalAlignment="Top" Width="121">
+            <TextBlock Height="49" Name="textBlock1" Text="Choissez la puissance du Tir !" Width="120" TextWrapping="WrapWithOverflow" />
+            <Image Height="101" Source="images/jauge_puissance.png" Name="image1" Stretch="Fill" Width="50" />
+        </StackPanel>
     </Grid>
 </Window>
