@@ -10,6 +10,8 @@
 #include <iostream>
 
 #include "Etat.h"
+#include "Facade.h"
+
 using namespace std;
 
 class DLL AttenteNbJoueurs : public Etat

@@ -4,16 +4,6 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-#define WANTDLLEXP
-
-#ifdef WANTDLLEXP		//exportation dll 
-		#define DLL  __declspec( dllexport ) 
-		#define EXTERNC extern "C"
-#else
-		#define DLL		//standard
-		#define EXTERNC 
-		
-#endif
 
 #ifndef ETAT_H
 #define ETAT_H

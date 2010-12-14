@@ -5,6 +5,17 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+#define WANTDLLEXP
+
+#ifdef WANTDLLEXP		//exportation dll 
+		#define DLL  __declspec( dllexport ) 
+		#define EXTERNC extern "C"
+#else
+		#define DLL		//standard
+		#define EXTERNC 
+		
+#endif
+
 #ifndef FACADE_H
 #define FACADE_H
 
@@ -13,7 +24,7 @@
 #include <typeinfo>
 #include "Moteur.h"
 
-class Facade
+class DLL Facade
 {
 	private :
 		Moteur* motor;
@@ -67,4 +78,7 @@ class Facade
 		void lancerDes();
 };
 
+EXTERNC DLL Facade* Facade_New();
+EXTERNC DLL void Facade_Delete(Facade*);
+EXTERNC DLL void setNbJoueur(int a);
 #endif
