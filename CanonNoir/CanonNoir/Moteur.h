@@ -37,6 +37,7 @@ class Moteur
 		std::pair<int,int> getClick()const;
 		void setClick(int x,int y);
 		int getJoueurCourant() const;
+		std::vector<int> getOrdreJoueurs() const;
 		void setJoueurCourant(int jc);
 		Etat* getEtat() const;
 		std::pair<De,De> getDes() const;
@@ -56,6 +57,10 @@ inline std::pair<int,int> Moteur::getClick() const{
 
 inline int Moteur::getJoueurCourant() const{
 	return joueurCourant;
+}
+
+inline std::vector<int> Moteur::getOrdreJoueurs() const{
+	return this->ordreJoueurs;
 }
 
 inline void Moteur::setJoueurCourant(int jc){

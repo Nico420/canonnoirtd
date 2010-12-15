@@ -65,6 +65,7 @@ void Facade::setClick(int x,int y){
 		this->activeLancerDes = true;
 		this->activeDe1 = true;
 		this->activeDe2 = true;
+		this->activeCases = false;
 	}
 }
 
@@ -73,4 +74,8 @@ void Facade::lancerDes(){
 	this->message = this->motor->getEtat()->getMessage();
 	this->de1 = this->motor->getDes().first.getNum();
 	this->de2 = this->motor->getDes().second.getNum();
+	if(this->motor->getEtat()->getEtat()==Moteur::LANCERDESDEPLACEMENT){
+		this->motor->setEtat(Moteur::LANCERDESDEPLACEMENT);
+		this->activeCases = false;
+	}
 }
