@@ -7,8 +7,8 @@ SetOrdreJoueurs::SetOrdreJoueurs(){
 	this->etatsuivant = 0;
 }
 
-SetOrdreJoueurs::SetOrdreJoueurs(std::string mess,Moteur* mot){
-	this->LancerDes::LancerDes(mess,mot);
+SetOrdreJoueurs::SetOrdreJoueurs(Moteur* mot){
+	this->LancerDes::LancerDes(mot);
 	this->etatsuivant = Moteur::SETORDREJOUEURS;
 }
 

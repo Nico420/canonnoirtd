@@ -38,16 +38,16 @@ void Moteur::setEtat(int e){
 	delete this->etat;
 	switch(e) {
 		case ATTENTENBJOUEURS:
-			this->etat = new AttenteNbJoueurs("",this);
+			this->etat = new AttenteNbJoueurs(this);
 			break;
 		case CHOISIRPORT:
 			this->etat = new ChoisirPort(this);
 			break; 
 		case SETORDREJOUEURS: 
-			this->etat = new SetOrdreJoueurs("",this);
+			this->etat = new SetOrdreJoueurs(this);
 			break;
 		case LANCERDESDEPLACEMENT:
-			this->etat = new LancerDesDeplacement("",this);
+			this->etat = new LancerDesDeplacement(this);
 			break;
 		case NAVIGATION:
 			this->etat = new Navigation("",this);

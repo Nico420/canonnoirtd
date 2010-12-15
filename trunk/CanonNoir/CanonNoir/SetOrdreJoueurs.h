@@ -22,7 +22,7 @@ class SetOrdreJoueurs : public LancerDes
 
 	public :
 		SetOrdreJoueurs();
-		SetOrdreJoueurs(std::string mess,Moteur* mot);
+		SetOrdreJoueurs(Moteur* mot);
 		void setOrdreJoueurs(int j);
 		void execute();
 		int getEtat() const;

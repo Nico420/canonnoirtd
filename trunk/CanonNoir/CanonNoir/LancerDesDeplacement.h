@@ -28,7 +28,7 @@ class LancerDesDeplacement : public LancerDes
 
 	public :
 		LancerDesDeplacement();
-		LancerDesDeplacement(std::string mess,Moteur* mot);
+		LancerDesDeplacement(Moteur* mot);
 		virtual void lancerDes();
 		void execute();
 
