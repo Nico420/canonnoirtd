@@ -8,9 +8,14 @@
 #pragma once
 
 #include "LancerDes.h"
+#include <map>
 
 class SetOrdreJoueurs : public LancerDes
 {
+	private :
+		std::map<int,int> scoreDesJoueurs;
+		int etatsuivant;
+
 	protected :
 		std::string message;
 		Moteur* moteur;
@@ -20,5 +25,10 @@ class SetOrdreJoueurs : public LancerDes
 		SetOrdreJoueurs(std::string mess,Moteur* mot);
 		void setOrdreJoueurs(int j);
 		void execute();
+		int getEtat() const;
 
 };
+
+inline int SetOrdreJoueurs::getEtat() const{
+	return this->etatsuivant;
+}
