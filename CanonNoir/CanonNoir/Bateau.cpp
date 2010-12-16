@@ -17,3 +17,7 @@ Bateau::Bateau(int nbDes, bool tres, int posx, int posy, int posPortx, int posPo
 
 Bateau::~Bateau(){
 }
+
+int Bateau::getNbDes() const{
+	return 0;
+}

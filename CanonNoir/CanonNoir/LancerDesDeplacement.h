@@ -9,17 +9,20 @@
 #pragma once
 
 #include "LancerDes.h"
-#include <vector>
+#include <set>
 
 class LancerDesDeplacement : public LancerDes
 {
 	private :
-		std::vector<std::pair<int,int>> casesDeplacement;
+		std::set<std::pair<int,int>> casesDeplacement;
 	public :
 		LancerDesDeplacement();
 		LancerDesDeplacement(Moteur* mot);
 		void execute();
-		void calculCasesDeplacement(int scoreDe);
+		void calculCasesDeplacement(int de1,int de2);
+		std::set<std::pair<int,int>> calculCasesDeplacementRec(const std::pair<int,int> caseDepart,const std::set<std::pair<int,int>> casesChemin);
+		static double distCases(const std::pair<int,int>& case1,const std::pair<int,int>& case2);
+		std::set<std::pair<int,int>> casesAutour(const std::pair<int,int>& case1);
 }; 
 
 #endif

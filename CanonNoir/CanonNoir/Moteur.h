@@ -41,7 +41,8 @@ class Moteur
 		void setJoueurCourant(int jc);
 		Etat* getEtat() const;
 		std::pair<De,De> getDes() const;
-		const Plateau& getPlateau() const;
+		Joueur& getJoueur(int nb);
+		Plateau& getPlateau();
 		void addJoueur(int ind,int num,int nbBat,int nbPort1,int nbPort2=0);
 		enum Etats { ATTENTENBJOUEURS=1,CHOISIRPORT=2,SETORDREJOUEURS=3,LANCERDESDEPLACEMENT=4,NAVIGATION=5,
 			TIRCANONDUEL=6,TIRCANONUNIQUE=7,PARTIEGAGNEE=8 };
@@ -75,8 +76,12 @@ inline std::pair<De,De> Moteur::getDes() const{
 	return this->des;
 }
 
-inline const Plateau& Moteur::getPlateau() const{
+inline Plateau& Moteur::getPlateau(){
 	return this->plateau;
+}
+
+inline Joueur& Moteur::getJoueur(int nb){
+	return this->joueurs.at(nb-1);
 }
 
 #endif

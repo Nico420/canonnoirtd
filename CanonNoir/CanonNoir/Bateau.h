@@ -27,6 +27,7 @@ class Bateau
 		virtual bool aTresorABord() const;
 		virtual void enleveTresor();
 		virtual void donneTresor();
+		virtual int getNbDes() const;
 		std::pair<int,int> getPosition() const;
 		std::pair<int,int> getPositionPort() const;
 

@@ -16,7 +16,11 @@ class Fregate : public Bateau
 		Fregate(bool tres, int posx, int posy, int posPortx, int posPorty);
 		Fregate(const Bateau& bat);
 		~Fregate();
+		int getNbDes() const;
+};
 
-}; 
+inline int Fregate::getNbDes() const{
+	return 1;
+}
 
 #endif

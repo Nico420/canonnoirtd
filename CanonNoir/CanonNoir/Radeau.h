@@ -17,7 +17,11 @@ class Radeau : public Bateau
 		Radeau(int posx, int posy, int posPortx, int posPorty);
 		Radeau(const Bateau& bat);
 		~Radeau();
+		int getNbDes() const;
+};
 
-}; 
+inline int Radeau::getNbDes() const{
+	return 1;
+}
 
 #endif

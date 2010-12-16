@@ -16,7 +16,11 @@ class Caravelle : public Bateau
 		Caravelle(bool tres, int posx, int posy, int posPortx, int posPorty);
 		Caravelle(const Bateau* bat);
 		~Caravelle();
-
+		int getNbDes() const;
 };
+
+inline int Caravelle::getNbDes() const{
+	return 2;
+}
 
 #endif
