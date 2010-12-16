@@ -28,5 +28,7 @@ C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\WPF\obj\x86\Debug\WPF.g.re
 C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\WPF\obj\x86\Debug\WPF.Properties.Resources.resources
 C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\WPF\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\WPF\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\Debug\WPF.exe
+C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\Debug\WPF.pdb
 C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\WPF\obj\x86\Debug\WPF.exe
 C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\WPF\obj\x86\Debug\WPF.pdb

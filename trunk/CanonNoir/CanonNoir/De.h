@@ -20,7 +20,7 @@ class De
 	public :
 		De();
 		De(int nb);
-		~De();
+		/*~De();*/
 		void lancerDe();
 		int getNum() const;
 

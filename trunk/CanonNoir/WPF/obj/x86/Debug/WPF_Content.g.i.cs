@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/select_angle.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("wrapper.dll")]
 
 

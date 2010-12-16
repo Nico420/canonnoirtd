@@ -11,7 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-//using Wrapper;
+using Wrapper;
 
 namespace WPF
 {
@@ -20,11 +20,11 @@ namespace WPF
     /// </summary>
     public partial class MainWindow : Window
     {
-        //WrapperNbJoueur nbJ;
+        WrapperFacade FacadeW;
         public MainWindow()
         {
             InitializeComponent();
-            //nbJ = new WrapperNbJoueur();
+            FacadeW = new WrapperFacade();
         }
 
         private void test(object sender, RoutedEventArgs e)
@@ -43,17 +43,17 @@ namespace WPF
         private void button1_Click(object sender, RoutedEventArgs e)
         {
             this.init_Jeu();
-            //nbJ.setNbJoueur(2);
+            FacadeW.setNbJoueurs(2);
         }
             private void button2_Click(object sender, RoutedEventArgs e)
         {
             this.init_Jeu();
-            //nbJ.setNbJoueur(3);
+            FacadeW.setNbJoueurs(3);
         }
         private void button3_Click(object sender, RoutedEventArgs e)
         {
             this.init_Jeu();
-            //nbJ.setNbJoueur(4);
+            FacadeW.setNbJoueurs(4);
         }
         private void fullscreen(object sender, RoutedEventArgs e)
         {
