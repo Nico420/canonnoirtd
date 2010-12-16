@@ -8,8 +8,8 @@ De::De(int nb){
 	numero = nb;
 }
 
-De::~De(){
-}
+/*De::~De(){
+}*/
 
 void De::lancerDe(){
 	srand((unsigned)time(0));

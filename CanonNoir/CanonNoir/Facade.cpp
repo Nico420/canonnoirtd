@@ -87,3 +87,10 @@ void Facade::lancerDes(){
 		this->activeCases = false;
 	}
 }
+
+EXTERNC DLL Facade* Facade_New(){
+	return new Facade();
+}
+EXTERNC DLL void Facade_Delete(Facade* f){
+	f->~Facade();
+}

@@ -81,6 +81,5 @@ class DLL Facade
 };
 
 EXTERNC DLL Facade* Facade_New();
-EXTERNC DLL void Facade_Delete(Facade*);
-EXTERNC DLL void setNbJoueur(int a);
+EXTERNC DLL void Facade_Delete(Facade* f);
 #endif

@@ -1,7 +1,7 @@
 // Wrapper.h
 
 #include "../CanonNoir/Facade.h"
-#pragma comment (lib,"CanonNoir.lib")
+#pragma comment (lib,"../Debug/CanonNoir.lib")
 
 using namespace System;
 
@@ -24,7 +24,7 @@ namespace Wrapper {
 			FacadeW->setNbJoueurs(a);
 		};
 
-		System::Void setAngle(int a){
+		/*System::Void setAngle(int a){
 			FacadeW->setAngle(a);
 		};
 
@@ -71,7 +71,7 @@ namespace Wrapper {
 		void setCible(int nb);
 		void setDeplacement(int x, int y);
 		void setClick(int x,int y);
-		void lancerDes();
+		void lancerDes();*/
 	protected:
 		!WrapperFacade(){
 			Facade_Delete(FacadeW);
