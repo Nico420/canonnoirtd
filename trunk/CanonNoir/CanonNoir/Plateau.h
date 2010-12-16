@@ -26,7 +26,7 @@ class Plateau
 		Case getCase(int x, int y) const;
 		void libereCase(int x,int y);
 		int getEtat(int x,int y) const;
-		virtual bool estNavigable(int x,int y) const;
+		bool estNavigable(int x,int y) const;
 
 }; 
 

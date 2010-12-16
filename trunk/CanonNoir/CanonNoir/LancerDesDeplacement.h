@@ -4,33 +4,22 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
+#ifndef LANCERDESDEPLACEMENT_H
+#define LANCERDESDEPLACEMENT_H
 #pragma once
 
 #include "LancerDes.h"
+#include <vector>
 
 class LancerDesDeplacement : public LancerDes
 {
 	private :
-
-
-	protected :
-
-
-	public :
-
-
-	private :
-
-
-	protected :
-
-
+		std::vector<std::pair<int,int>> casesDeplacement;
 	public :
 		LancerDesDeplacement();
 		LancerDesDeplacement(Moteur* mot);
-		virtual void lancerDes();
 		void execute();
-
+		void calculCasesDeplacement(int scoreDe);
 }; 
 
+#endif

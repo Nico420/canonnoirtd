@@ -4,7 +4,8 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
+#ifndef SETORDREJOUEURS_H
+#define SETORDREJOUEURS_H
 #pragma once
 
 #include "LancerDes.h"
@@ -15,10 +16,6 @@ class SetOrdreJoueurs : public LancerDes
 	private :
 		std::map<int,int> scoreDesJoueurs;
 		int etatsuivant;
-
-	protected :
-		std::string message;
-		Moteur* moteur;
 
 	public :
 		SetOrdreJoueurs();
@@ -32,3 +29,5 @@ class SetOrdreJoueurs : public LancerDes
 inline int SetOrdreJoueurs::getEtat() const{
 	return this->etatsuivant;
 }
+
+#endif

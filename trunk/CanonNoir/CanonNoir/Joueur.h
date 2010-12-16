@@ -4,7 +4,8 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
+#ifndef JOUEUR_H
+#define JOUEUR_H
 #pragma once
 #include "Bateau.h"
 #include <map>
@@ -12,7 +13,6 @@
 class Joueur
 {
 	private :
-
 		std::map<int,int> score;
 		int num;
 		Bateau bateaux [2];
@@ -34,3 +34,5 @@ inline std::map<int,int> Joueur::getScore() const{
 inline int Joueur::getNum() const{
 	return num;
 }
+
+#endif

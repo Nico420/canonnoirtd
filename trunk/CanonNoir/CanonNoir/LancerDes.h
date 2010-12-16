@@ -4,7 +4,8 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
+#ifndef LANCERDES_H
+#define LANCERDES_H
 #pragma once
 
 #include "Etat.h"
@@ -22,3 +23,4 @@ class LancerDes : public Etat
 
 }; 
 
+#endif
