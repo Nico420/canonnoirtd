@@ -24,7 +24,7 @@ class Joueur
 		void degraderBateau(int x,int y);
 		std::map<int,int> getScore() const;
 		int getNum() const;
-
+		Bateau& getBateau(int nb);
 }; 
 
 inline std::map<int,int> Joueur::getScore() const{
@@ -33,6 +33,10 @@ inline std::map<int,int> Joueur::getScore() const{
 
 inline int Joueur::getNum() const{
 	return num;
+}
+
+inline Bateau& Joueur::getBateau(int nb){
+	return this->bateaux[nb-1];
 }
 
 #endif
