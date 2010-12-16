@@ -4,7 +4,8 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
+#ifndef DE_H
+#define DE_H
 #pragma once
 
 #include <stdlib.h>
@@ -28,3 +29,5 @@ class De
 inline int De::getNum() const{
 	return numero;
 }
+
+#endif

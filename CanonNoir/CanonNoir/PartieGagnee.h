@@ -4,9 +4,11 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
+#ifndef PARTIEGAGNEE_H
+#define PARTIEGAGNEE_H
 #pragma once
 #include "Etat.h"
+
 class PartieGagnee : public Etat
 {
 	private :
@@ -18,10 +20,11 @@ class PartieGagnee : public Etat
 
 	public :
 		PartieGagnee() : message(""),moteur(NULL){};
-		PartieGagnee(std::string mess,Moteur* mot) : message(mess),moteur(mot){};
+		PartieGagnee(Moteur* mot) : message(""),moteur(mot){};
 		void afficherGagnant();
 		void execute();
 		int getGagnant();
 
 }; 
 
+#endif

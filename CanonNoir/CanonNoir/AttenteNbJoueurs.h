@@ -4,7 +4,8 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
+#ifndef ATTENTENBJOUEURS_H
+#define ATTENTENBJOUEURS_H
 #pragma once
 
 #include <iostream>
@@ -14,7 +15,7 @@
 
 using namespace std;
 
-class DLL AttenteNbJoueurs : public Etat
+class AttenteNbJoueurs : public Etat
 {
 	protected :
 		std::string message;
@@ -33,5 +34,4 @@ inline string AttenteNbJoueurs::getMessage() const{
 	return this->message;
 }
 
-EXTERNC DLL AttenteNbJoueurs* AttenteNbJoueurs_New();
-EXTERNC DLL void setNbJoueur(int a);
+#endif

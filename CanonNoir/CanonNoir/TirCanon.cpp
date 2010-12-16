@@ -1,27 +1,33 @@
 #include "TirCanon.h"
+#include "Moteur.h"
 
 TirCanon::TirCanon(){
 	this->angle = -1;
 	this->puissance = -1;
-	this->joueurAttaquant = 0;
-	joueurAttaque = -1;
-	tirReussi = false;
+	this->bateauAttaquant = 0;
+	this->bateauAttaque = 0;
+	this->tirReussi = false;
 	this->positionAttaquant = std::make_pair(0,0);
 	this->positionAttaque = std::make_pair(0,0);
 	this->message = "";
 	this->moteur = NULL;
 }
 
-TirCanon::TirCanon(std::string mess,Moteur* mot){
+TirCanon::TirCanon(Moteur* mot){
 	this->angle = -1;
 	this->puissance = -1;
-	this->joueurAttaquant = 0;
-	joueurAttaque = -1;
-	tirReussi = false;
+	this->bateauAttaquant = this->moteur->getJoueurCourant();
+	this->bateauAttaque = 0;
+	this->tirReussi = false;
 	this->positionAttaquant = std::make_pair(0,0);
 	this->positionAttaque = std::make_pair(0,0);
-	this->message = mess;
+	this->message = "";
 	this->moteur = mot;
+}
+
+void TirCanon::setCible(int num){
+	this->bateauAttaque = num;
+	//Fixer la position du bateau correspondante
 }
 
 void TirCanon::execute(){

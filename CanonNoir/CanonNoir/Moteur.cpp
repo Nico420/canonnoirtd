@@ -50,16 +50,16 @@ void Moteur::setEtat(int e){
 			this->etat = new LancerDesDeplacement(this);
 			break;
 		case NAVIGATION:
-			this->etat = new Navigation("",this);
+			this->etat = new Navigation(this);
 			break;
 		case TIRCANONDUEL:
-			this->etat = new TirCanonDuel("",this);
+			this->etat = new TirCanonDuel(this);
 			break;
 		case TIRCANONUNIQUE:
-			this->etat = new TirCanonUnique("",this);
+			this->etat = new TirCanonUnique(this);
 			break;
 		case PARTIEGAGNEE:
-			this->etat = new PartieGagnee("",this);
+			this->etat = new PartieGagnee(this);
 			break;
 	}
 }

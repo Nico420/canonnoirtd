@@ -4,7 +4,8 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
+#ifndef TIRCANONDUEL_H
+#define TIRCANONDUEL_H
 #pragma once
 #include "TirCanon.h"
 
@@ -16,12 +17,15 @@ class TirCanonDuel : public TirCanon
 
 	public :
 		TirCanonDuel();
-		TirCanonDuel(std::string mess,Moteur* mot);
-		virtual void choisirCible();
-		virtual bool estPremierTir();
+		TirCanonDuel(Moteur* mot);
+		bool estPremierTir() const;
 		void execute();
-		virtual void setJoueurOppose(int num);
-		virtual void echangeDuel();
+		void echangeDuel();
 
 }; 
 
+inline bool TirCanonDuel::estPremierTir() const{
+	return this->premierTir;
+}
+
+#endif

@@ -4,7 +4,8 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
+#ifndef NAVIGATION_H
+#define NAVIGATION_H
 #pragma once
 
 #include "Case.h"
@@ -18,8 +19,8 @@ class Navigation : public Etat
 		Moteur* moteur;
 
 	public :
-		Navigation() : message(""){};
-		Navigation(std::string mess,Moteur* mot) : message(mess),moteur(mot){};
+		Navigation() : message(""),moteur(NULL){};
+		Navigation(Moteur* mot) : message(""),moteur(mot){};
 		void execute();
 		std::vector<Case> getCasesAccessibles();
 		void deplacer(int x, int y);
@@ -27,3 +28,4 @@ class Navigation : public Etat
 
 }; 
 
+#endif

@@ -14,6 +14,8 @@ Facade::Facade(){
 	this->affichePlateau = true;
 	this->afficheCanon = false;
 	this->message = this->motor->getEtat()->getMessage();
+	this->scoresBateaux = NULL;
+	this->nbBateaux = 0;
 	this->afficheAttenteNbJoueurs = true;
 	this->afficheJeuNormal = false;
 	this->activeDe1 = false;
@@ -26,11 +28,17 @@ Facade::Facade(){
 
 Facade::~Facade(){
 	delete this->motor;
+	delete[] this->casesActivesX;
+	delete[] this->casesActivesY;
+	delete[] this->scoresBateaux;
 }
 
 void Facade::setNbJoueurs(int nb){
 	this->motor->setNbJoueurs(nb);
 	this->message = this->motor->getEtat()->getMessage();
+	this->nbBateaux = (nb==3)? 3 : 4;
+	this->scoresBateaux = new int[this->nbBateaux];
+	for(int i=0;i<this->nbBateaux;i++) this->scoresBateaux[i] = 0;
 	this->afficheAttenteNbJoueurs = false;
 	this->afficheJeuNormal = true;
 	this->activeDe1 = false;

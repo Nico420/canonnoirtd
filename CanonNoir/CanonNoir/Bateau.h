@@ -4,10 +4,9 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
-#pragma once
 #ifndef BATEAU_H
 #define BATEAU_H
+#pragma once
 #include <utility>
 
 class Bateau
