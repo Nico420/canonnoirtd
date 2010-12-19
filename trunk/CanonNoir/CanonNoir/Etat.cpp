@@ -18,10 +18,10 @@ int Etat::getEtat() const{
 	return 0;
 }
 
-int* Etat::getCasesDeplacement() const{
+int* Etat::getCasesActives() const{
 	return NULL;
 }
 
-int Etat::getNbCasesDeplacement() const{
-	return 0;
+bool Etat::getActiveDe2() const{
+	return false;
 }

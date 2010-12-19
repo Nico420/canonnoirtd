@@ -29,16 +29,12 @@ class ChoisirPort : public Etat
 		~ChoisirPort();
 		void execute();
 		void setPortsLibres(int i);
-		int* getPortsLibres() const;
 		bool estLibre(int i) const;
 		std::string getMessage() const;
+		int* getCasesActives() const;
 		int getEtat() const;
 
-}; 
-
-inline int* ChoisirPort::getPortsLibres() const{
-	return this->portsLibres;
-}
+};
 
 inline void ChoisirPort::setPortsLibres(int i){
 	this->portsLibres[i-1] = 0;

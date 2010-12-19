@@ -16,16 +16,22 @@ class LancerDesDeplacement : public LancerDes
 	private :
 		std::set<std::pair<int,int>> casesDeplacement;
 		int etatsuivant;
+		bool activeDe2;
 	public :
 		LancerDesDeplacement();
 		LancerDesDeplacement(Moteur* mot);
 		void execute();
-		int* getCasesDeplacement() const;
-		int getNbCasesDeplacement() const;
+		int getEtat() const;
+		int* getCasesActives() const;
+		bool getActiveDe2() const;
 		void calculCasesDeplacement(int de1,int de2);
 		std::set<std::pair<int,int>> calculCasesDeplacementRec(const std::pair<int,int> caseDepart,const std::set<std::pair<int,int>> casesChemin);
 		static double distCases(const std::pair<int,int>& case1,const std::pair<int,int>& case2);
 		std::set<std::pair<int,int>> casesAutour(const std::pair<int,int>& case1);
 };
+
+inline bool LancerDesDeplacement::getActiveDe2() const{
+	return this->activeDe2;
+}
 
 #endif

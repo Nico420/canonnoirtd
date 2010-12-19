@@ -43,7 +43,6 @@ class DLL Facade
 		int de1;
 		int de2;
 		int* casesActives;
-		int nbCasesActives;
 
 	public :
 		Facade();

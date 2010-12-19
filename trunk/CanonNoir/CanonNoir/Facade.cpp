@@ -46,19 +46,9 @@ void Facade::setNbJoueurs(int nb){
 void Facade::setClick(int x,int y){
 	this->motor->setClick(x,y);
 	this->message = this->motor->getEtat()->getMessage();
-	if(this->motor->getEtat()->getPortsLibres() != NULL){
-		if(this->motor->getEtat()->getPortsLibres()[0]==1){
-			this->casesActives[0] = 1;
-		}
-		if(this->motor->getEtat()->getPortsLibres()[1]==1){
-			this->casesActives[10] = 1;
-		}
-		if(this->motor->getEtat()->getPortsLibres()[2]==1){
-			this->casesActives[77] = 1;
-		}
-		if(this->motor->getEtat()->getPortsLibres()[3]==1){
-			this->casesActives[87] = 1;
-		}
+	delete[] this->casesActives;
+	this->casesActives = this->motor->getEtat()->getCasesActives();
+	if(this->motor->getEtat()->getEtat()==Moteur::CHOISIRPORT){
 		this->activeCases = true;
 	}
 	if(this->motor->getEtat()->getEtat()==Moteur::SETORDREJOUEURS){
@@ -79,8 +69,14 @@ void Facade::lancerDes(){
 		this->motor->setEtat(Moteur::LANCERDESDEPLACEMENT);
 		this->activeCases = false;
 	}
-	this->casesActives = this->motor->getEtat()->getCasesDeplacement();
-	this->nbCasesActives = this->motor->getEtat()->getNbCasesDeplacement();
+	delete[] this->casesActives;
+	this->casesActives = this->motor->getEtat()->getCasesActives();
+	if(this->motor->getEtat()->getEtat()==Moteur::NAVIGATION){
+		this->activeCases = false;
+		this->activeDe1 = true;
+		this->activeDe2 = this->motor->getEtat()->getActiveDe2();
+		this->activeLancerDes = false;
+	}
 }
 
 EXTERNC DLL Facade* Facade_New(){
