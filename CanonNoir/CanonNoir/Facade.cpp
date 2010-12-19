@@ -5,11 +5,9 @@
 Facade::Facade(){
 	this->motor = new Moteur();
 	int dim = this->motor->getPlateau().getLongueur()*this->motor->getPlateau().getLargeur();
-	this->casesActivesX = new int[dim];
-	this->casesActivesY = new int[dim];
+	this->casesActives = new int[dim];
 	for(int i=0;i<dim;i++){
-		this->casesActivesX[i] = 0;
-		this->casesActivesY[i] = 0;
+		this->casesActives[i] = 0;
 	}
 	this->affichePlateau = true;
 	this->afficheCanon = false;
@@ -28,8 +26,7 @@ Facade::Facade(){
 
 Facade::~Facade(){
 	delete this->motor;
-	delete[] this->casesActivesX;
-	delete[] this->casesActivesY;
+	delete[] this->casesActives;
 	delete[] this->scoresBateaux;
 }
 
@@ -51,20 +48,16 @@ void Facade::setClick(int x,int y){
 	this->message = this->motor->getEtat()->getMessage();
 	if(this->motor->getEtat()->getPortsLibres() != NULL){
 		if(this->motor->getEtat()->getPortsLibres()[0]==1){
-			this->casesActivesX[0] = 1;
-			this->casesActivesY[0] = 1;
+			this->casesActives[0] = 1;
 		}
 		if(this->motor->getEtat()->getPortsLibres()[1]==1){
-			this->casesActivesX[10] = 1;
-			this->casesActivesY[0] = 1;
+			this->casesActives[10] = 1;
 		}
 		if(this->motor->getEtat()->getPortsLibres()[2]==1){
-			this->casesActivesX[0] = 1;
-			this->casesActivesY[7] = 1;
+			this->casesActives[77] = 1;
 		}
 		if(this->motor->getEtat()->getPortsLibres()[3]==1){
-			this->casesActivesX[10] = 1;
-			this->casesActivesY[7] = 1;
+			this->casesActives[87] = 1;
 		}
 		this->activeCases = true;
 	}
@@ -86,6 +79,8 @@ void Facade::lancerDes(){
 		this->motor->setEtat(Moteur::LANCERDESDEPLACEMENT);
 		this->activeCases = false;
 	}
+	this->casesActives = this->motor->getEtat()->getCasesDeplacement();
+	this->nbCasesActives = this->motor->getEtat()->getNbCasesDeplacement();
 }
 
 EXTERNC DLL Facade* Facade_New(){
