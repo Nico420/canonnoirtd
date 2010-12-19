@@ -20,6 +20,8 @@ class Etat
 		virtual int* getPortsLibres() const;
 		virtual std::string getMessage() const;
 		virtual int getEtat() const;
+		virtual int* getCasesDeplacement() const;
+		virtual int getNbCasesDeplacement() const;
 		//virtual std::string getMessage() const;
 
 };

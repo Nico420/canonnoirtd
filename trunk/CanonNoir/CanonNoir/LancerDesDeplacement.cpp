@@ -16,43 +16,66 @@ void LancerDesDeplacement::execute(){
 	int de1 = this->moteur->getDes().first.getNum();
 	int de2 = this->moteur->getDes().second.getNum();
 	this->calculCasesDeplacement(de1,de2);
+	std::string mes = "Joueur ";
+	mes += this->moteur->getJoueurCourant();
+	mes += ", choisissez la case où vous souhaitez vous déplacer.";
+	this->setMessage(mes);
+	this->etatsuivant = Moteur::NAVIGATION;
 }
 
 void LancerDesDeplacement::calculCasesDeplacement(int de1,int de2){
 	int totalDes = de1 + de2;
 	int nbDes = this->moteur->getJoueur(this->moteur->getJoueurCourant()).getBateau(1).getNbDes();
 	std::pair<int,int> caseDepart = this->moteur->getJoueur(this->moteur->getJoueurCourant()).getBateau(1).getPosition();
-	this->casesDeplacement.insert(caseDepart);
+	std::set<std::pair<int,int>> res;
+	res.insert(caseDepart);
 	int i = de1;
 	while(i--!=0){
-		this->casesDeplacement = calculCasesDeplacementRec(caseDepart,this->casesDeplacement);
+		res = calculCasesDeplacementRec(caseDepart,res);
 	}
+	this->casesDeplacement.insert(res.begin(),res.end());
+	res.clear();
+	res.insert(caseDepart);
 	if(nbDes==2){
 		i = de2;
 		while(i--!=0){
-			this->casesDeplacement = calculCasesDeplacementRec(caseDepart,this->casesDeplacement);
+			res = calculCasesDeplacementRec(caseDepart,res);
 		}
+		this->casesDeplacement.insert(res.begin(),res.end());
+		res.clear();
+		res.insert(caseDepart);
 		i = totalDes;
 		while(i--!=0){
-			this->casesDeplacement = calculCasesDeplacementRec(caseDepart,this->casesDeplacement);
+			res = calculCasesDeplacementRec(caseDepart,res);
 		}
+		this->casesDeplacement.insert(res.begin(),res.end());
+		res.clear();
+		res.insert(caseDepart);
 	}
 	if(this->moteur->getNbJoueurs()==2){
 		while(de1!=0){
-			this->casesDeplacement = calculCasesDeplacementRec(caseDepart,this->casesDeplacement);
+			res = calculCasesDeplacementRec(caseDepart,res);
 		}
+		this->casesDeplacement.insert(res.begin(),res.end());
+		res.clear();
+		res.insert(caseDepart);
 		if(nbDes==2){
 			while(de2!=0){
-				this->casesDeplacement = calculCasesDeplacementRec(caseDepart,this->casesDeplacement);
+				res = calculCasesDeplacementRec(caseDepart,res);
 			}
+			this->casesDeplacement.insert(res.begin(),res.end());
+			res.clear();
+			res.insert(caseDepart);
 			while(totalDes!=0){
-				this->casesDeplacement = calculCasesDeplacementRec(caseDepart,this->casesDeplacement);
+				res = calculCasesDeplacementRec(caseDepart,res);
 			}
+			this->casesDeplacement.insert(res.begin(),res.end());
+			res.clear();
 		}
 	}
 }
 
-std::set<std::pair<int,int>> LancerDesDeplacement::calculCasesDeplacementRec(std::pair<int,int> caseDepart,std::set<std::pair<int,int>> casesChemin){
+std::set<std::pair<int,int>> LancerDesDeplacement::calculCasesDeplacementRec(const std::pair<int,int> caseDepart,const std::set<std::pair<int,int>> casesChemin){
 	std::set<std::pair<int,int>> res;
 	std::set<std::pair<int,int>>::iterator it;
 	for(it=casesChemin.begin();it!=casesChemin.end();it++){
@@ -86,4 +109,23 @@ std::set<std::pair<int,int>> LancerDesDeplacement::casesAutour(const std::pair<i
 		}
 	}
 	return res;
+}
+
+int* LancerDesDeplacement::getCasesDeplacement() const{
+	int nbCases = this->moteur->getPlateau().getLongueur() * this->moteur->getPlateau().getLargeur();
+	int* res = new int[nbCases];
+	for(int i=0;i<nbCases;i++){
+		bool boo = false;
+		std::set<std::pair<int,int>>::iterator it;
+		for(it=this->casesDeplacement.begin();it!=this->casesDeplacement.end();it++){
+			int x = (*it).first-1;
+			int y = ((*it).second-1)*this->moteur->getPlateau().getLongueur();
+			if((x+y)==i) res[i] = 1;
+		}
+	}
+	return res;
+}
+
+int LancerDesDeplacement::getNbCasesDeplacement() const{
+	return this->casesDeplacement.size();
 }

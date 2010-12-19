@@ -20,6 +20,8 @@ class LancerDes : public Etat
 		LancerDes() : message(""),moteur(NULL){};
 		LancerDes(Moteur* mot) : message(""),moteur(mot){};
 		virtual void execute();
+		virtual int* getCasesDeplacement() const;
+		virtual int getNbCasesDeplacement() const;
 
 }; 
 

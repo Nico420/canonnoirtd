@@ -17,3 +17,11 @@ std::string Etat::getMessage() const{
 int Etat::getEtat() const{
 	return 0;
 }
+
+int* Etat::getCasesDeplacement() const{
+	return NULL;
+}
+
+int Etat::getNbCasesDeplacement() const{
+	return 0;
+}

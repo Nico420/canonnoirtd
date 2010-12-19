@@ -42,8 +42,8 @@ class DLL Facade
 		bool activeLancerDes;
 		int de1;
 		int de2;
-		int* casesActivesX;
-		int* casesActivesY;
+		int* casesActives;
+		int nbCasesActives;
 
 	public :
 		Facade();
