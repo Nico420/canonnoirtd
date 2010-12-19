@@ -22,10 +22,7 @@ class Navigation : public Etat
 		Navigation() : message(""),moteur(NULL){};
 		Navigation(Moteur* mot) : message(""),moteur(mot){};
 		void execute();
-		std::vector<Case> getCasesAccessibles();
 		void deplacer(int x, int y);
-		void selectionBateauADeplacer();
-
 }; 
 
 #endif

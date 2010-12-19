@@ -20,12 +20,12 @@ void LancerDesDeplacement::execute(){
 	mes += this->moteur->getJoueurCourant();
 	mes += ", choisissez la case où vous souhaitez vous déplacer.";
 	this->setMessage(mes);
-	this->etatsuivant = Moteur::NAVIGATION;
 }
 
 void LancerDesDeplacement::calculCasesDeplacement(int de1,int de2){
 	int totalDes = de1 + de2;
 	int nbDes = this->moteur->getJoueur(this->moteur->getJoueurCourant()).getBateau(1).getNbDes();
+	this->activeDe2 = (nbDes==2);
 	std::pair<int,int> caseDepart = this->moteur->getJoueur(this->moteur->getJoueurCourant()).getBateau(1).getPosition();
 	std::set<std::pair<int,int>> res;
 	res.insert(caseDepart);
@@ -111,7 +111,7 @@ std::set<std::pair<int,int>> LancerDesDeplacement::casesAutour(const std::pair<i
 	return res;
 }
 
-int* LancerDesDeplacement::getCasesDeplacement() const{
+int* LancerDesDeplacement::getCasesActives() const{
 	int nbCases = this->moteur->getPlateau().getLongueur() * this->moteur->getPlateau().getLargeur();
 	int* res = new int[nbCases];
 	for(int i=0;i<nbCases;i++){
@@ -126,6 +126,6 @@ int* LancerDesDeplacement::getCasesDeplacement() const{
 	return res;
 }
 
-int LancerDesDeplacement::getNbCasesDeplacement() const{
-	return this->casesDeplacement.size();
+int LancerDesDeplacement::getEtat() const{
+	return Moteur::NAVIGATION;
 }

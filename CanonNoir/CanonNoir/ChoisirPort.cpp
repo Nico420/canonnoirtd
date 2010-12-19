@@ -72,3 +72,20 @@ void ChoisirPort::execute(){
 	else mes +=  ", choisir un port.";
 	this->setMessage(mes);
 }
+
+int* ChoisirPort::getCasesActives() const{
+	int* res = new int[this->moteur->getPlateau().getLongueur()*this->moteur->getPlateau().getLargeur()];
+	if(this->portsLibres[0]==1){
+		res[0] = 1;
+	}
+	if(this->portsLibres[1]==1){
+		res[10] = 1;
+	}
+	if(this->portsLibres[2]==1){
+		res[77] = 1;
+	}
+	if(this->portsLibres[3]==1){
+		res[87] = 1;
+	}
+	return res;
+}
