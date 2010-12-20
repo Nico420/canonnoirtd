@@ -31,10 +31,10 @@ class Moteur
 		~Moteur();
 		void setNbJoueurs(int nb);
 		void setEtat(int e);
-		void deplacerBateau(Bateau& b,int destx,int desty);
+		//void deplacerBateau(Bateau& b,int destx,int desty);
 		void execute();
 		int getNbJoueurs() const;
-		std::pair<int,int> getClick()const;
+		std::pair<int,int> getClick() const;
 		void setClick(int x,int y);
 		int getJoueurCourant() const;
 		std::vector<int> getOrdreJoueurs() const;

@@ -1,6 +1,5 @@
 #include "Facade.h"
 #include "SetOrdreJoueurs.h"
-#include <typeinfo>
 
 Facade::Facade(){
 	this->motor = new Moteur();
@@ -72,6 +71,7 @@ void Facade::lancerDes(){
 	delete[] this->casesActives;
 	this->casesActives = this->motor->getEtat()->getCasesActives();
 	if(this->motor->getEtat()->getEtat()==Moteur::NAVIGATION){
+		this->motor->setEtat(Moteur::NAVIGATION);
 		this->activeCases = false;
 		this->activeDe1 = true;
 		this->activeDe2 = this->motor->getEtat()->getActiveDe2();
