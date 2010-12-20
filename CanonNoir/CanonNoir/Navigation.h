@@ -14,6 +14,8 @@
 
 class Navigation : public Etat
 {
+	private :
+		int etatsuivant;
 	protected :
 		std::string message;
 		Moteur* moteur;
@@ -23,6 +25,11 @@ class Navigation : public Etat
 		Navigation(Moteur* mot) : message(""),moteur(mot){};
 		void execute();
 		void deplacer(int x, int y);
+		int getEtat() const;
 }; 
+
+inline int Navigation::getEtat() const{
+	return etatsuivant;
+}
 
 #endif
