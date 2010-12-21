@@ -11,10 +11,12 @@
 #include "Case.h"
 #include "Etat.h"
 #include <vector>
+#include <set>
 
 class Navigation : public Etat
 {
 	private :
+		std::set<std::pair<int,int>> casesBateauxCibles;
 		int etatsuivant;
 	protected :
 		std::string message;

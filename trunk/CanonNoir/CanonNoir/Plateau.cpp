@@ -9,11 +9,15 @@ Plateau::Plateau(){
 }
 
 void Plateau::libereCase(int x,int y){
-	tab_case[x][y].libereCase();
+	tab_case[x-1][y-1].libereCase();
+}
+
+void Plateau::occupeCase(int x,int y){
+	tab_case[x-1][y-1].setEstNavigable(false);
 }
 
 int Plateau::getEtat(int x, int y) const{
-	return tab_case[x][y].getEtat();
+	return tab_case[x-1][y-1].getEtat();
 }
 
 bool Plateau::estNavigable(int x, int y) const{
@@ -21,6 +25,6 @@ bool Plateau::estNavigable(int x, int y) const{
 }
 
 
-Case Plateau::getCase(int x, int y) const{
+Case& Plateau::getCase(int x, int y){
 	return tab_case[x][y];
 }

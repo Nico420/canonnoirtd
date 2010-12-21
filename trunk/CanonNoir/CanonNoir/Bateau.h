@@ -12,14 +12,12 @@
 class Bateau
 {
 	protected :
-
 		int nbDes;
 		bool tresorABord;
 		std::pair<int,int> position;
 		std::pair<int,int> positionPort;
 
 	public :
-
 		Bateau();
 		Bateau(int nbDes, bool tres, int posx, int posy, int posPortx, int posPorty);
 		virtual ~Bateau();
@@ -30,7 +28,6 @@ class Bateau
 		virtual int getNbDes() const;
 		std::pair<int,int> getPosition() const;
 		std::pair<int,int> getPositionPort() const;
-
 }; 
 
 inline bool Bateau::aTresorABord() const{
@@ -51,10 +48,6 @@ inline std::pair<int,int> Bateau::getPosition() const{
 
 inline std::pair<int,int> Bateau::getPositionPort() const{
 	return positionPort;
-}
-
-inline void Bateau::deplacer(int x, int y){
-	position.first = x; position.second = y;
 }
 
 #endif

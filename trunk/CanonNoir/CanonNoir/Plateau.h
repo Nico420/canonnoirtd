@@ -23,8 +23,9 @@ class Plateau
 		Plateau();
 		int getLargeur() const;
 		int getLongueur() const;
-		Case getCase(int x, int y) const;
+		Case& getCase(int x, int y);
 		void libereCase(int x,int y);
+		void occupeCase(int x,int y);
 		int getEtat(int x,int y) const;
 		bool estNavigable(int x,int y) const;
 
