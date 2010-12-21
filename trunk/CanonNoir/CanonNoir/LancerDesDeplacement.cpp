@@ -111,7 +111,7 @@ std::set<std::pair<int,int>> LancerDesDeplacement::casesAutour(const std::pair<i
 		for(int j=-1;j<2;j++){
 			int x = case1.first+i;
 			int y = case1.second+j;
-			if((i!=0 || j!=0) && ((x)<=longueur) && ((y)<=largeur)){
+			if((i!=0 || j!=0) && (x<=longueur) && (y<=largeur)){
 				if(this->moteur->getPlateau().estNavigable(x,y)) res.insert(std::make_pair(x,y));
 			}
 		}
