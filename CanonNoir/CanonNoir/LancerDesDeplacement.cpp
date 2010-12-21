@@ -23,6 +23,7 @@ void LancerDesDeplacement::execute(){
 }
 
 void LancerDesDeplacement::calculCasesDeplacement(int de1,int de2){
+	this->moteur->getCasesDeplacementBateau().clear();
 	int totalDes = de1 + de2;
 	int nbDes = this->moteur->getJoueur(this->moteur->getJoueurCourant()).getBateau(1).getNbDes();
 	this->activeDe2 = (nbDes==2);
@@ -52,10 +53,15 @@ void LancerDesDeplacement::calculCasesDeplacement(int de1,int de2){
 		res.clear();
 		res.insert(caseDepart);
 	}
+	this->setCasesDeplacementBateau(this->casesDeplacement,1);
 	if(this->moteur->getNbJoueurs()==2){
+		nbDes = this->moteur->getJoueur(this->moteur->getJoueurCourant()).getBateau(2).getNbDes();
+		this->activeDe2 |= (nbDes==2);
+		caseDepart = this->moteur->getJoueur(this->moteur->getJoueurCourant()).getBateau(2).getPosition();
 		while(de1!=0){
 			res = calculCasesDeplacementRec(caseDepart,res);
 		}
+		this->setCasesDeplacementBateau(res,2);
 		this->casesDeplacement.insert(res.begin(),res.end());
 		res.clear();
 		res.insert(caseDepart);
@@ -63,12 +69,14 @@ void LancerDesDeplacement::calculCasesDeplacement(int de1,int de2){
 			while(de2!=0){
 				res = calculCasesDeplacementRec(caseDepart,res);
 			}
+			this->setCasesDeplacementBateau(res,2);
 			this->casesDeplacement.insert(res.begin(),res.end());
 			res.clear();
 			res.insert(caseDepart);
 			while(totalDes!=0){
 				res = calculCasesDeplacementRec(caseDepart,res);
 			}
+			this->setCasesDeplacementBateau(res,2);
 			this->casesDeplacement.insert(res.begin(),res.end());
 			res.clear();
 		}
@@ -128,4 +136,11 @@ int* LancerDesDeplacement::getCasesActives() const{
 
 int LancerDesDeplacement::getEtat() const{
 	return Moteur::NAVIGATION;
+}
+
+void LancerDesDeplacement::setCasesDeplacementBateau(std::set<std::pair<int,int>> cases,int value){
+	std::set<std::pair<int,int>>::iterator it;
+	for(it=cases.begin();it!=cases.end();it++){
+		this->moteur->getCasesDeplacementBateau().insert(std::pair<std::pair<int,int>,int>(*it,value));
+	}
 }
