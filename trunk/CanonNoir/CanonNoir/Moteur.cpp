@@ -35,7 +35,7 @@ void Moteur::setClick(int x,int y){
 }
 
 void Moteur::setEtat(int e){
-	delete this->etat;
+	//delete this->etat;
 	switch(e) {
 		case ATTENTENBJOUEURS:
 			this->etat = new AttenteNbJoueurs(this);

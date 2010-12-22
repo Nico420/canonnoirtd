@@ -21,7 +21,7 @@ namespace Wrapper {
 		};
 
 		System::Void setNbJoueurs(int a){
-			FacadeW->setNbJoueurs(a);
+			FacadeW->Facade::setNbJoueurs(a);
 		};
 
 		/*System::Void setAngle(int a){
@@ -61,7 +61,11 @@ namespace Wrapper {
 			return FacadeW->getAttenteNbJoueurs();
 		};
 		int* getScores();
-		int getNbDes();
+		*/
+		/*int getNbDes(){
+			FacadeW->;
+		}*/
+		/*
 		int* getPortsLibres();
 		bool afficheBateaux();
 		bool afficheRelief();
@@ -71,7 +75,10 @@ namespace Wrapper {
 		void setCible(int nb);
 		void setDeplacement(int x, int y);
 		void setClick(int x,int y);
-		void lancerDes();*/
+		*/
+		void lancerDes(){
+			FacadeW->lancerDes();
+		}
 	protected:
 		!WrapperFacade(){
 			Facade_Delete(FacadeW);

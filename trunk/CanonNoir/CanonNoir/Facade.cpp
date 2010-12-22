@@ -30,6 +30,7 @@ Facade::~Facade(){
 }
 
 void Facade::setNbJoueurs(int nb){
+	this->motor = new Moteur();
 	this->motor->setNbJoueurs(nb);
 	this->message = this->motor->getEtat()->getMessage();
 	this->nbBateaux = (nb==3)? 3 : 4;
@@ -83,5 +84,5 @@ EXTERNC DLL Facade* Facade_New(){
 	return new Facade();
 }
 EXTERNC DLL void Facade_Delete(Facade* f){
-	f->~Facade();
+	delete f;
 }

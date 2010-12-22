@@ -73,7 +73,6 @@ class DLL Facade
 		void setPuissance(int puissance);
 		void setCible(int nb);
 		void setDeplacement(int x, int y);
-
 		void setNbJoueurs(int nb);
 		void setClick(int x,int y);
 		void lancerDes();
