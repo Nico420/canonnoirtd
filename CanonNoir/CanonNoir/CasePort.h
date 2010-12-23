@@ -20,12 +20,17 @@ class CasePort : public Case
 		CasePort();
 		int getCouleur() const;
 		bool getEstNavigable() const;
+		bool estPort() const;
 		int getEtat() const;
 
 }; 
 
 inline int CasePort::getCouleur() const{
 	this->couleur;
+}
+
+bool CasePort::estPort() const{
+	return true;
 }
 
 #endif

@@ -26,9 +26,11 @@ class Plateau
 		Case& getCase(int x, int y);
 		void libereCase(int x,int y);
 		void occupeCase(int x,int y);
+		void enleveUnTresor(int x,int y);
+		bool estPort(int x,int y) const;
 		int getEtat(int x,int y) const;
 		bool estNavigable(int x,int y) const;
-
+		int getNbTresors(int x,int y) const;
 }; 
 
 inline int Plateau::getLargeur() const{
