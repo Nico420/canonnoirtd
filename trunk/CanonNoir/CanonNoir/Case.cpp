@@ -10,6 +10,9 @@ void Case::libereCase(){
 
 }
 
+void Case::enleveUnTresor(){
+}
+
 int Case::getEtat() const{
 	return 0;
 }

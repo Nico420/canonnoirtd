@@ -20,11 +20,15 @@ class CaseTresor : public Case
 		CaseTresor();
 		CaseTresor(int nbtres);
 		int getNbTresors() const;
+		void enleveUnTresor();
 		int getEtat() const;
 }; 
 
 inline int CaseTresor::getNbTresors() const{
 	return this->nbTresors;
+}
+inline void CaseTresor::enleveUnTresor(){
+	this->nbTresors--;
 }
 
 #endif

@@ -24,6 +24,9 @@ class Case
 		virtual void setEstNavigable(bool b);
 		virtual void libereCase();
 		int getHauteur() const;
+		virtual int getNbTresors() const;
+		virtual void enleveUnTresor();
+		virtual bool estPort() const;
 		virtual int getEtat() const;
 };
 
@@ -38,4 +41,13 @@ inline void Case::setEstNavigable(bool b){
 inline int Case::getHauteur() const{
 	return this->hauteur;
 }
+
+inline int Case::getNbTresors() const{
+	return 0;
+}
+
+inline bool Case::estPort() const{
+	return false;
+}
+
 #endif
