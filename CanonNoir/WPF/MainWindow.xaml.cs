@@ -12,6 +12,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Wrapper;
+using System.Windows.Media.Imaging;
 
 namespace WPF
 {
@@ -78,6 +79,23 @@ namespace WPF
             double num_case = (y-1) * 11 + x;
             MessageBox.Show("Vous avez cliqué ici : " + Mouse.GetPosition(clickZone) + "\nCase : (" +x+";"+ y + ") " + num_case);
 
+        }
+
+        private void LanceDes_Click(object sender, RoutedEventArgs e)
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                Random rdm1 = new Random(unchecked((int)DateTime.Now.Ticks));
+                int a = rdm1.Next(1, 5);
+                des1.Source = new BitmapImage(new Uri("Images/face"+a+".jpg", UriKind.Relative));
+                a = rdm1.Next(1, 5);
+                des2.Source = new BitmapImage(new Uri("Images/face" + a + ".jpg", UriKind.Relative));
+                //Besoin de faire une pause pour que l'on voit les dé changer !
+            }
+            FacadeW.lancerDes();
+            des1.Source = new BitmapImage(new Uri("Images/face" + FacadeW.getDes1() + ".jpg", UriKind.Relative));
+            des2.Source = new BitmapImage(new Uri("Images/face" + FacadeW.getDes2() + ".jpg", UriKind.Relative));
+            MessageBox.Show(FacadeW.getDes1()+" "+FacadeW.getDes2());
         }
 
 

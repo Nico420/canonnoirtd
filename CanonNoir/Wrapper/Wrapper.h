@@ -78,7 +78,14 @@ namespace Wrapper {
 		*/
 		void lancerDes(){
 			FacadeW->lancerDes();
-		}
+		};
+		int getDes1(){
+			return FacadeW->getDes1();
+		};
+		int getDes2(){
+			return FacadeW->getDes2();
+		};
+
 	protected:
 		!WrapperFacade(){
 			Facade_Delete(FacadeW);
