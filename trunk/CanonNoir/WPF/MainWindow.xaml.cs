@@ -12,7 +12,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Wrapper;
-using System.Windows.Media.Imaging;
+using System.Windows.Threading;
 
 namespace WPF
 {
@@ -27,7 +27,10 @@ namespace WPF
 
         // 1/8 de clickZone
         private static double LARGEUR_CASE = 60.454545;
-        
+
+        //Pour le lencer de Dés
+        DispatcherTimer _popupTimer = new DispatcherTimer(DispatcherPriority.Normal);
+
         public MainWindow()
         {
             InitializeComponent();
@@ -83,18 +86,28 @@ namespace WPF
 
         private void LanceDes_Click(object sender, RoutedEventArgs e)
         {
-            for (int i = 0; i < 10; i++)
+            int count = 0;
+            _popupTimer.Interval = TimeSpan.FromMilliseconds(100);
+            _popupTimer.Tick += delegate
             {
                 Random rdm1 = new Random(unchecked((int)DateTime.Now.Ticks));
                 int a = rdm1.Next(1, 5);
                 des1.Source = new BitmapImage(new Uri("Images/face"+a+".jpg", UriKind.Relative));
                 a = rdm1.Next(1, 5);
                 des2.Source = new BitmapImage(new Uri("Images/face" + a + ".jpg", UriKind.Relative));
-                //Besoin de faire une pause pour que l'on voit les dés changer !
-            }
-            FacadeW.lancerDes();
-            des1.Source = new BitmapImage(new Uri("Images/face" + FacadeW.getDes1() + ".jpg", UriKind.Relative));
-            des2.Source = new BitmapImage(new Uri("Images/face" + FacadeW.getDes2() + ".jpg", UriKind.Relative));
+                count++;
+                if (count > 10)
+                {
+                    _popupTimer.Stop();
+                    count = 0;
+                    FacadeW.lancerDes();
+                    des1.Source = new BitmapImage(new Uri("Images/face" + FacadeW.getDes1() + ".jpg", UriKind.Relative));
+                    des2.Source = new BitmapImage(new Uri("Images/face" + FacadeW.getDes2() + ".jpg", UriKind.Relative));
+                }
+            };
+            _popupTimer.Start();
+
+            
         }
 
 
