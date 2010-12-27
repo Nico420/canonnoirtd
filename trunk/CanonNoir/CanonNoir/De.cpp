@@ -1,7 +1,7 @@
 #include "De.h"
 
 De::De(){
-	numero = 1;
+	numero = 5;
 }
 
 De::De(int nb){

@@ -76,6 +76,8 @@ class DLL Facade
 		void setNbJoueurs(int nb);
 		void setClick(int x,int y);
 		void lancerDes();
+		int getDes1(){return de1;};
+		int getDes2(){return de2;};
 };
 
 EXTERNC DLL Facade* Facade_New();

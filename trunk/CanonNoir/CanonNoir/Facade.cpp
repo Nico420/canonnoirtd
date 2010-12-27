@@ -62,6 +62,7 @@ void Facade::setClick(int x,int y){
 }
 
 void Facade::lancerDes(){
+	this->motor->setEtat(Moteur::LANCERDESDEPLACEMENT);
 	this->motor->execute();
 	this->message = this->motor->getEtat()->getMessage();
 	this->de1 = this->motor->getDes().first.getNum();

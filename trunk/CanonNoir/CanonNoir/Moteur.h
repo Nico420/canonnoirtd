@@ -24,12 +24,13 @@ class Moteur
 		int joueurCourant;
 		pair<int,int> click;
 		map<pair<int,int>,int> casesDeplacementBateau;
-		pair<De,De> des;
+		
 		vector<Joueur> joueurs;
 		Plateau plateau;
 		Etat* etat;
 
 	public :
+		pair<De,De> des;
 		Moteur();
 		~Moteur();
 		void setNbJoueurs(int nb);

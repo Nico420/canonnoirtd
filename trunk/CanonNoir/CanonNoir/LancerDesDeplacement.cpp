@@ -11,10 +11,14 @@ LancerDesDeplacement::LancerDesDeplacement(Moteur* mot){
 }
 
 void LancerDesDeplacement::execute(){
-	this->moteur->getDes().first.lancerDe();
-	this->moteur->getDes().second.lancerDe();
-	int de1 = this->moteur->getDes().first.getNum();
-	int de2 = this->moteur->getDes().second.getNum();
+	std::pair<De,De> d = this->moteur->getDes();
+	d.first.lancerDe();
+	d.second.lancerDe();
+	
+	int de1 = d.first.getNum();
+	int de2 = d.second.getNum();
+	this->moteur->des.first.numero=de1;
+	this->moteur->des.second.numero=de2;
 	this->calculCasesDeplacement(de1,de2);
 	std::string mes = "Joueur ";
 	mes += this->moteur->getJoueurCourant();

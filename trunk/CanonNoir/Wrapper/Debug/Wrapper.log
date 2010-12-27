@@ -1,5 +1,5 @@
-﻿La génération a démarré 22/12/2010 16:40:03.
-     1>Projet "C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\Wrapper\Wrapper.vcxproj" sur le nœud 2 (build cible(s)).
+﻿La génération a démarré 27/12/2010 17:31:51.
+     1>Projet "C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\Wrapper\Wrapper.vcxproj" sur le nœud 3 (build cible(s)).
      1>InitializeBuildStatus:
          Mise à jour de l'horodatage "Debug\Wrapper.unsuccessfulbuild".
        GenerateTargetFrameworkMonikerAttribute:
@@ -35,4 +35,4 @@
 
 La génération a réussi.
 
-Temps écoulé 00:00:02.05
+Temps écoulé 00:00:02.14

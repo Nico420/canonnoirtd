@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("wrapper.dll")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/face6.jpg")]
 
 

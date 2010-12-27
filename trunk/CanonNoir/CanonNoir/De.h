@@ -15,11 +15,12 @@
 class De
 {
 	private :
-		int numero;
+		
 
 	public :
 		De();
 		De(int nb);
+		int numero;
 		/*~De();*/
 		void lancerDe();
 		int getNum() const;
