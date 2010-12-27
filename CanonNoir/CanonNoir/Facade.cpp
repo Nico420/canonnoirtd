@@ -30,8 +30,9 @@ Facade::~Facade(){
 }
 
 void Facade::setNbJoueurs(int nb){
+	//Ca fait planter l'application et je sais pas pourquoi !!
 	this->motor = new Moteur();
-	this->motor->setNbJoueurs(nb);
+	//this->motor->setNbJoueurs(nb);
 	this->message = this->motor->getEtat()->getMessage();
 	this->nbBateaux = (nb==3)? 3 : 4;
 	this->scoresBateaux = new int[this->nbBateaux];

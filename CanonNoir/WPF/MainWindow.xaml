@@ -8,36 +8,10 @@
             <ColumnDefinition Width="594*" />
         </Grid.ColumnDefinitions>
         <TextBlock Height="23" HorizontalAlignment="Center" Margin="0,25,0,0" Name="textBlock2" Text="JEU DU CANON NOIR" VerticalAlignment="Top" TextAlignment="Center" FontWeight="Bold" FontSize="12" Grid.ColumnSpan="2" FontStyle="Italic" />
-        <Canvas Height="459" MouseLeftButtonDown="test" HorizontalAlignment="Left" Margin="142,44,0,0" Name="canvas1" VerticalAlignment="Top" Width="652" Grid.ColumnSpan="2">
-            <Image Source="Images/plateau.jpg" Width="652" Height="459" Stretch="UniformToFill"/>
-            <Grid Height="459" Name="grid1" Width="636" Background="{Binding}">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="17*" />
-                    <ColumnDefinition Width="43*" />
-                    <ColumnDefinition Width="41*" />
-                    <ColumnDefinition Width="41*" />
-                    <ColumnDefinition Width="43*" />
-                    <ColumnDefinition Width="42*" />
-                    <ColumnDefinition Width="41*" />
-                    <ColumnDefinition Width="44*" />
-                    <ColumnDefinition Width="41*" />
-                    <ColumnDefinition Width="42*" />
-                    <ColumnDefinition Width="42*" />
-                    <ColumnDefinition Width="45*" />
-                    <ColumnDefinition Width="17*" />
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="57*" />
-                    <RowDefinition Height="41*" />
-                    <RowDefinition Height="43*" />
-                    <RowDefinition Height="41*" />
-                    <RowDefinition Height="42*" />
-                    <RowDefinition Height="44*" />
-                    <RowDefinition Height="41*" />
-                    <RowDefinition Height="43*" />
-                    <RowDefinition Height="14*" />
-                </Grid.RowDefinitions>
-            </Grid>
+        <Canvas Height="459" HorizontalAlignment="Right" Margin="0,44,10,10" Name="plateau" VerticalAlignment="Top" Width="700" Grid.ColumnSpan="2">
+            <Image MouseLeftButtonDown="clickZone_MouseLeftButtonDown" Source="Images/plateau.jpg" Width="700" Height="459" Stretch="Fill" Grid.ColumnSpan="2" Margin="0,0,0,0" />
+            <Canvas  Height="430" HorizontalAlignment="Right" Margin="16,14,19,15" Name="clickZone" VerticalAlignment="Top" Width="665" Grid.ColumnSpan="2" Panel.ZIndex="10">
+            </Canvas>
         </Canvas>
         <Canvas Height="250" HorizontalAlignment="Left" Margin="4,40,0,0" Name="Init" VerticalAlignment="Top" Width="129">
             <TextBlock Height="51" HorizontalAlignment="Left" Margin="0,60,0,0" Name="textBlock1" Text="Sélectionnez le nombre de joueurs" VerticalAlignment="Top" Width="129" TextTrimming="WordEllipsis" TextWrapping="WrapWithOverflow" />
@@ -59,14 +33,15 @@
             <TextBlock Canvas.Left="23" Canvas.Top="203" Height="23" Name="joueur4" Text="Joueur 4" />
         </Canvas>
         <Menu Height="23" IsMainMenu="True" HorizontalAlignment="Left" Name="menu1" VerticalAlignment="Top" Width="878" Grid.ColumnSpan="2" >
-            <MenuItem Header="_File" >
-                <MenuItem Header="_New" />
-                <MenuItem Header="_Exit" />
+            <MenuItem Header="_Fichier" >
+                <MenuItem Header="_Nouvelle Partie" />
+                <MenuItem Header="_Quitter" />
             </MenuItem>
-            <MenuItem Header="_View" >
-                <MenuItem Header="_FullScreen" Click="fullscreen" />
+            <MenuItem Header="_Affichage" >
+                <MenuItem Header="_Plein écran" Click="fullscreen" />
             </MenuItem>
-                <MenuItem Header="_Help" />
+                <MenuItem Header="_Aide" />
+                <MenuItem Header="_Règle du jeu" />
         </Menu>
     </Grid>
 </Window>
