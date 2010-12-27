@@ -21,6 +21,12 @@ namespace WPF
     public partial class MainWindow : Window
     {
         WrapperFacade FacadeW;
+        //1/11 de clickZone
+        private static double HAUTEUR_CASE = 53.75;
+
+        // 1/8 de clickZone
+        private static double LARGEUR_CASE = 60.454545;
+        
         public MainWindow()
         {
             InitializeComponent();
@@ -29,7 +35,6 @@ namespace WPF
 
         private void test(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("TEST " + Mouse.GetPosition(canvas1));
             Window1 w = new Window1();
             w.Show();
         }
@@ -58,6 +63,21 @@ namespace WPF
         private void fullscreen(object sender, RoutedEventArgs e)
         {
             this.WindowState= System.Windows.WindowState.Maximized;
+        }
+
+        private void clickZone_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            
+            double a = Mouse.GetPosition(clickZone).X;
+            a/= LARGEUR_CASE;
+            int x = (int)a+1;
+            double b = Mouse.GetPosition(clickZone).Y;
+            b /= HAUTEUR_CASE; 
+            int y = (int)b + 1;
+            
+            double num_case = (y-1) * 11 + x;
+            MessageBox.Show("Vous avez cliqué ici : " + Mouse.GetPosition(clickZone) + "\nCase : (" +x+";"+ y + ") " + num_case);
+
         }
 
 
