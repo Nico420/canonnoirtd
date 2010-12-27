@@ -20,7 +20,7 @@ class LancerDesDeplacement : public LancerDes
 	public :
 		LancerDesDeplacement();
 		LancerDesDeplacement(Moteur* mot);
-		void execute();
+		virtual void execute();
 		int getEtat() const;
 		int* getCasesActives() const;
 		bool getActiveDe2() const;
