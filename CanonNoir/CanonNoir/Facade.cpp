@@ -65,8 +65,8 @@ void Facade::lancerDes(){
 	this->motor->setEtat(Moteur::LANCERDESDEPLACEMENT);
 	this->motor->execute();
 	this->message = this->motor->getEtat()->getMessage();
-	this->de1 = this->motor->getDes().first.getNum();
-	this->de2 = this->motor->getDes().second.getNum();
+	this->de1 = 4 ;//this->motor->getDes().first.getNum();
+	this->de2 = 2 ;//this->motor->getDes().second.getNum();
 	if(this->motor->getEtat()->getEtat()==Moteur::LANCERDESDEPLACEMENT){
 		this->motor->setEtat(Moteur::LANCERDESDEPLACEMENT);
 		this->activeCases = false;
