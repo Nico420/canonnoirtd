@@ -90,12 +90,11 @@ namespace WPF
                 des1.Source = new BitmapImage(new Uri("Images/face"+a+".jpg", UriKind.Relative));
                 a = rdm1.Next(1, 5);
                 des2.Source = new BitmapImage(new Uri("Images/face" + a + ".jpg", UriKind.Relative));
-                //Besoin de faire une pause pour que l'on voit les dé changer !
+                //Besoin de faire une pause pour que l'on voit les dés changer !
             }
             FacadeW.lancerDes();
             des1.Source = new BitmapImage(new Uri("Images/face" + FacadeW.getDes1() + ".jpg", UriKind.Relative));
             des2.Source = new BitmapImage(new Uri("Images/face" + FacadeW.getDes2() + ".jpg", UriKind.Relative));
-            MessageBox.Show(FacadeW.getDes1()+" "+FacadeW.getDes2());
         }
 
 
