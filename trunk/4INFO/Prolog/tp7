@@ -1,0 +1,53 @@
+% Prolog
+% TP 7 : Normalisation d'arbre (mise sous forme clausale)
+
+% Texier Aurélien
+% Desfeux Nicolas
+% 4INFO
+
+% Question 1
+
+%et(non(ou(a,non(b))),et(c,non(d)))
+
+proposition(P) :- atomic(P).
+proposition(non(P)) :- proposition(P).
+
+proposition(et(G,D)) :- proposition(G), proposition(D).
+proposition(ou(G,D)) :- proposition(G), proposition(D).
+
+fnc1(F,F) :- atomic(F).
+fnc1(non(F),non(F)) :- atomic(F).
+fnc1(non(non(B)),G) :- fnc1(B,B2),G=B2.
+fnc1(et(A,B),G) :- fnc1(A,A1),fnc1(B,B1),G=et(A1,B1).
+fnc1(ou(A,B),G) :- fnc1(A,A1),fnc1(B,B1),G=ou(A1,B1).
+fnc1(non(ou(A,B)),G) :- fnc1(non(A),A1),fnc1(non(B),B1),G=et(A1,B1).
+fnc1(non(et(A,B)),G) :- fnc1(non(A),A1),fnc1(non(B),B1),G=ou(A1,B1).
+
+% Question 2
+
+%fnc2(F,F) :- atomic(F).
+%fnc2(non(F),non(F)) :- atomic(F).
+%fnc2(ou(A,et(B,C)),G) :- fnc2(A,A1),fnc2(B,B1),fnc2(C,C1),G=et(ou(A1,B1),ou(A1,C1)).
+%fnc2(ou(et(B,C),A),G) :- fnc2(A,A1),fnc2(B,B1),fnc2(C,C1),G=et(ou(B1,A1),ou(C1,A1)).
+%fnc2(et(A,B),G) :- fnc2(A,A1),fnc2(B,B1),G=et(A1,B1).
+%fnc2(ou(A,B),G) :- fnc2(A,A1),fnc2(B,B1),G=ou(A1,B1).
+
+fnc2(ou(A,et(B,C)),et(ou(A,B),ou(A,C))) :- !.
+fnc2(ou(et(B,C),A),et(ou(B,A),ou(C,A))) :- !.
+fnc2(et(A,B),et(A1,B)) :- fnc2(A,A1).
+fnc2(et(A,B),et(A,B1)) :- fnc2(B,B1).
+fnc2(ou(A,B),ou(A1,B)) :- fnc2(A,A1).
+fnc2(ou(A,B),ou(A,B1)) :- fnc2(B,B1).
+% On fait les transformations une par une.
+
+%Tant que il y a des transformation possibles : 
+norm_ou(A,B) :- fnc2(A,C),!,norm_ou(C,B).
+norm_ou(A,A).
+
+fonc(A,G) :- fnc1(A,B),norm_ou(B,G).
+
+%Résultat de l'execution : 
+%fonc(non(ou(et(xz,qw),non(kh))),G).                  
+%
+%G = et(ou(non(xz), non(qw)), kh)
+

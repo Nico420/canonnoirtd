@@ -1,0 +1,45 @@
+Grammaire : 
+
+<Expr>		--> <Termb> <SuiteExpr>
+<SuiteExpr>	--> "ou" <Termb> <SuiteExpr> | ε
+
+<Termb>		--> <Facteurb> <SuiteTermb>
+<SuiteTermb>	--> "et" <Facteurb> <SuiteTermb> | ε
+
+<Facteurb>	--> <Relation> | "(" <Expr> ")" | "si" <Expr> "alors" <Expr> "sinon" <Expr> "fsi"
+<Relation>	--> <Ident> <Op> <Ident>
+
+<Op>		--> "=" | "<>" | "<" | ">" | ">=" | "<="
+
+
+Prouver que la Grammaire est LL1 : 
+1.Toutes les intersections vides 2 à 2.
+ on a !null(<Expr>)
+
+2.Toutes les intersections vides 2 à 2.
+on a null(<SuiteExpr>)
+premier(<SuiteExpr>) = {"ou"} et suivant(<SuiteExpr>)=ε
+il y a un seul chemin pour avoir ε.
+
+3.Toutes les intersections vides 2 à 2.
+ on a !null(<Termb>)
+
+4.Toutes les intersections vides 2 à 2.
+on a null(<SuiteTermb>).
+premier(<SuiteTermb>) = {"et"} et suivant(<SuiteTermb>)=ε
+il y a un seul chemin pour avoir ε.
+
+5.premier(<Relation>)={<Lettre>}
+premier("(" <Expr> ")")={"("}
+premier("si" <Expr> "alors" <Expr> "sinon" <Expr> "fsi")={"si"}
+Toutes les intersections vides 2 à 2.
+on a !null(<Facteurb>)
+
+6.!null(<Relation>)
+
+7.Toutes les intersections des premier(alpha_i) vides 2 à 2.
+On a !null(<Op>).
+
+La grammaire est LL(1)
+
+

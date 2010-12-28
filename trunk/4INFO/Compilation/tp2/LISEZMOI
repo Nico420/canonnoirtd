@@ -1,0 +1,24 @@
+			COMPILATION : TP2
+
+Cette archive contient le matériel pour commencer la construction
+de votre analyseur syntaxique.
+Fichiers:
+	- Makefile : à éditer en fonction de vos fichiers sources
+
+ Ajouter les fichiers sources (*.ml *.mli) avec le Makefile. Chaque
+fichier source doit être ajouté dans le Makefile (Voir directement dans
+ce dernier).
+ 
+Pour compiler, taper "make"
+
+
+
+Si votre analyseur lexical ne fonctionne pas, et que vous devez utiliser 
+l'analyseur lexical de secours, regarder dans lib/ :
+
+	- analex.mli : L'interface du module Analex avec la documentation
+		       des fonctions à votre disposition
+
+
+Pour compiler en utilisant l'analyseur de secours, éditer le fichier
+Makefile et suivre les instructions.

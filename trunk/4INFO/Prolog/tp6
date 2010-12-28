@@ -1,0 +1,49 @@
+% Prolog
+% TP 6 : Prototype de système expert
+% Texier Aurélien
+% Desfeux Nicolas
+% 4INFO
+
+:- set_flag(coroutine,on).
+
+% Règles d'inférences
+regle(r1,si([ronronne(X)]),alors([chat(X)])).
+regle(r2,si([ronronne(X),familier(X),maison(X)]),alors([domest(X),dorlotte(X)])).
+regle(r3,si([chat(X)]),alors([mammifere(X),griffe(X)])).
+regle(r4,si([PdeX,pere(X,Y)]),alors([PdeY])) :- =..(PdeX,[P,X]),=..(PdeY,[P,Y]).
+
+m(M) :- M=[ronronne(tim),familier(tim),maison(tim),pere(tim,felix)].
+
+membre(A,[A|_]).
+membre(A,[_|R]) :- membre(A,R).
+
+inclus([],_).
+inclus([A|R],Y) :- membre(A,Y),inclus(R,Y).
+
+union1([],Y,Y).
+union1([B|S],Z,Y) :- horsde(B,Z),union1(S,Z,L1),Y=[B|L1].
+union1([B|S],Z,T) :- membre(B,Z),union1(S,Z,L1),T=L1.
+
+applicable(Eh,M) :- inclus(Eh,M).
+
+horsde(_,[]).
+horsde(A,[B|R]) :- \=(A,B),horsde(A,R).
+
+noninclus([A|_],Y) :- horsde(A,Y).
+noninclus([_|R],Y) :- noninclus(R,Y).
+
+productive(Ec,M) :- noninclus(Ec,M).
+
+appliquer(Ec,M,M2) :- union1(M,Ec,M2).
+
+
+infere(M) :- regle(_,si(Eh),alors(Ec)),applicable(Eh,M),productive(Ec,M),!,appliquer(Ec,M,M2),infere(M2).
+infere(M) :- write(M),nl,fail.
+
+chasse(F,M) :- regle(_,si(Eh),alors(Ec)),applicable(Eh,M),productive(Ec,M),!,appliquer(Ec,M,M2),membre(F,M2),write(M2),nl.
+chasse(F,M) :- regle(_,si(Eh),alors(Ec)),applicable(Eh,M),productive(Ec,M),!,appliquer(Ec,M,M2),chasse(F,M2).
+
+applicable(Eh,M) :- inclus(Eh,M).
+
+memorize(M,L) :- regle(R,si(Eh),alors(Ec)),applicable(Eh,M),productive(Ec,M),!,appliquer(Ec,M,M2),memorize(M2).
+memorize(M) :- write(M),nl,fail.

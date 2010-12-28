@@ -1,0 +1,49 @@
+% TP 8 : Analyse syntaxique (mise sous forme clausale)
+% Texier Aurélien
+% Desfeux Nicolas
+
+/*
+analex([],[]) :- read_token(X,T),X='.'.
+analex([X|L1],[T|L2]) :- read_token(X,T),X\='.',
+				analex(L1,L2).
+*/
+analex(Lx,Lt) :- read_token(X,T),suiteanalex(X,T,Lx,Lt).
+
+suiteanalex('.',_,[],[]).
+suiteanalex(X,T,[X|Lx],[T|Lt]) :- X\='.',analex(Lx,Lt).
+% 1. Grammaire des propositions
+% A -> B => A | B
+% B -> C ou B | C
+% C -> D et C | D
+% D -> non E | E
+% E -> (A) | atome.
+
+/*
+a(X,Y) :- b(X,[=>|X1]),a(X1,Y).
+a(X,Y) :- b(X,Y).
+b(X,Y) :- c(X,[ou|X1]),b(X1,Y).
+b(X,Y) :- c(X,Y).
+c(X,Y) :- d(X,[et|X1]),c(X1,Y).
+c(X,Y) :- d(X,Y).
+d([non|X],Y) :- e(X,Y).
+d(X,Y) :- e(X,Y).
+e(["("|X1],Y) :- a(X1,[")"|Y]).
+e([X|Y],Y) :- atom(X).*/
+
+:- ['tp7'].
+
+a(X,Y,ou(non(A),C)) :- b(X,[=>|X1]),a(X1,Y,ou(X1,Y)).
+a(X,Y,Z) :- b(X,Y,Z).
+b(X,Y) :- c(X,[ou|X1]),b(X1,Y,ou(X1,Y)).
+b(X,Y,Z) :- c(X,Y,Z).
+c(X,Y) :- d(X,[et|X1]),c(X1,Y,et(X1,Y)).
+c(X,Y,Z) :- d(X,Y,Z).
+d([non|X],Y) :- e(X,Y).
+d(X,Y) :- e(X,Y).
+e(["("|X1],Y) :- a(X1,[")"|Y]).
+e([X|Y],Y) :- atom(X).
+
+compil(C) :- analex(X,_),e(X,[],A),fn(A,B),fnc2(B,C).
+
+decompil(et(X,Y)) :- decompil(X),decompil(Y).
+decompil(X) :- =..(X,[Y|_]),Y\=et,write(X,nl.
