@@ -1,0 +1,69 @@
+% TP 3
+% DESFEUX Nicolas - TEXIER Aurélien
+
+lg1([],0).
+lg1([_|R],N) :- lg1(R,M),is(N,M+1).
+
+lg2([],0).
+lg2(L,N) :- \=(N,0),is(M,N-1),lg2(Lm,M),L=[_|Lm].
+
+faitdblliste(L,N) :- lg2(Lm,N),append(Lm,Lm,L).
+
+conc3(X,Y,Z,T) :- append(X,Y,Tm),append(Tm,Z,T).
+
+% Il boucle car il y a 3 variables de libres, dont une "neuve"
+
+membre(A,[A|_]).
+membre(A,[_|R]) :- membre(A,R). % permet l'énumération
+%membre(A,[B|R]) :- \=(A,B),membre(A,R).% Ne donne qu'une seule réponse pour membre(X,[1,2,3]).
+%Autre solution
+%membre(A,L) :- append(_,[A|_],L).
+
+%Chaque ligne doit fonctionner indépendament
+renverser([],[]).
+renverser([A|R],Y) :- renverser(R,Y1),append(Y1,[A],Y).
+
+palind(X) :- renverser(X,Y),X=Y.
+
+horsde(_,[]).
+horsde(A,[B|R]) :- \=(A,B),horsde(A,R).
+
+tousdiff([]).
+tousdiff([A|R]) :- horsde(A,R),tousdiff(R).
+
+debpar(X,Y) :- append(X,_,Y).
+
+sousliste(X,Y) :- debpar(X,Y).
+sousliste(X,[_|R]) :- sousliste(X,R).
+
+%elim([],[]).
+%elim([A|R],Y) :- horsde(A,Y),elim(R,Y1),Y=[A|Y1].
+%elim([A|R],Y) :- membre(A,Y),elim(R,Y1),Y=Y1.
+
+placer(A,[],[A]).
+placer(A,[B|R],L2) :- A<B,append([A],[B|R],L2).
+placer(A,[B|R],L2) :- A=B,append([A],[B|R],L2).
+placer(A,[B|R],L2) :- A>B,placer(A,R,L),append([B],L,L2).
+
+tri([],[]).
+tri([A|R],Y) :- tri(R,L),Y1=L,placer(A,Y1,Y).
+
+inclus([],_).
+inclus([A|R],Y) :- membre(A,Y),inclus(R,Y).
+
+noninclus([A|_],Y) :- horsde(A,Y).
+noninclus([_|R],Y) :- noninclus(R,Y).
+
+union1([],Y,Y).
+union1([B|S],Z,Y) :- horsde(B,Z),union1(S,Z,L1),Y=[B|L1].
+union1([B|S],Z,T) :- membre(B,Z),union1(S,Z,L1),T=L1.
+
+inter([],[],[]).
+inter([],_,[]).
+inter([A|R],Y,Z) :- membre(A,Y),inter(R,Y,L),Z=[A|L].
+inter([A|R],Y,Z) :- horsde(A,Y),inter(R,Y,Z).
+
+diffe([],[],[]).
+diffe([],_,[]).
+diffe([A|R],Y,Z) :- membre(A,Y),diffe(R,Y,Z).
+diffe([A|R],Y,Z) :- horsde(A,Y),diffe(R,Y,L),Z=[A|L].

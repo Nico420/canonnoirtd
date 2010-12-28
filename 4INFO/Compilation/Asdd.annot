@@ -1,0 +1,3887 @@
+"Asdd.ml" 39 411 415 "Asdd.ml" 39 411 425
+type(
+  vn * Lex.unite_lexicale -> v list
+)
+ident(
+  def derivation "Asdd.ml" 57 1207 1207 --
+)
+"Asdd.ml" 39 411 427 "Asdd.ml" 39 411 429
+type(
+  vn
+)
+ident(
+  def vn "Asdd.ml" 39 411 436 "Asdd.ml" 55 1114 1141
+)
+"Asdd.ml" 39 411 430 "Asdd.ml" 39 411 432
+type(
+  Lex.unite_lexicale
+)
+ident(
+  def ul "Asdd.ml" 39 411 436 "Asdd.ml" 55 1114 1141
+)
+"Asdd.ml" 39 411 426 "Asdd.ml" 39 411 433
+type(
+  vn * Lex.unite_lexicale
+)
+"Asdd.ml" 39 411 443 "Asdd.ml" 39 411 445
+type(
+  vn
+)
+ident(
+  int_ref vn "Asdd.ml" 39 411 427 "Asdd.ml" 39 411 429
+)
+"Asdd.ml" 39 411 446 "Asdd.ml" 39 411 448
+type(
+  Lex.unite_lexicale
+)
+ident(
+  int_ref ul "Asdd.ml" 39 411 430 "Asdd.ml" 39 411 432
+)
+"Asdd.ml" 39 411 442 "Asdd.ml" 39 411 449
+type(
+  vn * Lex.unite_lexicale
+)
+"Asdd.ml" 40 455 459 "Asdd.ml" 40 455 463
+type(
+  vn
+)
+"Asdd.ml" 40 455 464 "Asdd.ml" 40 455 465
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 40 455 458 "Asdd.ml" 40 455 466
+type(
+  vn * Lex.unite_lexicale
+)
+"Asdd.ml" 40 455 473 "Asdd.ml" 40 455 480
+type(
+  vn
+)
+"Asdd.ml" 40 455 471 "Asdd.ml" 40 455 480
+type(
+  v
+)
+"Asdd.ml" 40 455 483 "Asdd.ml" 40 455 494
+type(
+  vn
+)
+"Asdd.ml" 40 455 481 "Asdd.ml" 40 455 494
+type(
+  v
+)
+"Asdd.ml" 40 455 470 "Asdd.ml" 40 455 495
+type(
+  v list
+)
+"Asdd.ml" 41 496 500 "Asdd.ml" 41 496 509
+type(
+  vn
+)
+"Asdd.ml" 41 496 510 "Asdd.ml" 41 496 514
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 41 496 499 "Asdd.ml" 41 496 515
+type(
+  vn * Lex.unite_lexicale
+)
+"Asdd.ml" 41 496 522 "Asdd.ml" 41 496 529
+type(
+  vt
+)
+"Asdd.ml" 41 496 520 "Asdd.ml" 41 496 529
+type(
+  v
+)
+"Asdd.ml" 41 496 532 "Asdd.ml" 41 496 539
+type(
+  vn
+)
+"Asdd.ml" 41 496 530 "Asdd.ml" 41 496 539
+type(
+  v
+)
+"Asdd.ml" 41 496 542 "Asdd.ml" 41 496 553
+type(
+  vn
+)
+"Asdd.ml" 41 496 540 "Asdd.ml" 41 496 553
+type(
+  v
+)
+"Asdd.ml" 41 496 519 "Asdd.ml" 41 496 554
+type(
+  v list
+)
+"Asdd.ml" 42 555 559 "Asdd.ml" 42 555 568
+type(
+  vn
+)
+"Asdd.ml" 42 555 569 "Asdd.ml" 42 555 570
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 42 555 558 "Asdd.ml" 42 555 571
+type(
+  vn * Lex.unite_lexicale
+)
+"Asdd.ml" 42 555 575 "Asdd.ml" 42 555 577
+type(
+  v list
+)
+"Asdd.ml" 43 578 582 "Asdd.ml" 43 578 587
+type(
+  vn
+)
+"Asdd.ml" 43 578 588 "Asdd.ml" 43 578 589
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 43 578 581 "Asdd.ml" 43 578 590
+type(
+  vn * Lex.unite_lexicale
+)
+"Asdd.ml" 43 578 597 "Asdd.ml" 43 578 607
+type(
+  vn
+)
+"Asdd.ml" 43 578 595 "Asdd.ml" 43 578 607
+type(
+  v
+)
+"Asdd.ml" 43 578 610 "Asdd.ml" 43 578 622
+type(
+  vn
+)
+"Asdd.ml" 43 578 608 "Asdd.ml" 43 578 622
+type(
+  v
+)
+"Asdd.ml" 43 578 594 "Asdd.ml" 43 578 623
+type(
+  v list
+)
+"Asdd.ml" 44 624 628 "Asdd.ml" 44 624 638
+type(
+  vn
+)
+"Asdd.ml" 44 624 639 "Asdd.ml" 44 624 643
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 44 624 627 "Asdd.ml" 44 624 644
+type(
+  vn * Lex.unite_lexicale
+)
+"Asdd.ml" 44 624 651 "Asdd.ml" 44 624 658
+type(
+  vt
+)
+"Asdd.ml" 44 624 649 "Asdd.ml" 44 624 658
+type(
+  v
+)
+"Asdd.ml" 44 624 661 "Asdd.ml" 44 624 671
+type(
+  vn
+)
+"Asdd.ml" 44 624 659 "Asdd.ml" 44 624 671
+type(
+  v
+)
+"Asdd.ml" 44 624 674 "Asdd.ml" 44 624 686
+type(
+  vn
+)
+"Asdd.ml" 44 624 672 "Asdd.ml" 44 624 686
+type(
+  v
+)
+"Asdd.ml" 44 624 648 "Asdd.ml" 44 624 687
+type(
+  v list
+)
+"Asdd.ml" 45 688 692 "Asdd.ml" 45 688 702
+type(
+  vn
+)
+"Asdd.ml" 45 688 703 "Asdd.ml" 45 688 704
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 45 688 691 "Asdd.ml" 45 688 705
+type(
+  vn * Lex.unite_lexicale
+)
+"Asdd.ml" 45 688 709 "Asdd.ml" 45 688 711
+type(
+  v list
+)
+"Asdd.ml" 46 712 716 "Asdd.ml" 46 712 724
+type(
+  vn
+)
+"Asdd.ml" 46 712 725 "Asdd.ml" 46 712 731
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 46 712 715 "Asdd.ml" 46 712 732
+type(
+  vn * Lex.unite_lexicale
+)
+"Asdd.ml" 46 712 739 "Asdd.ml" 46 712 748
+type(
+  vt
+)
+"Asdd.ml" 46 712 737 "Asdd.ml" 46 712 748
+type(
+  v
+)
+"Asdd.ml" 46 712 751 "Asdd.ml" 46 712 757
+type(
+  vn
+)
+"Asdd.ml" 46 712 749 "Asdd.ml" 46 712 757
+type(
+  v
+)
+"Asdd.ml" 46 712 760 "Asdd.ml" 46 712 769
+type(
+  vt
+)
+"Asdd.ml" 46 712 758 "Asdd.ml" 46 712 769
+type(
+  v
+)
+"Asdd.ml" 46 712 736 "Asdd.ml" 46 712 770
+type(
+  v list
+)
+"Asdd.ml" 47 771 775 "Asdd.ml" 47 771 783
+type(
+  vn
+)
+"Asdd.ml" 47 771 784 "Asdd.ml" 47 771 788
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 47 771 774 "Asdd.ml" 47 771 789
+type(
+  vn * Lex.unite_lexicale
+)
+"Asdd.ml" 47 771 796 "Asdd.ml" 47 771 803
+type(
+  vt
+)
+"Asdd.ml" 47 771 794 "Asdd.ml" 47 771 803
+type(
+  v
+)
+"Asdd.ml" 47 771 806 "Asdd.ml" 47 771 812
+type(
+  vn
+)
+"Asdd.ml" 47 771 804 "Asdd.ml" 47 771 812
+type(
+  v
+)
+"Asdd.ml" 47 771 815 "Asdd.ml" 47 771 825
+type(
+  vt
+)
+"Asdd.ml" 47 771 813 "Asdd.ml" 47 771 825
+type(
+  v
+)
+"Asdd.ml" 47 771 828 "Asdd.ml" 47 771 834
+type(
+  vn
+)
+"Asdd.ml" 47 771 826 "Asdd.ml" 47 771 834
+type(
+  v
+)
+"Asdd.ml" 47 771 837 "Asdd.ml" 47 771 847
+type(
+  vt
+)
+"Asdd.ml" 47 771 835 "Asdd.ml" 47 771 847
+type(
+  v
+)
+"Asdd.ml" 47 771 850 "Asdd.ml" 47 771 856
+type(
+  vn
+)
+"Asdd.ml" 47 771 848 "Asdd.ml" 47 771 856
+type(
+  v
+)
+"Asdd.ml" 47 771 859 "Asdd.ml" 47 771 867
+type(
+  vt
+)
+"Asdd.ml" 47 771 857 "Asdd.ml" 47 771 867
+type(
+  v
+)
+"Asdd.ml" 47 771 793 "Asdd.ml" 47 771 868
+type(
+  v list
+)
+"Asdd.ml" 48 869 873 "Asdd.ml" 48 869 881
+type(
+  vn
+)
+"Asdd.ml" 48 869 882 "Asdd.ml" 48 869 883
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 48 869 872 "Asdd.ml" 48 869 884
+type(
+  vn * Lex.unite_lexicale
+)
+"Asdd.ml" 48 869 891 "Asdd.ml" 48 869 901
+type(
+  vn
+)
+"Asdd.ml" 48 869 889 "Asdd.ml" 48 869 901
+type(
+  v
+)
+"Asdd.ml" 48 869 888 "Asdd.ml" 48 869 902
+type(
+  v list
+)
+"Asdd.ml" 49 903 907 "Asdd.ml" 49 903 915
+type(
+  vn
+)
+"Asdd.ml" 49 903 916 "Asdd.ml" 49 903 917
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 49 903 906 "Asdd.ml" 49 903 918
+type(
+  vn * Lex.unite_lexicale
+)
+"Asdd.ml" 49 903 934 "Asdd.ml" 49 903 936
+type(
+  string
+)
+"Asdd.ml" 49 903 925 "Asdd.ml" 49 903 937
+type(
+  vt
+)
+"Asdd.ml" 49 903 923 "Asdd.ml" 49 903 937
+type(
+  v
+)
+"Asdd.ml" 49 903 940 "Asdd.ml" 49 903 944
+type(
+  vn
+)
+"Asdd.ml" 49 903 938 "Asdd.ml" 49 903 944
+type(
+  v
+)
+"Asdd.ml" 49 903 956 "Asdd.ml" 49 903 958
+type(
+  string
+)
+"Asdd.ml" 49 903 947 "Asdd.ml" 49 903 960
+type(
+  vt
+)
+"Asdd.ml" 49 903 945 "Asdd.ml" 49 903 960
+type(
+  v
+)
+"Asdd.ml" 49 903 922 "Asdd.ml" 49 903 961
+type(
+  v list
+)
+"Asdd.ml" 50 962 966 "Asdd.ml" 50 962 968
+type(
+  vn
+)
+"Asdd.ml" 50 962 969 "Asdd.ml" 50 962 973
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 50 962 965 "Asdd.ml" 50 962 974
+type(
+  vn * Lex.unite_lexicale
+)
+"Asdd.ml" 50 962 981 "Asdd.ml" 50 962 988
+type(
+  vt
+)
+"Asdd.ml" 50 962 979 "Asdd.ml" 50 962 988
+type(
+  v
+)
+"Asdd.ml" 50 962 978 "Asdd.ml" 50 962 989
+type(
+  v list
+)
+"Asdd.ml" 51 990 994 "Asdd.ml" 51 990 996
+type(
+  vn
+)
+"Asdd.ml" 51 990 997 "Asdd.ml" 51 990 1002
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 51 990 993 "Asdd.ml" 51 990 1003
+type(
+  vn * Lex.unite_lexicale
+)
+"Asdd.ml" 51 990 1010 "Asdd.ml" 51 990 1018
+type(
+  vt
+)
+"Asdd.ml" 51 990 1008 "Asdd.ml" 51 990 1018
+type(
+  v
+)
+"Asdd.ml" 51 990 1007 "Asdd.ml" 51 990 1019
+type(
+  v list
+)
+"Asdd.ml" 52 1020 1024 "Asdd.ml" 52 1020 1026
+type(
+  vn
+)
+"Asdd.ml" 52 1020 1027 "Asdd.ml" 52 1020 1032
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 52 1020 1023 "Asdd.ml" 52 1020 1033
+type(
+  vn * Lex.unite_lexicale
+)
+"Asdd.ml" 52 1020 1040 "Asdd.ml" 52 1020 1048
+type(
+  vt
+)
+"Asdd.ml" 52 1020 1038 "Asdd.ml" 52 1020 1048
+type(
+  v
+)
+"Asdd.ml" 52 1020 1037 "Asdd.ml" 52 1020 1049
+type(
+  v list
+)
+"Asdd.ml" 53 1050 1054 "Asdd.ml" 53 1050 1056
+type(
+  vn
+)
+"Asdd.ml" 53 1050 1057 "Asdd.ml" 53 1050 1062
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 53 1050 1053 "Asdd.ml" 53 1050 1063
+type(
+  vn * Lex.unite_lexicale
+)
+"Asdd.ml" 53 1050 1070 "Asdd.ml" 53 1050 1078
+type(
+  vt
+)
+"Asdd.ml" 53 1050 1068 "Asdd.ml" 53 1050 1078
+type(
+  v
+)
+"Asdd.ml" 53 1050 1067 "Asdd.ml" 53 1050 1079
+type(
+  v list
+)
+"Asdd.ml" 54 1080 1084 "Asdd.ml" 54 1080 1086
+type(
+  vn
+)
+"Asdd.ml" 54 1080 1087 "Asdd.ml" 54 1080 1094
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 54 1080 1083 "Asdd.ml" 54 1080 1095
+type(
+  vn * Lex.unite_lexicale
+)
+"Asdd.ml" 54 1080 1102 "Asdd.ml" 54 1080 1112
+type(
+  vt
+)
+"Asdd.ml" 54 1080 1100 "Asdd.ml" 54 1080 1112
+type(
+  v
+)
+"Asdd.ml" 54 1080 1099 "Asdd.ml" 54 1080 1113
+type(
+  v list
+)
+"Asdd.ml" 55 1114 1118 "Asdd.ml" 55 1114 1120
+type(
+  vn
+)
+"Asdd.ml" 55 1114 1121 "Asdd.ml" 55 1114 1122
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 55 1114 1117 "Asdd.ml" 55 1114 1123
+type(
+  vn * Lex.unite_lexicale
+)
+"Asdd.ml" 55 1114 1130 "Asdd.ml" 55 1114 1140
+type(
+  vt
+)
+"Asdd.ml" 55 1114 1128 "Asdd.ml" 55 1114 1140
+type(
+  v
+)
+"Asdd.ml" 55 1114 1127 "Asdd.ml" 55 1114 1141
+type(
+  v list
+)
+"Asdd.ml" 39 411 436 "Asdd.ml" 55 1114 1141
+type(
+  v list
+)
+"Asdd.ml" 57 1207 1211 "Asdd.ml" 57 1207 1221
+type(
+  Lex.unite_lexicale -> vt
+)
+ident(
+  def ul_vers_vt "Asdd.ml" 78 1586 1586 --
+)
+"Asdd.ml" 57 1207 1222 "Asdd.ml" 57 1207 1224
+type(
+  Lex.unite_lexicale
+)
+ident(
+  def ul "Asdd.ml" 57 1207 1227 "Asdd.ml" 73 1564 1579
+)
+"Asdd.ml" 57 1207 1233 "Asdd.ml" 57 1207 1235
+type(
+  Lex.unite_lexicale
+)
+ident(
+  int_ref ul "Asdd.ml" 57 1207 1222 "Asdd.ml" 57 1207 1224
+)
+"Asdd.ml" 58 1241 1252 "Asdd.ml" 58 1241 1255
+type(
+  string
+)
+"Asdd.ml" 58 1241 1245 "Asdd.ml" 58 1241 1255
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 58 1241 1268 "Asdd.ml" 58 1241 1270
+type(
+  string
+)
+"Asdd.ml" 58 1241 1259 "Asdd.ml" 58 1241 1270
+type(
+  vt
+)
+"Asdd.ml" 59 1271 1275 "Asdd.ml" 59 1271 1281
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 59 1271 1285 "Asdd.ml" 59 1271 1292
+type(
+  vt
+)
+"Asdd.ml" 60 1293 1298 "Asdd.ml" 60 1293 1304
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 60 1293 1308 "Asdd.ml" 60 1293 1315
+type(
+  vt
+)
+"Asdd.ml" 61 1316 1320 "Asdd.ml" 61 1316 1325
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 61 1316 1329 "Asdd.ml" 61 1316 1335
+type(
+  vt
+)
+"Asdd.ml" 62 1336 1340 "Asdd.ml" 62 1336 1345
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 62 1336 1349 "Asdd.ml" 62 1336 1355
+type(
+  vt
+)
+"Asdd.ml" 63 1356 1360 "Asdd.ml" 63 1356 1364
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 63 1356 1368 "Asdd.ml" 63 1356 1373
+type(
+  vt
+)
+"Asdd.ml" 64 1374 1378 "Asdd.ml" 64 1374 1383
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 64 1374 1387 "Asdd.ml" 64 1374 1393
+type(
+  vt
+)
+"Asdd.ml" 65 1394 1398 "Asdd.ml" 65 1394 1405
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 65 1394 1409 "Asdd.ml" 65 1394 1417
+type(
+  vt
+)
+"Asdd.ml" 66 1418 1422 "Asdd.ml" 66 1418 1429
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 66 1418 1433 "Asdd.ml" 66 1418 1441
+type(
+  vt
+)
+"Asdd.ml" 67 1442 1446 "Asdd.ml" 67 1442 1450
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 67 1442 1454 "Asdd.ml" 67 1442 1459
+type(
+  vt
+)
+"Asdd.ml" 68 1460 1464 "Asdd.ml" 68 1460 1468
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 68 1460 1472 "Asdd.ml" 68 1460 1477
+type(
+  vt
+)
+"Asdd.ml" 69 1478 1482 "Asdd.ml" 69 1478 1486
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 69 1478 1490 "Asdd.ml" 69 1478 1495
+type(
+  vt
+)
+"Asdd.ml" 70 1496 1500 "Asdd.ml" 70 1496 1507
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 70 1496 1511 "Asdd.ml" 70 1496 1519
+type(
+  vt
+)
+"Asdd.ml" 71 1520 1524 "Asdd.ml" 71 1520 1531
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 71 1520 1535 "Asdd.ml" 71 1520 1543
+type(
+  vt
+)
+"Asdd.ml" 72 1544 1548 "Asdd.ml" 72 1544 1553
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 72 1544 1557 "Asdd.ml" 72 1544 1563
+type(
+  vt
+)
+"Asdd.ml" 73 1564 1568 "Asdd.ml" 73 1564 1569
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 73 1564 1573 "Asdd.ml" 73 1564 1579
+type(
+  vt
+)
+"Asdd.ml" 57 1207 1227 "Asdd.ml" 73 1564 1579
+type(
+  vt
+)
+"Asdd.ml" 80 1624 1632 "Asdd.ml" 80 1624 1649
+type(
+  v * Lex.unite_lexicale list -> arbre_concret * Lex.unite_lexicale list
+)
+ident(
+  def analyse_caractere "Asdd.ml" 80 1624 1624 --
+)
+"Asdd.ml" 80 1624 1651 "Asdd.ml" 80 1624 1652
+type(
+  v
+)
+ident(
+  def v "Asdd.ml" 80 1624 1659 "Asdd.ml" 113 3598 3645
+)
+"Asdd.ml" 80 1624 1653 "Asdd.ml" 80 1624 1655
+type(
+  Lex.unite_lexicale list
+)
+ident(
+  def ul "Asdd.ml" 80 1624 1659 "Asdd.ml" 113 3598 3645
+)
+"Asdd.ml" 80 1624 1650 "Asdd.ml" 80 1624 1656
+type(
+  v * Lex.unite_lexicale list
+)
+"Asdd.ml" 80 1624 1666 "Asdd.ml" 80 1624 1667
+type(
+  v
+)
+ident(
+  int_ref v "Asdd.ml" 80 1624 1651 "Asdd.ml" 80 1624 1652
+)
+"Asdd.ml" 80 1624 1668 "Asdd.ml" 80 1624 1670
+type(
+  Lex.unite_lexicale list
+)
+ident(
+  int_ref ul "Asdd.ml" 80 1624 1653 "Asdd.ml" 80 1624 1655
+)
+"Asdd.ml" 80 1624 1665 "Asdd.ml" 80 1624 1671
+type(
+  v * Lex.unite_lexicale list
+)
+"Asdd.ml" 81 1677 1684 "Asdd.ml" 81 1677 1691
+type(
+  vt
+)
+"Asdd.ml" 81 1677 1682 "Asdd.ml" 81 1677 1691
+type(
+  v
+)
+"Asdd.ml" 81 1677 1692 "Asdd.ml" 81 1677 1698
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 81 1677 1700 "Asdd.ml" 81 1677 1705
+type(
+  Lex.unite_lexicale list
+)
+ident(
+  def reste "Asdd.ml" 81 1677 1709 "Asdd.ml" 81 1677 1730
+)
+"Asdd.ml" 81 1677 1692 "Asdd.ml" 81 1677 1705
+type(
+  Lex.unite_lexicale list
+)
+"Asdd.ml" 81 1677 1681 "Asdd.ml" 81 1677 1706
+type(
+  v * Lex.unite_lexicale list
+)
+"Asdd.ml" 81 1677 1718 "Asdd.ml" 81 1677 1723
+type(
+  vt
+)
+"Asdd.ml" 81 1677 1710 "Asdd.ml" 81 1677 1723
+type(
+  arbre_concret
+)
+"Asdd.ml" 81 1677 1724 "Asdd.ml" 81 1677 1729
+type(
+  Lex.unite_lexicale list
+)
+ident(
+  int_ref reste "Asdd.ml" 81 1677 1700 "Asdd.ml" 81 1677 1705
+)
+"Asdd.ml" 81 1677 1709 "Asdd.ml" 81 1677 1730
+type(
+  arbre_concret * Lex.unite_lexicale list
+)
+"Asdd.ml" 82 1731 1738 "Asdd.ml" 82 1731 1745
+type(
+  vt
+)
+"Asdd.ml" 82 1731 1736 "Asdd.ml" 82 1731 1745
+type(
+  v
+)
+"Asdd.ml" 82 1731 1746 "Asdd.ml" 82 1731 1747
+type(
+  Lex.unite_lexicale list
+)
+"Asdd.ml" 82 1731 1735 "Asdd.ml" 82 1731 1748
+type(
+  v * Lex.unite_lexicale list
+)
+"Asdd.ml" 82 1731 1751 "Asdd.ml" 82 1731 1756
+type(
+  exn -> arbre_concret * Lex.unite_lexicale list
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"Asdd.ml" 82 1731 1771 "Asdd.ml" 82 1731 1785
+type(
+  string
+)
+"Asdd.ml" 82 1731 1756 "Asdd.ml" 82 1731 1786
+type(
+  exn
+)
+"Asdd.ml" 82 1731 1751 "Asdd.ml" 82 1731 1786
+type(
+  arbre_concret * Lex.unite_lexicale list
+)
+"Asdd.ml" 83 1787 1794 "Asdd.ml" 83 1787 1801
+type(
+  vt
+)
+"Asdd.ml" 83 1787 1792 "Asdd.ml" 83 1787 1801
+type(
+  v
+)
+"Asdd.ml" 83 1787 1802 "Asdd.ml" 83 1787 1808
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 83 1787 1810 "Asdd.ml" 83 1787 1815
+type(
+  Lex.unite_lexicale list
+)
+ident(
+  def reste "Asdd.ml" 83 1787 1819 "Asdd.ml" 83 1787 1840
+)
+"Asdd.ml" 83 1787 1802 "Asdd.ml" 83 1787 1815
+type(
+  Lex.unite_lexicale list
+)
+"Asdd.ml" 83 1787 1791 "Asdd.ml" 83 1787 1816
+type(
+  v * Lex.unite_lexicale list
+)
+"Asdd.ml" 83 1787 1828 "Asdd.ml" 83 1787 1833
+type(
+  vt
+)
+"Asdd.ml" 83 1787 1820 "Asdd.ml" 83 1787 1833
+type(
+  arbre_concret
+)
+"Asdd.ml" 83 1787 1834 "Asdd.ml" 83 1787 1839
+type(
+  Lex.unite_lexicale list
+)
+ident(
+  int_ref reste "Asdd.ml" 83 1787 1810 "Asdd.ml" 83 1787 1815
+)
+"Asdd.ml" 83 1787 1819 "Asdd.ml" 83 1787 1840
+type(
+  arbre_concret * Lex.unite_lexicale list
+)
+"Asdd.ml" 84 1841 1848 "Asdd.ml" 84 1841 1855
+type(
+  vt
+)
+"Asdd.ml" 84 1841 1846 "Asdd.ml" 84 1841 1855
+type(
+  v
+)
+"Asdd.ml" 84 1841 1856 "Asdd.ml" 84 1841 1857
+type(
+  Lex.unite_lexicale list
+)
+"Asdd.ml" 84 1841 1845 "Asdd.ml" 84 1841 1858
+type(
+  v * Lex.unite_lexicale list
+)
+"Asdd.ml" 84 1841 1861 "Asdd.ml" 84 1841 1866
+type(
+  exn -> arbre_concret * Lex.unite_lexicale list
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"Asdd.ml" 84 1841 1881 "Asdd.ml" 84 1841 1895
+type(
+  string
+)
+"Asdd.ml" 84 1841 1866 "Asdd.ml" 84 1841 1896
+type(
+  exn
+)
+"Asdd.ml" 84 1841 1861 "Asdd.ml" 84 1841 1896
+type(
+  arbre_concret * Lex.unite_lexicale list
+)
+"Asdd.ml" 85 1897 1904 "Asdd.ml" 85 1897 1913
+type(
+  vt
+)
+"Asdd.ml" 85 1897 1902 "Asdd.ml" 85 1897 1913
+type(
+  v
+)
+"Asdd.ml" 85 1897 1914 "Asdd.ml" 85 1897 1922
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 85 1897 1924 "Asdd.ml" 85 1897 1929
+type(
+  Lex.unite_lexicale list
+)
+ident(
+  def reste "Asdd.ml" 85 1897 1933 "Asdd.ml" 85 1897 1956
+)
+"Asdd.ml" 85 1897 1914 "Asdd.ml" 85 1897 1929
+type(
+  Lex.unite_lexicale list
+)
+"Asdd.ml" 85 1897 1901 "Asdd.ml" 85 1897 1930
+type(
+  v * Lex.unite_lexicale list
+)
+"Asdd.ml" 85 1897 1942 "Asdd.ml" 85 1897 1949
+type(
+  vt
+)
+"Asdd.ml" 85 1897 1934 "Asdd.ml" 85 1897 1949
+type(
+  arbre_concret
+)
+"Asdd.ml" 85 1897 1950 "Asdd.ml" 85 1897 1955
+type(
+  Lex.unite_lexicale list
+)
+ident(
+  int_ref reste "Asdd.ml" 85 1897 1924 "Asdd.ml" 85 1897 1929
+)
+"Asdd.ml" 85 1897 1933 "Asdd.ml" 85 1897 1956
+type(
+  arbre_concret * Lex.unite_lexicale list
+)
+"Asdd.ml" 86 1957 1964 "Asdd.ml" 86 1957 1973
+type(
+  vt
+)
+"Asdd.ml" 86 1957 1962 "Asdd.ml" 86 1957 1973
+type(
+  v
+)
+"Asdd.ml" 86 1957 1974 "Asdd.ml" 86 1957 1975
+type(
+  Lex.unite_lexicale list
+)
+"Asdd.ml" 86 1957 1961 "Asdd.ml" 86 1957 1976
+type(
+  v * Lex.unite_lexicale list
+)
+"Asdd.ml" 86 1957 1979 "Asdd.ml" 86 1957 1984
+type(
+  exn -> arbre_concret * Lex.unite_lexicale list
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"Asdd.ml" 86 1957 1999 "Asdd.ml" 86 1957 2013
+type(
+  string
+)
+"Asdd.ml" 86 1957 1984 "Asdd.ml" 86 1957 2014
+type(
+  exn
+)
+"Asdd.ml" 86 1957 1979 "Asdd.ml" 86 1957 2014
+type(
+  arbre_concret * Lex.unite_lexicale list
+)
+"Asdd.ml" 87 2015 2022 "Asdd.ml" 87 2015 2031
+type(
+  vt
+)
+"Asdd.ml" 87 2015 2020 "Asdd.ml" 87 2015 2031
+type(
+  v
+)
+"Asdd.ml" 87 2015 2032 "Asdd.ml" 87 2015 2040
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 87 2015 2042 "Asdd.ml" 87 2015 2047
+type(
+  Lex.unite_lexicale list
+)
+ident(
+  def reste "Asdd.ml" 87 2015 2051 "Asdd.ml" 87 2015 2074
+)
+"Asdd.ml" 87 2015 2032 "Asdd.ml" 87 2015 2047
+type(
+  Lex.unite_lexicale list
+)
+"Asdd.ml" 87 2015 2019 "Asdd.ml" 87 2015 2048
+type(
+  v * Lex.unite_lexicale list
+)
+"Asdd.ml" 87 2015 2060 "Asdd.ml" 87 2015 2067
+type(
+  vt
+)
+"Asdd.ml" 87 2015 2052 "Asdd.ml" 87 2015 2067
+type(
+  arbre_concret
+)
+"Asdd.ml" 87 2015 2068 "Asdd.ml" 87 2015 2073
+type(
+  Lex.unite_lexicale list
+)
+ident(
+  int_ref reste "Asdd.ml" 87 2015 2042 "Asdd.ml" 87 2015 2047
+)
+"Asdd.ml" 87 2015 2051 "Asdd.ml" 87 2015 2074
+type(
+  arbre_concret * Lex.unite_lexicale list
+)
+"Asdd.ml" 88 2075 2082 "Asdd.ml" 88 2075 2091
+type(
+  vt
+)
+"Asdd.ml" 88 2075 2080 "Asdd.ml" 88 2075 2091
+type(
+  v
+)
+"Asdd.ml" 88 2075 2092 "Asdd.ml" 88 2075 2093
+type(
+  Lex.unite_lexicale list
+)
+"Asdd.ml" 88 2075 2079 "Asdd.ml" 88 2075 2094
+type(
+  v * Lex.unite_lexicale list
+)
+"Asdd.ml" 88 2075 2097 "Asdd.ml" 88 2075 2102
+type(
+  exn -> arbre_concret * Lex.unite_lexicale list
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"Asdd.ml" 88 2075 2117 "Asdd.ml" 88 2075 2131
+type(
+  string
+)
+"Asdd.ml" 88 2075 2102 "Asdd.ml" 88 2075 2132
+type(
+  exn
+)
+"Asdd.ml" 88 2075 2097 "Asdd.ml" 88 2075 2132
+type(
+  arbre_concret * Lex.unite_lexicale list
+)
+"Asdd.ml" 89 2133 2140 "Asdd.ml" 89 2133 2147
+type(
+  vt
+)
+"Asdd.ml" 89 2133 2138 "Asdd.ml" 89 2133 2147
+type(
+  v
+)
+"Asdd.ml" 89 2133 2148 "Asdd.ml" 89 2133 2154
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 89 2133 2156 "Asdd.ml" 89 2133 2161
+type(
+  Lex.unite_lexicale list
+)
+ident(
+  def reste "Asdd.ml" 89 2133 2165 "Asdd.ml" 89 2133 2186
+)
+"Asdd.ml" 89 2133 2148 "Asdd.ml" 89 2133 2161
+type(
+  Lex.unite_lexicale list
+)
+"Asdd.ml" 89 2133 2137 "Asdd.ml" 89 2133 2162
+type(
+  v * Lex.unite_lexicale list
+)
+"Asdd.ml" 89 2133 2174 "Asdd.ml" 89 2133 2179
+type(
+  vt
+)
+"Asdd.ml" 89 2133 2166 "Asdd.ml" 89 2133 2179
+type(
+  arbre_concret
+)
+"Asdd.ml" 89 2133 2180 "Asdd.ml" 89 2133 2185
+type(
+  Lex.unite_lexicale list
+)
+ident(
+  int_ref reste "Asdd.ml" 89 2133 2156 "Asdd.ml" 89 2133 2161
+)
+"Asdd.ml" 89 2133 2165 "Asdd.ml" 89 2133 2186
+type(
+  arbre_concret * Lex.unite_lexicale list
+)
+"Asdd.ml" 90 2187 2194 "Asdd.ml" 90 2187 2201
+type(
+  vt
+)
+"Asdd.ml" 90 2187 2192 "Asdd.ml" 90 2187 2201
+type(
+  v
+)
+"Asdd.ml" 90 2187 2202 "Asdd.ml" 90 2187 2203
+type(
+  Lex.unite_lexicale list
+)
+"Asdd.ml" 90 2187 2191 "Asdd.ml" 90 2187 2204
+type(
+  v * Lex.unite_lexicale list
+)
+"Asdd.ml" 90 2187 2207 "Asdd.ml" 90 2187 2212
+type(
+  exn -> arbre_concret * Lex.unite_lexicale list
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"Asdd.ml" 90 2187 2227 "Asdd.ml" 90 2187 2241
+type(
+  string
+)
+"Asdd.ml" 90 2187 2212 "Asdd.ml" 90 2187 2242
+type(
+  exn
+)
+"Asdd.ml" 90 2187 2207 "Asdd.ml" 90 2187 2242
+type(
+  arbre_concret * Lex.unite_lexicale list
+)
+"Asdd.ml" 91 2243 2250 "Asdd.ml" 91 2243 2260
+type(
+  vt
+)
+"Asdd.ml" 91 2243 2248 "Asdd.ml" 91 2243 2260
+type(
+  v
+)
+"Asdd.ml" 91 2243 2261 "Asdd.ml" 91 2243 2270
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 91 2243 2272 "Asdd.ml" 91 2243 2277
+type(
+  Lex.unite_lexicale list
+)
+ident(
+  def reste "Asdd.ml" 91 2243 2281 "Asdd.ml" 91 2243 2305
+)
+"Asdd.ml" 91 2243 2261 "Asdd.ml" 91 2243 2277
+type(
+  Lex.unite_lexicale list
+)
+"Asdd.ml" 91 2243 2247 "Asdd.ml" 91 2243 2278
+type(
+  v * Lex.unite_lexicale list
+)
+"Asdd.ml" 91 2243 2290 "Asdd.ml" 91 2243 2298
+type(
+  vt
+)
+"Asdd.ml" 91 2243 2282 "Asdd.ml" 91 2243 2298
+type(
+  arbre_concret
+)
+"Asdd.ml" 91 2243 2299 "Asdd.ml" 91 2243 2304
+type(
+  Lex.unite_lexicale list
+)
+ident(
+  int_ref reste "Asdd.ml" 91 2243 2272 "Asdd.ml" 91 2243 2277
+)
+"Asdd.ml" 91 2243 2281 "Asdd.ml" 91 2243 2305
+type(
+  arbre_concret * Lex.unite_lexicale list
+)
+"Asdd.ml" 92 2306 2313 "Asdd.ml" 92 2306 2323
+type(
+  vt
+)
+"Asdd.ml" 92 2306 2311 "Asdd.ml" 92 2306 2323
+type(
+  v
+)
+"Asdd.ml" 92 2306 2324 "Asdd.ml" 92 2306 2325
+type(
+  Lex.unite_lexicale list
+)
+"Asdd.ml" 92 2306 2310 "Asdd.ml" 92 2306 2326
+type(
+  v * Lex.unite_lexicale list
+)
+"Asdd.ml" 92 2306 2329 "Asdd.ml" 92 2306 2334
+type(
+  exn -> arbre_concret * Lex.unite_lexicale list
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"Asdd.ml" 92 2306 2349 "Asdd.ml" 92 2306 2363
+type(
+  string
+)
+"Asdd.ml" 92 2306 2334 "Asdd.ml" 92 2306 2364
+type(
+  exn
+)
+"Asdd.ml" 92 2306 2329 "Asdd.ml" 92 2306 2364
+type(
+  arbre_concret * Lex.unite_lexicale list
+)
+"Asdd.ml" 93 2365 2372 "Asdd.ml" 93 2365 2382
+type(
+  vt
+)
+"Asdd.ml" 93 2365 2370 "Asdd.ml" 93 2365 2382
+type(
+  v
+)
+"Asdd.ml" 93 2365 2383 "Asdd.ml" 93 2365 2392
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 93 2365 2394 "Asdd.ml" 93 2365 2399
+type(
+  Lex.unite_lexicale list
+)
+ident(
+  def reste "Asdd.ml" 93 2365 2403 "Asdd.ml" 93 2365 2427
+)
+"Asdd.ml" 93 2365 2383 "Asdd.ml" 93 2365 2399
+type(
+  Lex.unite_lexicale list
+)
+"Asdd.ml" 93 2365 2369 "Asdd.ml" 93 2365 2400
+type(
+  v * Lex.unite_lexicale list
+)
+"Asdd.ml" 93 2365 2412 "Asdd.ml" 93 2365 2420
+type(
+  vt
+)
+"Asdd.ml" 93 2365 2404 "Asdd.ml" 93 2365 2420
+type(
+  arbre_concret
+)
+"Asdd.ml" 93 2365 2421 "Asdd.ml" 93 2365 2426
+type(
+  Lex.unite_lexicale list
+)
+ident(
+  int_ref reste "Asdd.ml" 93 2365 2394 "Asdd.ml" 93 2365 2399
+)
+"Asdd.ml" 93 2365 2403 "Asdd.ml" 93 2365 2427
+type(
+  arbre_concret * Lex.unite_lexicale list
+)
+"Asdd.ml" 94 2428 2435 "Asdd.ml" 94 2428 2445
+type(
+  vt
+)
+"Asdd.ml" 94 2428 2433 "Asdd.ml" 94 2428 2445
+type(
+  v
+)
+"Asdd.ml" 94 2428 2446 "Asdd.ml" 94 2428 2447
+type(
+  Lex.unite_lexicale list
+)
+"Asdd.ml" 94 2428 2432 "Asdd.ml" 94 2428 2448
+type(
+  v * Lex.unite_lexicale list
+)
+"Asdd.ml" 94 2428 2451 "Asdd.ml" 94 2428 2456
+type(
+  exn -> arbre_concret * Lex.unite_lexicale list
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"Asdd.ml" 94 2428 2471 "Asdd.ml" 94 2428 2485
+type(
+  string
+)
+"Asdd.ml" 94 2428 2456 "Asdd.ml" 94 2428 2486
+type(
+  exn
+)
+"Asdd.ml" 94 2428 2451 "Asdd.ml" 94 2428 2486
+type(
+  arbre_concret * Lex.unite_lexicale list
+)
+"Asdd.ml" 95 2487 2494 "Asdd.ml" 95 2487 2502
+type(
+  vt
+)
+"Asdd.ml" 95 2487 2492 "Asdd.ml" 95 2487 2502
+type(
+  v
+)
+"Asdd.ml" 95 2487 2503 "Asdd.ml" 95 2487 2510
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 95 2487 2512 "Asdd.ml" 95 2487 2517
+type(
+  Lex.unite_lexicale list
+)
+ident(
+  def reste "Asdd.ml" 95 2487 2521 "Asdd.ml" 95 2487 2543
+)
+"Asdd.ml" 95 2487 2503 "Asdd.ml" 95 2487 2517
+type(
+  Lex.unite_lexicale list
+)
+"Asdd.ml" 95 2487 2491 "Asdd.ml" 95 2487 2518
+type(
+  v * Lex.unite_lexicale list
+)
+"Asdd.ml" 95 2487 2530 "Asdd.ml" 95 2487 2536
+type(
+  vt
+)
+"Asdd.ml" 95 2487 2522 "Asdd.ml" 95 2487 2536
+type(
+  arbre_concret
+)
+"Asdd.ml" 95 2487 2537 "Asdd.ml" 95 2487 2542
+type(
+  Lex.unite_lexicale list
+)
+ident(
+  int_ref reste "Asdd.ml" 95 2487 2512 "Asdd.ml" 95 2487 2517
+)
+"Asdd.ml" 95 2487 2521 "Asdd.ml" 95 2487 2543
+type(
+  arbre_concret * Lex.unite_lexicale list
+)
+"Asdd.ml" 96 2544 2551 "Asdd.ml" 96 2544 2559
+type(
+  vt
+)
+"Asdd.ml" 96 2544 2549 "Asdd.ml" 96 2544 2559
+type(
+  v
+)
+"Asdd.ml" 96 2544 2560 "Asdd.ml" 96 2544 2561
+type(
+  Lex.unite_lexicale list
+)
+"Asdd.ml" 96 2544 2548 "Asdd.ml" 96 2544 2562
+type(
+  v * Lex.unite_lexicale list
+)
+"Asdd.ml" 96 2544 2565 "Asdd.ml" 96 2544 2570
+type(
+  exn -> arbre_concret * Lex.unite_lexicale list
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"Asdd.ml" 96 2544 2585 "Asdd.ml" 96 2544 2599
+type(
+  string
+)
+"Asdd.ml" 96 2544 2570 "Asdd.ml" 96 2544 2600
+type(
+  exn
+)
+"Asdd.ml" 96 2544 2565 "Asdd.ml" 96 2544 2600
+type(
+  arbre_concret * Lex.unite_lexicale list
+)
+"Asdd.ml" 97 2601 2618 "Asdd.ml" 97 2601 2620
+type(
+  string
+)
+"Asdd.ml" 97 2601 2608 "Asdd.ml" 97 2601 2621
+type(
+  vt
+)
+"Asdd.ml" 97 2601 2606 "Asdd.ml" 97 2601 2621
+type(
+  v
+)
+"Asdd.ml" 97 2601 2630 "Asdd.ml" 97 2601 2635
+type(
+  string
+)
+ident(
+  def id1 "Asdd.ml" 97 2601 2648 "Asdd.ml" 97 2601 2678
+)
+"Asdd.ml" 97 2601 2622 "Asdd.ml" 97 2601 2636
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 97 2601 2638 "Asdd.ml" 97 2601 2643
+type(
+  Lex.unite_lexicale list
+)
+ident(
+  def reste "Asdd.ml" 97 2601 2648 "Asdd.ml" 97 2601 2678
+)
+"Asdd.ml" 97 2601 2622 "Asdd.ml" 97 2601 2643
+type(
+  Lex.unite_lexicale list
+)
+"Asdd.ml" 97 2601 2605 "Asdd.ml" 97 2601 2644
+type(
+  v * Lex.unite_lexicale list
+)
+"Asdd.ml" 97 2601 2667 "Asdd.ml" 97 2601 2670
+type(
+  string
+)
+ident(
+  int_ref id1 "Asdd.ml" 97 2601 2630 "Asdd.ml" 97 2601 2635
+)
+"Asdd.ml" 97 2601 2657 "Asdd.ml" 97 2601 2671
+type(
+  vt
+)
+"Asdd.ml" 97 2601 2649 "Asdd.ml" 97 2601 2671
+type(
+  arbre_concret
+)
+"Asdd.ml" 97 2601 2672 "Asdd.ml" 97 2601 2677
+type(
+  Lex.unite_lexicale list
+)
+ident(
+  int_ref reste "Asdd.ml" 97 2601 2638 "Asdd.ml" 97 2601 2643
+)
+"Asdd.ml" 97 2601 2648 "Asdd.ml" 97 2601 2678
+type(
+  arbre_concret * Lex.unite_lexicale list
+)
+"Asdd.ml" 98 2679 2696 "Asdd.ml" 98 2679 2698
+type(
+  string
+)
+"Asdd.ml" 98 2679 2686 "Asdd.ml" 98 2679 2699
+type(
+  vt
+)
+"Asdd.ml" 98 2679 2684 "Asdd.ml" 98 2679 2699
+type(
+  v
+)
+"Asdd.ml" 98 2679 2700 "Asdd.ml" 98 2679 2701
+type(
+  Lex.unite_lexicale list
+)
+"Asdd.ml" 98 2679 2683 "Asdd.ml" 98 2679 2702
+type(
+  v * Lex.unite_lexicale list
+)
+"Asdd.ml" 98 2679 2705 "Asdd.ml" 98 2679 2710
+type(
+  exn -> arbre_concret * Lex.unite_lexicale list
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"Asdd.ml" 98 2679 2725 "Asdd.ml" 98 2679 2739
+type(
+  string
+)
+"Asdd.ml" 98 2679 2710 "Asdd.ml" 98 2679 2740
+type(
+  exn
+)
+"Asdd.ml" 98 2679 2705 "Asdd.ml" 98 2679 2740
+type(
+  arbre_concret * Lex.unite_lexicale list
+)
+"Asdd.ml" 99 2741 2748 "Asdd.ml" 99 2741 2755
+type(
+  vt
+)
+"Asdd.ml" 99 2741 2746 "Asdd.ml" 99 2741 2755
+type(
+  v
+)
+"Asdd.ml" 99 2741 2756 "Asdd.ml" 99 2741 2762
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 99 2741 2764 "Asdd.ml" 99 2741 2769
+type(
+  Lex.unite_lexicale list
+)
+ident(
+  def reste "Asdd.ml" 99 2741 2773 "Asdd.ml" 99 2741 2794
+)
+"Asdd.ml" 99 2741 2756 "Asdd.ml" 99 2741 2769
+type(
+  Lex.unite_lexicale list
+)
+"Asdd.ml" 99 2741 2745 "Asdd.ml" 99 2741 2770
+type(
+  v * Lex.unite_lexicale list
+)
+"Asdd.ml" 99 2741 2782 "Asdd.ml" 99 2741 2787
+type(
+  vt
+)
+"Asdd.ml" 99 2741 2774 "Asdd.ml" 99 2741 2787
+type(
+  arbre_concret
+)
+"Asdd.ml" 99 2741 2788 "Asdd.ml" 99 2741 2793
+type(
+  Lex.unite_lexicale list
+)
+ident(
+  int_ref reste "Asdd.ml" 99 2741 2764 "Asdd.ml" 99 2741 2769
+)
+"Asdd.ml" 99 2741 2773 "Asdd.ml" 99 2741 2794
+type(
+  arbre_concret * Lex.unite_lexicale list
+)
+"Asdd.ml" 100 2795 2802 "Asdd.ml" 100 2795 2809
+type(
+  vt
+)
+"Asdd.ml" 100 2795 2800 "Asdd.ml" 100 2795 2809
+type(
+  v
+)
+"Asdd.ml" 100 2795 2810 "Asdd.ml" 100 2795 2811
+type(
+  Lex.unite_lexicale list
+)
+"Asdd.ml" 100 2795 2799 "Asdd.ml" 100 2795 2812
+type(
+  v * Lex.unite_lexicale list
+)
+"Asdd.ml" 100 2795 2815 "Asdd.ml" 100 2795 2820
+type(
+  exn -> arbre_concret * Lex.unite_lexicale list
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"Asdd.ml" 100 2795 2835 "Asdd.ml" 100 2795 2849
+type(
+  string
+)
+"Asdd.ml" 100 2795 2820 "Asdd.ml" 100 2795 2850
+type(
+  exn
+)
+"Asdd.ml" 100 2795 2815 "Asdd.ml" 100 2795 2850
+type(
+  arbre_concret * Lex.unite_lexicale list
+)
+"Asdd.ml" 101 2851 2858 "Asdd.ml" 101 2851 2866
+type(
+  vt
+)
+"Asdd.ml" 101 2851 2856 "Asdd.ml" 101 2851 2866
+type(
+  v
+)
+"Asdd.ml" 101 2851 2867 "Asdd.ml" 101 2851 2874
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 101 2851 2876 "Asdd.ml" 101 2851 2881
+type(
+  Lex.unite_lexicale list
+)
+ident(
+  def reste "Asdd.ml" 101 2851 2885 "Asdd.ml" 101 2851 2907
+)
+"Asdd.ml" 101 2851 2867 "Asdd.ml" 101 2851 2881
+type(
+  Lex.unite_lexicale list
+)
+"Asdd.ml" 101 2851 2855 "Asdd.ml" 101 2851 2882
+type(
+  v * Lex.unite_lexicale list
+)
+"Asdd.ml" 101 2851 2894 "Asdd.ml" 101 2851 2900
+type(
+  vt
+)
+"Asdd.ml" 101 2851 2886 "Asdd.ml" 101 2851 2900
+type(
+  arbre_concret
+)
+"Asdd.ml" 101 2851 2901 "Asdd.ml" 101 2851 2906
+type(
+  Lex.unite_lexicale list
+)
+ident(
+  int_ref reste "Asdd.ml" 101 2851 2876 "Asdd.ml" 101 2851 2881
+)
+"Asdd.ml" 101 2851 2885 "Asdd.ml" 101 2851 2907
+type(
+  arbre_concret * Lex.unite_lexicale list
+)
+"Asdd.ml" 102 2908 2915 "Asdd.ml" 102 2908 2923
+type(
+  vt
+)
+"Asdd.ml" 102 2908 2913 "Asdd.ml" 102 2908 2923
+type(
+  v
+)
+"Asdd.ml" 102 2908 2924 "Asdd.ml" 102 2908 2925
+type(
+  Lex.unite_lexicale list
+)
+"Asdd.ml" 102 2908 2912 "Asdd.ml" 102 2908 2926
+type(
+  v * Lex.unite_lexicale list
+)
+"Asdd.ml" 102 2908 2929 "Asdd.ml" 102 2908 2934
+type(
+  exn -> arbre_concret * Lex.unite_lexicale list
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"Asdd.ml" 102 2908 2949 "Asdd.ml" 102 2908 2963
+type(
+  string
+)
+"Asdd.ml" 102 2908 2934 "Asdd.ml" 102 2908 2964
+type(
+  exn
+)
+"Asdd.ml" 102 2908 2929 "Asdd.ml" 102 2908 2964
+type(
+  arbre_concret * Lex.unite_lexicale list
+)
+"Asdd.ml" 103 2965 2972 "Asdd.ml" 103 2965 2980
+type(
+  vt
+)
+"Asdd.ml" 103 2965 2970 "Asdd.ml" 103 2965 2980
+type(
+  v
+)
+"Asdd.ml" 103 2965 2981 "Asdd.ml" 103 2965 2988
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 103 2965 2990 "Asdd.ml" 103 2965 2995
+type(
+  Lex.unite_lexicale list
+)
+ident(
+  def reste "Asdd.ml" 103 2965 2999 "Asdd.ml" 103 2965 3021
+)
+"Asdd.ml" 103 2965 2981 "Asdd.ml" 103 2965 2995
+type(
+  Lex.unite_lexicale list
+)
+"Asdd.ml" 103 2965 2969 "Asdd.ml" 103 2965 2996
+type(
+  v * Lex.unite_lexicale list
+)
+"Asdd.ml" 103 2965 3008 "Asdd.ml" 103 2965 3014
+type(
+  vt
+)
+"Asdd.ml" 103 2965 3000 "Asdd.ml" 103 2965 3014
+type(
+  arbre_concret
+)
+"Asdd.ml" 103 2965 3015 "Asdd.ml" 103 2965 3020
+type(
+  Lex.unite_lexicale list
+)
+ident(
+  int_ref reste "Asdd.ml" 103 2965 2990 "Asdd.ml" 103 2965 2995
+)
+"Asdd.ml" 103 2965 2999 "Asdd.ml" 103 2965 3021
+type(
+  arbre_concret * Lex.unite_lexicale list
+)
+"Asdd.ml" 104 3022 3029 "Asdd.ml" 104 3022 3037
+type(
+  vt
+)
+"Asdd.ml" 104 3022 3027 "Asdd.ml" 104 3022 3037
+type(
+  v
+)
+"Asdd.ml" 104 3022 3038 "Asdd.ml" 104 3022 3039
+type(
+  Lex.unite_lexicale list
+)
+"Asdd.ml" 104 3022 3026 "Asdd.ml" 104 3022 3040
+type(
+  v * Lex.unite_lexicale list
+)
+"Asdd.ml" 104 3022 3043 "Asdd.ml" 104 3022 3048
+type(
+  exn -> arbre_concret * Lex.unite_lexicale list
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"Asdd.ml" 104 3022 3063 "Asdd.ml" 104 3022 3077
+type(
+  string
+)
+"Asdd.ml" 104 3022 3048 "Asdd.ml" 104 3022 3078
+type(
+  exn
+)
+"Asdd.ml" 104 3022 3043 "Asdd.ml" 104 3022 3078
+type(
+  arbre_concret * Lex.unite_lexicale list
+)
+"Asdd.ml" 105 3079 3086 "Asdd.ml" 105 3079 3094
+type(
+  vt
+)
+"Asdd.ml" 105 3079 3084 "Asdd.ml" 105 3079 3094
+type(
+  v
+)
+"Asdd.ml" 105 3079 3095 "Asdd.ml" 105 3079 3102
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 105 3079 3104 "Asdd.ml" 105 3079 3109
+type(
+  Lex.unite_lexicale list
+)
+ident(
+  def reste "Asdd.ml" 105 3079 3113 "Asdd.ml" 105 3079 3135
+)
+"Asdd.ml" 105 3079 3095 "Asdd.ml" 105 3079 3109
+type(
+  Lex.unite_lexicale list
+)
+"Asdd.ml" 105 3079 3083 "Asdd.ml" 105 3079 3110
+type(
+  v * Lex.unite_lexicale list
+)
+"Asdd.ml" 105 3079 3122 "Asdd.ml" 105 3079 3128
+type(
+  vt
+)
+"Asdd.ml" 105 3079 3114 "Asdd.ml" 105 3079 3128
+type(
+  arbre_concret
+)
+"Asdd.ml" 105 3079 3129 "Asdd.ml" 105 3079 3134
+type(
+  Lex.unite_lexicale list
+)
+ident(
+  int_ref reste "Asdd.ml" 105 3079 3104 "Asdd.ml" 105 3079 3109
+)
+"Asdd.ml" 105 3079 3113 "Asdd.ml" 105 3079 3135
+type(
+  arbre_concret * Lex.unite_lexicale list
+)
+"Asdd.ml" 106 3136 3143 "Asdd.ml" 106 3136 3151
+type(
+  vt
+)
+"Asdd.ml" 106 3136 3141 "Asdd.ml" 106 3136 3151
+type(
+  v
+)
+"Asdd.ml" 106 3136 3152 "Asdd.ml" 106 3136 3153
+type(
+  Lex.unite_lexicale list
+)
+"Asdd.ml" 106 3136 3140 "Asdd.ml" 106 3136 3154
+type(
+  v * Lex.unite_lexicale list
+)
+"Asdd.ml" 106 3136 3157 "Asdd.ml" 106 3136 3162
+type(
+  exn -> arbre_concret * Lex.unite_lexicale list
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"Asdd.ml" 106 3136 3177 "Asdd.ml" 106 3136 3191
+type(
+  string
+)
+"Asdd.ml" 106 3136 3162 "Asdd.ml" 106 3136 3192
+type(
+  exn
+)
+"Asdd.ml" 106 3136 3157 "Asdd.ml" 106 3136 3192
+type(
+  arbre_concret * Lex.unite_lexicale list
+)
+"Asdd.ml" 107 3193 3200 "Asdd.ml" 107 3193 3210
+type(
+  vt
+)
+"Asdd.ml" 107 3193 3198 "Asdd.ml" 107 3193 3210
+type(
+  v
+)
+"Asdd.ml" 107 3193 3211 "Asdd.ml" 107 3193 3220
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 107 3193 3222 "Asdd.ml" 107 3193 3227
+type(
+  Lex.unite_lexicale list
+)
+ident(
+  def reste "Asdd.ml" 107 3193 3231 "Asdd.ml" 107 3193 3255
+)
+"Asdd.ml" 107 3193 3211 "Asdd.ml" 107 3193 3227
+type(
+  Lex.unite_lexicale list
+)
+"Asdd.ml" 107 3193 3197 "Asdd.ml" 107 3193 3228
+type(
+  v * Lex.unite_lexicale list
+)
+"Asdd.ml" 107 3193 3240 "Asdd.ml" 107 3193 3248
+type(
+  vt
+)
+"Asdd.ml" 107 3193 3232 "Asdd.ml" 107 3193 3248
+type(
+  arbre_concret
+)
+"Asdd.ml" 107 3193 3249 "Asdd.ml" 107 3193 3254
+type(
+  Lex.unite_lexicale list
+)
+ident(
+  int_ref reste "Asdd.ml" 107 3193 3222 "Asdd.ml" 107 3193 3227
+)
+"Asdd.ml" 107 3193 3231 "Asdd.ml" 107 3193 3255
+type(
+  arbre_concret * Lex.unite_lexicale list
+)
+"Asdd.ml" 108 3256 3263 "Asdd.ml" 108 3256 3273
+type(
+  vt
+)
+"Asdd.ml" 108 3256 3261 "Asdd.ml" 108 3256 3273
+type(
+  v
+)
+"Asdd.ml" 108 3256 3274 "Asdd.ml" 108 3256 3275
+type(
+  Lex.unite_lexicale list
+)
+"Asdd.ml" 108 3256 3260 "Asdd.ml" 108 3256 3276
+type(
+  v * Lex.unite_lexicale list
+)
+"Asdd.ml" 108 3256 3279 "Asdd.ml" 108 3256 3284
+type(
+  exn -> arbre_concret * Lex.unite_lexicale list
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"Asdd.ml" 108 3256 3299 "Asdd.ml" 108 3256 3313
+type(
+  string
+)
+"Asdd.ml" 108 3256 3284 "Asdd.ml" 108 3256 3314
+type(
+  exn
+)
+"Asdd.ml" 108 3256 3279 "Asdd.ml" 108 3256 3314
+type(
+  arbre_concret * Lex.unite_lexicale list
+)
+"Asdd.ml" 109 3315 3322 "Asdd.ml" 109 3315 3332
+type(
+  vt
+)
+"Asdd.ml" 109 3315 3320 "Asdd.ml" 109 3315 3332
+type(
+  v
+)
+"Asdd.ml" 109 3315 3333 "Asdd.ml" 109 3315 3342
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 109 3315 3344 "Asdd.ml" 109 3315 3349
+type(
+  Lex.unite_lexicale list
+)
+ident(
+  def reste "Asdd.ml" 109 3315 3353 "Asdd.ml" 109 3315 3377
+)
+"Asdd.ml" 109 3315 3333 "Asdd.ml" 109 3315 3349
+type(
+  Lex.unite_lexicale list
+)
+"Asdd.ml" 109 3315 3319 "Asdd.ml" 109 3315 3350
+type(
+  v * Lex.unite_lexicale list
+)
+"Asdd.ml" 109 3315 3362 "Asdd.ml" 109 3315 3370
+type(
+  vt
+)
+"Asdd.ml" 109 3315 3354 "Asdd.ml" 109 3315 3370
+type(
+  arbre_concret
+)
+"Asdd.ml" 109 3315 3371 "Asdd.ml" 109 3315 3376
+type(
+  Lex.unite_lexicale list
+)
+ident(
+  int_ref reste "Asdd.ml" 109 3315 3344 "Asdd.ml" 109 3315 3349
+)
+"Asdd.ml" 109 3315 3353 "Asdd.ml" 109 3315 3377
+type(
+  arbre_concret * Lex.unite_lexicale list
+)
+"Asdd.ml" 110 3378 3385 "Asdd.ml" 110 3378 3395
+type(
+  vt
+)
+"Asdd.ml" 110 3378 3383 "Asdd.ml" 110 3378 3395
+type(
+  v
+)
+"Asdd.ml" 110 3378 3396 "Asdd.ml" 110 3378 3397
+type(
+  Lex.unite_lexicale list
+)
+"Asdd.ml" 110 3378 3382 "Asdd.ml" 110 3378 3398
+type(
+  v * Lex.unite_lexicale list
+)
+"Asdd.ml" 110 3378 3401 "Asdd.ml" 110 3378 3406
+type(
+  exn -> arbre_concret * Lex.unite_lexicale list
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"Asdd.ml" 110 3378 3421 "Asdd.ml" 110 3378 3435
+type(
+  string
+)
+"Asdd.ml" 110 3378 3406 "Asdd.ml" 110 3378 3436
+type(
+  exn
+)
+"Asdd.ml" 110 3378 3401 "Asdd.ml" 110 3378 3436
+type(
+  arbre_concret * Lex.unite_lexicale list
+)
+"Asdd.ml" 111 3437 3444 "Asdd.ml" 111 3437 3448
+type(
+  vn
+)
+ident(
+  def tn "Asdd.ml" 111 3437 3461 "Asdd.ml" 111 3437 3544
+)
+"Asdd.ml" 111 3437 3442 "Asdd.ml" 111 3437 3448
+type(
+  v
+)
+"Asdd.ml" 111 3437 3449 "Asdd.ml" 111 3437 3450
+type(
+  Lex.unite_lexicale
+)
+ident(
+  def a "Asdd.ml" 111 3437 3461 "Asdd.ml" 111 3437 3544
+)
+"Asdd.ml" 111 3437 3452 "Asdd.ml" 111 3437 3457
+type(
+  Lex.unite_lexicale list
+)
+ident(
+  def reste "Asdd.ml" 111 3437 3461 "Asdd.ml" 111 3437 3544
+)
+"Asdd.ml" 111 3437 3449 "Asdd.ml" 111 3437 3457
+type(
+  Lex.unite_lexicale list
+)
+"Asdd.ml" 111 3437 3441 "Asdd.ml" 111 3437 3458
+type(
+  v * Lex.unite_lexicale list
+)
+"Asdd.ml" 111 3437 3466 "Asdd.ml" 111 3437 3469
+type(
+  arbre_concret list
+)
+"Asdd.ml" 111 3437 3470 "Asdd.ml" 111 3437 3476
+type(
+  Lex.unite_lexicale list
+)
+"Asdd.ml" 111 3437 3465 "Asdd.ml" 111 3437 3477
+type(
+  arbre_concret list * Lex.unite_lexicale list
+)
+"Asdd.ml" 111 3437 3479 "Asdd.ml" 111 3437 3490
+type(
+  v list * Lex.unite_lexicale list ->
+  arbre_concret list * Lex.unite_lexicale list
+)
+ident(
+  int_ref analyse_mot "Asdd.ml" 117 3652 3652 "Asdd.ml" 117 3652 3663
+)
+"Asdd.ml" 111 3437 3492 "Asdd.ml" 111 3437 3502
+type(
+  vn * Lex.unite_lexicale -> v list
+)
+ident(
+  int_ref derivation "Asdd.ml" 39 411 415 "Asdd.ml" 39 411 425
+)
+"Asdd.ml" 111 3437 3503 "Asdd.ml" 111 3437 3505
+type(
+  vn
+)
+ident(
+  int_ref tn "Asdd.ml" 111 3437 3444 "Asdd.ml" 111 3437 3448
+)
+"Asdd.ml" 111 3437 3506 "Asdd.ml" 111 3437 3507
+type(
+  Lex.unite_lexicale
+)
+ident(
+  int_ref a "Asdd.ml" 111 3437 3449 "Asdd.ml" 111 3437 3450
+)
+"Asdd.ml" 111 3437 3502 "Asdd.ml" 111 3437 3508
+type(
+  vn * Lex.unite_lexicale
+)
+"Asdd.ml" 111 3437 3492 "Asdd.ml" 111 3437 3508
+call(
+  stack
+)
+type(
+  v list
+)
+"Asdd.ml" 111 3437 3509 "Asdd.ml" 111 3437 3510
+type(
+  Lex.unite_lexicale
+)
+ident(
+  int_ref a "Asdd.ml" 111 3437 3449 "Asdd.ml" 111 3437 3450
+)
+"Asdd.ml" 111 3437 3512 "Asdd.ml" 111 3437 3517
+type(
+  Lex.unite_lexicale list
+)
+ident(
+  int_ref reste "Asdd.ml" 111 3437 3452 "Asdd.ml" 111 3437 3457
+)
+"Asdd.ml" 111 3437 3509 "Asdd.ml" 111 3437 3517
+type(
+  Lex.unite_lexicale list
+)
+"Asdd.ml" 111 3437 3491 "Asdd.ml" 111 3437 3518
+type(
+  v list * Lex.unite_lexicale list
+)
+"Asdd.ml" 111 3437 3479 "Asdd.ml" 111 3437 3518
+call(
+  stack
+)
+type(
+  arbre_concret list * Lex.unite_lexicale list
+)
+"Asdd.ml" 111 3437 3529 "Asdd.ml" 111 3437 3531
+type(
+  vn
+)
+ident(
+  int_ref tn "Asdd.ml" 111 3437 3444 "Asdd.ml" 111 3437 3448
+)
+"Asdd.ml" 111 3437 3532 "Asdd.ml" 111 3437 3535
+type(
+  arbre_concret list
+)
+ident(
+  int_ref acl "Asdd.ml" 111 3437 3466 "Asdd.ml" 111 3437 3469
+)
+"Asdd.ml" 111 3437 3528 "Asdd.ml" 111 3437 3536
+type(
+  vn * arbre_concret list
+)
+"Asdd.ml" 111 3437 3523 "Asdd.ml" 111 3437 3536
+type(
+  arbre_concret
+)
+"Asdd.ml" 111 3437 3537 "Asdd.ml" 111 3437 3543
+type(
+  Lex.unite_lexicale list
+)
+ident(
+  int_ref ullist "Asdd.ml" 111 3437 3470 "Asdd.ml" 111 3437 3476
+)
+"Asdd.ml" 111 3437 3522 "Asdd.ml" 111 3437 3544
+type(
+  arbre_concret * Lex.unite_lexicale list
+)
+"Asdd.ml" 111 3437 3461 "Asdd.ml" 111 3437 3544
+type(
+  arbre_concret * Lex.unite_lexicale list
+)
+"Asdd.ml" 112 3545 3552 "Asdd.ml" 112 3545 3556
+type(
+  vn
+)
+ident(
+  def tn "Asdd.ml" 112 3545 3562 "Asdd.ml" 112 3545 3597
+)
+"Asdd.ml" 112 3545 3550 "Asdd.ml" 112 3545 3556
+type(
+  v
+)
+"Asdd.ml" 112 3545 3557 "Asdd.ml" 112 3545 3558
+type(
+  Lex.unite_lexicale list
+)
+"Asdd.ml" 112 3545 3549 "Asdd.ml" 112 3545 3559
+type(
+  v * Lex.unite_lexicale list
+)
+"Asdd.ml" 112 3545 3562 "Asdd.ml" 112 3545 3567
+type(
+  exn -> arbre_concret * Lex.unite_lexicale list
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"Asdd.ml" 112 3545 3582 "Asdd.ml" 112 3545 3596
+type(
+  string
+)
+"Asdd.ml" 112 3545 3567 "Asdd.ml" 112 3545 3597
+type(
+  exn
+)
+"Asdd.ml" 112 3545 3562 "Asdd.ml" 112 3545 3597
+type(
+  arbre_concret * Lex.unite_lexicale list
+)
+"Asdd.ml" 113 3598 3603 "Asdd.ml" 113 3598 3604
+type(
+  v
+)
+"Asdd.ml" 113 3598 3605 "Asdd.ml" 113 3598 3606
+type(
+  Lex.unite_lexicale list
+)
+"Asdd.ml" 113 3598 3602 "Asdd.ml" 113 3598 3607
+type(
+  v * Lex.unite_lexicale list
+)
+"Asdd.ml" 113 3598 3610 "Asdd.ml" 113 3598 3615
+type(
+  exn -> arbre_concret * Lex.unite_lexicale list
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"Asdd.ml" 113 3598 3630 "Asdd.ml" 113 3598 3644
+type(
+  string
+)
+"Asdd.ml" 113 3598 3615 "Asdd.ml" 113 3598 3645
+type(
+  exn
+)
+"Asdd.ml" 113 3598 3610 "Asdd.ml" 113 3598 3645
+type(
+  arbre_concret * Lex.unite_lexicale list
+)
+"Asdd.ml" 80 1624 1659 "Asdd.ml" 113 3598 3645
+type(
+  arbre_concret * Lex.unite_lexicale list
+)
+"Asdd.ml" 117 3652 3652 "Asdd.ml" 117 3652 3663
+type(
+  v list * Lex.unite_lexicale list ->
+  arbre_concret list * Lex.unite_lexicale list
+)
+ident(
+  def analyse_mot "Asdd.ml" 80 1624 1624 --
+)
+"Asdd.ml" 117 3652 3665 "Asdd.ml" 117 3652 3667
+type(
+  v list
+)
+ident(
+  def vl "Asdd.ml" 117 3652 3675 "Asdd.ml" 123 3898 3916
+)
+"Asdd.ml" 117 3652 3668 "Asdd.ml" 117 3652 3671
+type(
+  Lex.unite_lexicale list
+)
+ident(
+  def ull "Asdd.ml" 117 3652 3675 "Asdd.ml" 123 3898 3916
+)
+"Asdd.ml" 117 3652 3664 "Asdd.ml" 117 3652 3672
+type(
+  v list * Lex.unite_lexicale list
+)
+"Asdd.ml" 117 3652 3682 "Asdd.ml" 117 3652 3684
+type(
+  v list
+)
+ident(
+  int_ref vl "Asdd.ml" 117 3652 3665 "Asdd.ml" 117 3652 3667
+)
+"Asdd.ml" 117 3652 3685 "Asdd.ml" 117 3652 3688
+type(
+  Lex.unite_lexicale list
+)
+ident(
+  int_ref ull "Asdd.ml" 117 3652 3668 "Asdd.ml" 117 3652 3671
+)
+"Asdd.ml" 117 3652 3681 "Asdd.ml" 117 3652 3689
+type(
+  v list * Lex.unite_lexicale list
+)
+"Asdd.ml" 118 3695 3699 "Asdd.ml" 118 3695 3701
+type(
+  v list
+)
+"Asdd.ml" 118 3695 3702 "Asdd.ml" 118 3695 3705
+type(
+  Lex.unite_lexicale list
+)
+ident(
+  def ull "Asdd.ml" 118 3695 3709 "Asdd.ml" 118 3695 3717
+)
+"Asdd.ml" 118 3695 3698 "Asdd.ml" 118 3695 3706
+type(
+  v list * Lex.unite_lexicale list
+)
+"Asdd.ml" 118 3695 3710 "Asdd.ml" 118 3695 3712
+type(
+  arbre_concret list
+)
+"Asdd.ml" 118 3695 3713 "Asdd.ml" 118 3695 3716
+type(
+  Lex.unite_lexicale list
+)
+ident(
+  int_ref ull "Asdd.ml" 118 3695 3702 "Asdd.ml" 118 3695 3705
+)
+"Asdd.ml" 118 3695 3709 "Asdd.ml" 118 3695 3717
+type(
+  arbre_concret list * Lex.unite_lexicale list
+)
+"Asdd.ml" 119 3718 3723 "Asdd.ml" 119 3718 3724
+type(
+  v
+)
+ident(
+  def a "Asdd.ml" 119 3718 3733 "Asdd.ml" 119 3718 3781
+)
+"Asdd.ml" 119 3718 3722 "Asdd.ml" 119 3718 3725
+type(
+  v list
+)
+"Asdd.ml" 119 3718 3726 "Asdd.ml" 119 3718 3729
+type(
+  Lex.unite_lexicale list
+)
+ident(
+  def ull "Asdd.ml" 119 3718 3733 "Asdd.ml" 119 3718 3781
+)
+"Asdd.ml" 119 3718 3721 "Asdd.ml" 119 3718 3730
+type(
+  v list * Lex.unite_lexicale list
+)
+"Asdd.ml" 119 3718 3738 "Asdd.ml" 119 3718 3740
+type(
+  arbre_concret
+)
+"Asdd.ml" 119 3718 3741 "Asdd.ml" 119 3718 3742
+type(
+  Lex.unite_lexicale list
+)
+"Asdd.ml" 119 3718 3737 "Asdd.ml" 119 3718 3743
+type(
+  arbre_concret * Lex.unite_lexicale list
+)
+"Asdd.ml" 119 3718 3744 "Asdd.ml" 119 3718 3761
+type(
+  v * Lex.unite_lexicale list -> arbre_concret * Lex.unite_lexicale list
+)
+ident(
+  int_ref analyse_caractere "Asdd.ml" 80 1624 1632 "Asdd.ml" 80 1624 1649
+)
+"Asdd.ml" 119 3718 3763 "Asdd.ml" 119 3718 3764
+type(
+  v
+)
+ident(
+  int_ref a "Asdd.ml" 119 3718 3723 "Asdd.ml" 119 3718 3724
+)
+"Asdd.ml" 119 3718 3765 "Asdd.ml" 119 3718 3768
+type(
+  Lex.unite_lexicale list
+)
+ident(
+  int_ref ull "Asdd.ml" 119 3718 3726 "Asdd.ml" 119 3718 3729
+)
+"Asdd.ml" 119 3718 3762 "Asdd.ml" 119 3718 3769
+type(
+  v * Lex.unite_lexicale list
+)
+"Asdd.ml" 119 3718 3744 "Asdd.ml" 119 3718 3769
+call(
+  stack
+)
+type(
+  arbre_concret * Lex.unite_lexicale list
+)
+"Asdd.ml" 119 3718 3775 "Asdd.ml" 119 3718 3777
+type(
+  arbre_concret
+)
+ident(
+  int_ref al "Asdd.ml" 119 3718 3738 "Asdd.ml" 119 3718 3740
+)
+"Asdd.ml" 119 3718 3774 "Asdd.ml" 119 3718 3778
+type(
+  arbre_concret list
+)
+"Asdd.ml" 119 3718 3779 "Asdd.ml" 119 3718 3780
+type(
+  Lex.unite_lexicale list
+)
+ident(
+  int_ref l "Asdd.ml" 119 3718 3741 "Asdd.ml" 119 3718 3742
+)
+"Asdd.ml" 119 3718 3773 "Asdd.ml" 119 3718 3781
+type(
+  arbre_concret list * Lex.unite_lexicale list
+)
+"Asdd.ml" 119 3718 3733 "Asdd.ml" 119 3718 3781
+type(
+  arbre_concret list * Lex.unite_lexicale list
+)
+"Asdd.ml" 120 3782 3786 "Asdd.ml" 120 3782 3787
+type(
+  v
+)
+ident(
+  def a "Asdd.ml" 121 3804 3804 "Asdd.ml" 123 3898 3916
+)
+"Asdd.ml" 120 3782 3789 "Asdd.ml" 120 3782 3794
+type(
+  v list
+)
+ident(
+  def reste "Asdd.ml" 121 3804 3804 "Asdd.ml" 123 3898 3916
+)
+"Asdd.ml" 120 3782 3786 "Asdd.ml" 120 3782 3794
+type(
+  v list
+)
+"Asdd.ml" 120 3782 3795 "Asdd.ml" 120 3782 3798
+type(
+  Lex.unite_lexicale list
+)
+ident(
+  def ull "Asdd.ml" 121 3804 3804 "Asdd.ml" 123 3898 3916
+)
+"Asdd.ml" 120 3782 3785 "Asdd.ml" 120 3782 3799
+type(
+  v list * Lex.unite_lexicale list
+)
+"Asdd.ml" 121 3804 3809 "Asdd.ml" 121 3804 3811
+type(
+  arbre_concret
+)
+"Asdd.ml" 121 3804 3812 "Asdd.ml" 121 3804 3819
+type(
+  Lex.unite_lexicale list
+)
+"Asdd.ml" 121 3804 3808 "Asdd.ml" 121 3804 3820
+type(
+  arbre_concret * Lex.unite_lexicale list
+)
+"Asdd.ml" 121 3804 3821 "Asdd.ml" 121 3804 3838
+type(
+  v * Lex.unite_lexicale list -> arbre_concret * Lex.unite_lexicale list
+)
+ident(
+  int_ref analyse_caractere "Asdd.ml" 80 1624 1632 "Asdd.ml" 80 1624 1649
+)
+"Asdd.ml" 121 3804 3839 "Asdd.ml" 121 3804 3840
+type(
+  v
+)
+ident(
+  int_ref a "Asdd.ml" 120 3782 3786 "Asdd.ml" 120 3782 3787
+)
+"Asdd.ml" 121 3804 3841 "Asdd.ml" 121 3804 3844
+type(
+  Lex.unite_lexicale list
+)
+ident(
+  int_ref ull "Asdd.ml" 120 3782 3795 "Asdd.ml" 120 3782 3798
+)
+"Asdd.ml" 121 3804 3838 "Asdd.ml" 121 3804 3845
+type(
+  v * Lex.unite_lexicale list
+)
+"Asdd.ml" 121 3804 3821 "Asdd.ml" 121 3804 3845
+call(
+  stack
+)
+type(
+  arbre_concret * Lex.unite_lexicale list
+)
+"Asdd.ml" 122 3849 3854 "Asdd.ml" 122 3849 3857
+type(
+  arbre_concret list
+)
+"Asdd.ml" 122 3849 3858 "Asdd.ml" 122 3849 3864
+type(
+  Lex.unite_lexicale list
+)
+"Asdd.ml" 122 3849 3853 "Asdd.ml" 122 3849 3865
+type(
+  arbre_concret list * Lex.unite_lexicale list
+)
+"Asdd.ml" 122 3849 3866 "Asdd.ml" 122 3849 3877
+type(
+  v list * Lex.unite_lexicale list ->
+  arbre_concret list * Lex.unite_lexicale list
+)
+ident(
+  int_ref analyse_mot "Asdd.ml" 117 3652 3652 "Asdd.ml" 117 3652 3663
+)
+"Asdd.ml" 122 3849 3879 "Asdd.ml" 122 3849 3884
+type(
+  v list
+)
+ident(
+  int_ref reste "Asdd.ml" 120 3782 3789 "Asdd.ml" 120 3782 3794
+)
+"Asdd.ml" 122 3849 3885 "Asdd.ml" 122 3849 3892
+type(
+  Lex.unite_lexicale list
+)
+ident(
+  int_ref ullist2 "Asdd.ml" 121 3804 3812 "Asdd.ml" 121 3804 3819
+)
+"Asdd.ml" 122 3849 3878 "Asdd.ml" 122 3849 3893
+type(
+  v list * Lex.unite_lexicale list
+)
+"Asdd.ml" 122 3849 3866 "Asdd.ml" 122 3849 3893
+call(
+  stack
+)
+type(
+  arbre_concret list * Lex.unite_lexicale list
+)
+"Asdd.ml" 123 3898 3901 "Asdd.ml" 123 3898 3903
+type(
+  arbre_concret
+)
+ident(
+  int_ref ac "Asdd.ml" 121 3804 3809 "Asdd.ml" 121 3804 3811
+)
+"Asdd.ml" 123 3898 3905 "Asdd.ml" 123 3898 3908
+type(
+  arbre_concret list
+)
+ident(
+  int_ref acl "Asdd.ml" 122 3849 3854 "Asdd.ml" 122 3849 3857
+)
+"Asdd.ml" 123 3898 3901 "Asdd.ml" 123 3898 3908
+type(
+  arbre_concret list
+)
+"Asdd.ml" 123 3898 3909 "Asdd.ml" 123 3898 3915
+type(
+  Lex.unite_lexicale list
+)
+ident(
+  int_ref ullist "Asdd.ml" 122 3849 3858 "Asdd.ml" 122 3849 3864
+)
+"Asdd.ml" 123 3898 3900 "Asdd.ml" 123 3898 3916
+type(
+  arbre_concret list * Lex.unite_lexicale list
+)
+"Asdd.ml" 122 3849 3849 "Asdd.ml" 123 3898 3916
+type(
+  arbre_concret list * Lex.unite_lexicale list
+)
+"Asdd.ml" 121 3804 3804 "Asdd.ml" 123 3898 3916
+type(
+  arbre_concret list * Lex.unite_lexicale list
+)
+"Asdd.ml" 117 3652 3675 "Asdd.ml" 123 3898 3916
+type(
+  arbre_concret list * Lex.unite_lexicale list
+)
+"Asdd.ml" 125 3920 3924 "Asdd.ml" 125 3920 3929
+type(
+  v list
+)
+ident(
+  def vlist "Asdd.ml" 126 3944 3944 --
+)
+"Asdd.ml" 125 3920 3936 "Asdd.ml" 125 3920 3940
+type(
+  vn
+)
+"Asdd.ml" 125 3920 3933 "Asdd.ml" 125 3920 3940
+type(
+  v
+)
+"Asdd.ml" 125 3920 3932 "Asdd.ml" 125 3920 3941
+type(
+  v list
+)
+"Asdd.ml" 126 3944 3948 "Asdd.ml" 126 3944 3954
+type(
+  Lex.unite_lexicale list
+)
+ident(
+  def ullist "Asdd.ml" 128 4049 4049 --
+)
+"Asdd.ml" 126 3944 3964 "Asdd.ml" 126 3944 3969
+type(
+  string
+)
+"Asdd.ml" 126 3944 3957 "Asdd.ml" 126 3944 3969
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 126 3944 3970 "Asdd.ml" 126 3944 3975
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 126 3944 3983 "Asdd.ml" 126 3944 3988
+type(
+  string
+)
+"Asdd.ml" 126 3944 3976 "Asdd.ml" 126 3944 3988
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 126 3944 3989 "Asdd.ml" 126 3944 3993
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 126 3944 3994 "Asdd.ml" 126 3944 4000
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 126 3944 4008 "Asdd.ml" 126 3944 4013
+type(
+  string
+)
+"Asdd.ml" 126 3944 4001 "Asdd.ml" 126 3944 4013
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 126 3944 4014 "Asdd.ml" 126 3944 4018
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 126 3944 4026 "Asdd.ml" 126 3944 4031
+type(
+  string
+)
+"Asdd.ml" 126 3944 4019 "Asdd.ml" 126 3944 4031
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 126 3944 4032 "Asdd.ml" 126 3944 4038
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 126 3944 4039 "Asdd.ml" 126 3944 4044
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 126 3944 3956 "Asdd.ml" 126 3944 4045
+type(
+  Lex.unite_lexicale list
+)
+"Asdd.ml" 128 4049 4053 "Asdd.ml" 128 4049 4058
+type(
+  arbre_concret list * Lex.unite_lexicale list
+)
+ident(
+  def arbre "Asdd.ml" 131 4091 4091 --
+)
+"Asdd.ml" 128 4049 4061 "Asdd.ml" 128 4049 4072
+type(
+  v list * Lex.unite_lexicale list ->
+  arbre_concret list * Lex.unite_lexicale list
+)
+ident(
+  int_ref analyse_mot "Asdd.ml" 117 3652 3652 "Asdd.ml" 117 3652 3663
+)
+"Asdd.ml" 128 4049 4073 "Asdd.ml" 128 4049 4078
+type(
+  v list
+)
+ident(
+  int_ref vlist "Asdd.ml" 125 3920 3924 "Asdd.ml" 125 3920 3929
+)
+"Asdd.ml" 128 4049 4079 "Asdd.ml" 128 4049 4085
+type(
+  Lex.unite_lexicale list
+)
+ident(
+  int_ref ullist "Asdd.ml" 126 3944 3948 "Asdd.ml" 126 3944 3954
+)
+"Asdd.ml" 128 4049 4072 "Asdd.ml" 128 4049 4086
+type(
+  v list * Lex.unite_lexicale list
+)
+"Asdd.ml" 128 4049 4061 "Asdd.ml" 128 4049 4086
+call(
+  stack
+)
+type(
+  arbre_concret list * Lex.unite_lexicale list
+)
+"Asdd.ml" 131 4091 4095 "Asdd.ml" 131 4091 4101
+type(
+  v list
+)
+ident(
+  def vlist2 "Asdd.ml" 132 4116 4116 --
+)
+"Asdd.ml" 131 4091 4108 "Asdd.ml" 131 4091 4112
+type(
+  vn
+)
+"Asdd.ml" 131 4091 4105 "Asdd.ml" 131 4091 4112
+type(
+  v
+)
+"Asdd.ml" 131 4091 4104 "Asdd.ml" 131 4091 4113
+type(
+  v list
+)
+"Asdd.ml" 132 4116 4120 "Asdd.ml" 132 4116 4127
+type(
+  Lex.unite_lexicale list
+)
+ident(
+  def ullist2 "Asdd.ml" 134 4216 4216 --
+)
+"Asdd.ml" 132 4116 4137 "Asdd.ml" 132 4116 4142
+type(
+  string
+)
+"Asdd.ml" 132 4116 4130 "Asdd.ml" 132 4116 4142
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 132 4116 4150 "Asdd.ml" 132 4116 4155
+type(
+  string
+)
+"Asdd.ml" 132 4116 4143 "Asdd.ml" 132 4116 4155
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 132 4116 4156 "Asdd.ml" 132 4116 4160
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 132 4116 4161 "Asdd.ml" 132 4116 4167
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 132 4116 4175 "Asdd.ml" 132 4116 4180
+type(
+  string
+)
+"Asdd.ml" 132 4116 4168 "Asdd.ml" 132 4116 4180
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 132 4116 4181 "Asdd.ml" 132 4116 4185
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 132 4116 4193 "Asdd.ml" 132 4116 4198
+type(
+  string
+)
+"Asdd.ml" 132 4116 4186 "Asdd.ml" 132 4116 4198
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 132 4116 4199 "Asdd.ml" 132 4116 4205
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 132 4116 4206 "Asdd.ml" 132 4116 4211
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 132 4116 4129 "Asdd.ml" 132 4116 4212
+type(
+  Lex.unite_lexicale list
+)
+"Asdd.ml" 134 4216 4220 "Asdd.ml" 134 4216 4226
+type(
+  arbre_concret list * Lex.unite_lexicale list
+)
+ident(
+  def arbre2 "Asdd.ml" 141 4351 4351 --
+)
+"Asdd.ml" 134 4216 4229 "Asdd.ml" 134 4216 4240
+type(
+  v list * Lex.unite_lexicale list ->
+  arbre_concret list * Lex.unite_lexicale list
+)
+ident(
+  int_ref analyse_mot "Asdd.ml" 117 3652 3652 "Asdd.ml" 117 3652 3663
+)
+"Asdd.ml" 134 4216 4241 "Asdd.ml" 134 4216 4247
+type(
+  v list
+)
+ident(
+  int_ref vlist2 "Asdd.ml" 131 4091 4095 "Asdd.ml" 131 4091 4101
+)
+"Asdd.ml" 134 4216 4248 "Asdd.ml" 134 4216 4255
+type(
+  Lex.unite_lexicale list
+)
+ident(
+  int_ref ullist2 "Asdd.ml" 132 4116 4120 "Asdd.ml" 132 4116 4127
+)
+"Asdd.ml" 134 4216 4240 "Asdd.ml" 134 4216 4256
+type(
+  v list * Lex.unite_lexicale list
+)
+"Asdd.ml" 134 4216 4229 "Asdd.ml" 134 4216 4256
+call(
+  stack
+)
+type(
+  arbre_concret list * Lex.unite_lexicale list
+)
+"Asdd.ml" 156 4664 4672 "Asdd.ml" 156 4664 4679
+type(
+  arbre_concret -> arbre_abstrait
+)
+ident(
+  def convert "Asdd.ml" 156 4664 4664 --
+)
+"Asdd.ml" 156 4664 4680 "Asdd.ml" 156 4664 4682
+type(
+  arbre_concret
+)
+ident(
+  def ab "Asdd.ml" 156 4664 4685 "Asdd.ml" 172 5716 5731
+)
+"Asdd.ml" 156 4664 4691 "Asdd.ml" 156 4664 4693
+type(
+  arbre_concret
+)
+ident(
+  int_ref ab "Asdd.ml" 156 4664 4680 "Asdd.ml" 156 4664 4682
+)
+"Asdd.ml" 157 4699 4715 "Asdd.ml" 157 4699 4719
+type(
+  vn
+)
+"Asdd.ml" 157 4699 4721 "Asdd.ml" 157 4699 4722
+type(
+  arbre_concret
+)
+ident(
+  def a "Asdd.ml" 157 4699 4749 "Asdd.ml" 157 4699 4758
+)
+"Asdd.ml" 157 4699 4729 "Asdd.ml" 157 4699 4738
+type(
+  vn
+)
+"Asdd.ml" 157 4699 4740 "Asdd.ml" 157 4699 4742
+type(
+  arbre_concret list
+)
+"Asdd.ml" 157 4699 4728 "Asdd.ml" 157 4699 4743
+type(
+  vn * arbre_concret list
+)
+"Asdd.ml" 157 4699 4723 "Asdd.ml" 157 4699 4743
+type(
+  arbre_concret
+)
+"Asdd.ml" 157 4699 4720 "Asdd.ml" 157 4699 4744
+type(
+  arbre_concret list
+)
+"Asdd.ml" 157 4699 4714 "Asdd.ml" 157 4699 4745
+type(
+  vn * arbre_concret list
+)
+"Asdd.ml" 157 4699 4709 "Asdd.ml" 157 4699 4745
+type(
+  arbre_concret
+)
+"Asdd.ml" 157 4699 4749 "Asdd.ml" 157 4699 4756
+type(
+  arbre_concret -> arbre_abstrait
+)
+ident(
+  int_ref convert "Asdd.ml" 156 4664 4672 "Asdd.ml" 156 4664 4679
+)
+"Asdd.ml" 157 4699 4757 "Asdd.ml" 157 4699 4758
+type(
+  arbre_concret
+)
+ident(
+  int_ref a "Asdd.ml" 157 4699 4721 "Asdd.ml" 157 4699 4722
+)
+"Asdd.ml" 157 4699 4749 "Asdd.ml" 157 4699 4758
+call(
+  tail
+)
+type(
+  arbre_abstrait
+)
+"Asdd.ml" 158 4759 4768 "Asdd.ml" 158 4759 4772
+type(
+  vn
+)
+"Asdd.ml" 158 4759 4774 "Asdd.ml" 158 4759 4780
+type(
+  arbre_concret
+)
+ident(
+  def terme1 "Asdd.ml" 158 4759 4838 "Asdd.ml" 158 4759 4902
+)
+"Asdd.ml" 158 4759 4788 "Asdd.ml" 158 4759 4797
+type(
+  vn
+)
+"Asdd.ml" 158 4759 4809 "Asdd.ml" 158 4759 4814
+type(
+  vt
+)
+"Asdd.ml" 158 4759 4800 "Asdd.ml" 158 4759 4815
+type(
+  arbre_concret
+)
+"Asdd.ml" 158 4759 4817 "Asdd.ml" 158 4759 4823
+type(
+  arbre_concret
+)
+ident(
+  def terme2 "Asdd.ml" 158 4759 4838 "Asdd.ml" 158 4759 4902
+)
+"Asdd.ml" 158 4759 4825 "Asdd.ml" 158 4759 4830
+type(
+  arbre_concret
+)
+ident(
+  def suite "Asdd.ml" 158 4759 4838 "Asdd.ml" 158 4759 4902
+)
+"Asdd.ml" 158 4759 4799 "Asdd.ml" 158 4759 4831
+type(
+  arbre_concret list
+)
+"Asdd.ml" 158 4759 4787 "Asdd.ml" 158 4759 4832
+type(
+  vn * arbre_concret list
+)
+"Asdd.ml" 158 4759 4782 "Asdd.ml" 158 4759 4832
+type(
+  arbre_concret
+)
+"Asdd.ml" 158 4759 4773 "Asdd.ml" 158 4759 4833
+type(
+  arbre_concret list
+)
+"Asdd.ml" 158 4759 4767 "Asdd.ml" 158 4759 4834
+type(
+  vn * arbre_concret list
+)
+"Asdd.ml" 158 4759 4762 "Asdd.ml" 158 4759 4834
+type(
+  arbre_concret
+)
+"Asdd.ml" 158 4759 4847 "Asdd.ml" 158 4759 4854
+type(
+  arbre_concret -> arbre_abstrait
+)
+ident(
+  int_ref convert "Asdd.ml" 156 4664 4672 "Asdd.ml" 156 4664 4679
+)
+"Asdd.ml" 158 4759 4855 "Asdd.ml" 158 4759 4861
+type(
+  arbre_concret
+)
+ident(
+  int_ref terme1 "Asdd.ml" 158 4759 4774 "Asdd.ml" 158 4759 4780
+)
+"Asdd.ml" 158 4759 4846 "Asdd.ml" 158 4759 4862
+call(
+  stack
+)
+type(
+  arbre_abstrait
+)
+"Asdd.ml" 158 4759 4865 "Asdd.ml" 158 4759 4872
+type(
+  arbre_concret -> arbre_abstrait
+)
+ident(
+  int_ref convert "Asdd.ml" 156 4664 4672 "Asdd.ml" 156 4664 4679
+)
+"Asdd.ml" 158 4759 4879 "Asdd.ml" 158 4759 4883
+type(
+  vn
+)
+"Asdd.ml" 158 4759 4885 "Asdd.ml" 158 4759 4891
+type(
+  arbre_concret
+)
+ident(
+  int_ref terme2 "Asdd.ml" 158 4759 4817 "Asdd.ml" 158 4759 4823
+)
+"Asdd.ml" 158 4759 4892 "Asdd.ml" 158 4759 4897
+type(
+  arbre_concret
+)
+ident(
+  int_ref suite "Asdd.ml" 158 4759 4825 "Asdd.ml" 158 4759 4830
+)
+"Asdd.ml" 158 4759 4884 "Asdd.ml" 158 4759 4898
+type(
+  arbre_concret list
+)
+"Asdd.ml" 158 4759 4878 "Asdd.ml" 158 4759 4899
+type(
+  vn * arbre_concret list
+)
+"Asdd.ml" 158 4759 4872 "Asdd.ml" 158 4759 4900
+type(
+  arbre_concret
+)
+"Asdd.ml" 158 4759 4864 "Asdd.ml" 158 4759 4901
+call(
+  stack
+)
+type(
+  arbre_abstrait
+)
+"Asdd.ml" 158 4759 4838 "Asdd.ml" 158 4759 4902
+type(
+  arbre_abstrait
+)
+"Asdd.ml" 159 4903 4912 "Asdd.ml" 159 4903 4917
+type(
+  vn
+)
+"Asdd.ml" 159 4903 4919 "Asdd.ml" 159 4903 4923
+type(
+  arbre_concret
+)
+ident(
+  def fact "Asdd.ml" 159 4903 4951 "Asdd.ml" 159 4903 4963
+)
+"Asdd.ml" 159 4903 4931 "Asdd.ml" 159 4903 4941
+type(
+  vn
+)
+"Asdd.ml" 159 4903 4942 "Asdd.ml" 159 4903 4944
+type(
+  arbre_concret list
+)
+"Asdd.ml" 159 4903 4930 "Asdd.ml" 159 4903 4945
+type(
+  vn * arbre_concret list
+)
+"Asdd.ml" 159 4903 4925 "Asdd.ml" 159 4903 4945
+type(
+  arbre_concret
+)
+"Asdd.ml" 159 4903 4918 "Asdd.ml" 159 4903 4946
+type(
+  arbre_concret list
+)
+"Asdd.ml" 159 4903 4911 "Asdd.ml" 159 4903 4947
+type(
+  vn * arbre_concret list
+)
+"Asdd.ml" 159 4903 4906 "Asdd.ml" 159 4903 4947
+type(
+  arbre_concret
+)
+"Asdd.ml" 159 4903 4951 "Asdd.ml" 159 4903 4958
+type(
+  arbre_concret -> arbre_abstrait
+)
+ident(
+  int_ref convert "Asdd.ml" 156 4664 4672 "Asdd.ml" 156 4664 4679
+)
+"Asdd.ml" 159 4903 4959 "Asdd.ml" 159 4903 4963
+type(
+  arbre_concret
+)
+ident(
+  int_ref fact "Asdd.ml" 159 4903 4919 "Asdd.ml" 159 4903 4923
+)
+"Asdd.ml" 159 4903 4951 "Asdd.ml" 159 4903 4963
+call(
+  tail
+)
+type(
+  arbre_abstrait
+)
+"Asdd.ml" 160 4964 4973 "Asdd.ml" 160 4964 4978
+type(
+  vn
+)
+"Asdd.ml" 160 4964 4980 "Asdd.ml" 160 4964 4985
+type(
+  arbre_concret
+)
+ident(
+  def fact1 "Asdd.ml" 160 4964 5042 "Asdd.ml" 160 4964 5105
+)
+"Asdd.ml" 160 4964 4993 "Asdd.ml" 160 4964 5003
+type(
+  vn
+)
+"Asdd.ml" 160 4964 5014 "Asdd.ml" 160 4964 5019
+type(
+  vt
+)
+"Asdd.ml" 160 4964 5005 "Asdd.ml" 160 4964 5020
+type(
+  arbre_concret
+)
+"Asdd.ml" 160 4964 5022 "Asdd.ml" 160 4964 5027
+type(
+  arbre_concret
+)
+ident(
+  def fact2 "Asdd.ml" 160 4964 5042 "Asdd.ml" 160 4964 5105
+)
+"Asdd.ml" 160 4964 5029 "Asdd.ml" 160 4964 5034
+type(
+  arbre_concret
+)
+ident(
+  def suite "Asdd.ml" 160 4964 5042 "Asdd.ml" 160 4964 5105
+)
+"Asdd.ml" 160 4964 5004 "Asdd.ml" 160 4964 5035
+type(
+  arbre_concret list
+)
+"Asdd.ml" 160 4964 4992 "Asdd.ml" 160 4964 5036
+type(
+  vn * arbre_concret list
+)
+"Asdd.ml" 160 4964 4987 "Asdd.ml" 160 4964 5036
+type(
+  arbre_concret
+)
+"Asdd.ml" 160 4964 4979 "Asdd.ml" 160 4964 5037
+type(
+  arbre_concret list
+)
+"Asdd.ml" 160 4964 4972 "Asdd.ml" 160 4964 5038
+type(
+  vn * arbre_concret list
+)
+"Asdd.ml" 160 4964 4967 "Asdd.ml" 160 4964 5038
+type(
+  arbre_concret
+)
+"Asdd.ml" 160 4964 5051 "Asdd.ml" 160 4964 5058
+type(
+  arbre_concret -> arbre_abstrait
+)
+ident(
+  int_ref convert "Asdd.ml" 156 4664 4672 "Asdd.ml" 156 4664 4679
+)
+"Asdd.ml" 160 4964 5059 "Asdd.ml" 160 4964 5064
+type(
+  arbre_concret
+)
+ident(
+  int_ref fact1 "Asdd.ml" 160 4964 4980 "Asdd.ml" 160 4964 4985
+)
+"Asdd.ml" 160 4964 5050 "Asdd.ml" 160 4964 5065
+call(
+  stack
+)
+type(
+  arbre_abstrait
+)
+"Asdd.ml" 160 4964 5068 "Asdd.ml" 160 4964 5075
+type(
+  arbre_concret -> arbre_abstrait
+)
+ident(
+  int_ref convert "Asdd.ml" 156 4664 4672 "Asdd.ml" 156 4664 4679
+)
+"Asdd.ml" 160 4964 5082 "Asdd.ml" 160 4964 5087
+type(
+  vn
+)
+"Asdd.ml" 160 4964 5089 "Asdd.ml" 160 4964 5094
+type(
+  arbre_concret
+)
+ident(
+  int_ref fact2 "Asdd.ml" 160 4964 5022 "Asdd.ml" 160 4964 5027
+)
+"Asdd.ml" 160 4964 5095 "Asdd.ml" 160 4964 5100
+type(
+  arbre_concret
+)
+ident(
+  int_ref suite "Asdd.ml" 160 4964 5029 "Asdd.ml" 160 4964 5034
+)
+"Asdd.ml" 160 4964 5088 "Asdd.ml" 160 4964 5101
+type(
+  arbre_concret list
+)
+"Asdd.ml" 160 4964 5081 "Asdd.ml" 160 4964 5102
+type(
+  vn * arbre_concret list
+)
+"Asdd.ml" 160 4964 5075 "Asdd.ml" 160 4964 5103
+type(
+  arbre_concret
+)
+"Asdd.ml" 160 4964 5067 "Asdd.ml" 160 4964 5104
+call(
+  stack
+)
+type(
+  arbre_abstrait
+)
+"Asdd.ml" 160 4964 5042 "Asdd.ml" 160 4964 5105
+type(
+  arbre_abstrait
+)
+"Asdd.ml" 161 5106 5115 "Asdd.ml" 161 5106 5123
+type(
+  vn
+)
+"Asdd.ml" 161 5106 5125 "Asdd.ml" 161 5106 5126
+type(
+  arbre_concret
+)
+ident(
+  def a "Asdd.ml" 161 5106 5132 "Asdd.ml" 161 5106 5141
+)
+"Asdd.ml" 161 5106 5124 "Asdd.ml" 161 5106 5127
+type(
+  arbre_concret list
+)
+"Asdd.ml" 161 5106 5114 "Asdd.ml" 161 5106 5128
+type(
+  vn * arbre_concret list
+)
+"Asdd.ml" 161 5106 5109 "Asdd.ml" 161 5106 5128
+type(
+  arbre_concret
+)
+"Asdd.ml" 161 5106 5132 "Asdd.ml" 161 5106 5139
+type(
+  arbre_concret -> arbre_abstrait
+)
+ident(
+  int_ref convert "Asdd.ml" 156 4664 4672 "Asdd.ml" 156 4664 4679
+)
+"Asdd.ml" 161 5106 5140 "Asdd.ml" 161 5106 5141
+type(
+  arbre_concret
+)
+ident(
+  int_ref a "Asdd.ml" 161 5106 5125 "Asdd.ml" 161 5106 5126
+)
+"Asdd.ml" 161 5106 5132 "Asdd.ml" 161 5106 5141
+call(
+  tail
+)
+type(
+  arbre_abstrait
+)
+"Asdd.ml" 162 5142 5151 "Asdd.ml" 162 5142 5159
+type(
+  vn
+)
+"Asdd.ml" 162 5142 5170 "Asdd.ml" 162 5142 5177
+type(
+  vt
+)
+"Asdd.ml" 162 5142 5161 "Asdd.ml" 162 5142 5178
+type(
+  arbre_concret
+)
+"Asdd.ml" 162 5142 5180 "Asdd.ml" 162 5142 5184
+type(
+  arbre_concret
+)
+ident(
+  def expr "Asdd.ml" 162 5142 5208 "Asdd.ml" 162 5142 5220
+)
+"Asdd.ml" 162 5142 5194 "Asdd.ml" 162 5142 5201
+type(
+  vt
+)
+"Asdd.ml" 162 5142 5185 "Asdd.ml" 162 5142 5202
+type(
+  arbre_concret
+)
+"Asdd.ml" 162 5142 5160 "Asdd.ml" 162 5142 5203
+type(
+  arbre_concret list
+)
+"Asdd.ml" 162 5142 5150 "Asdd.ml" 162 5142 5204
+type(
+  vn * arbre_concret list
+)
+"Asdd.ml" 162 5142 5145 "Asdd.ml" 162 5142 5204
+type(
+  arbre_concret
+)
+"Asdd.ml" 162 5142 5208 "Asdd.ml" 162 5142 5215
+type(
+  arbre_concret -> arbre_abstrait
+)
+ident(
+  int_ref convert "Asdd.ml" 156 4664 4672 "Asdd.ml" 156 4664 4679
+)
+"Asdd.ml" 162 5142 5216 "Asdd.ml" 162 5142 5220
+type(
+  arbre_concret
+)
+ident(
+  int_ref expr "Asdd.ml" 162 5142 5180 "Asdd.ml" 162 5142 5184
+)
+"Asdd.ml" 162 5142 5208 "Asdd.ml" 162 5142 5220
+call(
+  tail
+)
+type(
+  arbre_abstrait
+)
+"Asdd.ml" 163 5221 5230 "Asdd.ml" 163 5221 5238
+type(
+  vn
+)
+"Asdd.ml" 163 5221 5249 "Asdd.ml" 163 5221 5254
+type(
+  vt
+)
+"Asdd.ml" 163 5221 5240 "Asdd.ml" 163 5221 5255
+type(
+  arbre_concret
+)
+"Asdd.ml" 163 5221 5257 "Asdd.ml" 163 5221 5262
+type(
+  arbre_concret
+)
+ident(
+  def expr1 "Asdd.ml" 164 5339 5344 "Asdd.ml" 164 5339 5400
+)
+"Asdd.ml" 163 5221 5273 "Asdd.ml" 163 5221 5281
+type(
+  vt
+)
+"Asdd.ml" 163 5221 5264 "Asdd.ml" 163 5221 5282
+type(
+  arbre_concret
+)
+"Asdd.ml" 163 5221 5284 "Asdd.ml" 163 5221 5289
+type(
+  arbre_concret
+)
+ident(
+  def expr2 "Asdd.ml" 164 5339 5344 "Asdd.ml" 164 5339 5400
+)
+"Asdd.ml" 163 5221 5300 "Asdd.ml" 163 5221 5308
+type(
+  vt
+)
+"Asdd.ml" 163 5221 5291 "Asdd.ml" 163 5221 5309
+type(
+  arbre_concret
+)
+"Asdd.ml" 163 5221 5311 "Asdd.ml" 163 5221 5316
+type(
+  arbre_concret
+)
+ident(
+  def expr3 "Asdd.ml" 164 5339 5344 "Asdd.ml" 164 5339 5400
+)
+"Asdd.ml" 163 5221 5326 "Asdd.ml" 163 5221 5332
+type(
+  vt
+)
+"Asdd.ml" 163 5221 5317 "Asdd.ml" 163 5221 5333
+type(
+  arbre_concret
+)
+"Asdd.ml" 163 5221 5239 "Asdd.ml" 163 5221 5334
+type(
+  arbre_concret list
+)
+"Asdd.ml" 163 5221 5229 "Asdd.ml" 163 5221 5335
+type(
+  vn * arbre_concret list
+)
+"Asdd.ml" 163 5221 5224 "Asdd.ml" 163 5221 5335
+type(
+  arbre_concret
+)
+"Asdd.ml" 164 5339 5353 "Asdd.ml" 164 5339 5360
+type(
+  arbre_concret -> arbre_abstrait
+)
+ident(
+  int_ref convert "Asdd.ml" 156 4664 4672 "Asdd.ml" 156 4664 4679
+)
+"Asdd.ml" 164 5339 5361 "Asdd.ml" 164 5339 5366
+type(
+  arbre_concret
+)
+ident(
+  int_ref expr1 "Asdd.ml" 163 5221 5257 "Asdd.ml" 163 5221 5262
+)
+"Asdd.ml" 164 5339 5352 "Asdd.ml" 164 5339 5367
+call(
+  stack
+)
+type(
+  arbre_abstrait
+)
+"Asdd.ml" 164 5339 5369 "Asdd.ml" 164 5339 5376
+type(
+  arbre_concret -> arbre_abstrait
+)
+ident(
+  int_ref convert "Asdd.ml" 156 4664 4672 "Asdd.ml" 156 4664 4679
+)
+"Asdd.ml" 164 5339 5377 "Asdd.ml" 164 5339 5382
+type(
+  arbre_concret
+)
+ident(
+  int_ref expr2 "Asdd.ml" 163 5221 5284 "Asdd.ml" 163 5221 5289
+)
+"Asdd.ml" 164 5339 5368 "Asdd.ml" 164 5339 5383
+call(
+  stack
+)
+type(
+  arbre_abstrait
+)
+"Asdd.ml" 164 5339 5385 "Asdd.ml" 164 5339 5392
+type(
+  arbre_concret -> arbre_abstrait
+)
+ident(
+  int_ref convert "Asdd.ml" 156 4664 4672 "Asdd.ml" 156 4664 4679
+)
+"Asdd.ml" 164 5339 5393 "Asdd.ml" 164 5339 5398
+type(
+  arbre_concret
+)
+ident(
+  int_ref expr3 "Asdd.ml" 163 5221 5311 "Asdd.ml" 163 5221 5316
+)
+"Asdd.ml" 164 5339 5384 "Asdd.ml" 164 5339 5399
+call(
+  stack
+)
+type(
+  arbre_abstrait
+)
+"Asdd.ml" 164 5339 5344 "Asdd.ml" 164 5339 5400
+type(
+  arbre_abstrait
+)
+"Asdd.ml" 165 5401 5410 "Asdd.ml" 165 5401 5418
+type(
+  vn
+)
+"Asdd.ml" 165 5401 5438 "Asdd.ml" 165 5401 5441
+type(
+  string
+)
+ident(
+  def id1 "Asdd.ml" 165 5401 5514 "Asdd.ml" 172 5716 5731
+)
+"Asdd.ml" 165 5401 5428 "Asdd.ml" 165 5401 5442
+type(
+  vt
+)
+"Asdd.ml" 165 5401 5419 "Asdd.ml" 165 5401 5443
+type(
+  arbre_concret
+)
+"Asdd.ml" 165 5401 5451 "Asdd.ml" 165 5401 5459
+type(
+  vn
+)
+ident(
+  def operator "Asdd.ml" 165 5401 5514 "Asdd.ml" 172 5716 5731
+)
+"Asdd.ml" 165 5401 5469 "Asdd.ml" 165 5401 5473
+type(
+  vt
+)
+ident(
+  def oper "Asdd.ml" 165 5401 5514 "Asdd.ml" 172 5716 5731
+)
+"Asdd.ml" 165 5401 5460 "Asdd.ml" 165 5401 5474
+type(
+  arbre_concret
+)
+"Asdd.ml" 165 5401 5476 "Asdd.ml" 165 5401 5478
+type(
+  arbre_concret list
+)
+"Asdd.ml" 165 5401 5460 "Asdd.ml" 165 5401 5478
+type(
+  arbre_concret list
+)
+"Asdd.ml" 165 5401 5450 "Asdd.ml" 165 5401 5479
+type(
+  vn * arbre_concret list
+)
+"Asdd.ml" 165 5401 5445 "Asdd.ml" 165 5401 5479
+type(
+  arbre_concret
+)
+"Asdd.ml" 165 5401 5500 "Asdd.ml" 165 5401 5503
+type(
+  string
+)
+ident(
+  def id2 "Asdd.ml" 165 5401 5514 "Asdd.ml" 172 5716 5731
+)
+"Asdd.ml" 165 5401 5490 "Asdd.ml" 165 5401 5504
+type(
+  vt
+)
+"Asdd.ml" 165 5401 5481 "Asdd.ml" 165 5401 5505
+type(
+  arbre_concret
+)
+"Asdd.ml" 165 5401 5507 "Asdd.ml" 165 5401 5509
+type(
+  arbre_concret list
+)
+"Asdd.ml" 165 5401 5481 "Asdd.ml" 165 5401 5509
+type(
+  arbre_concret list
+)
+"Asdd.ml" 165 5401 5445 "Asdd.ml" 165 5401 5509
+type(
+  arbre_concret list
+)
+"Asdd.ml" 165 5401 5419 "Asdd.ml" 165 5401 5509
+type(
+  arbre_concret list
+)
+"Asdd.ml" 165 5401 5409 "Asdd.ml" 165 5401 5510
+type(
+  vn * arbre_concret list
+)
+"Asdd.ml" 165 5401 5404 "Asdd.ml" 165 5401 5510
+type(
+  arbre_concret
+)
+"Asdd.ml" 165 5401 5524 "Asdd.ml" 165 5401 5527
+type(
+  string
+)
+ident(
+  int_ref id1 "Asdd.ml" 165 5401 5438 "Asdd.ml" 165 5401 5441
+)
+"Asdd.ml" 165 5401 5536 "Asdd.ml" 165 5401 5540
+type(
+  vt
+)
+ident(
+  int_ref oper "Asdd.ml" 165 5401 5469 "Asdd.ml" 165 5401 5473
+)
+"Asdd.ml" 166 5546 5557 "Asdd.ml" 166 5546 5563
+type(
+  vt
+)
+"Asdd.ml" 166 5546 5567 "Asdd.ml" 166 5546 5573
+type(
+  operator
+)
+"Asdd.ml" 167 5574 5584 "Asdd.ml" 167 5574 5592
+type(
+  vt
+)
+"Asdd.ml" 167 5574 5596 "Asdd.ml" 167 5574 5604
+type(
+  operator
+)
+"Asdd.ml" 168 5605 5615 "Asdd.ml" 168 5605 5621
+type(
+  vt
+)
+"Asdd.ml" 168 5605 5625 "Asdd.ml" 168 5605 5631
+type(
+  operator
+)
+"Asdd.ml" 169 5632 5642 "Asdd.ml" 169 5632 5650
+type(
+  vt
+)
+"Asdd.ml" 169 5632 5654 "Asdd.ml" 169 5632 5662
+type(
+  operator
+)
+"Asdd.ml" 170 5663 5673 "Asdd.ml" 170 5663 5678
+type(
+  vt
+)
+"Asdd.ml" 170 5663 5682 "Asdd.ml" 170 5663 5687
+type(
+  operator
+)
+"Asdd.ml" 171 5688 5698 "Asdd.ml" 171 5688 5704
+type(
+  vt
+)
+"Asdd.ml" 171 5688 5708 "Asdd.ml" 171 5688 5714
+type(
+  operator
+)
+"Asdd.ml" 165 5401 5529 "Asdd.ml" 171 5688 5715
+type(
+  operator
+)
+"Asdd.ml" 172 5716 5727 "Asdd.ml" 172 5716 5730
+type(
+  string
+)
+ident(
+  int_ref id2 "Asdd.ml" 165 5401 5500 "Asdd.ml" 165 5401 5503
+)
+"Asdd.ml" 165 5401 5514 "Asdd.ml" 172 5716 5731
+type(
+  arbre_abstrait
+)
+"Asdd.ml" 156 4664 4685 "Asdd.ml" 172 5716 5731
+type(
+  arbre_abstrait
+)
+"Asdd.ml" 175 5736 5736 "Asdd.ml" 175 5736 5746
+type(
+  Lex.unite_lexicale -> vt
+)
+ident(
+  int_ref ul_vers_vt "Asdd.ml" 57 1207 1211 "Asdd.ml" 57 1207 1221
+)
+"Asdd.ml" 175 5736 5755 "Asdd.ml" 175 5736 5763
+type(
+  string
+)
+"Asdd.ml" 175 5736 5747 "Asdd.ml" 175 5736 5764
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 175 5736 5736 "Asdd.ml" 175 5736 5764
+call(
+  stack
+)
+type(
+  vt
+)
+"Asdd.ml" 176 5767 5779 "Asdd.ml" 176 5767 5785
+type(
+  string
+)
+"Asdd.ml" 176 5767 5769 "Asdd.ml" 176 5767 5786
+type(
+  vt
+)
+"Asdd.ml" 176 5767 5767 "Asdd.ml" 176 5767 5786
+type(
+  v
+)
+"Asdd.ml" 177 5789 5795 "Asdd.ml" 177 5789 5796
+type(
+  arbre_concret
+)
+ident(
+  def a "Asdd.ml" 178 5811 5811 --
+)
+"Asdd.ml" 177 5789 5794 "Asdd.ml" 177 5789 5797
+type(
+  arbre_concret list
+)
+"Asdd.ml" 177 5789 5798 "Asdd.ml" 177 5789 5799
+type(
+  Lex.unite_lexicale list
+)
+ident(
+  def b "Asdd.ml" 178 5811 5811 --
+)
+"Asdd.ml" 177 5789 5793 "Asdd.ml" 177 5789 5800
+type(
+  arbre_concret list * Lex.unite_lexicale list
+)
+"Asdd.ml" 177 5789 5803 "Asdd.ml" 177 5789 5808
+type(
+  arbre_concret list * Lex.unite_lexicale list
+)
+ident(
+  int_ref arbre "Asdd.ml" 128 4049 4053 "Asdd.ml" 128 4049 4058
+)
+"Asdd.ml" 178 5811 5811 "Asdd.ml" 178 5811 5818
+type(
+  arbre_concret -> arbre_abstrait
+)
+ident(
+  int_ref convert "Asdd.ml" 156 4664 4672 "Asdd.ml" 156 4664 4679
+)
+"Asdd.ml" 178 5811 5819 "Asdd.ml" 178 5811 5820
+type(
+  arbre_concret
+)
+ident(
+  int_ref a "Asdd.ml" 177 5789 5795 "Asdd.ml" 177 5789 5796
+)
+"Asdd.ml" 178 5811 5811 "Asdd.ml" 178 5811 5820
+call(
+  stack
+)
+type(
+  arbre_abstrait
+)
+"Asdd.ml" 180 5824 5828 "Asdd.ml" 180 5824 5834
+type(
+  v list
+)
+ident(
+  def vlist3 "Asdd.ml" 181 5849 5849 --
+)
+"Asdd.ml" 180 5824 5841 "Asdd.ml" 180 5824 5845
+type(
+  vn
+)
+"Asdd.ml" 180 5824 5838 "Asdd.ml" 180 5824 5845
+type(
+  v
+)
+"Asdd.ml" 180 5824 5837 "Asdd.ml" 180 5824 5846
+type(
+  v list
+)
+"Asdd.ml" 181 5849 5853 "Asdd.ml" 181 5849 5860
+type(
+  Lex.unite_lexicale list
+)
+ident(
+  def ullist3 "Asdd.ml" 183 5997 5997 --
+)
+"Asdd.ml" 181 5849 5870 "Asdd.ml" 181 5849 5875
+type(
+  string
+)
+"Asdd.ml" 181 5849 5863 "Asdd.ml" 181 5849 5875
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 181 5849 5876 "Asdd.ml" 181 5849 5883
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 181 5849 5891 "Asdd.ml" 181 5849 5896
+type(
+  string
+)
+"Asdd.ml" 181 5849 5884 "Asdd.ml" 181 5849 5896
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 181 5849 5897 "Asdd.ml" 181 5849 5901
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 181 5849 5902 "Asdd.ml" 181 5849 5908
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 181 5849 5916 "Asdd.ml" 181 5849 5921
+type(
+  string
+)
+"Asdd.ml" 181 5849 5909 "Asdd.ml" 181 5849 5921
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 181 5849 5922 "Asdd.ml" 181 5849 5929
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 181 5849 5937 "Asdd.ml" 181 5849 5942
+type(
+  string
+)
+"Asdd.ml" 181 5849 5930 "Asdd.ml" 181 5849 5942
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 181 5849 5943 "Asdd.ml" 181 5849 5947
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 181 5849 5955 "Asdd.ml" 181 5849 5960
+type(
+  string
+)
+"Asdd.ml" 181 5849 5948 "Asdd.ml" 181 5849 5960
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 181 5849 5961 "Asdd.ml" 181 5849 5966
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 181 5849 5974 "Asdd.ml" 181 5849 5979
+type(
+  string
+)
+"Asdd.ml" 181 5849 5967 "Asdd.ml" 181 5849 5979
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 181 5849 5980 "Asdd.ml" 181 5849 5986
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 181 5849 5987 "Asdd.ml" 181 5849 5992
+type(
+  Lex.unite_lexicale
+)
+"Asdd.ml" 181 5849 5862 "Asdd.ml" 181 5849 5993
+type(
+  Lex.unite_lexicale list
+)
+"Asdd.ml" 183 5997 6001 "Asdd.ml" 183 5997 6007
+type(
+  arbre_concret list * Lex.unite_lexicale list
+)
+ident(
+  def arbre3 "Asdd.ml" 185 6041 6041 --
+)
+"Asdd.ml" 183 5997 6010 "Asdd.ml" 183 5997 6021
+type(
+  v list * Lex.unite_lexicale list ->
+  arbre_concret list * Lex.unite_lexicale list
+)
+ident(
+  int_ref analyse_mot "Asdd.ml" 117 3652 3652 "Asdd.ml" 117 3652 3663
+)
+"Asdd.ml" 183 5997 6022 "Asdd.ml" 183 5997 6028
+type(
+  v list
+)
+ident(
+  int_ref vlist3 "Asdd.ml" 180 5824 5828 "Asdd.ml" 180 5824 5834
+)
+"Asdd.ml" 183 5997 6029 "Asdd.ml" 183 5997 6036
+type(
+  Lex.unite_lexicale list
+)
+ident(
+  int_ref ullist3 "Asdd.ml" 181 5849 5853 "Asdd.ml" 181 5849 5860
+)
+"Asdd.ml" 183 5997 6021 "Asdd.ml" 183 5997 6037
+type(
+  v list * Lex.unite_lexicale list
+)
+"Asdd.ml" 183 5997 6010 "Asdd.ml" 183 5997 6037
+call(
+  stack
+)
+type(
+  arbre_concret list * Lex.unite_lexicale list
+)
+"Asdd.ml" 185 6041 6047 "Asdd.ml" 185 6041 6050
+type(
+  arbre_concret
+)
+ident(
+  def arb "Asdd.ml" 186 6070 6070 --
+)
+"Asdd.ml" 185 6041 6046 "Asdd.ml" 185 6041 6051
+type(
+  arbre_concret list
+)
+"Asdd.ml" 185 6041 6052 "Asdd.ml" 185 6041 6057
+type(
+  Lex.unite_lexicale list
+)
+ident(
+  def reste "Asdd.ml" 186 6070 6070 --
+)
+"Asdd.ml" 185 6041 6045 "Asdd.ml" 185 6041 6058
+type(
+  arbre_concret list * Lex.unite_lexicale list
+)
+"Asdd.ml" 185 6041 6061 "Asdd.ml" 185 6041 6067
+type(
+  arbre_concret list * Lex.unite_lexicale list
+)
+ident(
+  int_ref arbre3 "Asdd.ml" 183 5997 6001 "Asdd.ml" 183 5997 6007
+)
+"Asdd.ml" 186 6070 6070 "Asdd.ml" 186 6070 6077
+type(
+  arbre_concret -> arbre_abstrait
+)
+ident(
+  int_ref convert "Asdd.ml" 156 4664 4672 "Asdd.ml" 156 4664 4679
+)
+"Asdd.ml" 186 6070 6078 "Asdd.ml" 186 6070 6081
+type(
+  arbre_concret
+)
+ident(
+  int_ref arb "Asdd.ml" 185 6041 6047 "Asdd.ml" 185 6041 6050
+)
+"Asdd.ml" 186 6070 6070 "Asdd.ml" 186 6070 6081
+call(
+  stack
+)
+type(
+  arbre_abstrait
+)

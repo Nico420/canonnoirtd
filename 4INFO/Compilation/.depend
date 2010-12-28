@@ -1,0 +1,8 @@
+Asdd.cmo: Lex.cmo 
+Asdd.cmx: Lex.cmx 
+Lexer.cmo: 
+Lexer.cmx: 
+Lex.cmo: 
+Lex.cmx: 
+main.cmo: Lexer.cmo 
+main.cmx: Lexer.cmx 

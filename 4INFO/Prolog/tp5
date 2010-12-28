@@ -1,0 +1,40 @@
+/*
+Prolog
+TP5 : Application partielle
+Desfeux Nicolas - Texier Aurélien
+4INFO
+*/
+
+:- lib(util).
+oper(add).
+oper(sub).
+oper(mul).
+
+ope(add,E1,E2,R) :- is(R,E1+E2).
+ope(mul,E1,E2,R) :- is(R,E1*E2).
+
+/* Exercice */
+
+constabexp(1,A) :- A=1.
+constabexp(N,A) :- N>1,is(M,N-1),between(1,M,I),is(J,N-I)/*between(1,M,J),is(N,I+J)*/,
+			constabexp(I,A1),constabexp(J,A2),oper(B),=..(A,[B,A1,A2]).
+
+/* Problème */
+
+nonent(X,Y) :- var(X);compound(X);(integer(X),(var(Y);compound(Y))).
+
+simpl(E,Es) :- integer(E),Es=E.
+simpl(E,Es) :- var(E),Es=E.
+/*simpl(E,Es) :- =..(E,[A,B,C]),nonent(B,C),simpl(B,Es1),simpl(C,Es2),Es=B/*=..(Es,[A,Es1,Es2]).*/
+% Autre version, mais qui fonctionne
+/*simpl(E,Es) :- compound(E), E=add(A,B),simpl(A,E1),simpl(B,E2),integer(E1),integer(E2),is(Es,E1+E2).
+simpl(E,Es) :- compound(E), E=mul(A,B),simpl(A,E1),simpl(B,E2),integer(E1),integer(E2),is(Es,E1*E2).
+simpl(E,Es) :- compound(E), E=add(A,B),simpl(A,E1),simpl(B,E2),nonent(E1,E2),Es=add(E1,E2).
+simpl(E,Es) :- compound(E), E=mul(A,B),simpl(A,E1),simpl(B,E2),nonent(E1,E2),Es=mul(E1,E2).*/
+
+% Solution condensée
+simpl(E,Es) :- compound(E), =..(E,[O,A,B]),simpl(A,E1),simpl(B,E2),integer(E1),integer(E2),ope(O,E1,E2,Es).
+simpl(E,Es) :- compound(E), =..(E,[O,A,B]),simpl(A,E1),simpl(B,E2),nonent(E1,E2),=..(Es,[O,E1,E2]).
+
+appli(F,[],Fr) :- =..(F,[_,_,E]),simpl(E,Fr).
+appli(F,[A|R],Fr) :- =..(F,[_,[X|S],E]),copyterm(E,T2),X=A,appli(fonc(S,E),R,Fr).

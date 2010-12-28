@@ -1,0 +1,32 @@
+TP 1 : Multi-processus
+
+Question 1
+On observe :
+"Je suis le pere, mon numero est 5329, celui de mon fils est 5330
+je suis le fil, mon numero est 5330, celui de mon pere est 5329"
+Fonctionnement du fork(), création de deux processus (un supplémentaire en fait)
+
+Question 2
+On voit que le père du proc courant a un pid de 5109, ce qui correspond au pid de bash (la console quoi). Le bash fait un fork() pour lancer le proc.
+
+Question 3
+Le programme lance un terminal, puis rend la main dans la console principale.(il doit faire un fork() aussi ?).
+
+Question 4
+Le programme tourne en boucle, et quand on ouvre un autre terminal, on voit les proc en exécution avec leurs infos. on voit donc le proc exec2 dans cette liste.
+
+Question 5
+On l'a fait, les fils ayant tous le même père.
+
+Question 6
+Il y a un entrelacement des affichages. A la fin, il n'y a plus que fils d'affiché, cela vient de la copie du processus (fork())?
+
+Question 7:
+l'ordonnanceur permet au deux processus de tourner en même temps. malgré tout, le processus pèere à toujours un leger temps d'avance.
+
+Question 8 : Il n'y pas l'air d'y avoir de priorité sur l'ordre de l'affichage
+
+Question 9 : 11 affichages pour le fils, 9 pour le père, le père démarre en premier, et ils s'entrelacent. La variable i a été copiée, et n'est pas partagée par les deux processus.
+
+Question 10 :
+
