@@ -1,8 +1,0 @@
-
-public class Internaute {
-	int priority;
-	
-	Internaute(){
-		
-	}
-}
