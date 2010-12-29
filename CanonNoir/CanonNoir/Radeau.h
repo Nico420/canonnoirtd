@@ -18,10 +18,15 @@ class Radeau : public Bateau
 		Radeau(const Bateau& bat);
 		~Radeau();
 		int getNbDes() const;
+		bool donneTresor();
 };
 
 inline int Radeau::getNbDes() const{
 	return 1;
+}
+
+inline bool Radeau::donneTresor(){
+	return false;
 }
 
 #endif

@@ -24,7 +24,7 @@ class Bateau
 		void deplacer(int x, int y);
 		virtual bool aTresorABord() const;
 		virtual void enleveTresor();
-		virtual void donneTresor();
+		virtual bool donneTresor();
 		virtual int getNbDes() const;
 		std::pair<int,int> getPosition() const;
 		std::pair<int,int> getPositionPort() const;
@@ -38,8 +38,9 @@ inline void Bateau::enleveTresor(){
 	tresorABord = false;
 }
 
-inline void Bateau::donneTresor(){
+inline bool Bateau::donneTresor(){
 	tresorABord = true;
+	return true;
 }
 
 inline std::pair<int,int> Bateau::getPosition() const{

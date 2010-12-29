@@ -27,6 +27,12 @@ Joueur::Joueur(int num,int nbBat,int nbPort1,int nbPort2){
 Joueur::~Joueur(){
 }
 
+void Joueur::setScore(int x,int y){
+	int i = (this->bateaux[0].getPosition().first==x && this->bateaux[0].getPosition().second==y)? 0 : 1;
+	if(this->bateaux[i].aTresorABord()) this->score[i]++;
+	this->bateaux[i].enleveTresor();
+}
+
 void Joueur::degraderBateau(int x,int y){
 	int i = (this->bateaux[0].getPosition().first==x && this->bateaux[0].getPosition().second==y)? 0 : 1;
 	if(typeid(this->bateaux[i])==typeid(Caravelle)){
@@ -37,4 +43,9 @@ void Joueur::degraderBateau(int x,int y){
 		Radeau rad = Radeau(this->bateaux[i]);
 		this->bateaux[i] = rad;
 	}
+}
+
+void Joueur::rentreAuPort(int x,int y){
+	int i = (this->bateaux[0].getPosition().first==x && this->bateaux[0].getPosition().second==y)? 0 : 1;
+	this->bateaux[i] = Caravelle(this->bateaux[i]);
 }
