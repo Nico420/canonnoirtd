@@ -24,6 +24,11 @@ namespace Wrapper {
 			FacadeW->Facade::setNbJoueurs(a);
 		};
 
+		System::String^ getMessage(){
+			//A conversion is needed in order to get a String^, that the displayer can use.
+			return gcnew String(FacadeW->Facade::getMessage().c_str());
+		};
+
 		/*System::Void setAngle(int a){
 			FacadeW->setAngle(a);
 		};

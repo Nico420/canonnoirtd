@@ -28,7 +28,7 @@ namespace WPF
         // 1/8 de clickZone
         private static double LARGEUR_CASE = 60.454545;
 
-        //Pour le lencer de Dés
+        //Pour le lancer de Dés, c'est un systeme qui permet de faire des pauses.
         DispatcherTimer _popupTimer = new DispatcherTimer(DispatcherPriority.Normal);
 
         public MainWindow()
@@ -42,27 +42,37 @@ namespace WPF
             Window1 w = new Window1();
             w.Show();
         }
-        private void init_Jeu()
+        private void init_Jeu(int a)
         {
             Init.Visibility = System.Windows.Visibility.Hidden;
-            System.Windows.Thickness t = new Thickness(4, 40, 0, 0);
-            Jeu.Margin = t;
+            /*System.Windows.Thickness t = new Thickness(0, -40, 0, 0);
+            Jeu.Margin = t;*/
+            switch (a)
+            {
+                case 2:
+                    joueur3.Visibility = System.Windows.Visibility.Hidden;
+                    joueur4.Visibility = System.Windows.Visibility.Hidden;
+                    break;
+                case 3:
+                    joueur4.Visibility = System.Windows.Visibility.Hidden;
+                    break;
+                default:
+                break;
+            };
+            FacadeW.setNbJoueurs(a);
             Jeu.Visibility = System.Windows.Visibility.Visible;
         }
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            this.init_Jeu();
-            FacadeW.setNbJoueurs(2);
+            this.init_Jeu(2);
         }
             private void button2_Click(object sender, RoutedEventArgs e)
         {
-            this.init_Jeu();
-            FacadeW.setNbJoueurs(3);
+            this.init_Jeu(3);
         }
         private void button3_Click(object sender, RoutedEventArgs e)
         {
-            this.init_Jeu();
-            FacadeW.setNbJoueurs(4);
+            this.init_Jeu(4);
         }
         private void fullscreen(object sender, RoutedEventArgs e)
         {
@@ -86,6 +96,7 @@ namespace WPF
 
         private void LanceDes_Click(object sender, RoutedEventArgs e)
         {
+            textBlock3.Text = FacadeW.getMessage();
             int count = 0;
             _popupTimer.Interval = TimeSpan.FromMilliseconds(100);
             _popupTimer.Tick += delegate
@@ -100,7 +111,7 @@ namespace WPF
                 {
                     _popupTimer.Stop();
                     count = 0;
-                    FacadeW.lancerDes();
+                    //FacadeW.lancerDes();
                     des1.Source = new BitmapImage(new Uri("Images/face" + FacadeW.getDes1() + ".jpg", UriKind.Relative));
                     des2.Source = new BitmapImage(new Uri("Images/face" + FacadeW.getDes2() + ".jpg", UriKind.Relative));
                 }

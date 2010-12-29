@@ -24,7 +24,7 @@ Moteur::~Moteur(){
 
 void Moteur::setNbJoueurs(int nb){
 	this->nbJoueurs = nb;
-	this->setEtat(CHOISIRPORT);
+	//this->setEtat(CHOISIRPORT);
 	this->execute();
 }
 
@@ -35,7 +35,7 @@ void Moteur::setClick(int x,int y){
 }
 
 void Moteur::setEtat(int e){
-	//delete this->etat;
+	delete this->etat;
 	switch(e) {
 		case ATTENTENBJOUEURS:
 			this->etat = new AttenteNbJoueurs(this);
@@ -47,7 +47,7 @@ void Moteur::setEtat(int e){
 			this->etat = new SetOrdreJoueurs(this);
 			break;
 		case LANCERDESDEPLACEMENT:
-			this->etat = new LancerDesDeplacement(this);
+			//this->etat = new LancerDesDeplacement(this);
 			break;
 		case NAVIGATION:
 			this->etat = new Navigation(this);
