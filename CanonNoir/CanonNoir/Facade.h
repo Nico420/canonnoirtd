@@ -51,7 +51,7 @@ class DLL Facade
 		bool activerCases();
 		bool activerPorts();
 		std::vector<Bateau> getBateaux();
-		std::string getMessage();
+		std::string getMessage(){return this->message;};
 		int* getValeursDes();
 		bool afficheCurseurAngle();
 		bool afficheCurseurPuissance();

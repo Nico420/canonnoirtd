@@ -1,0 +1,8 @@
+
+public class Redacteur extends Internaute{
+
+	public Redacteur() {
+		this.priority = Journal.R;
+	}
+
+}
