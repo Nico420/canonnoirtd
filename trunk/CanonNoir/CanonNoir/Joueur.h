@@ -23,8 +23,10 @@ class Joueur
 		~Joueur();
 		void degraderBateau(int x,int y);
 		std::map<int,int> getScore() const;
+		void setScore(int x,int y);
 		int getNum() const;
 		Bateau& getBateau(int nb);
+		void rentreAuPort(int x,int y);
 }; 
 
 inline std::map<int,int> Joueur::getScore() const{

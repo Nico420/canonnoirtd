@@ -52,11 +52,18 @@ void Facade::setClick(int x,int y){
 	if(this->motor->getEtat()->getEtat()==Moteur::CHOISIRPORT){
 		this->activeCases = true;
 	}
-	if(this->motor->getEtat()->getEtat()==Moteur::SETORDREJOUEURS){
+	else if(this->motor->getEtat()->getEtat()==Moteur::SETORDREJOUEURS){
 		this->motor->setEtat(Moteur::SETORDREJOUEURS);
 		this->activeLancerDes = true;
 		this->activeDe1 = true;
 		this->activeDe2 = true;
+		this->activeCases = false;
+	}
+	else if(this->motor->getEtat()->getEtat()==Moteur::LANCERDESDEPLACEMENT){
+		this->motor->setEtat(Moteur::LANCERDESDEPLACEMENT);
+		this->activeLancerDes = true;
+		this->activeDe1 = true;
+		this->activeDe2 = this->motor->getEtat()->getActiveDe2();
 		this->activeCases = false;
 	}
 }

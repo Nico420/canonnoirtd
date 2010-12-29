@@ -14,7 +14,7 @@ class Caravelle : public Bateau
 	public :
 		Caravelle();
 		Caravelle(bool tres, int posx, int posy, int posPortx, int posPorty);
-		Caravelle(const Bateau* bat);
+		Caravelle(const Bateau& bat);
 		~Caravelle();
 		int getNbDes() const;
 };
