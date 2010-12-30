@@ -27,6 +27,7 @@ class TirCanon : public Etat
 	public :
 		TirCanon();
 		TirCanon(Moteur* mot);
+		virtual ~TirCanon(){};
 		void execute();
 		void setAngle(int ang);
 		void setPuissance(int puis);

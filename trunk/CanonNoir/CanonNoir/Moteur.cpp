@@ -12,6 +12,7 @@ Moteur::Moteur(){
 	this->nbJoueurs = 0;
 	this->joueurCourant = 1;
 	this->click = std::make_pair(0,0);
+	this->numEtatCourant = ATTENTENBJOUEURS;
 	this->des.first = De::De();
 	this->des.second = De::De();
 	this->plateau = Plateau::Plateau();
@@ -35,32 +36,35 @@ void Moteur::setClick(int x,int y){
 }
 
 void Moteur::setEtat(int e){
-	delete this->etat;
-	switch(e) {
-		case ATTENTENBJOUEURS:
-			this->etat = new AttenteNbJoueurs(this);
-			break;
-		case CHOISIRPORT:
-			this->etat = new ChoisirPort(this);
-			break; 
-		case SETORDREJOUEURS: 
-			this->etat = new SetOrdreJoueurs(this);
-			break;
-		case LANCERDESDEPLACEMENT:
-			//this->etat = new LancerDesDeplacement(this);
-			break;
-		case NAVIGATION:
-			this->etat = new Navigation(this);
-			break;
-		case TIRCANONDUEL:
-			this->etat = new TirCanonDuel(this);
-			break;
-		case TIRCANONUNIQUE:
-			this->etat = new TirCanonUnique(this);
-			break;
-		case PARTIEGAGNEE:
-			this->etat = new PartieGagnee(this);
-			break;
+	if(e!=this->numEtatCourant){
+		delete this->etat;
+		this->numEtatCourant = e;
+		switch(e) {
+			case ATTENTENBJOUEURS:
+				this->etat = new AttenteNbJoueurs(this);
+				break;
+			case CHOISIRPORT:
+				this->etat = new ChoisirPort(this);
+				break; 
+			case SETORDREJOUEURS: 
+				this->etat = new SetOrdreJoueurs(this);
+				break;
+			case LANCERDESDEPLACEMENT:
+				//this->etat = new LancerDesDeplacement(this);
+				break;
+			case NAVIGATION:
+				this->etat = new Navigation(this);
+				break;
+			case TIRCANONDUEL:
+				this->etat = new TirCanonDuel(this);
+				break;
+			case TIRCANONUNIQUE:
+				this->etat = new TirCanonUnique(this);
+				break;
+			case PARTIEGAGNEE:
+				this->etat = new PartieGagnee(this);
+				break;
+		}
 	}
 }
 

@@ -20,6 +20,7 @@ class Case
 
 		Case():hauteur(0),estNavigable(false){};
 		Case(int haut,bool nav);
+		virtual ~Case(){};
 		virtual bool getEstNavigable() const;
 		virtual void setEstNavigable(bool b);
 		virtual void libereCase();

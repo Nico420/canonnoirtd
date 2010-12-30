@@ -27,7 +27,7 @@ ChoisirPort::ChoisirPort(Moteur* mot){
 }
 
 ChoisirPort::~ChoisirPort(){
-	delete this->portsLibres;
+	delete[] this->portsLibres;
 }
 
 bool ChoisirPort::estLibre(int i) const{
