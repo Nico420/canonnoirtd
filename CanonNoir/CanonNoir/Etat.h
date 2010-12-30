@@ -15,6 +15,8 @@ class Moteur;
 class Etat
 {
 	public :
+		Etat(){};
+		virtual ~Etat(){};
 		virtual void execute();
 		virtual void setMessage(std::string mes);
 		virtual int* getPortsLibres() const;

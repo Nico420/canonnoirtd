@@ -24,6 +24,7 @@ class Moteur
 		int joueurCourant;
 		pair<int,int> click;
 		map<pair<int,int>,int> casesDeplacementBateau;
+		int numEtatCourant;
 		
 		vector<Joueur> joueurs;
 		Plateau plateau;
