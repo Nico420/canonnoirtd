@@ -71,3 +71,11 @@ void Moteur::execute(){
 void Moteur::addJoueur(int ind,int num,int nbBat,int nbPort1,int nbPort2){
 	this->joueurs[ind] = Joueur::Joueur(num,nbBat,nbPort1,nbPort2=0);
 }
+
+void Moteur::passerAuJoueurSuivant(){
+	int index;
+	for(int i=0;i<this->nbJoueurs;i++){
+		if(this->ordreJoueurs.at(i)==this->joueurCourant) index = i;
+	}
+	this->joueurCourant = this->ordreJoueurs.at((index+1)%this->nbJoueurs);
+}

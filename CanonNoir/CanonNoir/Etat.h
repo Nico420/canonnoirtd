@@ -22,8 +22,6 @@ class Etat
 		virtual int getEtat() const;
 		virtual int* getCasesActives() const;
 		virtual bool getActiveDe2() const;
-		//virtual std::string getMessage() const;
-
 };
 
 #endif

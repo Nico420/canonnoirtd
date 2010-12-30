@@ -43,6 +43,7 @@ class Moteur
 		int getJoueurCourant() const;
 		vector<int> getOrdreJoueurs() const;
 		void setJoueurCourant(int jc);
+		void passerAuJoueurSuivant();
 		Etat* getEtat() const;
 		pair<De,De> getDes() const;
 		Joueur& getJoueur(int nb);

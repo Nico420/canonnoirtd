@@ -29,7 +29,7 @@ inline int CasePort::getCouleur() const{
 	this->couleur;
 }
 
-bool CasePort::estPort() const{
+inline bool CasePort::estPort() const{
 	return true;
 }
 

@@ -22,16 +22,12 @@ class Joueur
 		Joueur(int num,int nbBat,int nbPort1,int nbPort2=0);
 		~Joueur();
 		void degraderBateau(int x,int y);
-		std::map<int,int> getScore() const;
+		int getScore(int x,int y) const;
 		void setScore(int x,int y);
 		int getNum() const;
 		Bateau& getBateau(int nb);
 		void rentreAuPort(int x,int y);
-}; 
-
-inline std::map<int,int> Joueur::getScore() const{
-	return score;
-}
+};
 
 inline int Joueur::getNum() const{
 	return num;
