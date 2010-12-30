@@ -45,6 +45,14 @@ void Joueur::degraderBateau(int x,int y){
 	}
 }
 
+int Joueur::getScore(int x,int y) const{
+	int numPort = 1;
+	if(x==11 && y==1) numPort = 2;
+	if(x==1 && y==8) numPort = 3;
+	if(x==11 && y==8) numPort = 4;
+	return this->score.find(numPort)->second;
+}
+
 void Joueur::rentreAuPort(int x,int y){
 	int i = (this->bateaux[0].getPosition().first==x && this->bateaux[0].getPosition().second==y)? 0 : 1;
 	this->bateaux[i] = Caravelle(this->bateaux[i]);

@@ -30,25 +30,33 @@ void Navigation::deplacer(int x, int y){
 				this->etatsuivant = Moteur::TIRCANONDUEL;
 			}
 			else{
+				this->moteur->passerAuJoueurSuivant();
+				mes = "Joueur " + this->moteur->getJoueurCourant();
 				mes += ", lancez les dés pour jouer.";
 				this->etatsuivant = Moteur::LANCERDESDEPLACEMENT;
 			}
 		}
 		else if(this->moteur->getPlateau().getEtat(x,y)==Moteur::LANCERDESDEPLACEMENT){
+			bool partieFinie = false;
 			if(!bat.aTresorABord() && this->moteur->getPlateau().getNbTresors(x,y)>0){
 				if(bat.donneTresor()) this->moteur->getPlateau().enleveUnTresor(x,y);
 			}
 			else if(bat.getPositionPort().first==x && bat.getPositionPort().second==y){
 				//traitement bateau rentre au port
 				this->moteur->getJoueur(this->moteur->getJoueurCourant()).setScore(x,y);
+				if(this->moteur->getJoueur(this->moteur->getJoueurCourant()).getScore(x,y)==3){
+					partieFinie = true;
+					mes += ", vous avez gagné !";
+					this->etatsuivant = Moteur::PARTIEGAGNEE;
+				}
 				this->moteur->getJoueur(this->moteur->getJoueurCourant()).rentreAuPort(x,y);
 			}
-			mes += ", lancez les dés pour jouer.";
-			this->etatsuivant = Moteur::LANCERDESDEPLACEMENT;
-		}
-		else if(this->moteur->getPlateau().getEtat(x,y)==Moteur::PARTIEGAGNEE){
-			mes += ", vous avez gagné !";
-			this->etatsuivant = Moteur::PARTIEGAGNEE;
+			if(!partieFinie){
+				this->moteur->passerAuJoueurSuivant();
+				mes = "Joueur " + this->moteur->getJoueurCourant();
+				mes += ", lancez les dés pour jouer.";
+				this->etatsuivant = Moteur::LANCERDESDEPLACEMENT;
+			}
 		}
 		this->setMessage(mes);
 	}
