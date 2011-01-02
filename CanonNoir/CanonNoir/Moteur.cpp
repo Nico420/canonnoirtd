@@ -25,7 +25,7 @@ Moteur::~Moteur(){
 
 void Moteur::setNbJoueurs(int nb){
 	this->nbJoueurs = nb;
-	//this->setEtat(CHOISIRPORT);
+	this->setEtat(CHOISIRPORT);
 	this->execute();
 }
 
@@ -73,7 +73,7 @@ void Moteur::execute(){
 }
 
 void Moteur::addJoueur(int ind,int num,int nbBat,int nbPort1,int nbPort2){
-	this->joueurs[ind] = Joueur::Joueur(num,nbBat,nbPort1,nbPort2=0);
+	this->joueurs.push_back(Joueur::Joueur(num,nbBat,nbPort1,nbPort2=0));
 }
 
 void Moteur::passerAuJoueurSuivant(){
