@@ -21,6 +21,7 @@ Facade::Facade(){
 	this->activeLancerDes = false;
 	this->de1 = 1;
 	this->de2 = 1;
+	this->motor->execute();
 }
 
 Facade::~Facade(){
@@ -30,10 +31,8 @@ Facade::~Facade(){
 }
 
 void Facade::setNbJoueurs(int nb){
-	
-	this->motor = new Moteur();
 	//Ca fait planter l'application et je sais pas pourquoi !!
-	//this->motor->setNbJoueurs(nb);
+	this->motor->setNbJoueurs(nb);
 	//this->message = this->motor->getEtat()->getMessage();
 	this->nbBateaux = (nb==3)? 3 : 4;
 	this->scoresBateaux = new int[this->nbBateaux];
