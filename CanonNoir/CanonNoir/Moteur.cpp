@@ -50,7 +50,7 @@ void Moteur::setEtat(int e){
 				this->etat = new SetOrdreJoueurs(this);
 				break;
 			case LANCERDESDEPLACEMENT:
-				//this->etat = new LancerDesDeplacement(this);
+				this->etat = new LancerDesDeplacement(this);
 				break;
 			case NAVIGATION:
 				this->etat = new Navigation(this);

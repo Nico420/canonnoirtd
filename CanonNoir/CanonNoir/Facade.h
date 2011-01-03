@@ -31,7 +31,6 @@ class DLL Facade
 
 		bool affichePlateau;
 		bool afficheCanon;
-		std::string message;
 		int* scoresBateaux;
 		int nbBateaux;
 		bool afficheAttenteNbJoueurs;
@@ -45,6 +44,7 @@ class DLL Facade
 		int* casesActives;
 
 	public :
+		std::string message;
 		Facade();
 		~Facade();
 		bool activerDes();

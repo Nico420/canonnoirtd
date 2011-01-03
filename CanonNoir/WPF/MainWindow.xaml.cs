@@ -96,7 +96,7 @@ namespace WPF
 
         private void LanceDes_Click(object sender, RoutedEventArgs e)
         {
-            textBlock3.Text = FacadeW.getMessage();
+            textBlock3.Text = FacadeW.getMessage()+" <- Message du moteur";
             int count = 0;
             _popupTimer.Interval = TimeSpan.FromMilliseconds(100);
             _popupTimer.Tick += delegate
@@ -111,7 +111,7 @@ namespace WPF
                 {
                     _popupTimer.Stop();
                     count = 0;
-                    //FacadeW.lancerDes();
+                    FacadeW.lancerDes();
                     des1.Source = new BitmapImage(new Uri("Images/face" + FacadeW.getDes1() + ".jpg", UriKind.Relative));
                     des2.Source = new BitmapImage(new Uri("Images/face" + FacadeW.getDes2() + ".jpg", UriKind.Relative));
                 }
