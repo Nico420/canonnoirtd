@@ -22,6 +22,7 @@ namespace Wrapper {
 
 		System::Void setNbJoueurs(int a){
 			FacadeW->Facade::setNbJoueurs(a);
+			FacadeW->message="test";
 		};
 
 		System::String^ getMessage(){

@@ -10,7 +10,7 @@ Facade::Facade(){
 	}
 	this->affichePlateau = true;
 	this->afficheCanon = false;
-	this->message = "Bla";//this->motor->getEtat()->getMessage();
+	this->message = this->motor->getEtat()->getMessage();
 	this->scoresBateaux = NULL;
 	this->nbBateaux = 0;
 	this->afficheAttenteNbJoueurs = true;
@@ -31,9 +31,9 @@ Facade::~Facade(){
 }
 
 void Facade::setNbJoueurs(int nb){
-	//Ca fait planter l'application et je sais pas pourquoi !!
+	//Ca fait planter l'application et je sais pas pourquoi !! (ok le 02/01/2011)
 	this->motor->setNbJoueurs(nb);
-	//this->message = this->motor->getEtat()->getMessage();
+	this->message = this->motor->getEtat()->getMessage();
 	this->nbBateaux = (nb==3)? 3 : 4;
 	this->scoresBateaux = new int[this->nbBateaux];
 	for(int i=0;i<this->nbBateaux;i++) this->scoresBateaux[i] = 0;
@@ -46,7 +46,7 @@ void Facade::setNbJoueurs(int nb){
 
 void Facade::setClick(int x,int y){
 	this->motor->setClick(x,y);
-	//this->message = this->motor->getEtat()->getMessage();
+	this->message = this->motor->getEtat()->getMessage();
 	delete[] this->casesActives;
 	this->casesActives = this->motor->getEtat()->getCasesActives();
 	if(this->motor->getEtat()->getEtat()==Moteur::CHOISIRPORT){
@@ -70,7 +70,7 @@ void Facade::setClick(int x,int y){
 
 void Facade::lancerDes(){
 	this->motor->execute();
-	//this->message = this->motor->getEtat()->getMessage();
+	this->message = this->motor->getEtat()->getMessage();
 	this->de1 = this->motor->getDes().first.getNum();
 	this->de2 = this->motor->getDes().second.getNum();
 	if(this->motor->getEtat()->getEtat()==Moteur::LANCERDESDEPLACEMENT){
