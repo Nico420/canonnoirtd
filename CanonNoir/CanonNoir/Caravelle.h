@@ -12,11 +12,12 @@
 class Caravelle : public Bateau
 {
 	public :
-		Caravelle();
-		Caravelle(bool tres, int posx, int posy, int posPortx, int posPorty);
+		Caravelle() : Bateau(){};
+		Caravelle(bool tres, int posx, int posy, int posPortx, int posPorty) : 
+			Bateau(2,tres,posx,posy,posPortx,posPorty){};
 		Caravelle(const Bateau& bat);
-		~Caravelle();
-		int getNbDes() const;
+		virtual ~Caravelle();
+		virtual int getNbDes() const;
 };
 
 inline int Caravelle::getNbDes() const{

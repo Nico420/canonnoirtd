@@ -9,6 +9,7 @@
 #pragma once
 
 #include "LancerDes.h"
+#include "Moteur.h"
 #include <set>
 
 class LancerDesDeplacement : public LancerDes
@@ -18,8 +19,8 @@ class LancerDesDeplacement : public LancerDes
 		int etatsuivant;
 		bool activeDe2;
 	public :
-		LancerDesDeplacement();
-		LancerDesDeplacement(Moteur* mot);
+		LancerDesDeplacement() : LancerDes(NULL),etatsuivant(0){};
+		LancerDesDeplacement(Moteur* mot) : LancerDes(mot),etatsuivant(Moteur::NAVIGATION){};
 		virtual void execute();
 		int getEtat() const;
 		int* getCasesActives() const;

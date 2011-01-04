@@ -1,13 +1,5 @@
 #include "Caravelle.h"
 
-Caravelle::Caravelle(){
-	this->Bateau::Bateau();
-}
-
-Caravelle::Caravelle(bool tres, int posx, int posy, int posPortx, int posPorty){
-	this->Bateau::Bateau(2,tres,posx,posy,posPortx,posPorty);
-}
-
 Caravelle::Caravelle(const Bateau& bat){
 	this->nbDes = 2;
 	this->tresorABord = bat.aTresorABord();

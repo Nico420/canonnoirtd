@@ -1,16 +1,6 @@
 #include "TirCanonDuel.h"
 #include "Moteur.h"
 
-TirCanonDuel::TirCanonDuel(){
-	this->TirCanon::TirCanon();
-	this->premierTir = true;
-}
-
-TirCanonDuel::TirCanonDuel(Moteur* mot){
-	this->TirCanon::TirCanon(mot);
-	this->premierTir = true;
-}
-
 void TirCanonDuel::echangeDuel(){
 	this->message = "";
 	this->angle = -1;

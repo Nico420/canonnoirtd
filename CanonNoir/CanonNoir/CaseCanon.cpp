@@ -7,10 +7,6 @@
 #include "CaseCanon.h"
 #include "Moteur.h"
 
-CaseCanon::CaseCanon(){
-	this->Case::Case(0,true);
-}
-
 int CaseCanon::getEtat() const{
 	return Moteur::TIRCANONUNIQUE;
 }

@@ -16,8 +16,8 @@ class CaseNormale : public Case
 	private :
 		bool auBord;
 	public :
-		CaseNormale();
-		CaseNormale(int haut,bool nav,bool aubord);
+		CaseNormale() : Case(){};
+		CaseNormale(int haut,bool nav,bool aubord) : Case(haut,nav),auBord(aubord){};
 		//Faire un constructeur avec auBord, pour connaitre directement les cases au bord.
 		bool estAuBord() const;
 		bool getEstNavigable() const;

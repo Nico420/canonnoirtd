@@ -12,11 +12,12 @@
 class Fregate : public Bateau
 {
 	public :
-		Fregate();
-		Fregate(bool tres, int posx, int posy, int posPortx, int posPorty);
+		Fregate() : Bateau(){};
+		Fregate(bool tres, int posx, int posy, int posPortx, int posPorty) : 
+			Bateau(1,tres,posx,posy,posPortx,posPorty){};
 		Fregate(const Bateau& bat);
-		~Fregate();
-		int getNbDes() const;
+		virtual ~Fregate();
+		virtual int getNbDes() const;
 };
 
 inline int Fregate::getNbDes() const{

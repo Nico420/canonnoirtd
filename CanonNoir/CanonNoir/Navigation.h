@@ -31,10 +31,20 @@ class Navigation : public Etat
 		int* getCasesActives() const;
 		void setCasesBateauxCibles();
 		std::pair<int,int> getCaseFaceOppose(int x,int y) const;
+		void setMessage(std::string mes);
+		std::string getMessage() const;
 }; 
 
 inline int Navigation::getEtat() const{
 	return etatsuivant;
+}
+
+inline void Navigation::setMessage(std::string mes){
+	this->message = mes;
+}
+
+inline std::string Navigation::getMessage() const{
+	return this->message;
 }
 
 #endif

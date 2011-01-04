@@ -17,7 +17,7 @@ class CasePort : public Case
 		int couleur;
 
 	public :
-		CasePort();
+		CasePort() : Case(){};
 		int getCouleur() const;
 		bool getEstNavigable() const;
 		bool estPort() const;
