@@ -61,17 +61,17 @@ void ChoisirPort::execute(){
 				if(this->compteur==2) this->port2 = nbport;
 				else if(this->compteur==3) this->moteur->addJoueur(joueurCourant-1,joueurCourant,2,this->port1,nbport);
 			}
-			mes2 = ", choisir un port.";
+			mes2 = ", choisir \nun port.";
 			this->setPortsLibres(nbport);
 		}
 		else{
 			if(nbJoueurs==2) this->moteur->addJoueur(joueurCourant-1,joueurCourant,2,this->port2,nbport);
 			else this->moteur->addJoueur(joueurCourant-1,joueurCourant,1,nbport);
-			mes2 = ", lancer les dés pour déterminer l'ordre des joueurs.";
+			mes2 = ", lancer les \ndés pour déterminer \nl'ordre des joueurs.";
 			this->etatsuivant = Moteur::SETORDREJOUEURS;
 		}
 	}
-	else mes2 = ", choisir un port.";
+	else mes2 = ", choisir \nun port.";
 	mes << "Joueur " << this->moteur->getJoueurCourant() << mes2;
 	this->setMessage(mes.str());
 }

@@ -27,6 +27,7 @@ class AttenteNbJoueurs : public Etat
 		~AttenteNbJoueurs();
 		string getMessage() const;
 		void execute();
+		void setMessage(std::string mes);
 
 }; 
 

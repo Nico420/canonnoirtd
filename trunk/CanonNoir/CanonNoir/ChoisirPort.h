@@ -31,6 +31,7 @@ class ChoisirPort : public Etat
 		void setPortsLibres(int i);
 		bool estLibre(int i) const;
 		std::string getMessage() const;
+		inline void setMessage(std::string mes){this->message = mes;};
 		int* getCasesActives() const;
 		int getEtat() const;
 
