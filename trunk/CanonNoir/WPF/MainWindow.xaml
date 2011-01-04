@@ -10,7 +10,7 @@
         <TextBlock Height="23" HorizontalAlignment="Center" Margin="0,25,0,0" Name="textBlock2" Text="JEU DU CANON NOIR" VerticalAlignment="Top" TextAlignment="Center" FontWeight="Bold" FontSize="12" Grid.ColumnSpan="2" FontStyle="Italic" />
         <Canvas Height="459" HorizontalAlignment="Right" Margin="0,44,10,10" Name="plateau" VerticalAlignment="Top" Width="700" Grid.ColumnSpan="2">
             <Image MouseLeftButtonDown="clickZone_MouseLeftButtonDown" Source="Images/plateau.jpg" Width="700" Height="459" Stretch="Fill" Grid.ColumnSpan="2" Margin="0,0,0,0" />
-            <Canvas  Height="430" HorizontalAlignment="Right" Margin="16,14,19,15" Name="clickZone" VerticalAlignment="Top" Width="665" Grid.ColumnSpan="2" Panel.ZIndex="10">
+            <Canvas Height="430" HorizontalAlignment="Right" Margin="16,14,19,15" Name="clickZone" VerticalAlignment="Top" Width="665" Grid.ColumnSpan="2" Panel.ZIndex="10">
             </Canvas>
         </Canvas>
         <Canvas Name="sideBar" Margin="0,20,122,0" Background="#FF00D3FA">
@@ -26,7 +26,7 @@
             <Canvas Height="250" HorizontalAlignment="Left" Margin="4,10,0,0" Name="Jeu" VerticalAlignment="Top" Width="129" Visibility="Hidden">
                 <TextBlock Canvas.Left="23" Canvas.Top="16" Height="23" Name="Message" Text="Message" />
 
-                <TextBlock Canvas.Left="21" Canvas.Top="35" Height="77" Name="textBlock3" Text="Message" Width="100" />
+                <TextBlock Canvas.Left="21" Canvas.Top="35" Height="77" Name="textBlock3" Text="Message" Width="100" TextTrimming="CharacterEllipsis" />
                 <TextBlock Canvas.Left="23" Canvas.Top="123" Height="23" Name="score" Text="Score" />
                 <TextBlock Canvas.Left="23" Canvas.Top="143" Height="23" Name="joueur1" Text="Joueur 1" />
                 <TextBlock Canvas.Left="23" Canvas.Top="163" Height="23" Name="joueur2" Text="Joueur 2" />
@@ -48,7 +48,7 @@
         <Canvas Height="100" HorizontalAlignment="Left" Margin="13,319,0,0" Name="des" VerticalAlignment="Top" Width="130" Background="#FFD6D1D1">
             <Image Name="des2" Source="Images/face1.jpg" Height="50" Margin="70,10" />
             <Image Name="des1" Source="Images/face2.jpg" Height="50" Margin="10,10" />
-            <Button Name="LanceDes" Click="LanceDes_Click" Width="110" Content="Lancer les dés !" Margin="10,70" HorizontalAlignment="Center" />
+            <Button Name="LanceDes" Click="LanceDes_Click" Width="110" Content="Lancer les dés !" Margin="10,70" HorizontalAlignment="Center" IsEnabled="True" />
         </Canvas>
     </Grid>
 </Window>
