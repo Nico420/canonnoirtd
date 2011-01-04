@@ -1,6 +1,7 @@
 #include "LancerDesDeplacement.h"
 #include "Moteur.h"
 #include <math.h>
+#include <sstream>
 
 LancerDesDeplacement::LancerDesDeplacement(){
 	this->LancerDes::LancerDes();
@@ -24,10 +25,11 @@ void LancerDesDeplacement::execute(){
 	int de2 = this->moteur->getDe2();
 	
 	this->calculCasesDeplacement(de1,de2);
-	std::string mes = "Joueur ";
-	mes += this->moteur->getJoueurCourant();
-	mes += ", choisissez la case où vous souhaitez vous déplacer.";
-	this->setMessage(mes);
+	ostringstream mes;
+	mes << "Joueur ";
+	mes << this->moteur->getJoueurCourant();
+	mes << ", choisissez la case où vous souhaitez vous déplacer.";
+	this->setMessage(mes.str());
 }
 
 void LancerDesDeplacement::calculCasesDeplacement(int de1,int de2){

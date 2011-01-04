@@ -22,8 +22,16 @@ class LancerDes : public Etat
 		virtual void execute();
 		virtual int* getCasesDeplacement() const;
 		virtual int getNbCasesDeplacement() const;
-		void setMessage(std::string mes){message=mes;};
-
+		void setMessage(std::string mes);
+		std::string getMessage() const;
 }; 
+
+inline void LancerDes::setMessage(std::string mes){
+	this->message = mes;
+}
+
+inline std::string LancerDes::getMessage() const{
+	return this->message;
+}
 
 #endif
