@@ -15,8 +15,8 @@ class TirCanonUnique : public TirCanon
 	private :
 
 	public :
-		TirCanonUnique();
-		TirCanonUnique(Moteur* mot);
+		TirCanonUnique() : TirCanon(){};
+		TirCanonUnique(Moteur* mot) : TirCanon(mot){};
 		void setCible(int num);
 		void execute();
 }; 

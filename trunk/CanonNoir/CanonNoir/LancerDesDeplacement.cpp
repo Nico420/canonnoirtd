@@ -3,14 +3,6 @@
 #include <math.h>
 #include <sstream>
 
-LancerDesDeplacement::LancerDesDeplacement(){
-	this->LancerDes::LancerDes();
-}
-
-LancerDesDeplacement::LancerDesDeplacement(Moteur* mot){
-	this->LancerDes::LancerDes(mot);
-}
-
 void LancerDesDeplacement::execute(){
 	/*std::pair<De,De> d = this->moteur->getDes();
 	d.first.lancerDe();

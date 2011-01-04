@@ -9,15 +9,6 @@
 #include "CaseNormale.h"
 #include "Moteur.h"
 
-CaseNormale::CaseNormale(){
-	this->Case::Case();
-}
-
-CaseNormale::CaseNormale(int haut,bool nav,bool aubord){
-	this->Case::Case(haut,nav);
-	this->auBord;
-}
-
 bool CaseNormale::getEstNavigable() const{
 	return this->estNavigable;
 }

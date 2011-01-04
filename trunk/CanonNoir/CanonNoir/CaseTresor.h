@@ -17,8 +17,8 @@ class CaseTresor : public Case
 		int nbTresors;
 
 	public :
-		CaseTresor();
-		CaseTresor(int nbtres);
+		CaseTresor() : Case(){};
+		CaseTresor(int nbtres) : Case(0,true),nbTresors(nbtres){};
 		int getNbTresors() const;
 		void enleveUnTresor();
 		int getEtat() const;

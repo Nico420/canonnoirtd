@@ -14,9 +14,8 @@
 class CaseCanon : public Case
 {
 	public :
-		CaseCanon();
+		CaseCanon() : Case(0,true){};
 		int getEtat() const;
-
 };
 
 #endif

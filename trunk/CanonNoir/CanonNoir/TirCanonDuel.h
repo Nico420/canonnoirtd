@@ -16,8 +16,8 @@ class TirCanonDuel : public TirCanon
 		bool premierTir;
 
 	public :
-		TirCanonDuel();
-		TirCanonDuel(Moteur* mot);
+		TirCanonDuel() : TirCanon(),premierTir(true){};
+		TirCanonDuel(Moteur* mot) : TirCanon(mot),premierTir(true){};
 		bool estPremierTir() const;
 		void execute();
 		void echangeDuel();

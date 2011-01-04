@@ -13,12 +13,13 @@
 class Radeau : public Bateau
 {
 	public :
-		Radeau();
-		Radeau(int posx, int posy, int posPortx, int posPorty);
+		Radeau() : Bateau(){};
+		Radeau(int posx, int posy, int posPortx, int posPorty) : 
+			Bateau(1,false,posx,posy,posPortx,posPorty){};
 		Radeau(const Bateau& bat);
-		~Radeau();
-		int getNbDes() const;
-		bool donneTresor();
+		virtual ~Radeau();
+		virtual int getNbDes() const;
+		virtual bool donneTresor();
 };
 
 inline int Radeau::getNbDes() const{

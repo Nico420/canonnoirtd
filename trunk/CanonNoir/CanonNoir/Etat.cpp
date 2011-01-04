@@ -1,8 +1,5 @@
 #include "Etat.h"
 
-void Etat::execute(){
-}
-
 int* Etat::getPortsLibres() const{
 	return NULL;
 }
