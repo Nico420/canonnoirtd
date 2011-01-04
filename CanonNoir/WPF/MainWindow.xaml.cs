@@ -68,12 +68,13 @@ namespace WPF
         }
             private void button2_Click(object sender, RoutedEventArgs e)
         {
-            this.init_Jeu(3);
+            this.init_Jeu(4);
         }
         private void button3_Click(object sender, RoutedEventArgs e)
         {
-            this.init_Jeu(4);
+            this.init_Jeu(3);
         }
+        
         private void fullscreen(object sender, RoutedEventArgs e)
         {
             this.WindowState= System.Windows.WindowState.Maximized;
@@ -81,30 +82,29 @@ namespace WPF
 
         private void clickZone_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            
             double a = Mouse.GetPosition(clickZone).X;
             a/= LARGEUR_CASE;
             int x = (int)a+1;
             double b = Mouse.GetPosition(clickZone).Y;
             b /= HAUTEUR_CASE; 
             int y = (int)b + 1;
-            
+            FacadeW.setClick(x,y);
             double num_case = (y-1) * 11 + x;
             MessageBox.Show("Vous avez cliqué ici : " + Mouse.GetPosition(clickZone) + "\nCase : (" +x+";"+ y + ") " + num_case);
-
         }
 
         private void LanceDes_Click(object sender, RoutedEventArgs e)
         {
+            //LanceDes.IsEnabled = false;
             textBlock3.Text = FacadeW.getMessage()+" <- Message du moteur";
             int count = 0;
             _popupTimer.Interval = TimeSpan.FromMilliseconds(100);
             _popupTimer.Tick += delegate
             {
                 Random rdm1 = new Random(unchecked((int)DateTime.Now.Ticks));
-                int a = rdm1.Next(1, 5);
+                int a = rdm1.Next(1, 6);
                 des1.Source = new BitmapImage(new Uri("Images/face"+a+".jpg", UriKind.Relative));
-                a = rdm1.Next(1, 5);
+                a = rdm1.Next(1, 6);
                 des2.Source = new BitmapImage(new Uri("Images/face" + a + ".jpg", UriKind.Relative));
                 count++;
                 if (count > 10)
@@ -114,6 +114,7 @@ namespace WPF
                     FacadeW.lancerDes();
                     des1.Source = new BitmapImage(new Uri("Images/face" + FacadeW.getDes1() + ".jpg", UriKind.Relative));
                     des2.Source = new BitmapImage(new Uri("Images/face" + FacadeW.getDes2() + ".jpg", UriKind.Relative));
+                    MessageBox.Show(FacadeW.getDes1() + " " + FacadeW.getDes2());
                 }
             };
             _popupTimer.Start();

@@ -79,9 +79,12 @@ namespace Wrapper {
 		bool affichePortsLibres();
 		void setPuissance(int puissance);
 		void setCible(int nb);
-		void setDeplacement(int x, int y);
-		void setClick(int x,int y);
-		*/
+		void setDeplacement(int x, int y);*/
+
+		void setClick(int x,int y){
+			FacadeW->setClick(x,y);
+		}
+		
 		void lancerDes(){
 			FacadeW->lancerDes();
 		};
