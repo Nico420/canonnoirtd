@@ -29,9 +29,9 @@ class Moteur
 		vector<Joueur> joueurs;
 		Plateau plateau;
 		Etat* etat;
+		pair<De,De> des;
 
 	public :
-		pair<De,De> des;
 		Moteur();
 		~Moteur();
 		void setNbJoueurs(int nb);
@@ -44,9 +44,12 @@ class Moteur
 		int getJoueurCourant() const;
 		vector<int> getOrdreJoueurs() const;
 		void setJoueurCourant(int jc);
+		void lancerDes();
 		void passerAuJoueurSuivant();
 		Etat* getEtat() const;
-		pair<De,De> getDes() const;
+		int getDe1() const;
+		int getDe2() const;
+		/*pair<De&,De&> getDes() const;*/
 		Joueur& getJoueur(int nb);
 		Plateau& getPlateau();
 		map<pair<int,int>,int> getCasesDeplacementBateau() const;
@@ -79,8 +82,15 @@ inline Etat* Moteur::getEtat() const{
 	return this->etat;
 }
 
-inline pair<De,De> Moteur::getDes() const{
-	return this->des;
+/*inline pair<De&,De&> Moteur::getDes() const{
+	return make_pair(des.first,des.second);
+}*/
+
+inline int Moteur::getDe1() const{
+	return this->des.first.getNum();
+}
+inline int Moteur::getDe2() const{
+	return this->des.second.getNum();
 }
 
 inline Plateau& Moteur::getPlateau(){

@@ -15,9 +15,9 @@ SetOrdreJoueurs::SetOrdreJoueurs(Moteur* mot){
 void SetOrdreJoueurs::execute(){
 	// On insère le joueur dans le bon ordre selon son score aux dés
 	int joueurCourant = this->moteur->getJoueurCourant();
-	this->moteur->getDes().first.lancerDe();
-	this->moteur->getDes().second.lancerDe();
-	int totalDes = this->moteur->getDes().first.getNum() + this->moteur->getDes().second.getNum();
+	/*this->moteur->getDes().first.lancerDe();
+	this->moteur->getDes().second.lancerDe();*/
+	int totalDes =2; //this->moteur->getDes().first.getNum() + this->moteur->getDes().second.getNum();
 	this->scoreDesJoueurs[joueurCourant] = totalDes;
 	if(joueurCourant==1){
 		this->moteur->getOrdreJoueurs().push_back(1);

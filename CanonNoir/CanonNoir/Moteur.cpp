@@ -76,6 +76,11 @@ void Moteur::addJoueur(int ind,int num,int nbBat,int nbPort1,int nbPort2){
 	this->joueurs.push_back(Joueur::Joueur(num,nbBat,nbPort1,nbPort2=0));
 }
 
+void Moteur::lancerDes(){
+	this->des.first.lancerDe();
+	this->des.second.lancerDe();
+}
+
 void Moteur::passerAuJoueurSuivant(){
 	int index;
 	for(int i=0;i<this->nbJoueurs;i++){
