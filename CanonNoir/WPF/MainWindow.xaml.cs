@@ -60,6 +60,7 @@ namespace WPF
                 break;
             };
             FacadeW.setNbJoueurs(a);
+            textBlock3.Text = FacadeW.getMessage() + " <- Message du moteur";
             Jeu.Visibility = System.Windows.Visibility.Visible;
         }
         private void button1_Click(object sender, RoutedEventArgs e)
@@ -89,6 +90,7 @@ namespace WPF
             b /= HAUTEUR_CASE; 
             int y = (int)b + 1;
             FacadeW.setClick(x,y);
+            textBlock3.Text = FacadeW.getMessage() + " <- Message du moteur";
             double num_case = (y-1) * 11 + x;
             MessageBox.Show("Vous avez cliqué ici : " + Mouse.GetPosition(clickZone) + "\nCase : (" +x+";"+ y + ") " + num_case);
         }
@@ -96,7 +98,6 @@ namespace WPF
         private void LanceDes_Click(object sender, RoutedEventArgs e)
         {
             //LanceDes.IsEnabled = false;
-            textBlock3.Text = FacadeW.getMessage()+" <- Message du moteur";
             int count = 0;
             _popupTimer.Interval = TimeSpan.FromMilliseconds(100);
             _popupTimer.Tick += delegate
@@ -112,6 +113,7 @@ namespace WPF
                     _popupTimer.Stop();
                     count = 0;
                     FacadeW.lancerDes();
+                    textBlock3.Text = FacadeW.getMessage() + " <- Message du moteur";
                     des1.Source = new BitmapImage(new Uri("Images/face" + FacadeW.getDes1() + ".jpg", UriKind.Relative));
                     des2.Source = new BitmapImage(new Uri("Images/face" + FacadeW.getDes2() + ".jpg", UriKind.Relative));
                     MessageBox.Show(FacadeW.getDes1() + " " + FacadeW.getDes2());

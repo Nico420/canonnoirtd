@@ -69,7 +69,7 @@ void Facade::setClick(int x,int y){
 
 void Facade::lancerDes(){
 	//Need to be removed later
-	this->motor->setEtat(Moteur::LANCERDESDEPLACEMENT);
+	//this->motor->setEtat(Moteur::LANCERDESDEPLACEMENT);
 	//
 
 	this->motor->execute();
@@ -77,7 +77,7 @@ void Facade::lancerDes(){
 	this->de1 = this->motor->getDe1();
 	this->de2 = this->motor->getDe2();
 
-	/*if(this->motor->getEtat()->getEtat()==Moteur::LANCERDESDEPLACEMENT){
+	if(this->motor->getEtat()->getEtat()==Moteur::LANCERDESDEPLACEMENT){
 		this->motor->setEtat(Moteur::LANCERDESDEPLACEMENT);
 		this->activeCases = false;
 	}
@@ -89,7 +89,7 @@ void Facade::lancerDes(){
 		this->activeDe1 = true;
 		this->activeDe2 = this->motor->getEtat()->getActiveDe2();
 		this->activeLancerDes = false;
-	}*/
+	}
 }
 
 EXTERNC DLL Facade* Facade_New(){

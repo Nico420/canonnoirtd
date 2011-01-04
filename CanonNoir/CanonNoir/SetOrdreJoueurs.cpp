@@ -1,16 +1,7 @@
 #include "SetOrdreJoueurs.h"
 #include "Moteur.h"
 #include <vector>
-
-SetOrdreJoueurs::SetOrdreJoueurs(){
-	this->LancerDes::LancerDes();
-	this->etatsuivant = 0;
-}
-
-SetOrdreJoueurs::SetOrdreJoueurs(Moteur* mot){
-	this->LancerDes::LancerDes(mot);
-	this->etatsuivant = Moteur::SETORDREJOUEURS;
-}
+#include <sstream>
 
 void SetOrdreJoueurs::execute(){
 	// On insère le joueur dans le bon ordre selon son score aux dés
@@ -33,19 +24,19 @@ void SetOrdreJoueurs::execute(){
 		}
 		if(!inserted) this->moteur->getOrdreJoueurs().push_back(joueurCourant);
 	}
-	std::string mes = "Joueur ";
+	ostringstream mes;
+	mes << "Joueur ";
 	if(joueurCourant<this->moteur->getNbJoueurs()){
 		this->moteur->setJoueurCourant(joueurCourant+1);
-		mes += this->moteur->getJoueurCourant();
-		mes += ", lancez les dés pour déterminer l'ordre des joueurs.";
-		this->setMessage(mes);
-		this->etatsuivant = Moteur::SETORDREJOUEURS;
+		mes << this->moteur->getJoueurCourant();
+		mes << ", lancez les \ndés pour déterminer l'ordre des joueurs.";
+		this->setMessage(mes.str());
 	}
 	else{
 		this->moteur->setJoueurCourant(this->moteur->getOrdreJoueurs().at(0));
-		mes += this->moteur->getJoueurCourant();
-		mes += ", lancez les dés pour jouer.";
-		this->setMessage(mes);
+		mes << this->moteur->getJoueurCourant();
+		mes << ", lancez les \ndés pour jouer.";
+		this->setMessage(mes.str());
 		this->etatsuivant = Moteur::LANCERDESDEPLACEMENT;
 	}
 }

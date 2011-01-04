@@ -9,6 +9,7 @@
 #pragma once
 
 #include "LancerDes.h"
+#include "Moteur.h"
 #include <map>
 
 class SetOrdreJoueurs : public LancerDes
@@ -18,12 +19,11 @@ class SetOrdreJoueurs : public LancerDes
 		int etatsuivant;
 
 	public :
-		SetOrdreJoueurs();
-		SetOrdreJoueurs(Moteur* mot);
+		SetOrdreJoueurs() : LancerDes(NULL),etatsuivant(0){};
+		SetOrdreJoueurs(Moteur* mot) : LancerDes(mot),etatsuivant(Moteur::SETORDREJOUEURS){};
 		void setOrdreJoueurs(int j);
-		void execute();
+		virtual void execute();
 		int getEtat() const;
-
 };
 
 inline int SetOrdreJoueurs::getEtat() const{

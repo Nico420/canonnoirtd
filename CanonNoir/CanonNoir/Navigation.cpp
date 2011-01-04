@@ -1,5 +1,6 @@
 #include "Navigation.h"
 #include "Moteur.h"
+#include <sstream>
 
 using namespace std;
 
@@ -15,10 +16,11 @@ void Navigation::deplacer(int x, int y){
 		this->moteur->getPlateau().libereCase(bat.getPosition().first,bat.getPosition().second);
 		bat.deplacer(x,y);
 		this->moteur->getPlateau().occupeCase(x,y);
-		std::string mes = "Joueur ";
-		mes += this->moteur->getJoueurCourant();
+		ostringstream mes;
+		mes << "Joueur ";
+		mes << this->moteur->getJoueurCourant();
 		if(this->moteur->getPlateau().getEtat(x,y)==Moteur::TIRCANONUNIQUE){
-			mes += ", choisissez le bateau que vous voulez attaquer.";
+			mes << ", choisissez le bateau que vous voulez attaquer.";
 			this->casesBateauxCibles.clear();
 			this->setCasesBateauxCibles();
 			this->etatsuivant = Moteur::TIRCANONUNIQUE;
@@ -26,13 +28,14 @@ void Navigation::deplacer(int x, int y){
 		else if(this->moteur->getPlateau().getEtat(x,y)==Moteur::TIRCANONDUEL){
 			std::pair<int,int> caseOpposee = this->getCaseFaceOppose(x,y);
 			if(!this->moteur->getPlateau().estNavigable(caseOpposee.first,caseOpposee.second)){
-				mes += ", choisissez votre angle de tir.";
+				mes << ", choisissez votre angle de tir.";
 				this->etatsuivant = Moteur::TIRCANONDUEL;
 			}
 			else{
 				this->moteur->passerAuJoueurSuivant();
-				mes = "Joueur " + this->moteur->getJoueurCourant();
-				mes += ", lancez les dés pour jouer.";
+				mes.clear();
+				mes << "Joueur " << this->moteur->getJoueurCourant();
+				mes << ", lancez les dés pour jouer.";
 				this->etatsuivant = Moteur::LANCERDESDEPLACEMENT;
 			}
 		}
@@ -46,19 +49,20 @@ void Navigation::deplacer(int x, int y){
 				this->moteur->getJoueur(this->moteur->getJoueurCourant()).setScore(x,y);
 				if(this->moteur->getJoueur(this->moteur->getJoueurCourant()).getScore(x,y)==3){
 					partieFinie = true;
-					mes += ", vous avez gagné !";
+					mes << ", vous avez gagné !";
 					this->etatsuivant = Moteur::PARTIEGAGNEE;
 				}
 				this->moteur->getJoueur(this->moteur->getJoueurCourant()).rentreAuPort(x,y);
 			}
 			if(!partieFinie){
 				this->moteur->passerAuJoueurSuivant();
-				mes = "Joueur " + this->moteur->getJoueurCourant();
-				mes += ", lancez les dés pour jouer.";
+				mes.clear();
+				mes << "Joueur " << this->moteur->getJoueurCourant();
+				mes << ", lancez les dés pour jouer.";
 				this->etatsuivant = Moteur::LANCERDESDEPLACEMENT;
 			}
 		}
-		this->setMessage(mes);
+		this->setMessage(mes.str());
 	}
 }
 

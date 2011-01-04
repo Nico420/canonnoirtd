@@ -42,7 +42,7 @@ class Moteur
 		pair<int,int> getClick() const;
 		void setClick(int x,int y);
 		int getJoueurCourant() const;
-		vector<int> getOrdreJoueurs() const;
+		vector<int>& getOrdreJoueurs();
 		void setJoueurCourant(int jc);
 		void lancerDes();
 		void passerAuJoueurSuivant();
@@ -70,7 +70,7 @@ inline int Moteur::getJoueurCourant() const{
 	return joueurCourant;
 }
 
-inline vector<int> Moteur::getOrdreJoueurs() const{
+inline vector<int>& Moteur::getOrdreJoueurs(){
 	return this->ordreJoueurs;
 }
 
