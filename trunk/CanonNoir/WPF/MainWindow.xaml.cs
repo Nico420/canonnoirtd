@@ -60,8 +60,8 @@ namespace WPF
                     myRect.VerticalAlignment = VerticalAlignment.Center;
                     myRect.Height = HAUTEUR_CASE;
                     myRect.Width = LARGEUR_CASE;
-                    int x = (i / 8);
-                    int y = i - x*8;
+                    int x = (i / 11);
+                    int y = i - x*11;
                     MessageBox.Show("Coordonnée " + x+" " +y);
                     myRect.Margin = new Thickness((y) * HAUTEUR_CASE,(x) * LARGEUR_CASE, 0, 0);
 
