@@ -1,20 +1,12 @@
-﻿La génération a démarré 05/01/2011 20:12:59.
+﻿La génération a démarré 05/01/2011 23:10:23.
      1>Projet "C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\Wrapper\Wrapper.vcxproj" sur le nœud 3 (build cible(s)).
      1>InitializeBuildStatus:
-         Mise à jour de l'horodatage "Debug\Wrapper.unsuccessfulbuild".
+         Création de "Debug\Wrapper.unsuccessfulbuild", car "AlwaysCreate" a été spécifié.
        GenerateTargetFrameworkMonikerAttribute:
        La cible est ignorée "GenerateTargetFrameworkMonikerAttribute", car tous les fichiers de sortie sont à jour par rapport aux fichiers d'entrée.
        ClCompile:
          Toutes les sorties sont à jour.
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDLL /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\Wrapper.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt Wrapper.cpp /clr:nostdlib 
-         Wrapper.cpp
-     1>c:\users\nicolas\documents\insa\canonnoirtd\canonnoir\wrapper\../CanonNoir/Facade.h(47): warning C4251: 'Facade::message' : class 'std::basic_string<_Elem,_Traits,_Ax>' nécessite une interface DLL pour être utilisé(e) par les clients de class 'Facade'
-                 with
-                 [
-                     _Elem=char,
-                     _Traits=std::char_traits<char>,
-                     _Ax=std::allocator<char>
-                 ]
+         Toutes les sorties sont à jour.
          Toutes les sorties sont à jour.
        ResourceCompile:
          Toutes les sorties sont à jour.
@@ -35,4 +27,4 @@
 
 La génération a réussi.
 
-Temps écoulé 00:00:02.17
+Temps écoulé 00:00:01.04
