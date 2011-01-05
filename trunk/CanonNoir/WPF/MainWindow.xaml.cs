@@ -28,13 +28,11 @@ namespace WPF
         // 1/8 de clickZone
         private static double LARGEUR_CASE = 60.454545;
 
-        //Pour le lancer de Dés, c'est un systeme qui permet de faire des pauses.
-        DispatcherTimer _popupTimer = new DispatcherTimer(DispatcherPriority.Normal);
-
         public MainWindow()
         {
             InitializeComponent();
             FacadeW = new WrapperFacade();
+            LanceDes.IsEnabled = false;
         }
 
         private void test(object sender, RoutedEventArgs e)
@@ -90,6 +88,10 @@ namespace WPF
             b /= HAUTEUR_CASE; 
             int y = (int)b + 1;
             FacadeW.setClick(x,y);
+            if (FacadeW.activerDes())
+            {
+                this.LanceDes.IsEnabled = true;
+            }
             textBlock3.Text = FacadeW.getMessage() + " <- Message du moteur";
             double num_case = (y-1) * 11 + x;
             MessageBox.Show("Vous avez cliqué ici : " + Mouse.GetPosition(clickZone) + "\nCase : (" +x+";"+ y + ") " + num_case);
@@ -99,8 +101,10 @@ namespace WPF
         {
             //LanceDes.IsEnabled = false;
             int count = 0;
-            _popupTimer.Interval = TimeSpan.FromMilliseconds(100);
-            _popupTimer.Tick += delegate
+            //Pour le lancer de Dés, c'est un systeme qui permet de faire des pauses.
+            DispatcherTimer _lancerDesTimer = new DispatcherTimer(DispatcherPriority.Normal);
+            _lancerDesTimer.Interval = TimeSpan.FromMilliseconds(100);
+            _lancerDesTimer.Tick += delegate
             {
                 Random rdm1 = new Random(unchecked((int)DateTime.Now.Ticks));
                 int a = rdm1.Next(1, 6);
@@ -110,7 +114,7 @@ namespace WPF
                 count++;
                 if (count > 10)
                 {
-                    _popupTimer.Stop();
+                    _lancerDesTimer.Stop();
                     count = 0;
                     FacadeW.lancerDes();
                     textBlock3.Text = FacadeW.getMessage() + " <- Message du moteur";
@@ -119,8 +123,7 @@ namespace WPF
                     MessageBox.Show(FacadeW.getDes1() + " " + FacadeW.getDes2());
                 }
             };
-            _popupTimer.Start();
-
+            _lancerDesTimer.Start();
             
         }
 

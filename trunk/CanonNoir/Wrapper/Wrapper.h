@@ -33,9 +33,11 @@ namespace Wrapper {
 			FacadeW->setAngle(a);
 		};
 
+		*/
 		bool activerDes(){
 			return FacadeW->activerDes();
 		};
+		/*
 		bool activerCases(){
 			return FacadeW->activerCases();
 		};

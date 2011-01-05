@@ -12,6 +12,7 @@ De::De(int nb){
 }*/
 
 void De::lancerDe(){
+	//Problème, on ne fait que des doubles
 	srand((unsigned)time(0));
 	numero = (rand()*numero) % 6 + 1;
 }
