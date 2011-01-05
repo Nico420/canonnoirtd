@@ -47,7 +47,7 @@ class DLL Facade
 		std::string message;
 		Facade();
 		~Facade();
-		bool activerDes();
+		bool activerDes(){return this->activeLancerDes;};
 		bool activerCases();
 		bool activerPorts();
 		std::vector<Bateau> getBateaux();

@@ -15,6 +15,8 @@ Moteur::Moteur(){
 	this->numEtatCourant = ATTENTENBJOUEURS;
 	this->des.first = De::De();
 	this->des.second = De::De();
+	//pour avoir des lancer de dés différents
+	des.second.numero=1;
 	this->plateau = Plateau::Plateau();
 	this->etat= new AttenteNbJoueurs();
 }
