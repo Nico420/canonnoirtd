@@ -12,6 +12,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Wrapper;
+using System.Runtime.InteropServices;
 using System.Windows.Threading;
 
 namespace WPF
@@ -40,6 +41,34 @@ namespace WPF
             Window1 w = new Window1();
             w.Show();
         }
+
+        private void setCases()
+        {
+            IntPtr a = new IntPtr(FacadeW.getCasesActives().GetHashCode());
+            int b;
+            for(int i =0;i< 88;i++){
+                b = Marshal.ReadInt32(a);
+                a+=sizeof (int);
+                if (b == 1)
+                {
+                    MessageBox.Show("FacadeW.getCasesActives() " + b);
+                    
+                    Rectangle myRect = new System.Windows.Shapes.Rectangle();
+                    myRect.Stroke = System.Windows.Media.Brushes.Black;
+                    //myRect.Fill = System.Windows.Media.Brushes.SkyBlue;
+                    myRect.HorizontalAlignment = HorizontalAlignment.Left;
+                    myRect.VerticalAlignment = VerticalAlignment.Center;
+                    myRect.Height = HAUTEUR_CASE;
+                    myRect.Width = LARGEUR_CASE;
+                    int x = (i / 8);
+                    int y = i - x*8;
+                    MessageBox.Show("Coordonnée " + x+" " +y);
+                    myRect.Margin = new Thickness((y) * HAUTEUR_CASE,(x) * LARGEUR_CASE, 0, 0);
+
+                    clickZone.Children.Add(myRect);
+                }
+            }
+        }
         private void init_Jeu(int a)
         {
             Init.Visibility = System.Windows.Visibility.Hidden;
@@ -58,6 +87,7 @@ namespace WPF
                 break;
             };
             FacadeW.setNbJoueurs(a);
+            this.setCases();
             textBlock3.Text = FacadeW.getMessage() + " <- Message du moteur";
             Jeu.Visibility = System.Windows.Visibility.Visible;
         }

@@ -48,6 +48,9 @@ class DLL Facade
 		Facade();
 		~Facade();
 		bool activerDes(){return this->activeLancerDes;};
+		int* getCasesActives(){int* a = new int[88];a[0]=1;a[10]=1;a[77]=1;a[87]=1;
+		return a;//this->casesActives;
+		};
 		bool activerCases();
 		bool activerPorts();
 		std::vector<Bateau> getBateaux();

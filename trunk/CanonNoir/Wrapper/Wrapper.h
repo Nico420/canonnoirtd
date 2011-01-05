@@ -29,6 +29,9 @@ namespace Wrapper {
 			return gcnew String(FacadeW->Facade::getMessage().c_str());
 		};
 
+		System::IntPtr^ getCasesActives(){
+			return gcnew IntPtr(FacadeW->Facade::getCasesActives());
+		};
 		/*System::Void setAngle(int a){
 			FacadeW->setAngle(a);
 		};
