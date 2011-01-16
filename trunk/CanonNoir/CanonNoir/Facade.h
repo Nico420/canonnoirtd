@@ -35,6 +35,7 @@ class DLL Facade
 		int nbBateaux;
 		bool afficheAttenteNbJoueurs;
 		bool afficheJeuNormal;
+		bool affichePorts;
 		bool activeDe1;
 		bool activeDe2;
 		bool activeCases;
@@ -48,9 +49,7 @@ class DLL Facade
 		Facade();
 		~Facade();
 		bool activerDes(){return this->activeLancerDes;};
-		int* getCasesActives(){int* a = new int[88];a[0]=1;a[10]=1;a[77]=1;a[87]=1;
-		return a;//this->casesActives;
-		};
+		int* getCasesActives(){return this->casesActives;};
 		bool activerCases();
 		bool activerPorts();
 		std::vector<Bateau> getBateaux();
@@ -71,7 +70,7 @@ class DLL Facade
 		bool afficheBateaux();
 		bool afficheRelief();
 		bool afficheScores();
-		bool affichePortsLibres();
+		bool affichePortsLibres(){return affichePorts;};
 		void setAngle(int angle);
 		void setPuissance(int puissance);
 		void setCible(int nb);

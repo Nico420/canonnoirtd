@@ -40,6 +40,10 @@ namespace Wrapper {
 		bool activerDes(){
 			return FacadeW->activerDes();
 		};
+
+		bool affichePorts(){
+			return FacadeW->affichePortsLibres();
+		};
 		/*
 		bool activerCases(){
 			return FacadeW->activerCases();

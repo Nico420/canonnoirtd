@@ -10,6 +10,7 @@ Facade::Facade(){
 	}
 	this->affichePlateau = true;
 	this->afficheCanon = false;
+	this->affichePorts = false;
 	this->message = this->motor->getEtat()->getMessage();
 	this->scoresBateaux = NULL;
 	this->nbBateaux = 0;
@@ -41,6 +42,9 @@ void Facade::setNbJoueurs(int nb){
 	this->activeDe1 = false;
 	this->activeDe2 = false;
 	this->activeLancerDes = false;
+	this->affichePorts=true;
+	delete[] this->casesActives;
+	this->casesActives = this->motor->getEtat()->getCasesActives();
 }
 
 void Facade::setClick(int x,int y){
@@ -57,6 +61,7 @@ void Facade::setClick(int x,int y){
 		this->activeDe1 = true;
 		this->activeDe2 = true;
 		this->activeCases = false;
+		this->affichePorts = false;
 	}
 	else if(this->motor->getEtat()->getEtat()==Moteur::LANCERDESDEPLACEMENT){
 		this->motor->setEtat(Moteur::LANCERDESDEPLACEMENT);
@@ -64,6 +69,7 @@ void Facade::setClick(int x,int y){
 		this->activeDe1 = true;
 		this->activeDe2 = this->motor->getEtat()->getActiveDe2();
 		this->activeCases = false;
+		this->affichePorts = false;
 	}
 }
 
