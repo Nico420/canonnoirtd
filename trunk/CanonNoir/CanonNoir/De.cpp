@@ -5,7 +5,7 @@ De::De(){
 }
 
 De::De(int nb){
-	numero = nb;
+	alea = nb;
 }
 
 /*De::~De(){
@@ -13,6 +13,6 @@ De::De(int nb){
 
 void De::lancerDe(){
 	//Problème, on ne fait que des doubles
-	srand((unsigned)time(0));
-	numero = (rand()*numero) % 6 + 1;
+	srand((unsigned)time(0)*alea);
+	numero = (rand()) % 6 + 1;
 }

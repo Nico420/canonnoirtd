@@ -45,6 +45,7 @@ void Facade::setNbJoueurs(int nb){
 	this->affichePorts=true;
 	delete[] this->casesActives;
 	this->casesActives = this->motor->getEtat()->getCasesActives();
+	this->activeCases = true;
 }
 
 void Facade::setClick(int x,int y){

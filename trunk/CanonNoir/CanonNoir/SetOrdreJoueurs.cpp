@@ -19,15 +19,17 @@ void SetOrdreJoueurs::execute(){
 	}
 	else{
 		std::vector<int>::iterator it;
+
 		bool inserted = false;
-		for(it=this->moteur->getOrdreJoueurs().begin();it < this->moteur->getOrdreJoueurs().end();++it){
-			if(this->scoreDesJoueurs[*it]>totalDes){
-				this->moteur->getOrdreJoueurs().insert(it,joueurCourant);
+		for(it=this->moteur->getOrdreJoueurs().begin();!inserted && it < this->moteur->getOrdreJoueurs().end();it++){
+			if(this->scoreDesJoueurs[*it]<totalDes){
+				mes << scoreDesJoueurs[*it];
+				//	this->moteur->getOrdreJoueurs().insert(a,joueurCourant);
 				inserted = true;
 			}
 		}
-
-		if(!inserted) this->moteur->getOrdreJoueurs().push_back(joueurCourant);
+		this->moteur->getOrdreJoueurs().insert(it,joueurCourant);
+		//if(!inserted) this->moteur->getOrdreJoueurs().push_back(joueurCourant);
 	}
 	
 	mes << "Joueur ";
@@ -38,8 +40,12 @@ void SetOrdreJoueurs::execute(){
 		this->setMessage(mes.str());
 	}
 	else{
-		this->moteur->setJoueurCourant(this->moteur->getOrdreJoueurs().at(0));
+		this->moteur->setJoueurCourant(this->moteur->getOrdreJoueurs()[0]);
 		mes << this->moteur->getJoueurCourant();
+		mes << scoreDesJoueurs[1];
+		mes << scoreDesJoueurs[2];
+		mes << scoreDesJoueurs[3];
+		mes << scoreDesJoueurs[4];
 		mes << ", lancez les \ndés pour jouer.";
 		this->setMessage(mes.str());
 		this->etatsuivant = Moteur::LANCERDESDEPLACEMENT;

@@ -44,10 +44,11 @@ namespace Wrapper {
 		bool affichePorts(){
 			return FacadeW->affichePortsLibres();
 		};
-		/*
+		
 		bool activerCases(){
 			return FacadeW->activerCases();
 		};
+		/*
 		bool activerPorts(){
 			return FacadeW->activerPorts();
 		};
