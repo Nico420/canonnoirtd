@@ -46,26 +46,41 @@ namespace WPF
         {
             IntPtr a = new IntPtr(FacadeW.getCasesActives().GetHashCode());
             int b;
+            /*Display enable case*/
             for(int i =0;i< 88;i++){
                 b = Marshal.ReadInt32(a);
                 a+=sizeof (int);
                 if (b == 1)
                 {
-                    MessageBox.Show("FacadeW.getCasesActives() " + b);
-                    
+                    //MessageBox.Show("FacadeW.getCasesActives() " + b);
+                    //Il faudrait un test sur affichePortsLibre pour modifier la taille des cases.
                     Rectangle myRect = new System.Windows.Shapes.Rectangle();
                     myRect.Stroke = System.Windows.Media.Brushes.Black;
                     //myRect.Fill = System.Windows.Media.Brushes.SkyBlue;
                     myRect.HorizontalAlignment = HorizontalAlignment.Left;
                     myRect.VerticalAlignment = VerticalAlignment.Center;
-                    myRect.Height = HAUTEUR_CASE;
-                    myRect.Width = LARGEUR_CASE;
-                    int x = (i / 11);
-                    int y = i - x*11;
-                    MessageBox.Show("Coordonnée " + x+" " +y);
-                    myRect.Margin = new Thickness((y) * HAUTEUR_CASE,(x) * LARGEUR_CASE, 0, 0);
+                    //La taille des rectangles devrait varier suivant port ou case normale
+                    myRect.Height = HAUTEUR_CASE +clickZone.Margin.Top;
+                    myRect.Width = LARGEUR_CASE +clickZone.Margin.Left;
+                    int y = i / 11;
+                    int x = i % 11;
+                    MessageBox.Show("Coordonnée " + x+" " +y+" /"+i);
+                    double marggauche = x * LARGEUR_CASE;
+                    double marghaut = y * HAUTEUR_CASE;
+                    if (x == 10)
+                    {
+                        marggauche += clickZone.Margin.Left;
+                    }
+                    if (y == 7)
+                    {
+                        marghaut += clickZone.Margin.Top;
+                    }
 
-                    clickZone.Children.Add(myRect);
+                    myRect.Margin = new Thickness(marggauche, marghaut, 0, 0);
+                    
+                   plateau.Children.Add(myRect);
+                   clickZone.Children.IndexOf(myRect);
+                    
                 }
             }
         }
