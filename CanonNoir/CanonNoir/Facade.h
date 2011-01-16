@@ -50,7 +50,7 @@ class DLL Facade
 		~Facade();
 		bool activerDes(){return this->activeLancerDes;};
 		int* getCasesActives(){return this->casesActives;};
-		bool activerCases();
+		bool activerCases(){return this->activeCases;};
 		bool activerPorts();
 		std::vector<Bateau> getBateaux();
 		std::string getMessage(){return this->message;};

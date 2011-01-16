@@ -13,8 +13,8 @@ Moteur::Moteur(){
 	this->joueurCourant = 1;
 	this->click = std::make_pair(0,0);
 	this->numEtatCourant = ATTENTENBJOUEURS;
-	this->des.first = De::De();
-	this->des.second = De::De();
+	this->des.first = De::De(1);
+	this->des.second = De::De(2);
 	//pour avoir des lancer de dés différents
 	des.second.numero=1;
 	this->plateau = Plateau::Plateau();

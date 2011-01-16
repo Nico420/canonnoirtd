@@ -29,6 +29,10 @@ namespace WPF
         // 1/8 de clickZone
         private static double LARGEUR_CASE = 60.454545;
 
+
+        private int nbportslibre = 0;
+        private int dernierIndex = 0;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -46,12 +50,23 @@ namespace WPF
         {
             IntPtr a = new IntPtr(FacadeW.getCasesActives().GetHashCode());
             int b;
+            
+            int d = dernierIndex-nbportslibre;
+            for (int c = dernierIndex; c > d; c--)
+            {
+                plateau.Children.RemoveAt(c);
+                nbportslibre--;
+            }
             /*Display enable case*/
             for(int i =0;i< 88;i++){
                 b = Marshal.ReadInt32(a);
                 a+=sizeof (int);
-                if (b == 1)
+                //
+                //ATTENTION à affichePort.
+                //
+                if (b == 1 && FacadeW.affichePorts())
                 {
+                    
                     //MessageBox.Show("FacadeW.getCasesActives() " + b);
                     //Il faudrait un test sur affichePortsLibre pour modifier la taille des cases.
                     Rectangle myRect = new System.Windows.Shapes.Rectangle();
@@ -62,13 +77,14 @@ namespace WPF
                     //La taille des rectangles devrait varier suivant port ou case normale
                     int y = i / 11;
                     int x = i % 11;
-                    MessageBox.Show("Coordonnée " + x+" " +y+" /"+i);
+                    
                     myRect.Height = HAUTEUR_CASE;
                     myRect.Width = LARGEUR_CASE;
                     double marghaut = x * LARGEUR_CASE;
                     double marggauche = y * HAUTEUR_CASE;
                     if (FacadeW.affichePorts())
                     {
+                        nbportslibre++;
                         myRect.Height += 20;
                         myRect.Width += 23;
                         if (x == 10)
@@ -81,15 +97,14 @@ namespace WPF
                         }
                     }
                     
-                    
-
                     myRect.Margin = new Thickness(marghaut, marggauche, 0, 0);
                     
                    plateau.Children.Add(myRect);
-                   int index = clickZone.Children.IndexOf(myRect);
+                   dernierIndex = plateau.Children.IndexOf(myRect);
                 }
             }
-        }
+            
+           }
         private void init_Jeu(int a)
         {
             Init.Visibility = System.Windows.Visibility.Hidden;
@@ -132,20 +147,24 @@ namespace WPF
 
         private void clickZone_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            double a = Mouse.GetPosition(clickZone).X;
-            a/= LARGEUR_CASE;
-            int x = (int)a+1;
-            double b = Mouse.GetPosition(clickZone).Y;
-            b /= HAUTEUR_CASE; 
-            int y = (int)b + 1;
-            FacadeW.setClick(x,y);
-            if (FacadeW.activerDes())
+            if (FacadeW.activerCases())
             {
-                this.LanceDes.IsEnabled = true;
+                double a = Mouse.GetPosition(clickZone).X;
+                a /= LARGEUR_CASE;
+                int x = (int)a + 1;
+                double b = Mouse.GetPosition(clickZone).Y;
+                b /= HAUTEUR_CASE;
+                int y = (int)b + 1;
+                FacadeW.setClick(x, y);
+                this.setCases();
+                if (FacadeW.activerDes())
+                {
+                    this.LanceDes.IsEnabled = true;
+                }
+                textBlock3.Text = FacadeW.getMessage() + " <- Message du moteur";
+                double num_case = (y - 1) * 11 + x;
+                //MessageBox.Show("Vous avez cliqué ici : " + Mouse.GetPosition(clickZone) + "\nCase : (" + x + ";" + y + ") " + num_case);
             }
-            textBlock3.Text = FacadeW.getMessage() + " <- Message du moteur";
-            double num_case = (y-1) * 11 + x;
-            MessageBox.Show("Vous avez cliqué ici : " + Mouse.GetPosition(clickZone) + "\nCase : (" +x+";"+ y + ") " + num_case);
         }
 
         private void LanceDes_Click(object sender, RoutedEventArgs e)
@@ -171,7 +190,7 @@ namespace WPF
                     textBlock3.Text = FacadeW.getMessage() + " <- Message du moteur";
                     des1.Source = new BitmapImage(new Uri("Images/face" + FacadeW.getDes1() + ".jpg", UriKind.Relative));
                     des2.Source = new BitmapImage(new Uri("Images/face" + FacadeW.getDes2() + ".jpg", UriKind.Relative));
-                    MessageBox.Show(FacadeW.getDes1() + " " + FacadeW.getDes2());
+                    //MessageBox.Show(FacadeW.getDes1() + " " + FacadeW.getDes2());
                 }
             };
             _lancerDesTimer.Start();

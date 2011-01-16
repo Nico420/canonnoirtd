@@ -15,7 +15,7 @@
 class De
 {
 	private :
-		
+		int alea;
 
 	public :
 		De();
