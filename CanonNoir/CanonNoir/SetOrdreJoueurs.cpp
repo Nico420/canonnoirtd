@@ -9,28 +9,17 @@ void SetOrdreJoueurs::execute(){
 	this->moteur->lancerDes();
 	int totalDes = this->moteur->getDe1()+ this->moteur->getDe2();
 	ostringstream mes;
-
 	this->scoreDesJoueurs[joueurCourant] = totalDes;
-	
-	//Pour le premier joueur qui lance les dés.
-	if(joueurCourant==1){
-		//On met le premier joueur en premier
-		this->moteur->getOrdreJoueurs().push_back(1);
-	}
-	else{
-		std::vector<int>::iterator it;
 
-		bool inserted = false;
-		for(it=this->moteur->getOrdreJoueurs().begin();!inserted && it < this->moteur->getOrdreJoueurs().end();it++){
-			if(this->scoreDesJoueurs[*it]<totalDes){
-				mes << scoreDesJoueurs[*it];
-				//	this->moteur->getOrdreJoueurs().insert(a,joueurCourant);
-				inserted = true;
-			}
+	std::vector<int>::iterator it;
+	bool inserted = false;
+	for(it=this->moteur->getOrdreJoueurs().begin();!inserted && it < this->moteur->getOrdreJoueurs().end();it++){
+		if(this->scoreDesJoueurs[*it]<totalDes){
+			inserted = true;
 		}
-		this->moteur->getOrdreJoueurs().insert(it,joueurCourant);
-		//if(!inserted) this->moteur->getOrdreJoueurs().push_back(joueurCourant);
 	}
+	if(inserted) this->moteur->getOrdreJoueurs().insert(it-1,joueurCourant);
+	else this->moteur->getOrdreJoueurs().push_back(joueurCourant);
 	
 	mes << "Joueur ";
 	if(joueurCourant<this->moteur->getNbJoueurs()){
@@ -40,12 +29,13 @@ void SetOrdreJoueurs::execute(){
 		this->setMessage(mes.str());
 	}
 	else{
-		this->moteur->setJoueurCourant(this->moteur->getOrdreJoueurs()[0]);
+		this->moteur->setJoueurCourant(this->moteur->getOrdreJoueurs().at(0));
 		mes << this->moteur->getJoueurCourant();
-		mes << scoreDesJoueurs[1];
-		mes << scoreDesJoueurs[2];
-		mes << scoreDesJoueurs[3];
-		mes << scoreDesJoueurs[4];
+		mes << " ";
+		mes << this->moteur->getOrdreJoueurs().at(0);
+		mes << this->moteur->getOrdreJoueurs().at(1);
+		mes << this->moteur->getOrdreJoueurs().at(2);
+		mes << this->moteur->getOrdreJoueurs().at(3);
 		mes << ", lancez les \ndés pour jouer.";
 		this->setMessage(mes.str());
 		this->etatsuivant = Moteur::LANCERDESDEPLACEMENT;
