@@ -123,10 +123,9 @@ class Moteur
 		Etat* getEtat() const;
 		int getDe1() const;
 		int getDe2() const;
-		/*pair<De&,De&> getDes() const;*/
 		Joueur& getJoueur(int nb);
 		Plateau& getPlateau();
-		map<pair<int,int>,int> getCasesDeplacementBateau() const;
+		map<pair<int,int>,int>& getCasesDeplacementBateau();
 		void addJoueur(int ind,int num,int nbBat,int nbPort1,int nbPort2=0);
 		enum Etats { ATTENTENBJOUEURS=1,CHOISIRPORT=2,SETORDREJOUEURS=3,LANCERDESDEPLACEMENT=4,NAVIGATION=5,
 			TIRCANONDUEL=6,TIRCANONUNIQUE=7,PARTIEGAGNEE=8 };
@@ -175,7 +174,7 @@ inline Joueur& Moteur::getJoueur(int nb){
 	return this->joueurs.at(nb-1);
 }
 
-inline map<pair<int,int>,int> Moteur::getCasesDeplacementBateau() const{
+inline map<pair<int,int>,int>& Moteur::getCasesDeplacementBateau(){
 	return this->casesDeplacementBateau;
 }
 
