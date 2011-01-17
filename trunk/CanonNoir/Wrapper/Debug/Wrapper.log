@@ -1,38 +1,38 @@
-﻿La génération a démarré 16/01/2011 23:23:45.
-     1>Projet "C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\Wrapper\Wrapper.vcxproj" sur le nœud 2 (build cible(s)).
-     1>InitializeBuildStatus:
-         Création de "Debug\Wrapper.unsuccessfulbuild", car "AlwaysCreate" a été spécifié.
-       GenerateTargetFrameworkMonikerAttribute:
-       La cible est ignorée "GenerateTargetFrameworkMonikerAttribute", car tous les fichiers de sortie sont à jour par rapport aux fichiers d'entrée.
-       ClCompile:
-         Toutes les sorties sont à jour.
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDLL /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\Wrapper.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt Wrapper.cpp /clr:nostdlib 
-         Wrapper.cpp
-     1>c:\users\nicolas\documents\insa\canonnoirtd\canonnoir\wrapper\../CanonNoir/Facade.h(48): warning C4251: 'Facade::message' : class 'std::basic_string<_Elem,_Traits,_Ax>' nécessite une interface DLL pour être utilisé(e) par les clients de class 'Facade'
-                 with
-                 [
-                     _Elem=char,
-                     _Traits=std::char_traits<char>,
-                     _Ax=std::allocator<char>
-                 ]
-         Toutes les sorties sont à jour.
-       ResourceCompile:
-         Toutes les sorties sont à jour.
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\Debug\Wrapper.dll" /INCREMENTAL /NOLOGO /MANIFEST /ManifestFile:"Debug\Wrapper.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\Debug\Wrapper.pdb" /ASSEMBLYDEBUG /TLBID:1 /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 /DLL Debug\app.res
-         Debug\AssemblyInfo.obj
-         Debug\Stdafx.obj
-         Debug\Wrapper.obj
-         "Debug\.NETFramework,Version=v4.0.AssemblyAttributes.obj"
-            Création de la bibliothèque C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\Debug\Wrapper.lib et de l'objet C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\Debug\Wrapper.exp
-         Wrapper.vcxproj -> C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\Debug\Wrapper.dll
-       Manifest:
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\Debug\Wrapper.dll;#2" /manifest Debug\Wrapper.dll.intermediate.manifest
-       FinalizeBuildStatus:
-         Suppression du fichier "Debug\Wrapper.unsuccessfulbuild".
-         Mise à jour de l'horodatage "Debug\Wrapper.lastbuildstate".
-     1>Génération du projet "C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\Wrapper\Wrapper.vcxproj" terminée (build cible(s)).
+﻿La génération a démarré 17/01/2011 20:56:43.
+Projet "C:\Users\Aurélien\Desktop\canon noir\CanonNoir\Wrapper\Wrapper.vcxproj" sur le nœud 2 (build cible(s)).
+InitializeBuildStatus:
+  Création de "Debug\Wrapper.unsuccessfulbuild", car "AlwaysCreate" a été spécifié.
+GenerateTargetFrameworkMonikerAttribute:
+La cible est ignorée "GenerateTargetFrameworkMonikerAttribute", car tous les fichiers de sortie sont à jour par rapport aux fichiers d'entrée.
+ClCompile:
+  Toutes les sorties sont à jour.
+  c:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /AI"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDLL /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\Wrapper.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /TP /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt Wrapper.cpp /clr:nostdlib 
+  Wrapper.cpp
+c:\users\aurélien\desktop\canon noir\canonnoir\wrapper\../CanonNoir/Facade.h(48): warning C4251: 'Facade::message' : class 'std::basic_string<_Elem,_Traits,_Ax>' nécessite une interface DLL pour être utilisé(e) par les clients de class 'Facade'
+          with
+          [
+              _Elem=char,
+              _Traits=std::char_traits<char>,
+              _Ax=std::allocator<char>
+          ]
+  Toutes les sorties sont à jour.
+ResourceCompile:
+  Toutes les sorties sont à jour.
+Link:
+  c:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Aurélien\Desktop\canon noir\CanonNoir\Debug\Wrapper.dll" /INCREMENTAL /NOLOGO /MANIFEST /ManifestFile:"Debug\Wrapper.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Aurélien\Desktop\canon noir\CanonNoir\Debug\Wrapper.pdb" /ASSEMBLYDEBUG /TLBID:1 /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 /DLL Debug\app.res
+  Debug\AssemblyInfo.obj
+  Debug\Stdafx.obj
+  Debug\Wrapper.obj
+  "Debug\.NETFramework,Version=v4.0.AssemblyAttributes.obj"
+     Création de la bibliothèque C:\Users\Aurélien\Desktop\canon noir\CanonNoir\Debug\Wrapper.lib et de l'objet C:\Users\Aurélien\Desktop\canon noir\CanonNoir\Debug\Wrapper.exp
+  Wrapper.vcxproj -> C:\Users\Aurélien\Desktop\canon noir\CanonNoir\Debug\Wrapper.dll
+Manifest:
+  c:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\Aurélien\Desktop\canon noir\CanonNoir\Debug\Wrapper.dll;#2" /manifest Debug\Wrapper.dll.intermediate.manifest
+FinalizeBuildStatus:
+  Suppression du fichier "Debug\Wrapper.unsuccessfulbuild".
+  Mise à jour de l'horodatage "Debug\Wrapper.lastbuildstate".
+Génération du projet "C:\Users\Aurélien\Desktop\canon noir\CanonNoir\Wrapper\Wrapper.vcxproj" terminée (build cible(s)).
 
 La génération a réussi.
 
-Temps écoulé 00:00:01.44
+Temps écoulé 00:00:24.56
