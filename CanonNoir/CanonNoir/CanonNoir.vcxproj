@@ -103,6 +103,7 @@
     <ClCompile Include="TirCanonUnique.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\Wrapper\resource.h" />
     <ClInclude Include="Adaptateur.h" />
     <ClInclude Include="Affichage.h" />
     <ClInclude Include="AttenteNbJoueurs.h" />
