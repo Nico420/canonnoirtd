@@ -67,38 +67,6 @@ namespace WPF
                     //
                     //Cas de l'affichage des ports
                     //
-                    if (b == 0)
-                    {
-                        Rectangle myRect = new System.Windows.Shapes.Rectangle();
-                        myRect.Stroke = System.Windows.Media.Brushes.Purple;
-                        myRect.StrokeThickness = 7;
-                        myRect.HorizontalAlignment = HorizontalAlignment.Left;
-                        myRect.VerticalAlignment = VerticalAlignment.Center;
-                        //La taille des rectangles devrait varier suivant port ou case normale
-                        int y = i / 11;
-                        int x = i % 11;
-
-                        myRect.Height = HAUTEUR_CASE;
-                        myRect.Width = LARGEUR_CASE;
-                        double marghaut = x * LARGEUR_CASE;
-                        double marggauche = y * HAUTEUR_CASE;
-                        nbportslibre++;
-                        myRect.Height += 20;
-                        myRect.Width += 23;
-                        if (x == 10)
-                        {
-                            marghaut += clickZone.Margin.Left - 5;
-                        }
-                        if (y == 7)
-                        {
-                            marggauche += clickZone.Margin.Top - 3;
-                        }
-
-                        myRect.Margin = new Thickness(marghaut, marggauche, 0, 0);
-
-                        plateau.Children.Add(myRect);
-                        dernierIndex = plateau.Children.IndexOf(myRect);
-                    }
                     if (b == 1 && FacadeW.affichePorts())
                     {
                         Rectangle myRect = new System.Windows.Shapes.Rectangle();
@@ -133,7 +101,28 @@ namespace WPF
                     }
                     else if (b == 1)
                     {
-                        MessageBox.Show("test" + i);
+                        Rectangle myRect = new System.Windows.Shapes.Rectangle();
+                        myRect.Stroke = System.Windows.Media.Brushes.Purple;
+                        myRect.StrokeThickness = 7;
+                        myRect.HorizontalAlignment = HorizontalAlignment.Left;
+                        myRect.VerticalAlignment = VerticalAlignment.Center;
+                        //La taille des rectangles devrait varier suivant port ou case normale
+                        int y = i / 11;
+                        int x = i % 11;
+
+                        myRect.Height = HAUTEUR_CASE;
+                        myRect.Width = LARGEUR_CASE;
+                        double marghaut = x * LARGEUR_CASE;
+                        double marggauche = y * HAUTEUR_CASE;
+
+                        myRect.Margin = new Thickness(marghaut, marggauche, 0, 0);
+
+                        clickZone.Children.Add(myRect);
+                        dernierIndex = clickZone.Children.IndexOf(myRect);
+                    }
+                    else
+                    {
+                        MessageBox.Show("" + b);
                     }
                 }
             }
