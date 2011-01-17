@@ -68,7 +68,6 @@ namespace Wrapper {
 		bool afficheTir(){
 			return FacadeW->afficheTir();
 		};
-		void init();
 		int getNbJoueurs(){
 			return FacadeW->getNbJoueurs();
 		};

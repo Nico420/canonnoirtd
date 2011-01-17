@@ -85,7 +85,7 @@ void Facade::lancerDes(){
 	
 	if(this->motor->getEtat()->getEtat()==Moteur::LANCERDESDEPLACEMENT){
 		this->motor->setEtat(Moteur::LANCERDESDEPLACEMENT);
-		this->activeCases = true;
+		this->activeCases = false;
 		this->activeLancerDes = false;
 	}
 	

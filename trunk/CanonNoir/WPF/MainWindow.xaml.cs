@@ -170,8 +170,6 @@ namespace WPF
 
         private void LanceDes_Click(object sender, RoutedEventArgs e)
         {
-            this.LanceDes.IsEnabled=FacadeW.activerDes();
-            this.setCases();
             //LanceDes.IsEnabled = false;
             int count = 0;
             //Pour le lancer de Dés, c'est un systeme qui permet de faire des pauses.
@@ -189,7 +187,10 @@ namespace WPF
                 {
                     _lancerDesTimer.Stop();
                     count = 0;
+                    MessageBox.Show("test");
                     FacadeW.lancerDes();
+                    this.LanceDes.IsEnabled = FacadeW.activerDes();
+                    this.setCases();
                     textBlock3.Text = FacadeW.getMessage() + " <- Message du moteur";
                     des1.Source = new BitmapImage(new Uri("Images/face" + FacadeW.getDes1() + ".jpg", UriKind.Relative));
                     des2.Source = new BitmapImage(new Uri("Images/face" + FacadeW.getDes2() + ".jpg", UriKind.Relative));
