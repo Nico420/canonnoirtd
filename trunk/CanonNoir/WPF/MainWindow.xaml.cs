@@ -48,8 +48,6 @@ namespace WPF
 
         private void setCases()
         {
-            IntPtr a = new IntPtr(FacadeW.getCasesActives().GetHashCode());
-            int b;
             int d = dernierIndex - nbportslibre;
             for (int c = dernierIndex; c > d; c--)
             {
@@ -58,7 +56,9 @@ namespace WPF
             }
             if (FacadeW.activerCases())
             {
-                
+                IntPtr a = new IntPtr(FacadeW.getCasesActives().GetHashCode());
+                int b;
+                                
                 /*Display enable case*/
                 for (int i = 0; i < 88; i++)
                 {
@@ -69,7 +69,35 @@ namespace WPF
                     //
                     if (b == 0)
                     {
-                        MessageBox.Show("test");
+                        Rectangle myRect = new System.Windows.Shapes.Rectangle();
+                        myRect.Stroke = System.Windows.Media.Brushes.Purple;
+                        myRect.StrokeThickness = 7;
+                        myRect.HorizontalAlignment = HorizontalAlignment.Left;
+                        myRect.VerticalAlignment = VerticalAlignment.Center;
+                        //La taille des rectangles devrait varier suivant port ou case normale
+                        int y = i / 11;
+                        int x = i % 11;
+
+                        myRect.Height = HAUTEUR_CASE;
+                        myRect.Width = LARGEUR_CASE;
+                        double marghaut = x * LARGEUR_CASE;
+                        double marggauche = y * HAUTEUR_CASE;
+                        nbportslibre++;
+                        myRect.Height += 20;
+                        myRect.Width += 23;
+                        if (x == 10)
+                        {
+                            marghaut += clickZone.Margin.Left - 5;
+                        }
+                        if (y == 7)
+                        {
+                            marggauche += clickZone.Margin.Top - 3;
+                        }
+
+                        myRect.Margin = new Thickness(marghaut, marggauche, 0, 0);
+
+                        plateau.Children.Add(myRect);
+                        dernierIndex = plateau.Children.IndexOf(myRect);
                     }
                     if (b == 1 && FacadeW.affichePorts())
                     {
@@ -187,7 +215,6 @@ namespace WPF
                 {
                     _lancerDesTimer.Stop();
                     count = 0;
-                    MessageBox.Show("test");
                     FacadeW.lancerDes();
                     this.LanceDes.IsEnabled = FacadeW.activerDes();
                     this.setCases();
