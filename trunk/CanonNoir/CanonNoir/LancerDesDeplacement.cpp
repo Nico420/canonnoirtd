@@ -33,6 +33,7 @@ void LancerDesDeplacement::calculCasesDeplacement(int de1,int de2){
 	this->casesDeplacement.insert(res.begin(),res.end());
 	res.clear();
 	res.insert(caseDepart);
+	/*
 	if(nbDes==2){
 		i = de2;
 		while(i--!=0){
@@ -49,7 +50,9 @@ void LancerDesDeplacement::calculCasesDeplacement(int de1,int de2){
 		res.clear();
 		res.insert(caseDepart);
 	}
+	*/
 	this->setCasesDeplacementBateau(this->casesDeplacement,1);
+	/*
 	if(this->moteur->getNbJoueurs()==2){
 		nbDes = this->moteur->getJoueur(this->moteur->getJoueurCourant()).getBateau(2).getNbDes();
 		this->activeDe2 |= (nbDes==2);
@@ -77,9 +80,10 @@ void LancerDesDeplacement::calculCasesDeplacement(int de1,int de2){
 			res.clear();
 		}
 	}
+	*/
 }
 
-std::set<std::pair<int,int>> LancerDesDeplacement::calculCasesDeplacementRec(const std::pair<int,int> caseDepart,const std::set<std::pair<int,int>> casesChemin){
+std::set<std::pair<int,int>> LancerDesDeplacement::calculCasesDeplacementRec(const std::pair<int,int>& caseDepart,const std::set<std::pair<int,int>>& casesChemin){
 	std::set<std::pair<int,int>> res;
 	std::set<std::pair<int,int>>::iterator it;
 	for(it=casesChemin.begin();it!=casesChemin.end();it++){
@@ -89,7 +93,9 @@ std::set<std::pair<int,int>> LancerDesDeplacement::calculCasesDeplacementRec(con
 		std::set<std::pair<int,int>>::iterator it2;
 		for(it2=casesPotentielles.begin();it2!=casesPotentielles.end();it2++){
 			double dist2 = distCases(caseDepart,*it2);
-			if(dist<=dist2) res.insert(*it2);
+			if(dist<=dist2 && this->moteur->getPlateau().estNavigable(it2->first,it2->second)){
+				res.insert(*it2);
+			}
 		}
 	}
 	return res;
@@ -135,7 +141,7 @@ int LancerDesDeplacement::getEtat() const{
 	return Moteur::NAVIGATION;
 }
 
-void LancerDesDeplacement::setCasesDeplacementBateau(std::set<std::pair<int,int>> cases,int value){
+void LancerDesDeplacement::setCasesDeplacementBateau(std::set<std::pair<int,int>>& cases,int value){
 	std::set<std::pair<int,int>>::iterator it;
 	for(it=cases.begin();it!=cases.end();it++){
 		this->moteur->getCasesDeplacementBateau().insert(std::pair<std::pair<int,int>,int>(*it,value));
