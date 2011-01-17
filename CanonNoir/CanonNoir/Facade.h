@@ -52,16 +52,13 @@ class DLL Facade
 		int* getCasesActives(){return this->casesActives;};
 		bool activerCases(){return this->activeCases;};
 		bool activerPorts();
-		std::vector<Bateau> getBateaux();
 		std::string getMessage(){return this->message;};
-		int* getValeursDes();
 		bool afficheCurseurAngle();
 		bool afficheCurseurPuissance();
 		std::vector<std::pair<int,int>> getRelief();
 		bool afficheGagnant();
 		bool activerBateaux();
 		bool afficheTir();
-		void init();
 		int getNbJoueurs();
 		bool getAttenteNbJoueurs();
 		int* getScores();

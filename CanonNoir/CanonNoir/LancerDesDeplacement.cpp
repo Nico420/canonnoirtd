@@ -15,7 +15,7 @@ void LancerDesDeplacement::execute(){
 	mes << this->moteur->getJoueurCourant();
 	mes << ", choisissez la case où vous souhaitez vous déplacer.";
 	this->setMessage(mes.str());
-	this->calculCasesDeplacement(de1,de2);
+	//this->calculCasesDeplacement(de1,de2);
 }
 
 void LancerDesDeplacement::calculCasesDeplacement(int de1,int de2){
@@ -120,13 +120,14 @@ int* LancerDesDeplacement::getCasesActives() const{
 	int* res = new int[this->moteur->getPlateau().getLongueur()*this->moteur->getPlateau().getLargeur()];
 	for(int i=0;i<nbCases;i++){
 		std::set<std::pair<int,int>>::iterator it;
+		bool found = false;
 		for(it=this->casesDeplacement.begin();it!=this->casesDeplacement.end();it++){
 			int x = (*it).first-1;
 			int y = ((*it).second-1)*this->moteur->getPlateau().getLongueur();
-			if((x+y)==i){ res[i] = 1;} else {res[i] = 0;}
+			if((x+y)==i) found = true;
 		}
+		res[i] = (found)? 1 : 0;
 	}
-	res = new int[this->moteur->getPlateau().getLongueur()*this->moteur->getPlateau().getLargeur()];
 	return res;
 }
 
