@@ -1,7 +1,5 @@
 #include "LancerDes.h"
 
-void LancerDes::execute(){
-}
 
 int* LancerDes::getCasesDeplacement() const{
 	return NULL;

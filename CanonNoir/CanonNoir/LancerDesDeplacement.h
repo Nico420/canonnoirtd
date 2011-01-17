@@ -30,7 +30,6 @@ class LancerDesDeplacement : public LancerDes
 		static double distCases(const std::pair<int,int>& case1,const std::pair<int,int>& case2);
 		std::set<std::pair<int,int>> casesAutour(const std::pair<int,int>& case1);
 		void setCasesDeplacementBateau(std::set<std::pair<int,int>> cases,int value);
-		inline void setMessage(std::string mes){this->message = mes;};
 };
 
 inline bool LancerDesDeplacement::getActiveDe2() const{

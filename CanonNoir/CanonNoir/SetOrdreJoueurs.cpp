@@ -31,11 +31,6 @@ void SetOrdreJoueurs::execute(){
 	else{
 		this->moteur->setJoueurCourant(this->moteur->getOrdreJoueurs().at(0));
 		mes << this->moteur->getJoueurCourant();
-		mes << " ";
-		mes << this->moteur->getOrdreJoueurs().at(0);
-		mes << this->moteur->getOrdreJoueurs().at(1);
-		mes << this->moteur->getOrdreJoueurs().at(2);
-		mes << this->moteur->getOrdreJoueurs().at(3);
 		mes << ", lancez les \ndés pour jouer.";
 		this->setMessage(mes.str());
 		this->etatsuivant = Moteur::LANCERDESDEPLACEMENT;

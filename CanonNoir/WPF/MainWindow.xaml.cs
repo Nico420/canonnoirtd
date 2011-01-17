@@ -50,60 +50,65 @@ namespace WPF
         {
             IntPtr a = new IntPtr(FacadeW.getCasesActives().GetHashCode());
             int b;
-            
-            int d = dernierIndex-nbportslibre;
+            int d = dernierIndex - nbportslibre;
             for (int c = dernierIndex; c > d; c--)
             {
                 plateau.Children.RemoveAt(c);
                 nbportslibre--;
             }
-            /*Display enable case*/
-            for(int i =0;i< 88;i++){
-                b = Marshal.ReadInt32(a);
-                a+=sizeof (int);
-                //
-                //ATTENTION à affichePort.
-                //
-                if (b == 1 && FacadeW.affichePorts())
+            if (FacadeW.activerCases())
+            {
+                
+                /*Display enable case*/
+                for (int i = 0; i < 88; i++)
                 {
-                    
-                    //MessageBox.Show("FacadeW.getCasesActives() " + b);
-                    //Il faudrait un test sur affichePortsLibre pour modifier la taille des cases.
-                    Rectangle myRect = new System.Windows.Shapes.Rectangle();
-                    myRect.Stroke = System.Windows.Media.Brushes.Purple;
-                    myRect.StrokeThickness = 7;
-                    myRect.HorizontalAlignment = HorizontalAlignment.Left;
-                    myRect.VerticalAlignment = VerticalAlignment.Center;
-                    //La taille des rectangles devrait varier suivant port ou case normale
-                    int y = i / 11;
-                    int x = i % 11;
-                    
-                    myRect.Height = HAUTEUR_CASE;
-                    myRect.Width = LARGEUR_CASE;
-                    double marghaut = x * LARGEUR_CASE;
-                    double marggauche = y * HAUTEUR_CASE;
-                    if (FacadeW.affichePorts())
+                    b = Marshal.ReadInt32(a);
+                    a += sizeof(int);
+                    //
+                    //Cas de l'affichage des ports
+                    //
+                    if (b == 0)
                     {
+                        MessageBox.Show("test");
+                    }
+                    if (b == 1 && FacadeW.affichePorts())
+                    {
+                        Rectangle myRect = new System.Windows.Shapes.Rectangle();
+                        myRect.Stroke = System.Windows.Media.Brushes.Purple;
+                        myRect.StrokeThickness = 7;
+                        myRect.HorizontalAlignment = HorizontalAlignment.Left;
+                        myRect.VerticalAlignment = VerticalAlignment.Center;
+                        //La taille des rectangles devrait varier suivant port ou case normale
+                        int y = i / 11;
+                        int x = i % 11;
+
+                        myRect.Height = HAUTEUR_CASE;
+                        myRect.Width = LARGEUR_CASE;
+                        double marghaut = x * LARGEUR_CASE;
+                        double marggauche = y * HAUTEUR_CASE;
                         nbportslibre++;
                         myRect.Height += 20;
                         myRect.Width += 23;
                         if (x == 10)
                         {
-                            marghaut += clickZone.Margin.Left-5;
+                            marghaut += clickZone.Margin.Left - 5;
                         }
                         if (y == 7)
                         {
-                            marggauche += clickZone.Margin.Top-3;
+                            marggauche += clickZone.Margin.Top - 3;
                         }
+
+                        myRect.Margin = new Thickness(marghaut, marggauche, 0, 0);
+
+                        plateau.Children.Add(myRect);
+                        dernierIndex = plateau.Children.IndexOf(myRect);
                     }
-                    
-                    myRect.Margin = new Thickness(marghaut, marggauche, 0, 0);
-                    
-                   plateau.Children.Add(myRect);
-                   dernierIndex = plateau.Children.IndexOf(myRect);
+                    else if (b == 1)
+                    {
+                        MessageBox.Show("test" + i);
+                    }
                 }
             }
-            
            }
         private void init_Jeu(int a)
         {
@@ -157,18 +162,16 @@ namespace WPF
                 int y = (int)b + 1;
                 FacadeW.setClick(x, y);
                 this.setCases();
-                if (FacadeW.activerDes())
-                {
-                    this.LanceDes.IsEnabled = true;
-                }
-                textBlock3.Text = FacadeW.getMessage() + " <- Message du moteur";
+                this.LanceDes.IsEnabled = FacadeW.activerDes();
+                textBlock3.Text = FacadeW.getMessage();
                 double num_case = (y - 1) * 11 + x;
-                //MessageBox.Show("Vous avez cliqué ici : " + Mouse.GetPosition(clickZone) + "\nCase : (" + x + ";" + y + ") " + num_case);
             }
         }
 
         private void LanceDes_Click(object sender, RoutedEventArgs e)
         {
+            this.LanceDes.IsEnabled=FacadeW.activerDes();
+            this.setCases();
             //LanceDes.IsEnabled = false;
             int count = 0;
             //Pour le lancer de Dés, c'est un systeme qui permet de faire des pauses.

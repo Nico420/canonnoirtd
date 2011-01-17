@@ -19,7 +19,7 @@ class LancerDes : public Etat
 	public :
 		LancerDes() : message(""),moteur(NULL){};
 		LancerDes(Moteur* mot) : message(""),moteur(mot){};
-		virtual void execute();
+		virtual void execute()=0;
 		virtual int* getCasesDeplacement() const;
 		virtual int getNbCasesDeplacement() const;
 		void setMessage(std::string mes);

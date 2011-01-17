@@ -4,24 +4,18 @@
 #include <sstream>
 
 void LancerDesDeplacement::execute(){
-	/*std::pair<De,De> d = this->moteur->getDes();
-	d.first.lancerDe();
-	d.second.lancerDe();
 	
-	int de1 = d.first.getNum();
-	int de2 = d.second.getNum();
-	this->moteur->des.first.numero=de1;
-	this->moteur->des.second.numero=de2;*/
 	this->moteur->lancerDes();
 	int de1 = this->moteur->getDe1();
 	int de2 = this->moteur->getDe2();
 	
-	this->calculCasesDeplacement(de1,de2);
+	
 	ostringstream mes;
 	mes << "Joueur ";
 	mes << this->moteur->getJoueurCourant();
 	mes << ", choisissez la case où vous souhaitez vous déplacer.";
 	this->setMessage(mes.str());
+	this->calculCasesDeplacement(de1,de2);
 }
 
 void LancerDesDeplacement::calculCasesDeplacement(int de1,int de2){
@@ -123,16 +117,16 @@ std::set<std::pair<int,int>> LancerDesDeplacement::casesAutour(const std::pair<i
 
 int* LancerDesDeplacement::getCasesActives() const{
 	int nbCases = this->moteur->getPlateau().getLongueur() * this->moteur->getPlateau().getLargeur();
-	int* res = new int[nbCases];
+	int* res = new int[this->moteur->getPlateau().getLongueur()*this->moteur->getPlateau().getLargeur()];
 	for(int i=0;i<nbCases;i++){
-		bool boo = false;
 		std::set<std::pair<int,int>>::iterator it;
 		for(it=this->casesDeplacement.begin();it!=this->casesDeplacement.end();it++){
 			int x = (*it).first-1;
 			int y = ((*it).second-1)*this->moteur->getPlateau().getLongueur();
-			if((x+y)==i) res[i] = 1;
+			if((x+y)==i){ res[i] = 1;} else {res[i] = 0;}
 		}
 	}
+	res = new int[this->moteur->getPlateau().getLongueur()*this->moteur->getPlateau().getLargeur()];
 	return res;
 }
 
