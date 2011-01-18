@@ -15,10 +15,10 @@ Plateau::Plateau(){
 	tab_case[7][1] = CaseCanon(); tab_case[4][1] = CaseCanon(); tab_case[4][9] = CaseCanon();
 	tab_case[3][6] = CaseCanon();
 	//Cases au bord
-	for(int i1=1;i1<10;i1++) tab_case[i1][0] = CaseNormale(0,false,true);
-	for(int i2=1;i2<7;i2++) tab_case[0][i2] = CaseNormale(0,false,true);
-	for(int i3=1;i3<10;i3++) tab_case[i3][7] = CaseNormale(0,false,true);
-	for(int i4=1;i4<7;i4++) tab_case[7][i4] = CaseNormale(0,false,true);
+	for(int i1=1;i1<10;i1++) tab_case[i1][0] = CaseNormale(0,true,true);
+	for(int i2=1;i2<7;i2++) tab_case[0][i2] = CaseNormale(0,true,true);
+	for(int i3=1;i3<10;i3++) tab_case[i3][7] = CaseNormale(0,true,true);
+	for(int i4=1;i4<7;i4++) tab_case[10][i4] = CaseNormale(0,true,true);
 	//Cases iles
 	tab_case[2][2] = CaseNormale(6,false,false); tab_case[3][2] = CaseNormale(8,false,false);
 	tab_case[2][3] = CaseNormale(9,false,false); tab_case[3][3] = CaseNormale(4,false,false);
