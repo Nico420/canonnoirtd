@@ -7,10 +7,10 @@ using System.Windows;
 // Les informations générales relatives à un assembly dépendent de 
 // l'ensemble d'attributs suivant. Changez les valeurs de ces attributs pour modifier les informations
 // associées à un assembly.
-[assembly: AssemblyTitle("WPF")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Canon Noir")]
+[assembly: AssemblyDescription("Let's the battle begin !")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("INSA Rennes")]
+[assembly: AssemblyCompany("INSA Rennes - Desfeux Nicolas - Texier Aurélien")]
 [assembly: AssemblyProduct("WPF")]
 [assembly: AssemblyCopyright("Copyright © INSA Rennes 2010")]
 [assembly: AssemblyTrademark("")]
@@ -51,5 +51,6 @@ using System.Windows;
 // Vous pouvez spécifier toutes les valeurs ou indiquer les numéros de build et de révision par défaut 
 // en utilisant '*', comme indiqué ci-dessous :
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyVersion("0.5.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: NeutralResourcesLanguageAttribute("fr-FR")]
