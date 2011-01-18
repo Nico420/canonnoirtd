@@ -26,7 +26,7 @@
             <Canvas Height="250" HorizontalAlignment="Left" Margin="4,10,0,0" Name="Jeu" VerticalAlignment="Top" Width="129" Visibility="Hidden">
                 <TextBlock Canvas.Left="23" Canvas.Top="16" Height="23" Name="Message" Text="Message" />
 
-                <TextBlock Canvas.Left="21" Canvas.Top="35" Height="77" Name="textBlock3" Text="Message" Width="100" TextTrimming="CharacterEllipsis" />
+                <TextBlock Canvas.Left="0" Canvas.Top="35" Height="77" Name="textBlock3" Text="Message" Width="130" TextTrimming="CharacterEllipsis" />
                 <TextBlock Canvas.Left="23" Canvas.Top="123" Height="23" Name="score" Text="Score" />
                 <TextBlock Canvas.Left="23" Canvas.Top="143" Height="23" Name="joueur1" Text="Joueur 1" />
                 <TextBlock Canvas.Left="23" Canvas.Top="163" Height="23" Name="joueur2" Text="Joueur 2" />

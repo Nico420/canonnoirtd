@@ -177,6 +177,18 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bateau-Caravelle_bleu.bmp" />
+    <Resource Include="Images\bateau-Caravelle_jaune.bmp" />
+    <Resource Include="Images\bateau-Caravelle_rouge.bmp" />
+    <Resource Include="Images\bateau-Caravelle_vert.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bateau-fregate_bleu.bmp" />
+    <Resource Include="Images\bateau-fregate_jaune.bmp" />
+    <Resource Include="Images\bateau-fregate_rouge.bmp" />
+    <Resource Include="Images\bateau-fregate_vert.bmp" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
