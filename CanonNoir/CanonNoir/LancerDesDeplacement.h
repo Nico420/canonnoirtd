@@ -26,9 +26,13 @@ class LancerDesDeplacement : public LancerDes
 		int* getCasesActives() const;
 		bool getActiveDe2() const;
 		void calculCasesDeplacement(int de1,int de2);
+		bool isValid(int x,int y) const;
+		bool isCheminValid(const std::pair<int,int>& caseDepart,int x,int y) const;
+		void calculCasesDeplacement2(int de1,int de2);
 		std::set<std::pair<int,int>> calculCasesDeplacementRec(const std::pair<int,int>& caseDepart,const std::set<std::pair<int,int>>& casesChemin);
 		static double distCases(const std::pair<int,int>& case1,const std::pair<int,int>& case2);
-		std::set<std::pair<int,int>> casesAutour(const std::pair<int,int>& case1);
+		std::set<std::pair<int,int>> casesAutour(const std::pair<int,int>& case1,int nb) const;
+		std::set<std::pair<int,int>> casesAutour(const std::pair<int,int>& case1) const;
 		void setCasesDeplacementBateau(std::set<std::pair<int,int>>& cases,int value);
 };
 
