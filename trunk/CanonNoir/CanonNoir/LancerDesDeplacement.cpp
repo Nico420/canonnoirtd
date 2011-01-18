@@ -37,7 +37,26 @@ void LancerDesDeplacement::calculCasesDeplacement(int de1,int de2){
 		res.clear();
 	}
 	this->setCasesDeplacementBateau(this->casesDeplacement,1);
-	//Reste à faire pour le cas de 2 joueurs
+	//Cas de 2 joueurs
+	if(this->moteur->getNbJoueurs()==2){
+		nbDes = this->moteur->getJoueur(this->moteur->getJoueurCourant()).getBateau(2).getNbDes();
+		this->activeDe2 |= (nbDes==2);
+		caseDepart = this->moteur->getJoueur(this->moteur->getJoueurCourant()).getBateau(2).getPosition();
+		res = this->casesAutour(caseDepart,de1);
+		this->setCasesDeplacementBateau(res,2);
+		this->casesDeplacement.insert(res.begin(),res.end());
+		res.clear();
+		if(nbDes==2){
+			res = this->casesAutour(caseDepart,de2);
+			this->setCasesDeplacementBateau(res,2);
+			this->casesDeplacement.insert(res.begin(),res.end());
+			res.clear();
+			res = this->casesAutour(caseDepart,totalDes);
+			this->setCasesDeplacementBateau(res,2);
+			this->casesDeplacement.insert(res.begin(),res.end());
+			res.clear();
+		}
+	}
 }
 
 bool LancerDesDeplacement::isValid(int x,int y) const{
@@ -51,14 +70,14 @@ bool LancerDesDeplacement::isCheminValid(const std::pair<int,int>& caseDepart,in
 	if(this->isValid(x,y)){
 		cheminOK = true;
 		if(x==caseDepart.first){
-			int i = (y>caseDepart.second)? caseDepart.second : y;
+			int a = (y>caseDepart.second)? caseDepart.second : y;
 			int stop = (y>caseDepart.second)? y : caseDepart.second;
-			for(;i<stop;i++) if(!this->moteur->getPlateau().estNavigable(x,i)) cheminOK = false;
+			for(int i=a+1;i<stop;i++) if(!this->moteur->getPlateau().estNavigable(x,i)) cheminOK = false;
 		}
 		else if(y==caseDepart.second){
-			int i = (x>caseDepart.first)? caseDepart.first : x;
+			int a = (x>caseDepart.first)? caseDepart.first : x;
 			int stop = (x>caseDepart.first)? x : caseDepart.first;
-			for(;i<stop;i++) if(!this->moteur->getPlateau().estNavigable(i,y)) cheminOK = false;
+			for(int i=a+1;i<stop;i++) if(!this->moteur->getPlateau().estNavigable(i,y)) cheminOK = false;
 		}
 		else if(x<caseDepart.first && y<caseDepart.second){
 			while(x!=caseDepart.first) if(!this->moteur->getPlateau().estNavigable(x++,y++)) cheminOK = false;
@@ -168,8 +187,8 @@ std::set<std::pair<int,int>> LancerDesDeplacement::casesAutour(const std::pair<i
 	std::set<std::pair<int,int>> res;
 	int longueur = this->moteur->getPlateau().getLongueur();
 	int largeur = this->moteur->getPlateau().getLargeur();
-	for(int i=(0-nb);i<nb+1;i=i+nb){
-		for(int j=(0-nb);j<nb+1;j=j+nb){
+	for(int i=(0-nb);i<nb+1;i+=nb){
+		for(int j=(0-nb);j<nb+1;j+=nb){
 			int x = case1.first+i;
 			int y = case1.second+j;
 			if((i!=0 || j!=0) && this->isCheminValid(case1,x,y)){

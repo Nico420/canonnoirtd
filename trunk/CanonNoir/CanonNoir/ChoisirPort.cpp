@@ -58,7 +58,7 @@ void ChoisirPort::execute(){
 			}
 			else{
 				if(this->compteur==1) this->port1 = nbport;
-				if(this->compteur==2) this->port2 = nbport;
+				else if(this->compteur==2) this->port2 = nbport;
 				else if(this->compteur==3) this->moteur->addJoueur(joueurCourant-1,joueurCourant,2,this->port1,nbport);
 			}
 			mes2 = ", choisir \nun port.";

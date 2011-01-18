@@ -43,6 +43,10 @@ inline bool Bateau::donneTresor(){
 	return true;
 }
 
+inline int Bateau::getNbDes() const{
+	return this->nbDes;
+}
+
 inline std::pair<int,int> Bateau::getPosition() const{
 	return position;
 }
