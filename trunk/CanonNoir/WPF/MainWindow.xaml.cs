@@ -29,10 +29,14 @@ namespace WPF
         // 1/8 of the click area. For the moment it's a constant, but we can perhaps make it dynamic.
         private static double LARGEUR_CASE = 60.454545;
 
+        private static int ROUGE = 1;
+        private static int BLEU = 2;
+        private static int VERT = 3;
+        private static int JAUNE = 4;
         // Those variables are usefull in order to "clean" the map (we mean erase the rectangle that we draw).
         private int nbCasesRect = 0;
         private int dernierIndex = 0;
-
+        
 
         /// <summary>
         /// Method for creation of a new main Window. We need to associated a Facade to this Windows.
@@ -56,6 +60,62 @@ namespace WPF
             Window1 w = new Window1();
             w.Show();
         }
+
+        /// <summary>
+        /// This function is used to set a boat at a given position.
+        /// </summary>
+        /// <param name="x">boat's x</param>
+        /// <param name="y">boat's y</param>
+        /// <param name="type">Give the type of boat : 0 for Caravelle, 1 for Frégate, 2 for Radeau</param>
+        /// <param name="tresor">true if a tresor is on the boat, else false.</param>
+        private void afficherBateau(int x, int y, int type, bool tresor,int couleur)
+        {
+            String bateau = "bateau-";
+            switch (type)
+            {
+                case 0:
+                    bateau += "Caravelle";
+                    break;
+                case 1:
+                    bateau += "fregate";
+                    break;
+                case 2:
+                    bateau += "radeau";
+                    break;
+
+            }
+
+            switch (couleur) 
+            {
+                case 1:
+                    bateau += "_bleu.bmp";
+                    break;
+                case 2:
+                    bateau+="_rouge.bmp";
+                    break;
+                case 3:
+                    bateau += "_vert.bmp";
+                    break;
+                case 4:
+                    bateau += "_jaune.bmp";
+                    break;
+                default:
+                    break;
+            }
+            Image image = new Image();
+            MessageBox.Show(bateau);
+            BitmapImage bateau_img = new BitmapImage(new Uri("Images/" + bateau, UriKind.Relative));
+            image.Source = bateau_img;
+            image.Height = HAUTEUR_CASE - 5;
+            image.Width = LARGEUR_CASE -5 ;
+            image.HorizontalAlignment = HorizontalAlignment.Left;
+            image.VerticalAlignment = VerticalAlignment.Center;
+            image.Margin = new Thickness(x * LARGEUR_CASE, y * HAUTEUR_CASE, 0, 0);
+            //
+            clickZone.Children.Add(image);
+
+        }
+
 
         /// <summary>
         /// Method that create Rectangle around boxes of the map.
@@ -200,6 +260,9 @@ namespace WPF
                 this.LanceDes.IsEnabled = FacadeW.activerDes();
                 textBlock3.Text = FacadeW.getMessage();
                 double num_case = (y - 1) * 11 + x;
+                //afficherBateau(5,5, 0, false, 1);
+                afficherBateau(1, 1, 1, false, 2);
+                afficherBateau(7, 7, 2, false, 3);
             }
         }
 
