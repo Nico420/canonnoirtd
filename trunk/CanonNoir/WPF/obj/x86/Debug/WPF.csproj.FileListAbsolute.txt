@@ -40,15 +40,8 @@ C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\WPF\obj\x86\Debug\MainWind
 C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\WPF\obj\x86\Debug\Page1.g.cs
 C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\WPF\obj\x86\Debug\Window1.g.cs
 C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\WPF\obj\x86\Debug\App.g.cs
-C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\WPF\obj\x86\Debug\WPF_MarkupCompile.cache
-C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\WPF\obj\x86\Debug\WPF.g.resources
-C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\WPF\obj\x86\Debug\WPF.Properties.Resources.resources
 C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\WPF\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\WPF\obj\x86\Debug\GenerateResource.write.1.tlog
-C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\Debug\WPF.exe
-C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\Debug\WPF.pdb
-C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\WPF\obj\x86\Debug\WPF.exe
-C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\WPF\obj\x86\Debug\WPF.pdb
 C:\Users\Aurélien\Desktop\canon noir\CanonNoir\Debug\WPF.exe
 C:\Users\Aurélien\Desktop\canon noir\CanonNoir\Debug\WPF.pdb
 C:\Users\Aurélien\Desktop\canon noir\CanonNoir\WPF\obj\x86\Debug\ResolveAssemblyReference.cache
@@ -66,3 +59,10 @@ C:\Users\Aurélien\Desktop\canon noir\CanonNoir\WPF\obj\x86\Debug\GenerateResour
 C:\Users\Aurélien\Desktop\canon noir\CanonNoir\WPF\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Users\Aurélien\Desktop\canon noir\CanonNoir\WPF\obj\x86\Debug\WPF.exe
 C:\Users\Aurélien\Desktop\canon noir\CanonNoir\WPF\obj\x86\Debug\WPF.pdb
+C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\WPF\obj\x86\Debug\WPF.Properties.Resources.resources
+C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\Debug\WPF.exe
+C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\Debug\WPF.pdb
+C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\WPF\obj\x86\Debug\WPF_MarkupCompile.cache
+C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\WPF\obj\x86\Debug\WPF.g.resources
+C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\WPF\obj\x86\Debug\WPF.exe
+C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\WPF\obj\x86\Debug\WPF.pdb
