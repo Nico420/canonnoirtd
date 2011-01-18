@@ -128,8 +128,8 @@ namespace WPF
 
                         myRect.Height = HAUTEUR_CASE;
                         myRect.Width = LARGEUR_CASE;
-                        double marghaut = x * LARGEUR_CASE;
-                        double marggauche = y * HAUTEUR_CASE;
+                        double marghaut = x * LARGEUR_CASE+2;
+                        double marggauche = y * HAUTEUR_CASE+5;
 
                         myRect.Margin = new Thickness(marghaut, marggauche, 0, 0);
 
@@ -138,7 +138,7 @@ namespace WPF
                     }
                     else
                     {
-                        MessageBox.Show("" + b);
+                        //MessageBox.Show("" + b);
                     }
                 }
             }
