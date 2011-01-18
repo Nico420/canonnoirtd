@@ -18,54 +18,70 @@ using System.Windows.Threading;
 namespace WPF
 {
     /// <summary>
-    /// Logique d'interaction pour MainWindow.xaml
+    /// Interactions for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
         WrapperFacade FacadeW;
-        //1/11 de clickZone
+        //1/11 of the click area. For the moment it's a constant, but we can perhaps make it dynamic.
         private static double HAUTEUR_CASE = 53.75;
 
-        // 1/8 de clickZone
+        // 1/8 of the click area. For the moment it's a constant, but we can perhaps make it dynamic.
         private static double LARGEUR_CASE = 60.454545;
 
-
-        private int nbportslibre = 0;
+        // Those variables are usefull in order to "clean" the map (we mean erase the rectangle that we draw).
+        private int nbCasesRect = 0;
         private int dernierIndex = 0;
 
+
+        /// <summary>
+        /// Method for creation of a new main Window. We need to associated a Facade to this Windows.
+        /// At the beginning, we can not roll the dice, so we disabled it.
+        /// </summary>
         public MainWindow()
         {
             InitializeComponent();
+            //Creation of a Facade, thanks to the Wrapper.
             FacadeW = new WrapperFacade();
             LanceDes.IsEnabled = false;
         }
 
-        private void test(object sender, RoutedEventArgs e)
+        /// <summary>
+        /// Method that create a new frame for the shoot between boats.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void tirCanon(object sender, RoutedEventArgs e)
         {
             Window1 w = new Window1();
             w.Show();
         }
 
+        /// <summary>
+        /// Method that create Rectangle around boxes of the map.
+        /// </summary>
         private void setCases()
         {
-            int d = dernierIndex - nbportslibre;
+            int d = dernierIndex - nbCasesRect;
             for (int c = dernierIndex; c > d; c--)
             {
                 plateau.Children.RemoveAt(c);
-                nbportslibre--;
+                nbCasesRect--;
             }
             if (FacadeW.activerCases())
             {
+                //This pointer is create to get the table of active boxes from the Facade.
                 IntPtr a = new IntPtr(FacadeW.getCasesActives().GetHashCode());
-                int b;
                                 
                 /*Display enable case*/
                 for (int i = 0; i < 88; i++)
                 {
-                    b = Marshal.ReadInt32(a);
+                    //This integer is create by reading the content associate to the pointer.
+                    int b = Marshal.ReadInt32(a);
+                    // We "incremente" a from the size of an int, to get the next int from the table.
                     a += sizeof(int);
                     //
-                    //Cas de l'affichage des ports
+                    //Display the available ports
                     //
                     if (b == 1 && FacadeW.affichePorts())
                     {
@@ -74,7 +90,7 @@ namespace WPF
                         myRect.StrokeThickness = 7;
                         myRect.HorizontalAlignment = HorizontalAlignment.Left;
                         myRect.VerticalAlignment = VerticalAlignment.Center;
-                        //La taille des rectangles devrait varier suivant port ou case normale
+                        
                         int y = i / 11;
                         int x = i % 11;
 
@@ -82,7 +98,7 @@ namespace WPF
                         myRect.Width = LARGEUR_CASE;
                         double marghaut = x * LARGEUR_CASE;
                         double marggauche = y * HAUTEUR_CASE;
-                        nbportslibre++;
+                        nbCasesRect++;
                         myRect.Height += 20;
                         myRect.Width += 23;
                         if (x == 10)
