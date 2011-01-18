@@ -1,30 +1,30 @@
-﻿La génération a démarré 18/01/2011 11:37:20.
-Projet "C:\Users\Aurélien\Desktop\canon noir\CanonNoir\Wrapper\Wrapper.vcxproj" sur le nœud 2 (build cible(s)).
-InitializeBuildStatus:
-  Création de "Debug\Wrapper.unsuccessfulbuild", car "AlwaysCreate" a été spécifié.
-GenerateTargetFrameworkMonikerAttribute:
-La cible est ignorée "GenerateTargetFrameworkMonikerAttribute", car tous les fichiers de sortie sont à jour par rapport aux fichiers d'entrée.
-ClCompile:
-  Toutes les sorties sont à jour.
-  Toutes les sorties sont à jour.
-  Toutes les sorties sont à jour.
-ResourceCompile:
-  Toutes les sorties sont à jour.
-Link:
-  c:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Aurélien\Desktop\canon noir\CanonNoir\Debug\Wrapper.dll" /INCREMENTAL /NOLOGO /MANIFEST /ManifestFile:"Debug\Wrapper.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Aurélien\Desktop\canon noir\CanonNoir\Debug\Wrapper.pdb" /ASSEMBLYDEBUG /TLBID:1 /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 /DLL Debug\app.res
-  Debug\AssemblyInfo.obj
-  Debug\Stdafx.obj
-  Debug\Wrapper.obj
-  "Debug\.NETFramework,Version=v4.0.AssemblyAttributes.obj"
-     Création de la bibliothèque C:\Users\Aurélien\Desktop\canon noir\CanonNoir\Debug\Wrapper.lib et de l'objet C:\Users\Aurélien\Desktop\canon noir\CanonNoir\Debug\Wrapper.exp
-  Wrapper.vcxproj -> C:\Users\Aurélien\Desktop\canon noir\CanonNoir\Debug\Wrapper.dll
-Manifest:
-  c:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\Aurélien\Desktop\canon noir\CanonNoir\Debug\Wrapper.dll;#2" /manifest Debug\Wrapper.dll.intermediate.manifest
-FinalizeBuildStatus:
-  Suppression du fichier "Debug\Wrapper.unsuccessfulbuild".
-  Mise à jour de l'horodatage "Debug\Wrapper.lastbuildstate".
-Génération du projet "C:\Users\Aurélien\Desktop\canon noir\CanonNoir\Wrapper\Wrapper.vcxproj" terminée (build cible(s)).
+﻿La génération a démarré 18/01/2011 11:49:23.
+     1>Projet "C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\Wrapper\Wrapper.vcxproj" sur le nœud 2 (build cible(s)).
+     1>InitializeBuildStatus:
+         Création de "Debug\Wrapper.unsuccessfulbuild", car "AlwaysCreate" a été spécifié.
+       GenerateTargetFrameworkMonikerAttribute:
+       La cible est ignorée "GenerateTargetFrameworkMonikerAttribute", car tous les fichiers de sortie sont à jour par rapport aux fichiers d'entrée.
+       ClCompile:
+         Toutes les sorties sont à jour.
+         Toutes les sorties sont à jour.
+         Toutes les sorties sont à jour.
+       ResourceCompile:
+         Toutes les sorties sont à jour.
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\Debug\Wrapper.dll" /INCREMENTAL /NOLOGO /MANIFEST /ManifestFile:"Debug\Wrapper.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\Debug\Wrapper.pdb" /ASSEMBLYDEBUG /TLBID:1 /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 /DLL Debug\app.res
+         Debug\AssemblyInfo.obj
+         Debug\Stdafx.obj
+         Debug\Wrapper.obj
+         "Debug\.NETFramework,Version=v4.0.AssemblyAttributes.obj"
+            Création de la bibliothèque C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\Debug\Wrapper.lib et de l'objet C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\Debug\Wrapper.exp
+         Wrapper.vcxproj -> C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\Debug\Wrapper.dll
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\Debug\Wrapper.dll;#2" /manifest Debug\Wrapper.dll.intermediate.manifest
+       FinalizeBuildStatus:
+         Suppression du fichier "Debug\Wrapper.unsuccessfulbuild".
+         Mise à jour de l'horodatage "Debug\Wrapper.lastbuildstate".
+     1>Génération du projet "C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\Wrapper\Wrapper.vcxproj" terminée (build cible(s)).
 
 La génération a réussi.
 
-Temps écoulé 00:00:38.10
+Temps écoulé 00:00:00.73
