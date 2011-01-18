@@ -115,6 +115,8 @@ namespace WPF
                         plateau.Children.Add(myRect);
                         dernierIndex = plateau.Children.IndexOf(myRect);
                     }
+
+                        //Display boxes for boat's move.
                     else if (b == 1)
                     {
                         Rectangle myRect = new System.Windows.Shapes.Rectangle();
