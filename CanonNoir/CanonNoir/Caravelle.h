@@ -17,11 +17,6 @@ class Caravelle : public Bateau
 			Bateau(2,tres,posx,posy,posPortx,posPorty){};
 		Caravelle(const Bateau& bat);
 		virtual ~Caravelle();
-		virtual int getNbDes() const;
 };
-
-inline int Caravelle::getNbDes() const{
-	return 2;
-}
 
 #endif

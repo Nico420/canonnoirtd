@@ -18,13 +18,8 @@ class Radeau : public Bateau
 			Bateau(1,false,posx,posy,posPortx,posPorty){};
 		Radeau(const Bateau& bat);
 		virtual ~Radeau();
-		virtual int getNbDes() const;
 		virtual bool donneTresor();
 };
-
-inline int Radeau::getNbDes() const{
-	return 1;
-}
 
 inline bool Radeau::donneTresor(){
 	return false;
