@@ -60,7 +60,7 @@ class DLL Facade
 		bool afficheGagnant();
 		bool activerBateaux();
 		bool afficheTir();
-		int getNbJoueurs();
+		int getNbJoueurs(){return this->motor->nbJoueurs;};
 		bool getAttenteNbJoueurs();
 		int* getScores();
 		int getNbDes();
@@ -78,7 +78,7 @@ class DLL Facade
 		void lancerDes();
 		int getDes1(){return de1;};
 		int getDes2(){return de2;};
-		int** getBateaux(){return this->bateau;};
+		int* getBateaux(){return this->bateau;};
 };
 
 EXTERNC DLL Facade* Facade_New();

@@ -31,7 +31,6 @@ using namespace std;
 class Moteur
 {
 	private :
-		int nbJoueurs;
 		vector<int> ordreJoueurs;
 		int joueurCourant;
 		pair<int,int> click;
@@ -43,7 +42,7 @@ class Moteur
 		pair<De,De> des;
 
 	public :
-
+		int nbJoueurs;
 		/**
 		*\fn Moteur()
 		*\brief default constructor
