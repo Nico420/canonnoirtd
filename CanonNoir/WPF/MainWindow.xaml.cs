@@ -70,18 +70,56 @@ namespace WPF
         /// <param name="y">boat's y</param>
         /// <param name="type">Give the type of boat : 0 for Caravelle, 1 for Frégate, 2 for Radeau</param>
         /// <param name="tresor">true if a tresor is on the boat, else false.</param>
+        /*private void updateScore()
+        {
+            IntPtr score = new IntPtr(FacadeW.getScore().getHashCode());
+            int d = FacadeW.g
+            int score1 = 0, score2 = 0, score3 = 0, score4 = 0;
+            if (d == 2)
+            {
+                score1 = Marshal.ReadInt32(score);
+                score += sizeof(int);
+                score1 += Marshal.ReadInt32(score);
+                score += sizeof(int);
+                score2 = Marshal.ReadInt32(score);
+                score += sizeof(int);
+                score2 += Marshal.ReadInt32(score);
+            }
+            else if (d == 3)
+            {
+                score1 = Marshal.ReadInt32(score);
+                score += sizeof(int);
+                score2 = Marshal.ReadInt32(score);
+                score += sizeof(int);
+                score3 = Marshal.ReadInt32(score);
+            }
+            else if (d == 4)
+            {
+                score1 = Marshal.ReadInt32(score);
+                score += sizeof(int);
+                score2 = Marshal.ReadInt32(score);
+                score += sizeof(int);
+                score3 = Marshal.ReadInt32(score);
+                score += sizeof(int);
+                score4 = Marshal.ReadInt32(score);
+            }
+            joueur1.Text = "Joueur 1 : " + score1;
+            joueur2.Text = "Joueur 2 : " + score2;
+            joueur3.Text = "Joueur 3 : " + score3;
+            joueur4.Text = "Joueur 4 : " + score4;
+        }*/
         private void afficherBateau(int x, int y, int type, bool tresor,int couleur)
         {
             String bateau = "bateau-";
             switch (type)
             {
-                case 0:
+                case 3:
                     bateau += "Caravelle";
                     break;
-                case 1:
+                case 2:
                     bateau += "fregate";
                     break;
-                case 2:
+                case 1:
                     bateau += "radeau";
                     break;
 
@@ -323,6 +361,7 @@ namespace WPF
         private void AfficheAide(object sender, RoutedEventArgs e)
         {
             Window2 w = new Window2();
+            w.Show();
         }
 
 
