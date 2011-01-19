@@ -131,19 +131,6 @@ namespace WPF
             nbCasesChoix =0;
             if (FacadeW.activerCases())
             {
-                
-                
-                IntPtr a2 = new IntPtr(FacadeW.getBateaux().GetHashCode());
-                if (a2.GetHashCode() >0)
-                {
-                    IntPtr a3 = Marshal.ReadIntPtr(a2);
-                    MessageBox.Show(a3.GetHashCode() + "");
-                    if (a3.GetHashCode() > 0)
-                    {
-                        int b3 = Marshal.ReadInt32(a3);
-                        MessageBox.Show("" + b3);
-                    }
-                }
                 //This pointer is create to get the table of active boxes from the Facade.
                 IntPtr a = new IntPtr(FacadeW.getCasesActives().GetHashCode());
                 /*Display enable case*/
@@ -254,8 +241,30 @@ namespace WPF
             this.WindowState= System.Windows.WindowState.Maximized;
         }
 
+        private void BoatUpdate()
+        {
+            IntPtr a = new IntPtr(FacadeW.getBateaux().GetHashCode());
+            int d = (FacadeW.getNbJoueurs() == 3) ? 3 : 4;
+            for (int i = 0; i < d; i++)
+            {
+                int x = Marshal.ReadInt32(a);
+                a+=sizeof (int);
+                int y = Marshal.ReadInt32(a);
+                a += sizeof(int);
+                int tre = Marshal.ReadInt32(a);
+                bool tresor = (tre == 1) ? true : false;
+                a += sizeof(int);
+                int type = Marshal.ReadInt32(a);
+                a += sizeof(int);
+                int couleur = Marshal.ReadInt32(a);
+                this.afficherBateau(x, y, type, tresor, couleur);
+                a += sizeof(int);
+            }
+        }
+
         private void clickZone_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
+            this.BoatUpdate();
             if (FacadeW.activerCases())
             {
                 double a = Mouse.GetPosition(clickZone).X;

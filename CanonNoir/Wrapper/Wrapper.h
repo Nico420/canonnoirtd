@@ -74,9 +74,11 @@ namespace Wrapper {
 		bool afficheTir(){
 			return FacadeW->afficheTir();
 		};
+		*/
 		int getNbJoueurs(){
 			return FacadeW->getNbJoueurs();
 		};
+		/*
 		bool getAttenteNbJoueurs(){
 			return FacadeW->getAttenteNbJoueurs();
 		};
@@ -87,8 +89,9 @@ namespace Wrapper {
 		}*/
 		/*
 		int* getPortsLibres();
-		bool afficheBateaux();
-		bool afficheRelief();
+		*/
+		bool afficheBateaux(){return FacadeW->afficheBateaux();};
+		/*bool afficheRelief();
 		bool afficheScores();
 		bool affichePortsLibres();
 		void setPuissance(int puissance);
