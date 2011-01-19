@@ -79,10 +79,7 @@ class DLL Facade
 		void lancerDes();
 		int getDes1(){return de1;};
 		int getDes2(){return de2;};
-<<<<<<< .mine
-=======
-		int* getBateaux(){return this->bateau;};
->>>>>>> .r159
+		int* getBateaux(){return this->infosBateaux;};
 };
 
 EXTERNC DLL Facade* Facade_New();
