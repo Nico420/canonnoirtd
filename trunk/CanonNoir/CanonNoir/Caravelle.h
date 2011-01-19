@@ -15,8 +15,9 @@ class Caravelle : public Bateau
 		Caravelle() : Bateau(){};
 		Caravelle(bool tres, int posx, int posy, int posPortx, int posPorty) : 
 			Bateau(2,tres,posx,posy,posPortx,posPorty){};
-		Caravelle(const Bateau& bat);
+		Caravelle(const Bateau* bat);
 		virtual ~Caravelle();
+		virtual int getType() const;
 };
 
 #endif

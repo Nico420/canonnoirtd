@@ -11,6 +11,7 @@ Facade::Facade(){
 	this->affichePlateau = true;
 	this->afficheCanon = false;
 	this->affichePorts = false;
+	this->afficheBat = false;
 	this->message = this->motor->getEtat()->getMessage();
 	this->scoresBateaux = NULL;
 	this->nbBateaux = 0;
@@ -46,12 +47,14 @@ void Facade::setNbJoueurs(int nb){
 	delete[] this->casesActives;
 	this->casesActives = this->motor->getEtat()->getCasesActives();
 	this->activeCases = true;
+	this->infosBateaux = new int[nb];
 }
 
 void Facade::setClick(int x,int y){
-	this->bateau = this->motor->getPosBateaux();
 	this->motor->setClick(x,y);
 	this->message = this->motor->getEtat()->getMessage();
+	delete[] this->infosBateaux;
+	this->infosBateaux = this->motor->getPosBateaux();
 	delete[] this->casesActives;
 	this->casesActives = this->motor->getEtat()->getCasesActives();
 	if(this->motor->getEtat()->getEtat()==Moteur::CHOISIRPORT){
@@ -69,17 +72,18 @@ void Facade::setClick(int x,int y){
 		this->motor->setEtat(Moteur::LANCERDESDEPLACEMENT);
 		this->activeLancerDes = true;
 		this->activeDe1 = true;
-		this->message = "Test";
 		this->activeDe2 = this->motor->getEtat()->getActiveDe2();
 		this->activeCases = false;
 		this->affichePorts = false;
+		this->afficheBat = true;
 	}
 }
 
 void Facade::lancerDes(){
-	this->bateau = this->motor->getPosBateaux();
 	this->motor->execute();
 	this->message = this->motor->getEtat()->getMessage();
+	delete[] this->infosBateaux;
+	this->infosBateaux = this->motor->getPosBateaux();
 	this->de1 = this->motor->getDe1();
 	this->de2 = this->motor->getDe2();
 	delete[] this->casesActives;

@@ -36,6 +36,7 @@ class DLL Facade
 		bool afficheAttenteNbJoueurs;
 		bool afficheJeuNormal;
 		bool affichePorts;
+		bool afficheBat;
 		bool activeDe1;
 		bool activeDe2;
 		bool activeCases;
@@ -43,7 +44,7 @@ class DLL Facade
 		int de1;
 		int de2;
 		int* casesActives;
-		int* bateau;
+		int* infosBateaux;
 
 	public :
 		std::string message;
@@ -65,7 +66,7 @@ class DLL Facade
 		int* getScores();
 		int getNbDes();
 		int* getPortsLibres();
-		bool afficheBateaux();
+		bool afficheBateaux(){return afficheBat;};
 		bool afficheRelief();
 		bool afficheScores();
 		bool affichePortsLibres(){return affichePorts;};
@@ -78,7 +79,10 @@ class DLL Facade
 		void lancerDes();
 		int getDes1(){return de1;};
 		int getDes2(){return de2;};
+<<<<<<< .mine
+=======
 		int* getBateaux(){return this->bateau;};
+>>>>>>> .r159
 };
 
 EXTERNC DLL Facade* Facade_New();

@@ -15,7 +15,7 @@ class Joueur
 	private :
 		std::map<int,int> score;
 		int num;
-		Bateau bateaux [2];
+		Bateau* bateaux [2];
 		
 	public :
 		Joueur();
@@ -25,7 +25,7 @@ class Joueur
 		int getScore(int x,int y) const;
 		void setScore(int x,int y);
 		int getNum() const;
-		Bateau& getBateau(int nb);
+		Bateau* getBateau(int nb);
 		void rentreAuPort(int x,int y);
 };
 
@@ -33,7 +33,7 @@ inline int Joueur::getNum() const{
 	return num;
 }
 
-inline Bateau& Joueur::getBateau(int nb){
+inline Bateau* Joueur::getBateau(int nb){
 	return this->bateaux[nb-1];
 }
 

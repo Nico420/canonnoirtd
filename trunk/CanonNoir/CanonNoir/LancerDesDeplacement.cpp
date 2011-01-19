@@ -21,9 +21,9 @@ void LancerDesDeplacement::execute(){
 void LancerDesDeplacement::calculCasesDeplacement(int de1,int de2){
 	this->moteur->getCasesDeplacementBateau().clear();
 	int totalDes = de1 + de2;
-	int nbDes = this->moteur->getJoueur(this->moteur->getJoueurCourant()).getBateau(1).getNbDes();
+	int nbDes = this->moteur->getJoueur(this->moteur->getJoueurCourant()).getBateau(1)->getNbDes();
 	this->activeDe2 = (nbDes==2);
-	std::pair<int,int> caseDepart = this->moteur->getJoueur(this->moteur->getJoueurCourant()).getBateau(1).getPosition();
+	std::pair<int,int> caseDepart = this->moteur->getJoueur(this->moteur->getJoueurCourant()).getBateau(1)->getPosition();
 	std::set<std::pair<int,int>> res;
 	res = this->casesAutour(caseDepart,de1);
 	this->casesDeplacement.insert(res.begin(),res.end());
@@ -39,9 +39,9 @@ void LancerDesDeplacement::calculCasesDeplacement(int de1,int de2){
 	this->setCasesDeplacementBateau(this->casesDeplacement,1);
 	//Cas de 2 joueurs
 	if(this->moteur->getNbJoueurs()==2){
-		nbDes = this->moteur->getJoueur(this->moteur->getJoueurCourant()).getBateau(2).getNbDes();
+		nbDes = this->moteur->getJoueur(this->moteur->getJoueurCourant()).getBateau(2)->getNbDes();
 		this->activeDe2 |= (nbDes==2);
-		caseDepart = this->moteur->getJoueur(this->moteur->getJoueurCourant()).getBateau(2).getPosition();
+		caseDepart = this->moteur->getJoueur(this->moteur->getJoueurCourant()).getBateau(2)->getPosition();
 		res = this->casesAutour(caseDepart,de1);
 		this->setCasesDeplacementBateau(res,2);
 		this->casesDeplacement.insert(res.begin(),res.end());
@@ -98,9 +98,9 @@ bool LancerDesDeplacement::isCheminValid(const std::pair<int,int>& caseDepart,in
 void LancerDesDeplacement::calculCasesDeplacement2(int de1,int de2){
 	this->moteur->getCasesDeplacementBateau().clear();
 	int totalDes = de1 + de2;
-	int nbDes = this->moteur->getJoueur(this->moteur->getJoueurCourant()).getBateau(1).getNbDes();
+	int nbDes = this->moteur->getJoueur(this->moteur->getJoueurCourant()).getBateau(1)->getNbDes();
 	this->activeDe2 = (nbDes==2);
-	std::pair<int,int> caseDepart = this->moteur->getJoueur(this->moteur->getJoueurCourant()).getBateau(1).getPosition();
+	std::pair<int,int> caseDepart = this->moteur->getJoueur(this->moteur->getJoueurCourant()).getBateau(1)->getPosition();
 	std::set<std::pair<int,int>> res;
 	res.insert(caseDepart);
 	int i = de1;

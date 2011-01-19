@@ -16,9 +16,9 @@ void Navigation::deplacer(int x, int y){
 	if(this->moteur->getCasesDeplacementBateau().count(make_pair(x,y))>0){
 		int numBat = 1;
 		if(this->moteur->getNbJoueurs()==2) numBat = this->moteur->getCasesDeplacementBateau()[make_pair(x,y)];
-		Bateau& bat = this->moteur->getJoueur(this->moteur->getJoueurCourant()).getBateau(numBat);
-		this->moteur->getPlateau().libereCase(bat.getPosition().first,bat.getPosition().second);
-		bat.deplacer(x,y);
+		Bateau* bat = this->moteur->getJoueur(this->moteur->getJoueurCourant()).getBateau(numBat);
+		this->moteur->getPlateau().libereCase(bat->getPosition().first,bat->getPosition().second);
+		bat->deplacer(x,y);
 		this->moteur->getPlateau().occupeCase(x,y);
 		ostringstream mes;
 		mes << "Joueur bla";
@@ -45,10 +45,10 @@ void Navigation::deplacer(int x, int y){
 		}
 		else if(this->moteur->getPlateau().getEtat(x,y)==Moteur::LANCERDESDEPLACEMENT){
 			bool partieFinie = false;
-			if(!bat.aTresorABord() && this->moteur->getPlateau().getNbTresors(x,y)>0){
-				if(bat.donneTresor()) this->moteur->getPlateau().enleveUnTresor(x,y);
+			if(!bat->aTresorABord() && this->moteur->getPlateau().getNbTresors(x,y)>0){
+				if(bat->donneTresor()) this->moteur->getPlateau().enleveUnTresor(x,y);
 			}
-			else if(bat.getPositionPort().first==x && bat.getPositionPort().second==y){
+			else if(bat->getPositionPort().first==x && bat->getPositionPort().second==y){
 				//traitement bateau rentre au port
 				this->moteur->getJoueur(this->moteur->getJoueurCourant()).setScore(x,y);
 				if(this->moteur->getJoueur(this->moteur->getJoueurCourant()).getScore(x,y)==3){
@@ -75,13 +75,13 @@ void Navigation::setCasesBateauxCibles(){
 	int joueurCourant = this->moteur->getJoueurCourant();
 	if(nbJoueurs==2){
 		int autreJoueur = (joueurCourant==1)? 2 : 1;
-		this->casesBateauxCibles.insert(this->moteur->getJoueur(autreJoueur).getBateau(1).getPosition());
-		this->casesBateauxCibles.insert(this->moteur->getJoueur(autreJoueur).getBateau(2).getPosition());
+		this->casesBateauxCibles.insert(this->moteur->getJoueur(autreJoueur).getBateau(1)->getPosition());
+		this->casesBateauxCibles.insert(this->moteur->getJoueur(autreJoueur).getBateau(2)->getPosition());
 	}
 	else{
 		for(int i=1;i<=nbJoueurs;i++){
 			if(joueurCourant!=i)
-				this->casesBateauxCibles.insert(this->moteur->getJoueur(i).getBateau(1).getPosition());
+				this->casesBateauxCibles.insert(this->moteur->getJoueur(i).getBateau(1)->getPosition());
 		}
 	}
 }
