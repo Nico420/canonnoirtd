@@ -22,3 +22,14 @@ void Bateau::deplacer(int x, int y){
 	position.first = x;
 	position.second = y;
 }
+
+int Bateau::getNumPort() const{
+	int x = this->getPositionPort().first;
+	int y = this->getPositionPort().second;
+	int numPort;
+	if(x==1 && y==1) numPort = 1;
+	else if(x==11 && y==1) numPort = 2;
+	else if(x==1 && y==8) numPort = 3;
+	else if(x==11 && y==8) numPort = 4;
+	return numPort;
+}

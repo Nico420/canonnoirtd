@@ -16,9 +16,10 @@ class Radeau : public Bateau
 		Radeau() : Bateau(){};
 		Radeau(int posx, int posy, int posPortx, int posPorty) : 
 			Bateau(1,false,posx,posy,posPortx,posPorty){};
-		Radeau(const Bateau& bat);
+		Radeau(const Bateau* bat);
 		virtual ~Radeau();
 		virtual bool donneTresor();
+		virtual int getType() const;
 };
 
 inline bool Radeau::donneTresor(){

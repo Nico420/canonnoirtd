@@ -26,8 +26,10 @@ class Bateau
 		virtual void enleveTresor();
 		virtual bool donneTresor();
 		virtual int getNbDes() const;
+		virtual int getType() const;
 		std::pair<int,int> getPosition() const;
 		std::pair<int,int> getPositionPort() const;
+		int getNumPort() const;
 }; 
 
 inline bool Bateau::aTresorABord() const{
@@ -45,6 +47,10 @@ inline bool Bateau::donneTresor(){
 
 inline int Bateau::getNbDes() const{
 	return this->nbDes;
+}
+
+inline int Bateau::getType() const{
+	return 0;
 }
 
 inline std::pair<int,int> Bateau::getPosition() const{
