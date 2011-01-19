@@ -29,13 +29,15 @@ namespace WPF
         // 1/8 of the click area. For the moment it's a constant, but we can perhaps make it dynamic.
         private static double LARGEUR_CASE = 60.454545;
 
-        private static int ROUGE = 1;
-        private static int BLEU = 2;
-        private static int VERT = 3;
-        private static int JAUNE = 4;
+        private const int ROUGE = 1;
+        private const int BLEU = 2;
+        private const int VERT = 3;
+        private const int JAUNE = 4;
         // Those variables are usefull in order to "clean" the map (we mean erase the rectangle that we draw).
         private int nbCasesRect = 0;
         private int dernierIndex = 0;
+        private int nbCasesChoix = 0;
+        private int dernierIndexPort = 0;
         
 
         /// <summary>
@@ -85,35 +87,34 @@ namespace WPF
 
             }
 
+            if (tresor) bateau += "-tresor";
             switch (couleur) 
             {
-                case 1:
+                case BLEU:
                     bateau += "_bleu.bmp";
                     break;
-                case 2:
+                case ROUGE:
                     bateau+="_rouge.bmp";
                     break;
-                case 3:
+                case VERT:
                     bateau += "_vert.bmp";
                     break;
-                case 4:
+                case JAUNE:
                     bateau += "_jaune.bmp";
                     break;
                 default:
                     break;
             }
             Image image = new Image();
-            MessageBox.Show(bateau);
             BitmapImage bateau_img = new BitmapImage(new Uri("Images/" + bateau, UriKind.Relative));
             image.Source = bateau_img;
             image.Height = HAUTEUR_CASE - 5;
             image.Width = LARGEUR_CASE -5 ;
             image.HorizontalAlignment = HorizontalAlignment.Left;
             image.VerticalAlignment = VerticalAlignment.Center;
-            image.Margin = new Thickness(x * LARGEUR_CASE, y * HAUTEUR_CASE, 0, 0);
-            //
-            clickZone.Children.Add(image);
+            image.Margin = new Thickness(x * LARGEUR_CASE+5, y * HAUTEUR_CASE, 0, 0);
 
+            clickZone.Children.Add(image);
         }
 
 
@@ -122,17 +123,29 @@ namespace WPF
         /// </summary>
         private void setCases()
         {
-            int d = dernierIndex - nbCasesRect;
-            for (int c = dernierIndex; c > d; c--)
-            {
-                plateau.Children.RemoveAt(c);
-                nbCasesRect--;
-            }
+            int d = dernierIndexPort - nbCasesRect;
+            int e = dernierIndex - nbCasesChoix;
+            plateau.Children.RemoveRange(d+1, nbCasesRect);
+            clickZone.Children.RemoveRange(e+1, nbCasesChoix);
+            nbCasesRect =0;
+            nbCasesChoix =0;
             if (FacadeW.activerCases())
             {
                 //This pointer is create to get the table of active boxes from the Facade.
+                
+                IntPtr a2 = new IntPtr(FacadeW.getBateaux().GetHashCode());
+                if (a2.GetHashCode() >0)
+                {
+                    IntPtr a3 = Marshal.ReadIntPtr(a2);
+                    MessageBox.Show(a3.GetHashCode() + "");
+                    if (a3.GetHashCode() > 0)
+                    {
+                        int b3 = Marshal.ReadInt32(a3);
+                        MessageBox.Show("" + b3);
+                    }
+                }
+
                 IntPtr a = new IntPtr(FacadeW.getCasesActives().GetHashCode());
-                                
                 /*Display enable case*/
                 for (int i = 0; i < 88; i++)
                 {
@@ -173,7 +186,7 @@ namespace WPF
                         myRect.Margin = new Thickness(marghaut, marggauche, 0, 0);
 
                         plateau.Children.Add(myRect);
-                        dernierIndex = plateau.Children.IndexOf(myRect);
+                        dernierIndexPort = plateau.Children.IndexOf(myRect);
                     }
 
                         //Display boxes for boat's move.
@@ -187,7 +200,7 @@ namespace WPF
                         //La taille des rectangles devrait varier suivant port ou case normale
                         int y = i / 11;
                         int x = i % 11;
-
+                        nbCasesChoix++;
                         myRect.Height = HAUTEUR_CASE;
                         myRect.Width = LARGEUR_CASE;
                         double marghaut = x * LARGEUR_CASE+2;
@@ -197,10 +210,6 @@ namespace WPF
 
                         clickZone.Children.Add(myRect);
                         dernierIndex = clickZone.Children.IndexOf(myRect);
-                    }
-                    else
-                    {
-                        //MessageBox.Show("" + b);
                     }
                 }
             }
@@ -260,9 +269,10 @@ namespace WPF
                 this.LanceDes.IsEnabled = FacadeW.activerDes();
                 textBlock3.Text = FacadeW.getMessage();
                 double num_case = (y - 1) * 11 + x;
-                //afficherBateau(5,5, 0, false, 1);
-                afficherBateau(1, 1, 1, false, 2);
-                afficherBateau(7, 7, 2, false, 3);
+                //Test affichage, c'est ok !
+                afficherBateau(5,5, 0, false, 1);
+                afficherBateau(1, 1,1, false, 2);
+                afficherBateau(8, 8, 2, false, 3);
             }
         }
 

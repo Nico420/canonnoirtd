@@ -32,6 +32,11 @@ namespace Wrapper {
 		System::IntPtr^ getCasesActives(){
 			return gcnew IntPtr(FacadeW->Facade::getCasesActives());
 		};
+
+		System::IntPtr^ getBateaux(){
+			return gcnew IntPtr(FacadeW->Facade::getBateaux());
+		};
+
 		/*System::Void setAngle(int a){
 			FacadeW->setAngle(a);
 		};
@@ -102,7 +107,6 @@ namespace Wrapper {
 		int getDes2(){
 			return FacadeW->getDes2();
 		};
-
 	protected:
 		!WrapperFacade(){
 			Facade_Delete(FacadeW);

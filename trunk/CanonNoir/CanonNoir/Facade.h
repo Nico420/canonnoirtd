@@ -43,6 +43,7 @@ class DLL Facade
 		int de1;
 		int de2;
 		int* casesActives;
+		int** bateau;
 
 	public :
 		std::string message;
@@ -77,6 +78,7 @@ class DLL Facade
 		void lancerDes();
 		int getDes1(){return de1;};
 		int getDes2(){return de2;};
+		int** getBateaux(){return this->bateau;};
 };
 
 EXTERNC DLL Facade* Facade_New();
