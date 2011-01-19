@@ -37,7 +37,6 @@ class Moteur
 		pair<int,int> click;
 		map<pair<int,int>,int> casesDeplacementBateau;
 		int numEtatCourant;
-		
 		vector<Joueur> joueurs;
 		Plateau plateau;
 		Etat* etat;
@@ -116,6 +115,7 @@ class Moteur
 		int getJoueurCourant() const;
 
 
+		int** getPosBateaux();
 		vector<int>& getOrdreJoueurs();
 		void setJoueurCourant(int jc);
 		void lancerDes();

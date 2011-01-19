@@ -37,6 +37,7 @@ void Moteur::setClick(int x,int y){
 	this->execute();
 }
 
+
 void Moteur::setEtat(int e){
 	if(e!=this->numEtatCourant){
 		delete this->etat;
@@ -68,6 +69,14 @@ void Moteur::setEtat(int e){
 				break;
 		}
 	}
+}
+
+int** Moteur::getPosBateaux(){
+	int tab1[2]={1,2};
+	int tab2[2]={1,2};
+	int tab3[2]={1,2};
+	int *tab[3] = {tab1, tab2, tab3}; 
+	return tab;
 }
 
 void Moteur::execute(){

@@ -1,14 +1,18 @@
 #include "Navigation.h"
 #include "Moteur.h"
 #include <sstream>
+#include <iostream>
+
 
 using namespace std;
 
 void Navigation::execute(){
+	cout << "Etat Navigation";
 	this->deplacer(this->moteur->getClick().first,this->moteur->getClick().second);
 }
 
 void Navigation::deplacer(int x, int y){
+	cout << "Etat Navigation";
 	if(this->moteur->getCasesDeplacementBateau().count(make_pair(x,y))>0){
 		int numBat = 1;
 		if(this->moteur->getNbJoueurs()==2) numBat = this->moteur->getCasesDeplacementBateau()[make_pair(x,y)];
@@ -17,7 +21,7 @@ void Navigation::deplacer(int x, int y){
 		bat.deplacer(x,y);
 		this->moteur->getPlateau().occupeCase(x,y);
 		ostringstream mes;
-		mes << "Joueur ";
+		mes << "Joueur bla";
 		mes << this->moteur->getJoueurCourant();
 		if(this->moteur->getPlateau().getEtat(x,y)==Moteur::TIRCANONUNIQUE){
 			mes << ", choisissez le bateau que vous voulez attaquer.";
