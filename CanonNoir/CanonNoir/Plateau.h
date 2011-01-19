@@ -17,13 +17,13 @@ class Plateau
 	private :
 		static const int longueur = 11;
 		static const int largeur = 8;
-		Case tab_case [11][8];
+		Case* tab_case [longueur][largeur];
 		
 	public :
 		Plateau();
 		int getLargeur() const;
 		int getLongueur() const;
-		Case& getCase(int x, int y);
+		Case* getCase(int x, int y);
 		void libereCase(int x,int y);
 		void occupeCase(int x,int y);
 		void enleveUnTresor(int x,int y);

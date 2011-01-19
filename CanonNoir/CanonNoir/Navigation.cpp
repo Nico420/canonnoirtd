@@ -33,7 +33,7 @@ void Navigation::deplacer(int x, int y){
 			}
 			else{
 				this->moteur->passerAuJoueurSuivant();
-				mes.clear();
+				mes.str("");
 				mes << "Joueur " << this->moteur->getJoueurCourant();
 				mes << ", lancez les dés pour jouer.";
 				this->etatsuivant = Moteur::LANCERDESDEPLACEMENT;
@@ -56,7 +56,7 @@ void Navigation::deplacer(int x, int y){
 			}
 			if(!partieFinie){
 				this->moteur->passerAuJoueurSuivant();
-				mes.clear();
+				mes.str("");
 				mes << "Joueur " << this->moteur->getJoueurCourant();
 				mes << ", lancez les dés pour jouer.";
 				this->etatsuivant = Moteur::LANCERDESDEPLACEMENT;
