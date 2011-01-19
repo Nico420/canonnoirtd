@@ -1,0 +1,34 @@
+﻿<Window x:Class="WPF.Window2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Window2" Height="600" Width="500">
+    <Grid>
+        <TextBlock FontSize="20" TextAlignment="Center" FontWeight="Bold" FontStyle="Italic">Règles du Jeu</TextBlock>
+        <TextBlock Height="746" Margin="5,25" HorizontalAlignment="Left" Name="textBlock1" Text="TextBlock" VerticalAlignment="Top" Width="457" TextWrapping="Wrap" TextTrimming="WordEllipsis" TextAlignment="Justify">
+PRINCIPE DU JEU:<LineBreak />
+Chaque joueur est le commandant d'une flotte. Il choisit la couleur de son port et de sa flotte.
+A 4 joueurs, chacun prend 1 flotte. A 3 joueurs, une flotte est laissée de côté. A 2 joueurs, chacun prend 2 flottes.
+<LineBreak /><LineBreak />
+Chaque joueur , maintenant va partir pour la course aux trésors.  Regardez le plateau de jeu. il y a 4 cases marquées d'une croix rouge. Ce sont, en bordure des îles les caches secrètes des trésors. Atteindre une de ses cases, prendre un trésor, l'emporter avec son navire (il se place sur le socle) et le ramener au port, voilà le but du jeu. Pour gagner il faut réussir cette prise 3 fois.
+<LineBreak /><LineBreak />
+Il y a aussi 4 cases marquées d'un rond noir et illustrées par un canon et des boulets. A partir de ces cases, un joueur peut tirer sur ses adversaires, avec le canon noir.
+<LineBreak /><LineBreak />
+COMMENT MENER LA COURSES AU TRÉSOR:<LineBreak />
+Pour connaître le joueur qui commence, on lance les deux dés en même temps. Celui qui obtient le meilleur total joue le premier. les autres partent ensuite dans l'ordre de leurs points.
+Chaque commandant a sa flotte. Il met en jeu sa caravelle qui va partir du port correspondant à sa couleur. Pour la faire avancer, il lance les deux dés en même temps. Il a deux possibilités: utiliser le total des deux dés ou d'un seul. (Par exemple: Il obtient 3 et 5. Il peut avancer sa caravelle de 8 cases (3+5) ou de 3 cases ou de 5 cases). Il peut le déplacer dans n'importe quelle direction, horizontalement, diagonalement ou verticalement. Il choisit les points et la direction qui lui conviennent. Dans le même coup il n'a pas le droit de faire un aller retour ni de bifurquer pour utiliser le total de ses points. Il doit tomber pile sur la case TRÉSOR ou CANON NOIR qu'il veut atteindre. Les îles doivent être contournées mais il est possible d'utiliser les cases sur lesquelles elles empiètent.
+<LineBreak /><LineBreak />
+Si sa caravelle est coulée par un adversaire, le commandant le remplace aussitôt sur place par la frégate. Il conserve le trésor qu'il transporte, éventuellement, et n'avance qu'avec un seul dé. Si la frégate est coulée à son tour, il doit rentrer au port avec son radeau et donner le trésor qu'il transporte, éventuellement, à son vainqueur. Quand il a rejoint son port, il droit au tour suivant de repartir avec sa caravelle et d'utiliser de nouveau les deux dés en même temps. Attention: Un radeau ne transporte jamais de trésor.
+<LineBreak /><LineBreak />
+POUR COULER UN NAVIRE ENNEMI:<LineBreak />
+Deux possibilités:<LineBreak />
+Arriver pile sur une cases Canon Noir: le commandant prend alors le canon, le met sur la case correspondante, charge le canon, vise un adversaire et tire. S'il réussit son tir, cet adversaire change de bâtiment comme préciser plus haut. S'il le manque, le jeu continue.
+<LineBreak /><LineBreak />
+Arriver sur une case en bordure de jeu, exactement en face et à l'opposé d'un adversaire: Dans ce cas, engager un duel au canon.
+Le duel: A prend le canon, le charge et tire sur B. S'il réussit son tir, B doit changer de navire comme nous l'avons dit. S'il le manque, il remet son navire dans sa position initiale et c'est B qui, à son tour, prend le canon, le charge, et tire sur A. S'il réussit son tir, A change de navire et s'il possède un trésor le donne à B. S'il manque sa cible, le combat s'arrête là.
+<LineBreak /><LineBreak />
+LE VAINQUEUR:<LineBreak />
+C'est celui qui, le premier, a ramené 3 trésors à son port d'attache. Il mérite le surnom de "Canon Noir".
+        </TextBlock>
+        <ScrollBar Height="561" HorizontalAlignment="Left" Margin="461,0,0,0" Name="scrollBar1" VerticalAlignment="Top" Width="17" />
+    </Grid>
+</Window>

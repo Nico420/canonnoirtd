@@ -66,3 +66,5 @@ C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\WPF\obj\x86\Debug\Generate
 C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\WPF\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\WPF\obj\x86\Debug\WPF.exe
 C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\WPF\obj\x86\Debug\WPF.pdb
+C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\WPF\obj\x86\Debug\Window2.baml
+C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\WPF\obj\x86\Debug\Window2.g.cs
