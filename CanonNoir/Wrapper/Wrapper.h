@@ -37,6 +37,7 @@ namespace Wrapper {
 			return gcnew IntPtr(FacadeW->Facade::getBateaux());
 		};
 
+
 		/*System::Void setAngle(int a){
 			FacadeW->setAngle(a);
 		};

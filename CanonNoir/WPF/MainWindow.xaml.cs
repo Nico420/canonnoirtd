@@ -131,7 +131,7 @@ namespace WPF
             nbCasesChoix =0;
             if (FacadeW.activerCases())
             {
-                //This pointer is create to get the table of active boxes from the Facade.
+                
                 
                 IntPtr a2 = new IntPtr(FacadeW.getBateaux().GetHashCode());
                 if (a2.GetHashCode() >0)
@@ -144,7 +144,7 @@ namespace WPF
                         MessageBox.Show("" + b3);
                     }
                 }
-
+                //This pointer is create to get the table of active boxes from the Facade.
                 IntPtr a = new IntPtr(FacadeW.getCasesActives().GetHashCode());
                 /*Display enable case*/
                 for (int i = 0; i < 88; i++)

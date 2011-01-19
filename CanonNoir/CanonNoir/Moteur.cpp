@@ -71,11 +71,8 @@ void Moteur::setEtat(int e){
 	}
 }
 
-int** Moteur::getPosBateaux(){
-	int tab1[2]={1,2};
-	int tab2[2]={1,2};
-	int tab3[2]={1,2};
-	int *tab[3] = {tab1, tab2, tab3}; 
+int* Moteur::getPosBateaux(){
+	int tab[16];
 	return tab;
 }
 
