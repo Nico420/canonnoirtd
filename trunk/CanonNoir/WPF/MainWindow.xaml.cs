@@ -302,10 +302,10 @@ namespace WPF
 
         private void clickZone_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            if (FacadeW.afficheBateaux())
+            /*if (FacadeW.afficheBateaux())
             {
                 this.BoatUpdate();
-            }
+            }*/
             if (FacadeW.activerCases())
             {
                 double a = Mouse.GetPosition(clickZone).X;
@@ -320,9 +320,9 @@ namespace WPF
                 textBlock3.Text = FacadeW.getMessage();
                 double num_case = (y - 1) * 11 + x;
                 //Test affichage, c'est ok !
-                afficherBateau(5,5, 0, false, 1);
+                /*afficherBateau(5,5, 0, false, 1);
                 afficherBateau(1, 1,1, false, 2);
-                afficherBateau(8, 8, 2, false, 3);
+                afficherBateau(8, 8, 2, false, 3);*/
             }
         }
 
