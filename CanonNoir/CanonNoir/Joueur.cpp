@@ -35,7 +35,7 @@ void Joueur::setScore(int x,int y){
 
 void Joueur::degraderBateau(int x,int y){
 	int i = (this->bateaux[0]->getPosition().first==x && this->bateaux[0]->getPosition().second==y)? 0 : 1;
-	if(typeid(this->bateaux[i])==typeid(Caravelle)){
+	if(typeid(this->bateaux[i])==typeid(Caravelle*)){
 		delete this->bateaux[i];
 		Fregate* freg = new Fregate(this->bateaux[i]);
 		this->bateaux[i] = freg;

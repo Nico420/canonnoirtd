@@ -59,8 +59,8 @@ void Facade::setClick(int x,int y){
 		this->activeCases = true;
 	}
 	else if(this->motor->getEtat()->getEtat()==Moteur::SETORDREJOUEURS){
-		//delete[] this->infosBateaux;
-		//this->infosBateaux = this->motor->getPosBateaux();
+		delete[] this->infosBateaux;
+		this->infosBateaux = this->motor->getPosBateaux();
 		this->motor->setEtat(Moteur::SETORDREJOUEURS);
 		this->activeLancerDes = true;
 		this->activeDe1 = true;
@@ -69,8 +69,8 @@ void Facade::setClick(int x,int y){
 		this->affichePorts = false;
 	}
 	else if(this->motor->getEtat()->getEtat()==Moteur::LANCERDESDEPLACEMENT){
-		//delete[] this->infosBateaux;
-		//this->infosBateaux = this->motor->getPosBateaux();
+		delete[] this->infosBateaux;
+		this->infosBateaux = this->motor->getPosBateaux();
 		this->motor->setEtat(Moteur::LANCERDESDEPLACEMENT);
 		this->activeLancerDes = true;
 		this->activeDe1 = true;
@@ -84,8 +84,8 @@ void Facade::setClick(int x,int y){
 void Facade::lancerDes(){
 	this->motor->execute();
 	this->message = this->motor->getEtat()->getMessage();
-	//delete[] this->infosBateaux;
-	//this->infosBateaux = this->motor->getPosBateaux();
+	delete[] this->infosBateaux;
+	this->infosBateaux = this->motor->getPosBateaux();
 	this->de1 = this->motor->getDe1();
 	this->de2 = this->motor->getDe2();
 	delete[] this->casesActives;

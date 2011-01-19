@@ -77,17 +77,17 @@ int* Moteur::getPosBateaux(){
 	int cpt = 0;
 	for(int i=0;i<nbJoueurs;i++){
 		res[cpt*5] = joueurs.at(cpt).getBateau(1)->getPosition().first;
-		res[(cpt+1)*5] = joueurs.at(cpt).getBateau(1)->getPosition().second;
-		res[(cpt+2)*5] = joueurs.at(cpt).getBateau(1)->aTresorABord();
-		res[(cpt+3)*5] = joueurs.at(cpt).getBateau(1)->getType();
-		res[(cpt+4)*5] = joueurs.at(cpt).getBateau(1)->getNumPort();
+		res[cpt*5+1] = joueurs.at(cpt).getBateau(1)->getPosition().second;
+		res[cpt*5+2] = joueurs.at(cpt).getBateau(1)->aTresorABord();
+		res[cpt*5+3] = joueurs.at(cpt).getBateau(1)->getType();
+		res[cpt*5+4] = joueurs.at(cpt).getBateau(1)->getNumPort();
 		if(nbJoueurs==2){
 			cpt++;
 			res[cpt*5] = joueurs.at(cpt).getBateau(2)->getPosition().first;
-			res[(cpt+1)*5] = joueurs.at(cpt).getBateau(2)->getPosition().second;
-			res[(cpt+2)*5] = joueurs.at(cpt).getBateau(2)->aTresorABord();
-			res[(cpt+3)*5] = joueurs.at(cpt).getBateau(2)->getType();
-			res[(cpt+4)*5] = joueurs.at(cpt).getBateau(2)->getNumPort();
+			res[cpt*5+1] = joueurs.at(cpt).getBateau(2)->getPosition().second;
+			res[cpt*5+2] = joueurs.at(cpt).getBateau(2)->aTresorABord();
+			res[cpt*5+3] = joueurs.at(cpt).getBateau(2)->getType();
+			res[cpt*5+4] = joueurs.at(cpt).getBateau(2)->getNumPort();
 		}
 		cpt++;
 	}
