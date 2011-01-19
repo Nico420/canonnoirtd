@@ -361,6 +361,7 @@ namespace WPF
         private void AfficheAide(object sender, RoutedEventArgs e)
         {
             Window2 w = new Window2();
+            
             w.Show();
         }
 

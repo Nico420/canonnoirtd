@@ -2,9 +2,13 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Window2" Height="600" Width="500">
+    
     <Grid>
-        <TextBlock FontSize="20" TextAlignment="Center" FontWeight="Bold" FontStyle="Italic">Règles du Jeu</TextBlock>
-        <TextBlock Height="746" Margin="5,25" HorizontalAlignment="Left" Name="textBlock1" Text="TextBlock" VerticalAlignment="Top" Width="457" TextWrapping="Wrap" TextTrimming="WordEllipsis" TextAlignment="Justify">
+
+        <Image Source="Images\aide.png" Height="50" Margin="0,0,0,0" FlowDirection="RightToLeft" />
+        <ScrollViewer HorizontalScrollBarVisibility="Auto">
+            <TextBlock TextWrapping="Wrap" Height="1000" Margin="5,0" HorizontalAlignment="Left" Name="textBlock1" VerticalAlignment="Top" Width="457" TextTrimming="WordEllipsis" TextAlignment="Justify">
+<TextBlock FontSize="20" TextAlignment="Center" FontWeight="Bold" FontStyle="Italic">Règles du Jeu</TextBlock><LineBreak></LineBreak>
 PRINCIPE DU JEU:<LineBreak />
 Chaque joueur est le commandant d'une flotte. Il choisit la couleur de son port et de sa flotte.
 A 4 joueurs, chacun prend 1 flotte. A 3 joueurs, une flotte est laissée de côté. A 2 joueurs, chacun prend 2 flottes.
@@ -28,7 +32,7 @@ Le duel: A prend le canon, le charge et tire sur B. S'il réussit son tir, B doi
 <LineBreak /><LineBreak />
 LE VAINQUEUR:<LineBreak />
 C'est celui qui, le premier, a ramené 3 trésors à son port d'attache. Il mérite le surnom de "Canon Noir".
-        </TextBlock>
-        <ScrollBar Height="561" HorizontalAlignment="Left" Margin="461,0,0,0" Name="scrollBar1" VerticalAlignment="Top" Width="17" />
+            </TextBlock>
+        </ScrollViewer>
     </Grid>
 </Window>
