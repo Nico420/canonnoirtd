@@ -43,7 +43,7 @@ class DLL Facade
 		int de1;
 		int de2;
 		int* casesActives;
-		int** bateau;
+		int* bateau;
 
 	public :
 		std::string message;
