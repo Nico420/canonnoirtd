@@ -44,7 +44,7 @@
                 <MenuItem Header="_Plein écran" Click="fullscreen" />
             </MenuItem>
                 <MenuItem Header="_Aide" />
-                <MenuItem Header="_Règle du jeu" />
+                <MenuItem Header="_Règle du jeu" Click="AfficheAide"/>
         </Menu>
         <Canvas Height="100" HorizontalAlignment="Left" Margin="13,319,0,0" Name="des" VerticalAlignment="Top" Width="130" Background="#FFD6D1D1">
             <Image Name="des2" Source="Images/face1.jpg" Height="50" Margin="70,10" />

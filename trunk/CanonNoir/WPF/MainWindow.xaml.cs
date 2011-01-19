@@ -264,7 +264,10 @@ namespace WPF
 
         private void clickZone_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            this.BoatUpdate();
+            if (FacadeW.afficheBateaux())
+            {
+                this.BoatUpdate();
+            }
             if (FacadeW.activerCases())
             {
                 double a = Mouse.GetPosition(clickZone).X;
@@ -315,6 +318,11 @@ namespace WPF
             };
             _lancerDesTimer.Start();
             
+        }
+
+        private void AfficheAide(object sender, RoutedEventArgs e)
+        {
+            Window2 w = new Window2();
         }
 
 
