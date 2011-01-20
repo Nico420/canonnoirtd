@@ -63,7 +63,7 @@ class DLL Facade
 		bool afficheTir();
 		int getNbJoueurs(){return this->motor->nbJoueurs;};
 		bool getAttenteNbJoueurs();
-		int* getScores();
+		int* getScores(){return this->scoresBateaux;};
 		int getNbDes();
 		int* getPortsLibres();
 		bool afficheBateaux(){return afficheBat;};

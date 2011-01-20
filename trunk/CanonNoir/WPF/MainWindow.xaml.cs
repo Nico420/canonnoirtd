@@ -147,6 +147,11 @@ namespace WPF
             }
             if (tresor) bateau += "-tresor";
             bateau += ".bmp";
+            Button bat = new Button();
+            bat.Height = HAUTEUR_CASE - 5;
+            bat.Width = LARGEUR_CASE - 10;
+            bat.Margin = new Thickness(x * LARGEUR_CASE + clickZone.Margin.Left + 7, y * HAUTEUR_CASE + clickZone.Margin.Top + 5, 0, 0);
+
             Image image = new Image();
             BitmapImage bateau_img = new BitmapImage(new Uri("Images/" + bateau, UriKind.Relative));
             image.Source = bateau_img;
@@ -154,10 +159,11 @@ namespace WPF
             image.Width = LARGEUR_CASE -5 ;
             image.HorizontalAlignment = HorizontalAlignment.Left;
             image.VerticalAlignment = VerticalAlignment.Center;
-            image.Margin = new Thickness(x * LARGEUR_CASE + clickZone.Margin.Left+2, y * HAUTEUR_CASE + clickZone.Margin.Top+5, 0, 0);
+            //image.Margin = new Thickness(x * LARGEUR_CASE + clickZone.Margin.Left+7, y * HAUTEUR_CASE + clickZone.Margin.Top+5, 0, 0);
             nbBateaux++;
-            plateau.Children.Add(image);
-            dernierIndexBateau = plateau.Children.IndexOf(image);
+            bat.Content = image;
+            plateau.Children.Add(bat);
+            dernierIndexBateau = plateau.Children.IndexOf(bat);
         }
 
 
