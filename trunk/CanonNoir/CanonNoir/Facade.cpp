@@ -52,6 +52,7 @@ void Facade::setNbJoueurs(int nb){
 }
 
 void Facade::setClick(int x,int y){
+	
 	this->motor->setClick(x,y);
 	this->message = this->motor->getEtat()->getMessage();
 	delete[] this->casesActives;
@@ -61,7 +62,9 @@ void Facade::setClick(int x,int y){
 	}
 	else if(this->motor->getEtat()->getEtat()==Moteur::SETORDREJOUEURS){
 		delete[] this->infosBateaux;
+		cout<<"AvantFacade"<<endl;
 		this->infosBateaux = this->motor->getPosBateaux();
+		cout<<"AprèsFacade"<<endl;
 		/*cout<<"begin"<<endl;
 		for(int i=0;i<15;i++){
 			cout<<infosBateaux[i]<<endl;
@@ -72,7 +75,8 @@ void Facade::setClick(int x,int y){
 		this->activeDe2 = true;
 		this->activeCases = false;
 		this->affichePorts = false;
-		this->afficheBat = true;
+		this->afficheBat = true;	
+	
 	}
 	else if(this->motor->getEtat()->getEtat()==Moteur::LANCERDESDEPLACEMENT){
 		delete[] this->infosBateaux;
