@@ -19,7 +19,7 @@ class Joueur
 		
 	public :
 		Joueur();
-		Joueur(int num,int nbBat,int nbPort1,int nbPort2=0);
+		Joueur(int num,int nbBat,int nbPort1,int nbPort2);
 		~Joueur();
 		void degraderBateau(int x,int y);
 		int getScore(int x,int y) const;
