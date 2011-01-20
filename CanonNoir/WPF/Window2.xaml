@@ -5,11 +5,11 @@
     
     <Grid>
 
-        <Image Source="Images\aide.png" Height="50" Margin="0,0,0,0" FlowDirection="RightToLeft" />
+        <Image Source="Images\aide.png" Height="50" Margin="300,-500,0,0" />
         <ScrollViewer HorizontalScrollBarVisibility="Auto">
             <TextBlock TextWrapping="Wrap" Height="1000" Margin="5,0" HorizontalAlignment="Left" Name="textBlock1" VerticalAlignment="Top" Width="457" TextTrimming="WordEllipsis" TextAlignment="Justify">
 <TextBlock FontSize="20" TextAlignment="Center" FontWeight="Bold" FontStyle="Italic">Règles du Jeu</TextBlock><LineBreak></LineBreak>
-PRINCIPE DU JEU:<LineBreak />
+PRINCIPE DU JEU:<LineBreak /><LineBreak /> 
 Chaque joueur est le commandant d'une flotte. Il choisit la couleur de son port et de sa flotte.
 A 4 joueurs, chacun prend 1 flotte. A 3 joueurs, une flotte est laissée de côté. A 2 joueurs, chacun prend 2 flottes.
 <LineBreak /><LineBreak />

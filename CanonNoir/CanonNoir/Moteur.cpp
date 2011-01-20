@@ -112,5 +112,10 @@ void Moteur::passerAuJoueurSuivant(){
 	for(int i=0;i<this->nbJoueurs;i++){
 		if(this->ordreJoueurs.at(i)==this->joueurCourant) index = i;
 	}
+	cout<<"test"<<endl;
+	
 	this->joueurCourant = this->ordreJoueurs.at((index+1)%this->nbJoueurs);
+	cout<<this->joueurCourant<<endl;
+	cout<<"test"<<endl;
+	
 }
