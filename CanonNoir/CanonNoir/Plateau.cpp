@@ -77,3 +77,7 @@ Case* Plateau::getCase(int x, int y){
 int Plateau::getNbTresors(int x,int y) const{
 	return this->tab_case[x-1][y-1]->getNbTresors();
 }
+
+int Plateau::getHauteur(int x,int y) const{
+	return tab_case[x-1][y-1]->getHauteur();
+}
