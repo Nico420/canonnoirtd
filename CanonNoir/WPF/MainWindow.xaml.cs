@@ -70,44 +70,39 @@ namespace WPF
         /// <param name="y">boat's y</param>
         /// <param name="type">Give the type of boat : 0 for Caravelle, 1 for Frégate, 2 for Radeau</param>
         /// <param name="tresor">true if a tresor is on the boat, else false.</param>
-        /*private void updateScore()
+        private void updateScore()
         {
-            IntPtr score = new IntPtr(FacadeW.getScores().getHashCode());
-            int d = FacadeW.g
-            int score1 = 0, score2 = 0, score3 = 0, score4 = 0;
-            if (d == 2)
-            {
-                score1 = Marshal.ReadInt32(score);
+            IntPtr score = new IntPtr(FacadeW.getScores().GetHashCode());
+
+            int scorebleu = 0, scorerouge = 0, scorejaune = 0, scorevert = 0;
+                scorerouge = Marshal.ReadInt32(score);
                 score += sizeof(int);
-                score1 += Marshal.ReadInt32(score);
+                scorejaune += Marshal.ReadInt32(score);
                 score += sizeof(int);
-                score2 = Marshal.ReadInt32(score);
+                scorevert = Marshal.ReadInt32(score);
                 score += sizeof(int);
-                score2 += Marshal.ReadInt32(score);
-            }
-            else if (d == 3)
-            {
-                score1 = Marshal.ReadInt32(score);
-                score += sizeof(int);
-                score2 = Marshal.ReadInt32(score);
-                score += sizeof(int);
-                score3 = Marshal.ReadInt32(score);
-            }
-            else if (d == 4)
-            {
-                score1 = Marshal.ReadInt32(score);
-                score += sizeof(int);
-                score2 = Marshal.ReadInt32(score);
-                score += sizeof(int);
-                score3 = Marshal.ReadInt32(score);
-                score += sizeof(int);
-                score4 = Marshal.ReadInt32(score);
-            }
-            joueur1.Text = "Joueur 1 : " + score1;
-            joueur2.Text = "Joueur 2 : " + score2;
-            joueur3.Text = "Joueur 3 : " + score3;
-            joueur4.Text = "Joueur 4 : " + score4;
-        }*/
+                scorebleu += Marshal.ReadInt32(score);
+                if (scorebleu >= 0)
+                {
+                    joueurBleu.Text = "Bateau Bleu : " + scorebleu;
+                    joueurBleu.Visibility = System.Windows.Visibility.Visible;
+                }
+                if (scorejaune >= 0)
+                {
+                    joueurJaune.Text = "Bateau Jaune : " + scorebleu;
+                    joueurJaune.Visibility = System.Windows.Visibility.Visible;
+                }
+                if (scorevert >= 0)
+                {
+                    joueurVert.Text = "Bateau Vert : " + scorebleu;
+                    joueurVert.Visibility = System.Windows.Visibility.Visible;
+                }
+                if (scorerouge >= 0)
+                {
+                    joueurRouge.Text = "Bateau Rouge : " + scorebleu;
+                    joueurRouge.Visibility = System.Windows.Visibility.Visible;
+                }
+        }
 
 
         private void afficherBateau(int x, int y, int type, bool tresor,int couleur)
@@ -257,18 +252,12 @@ namespace WPF
         private void init_Jeu(int a)
         {
             Init.Visibility = System.Windows.Visibility.Hidden;
-            switch (a)
-            {
-                case 2:
-                    joueur3.Visibility = System.Windows.Visibility.Hidden;
-                    joueur4.Visibility = System.Windows.Visibility.Hidden;
-                    break;
-                case 3:
-                    joueur4.Visibility = System.Windows.Visibility.Hidden;
-                    break;
-                default:
-                break;
-            };
+
+                    
+            joueurJaune.Visibility = System.Windows.Visibility.Hidden;
+            joueurBleu.Visibility = System.Windows.Visibility.Hidden;
+            joueurRouge.Visibility = System.Windows.Visibility.Hidden;
+            joueurVert.Visibility = System.Windows.Visibility.Hidden;
             FacadeW.setNbJoueurs(a);
             this.setCases();
             textBlock3.Text = FacadeW.getMessage() + " <- Message du moteur";
@@ -294,6 +283,10 @@ namespace WPF
 
         private void BoatUpdate()
         {
+            if (FacadeW.afficheScores())
+            {
+                this.updateScore();
+            }
             IntPtr a = new IntPtr(FacadeW.getBateaux().GetHashCode());
             int d = (FacadeW.getNbJoueurs() == 3) ? 3 : 4;
             //Remove the "old" boats.

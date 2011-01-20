@@ -37,6 +37,10 @@ namespace Wrapper {
 			return gcnew IntPtr(FacadeW->Facade::getBateaux());
 		};
 
+		System::IntPtr^ getScores(){
+			return gcnew IntPtr(FacadeW->Facade::getScores());
+		};
+
 
 		/*System::Void setAngle(int a){
 			FacadeW->setAngle(a);
@@ -91,9 +95,9 @@ namespace Wrapper {
 		int* getPortsLibres();
 		*/
 		bool afficheBateaux(){return FacadeW->afficheBateaux();};
-		/*bool afficheRelief();
-		bool afficheScores();
-		bool affichePortsLibres();
+		//bool afficheRelief();
+		bool afficheScores(){return true;};
+		/*bool affichePortsLibres();
 		void setPuissance(int puissance);
 		void setCible(int nb);
 		void setDeplacement(int x, int y);*/
