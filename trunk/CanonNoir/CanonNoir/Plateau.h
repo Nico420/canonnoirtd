@@ -21,6 +21,7 @@ class Plateau
 		
 	public :
 		Plateau();
+		~Plateau();
 		int getLargeur() const;
 		int getLongueur() const;
 		Case* getCase(int x, int y);
