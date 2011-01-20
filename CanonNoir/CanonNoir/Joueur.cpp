@@ -57,6 +57,7 @@ int Joueur::getScore(int x,int y) const{
 
 void Joueur::rentreAuPort(int x,int y){
 	int i = (this->bateaux[0]->getPosition().first==x && this->bateaux[0]->getPosition().second==y)? 0 : 1;
-	delete this->bateaux[i];
+	Bateau* bat = this->bateaux[i];
 	this->bateaux[i] = new Caravelle(this->bateaux[i]);
+	delete bat;
 }

@@ -24,7 +24,7 @@ void Navigation::deplacer(int x, int y){
 		mes << "Joueur";
 		mes << this->moteur->getJoueurCourant()+"\n";
 		if(this->moteur->getPlateau().getEtat(x,y)==Moteur::TIRCANONUNIQUE){
-			mes << ", choisissez le bateau que vous voulez attaquer.";
+			mes << ", choisissez le bateau\nque vous voulez attaquer.";
 			this->casesBateauxCibles.clear();
 			this->setCasesBateauxCibles();
 			this->etatsuivant = Moteur::TIRCANONUNIQUE;
@@ -32,14 +32,14 @@ void Navigation::deplacer(int x, int y){
 		else if(this->moteur->getPlateau().getEtat(x,y)==Moteur::TIRCANONDUEL){
 			std::pair<int,int> caseOpposee = this->getCaseFaceOppose(x,y);
 			if(!this->moteur->getPlateau().estNavigable(caseOpposee.first,caseOpposee.second)){
-				mes << ", choisissez votre angle de tir.";
+				mes << ", choisissez votre\nangle de tir.";
 				this->etatsuivant = Moteur::TIRCANONDUEL;
 			}
 			else{
 				this->moteur->passerAuJoueurSuivant();
 				mes.str("");
 				mes << "Joueur " << this->moteur->getJoueurCourant();
-				mes << ", lancez les dés pour jouer.";
+				mes << ", lancez les dés\npour jouer.";
 				this->etatsuivant = Moteur::LANCERDESDEPLACEMENT;
 			}
 		}
