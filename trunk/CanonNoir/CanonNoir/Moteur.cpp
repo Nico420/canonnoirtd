@@ -113,9 +113,12 @@ void Moteur::passerAuJoueurSuivant(){
 		if(this->ordreJoueurs.at(i)==this->joueurCourant) index = i;
 	}
 	cout<<"test"<<endl;
-	
 	this->joueurCourant = this->ordreJoueurs.at((index+1)%this->nbJoueurs);
 	cout<<this->joueurCourant<<endl;
 	cout<<"test"<<endl;
-	
+}
+
+void Moteur::setPuissance(int puis){
+	puissance = puis;
+	this->execute();
 }

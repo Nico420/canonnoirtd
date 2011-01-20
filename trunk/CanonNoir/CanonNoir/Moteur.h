@@ -36,6 +36,8 @@ class Moteur
 		pair<int,int> click;
 		map<pair<int,int>,int> casesDeplacementBateau;
 		int numEtatCourant;
+		int angle;
+		int puissance;
 		vector<Joueur> joueurs;
 		Plateau plateau;
 		Etat* etat;
@@ -120,6 +122,10 @@ class Moteur
 		void lancerDes();
 		void passerAuJoueurSuivant();
 		Etat* getEtat() const;
+		int getAngle() const;
+		int getPuissance() const;
+		void setAngle(int ang);
+		void setPuissance(int puis);
 		int getDe1() const;
 		int getDe2() const;
 		Joueur& getJoueur(int nb);
@@ -175,6 +181,13 @@ inline Joueur& Moteur::getJoueur(int nb){
 
 inline map<pair<int,int>,int>& Moteur::getCasesDeplacementBateau(){
 	return this->casesDeplacementBateau;
+}
+
+inline int Moteur::getAngle() const{
+	return angle;
+}
+inline void Moteur::setAngle(int ang){
+	angle = ang;
 }
 
 #endif

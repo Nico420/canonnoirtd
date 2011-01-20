@@ -31,6 +31,7 @@ class Plateau
 		int getEtat(int x,int y) const;
 		bool estNavigable(int x,int y) const;
 		int getNbTresors(int x,int y) const;
+		int getHauteur(int x,int y) const;
 }; 
 
 inline int Plateau::getLargeur() const{
