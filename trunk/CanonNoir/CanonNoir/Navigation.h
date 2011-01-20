@@ -28,7 +28,7 @@ class Navigation : public Etat
 		void execute();
 		void deplacer(int x, int y);
 		int getEtat() const;
-		int* getCasesActives() const;
+		std::vector<int> getCasesActives() const;
 		void setCasesBateauxCibles();
 		std::pair<int,int> getCaseFaceOppose(int x,int y) const;
 		void setMessage(std::string mes);

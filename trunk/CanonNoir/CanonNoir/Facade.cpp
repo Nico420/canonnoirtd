@@ -45,8 +45,7 @@ void Facade::setNbJoueurs(int nb){
 	this->activeDe2 = false;
 	this->activeLancerDes = false;
 	this->affichePorts=true;
-	delete[] this->casesActives;
-	this->casesActives = this->motor->getEtat()->getCasesActives();
+	this->miseAJourCasesActives(this->motor->getEtat()->getCasesActives());
 	this->activeCases = true;
 	this->infosBateaux = (this->motor->getNbJoueurs()==3)? new int[15] : new int[20];
 }
@@ -55,8 +54,7 @@ void Facade::setClick(int x,int y){
 	
 	this->motor->setClick(x,y);
 	this->message = this->motor->getEtat()->getMessage();
-	delete[] this->casesActives;
-	this->casesActives = this->motor->getEtat()->getCasesActives();
+	this->miseAJourCasesActives(this->motor->getEtat()->getCasesActives());
 	if(this->motor->getEtat()->getEtat()==Moteur::CHOISIRPORT){
 		this->activeCases = true;
 	}
@@ -104,8 +102,7 @@ void Facade::lancerDes(){
 	this->infosBateaux = this->motor->getPosBateaux();
 	this->de1 = this->motor->getDe1();
 	this->de2 = this->motor->getDe2();
-	delete[] this->casesActives;
-	this->casesActives = this->motor->getEtat()->getCasesActives();
+	this->miseAJourCasesActives(this->motor->getEtat()->getCasesActives());
 	
 	if(this->motor->getEtat()->getEtat()==Moteur::LANCERDESDEPLACEMENT){
 		this->motor->setEtat(Moteur::LANCERDESDEPLACEMENT);
@@ -120,8 +117,12 @@ void Facade::lancerDes(){
 		this->activeDe2 = this->motor->getEtat()->getActiveDe2();
 		this->activeLancerDes = false;
 	}
-	
-	
+}
+
+void Facade::miseAJourCasesActives(std::vector<int> caseActives){
+	for(int i=0;i<this->motor->getPlateau().getLongueur()*this->motor->getPlateau().getLargeur();i++){
+		this->casesActives[i] = caseActives.at(i);
+	}
 }
 
 EXTERNC DLL Facade* Facade_New(){

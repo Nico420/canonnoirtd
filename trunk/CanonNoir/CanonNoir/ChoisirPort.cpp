@@ -76,19 +76,19 @@ void ChoisirPort::execute(){
 	this->setMessage(mes.str());
 }
 
-int* ChoisirPort::getCasesActives() const{
-	int* res = new int[this->moteur->getPlateau().getLongueur()*this->moteur->getPlateau().getLargeur()];
+std::vector<int> ChoisirPort::getCasesActives() const{
+	std::vector<int> res(this->moteur->getPlateau().getLongueur()*this->moteur->getPlateau().getLargeur(),0);
 	if(this->portsLibres[0]==1){
-		res[0] = 1;
+		res.at(0) = 1;
 	}
 	if(this->portsLibres[1]==1){
-		res[10] = 1;
+		res.at(10) = 1;
 	}
 	if(this->portsLibres[2]==1){
-		res[77] = 1;
+		res.at(77) = 1;
 	}
 	if(this->portsLibres[3]==1){
-		res[87] = 1;
+		res.at(87) = 1;
 	}
 	return res;
 }

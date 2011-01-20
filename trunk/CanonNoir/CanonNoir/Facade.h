@@ -80,6 +80,7 @@ class DLL Facade
 		int getDes1(){return de1;};
 		int getDes2(){return de2;};
 		int* getBateaux(){return this->infosBateaux;};
+		void miseAJourCasesActives(std::vector<int> caseActives);
 };
 
 EXTERNC DLL Facade* Facade_New();
