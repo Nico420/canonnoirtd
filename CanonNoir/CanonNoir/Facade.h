@@ -82,6 +82,7 @@ class DLL Facade
 		int* getBateaux(){return this->infosBateaux;};
 		void miseAJourCasesActives(std::vector<int> caseActives);
 		void miseAJourInfosPorts(std::vector<int> infos);
+		void miseAJourScores(std::vector<int> scores);
 };
 
 EXTERNC DLL Facade* Facade_New();

@@ -48,11 +48,21 @@ void Joueur::degraderBateau(int x,int y){
 }
 
 int Joueur::getScore(int x,int y) const{
-	int numPort = 1;
+	int numPort = 0;
+	if(x==1 && y==1) numPort = 1;
 	if(x==11 && y==1) numPort = 2;
 	if(x==1 && y==8) numPort = 3;
 	if(x==11 && y==8) numPort = 4;
 	return this->score.find(numPort)->second;
+}
+
+int Joueur::getScore(int nbPort) const{
+	if(this->score.count(nbPort)>0){
+		return this->score.find(nbPort)->second;
+	}
+	else{
+		return -1;
+	}
 }
 
 void Joueur::rentreAuPort(int x,int y){

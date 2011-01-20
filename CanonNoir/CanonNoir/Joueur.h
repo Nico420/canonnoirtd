@@ -23,6 +23,7 @@ class Joueur
 		~Joueur();
 		void degraderBateau(int x,int y);
 		int getScore(int x,int y) const;
+		int getScore(int nbPort) const;
 		void setScore(int x,int y);
 		int getNum() const;
 		Bateau* getBateau(int nb);

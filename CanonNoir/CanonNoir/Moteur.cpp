@@ -7,6 +7,7 @@
 #include "TirCanonDuel.h"
 #include "TirCanonUnique.h"
 #include "PartieGagnee.h"
+#include "Bateau.h"
 #include <sstream>
 
 Moteur::Moteur(){
@@ -128,4 +129,17 @@ void Moteur::passerAuJoueurSuivant(){
 void Moteur::setPuissance(int puis){
 	puissance = puis;
 	this->execute();
+}
+
+vector<int> Moteur::getScores(){
+	vector<int> res(4,-1);
+	for(int i=0;i<nbJoueurs;i++){
+		int a = this->joueurs.at(i).getBateau(0)->getNumPort();
+		res.at(a-1) = this->joueurs.at(i).getScore(a);
+		if(this->nbJoueurs==2){
+			int b = this->joueurs.at(i).getBateau(1)->getNumPort();
+			res.at(b-1) = this->joueurs.at(i).getScore(b);
+		}
+	}
+	return res;
 }
