@@ -303,6 +303,7 @@ namespace WPF
                 int type = Marshal.ReadInt32(a);
                 a += sizeof(int);
                 int couleur = Marshal.ReadInt32(a);
+                //MessageBox.Show("" + x + " " + y + " " + type + " " + tresor + " " + couleur);
                 this.afficherBateau(x, y, type, tresor, couleur);
                 a += sizeof(int);
             }
@@ -368,7 +369,16 @@ namespace WPF
             Window2 w = new Window2();
             w.Show();
         }
-
+        private void EnCasDeProbleme(object sender, RoutedEventArgs e)
+        {
+            String s = "Allumez Visual Studio,\n codez les parties manquantes !";
+            MessageBox.Show(s);
+        }
+        private void Apropos(object sender, RoutedEventArgs e)
+        {
+            String s = "Ici il faudrait mettre les versions, auteur,...";
+            MessageBox.Show(s);
+        }
 
     }
 }

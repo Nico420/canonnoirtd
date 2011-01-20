@@ -1,6 +1,7 @@
 #include "ChoisirPort.h"
 #include "Moteur.h"
 #include <sstream>
+#include <iostream>
 
 ChoisirPort::ChoisirPort(){
 	this->message = "";
@@ -77,6 +78,7 @@ void ChoisirPort::execute(){
 }
 
 std::vector<int> ChoisirPort::getCasesActives() const{
+	std::cout<<"test"<<std::endl;
 	std::vector<int> res(this->moteur->getPlateau().getLongueur()*this->moteur->getPlateau().getLargeur(),0);
 	if(this->portsLibres[0]==1){
 		res.at(0) = 1;

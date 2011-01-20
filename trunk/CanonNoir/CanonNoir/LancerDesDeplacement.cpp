@@ -2,10 +2,12 @@
 #include "Moteur.h"
 #include <math.h>
 #include <sstream>
+#include <iostream>
 
 void LancerDesDeplacement::execute(){
-	
+	std::cout<<"Etat lancerDesDeplacement"<<std::endl;
 	this->moteur->lancerDes();
+	std::cout<<"lancer de dés effectue"<<std::endl;
 	int de1 = this->moteur->getDe1();
 	int de2 = this->moteur->getDe2();
 	
@@ -60,13 +62,20 @@ void LancerDesDeplacement::calculCasesDeplacement(int de1,int de2){
 }
 
 bool LancerDesDeplacement::isValid(int x,int y) const{
+	cout<<"debut isValide"<<endl;
 	int longueur = this->moteur->getPlateau().getLongueur();
 	int largeur = this->moteur->getPlateau().getLargeur();
-	return (x<=longueur) && (y<=largeur) && (x>0) && (y>0) && this->moteur->getPlateau().estNavigable(x,y);
+	bool res = (x<=longueur) && (y<=largeur) && (x>0) && (y>0);
+	std::cout<<x<<" "<<y<<std::endl;
+	if(res) res &= this->moteur->getPlateau().estNavigable(x,y);
+	cout<<"fin isValide"<<endl;
+	return res;
+	
 }
 
 bool LancerDesDeplacement::isCheminValid(const std::pair<int,int>& caseDepart,int x,int y) const{
 	bool cheminOK = false;
+	cout<<"chemin Valide"<<endl;
 	if(this->isValid(x,y)){
 		cheminOK = true;
 		if(x==caseDepart.first){
@@ -92,6 +101,7 @@ bool LancerDesDeplacement::isCheminValid(const std::pair<int,int>& caseDepart,in
 			while(x!=caseDepart.first) if(!this->moteur->getPlateau().estNavigable(x--,y--)) cheminOK = false;
 		}
 	}
+	cout<<"chemin Valide - FIN"<<endl;
 	return cheminOK;
 }
 

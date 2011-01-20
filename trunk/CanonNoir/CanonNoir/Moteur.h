@@ -116,7 +116,7 @@ class Moteur
 		int getJoueurCourant() const;
 
 
-		int* getPosBateaux();
+		vector<int> getPosBateaux();
 		vector<int>& getOrdreJoueurs();
 		void setJoueurCourant(int jc);
 		void lancerDes();

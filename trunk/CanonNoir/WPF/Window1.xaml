@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Window1" Height="300" Width="733">
     <Grid Background="Aquamarine" MouseLeftButtonDown="finCombat" >
-        <TextBlock Text="Combat" ></TextBlock>
+        <TextBlock Text="Combat"></TextBlock>
         <StackPanel Height="158" HorizontalAlignment="Left" Margin="104,70,0,0" Name="stackPanel1" VerticalAlignment="Top" Width="99">
             <TextBlock Text="Choissiez l'angle de Tir !" Width="99" Height="30" TextTrimming="None" TextWrapping="WrapWithOverflow" />
             <Image Name="angle" Source="Images/select_angle.png" Margin="0,20,0,0" MouseLeftButtonDown="choixAngle" ></Image>
