@@ -3,6 +3,7 @@
 #include "Fregate.h"
 #include "Radeau.h"
 #include <typeinfo>
+#include <iostream>
 
 Joueur::Joueur(){
 	this->num = 0;
@@ -29,7 +30,8 @@ Joueur::~Joueur(){
 
 void Joueur::setScore(int x,int y){
 	int i = (this->bateaux[0]->getPosition().first==x && this->bateaux[0]->getPosition().second==y)? 0 : 1;
-	if(this->bateaux[i]->aTresorABord()) this->score[i]++;
+	if(this->bateaux[i]->aTresorABord()) this->score[this->bateaux[i]->getNumPort()]++;
+	std::cout<<"Map size :"<<score.size()<<std::endl;
 	this->bateaux[i]->enleveTresor();
 }
 

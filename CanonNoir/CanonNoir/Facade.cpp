@@ -14,6 +14,7 @@ Facade::Facade(){
 	this->afficheCanon = false;
 	this->affichePorts = false;
 	this->afficheBat = false;
+	this->afficheSco = false;
 	this->message = this->motor->getEtat()->getMessage();
 	this->scoresBateaux = NULL;
 	this->nbBateaux = 0;
@@ -39,7 +40,7 @@ void Facade::setNbJoueurs(int nb){
 	this->message = this->motor->getEtat()->getMessage();
 	this->nbBateaux = (nb==3)? 3 : 4;
 	this->scoresBateaux = new int[this->nbBateaux];
-	for(int i=0;i<this->nbBateaux;i++) this->scoresBateaux[i] = 0;
+	for(int i=0;i<this->nbBateaux;i++) this->scoresBateaux[i] = -1;
 	this->afficheAttenteNbJoueurs = false;
 	this->afficheJeuNormal = true;
 	this->activeDe1 = false;
@@ -60,10 +61,12 @@ void Facade::setClick(int x,int y){
 		this->activeCases = true;
 	}
 	else if(this->motor->getEtat()->getEtat()==Moteur::SETORDREJOUEURS){
+		this->afficheSco = true;
 		cout<<"AvantFacade"<<endl;
 		this->miseAJourInfosPorts(this->motor->getPosBateaux());
 		cout<<"AprèsFacade"<<endl;
 		this->miseAJourScores(this->motor->getScores());
+		cout<<"Après maj scores"<<endl;
 		/*cout<<"begin"<<endl;
 		for(int i=0;i<15;i++){
 			cout<<infosBateaux[i]<<endl;
@@ -81,9 +84,11 @@ void Facade::setClick(int x,int y){
 		this->miseAJourInfosPorts(this->motor->getPosBateaux());
 		cout<<"begin"<<endl;
 		for(int i=0;i<20;i++){
-			cout<<infosBateaux[i]<<endl;
+			//cout<<infosBateaux[i]<<endl;
 		}
 		this->miseAJourScores(this->motor->getScores());
+		cout<<"score :"<<endl;
+		for(int i=0;i<4;i++) cout<<this->scoresBateaux[i]<<endl;
 		this->motor->setEtat(Moteur::LANCERDESDEPLACEMENT);
 		this->activeLancerDes = true;
 		this->activeDe1 = true;

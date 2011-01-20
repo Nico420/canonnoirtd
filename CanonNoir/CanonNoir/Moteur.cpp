@@ -133,12 +133,13 @@ void Moteur::setPuissance(int puis){
 
 vector<int> Moteur::getScores(){
 	vector<int> res(4,-1);
-	for(int i=0;i<nbJoueurs;i++){
-		int a = this->joueurs.at(i).getBateau(0)->getNumPort();
-		res.at(a-1) = this->joueurs.at(i).getScore(a);
+	vector<Joueur>::iterator it;
+	for(it = joueurs.begin();it!=joueurs.end();it++){
+		int a = it->getBateau(1)->getNumPort();
+		res.at(a-1) = it->getScore(a);
 		if(this->nbJoueurs==2){
-			int b = this->joueurs.at(i).getBateau(1)->getNumPort();
-			res.at(b-1) = this->joueurs.at(i).getScore(b);
+			int b = it->getBateau(2)->getNumPort();
+			res.at(b-1) = it->getScore(b);
 		}
 	}
 	return res;

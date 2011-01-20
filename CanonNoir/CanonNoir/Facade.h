@@ -36,6 +36,7 @@ class DLL Facade
 		bool afficheAttenteNbJoueurs;
 		bool afficheJeuNormal;
 		bool affichePorts;
+		bool afficheSco;
 		bool afficheBat;
 		bool activeDe1;
 		bool activeDe2;
@@ -68,7 +69,7 @@ class DLL Facade
 		int* getPortsLibres();
 		bool afficheBateaux(){return afficheBat;};
 		bool afficheRelief();
-		bool afficheScores();
+		bool afficheScores(){ return afficheSco;};
 		bool affichePortsLibres(){return affichePorts;};
 		void setAngle(int angle);
 		void setPuissance(int puissance);

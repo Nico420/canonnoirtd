@@ -62,20 +62,20 @@ void LancerDesDeplacement::calculCasesDeplacement(int de1,int de2){
 }
 
 bool LancerDesDeplacement::isValid(int x,int y) const{
-	cout<<"debut isValide"<<endl;
+	//cout<<"debut isValide"<<endl;
 	int longueur = this->moteur->getPlateau().getLongueur();
 	int largeur = this->moteur->getPlateau().getLargeur();
 	bool res = (x<=longueur) && (y<=largeur) && (x>0) && (y>0);
-	std::cout<<x<<" "<<y<<std::endl;
+	//std::cout<<x<<" "<<y<<std::endl;
 	if(res) res &= this->moteur->getPlateau().estNavigable(x,y);
-	cout<<"fin isValide"<<endl;
+	//cout<<"fin isValide"<<endl;
 	return res;
 	
 }
 
 bool LancerDesDeplacement::isCheminValid(const std::pair<int,int>& caseDepart,int x,int y) const{
 	bool cheminOK = false;
-	cout<<"chemin Valide"<<endl;
+	//cout<<"chemin Valide"<<endl;
 	if(this->isValid(x,y)){
 		cheminOK = true;
 		if(x==caseDepart.first){
@@ -101,7 +101,7 @@ bool LancerDesDeplacement::isCheminValid(const std::pair<int,int>& caseDepart,in
 			while(x!=caseDepart.first) if(!this->moteur->getPlateau().estNavigable(x--,y--)) cheminOK = false;
 		}
 	}
-	cout<<"chemin Valide - FIN"<<endl;
+	//cout<<"chemin Valide - FIN"<<endl;
 	return cheminOK;
 }
 
