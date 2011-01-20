@@ -6,8 +6,8 @@
 
 Joueur::Joueur(){
 	this->num = 0;
-	this->bateaux[0] = new Caravelle();
-	this->bateaux[1] = new Caravelle();
+	this->bateaux[0] = NULL;
+	this->bateaux[1] = NULL;
 }
 
 Joueur::Joueur(int num,int nbBat,int nbPort1,int nbPort2){

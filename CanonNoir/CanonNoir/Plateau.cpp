@@ -46,6 +46,14 @@ Plateau::Plateau(){
 	}*/
 }
 
+Plateau::~Plateau(){
+	for(int i=0;i<11;i++){
+		for(int j=0;j<8;j++){
+			delete tab_case[i][j];
+		}
+	}
+}
+
 void Plateau::libereCase(int x,int y){
 	tab_case[x-1][y-1]->libereCase();
 }
