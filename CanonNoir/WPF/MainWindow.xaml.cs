@@ -30,9 +30,9 @@ namespace WPF
         private static double LARGEUR_CASE = 60.454545;
 
         private const int ROUGE = 1;
-        private const int BLEU = 2;
+        private const int BLEU = 4;
         private const int VERT = 3;
-        private const int JAUNE = 4;
+        private const int JAUNE = 2;
         // Those variables are usefull in order to "clean" the map (we mean erase the rectangle that we draw).
         private int nbCasesRect = 0;
         private int dernierIndex = 0;
@@ -241,7 +241,7 @@ namespace WPF
             }
             if (FacadeW.afficheBateaux())
             {
-                this.BoatUpdate();
+               this.BoatUpdate();
             }
            }
         private void init_Jeu(int a)
