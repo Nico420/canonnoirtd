@@ -9,6 +9,7 @@ Facade::Facade(){
 	for(int i=0;i<dim;i++){
 		this->casesActives[i] = 0;
 	}
+
 	this->affichePlateau = true;
 	this->afficheCanon = false;
 	this->affichePorts = false;
@@ -59,9 +60,8 @@ void Facade::setClick(int x,int y){
 		this->activeCases = true;
 	}
 	else if(this->motor->getEtat()->getEtat()==Moteur::SETORDREJOUEURS){
-		delete[] this->infosBateaux;
 		cout<<"AvantFacade"<<endl;
-		this->infosBateaux = this->motor->getPosBateaux();
+		this->miseAJourInfosPorts(this->motor->getPosBateaux());
 		cout<<"AprèsFacade"<<endl;
 		/*cout<<"begin"<<endl;
 		for(int i=0;i<15;i++){
@@ -77,12 +77,11 @@ void Facade::setClick(int x,int y){
 	
 	}
 	else if(this->motor->getEtat()->getEtat()==Moteur::LANCERDESDEPLACEMENT){
-		delete[] this->infosBateaux;
-		this->infosBateaux = this->motor->getPosBateaux();
-		/*cout<<"begin"<<endl;
-		for(int i=0;i<15;i++){
+		this->miseAJourInfosPorts(this->motor->getPosBateaux());
+		cout<<"begin"<<endl;
+		for(int i=0;i<20;i++){
 			cout<<infosBateaux[i]<<endl;
-		}*/
+		}
 		this->motor->setEtat(Moteur::LANCERDESDEPLACEMENT);
 		this->activeLancerDes = true;
 		this->activeDe1 = true;
@@ -94,23 +93,28 @@ void Facade::setClick(int x,int y){
 }
 
 void Facade::lancerDes(){
-	cout<<"Avant"<<endl;
+	
 	this->motor->execute();
-	cout<<"Apres"<<endl;
+	cout<<"Fin du execute de lancerDes"<<endl;
 	this->message = this->motor->getEtat()->getMessage();
-	delete[] this->infosBateaux;
-	this->infosBateaux = this->motor->getPosBateaux();
+	this->miseAJourInfosPorts(this->motor->getPosBateaux());
 	this->de1 = this->motor->getDe1();
 	this->de2 = this->motor->getDe2();
-	this->miseAJourCasesActives(this->motor->getEtat()->getCasesActives());
-	
 	if(this->motor->getEtat()->getEtat()==Moteur::LANCERDESDEPLACEMENT){
+		cout<<"BBBBBLLLLLAAAAA"<<endl;
+		for(int i=0;i<20;i++){
+			cout<<this->infosBateaux[i]<<"a";
+		}
+		cout <<endl;
 		this->motor->setEtat(Moteur::LANCERDESDEPLACEMENT);
 		this->activeCases = false;
 		this->activeLancerDes = true;
 	}
 	
 	else if(this->motor->getEtat()->getEtat()==Moteur::NAVIGATION){
+		cout<<"FACADE - avant miseajourCasesActives"<<endl;
+		this->miseAJourCasesActives(this->motor->getEtat()->getCasesActives());
+		cout<<"FACADE - avant miseajourCasesActives"<<endl;
 		this->motor->setEtat(Moteur::NAVIGATION);
 		this->activeCases = true;
 		this->activeDe1 = true;
@@ -122,6 +126,12 @@ void Facade::lancerDes(){
 void Facade::miseAJourCasesActives(std::vector<int> caseActives){
 	for(int i=0;i<this->motor->getPlateau().getLongueur()*this->motor->getPlateau().getLargeur();i++){
 		this->casesActives[i] = caseActives.at(i);
+	}
+}
+
+void Facade::miseAJourInfosPorts(std::vector<int> infos){
+	for(int i=0;i<infos.size();i++){
+		this->infosBateaux[i] = infos.at(i);
 	}
 }
 

@@ -3,8 +3,11 @@
 #include "CaseNormale.h"
 #include "CaseTresor.h"
 #include "CaseCanon.h"
+#include <iostream>
 
 Plateau::Plateau(){
+	std::cout<<"testPlateau"<<std::endl;
+	std::cout<<"testPlateau"<<std::endl;
 	//Cases Port
 	tab_case[0][0] = new CasePort(); tab_case[10][0] = new CasePort(); tab_case[0][7] = new CasePort();
 	tab_case[10][7] = new CasePort();
@@ -12,7 +15,7 @@ Plateau::Plateau(){
 	tab_case[4][2] = new CaseTresor(4); tab_case[4][5] = new CaseTresor(3); tab_case[6][3] = new CaseTresor(3);
 	tab_case[6][6] = new CaseTresor(4);
 	//Cases Canon
-	tab_case[7][1] = new CaseCanon(); tab_case[4][1] = new CaseCanon(); tab_case[4][9] = new CaseCanon();
+	tab_case[7][1] = new CaseCanon(); tab_case[1][4] = new CaseCanon(); tab_case[9][4] = new CaseCanon();
 	tab_case[3][6] = new CaseCanon();
 	//Cases au bord
 	for(int i1=1;i1<10;i1++) tab_case[i1][0] = new CaseNormale(0,true,true);
@@ -38,20 +41,14 @@ Plateau::Plateau(){
 	tab_case[7][6] = new CaseNormale(0,true,false);
 	tab_case[8][1] = new CaseNormale(0,true,false); tab_case[8][6] = new CaseNormale(0,true,false);
 	for(int i9=1;i9<7;i9++) if(i9!=4) tab_case[9][i9] = new CaseNormale(0,true,false);
-	/*
-	for(int i=0;i<11;i++){
-		for(int j=0;j<8;j++){
-			this->tab_case[i][j] = Case();
-		}
-	}*/
 }
 
 Plateau::~Plateau(){
-	for(int i=0;i<11;i++){
+	/*for(int i=0;i<11;i++){
 		for(int j=0;j<8;j++){
 			delete tab_case[i][j];
 		}
-	}
+	}*/
 }
 
 void Plateau::libereCase(int x,int y){
