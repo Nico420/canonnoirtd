@@ -37,8 +37,8 @@
         </Canvas>
         <Menu Height="23" IsMainMenu="True" HorizontalAlignment="Left" Name="menu1" VerticalAlignment="Top" Width="878" Grid.ColumnSpan="2" >
             <MenuItem Header="_Fichier" >
-                <MenuItem Header="_Nouvelle Partie" />
-                <MenuItem Header="_Quitter" />
+                <MenuItem Header="_Nouvelle Partie" Click="NouvellePartie" />
+                <MenuItem Header="_Quitter" Click="Quitter" />
             </MenuItem>
             <MenuItem Header="_Affichage" >
                 <MenuItem Header="_Plein écran" Click="fullscreen" />

@@ -72,7 +72,7 @@ namespace WPF
         /// <param name="tresor">true if a tresor is on the boat, else false.</param>
         /*private void updateScore()
         {
-            IntPtr score = new IntPtr(FacadeW.getScore().getHashCode());
+            IntPtr score = new IntPtr(FacadeW.getScores().getHashCode());
             int d = FacadeW.g
             int score1 = 0, score2 = 0, score3 = 0, score4 = 0;
             if (d == 2)
@@ -108,6 +108,8 @@ namespace WPF
             joueur3.Text = "Joueur 3 : " + score3;
             joueur4.Text = "Joueur 4 : " + score4;
         }*/
+
+
         private void afficherBateau(int x, int y, int type, bool tresor,int couleur)
         {
             String bateau = "bateau-";
@@ -145,7 +147,6 @@ namespace WPF
             }
             if (tresor) bateau += "-tresor";
             bateau += ".bmp";
-            if(tresor) MessageBox.Show(bateau);
             Image image = new Image();
             BitmapImage bateau_img = new BitmapImage(new Uri("Images/" + bateau, UriKind.Relative));
             image.Source = bateau_img;
@@ -381,6 +382,18 @@ namespace WPF
         {
             String s = "Ici il faudrait mettre les versions, auteur,...";
             MessageBox.Show(s);
+        }
+
+        private void NouvellePartie(object sender, RoutedEventArgs e)
+        {
+            MainWindow m = new MainWindow();
+            this.Close();
+            m.Show();
+        }
+
+        private void Quitter(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
 
     }
