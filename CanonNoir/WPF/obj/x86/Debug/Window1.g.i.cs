@@ -41,7 +41,7 @@ namespace WPF {
     public partial class Window1 : System.Windows.Window, System.Windows.Markup.IComponentConnector {
         
         
-        #line 7 "..\..\..\Window1.xaml"
+        #line 6 "..\..\..\Window1.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.StackPanel stackPanel1;
         
@@ -49,7 +49,7 @@ namespace WPF {
         #line hidden
         
         
-        #line 9 "..\..\..\Window1.xaml"
+        #line 8 "..\..\..\Window1.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Image angle;
         
@@ -57,7 +57,7 @@ namespace WPF {
         #line hidden
         
         
-        #line 11 "..\..\..\Window1.xaml"
+        #line 10 "..\..\..\Window1.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.StackPanel puissance;
         
@@ -65,7 +65,7 @@ namespace WPF {
         #line hidden
         
         
-        #line 12 "..\..\..\Window1.xaml"
+        #line 11 "..\..\..\Window1.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBlock textBlock1;
         
@@ -73,7 +73,7 @@ namespace WPF {
         #line hidden
         
         
-        #line 13 "..\..\..\Window1.xaml"
+        #line 12 "..\..\..\Window1.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Image image1;
         
@@ -122,7 +122,7 @@ namespace WPF {
             case 3:
             this.angle = ((System.Windows.Controls.Image)(target));
             
-            #line 9 "..\..\..\Window1.xaml"
+            #line 8 "..\..\..\Window1.xaml"
             this.angle.MouseLeftButtonDown += new System.Windows.Input.MouseButtonEventHandler(this.choixAngle);
             
             #line default
