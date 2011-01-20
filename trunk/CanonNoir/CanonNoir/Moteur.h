@@ -128,6 +128,7 @@ class Moteur
 		void setPuissance(int puis);
 		int getDe1() const;
 		int getDe2() const;
+		vector<int> getScores();
 		Joueur& getJoueur(int nb);
 		Plateau& getPlateau();
 		map<pair<int,int>,int>& getCasesDeplacementBateau();

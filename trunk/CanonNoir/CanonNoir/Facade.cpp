@@ -63,6 +63,7 @@ void Facade::setClick(int x,int y){
 		cout<<"AvantFacade"<<endl;
 		this->miseAJourInfosPorts(this->motor->getPosBateaux());
 		cout<<"AprèsFacade"<<endl;
+		this->miseAJourScores(this->motor->getScores());
 		/*cout<<"begin"<<endl;
 		for(int i=0;i<15;i++){
 			cout<<infosBateaux[i]<<endl;
@@ -82,6 +83,7 @@ void Facade::setClick(int x,int y){
 		for(int i=0;i<20;i++){
 			cout<<infosBateaux[i]<<endl;
 		}
+		this->miseAJourScores(this->motor->getScores());
 		this->motor->setEtat(Moteur::LANCERDESDEPLACEMENT);
 		this->activeLancerDes = true;
 		this->activeDe1 = true;
@@ -132,6 +134,12 @@ void Facade::miseAJourCasesActives(std::vector<int> caseActives){
 void Facade::miseAJourInfosPorts(std::vector<int> infos){
 	for(int i=0;i<infos.size();i++){
 		this->infosBateaux[i] = infos.at(i);
+	}
+}
+
+void Facade::miseAJourScores(std::vector<int> scores){
+	for(int i=0;i<scores.size();i++){
+		this->scoresBateaux[i] = scores.at(i);
 	}
 }
 
