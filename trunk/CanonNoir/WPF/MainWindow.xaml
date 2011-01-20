@@ -28,10 +28,10 @@
 
                 <TextBlock Canvas.Left="0" Canvas.Top="35" Height="77" Name="textBlock3" Text="Message" Width="130" TextTrimming="CharacterEllipsis" />
                 <TextBlock Canvas.Left="23" Canvas.Top="182" Height="23" Name="score" Text="Score" />
-                <TextBlock Canvas.Left="23" Width="100" Canvas.Top="202" Height="20" Name="joueur1" Text="Bateau Rouge" Background="Red" />
-                <TextBlock Canvas.Left="23" Width="100" Canvas.Top="222" Height="20" Name="joueur2" Text="Bateau Jaune" Background="Yellow"/>
-                <TextBlock Canvas.Left="23" Width="100" Canvas.Top="242" Height="20" Name="joueur3" Text="Bateau Vert" Background="GREEN"/>
-                <TextBlock Canvas.Left="23" Width="100" Canvas.Top="262" Height="20" Name="joueur4" Text="Bateau Bleu" Background="BLue"/>
+                <TextBlock Canvas.Left="23" Width="100" Canvas.Top="202" Height="20" Name="joueurRouge" Text="Bateau Rouge" Background="Red" />
+                <TextBlock Canvas.Left="23" Width="100" Canvas.Top="222" Height="20" Name="joueurJaune" Text="Bateau Jaune" Background="Yellow"/>
+                <TextBlock Canvas.Left="23" Width="100" Canvas.Top="242" Height="20" Name="joueurVert" Text="Bateau Vert" Background="GREEN"/>
+                <TextBlock Canvas.Left="23" Width="100" Canvas.Top="262" Height="20" Name="joueurBleu" Text="Bateau Bleu" Background="BLue"/>
                 <Image Canvas.Left="9" Canvas.Top="93" Height="83" Name="image1" Stretch="Fill" Width="100" Source="Images/tresor.jpg" />
             </Canvas>
         </Canvas>
