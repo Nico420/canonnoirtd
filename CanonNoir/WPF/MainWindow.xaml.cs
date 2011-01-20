@@ -125,24 +125,27 @@ namespace WPF
 
             }
 
-            if (tresor) bateau += "-tresor";
+            
             switch (couleur) 
             {
                 case BLEU:
-                    bateau += "_bleu.bmp";
+                    bateau += "_bleu";
                     break;
                 case ROUGE:
-                    bateau+="_rouge.bmp";
+                    bateau+="_rouge";
                     break;
                 case VERT:
-                    bateau += "_vert.bmp";
+                    bateau += "_vert";
                     break;
                 case JAUNE:
-                    bateau += "_jaune.bmp";
+                    bateau += "_jaune";
                     break;
                 default:
                     break;
             }
+            if (tresor) bateau += "-tresor";
+            bateau += ".bmp";
+            if(tresor) MessageBox.Show(bateau);
             Image image = new Image();
             BitmapImage bateau_img = new BitmapImage(new Uri("Images/" + bateau, UriKind.Relative));
             image.Source = bateau_img;

@@ -208,6 +208,30 @@
   <ItemGroup>
     <Resource Include="Images\aide.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bateau-Caravelle_rouge-tresor.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bateau-Caravelle_bleu-tresor.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bateau-Caravelle_jaune-tresor.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bateau-Caravelle_vert-tresor.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bateau-fregate_bleu-tresor.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bateau-fregate_rouge-tresor.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bateau-fregate_jaune-tresor.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bateau-fregate_vert-tresor.bmp" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
