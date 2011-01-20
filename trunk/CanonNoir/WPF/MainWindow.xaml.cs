@@ -38,8 +38,8 @@ namespace WPF
         private int dernierIndex = 0;
         private int nbCasesChoix = 0;
         private int dernierIndexPort = 0;
-        
-
+        private int nbBateaux = 0;
+        private int dernierIndexBateau = 0;
         /// <summary>
         /// Method for creation of a new main Window. We need to associated a Facade to this Windows.
         /// At the beginning, we can not roll the dice, so we disabled it.
@@ -150,9 +150,10 @@ namespace WPF
             image.Width = LARGEUR_CASE -5 ;
             image.HorizontalAlignment = HorizontalAlignment.Left;
             image.VerticalAlignment = VerticalAlignment.Center;
-            image.Margin = new Thickness(x * LARGEUR_CASE+5, y * HAUTEUR_CASE, 0, 0);
-
-            clickZone.Children.Add(image);
+            image.Margin = new Thickness(x * LARGEUR_CASE + clickZone.Margin.Left+2, y * HAUTEUR_CASE + clickZone.Margin.Top+5, 0, 0);
+            nbBateaux++;
+            plateau.Children.Add(image);
+            dernierIndexBateau = plateau.Children.IndexOf(image);
         }
 
 
@@ -238,12 +239,14 @@ namespace WPF
                     }
                 }
             }
+            if (FacadeW.afficheBateaux())
+            {
+                this.BoatUpdate();
+            }
            }
         private void init_Jeu(int a)
         {
             Init.Visibility = System.Windows.Visibility.Hidden;
-            /*System.Windows.Thickness t = new Thickness(0, -40, 0, 0);
-            Jeu.Margin = t;*/
             switch (a)
             {
                 case 2:
@@ -283,11 +286,16 @@ namespace WPF
         {
             IntPtr a = new IntPtr(FacadeW.getBateaux().GetHashCode());
             int d = (FacadeW.getNbJoueurs() == 3) ? 3 : 4;
+            //Remove the "old" boats.
+            plateau.Children.RemoveRange(dernierIndexBateau - nbBateaux + 1, nbBateaux);
+            nbBateaux = 0;
             for (int i = 0; i < d; i++)
             {
                 int x = Marshal.ReadInt32(a);
+                x--;
                 a+=sizeof (int);
                 int y = Marshal.ReadInt32(a);
+                y--;
                 a += sizeof(int);
                 int tre = Marshal.ReadInt32(a);
                 bool tresor = (tre == 1) ? true : false;
@@ -302,10 +310,6 @@ namespace WPF
 
         private void clickZone_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            /*if (FacadeW.afficheBateaux())
-            {
-                this.BoatUpdate();
-            }*/
             if (FacadeW.activerCases())
             {
                 double a = Mouse.GetPosition(clickZone).X;
@@ -319,15 +323,12 @@ namespace WPF
                 this.LanceDes.IsEnabled = FacadeW.activerDes();
                 textBlock3.Text = FacadeW.getMessage();
                 double num_case = (y - 1) * 11 + x;
-                //Test affichage, c'est ok !
-                /*afficherBateau(5,5, 0, false, 1);
-                afficherBateau(1, 1,1, false, 2);
-                afficherBateau(8, 8, 2, false, 3);*/
             }
         }
 
         private void LanceDes_Click(object sender, RoutedEventArgs e)
         {
+            
             //LanceDes.IsEnabled = false;
             int count = 0;
             //Pour le lancer de Dés, c'est un systeme qui permet de faire des pauses.
@@ -355,13 +356,16 @@ namespace WPF
                 }
             };
             _lancerDesTimer.Start();
+            if (FacadeW.afficheBateaux())
+            {
+                this.BoatUpdate();
+            }
             
         }
 
         private void AfficheAide(object sender, RoutedEventArgs e)
         {
             Window2 w = new Window2();
-            
             w.Show();
         }
 

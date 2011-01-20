@@ -21,8 +21,8 @@ void Navigation::deplacer(int x, int y){
 		bat->deplacer(x,y);
 		this->moteur->getPlateau().occupeCase(x,y);
 		ostringstream mes;
-		mes << "Joueur bla";
-		mes << this->moteur->getJoueurCourant();
+		mes << "Joueur";
+		mes << this->moteur->getJoueurCourant()+"\n";
 		if(this->moteur->getPlateau().getEtat(x,y)==Moteur::TIRCANONUNIQUE){
 			mes << ", choisissez le bateau que vous voulez attaquer.";
 			this->casesBateauxCibles.clear();

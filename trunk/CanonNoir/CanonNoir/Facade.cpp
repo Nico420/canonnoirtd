@@ -1,5 +1,6 @@
 #include "Facade.h"
 #include "SetOrdreJoueurs.h"
+#include <iostream>
 
 Facade::Facade(){
 	this->motor = new Moteur();
@@ -61,16 +62,25 @@ void Facade::setClick(int x,int y){
 	else if(this->motor->getEtat()->getEtat()==Moteur::SETORDREJOUEURS){
 		delete[] this->infosBateaux;
 		this->infosBateaux = this->motor->getPosBateaux();
+		/*cout<<"begin"<<endl;
+		for(int i=0;i<15;i++){
+			cout<<infosBateaux[i]<<endl;
+		}*/
 		this->motor->setEtat(Moteur::SETORDREJOUEURS);
 		this->activeLancerDes = true;
 		this->activeDe1 = true;
 		this->activeDe2 = true;
 		this->activeCases = false;
 		this->affichePorts = false;
+		this->afficheBat = true;
 	}
 	else if(this->motor->getEtat()->getEtat()==Moteur::LANCERDESDEPLACEMENT){
 		delete[] this->infosBateaux;
 		this->infosBateaux = this->motor->getPosBateaux();
+		/*cout<<"begin"<<endl;
+		for(int i=0;i<15;i++){
+			cout<<infosBateaux[i]<<endl;
+		}*/
 		this->motor->setEtat(Moteur::LANCERDESDEPLACEMENT);
 		this->activeLancerDes = true;
 		this->activeDe1 = true;
@@ -82,7 +92,9 @@ void Facade::setClick(int x,int y){
 }
 
 void Facade::lancerDes(){
+	cout<<"Avant"<<endl;
 	this->motor->execute();
+	cout<<"Apres"<<endl;
 	this->message = this->motor->getEtat()->getMessage();
 	delete[] this->infosBateaux;
 	this->infosBateaux = this->motor->getPosBateaux();
