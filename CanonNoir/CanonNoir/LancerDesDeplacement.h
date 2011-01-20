@@ -23,7 +23,7 @@ class LancerDesDeplacement : public LancerDes
 		LancerDesDeplacement(Moteur* mot) : LancerDes(mot),etatsuivant(Moteur::NAVIGATION){};
 		virtual void execute();
 		int getEtat() const;
-		int* getCasesActives() const;
+		std::vector<int> getCasesActives() const;
 		bool getActiveDe2() const;
 		void calculCasesDeplacement(int de1,int de2);
 		bool isValid(int x,int y) const;

@@ -203,9 +203,9 @@ std::set<std::pair<int,int>> LancerDesDeplacement::casesAutour(const std::pair<i
 	return this->casesAutour(case1,1);
 }
 
-int* LancerDesDeplacement::getCasesActives() const{
+std::vector<int> LancerDesDeplacement::getCasesActives() const{
 	int nbCases = this->moteur->getPlateau().getLongueur() * this->moteur->getPlateau().getLargeur();
-	int* res = new int[nbCases];
+	std::vector<int> res(nbCases);
 	for(int i=0;i<nbCases;i++){
 		std::set<std::pair<int,int>>::iterator it;
 		bool found = false;
@@ -214,7 +214,7 @@ int* LancerDesDeplacement::getCasesActives() const{
 			int y = ((*it).second-1)*this->moteur->getPlateau().getLongueur();
 			if((x+y)==i) found = true;
 		}
-		res[i] = (found)? 1 : 0;
+		res.at(i) = (found)? 1 : 0;
 	}
 	return res;
 }

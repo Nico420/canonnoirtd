@@ -10,6 +10,7 @@
 #pragma once
 
 #include <string>
+#include <vector>
 class Moteur;
 
 class Etat
@@ -20,7 +21,7 @@ class Etat
 		virtual int* getPortsLibres() const;
 		virtual std::string getMessage() const;
 		virtual int getEtat() const;
-		virtual int* getCasesActives() const;
+		virtual std::vector<int> getCasesActives() const;
 		virtual bool getActiveDe2() const;
 };
 

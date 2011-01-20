@@ -32,7 +32,7 @@ class ChoisirPort : public Etat
 		bool estLibre(int i) const;
 		std::string getMessage() const;
 		inline void setMessage(std::string mes){this->message = mes;};
-		int* getCasesActives() const;
+		std::vector<int> getCasesActives() const;
 		int getEtat() const;
 
 };

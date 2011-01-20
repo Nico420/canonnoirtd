@@ -86,16 +86,16 @@ void Navigation::setCasesBateauxCibles(){
 	}
 }
 
-int* Navigation::getCasesActives() const{
+std::vector<int> Navigation::getCasesActives() const{
 	int nbCases = this->moteur->getPlateau().getLongueur() * this->moteur->getPlateau().getLargeur();
-	int* res = new int[nbCases];
+	std::vector<int> res(nbCases,0);
 	for(int i=0;i<nbCases;i++){
 		bool boo = false;
 		std::set<std::pair<int,int>>::iterator it;
 		for(it=this->casesBateauxCibles.begin();it!=this->casesBateauxCibles.end();it++){
 			int x = (*it).first-1;
 			int y = ((*it).second-1)*this->moteur->getPlateau().getLongueur();
-			if((x+y)==i) res[i] = 1;
+			if((x+y)==i) res.at(i) = 1;
 		}
 	}
 	return res;

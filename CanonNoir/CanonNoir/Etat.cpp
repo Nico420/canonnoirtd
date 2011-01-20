@@ -15,8 +15,9 @@ int Etat::getEtat() const{
 	return 0;
 }
 
-int* Etat::getCasesActives() const{
-	return NULL;
+std::vector<int> Etat::getCasesActives() const{
+	std::vector<int> res;
+	return res;
 }
 
 bool Etat::getActiveDe2() const{
