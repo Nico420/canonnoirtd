@@ -315,6 +315,7 @@ namespace WPF
 
         private void clickZone_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
+            e.Handled = true; 
             if (FacadeW.activerCases())
             {
                 double a = Mouse.GetPosition(clickZone).X;
@@ -376,13 +377,15 @@ namespace WPF
         }
         private void EnCasDeProbleme(object sender, RoutedEventArgs e)
         {
-            String s = "Allumez Visual Studio,\n codez les parties manquantes !";
-            MessageBox.Show(s);
+            String s = "Si vous rencontrez des bugs ou remarquez des erreurs, et même pour toutes suggestions, n'hésitez pas à nous contacter !\n";
+            s += "Nicolas Desfeux : nicolas.desfeux@insa-rennes.fr\n";
+            s += "Aurélien Texier : aurelien.texier@insa-rennes.fr\n";
+            MessageBox.Show(s,"En cas de problèmes",MessageBoxButton.OK,MessageBoxImage.Information);
         }
         private void Apropos(object sender, RoutedEventArgs e)
         {
             String s = "Ici il faudrait mettre les versions, auteur,...";
-            MessageBox.Show(s);
+            MessageBox.Show(s,"A propos");
         }
 
         private void NouvellePartie(object sender, RoutedEventArgs e)
@@ -399,13 +402,6 @@ namespace WPF
 
            if(m.ToString() == "Yes")
             this.Close();
-        }
-
-        private void Quitter(object sender, EventArgs e)
-        {
-            MessageBoxResult m = MessageBox.Show("Etes vous sur de vouloir quitter ? (la partie ne sera perdue)", "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Question);
-            if (m.ToString() == "Yes")
-                this.Close();
         }
 
     }
