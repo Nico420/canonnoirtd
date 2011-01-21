@@ -63,13 +63,7 @@ namespace WPF
             w.Show();
         }
 
-        /// <summary>
-        /// This function is used to set a boat at a given position.
-        /// </summary>
-        /// <param name="x">boat's x</param>
-        /// <param name="y">boat's y</param>
-        /// <param name="type">Give the type of boat : 0 for Caravelle, 1 for Frégate, 2 for Radeau</param>
-        /// <param name="tresor">true if a tresor is on the boat, else false.</param>
+        
         private void updateScore()
         {
             IntPtr score = new IntPtr(FacadeW.getScores().GetHashCode());
@@ -82,6 +76,7 @@ namespace WPF
                 scorevert = Marshal.ReadInt32(score);
                 score += sizeof(int);
                 scorebleu += Marshal.ReadInt32(score);
+                //MessageBox.Show("" + score + " " + scorerouge + " " + scorejaune + " " + scorevert + " " + scorebleu);
                 if (scorebleu >= 0)
                 {
                     joueurBleu.Text = "Bateau Bleu : " + scorebleu;
@@ -89,22 +84,28 @@ namespace WPF
                 }
                 if (scorejaune >= 0)
                 {
-                    joueurJaune.Text = "Bateau Jaune : " + scorebleu;
+                    joueurJaune.Text = "Bateau Jaune : " + scorejaune;
                     joueurJaune.Visibility = System.Windows.Visibility.Visible;
                 }
                 if (scorevert >= 0)
                 {
-                    joueurVert.Text = "Bateau Vert : " + scorebleu;
+                    joueurVert.Text = "Bateau Vert : " + scorevert;
                     joueurVert.Visibility = System.Windows.Visibility.Visible;
                 }
                 if (scorerouge >= 0)
                 {
-                    joueurRouge.Text = "Bateau Rouge : " + scorebleu;
+                    joueurRouge.Text = "Bateau Rouge : " + scorerouge;
                     joueurRouge.Visibility = System.Windows.Visibility.Visible;
                 }
         }
 
-
+        /// <summary>
+        /// This function is used to set a boat at a given position.
+        /// </summary>
+        /// <param name="x">boat's x</param>
+        /// <param name="y">boat's y</param>
+        /// <param name="type">Give the type of boat : 0 for Caravelle, 1 for Frégate, 2 for Radeau</param>
+        /// <param name="tresor">true if a tresor is on the boat, else false.</param>
         private void afficherBateau(int x, int y, int type, bool tresor,int couleur)
         {
             String bateau = "bateau-";
@@ -333,7 +334,7 @@ namespace WPF
         private void LanceDes_Click(object sender, RoutedEventArgs e)
         {
             
-            //LanceDes.IsEnabled = false;
+            LanceDes.IsEnabled = false;
             int count = 0;
             //Pour le lancer de Dés, c'est un systeme qui permet de faire des pauses.
             DispatcherTimer _lancerDesTimer = new DispatcherTimer(DispatcherPriority.Normal);
@@ -348,6 +349,7 @@ namespace WPF
                 count++;
                 if (count > 10)
                 {
+                    LanceDes.IsEnabled = true;
                     _lancerDesTimer.Stop();
                     count = 0;
                     FacadeW.lancerDes();
@@ -392,7 +394,18 @@ namespace WPF
 
         private void Quitter(object sender, RoutedEventArgs e)
         {
+
+           MessageBoxResult m = MessageBox.Show("Etes vous sur de vouloir quitter ? (la partie ne sera perdue)","Confirmation", MessageBoxButton.YesNo,MessageBoxImage.Question);
+
+           if(m.ToString() == "Yes")
             this.Close();
+        }
+
+        private void Quitter(object sender, EventArgs e)
+        {
+            MessageBoxResult m = MessageBox.Show("Etes vous sur de vouloir quitter ? (la partie ne sera perdue)", "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            if (m.ToString() == "Yes")
+                this.Close();
         }
 
     }

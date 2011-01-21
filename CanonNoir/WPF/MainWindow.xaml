@@ -1,7 +1,7 @@
 ﻿<Window x:Class="WPF.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Canon Noir" Height="600" Width="900" ResizeMode="NoResize" Icon="/WPF;component/Images/icone-pirate.png">
+        Title="Canon Noir" Height="600" Width="900" ResizeMode="NoResize" Icon="/WPF;component/Images/icone-pirate.png" Left="100" Top="100" Closing="Quitter">
     <Grid >
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="284*" />
@@ -35,7 +35,7 @@
                 <Image Canvas.Left="9" Canvas.Top="93" Height="83" Name="image1" Stretch="Fill" Width="100" Source="Images/tresor.jpg" />
             </Canvas>
         </Canvas>
-        <Menu Height="23" IsMainMenu="True" HorizontalAlignment="Left" Name="menu1" VerticalAlignment="Top" Width="878" Grid.ColumnSpan="2" >
+        <Menu Height="23" IsMainMenu="True" HorizontalAlignment="Left" Name="menu1" VerticalAlignment="Top" Width="1300" Grid.ColumnSpan="2" >
             <MenuItem Header="_Fichier" >
                 <MenuItem Header="_Nouvelle Partie" Click="NouvellePartie" />
                 <MenuItem Header="_Quitter" Click="Quitter" />
