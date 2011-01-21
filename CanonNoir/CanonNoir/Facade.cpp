@@ -62,9 +62,7 @@ void Facade::setClick(int x,int y){
 	}
 	else if(this->motor->getEtat()->getEtat()==Moteur::SETORDREJOUEURS){
 		this->afficheSco = true;
-		cout<<"AvantFacade"<<endl;
 		this->miseAJourInfosPorts(this->motor->getPosBateaux());
-		cout<<"AprèsFacade"<<endl;
 		this->miseAJourScores(this->motor->getScores());
 		cout<<"Après maj scores"<<endl;
 		/*cout<<"begin"<<endl;
@@ -78,7 +76,6 @@ void Facade::setClick(int x,int y){
 		this->activeCases = false;
 		this->affichePorts = false;
 		this->afficheBat = true;	
-	
 	}
 	else if(this->motor->getEtat()->getEtat()==Moteur::LANCERDESDEPLACEMENT){
 		this->miseAJourInfosPorts(this->motor->getPosBateaux());
@@ -100,7 +97,6 @@ void Facade::setClick(int x,int y){
 }
 
 void Facade::lancerDes(){
-	
 	this->motor->execute();
 	cout<<"Fin du execute de lancerDes"<<endl;
 	this->message = this->motor->getEtat()->getMessage();
@@ -108,16 +104,14 @@ void Facade::lancerDes(){
 	this->de1 = this->motor->getDe1();
 	this->de2 = this->motor->getDe2();
 	if(this->motor->getEtat()->getEtat()==Moteur::LANCERDESDEPLACEMENT){
-		cout<<"BBBBBLLLLLAAAAA"<<endl;
 		for(int i=0;i<20;i++){
-			cout<<this->infosBateaux[i]<<"a";
+			cout<<this->infosBateaux[i]<<" ";
 		}
 		cout <<endl;
 		this->motor->setEtat(Moteur::LANCERDESDEPLACEMENT);
 		this->activeCases = false;
 		this->activeLancerDes = true;
 	}
-	
 	else if(this->motor->getEtat()->getEtat()==Moteur::NAVIGATION){
 		cout<<"FACADE - avant miseajourCasesActives"<<endl;
 		this->miseAJourCasesActives(this->motor->getEtat()->getCasesActives());
