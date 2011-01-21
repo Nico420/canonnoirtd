@@ -8,7 +8,7 @@
         <ScrollViewer HorizontalScrollBarVisibility="Auto">
             
             <TextBlock Margin="3,0,0,0" TextWrapping="Wrap" Height="1000" HorizontalAlignment="Left" Name="textBlock1" VerticalAlignment="Top" Width="457" TextTrimming="WordEllipsis" TextAlignment="Justify">
-<TextBlock FontSize="20" Margin="150,0,0,0" TextAlignment="Center" FontWeight="Bold" FontStyle="Italic" VerticalAlignment="Top" HorizontalAlignment="Left"><Image Source="Images\aide.png" Height="50" Margin="0,0,0,0" /><LineBreak/>Règles du Jeu </TextBlock><LineBreak></LineBreak>
+<TextBlock FontSize="20" Margin="170,0,0,0" TextAlignment="Center" FontWeight="Bold" FontStyle="Italic" VerticalAlignment="Top" HorizontalAlignment="Left"><Image Source="Images\aide.png" Height="50" Margin="0,0,0,0" /><LineBreak/>Règles du Jeu </TextBlock><LineBreak></LineBreak>
 PRINCIPE DU JEU:<LineBreak /><LineBreak /> 
 Chaque joueur est le commandant d'une flotte. Il choisit la couleur de son port et de sa flotte.
 A 4 joueurs, chacun prend 1 flotte. A 3 joueurs, une flotte est laissée de côté. A 2 joueurs, chacun prend 2 flottes.
