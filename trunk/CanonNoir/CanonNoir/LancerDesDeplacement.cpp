@@ -10,14 +10,22 @@ void LancerDesDeplacement::execute(){
 	std::cout<<"lancer de dés effectue"<<std::endl;
 	int de1 = this->moteur->getDe1();
 	int de2 = this->moteur->getDe2();
-	
-	
 	ostringstream mes;
 	mes << "Joueur ";
 	mes << this->moteur->getJoueurCourant();
-	mes << ", choisissez la case où vous souhaitez vous déplacer.";
+	mes << ", choisissez la case\noù vous souhaitez\nvous déplacer.";
 	this->setMessage(mes.str());
 	this->calculCasesDeplacement(de1,de2);
+	if(this->casesDeplacement.size()==0){
+		cout<<"Suivant !"<<endl;
+		this->etatsuivant = Moteur::LANCERDESDEPLACEMENT;
+		this->moteur->passerAuJoueurSuivant();
+		mes.str("");
+		mes << "Joueur ";
+		mes << this->moteur->getJoueurCourant();
+		mes << ", lancez les dés\npour jouer.";
+		this->setMessage(mes.str());
+	}
 }
 
 void LancerDesDeplacement::calculCasesDeplacement(int de1,int de2){
