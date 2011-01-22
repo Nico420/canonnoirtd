@@ -49,7 +49,7 @@ namespace WPF
             int theta = (int) Math.Round(t);
             valeurAngle.Text = "Angle : " + theta + "°";
             stackPanel1.Visibility = System.Windows.Visibility.Hidden;
-            System.Windows.Thickness z = angle.Margin;
+            System.Windows.Thickness z = stackPanel1.Margin;
             puissance.Margin = z;
             puissance.Visibility = System.Windows.Visibility.Visible;
             m.FacadeW.setAngle(theta);
