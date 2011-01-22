@@ -25,6 +25,11 @@ namespace WPF
             InitializeComponent();
         }
 
+        public Window1(WrapperFacade f)
+        {
+            InitializeComponent();
+        }
+
         private void finCombat(object sender, RoutedEventArgs e)
         {
             this.Close();

@@ -179,7 +179,6 @@ namespace WPF
                 MessageBox.Show("" + x + " " + y);
             }
             Window1 w = new Window1();
-            IntPtr a = new IntPtr(FacadeW);
             w.Show();
         }
 
