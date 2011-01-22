@@ -66,6 +66,7 @@ namespace WPF
         
         private void updateScore()
         {
+            scorebox.Visibility = System.Windows.Visibility.Visible;
             IntPtr score = new IntPtr(FacadeW.getScores().GetHashCode());
 
             int scorebleu = 0, scorerouge = 0, scorejaune = 0, scorevert = 0;
@@ -261,7 +262,7 @@ namespace WPF
             joueurVert.Visibility = System.Windows.Visibility.Hidden;
             FacadeW.setNbJoueurs(a);
             this.setCases();
-            textBlock3.Text = FacadeW.getMessage() + " <- Message du moteur";
+            textBlock3.Text = FacadeW.getMessage();
             Jeu.Visibility = System.Windows.Visibility.Visible;
         }
         private void button1_Click(object sender, RoutedEventArgs e)
@@ -314,8 +315,7 @@ namespace WPF
         }
 
         private void clickZone_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            e.Handled = true; 
+        { 
             if (FacadeW.activerCases())
             {
                 double a = Mouse.GetPosition(clickZone).X;

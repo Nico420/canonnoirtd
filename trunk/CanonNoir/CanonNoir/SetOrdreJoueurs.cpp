@@ -25,13 +25,13 @@ void SetOrdreJoueurs::execute(){
 	if(joueurCourant<this->moteur->getNbJoueurs()){
 		this->moteur->setJoueurCourant(joueurCourant+1);
 		mes << this->moteur->getJoueurCourant();
-		mes << ", lancez les \ndés pour déterminer l'ordre des joueurs.";
+		mes << ", lancez les  dés pour déterminer l'ordre des joueurs.";
 		this->setMessage(mes.str());
 	}
 	else{
 		this->moteur->setJoueurCourant(this->moteur->getOrdreJoueurs().at(0));
 		mes << this->moteur->getJoueurCourant();
-		mes << ", lancez les \ndés pour jouer.";
+		mes << ", lancez les  dés pour jouer.";
 		this->setMessage(mes.str());
 		this->etatsuivant = Moteur::LANCERDESDEPLACEMENT;
 	}

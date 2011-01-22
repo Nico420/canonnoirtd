@@ -21,18 +21,16 @@
                 <Button Content="4" Height="23" HorizontalAlignment="left" Margin="81,117,384,0" Name="button2" VerticalAlignment="Top" Width="28" Click="button2_Click" />
                 <Button Height="23" HorizontalAlignment="Left" Margin="47,117,0,0" Name="button3" VerticalAlignment="Top" Width="28" Content="3" Click="button3_Click" />
 
-
             </Canvas>
-            <Canvas Height="293" HorizontalAlignment="Left" Margin="4,10,0,0" Name="Jeu" VerticalAlignment="Top" Width="129" Visibility="Hidden" Canvas.Top="0">
-                <TextBlock Canvas.Left="23" Canvas.Top="16" Height="23" Name="Message" Text="Message" />
+            <Canvas Height="293" HorizontalAlignment="Left" Margin="4,10,0,0" Name="Jeu" VerticalAlignment="Top" Width="162" Visibility="Hidden" Canvas.Top="0" Canvas.Left="-4">
 
-                <TextBlock Canvas.Left="0" Canvas.Top="35" Height="77" Name="textBlock3" Text="Message" Width="130" TextTrimming="CharacterEllipsis" />
-                <TextBlock Canvas.Left="23" Canvas.Top="182" Height="23" Name="score" Text="Score" />
-                <TextBlock Canvas.Left="23" Width="100" Canvas.Top="202" Height="20" Name="joueurRouge" Text="Bateau Rouge" Background="Red" />
-                <TextBlock Canvas.Left="23" Width="100" Canvas.Top="222" Height="20" Name="joueurJaune" Text="Bateau Jaune" Background="Yellow"/>
-                <TextBlock Canvas.Left="23" Width="100" Canvas.Top="242" Height="20" Name="joueurVert" Text="Bateau Vert" Background="GREEN"/>
-                <TextBlock Canvas.Left="23" Width="100" Canvas.Top="262" Height="20" Name="joueurBleu" Text="Bateau Bleu" Background="BLue"/>
-                <Image Canvas.Left="9" Canvas.Top="93" Height="83" Name="image1" Stretch="Fill" Width="100" Source="Images/tresor.jpg" />
+                <TextBlock Canvas.Left="0" Canvas.Top="0" Height="87" Name="titre" Text="Canon Noir  La Chasse aux trésors !" TextAlignment="Center" TextWrapping="Wrap" Width="162" FontFamily="Lucida Handwriting" FontSize="18" FontWeight="Bold" Padding="5" />
+                <TextBlock Canvas.Left="23" Canvas.Top="222" Height="23" Name="scorebox" Text="Score" FontFamily="Arial" FontWeight="Bold" FontStyle="Italic" Visibility="Hidden" />
+                <TextBlock Canvas.Left="23" Width="100" Canvas.Top="242" Height="20" Name="joueurRouge" Text="Bateau Rouge" Background="Red" />
+                <TextBlock Canvas.Left="23" Width="100" Canvas.Top="262" Height="20" Name="joueurJaune" Text="Bateau Jaune" Background="Yellow"/>
+                <TextBlock Canvas.Left="23" Width="100" Canvas.Top="282" Height="20" Name="joueurVert" Text="Bateau Vert" Background="GREEN"/>
+                <TextBlock Canvas.Left="23" Width="100" Canvas.Top="302" Height="20" Name="joueurBleu" Text="Bateau Bleu" Background="BLue"/>
+                <Image Canvas.Left="6" Canvas.Top="81" Height="135" Name="image1" Stretch="Fill" Width="150" Source="Images/tresor.jpg" />
             </Canvas>
         </Canvas>
         <Menu Height="23" IsMainMenu="True" HorizontalAlignment="Left" Name="menu1" VerticalAlignment="Top" Width="1300" Grid.ColumnSpan="2" >
@@ -46,10 +44,12 @@
                 <MenuItem Header="A propos" Click="Apropos"/>
             </MenuItem> 
         </Menu>
-        <Canvas Height="100" HorizontalAlignment="Left" Margin="13,319,0,0" Name="des" VerticalAlignment="Top" Width="130" Background="#FFD6D1D1">
+        <Canvas Height="100" HorizontalAlignment="Left" Margin="13,385,0,0" Name="des" VerticalAlignment="Top" Width="130" Background="#FFD6D1D1">
             <Image Name="des2" Source="Images/face1.jpg" Height="50" Margin="70,10" />
             <Image Name="des1" Source="Images/face2.jpg" Height="50" Margin="10,10" />
             <Button Name="LanceDes" Click="LanceDes_Click" Width="110" Content="Lancer les dés !" Margin="10,70" HorizontalAlignment="Center" IsEnabled="True" />
         </Canvas>
+        <TextBlock Margin="168,510,32,12" Name="Message" Text="Déroulement du jeu" FontFamily="Lucida Calligraphy" TextTrimming="None" TextWrapping="Wrap" TextAlignment="Center" FontStretch="Normal" FontSize="12" />
+        <TextBlock Margin="258,510,12,12" Name="textBlock3" Text="Sélectionnez le nombre de Joueurs pour démarrer une nouvelle partie de Canon Noir" Grid.ColumnSpan="2" Foreground="Black" Background="#FFF4F480" FontFamily="Lucida Handwriting" TextWrapping="Wrap" Padding="2,10,0,0" />
     </Grid>
 </Window>

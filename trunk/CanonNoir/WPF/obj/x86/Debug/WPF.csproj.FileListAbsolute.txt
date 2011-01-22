@@ -52,13 +52,7 @@ C:\Users\Aurélien\Desktop\canon noir\CanonNoir\WPF\obj\x86\Debug\WPF.pdb
 C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\Debug\WPF.exe
 C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\WPF\obj\x86\Debug\ResolveAssemblyReference.cache
 C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\WPF\obj\x86\Debug\MainWindow.baml
-C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\WPF\obj\x86\Debug\Page1.baml
-C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\WPF\obj\x86\Debug\Window1.baml
-C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\WPF\obj\x86\Debug\Window2.baml
 C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\WPF\obj\x86\Debug\MainWindow.g.cs
-C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\WPF\obj\x86\Debug\Page1.g.cs
-C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\WPF\obj\x86\Debug\Window1.g.cs
-C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\WPF\obj\x86\Debug\Window2.g.cs
 C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\WPF\obj\x86\Debug\App.g.cs
 C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\WPF\obj\x86\Debug\WPF_MarkupCompile.cache
 C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\WPF\obj\x86\Debug\WPF.g.resources
@@ -68,3 +62,7 @@ C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\WPF\obj\x86\Debug\Generate
 C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\WPF\obj\x86\Debug\WPF.exe
 C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\WPF\obj\x86\Debug\WPF.pdb
 C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\Debug\WPF.pdb
+C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\WPF\obj\x86\Debug\Regles.baml
+C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\WPF\obj\x86\Debug\Regles.g.cs
+C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\WPF\obj\x86\Debug\TirCanon.baml
+C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\WPF\obj\x86\Debug\TirCanon.g.cs

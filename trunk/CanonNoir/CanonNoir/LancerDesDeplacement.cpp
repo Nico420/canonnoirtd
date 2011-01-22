@@ -13,7 +13,7 @@ void LancerDesDeplacement::execute(){
 	ostringstream mes;
 	mes << "Joueur ";
 	mes << this->moteur->getJoueurCourant();
-	mes << ", choisissez la case\noù vous souhaitez\nvous déplacer.";
+	mes << ", choisissez la caseoù vous souhaitez vous déplacer.";
 	this->setMessage(mes.str());
 	this->calculCasesDeplacement(de1,de2);
 	if(this->casesDeplacement.size()==0){
@@ -23,7 +23,7 @@ void LancerDesDeplacement::execute(){
 		mes.str("");
 		mes << "Joueur ";
 		mes << this->moteur->getJoueurCourant();
-		mes << ", lancez les dés\npour jouer.";
+		mes << ", lancez les dés pour jouer.";
 		this->setMessage(mes.str());
 	}
 }
