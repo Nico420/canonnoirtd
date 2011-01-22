@@ -27,9 +27,9 @@
                 <TextBlock Canvas.Left="0" Canvas.Top="0" Height="87" Name="titre" Text="Canon Noir  La Chasse aux trésors !" TextAlignment="Center" TextWrapping="Wrap" Width="162" FontFamily="Lucida Handwriting" FontSize="18" FontWeight="Bold" Padding="5" />
                 <TextBlock Canvas.Left="23" Canvas.Top="222" Height="23" Name="scorebox" Text="Score" FontFamily="Arial" FontWeight="Bold" FontStyle="Italic" Visibility="Hidden" />
                 <TextBlock Canvas.Left="23" Width="100" Canvas.Top="242" Height="20" Name="joueurRouge" Text="Bateau Rouge" Background="Red" />
-                <TextBlock Canvas.Left="23" Width="100" Canvas.Top="262" Height="20" Name="joueurJaune" Text="Bateau Jaune" Background="Yellow"/>
-                <TextBlock Canvas.Left="23" Width="100" Canvas.Top="282" Height="20" Name="joueurVert" Text="Bateau Vert" Background="GREEN"/>
-                <TextBlock Canvas.Left="23" Width="100" Canvas.Top="302" Height="20" Name="joueurBleu" Text="Bateau Bleu" Background="BLue"/>
+                <TextBlock Canvas.Left="23" Width="100" Canvas.Top="242" Height="20" Name="joueurJaune" Text="Bateau Jaune" Background="Yellow"/>
+                <TextBlock Canvas.Left="23" Width="100" Canvas.Top="242" Height="20" Name="joueurVert" Text="Bateau Vert" Background="GREEN"/>
+                <TextBlock Canvas.Left="23" Width="100" Canvas.Top="242" Height="20" Name="joueurBleu" Text="Bateau Bleu" Background="BLue"/>
                 <Image Canvas.Left="6" Canvas.Top="81" Height="135" Name="image1" Stretch="Fill" Width="150" Source="Images/tresor.jpg" />
             </Canvas>
         </Canvas>

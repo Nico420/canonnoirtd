@@ -22,7 +22,7 @@ namespace WPF
     /// </summary>
     public partial class MainWindow : Window
     {
-        WrapperFacade FacadeW;
+        public WrapperFacade FacadeW;
         //1/11 of the click area. For the moment it's a constant, but we can perhaps make it dynamic.
         private static double HAUTEUR_CASE = 53.75;
 
@@ -70,7 +70,8 @@ namespace WPF
         {
             scorebox.Visibility = System.Windows.Visibility.Visible;
             IntPtr score = new IntPtr(FacadeW.getScores().GetHashCode());
-
+            System.Windows.Thickness t = new Thickness(0, 0, 0, 0);
+            
             int scorebleu = 0, scorerouge = 0, scorejaune = 0, scorevert = 0;
                 scorerouge = Marshal.ReadInt32(score);
                 score += sizeof(int);
@@ -80,25 +81,33 @@ namespace WPF
                 score += sizeof(int);
                 scorebleu += Marshal.ReadInt32(score);
                 //MessageBox.Show("" + score + " " + scorerouge + " " + scorejaune + " " + scorevert + " " + scorebleu);
-                if (scorebleu >= 0)
+                if (scorerouge >= 0)
                 {
-                    joueurBleu.Text = "Bateau Bleu : " + scorebleu;
-                    joueurBleu.Visibility = System.Windows.Visibility.Visible;
+                    joueurRouge.Text = "Bateau Rouge : " + scorerouge;
+                    joueurRouge.Margin = t;
+                    t.Top += 20;
+                    joueurRouge.Visibility = System.Windows.Visibility.Visible;
                 }
                 if (scorejaune >= 0)
                 {
                     joueurJaune.Text = "Bateau Jaune : " + scorejaune;
+                    joueurJaune.Margin = t;
+                    t.Top += 20;
                     joueurJaune.Visibility = System.Windows.Visibility.Visible;
                 }
                 if (scorevert >= 0)
                 {
                     joueurVert.Text = "Bateau Vert : " + scorevert;
+                    joueurVert.Margin = t;
+                    t.Top += 20;
                     joueurVert.Visibility = System.Windows.Visibility.Visible;
                 }
-                if (scorerouge >= 0)
+                if (scorebleu >= 0)
                 {
-                    joueurRouge.Text = "Bateau Rouge : " + scorerouge;
-                    joueurRouge.Visibility = System.Windows.Visibility.Visible;
+                    joueurBleu.Text = "Bateau Bleu : " + scorebleu;
+                    joueurBleu.Margin = t;
+                    t.Top += 20;
+                    joueurBleu.Visibility = System.Windows.Visibility.Visible;
                 }
         }
 
@@ -178,7 +187,7 @@ namespace WPF
                 //FacadeW.setClick(x, y);
                 MessageBox.Show("" + x + " " + y);
             }
-            Window1 w = new Window1();
+            Window1 w = new Window1(this);
             w.Show();
         }
 
@@ -237,7 +246,6 @@ namespace WPF
                         }
 
                         myRect.Margin = new Thickness(marghaut, marggauche, 0, 0);
-
                         plateau.Children.Add(myRect);
                         dernierIndexPort = plateau.Children.IndexOf(myRect);
                     }
