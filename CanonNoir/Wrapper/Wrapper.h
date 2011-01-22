@@ -53,6 +53,10 @@ namespace Wrapper {
 
 		bool affichePorts(){
 			return FacadeW->affichePortsLibres();
+		}
+
+		bool afficheCanon(){
+			return FacadeW->afficherCanon();
 		};
 		
 		bool activerCases(){

@@ -61,6 +61,8 @@ namespace WPF
         {
             Window1 w = new Window1();
             w.Show();
+            double a = Mouse.GetPosition(clickZone).X / clickZone.ActualWidth;
+            double b = (clickZone.ActualHeight - Mouse.GetPosition(clickZone).Y) / clickZone.ActualHeight;
         }
 
         
@@ -165,6 +167,17 @@ namespace WPF
 
         void Attaque(object sender, RoutedEventArgs e)
         {
+            if (FacadeW.afficheCanon())
+            {
+                double a = Mouse.GetPosition(clickZone).X;
+                a /= LARGEUR_CASE;
+                int x = (int)a + 1;
+                double b = Mouse.GetPosition(clickZone).Y;
+                b /= HAUTEUR_CASE;
+                int y = (int)b + 1;
+                //FacadeW.setClick(x, y);
+                MessageBox.Show("" + x + " " + y);
+            }
             Window1 w = new Window1();
             w.Show();
         }
