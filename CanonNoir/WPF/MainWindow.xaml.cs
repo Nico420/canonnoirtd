@@ -148,7 +148,7 @@ namespace WPF
             bat.Height = HAUTEUR_CASE - 5;
             bat.Width = LARGEUR_CASE - 10;
             bat.Margin = new Thickness(x * LARGEUR_CASE + clickZone.Margin.Left + 7, y * HAUTEUR_CASE + clickZone.Margin.Top + 5, 0, 0);
-
+            bat.AddHandler(Button.ClickEvent, new RoutedEventHandler(Attaque));
             Image image = new Image();
             BitmapImage bateau_img = new BitmapImage(new Uri("Images/" + bateau, UriKind.Relative));
             image.Source = bateau_img;
@@ -162,6 +162,13 @@ namespace WPF
             plateau.Children.Add(bat);
             dernierIndexBateau = plateau.Children.IndexOf(bat);
         }
+
+        void Attaque(object sender, RoutedEventArgs e)
+        {
+            Window1 w = new Window1();
+            w.Show();
+        }
+
 
 
         /// <summary>
@@ -356,7 +363,7 @@ namespace WPF
                     FacadeW.lancerDes();
                     this.LanceDes.IsEnabled = FacadeW.activerDes();
                     this.setCases();
-                    textBlock3.Text = FacadeW.getMessage() + " <- Message du moteur";
+                    textBlock3.Text = FacadeW.getMessage();
                     des1.Source = new BitmapImage(new Uri("Images/face" + FacadeW.getDes1() + ".jpg", UriKind.Relative));
                     des2.Source = new BitmapImage(new Uri("Images/face" + FacadeW.getDes2() + ".jpg", UriKind.Relative));
                     //MessageBox.Show(FacadeW.getDes1() + " " + FacadeW.getDes2());
