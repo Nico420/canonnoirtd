@@ -24,7 +24,7 @@ void Navigation::deplacer(int x, int y){
 		mes << "Joueur";
 		mes << this->moteur->getJoueurCourant()+"\n";
 		if(this->moteur->getPlateau().getEtat(x,y)==Moteur::TIRCANONUNIQUE){
-			mes << ", choisissez le bateau\nque vous voulez attaquer.";
+			mes << ", choisissez le bateau que vous voulez attaquer.";
 			this->casesBateauxCibles.clear();
 			this->setCasesBateauxCibles();
 			this->etatsuivant = Moteur::TIRCANONUNIQUE;
@@ -39,7 +39,7 @@ void Navigation::deplacer(int x, int y){
 				this->moteur->passerAuJoueurSuivant();
 				mes.str("");
 				mes << "Joueur " << this->moteur->getJoueurCourant();
-				mes << ", lancez les dés\npour jouer.";
+				mes << ", lancez les dés pour jouer.";
 				this->etatsuivant = Moteur::LANCERDESDEPLACEMENT;
 			}
 		}
