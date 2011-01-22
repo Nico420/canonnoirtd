@@ -9,12 +9,12 @@
             <TextBlock Text="Choissiez l'angle de Tir !" Width="99" Height="30" TextTrimming="None" TextWrapping="WrapWithOverflow" />
             <Image Name="angle" Source="Images/select_angle.png" Margin="0,20,0,0" MouseLeftButtonDown="choixAngle" ></Image>
         </StackPanel>
-        <StackPanel Visibility="Hidden" Height="152" HorizontalAlignment="Left" Margin="200,34,0,0" Name="puissance" VerticalAlignment="Top" Width="121" >
+        <StackPanel Visibility="Hidden" Height="158" HorizontalAlignment="Left" Margin="134,156,0,0" Name="puissance" VerticalAlignment="Top" Width="121" >
             <TextBlock Height="49" Name="textBlock1" Text="Choissez la puissance du Tir !" Width="120" TextWrapping="WrapWithOverflow" />
-            <Image Height="101" Source="images/jauge_puissance.png" Name="puiss_image" Stretch="Fill" Width="50" MouseLeftButtonDown="choixPuissance" />
+            <Image Height="108" Source="images/jauge_puissance.png" Name="puiss_image" Stretch="Fill" Width="50" MouseLeftButtonDown="choixPuissance" />
         </StackPanel>
         <Rectangle Height="21" HorizontalAlignment="Left" Margin="0,384,0,0" Stroke="Black" VerticalAlignment="Top" Width="900" Fill="Blue" />
-        <TextBlock Height="26" HorizontalAlignment="Left" Margin="276,7,0,0" Name="valeurAngle" Text="" VerticalAlignment="Top" Width="70" FontWeight="Bold" FontFamily="Lucida Handwriting" />
-        <TextBlock Height="28" HorizontalAlignment="Left" Margin="368,7,0,0" Name="valeurPuiss" Text="" VerticalAlignment="Top" Width="99" FontWeight="Bold" FontFamily="Lucida Handwriting" />
+        <TextBlock Height="26" HorizontalAlignment="Left" Margin="12,46,0,0" Name="valeurAngle" Text="" VerticalAlignment="Top" Width="143" FontWeight="Bold" FontFamily="Lucida Handwriting" />
+        <TextBlock Height="28" HorizontalAlignment="Left" Margin="12,12,0,0" Name="valeurPuiss" Text="" VerticalAlignment="Top" Width="143" FontWeight="Bold" FontFamily="Lucida Handwriting" />
     </Grid>
 </Window>
