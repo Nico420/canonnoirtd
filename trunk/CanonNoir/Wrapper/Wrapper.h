@@ -102,8 +102,10 @@ namespace Wrapper {
 		//bool afficheRelief();
 		bool afficheScores(){return true;};
 		/*bool affichePortsLibres();
-		void setPuissance(int puissance);
-		void setCible(int nb);
+		*/
+		void setPuissance(int puissance){FacadeW->setPuissance(puissance);};
+		void setAngle(int angle){FacadeW->setAngle(angle);};
+		/*void setCible(int nb);
 		void setDeplacement(int x, int y);*/
 
 		void setClick(int x,int y){

@@ -1,7 +1,7 @@
-﻿La génération a démarré 22/01/2011 16:49:20.
+﻿La génération a démarré 22/01/2011 18:51:03.
      1>Projet "C:\Users\Nicolas\Documents\INSA\canonnoirtd\CanonNoir\Wrapper\Wrapper.vcxproj" sur le nœud 2 (build cible(s)).
      1>InitializeBuildStatus:
-         Mise à jour de l'horodatage "Debug\Wrapper.unsuccessfulbuild".
+         Création de "Debug\Wrapper.unsuccessfulbuild", car "AlwaysCreate" a été spécifié.
        GenerateTargetFrameworkMonikerAttribute:
        La cible est ignorée "GenerateTargetFrameworkMonikerAttribute", car tous les fichiers de sortie sont à jour par rapport aux fichiers d'entrée.
        ClCompile:
@@ -35,4 +35,4 @@
 
 La génération a réussi.
 
-Temps écoulé 00:00:01.70
+Temps écoulé 00:00:02.37
