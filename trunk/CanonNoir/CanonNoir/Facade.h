@@ -57,6 +57,7 @@ class DLL Facade
 		bool activerPorts();
 		std::string getMessage(){return this->message;};
 		bool afficheCurseurAngle();
+		bool afficherCanon(){return this->afficheCanon;};
 		bool afficheCurseurPuissance();
 		std::vector<std::pair<int,int>> getRelief();
 		bool afficheGagnant();

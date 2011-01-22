@@ -39,10 +39,18 @@ namespace WPF
             t =(int) 180*t/Math.PI;
             int theta = (int) Math.Round(t);
             MessageBox.Show("Angle : " + theta);
-            angle.Visibility = System.Windows.Visibility.Hidden;
+            stackPanel1.Visibility = System.Windows.Visibility.Hidden;
             System.Windows.Thickness z = angle.Margin;
             puissance.Margin = z;
             puissance.Visibility = System.Windows.Visibility.Visible;
+        }
+
+        private void choixPuissance(object sender, RoutedEventArgs e)
+        {
+            double puiss = (puiss_image.ActualHeight - Mouse.GetPosition(puiss_image).Y) / puiss_image.ActualHeight;
+            puiss = Math.Round(puiss*100);
+            MessageBox.Show("Puissance : " + puiss);
+            puissance.Visibility = System.Windows.Visibility.Hidden;
         }
     }
 }
