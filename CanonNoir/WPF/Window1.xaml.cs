@@ -20,18 +20,22 @@ namespace WPF
     /// </summary>
     public partial class Window1 : Window
     {
+        //Thanks to this attribut, we can access to Facade in an easy way ! m.FacadeW
+        MainWindow m;
         public Window1()
         {
             InitializeComponent();
         }
 
-        public Window1(WrapperFacade f)
+        public Window1(MainWindow m)
         {
+            this.m = m;
             InitializeComponent();
         }
-
+        
         private void finCombat(object sender, RoutedEventArgs e)
         {
+            
             this.Close();
         }
 
@@ -43,19 +47,22 @@ namespace WPF
             double t = Math.Acos(a/r);
             t =(int) 180*t/Math.PI;
             int theta = (int) Math.Round(t);
-            MessageBox.Show("Angle : " + theta);
+            valeurAngle.Text = "Angle : " + theta + "°";
             stackPanel1.Visibility = System.Windows.Visibility.Hidden;
             System.Windows.Thickness z = angle.Margin;
             puissance.Margin = z;
             puissance.Visibility = System.Windows.Visibility.Visible;
+            m.FacadeW.setAngle(theta);
         }
 
         private void choixPuissance(object sender, RoutedEventArgs e)
         {
             double puiss = (puiss_image.ActualHeight - Mouse.GetPosition(puiss_image).Y) / puiss_image.ActualHeight;
-            puiss = Math.Round(puiss*100);
-            MessageBox.Show("Puissance : " + puiss);
+            int puissance_int = (int) Math.Round(puiss*100);
+            valeurPuiss.Text =  "Puissance : " + puissance_int +"%";
             puissance.Visibility = System.Windows.Visibility.Hidden;
+            MessageBox.Show("FEU !");
+            m.FacadeW.setPuissance(puissance_int);
         }
     }
 }

@@ -1,11 +1,11 @@
 ﻿<Window x:Class="WPF.Window1"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Window1" Height="300" Width="900" Topmost="True">
-    <Grid>
-        <Image Height="50" Width="70" Source="Images/canon.jpg" Margin="-800,170,0,0" FlowDirection="RightToLeft" />
-        <Image Height="100" Width="100" Source="Images/bateau-Caravelle.gif" Margin="750,120,0,0"/>
-        <StackPanel Height="158" HorizontalAlignment="Left" Margin="84,34,0,0" Name="stackPanel1" VerticalAlignment="Top" Width="99">
+        Title="Window1" Height="446" Width="900" Topmost="True">
+    <Grid Height="406">
+        <Image Height="50" Width="70" Source="Images/canon.jpg" Margin="0,335,808,21" FlowDirection="RightToLeft" />
+        <Image Height="100" Width="100" Source="Images/bateau-Caravelle.gif" Margin="766,285,12,21"/>
+        <StackPanel Height="158" HorizontalAlignment="Left" Margin="12,156,0,0" Name="stackPanel1" VerticalAlignment="Top" Width="99">
             <TextBlock Text="Choissiez l'angle de Tir !" Width="99" Height="30" TextTrimming="None" TextWrapping="WrapWithOverflow" />
             <Image Name="angle" Source="Images/select_angle.png" Margin="0,20,0,0" MouseLeftButtonDown="choixAngle" ></Image>
         </StackPanel>
@@ -13,6 +13,8 @@
             <TextBlock Height="49" Name="textBlock1" Text="Choissez la puissance du Tir !" Width="120" TextWrapping="WrapWithOverflow" />
             <Image Height="101" Source="images/jauge_puissance.png" Name="puiss_image" Stretch="Fill" Width="50" MouseLeftButtonDown="choixPuissance" />
         </StackPanel>
-        <Rectangle Height="21" HorizontalAlignment="Left" Margin="0,239,0,0" Stroke="Black" VerticalAlignment="Top" Width="900" Fill="Blue" />
+        <Rectangle Height="21" HorizontalAlignment="Left" Margin="0,384,0,0" Stroke="Black" VerticalAlignment="Top" Width="900" Fill="Blue" />
+        <TextBlock Height="26" HorizontalAlignment="Left" Margin="276,7,0,0" Name="valeurAngle" Text="" VerticalAlignment="Top" Width="70" FontWeight="Bold" FontFamily="Lucida Handwriting" />
+        <TextBlock Height="28" HorizontalAlignment="Left" Margin="368,7,0,0" Name="valeurPuiss" Text="" VerticalAlignment="Top" Width="99" FontWeight="Bold" FontFamily="Lucida Handwriting" />
     </Grid>
 </Window>
