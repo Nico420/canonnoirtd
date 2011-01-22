@@ -11,6 +11,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Wrapper;
+using System.Runtime.InteropServices;
+using System.Windows.Threading;
 
 
 namespace WPF
@@ -62,7 +64,32 @@ namespace WPF
             valeurPuiss.Text =  "Puissance : " + puissance_int +"%";
             puissance.Visibility = System.Windows.Visibility.Hidden;
             MessageBox.Show("FEU !");
+            Image boulet = new Image();
+            BitmapImage boulet_img = new BitmapImage(new Uri("Images/boulet.jpg", UriKind.Relative));
+            boulet.Source = boulet_img;
+            boulet.Height = 10;
+            boulet.Width = 10;
+            boulet.HorizontalAlignment = HorizontalAlignment.Left;
+            boulet.VerticalAlignment = VerticalAlignment.Center;
+            zoneTir.Children.Add(boulet);
             m.FacadeW.setPuissance(puissance_int);
+            IntPtr a = new IntPtr(m.FacadeW.getTrajectoire(1,50).GetHashCode());
+            int x = Marshal.ReadInt32(a);
+            a += sizeof(int);
+            int z = Marshal.ReadInt32(a);
+            a += sizeof(int);
+            System.Windows.Thickness t = new Thickness(x, z, 0, 0);
+            boulet.Margin = t;
+           while(z>0)
+            {
+                x = Marshal.ReadInt32(a);
+                a += sizeof(int);
+                z = Marshal.ReadInt32(a);
+                a += sizeof(int);
+                t= new Thickness(x*30,z,0,0);
+                boulet.Margin = t;
+            }
         }
     }
 }
+

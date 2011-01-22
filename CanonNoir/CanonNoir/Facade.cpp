@@ -1,6 +1,10 @@
 #include "Facade.h"
 #include "SetOrdreJoueurs.h"
 #include <iostream>
+#include <math.h>
+
+
+#define NBPOINTS 10
 
 Facade::Facade(){
 	this->motor = new Moteur();
@@ -140,6 +144,21 @@ void Facade::miseAJourScores(std::vector<int> scores){
 	for(int i=0;i<scores.size();i++){
 		this->scoresBateaux[i] = scores.at(i);
 	}
+}
+
+int* Facade::getTrajectoire(int angle, int puissance){
+	int pi=3.1415;
+	double angle_rad = 2*pi*angle/360;
+	double vx = puissance * cos((double)angle);
+	double vz = puissance * sin((double)angle);
+	int res[2*NBPOINTS];
+	cout<<"test"<<endl;
+	for(int i=0;i<2*NBPOINTS;i=i+2){
+		res[i] = ((-0.5*9.81*i*i))+(vz)*i;
+		res[i+1] = vx*i;
+		cout<<res[i]<<endl;
+	}
+	return res;
 }
 
 EXTERNC DLL Facade* Facade_New(){

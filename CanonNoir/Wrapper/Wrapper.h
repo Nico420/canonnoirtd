@@ -41,6 +41,10 @@ namespace Wrapper {
 			return gcnew IntPtr(FacadeW->Facade::getScores());
 		};
 
+		System::IntPtr^ getTrajectoire(int angle, int puissance){
+			return gcnew IntPtr(FacadeW->Facade::getTrajectoire(angle, puissance));
+		};
+
 
 		/*System::Void setAngle(int a){
 			FacadeW->setAngle(a);
