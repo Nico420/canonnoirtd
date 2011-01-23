@@ -85,7 +85,7 @@ class DLL Facade
 		void miseAJourCasesActives(std::vector<int> caseActives);
 		void miseAJourInfosPorts(std::vector<int> infos);
 		void miseAJourScores(std::vector<int> scores);
-
+		bool casesDispo(int* t);
 		int* getTrajectoire(int angle, int puissance);
 };
 
