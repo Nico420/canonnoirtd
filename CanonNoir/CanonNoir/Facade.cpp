@@ -37,6 +37,7 @@ Facade::~Facade(){
 	delete this->motor;
 	delete[] this->casesActives;
 	delete[] this->scoresBateaux;
+	delete[] this->infosBateaux;
 }
 
 void Facade::setNbJoueurs(int nb){
@@ -57,7 +58,6 @@ void Facade::setNbJoueurs(int nb){
 }
 
 void Facade::setClick(int x,int y){
-	
 	this->motor->setClick(x,y);
 	this->message = this->motor->getEtat()->getMessage();
 	if(this->motor->getEtat()->getEtat()!=Moteur::NAVIGATION) this->miseAJourCasesActives(this->motor->getEtat()->getCasesActives());
@@ -97,6 +97,9 @@ void Facade::setClick(int x,int y){
 		this->activeCases = false;
 		this->affichePorts = false;
 		this->afficheBat = true;
+	}
+	else if(this->motor->getEtat()->getEtat()==Moteur::NAVIGATION){
+
 	}
 }
 

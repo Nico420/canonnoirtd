@@ -126,11 +126,6 @@ void Moteur::passerAuJoueurSuivant(){
 	cout<<"Fin joueur suivant"<<endl;
 }
 
-void Moteur::setPuissance(int puis){
-	puissance = puis;
-	this->execute();
-}
-
 vector<int> Moteur::getScores(){
 	vector<int> res(4,-1);
 	vector<Joueur>::iterator it;
@@ -143,4 +138,15 @@ vector<int> Moteur::getScores(){
 		}
 	}
 	return res;
+}
+
+
+void Moteur::setAngle(int ang){
+	angle = ang;
+	this->execute();
+}
+
+void Moteur::setPuissance(int puis){
+	puissance = puis;
+	this->execute();
 }
