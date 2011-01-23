@@ -29,10 +29,15 @@ namespace WPF
         // 1/8 of the click area. For the moment it's a constant, but we can perhaps make it dynamic.
         private static double LARGEUR_CASE = 60.454545;
 
+        //Those constants are useful to select images for boats
         private const int ROUGE = 1;
         private const int BLEU = 4;
         private const int VERT = 3;
         private const int JAUNE = 2;
+        private const int CARAVELLE = 3;
+        private const int FREGATE = 2;
+        private const int RADEAU = 1;
+
         // Those variables are usefull in order to "clean" the map (we mean erase the rectangle that we draw).
         private int nbCasesRect = 0;
         private int dernierIndex = 0;
@@ -40,6 +45,8 @@ namespace WPF
         private int dernierIndexPort = 0;
         private int nbBateaux = 0;
         private int dernierIndexBateau = 0;
+        
+        
         /// <summary>
         /// Method for creation of a new main Window. We need to associated a Facade to this Windows.
         /// At the beginning, we can not roll the dice, so we disabled it.
@@ -65,10 +72,13 @@ namespace WPF
             double b = (clickZone.ActualHeight - Mouse.GetPosition(clickZone).Y) / clickZone.ActualHeight;
         }
 
-        
+        /// <summary>
+        /// This method updates the score display. It places each score at the well place.
+        /// </summary>
         private void updateScore()
         {
             scorebox.Visibility = System.Windows.Visibility.Visible;
+            // This pointer is links to the table of score, that is store in the Facade
             IntPtr score = new IntPtr(FacadeW.getScores().GetHashCode());
             System.Windows.Thickness t = new Thickness(0, 0, 0, 0);
             
@@ -80,7 +90,6 @@ namespace WPF
                 scorevert = Marshal.ReadInt32(score);
                 score += sizeof(int);
                 scorebleu += Marshal.ReadInt32(score);
-                //MessageBox.Show("" + score + " " + scorerouge + " " + scorejaune + " " + scorevert + " " + scorebleu);
                 if (scorerouge >= 0)
                 {
                     joueurRouge.Text = "Bateau Rouge : " + scorerouge;
@@ -114,22 +123,22 @@ namespace WPF
         /// <summary>
         /// This function is used to set a boat at a given position.
         /// </summary>
-        /// <param name="x">boat's x</param>
-        /// <param name="y">boat's y</param>
-        /// <param name="type">Give the type of boat : 0 for Caravelle, 1 for Frégate, 2 for Radeau</param>
+        /// <param name="x">boat's x position</param>
+        /// <param name="y">boat's y position</param>
+        /// <param name="type">Give the type of boat : 3 for Caravelle, 2 for Frégate, 1 for Radeau</param>
         /// <param name="tresor">true if a tresor is on the boat, else false.</param>
         private void afficherBateau(int x, int y, int type, bool tresor,int couleur)
         {
             String bateau = "bateau-";
             switch (type)
             {
-                case 3:
+                case CARAVELLE:
                     bateau += "Caravelle";
                     break;
-                case 2:
+                case FREGATE:
                     bateau += "fregate";
                     break;
-                case 1:
+                case RADEAU:
                     bateau += "radeau";
                     break;
 
@@ -155,10 +164,12 @@ namespace WPF
             }
             if (tresor) bateau += "-tresor";
             bateau += ".bmp";
+            //The boat will be display in a button
             Button bat = new Button();
             bat.Height = HAUTEUR_CASE - 5;
             bat.Width = LARGEUR_CASE - 10;
             bat.Margin = new Thickness(x * LARGEUR_CASE + clickZone.Margin.Left + 7, y * HAUTEUR_CASE + clickZone.Margin.Top + 5, 0, 0);
+            //The button is attach to the Attaque function.
             bat.AddHandler(Button.ClickEvent, new RoutedEventHandler(Attaque));
             Image image = new Image();
             BitmapImage bateau_img = new BitmapImage(new Uri("Images/" + bateau, UriKind.Relative));
@@ -167,13 +178,17 @@ namespace WPF
             image.Width = LARGEUR_CASE -5 ;
             image.HorizontalAlignment = HorizontalAlignment.Left;
             image.VerticalAlignment = VerticalAlignment.Center;
-            //image.Margin = new Thickness(x * LARGEUR_CASE + clickZone.Margin.Left+7, y * HAUTEUR_CASE + clickZone.Margin.Top+5, 0, 0);
             nbBateaux++;
             bat.Content = image;
             plateau.Children.Add(bat);
             dernierIndexBateau = plateau.Children.IndexOf(bat);
         }
 
+        /// <summary>
+        /// This method is used to set the attaque between two boats
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void Attaque(object sender, RoutedEventArgs e)
         {
             if (FacadeW.afficheCanon())
@@ -278,6 +293,11 @@ namespace WPF
                this.BoatUpdate();
             }
            }
+
+        /// <summary>
+        /// This method create the new game from a given number of player.
+        /// </summary>
+        /// <param name="a">The number of player</param>
         private void init_Jeu(int a)
         {
             Init.Visibility = System.Windows.Visibility.Hidden;
@@ -292,24 +312,50 @@ namespace WPF
             textBlock3.Text = FacadeW.getMessage();
             Jeu.Visibility = System.Windows.Visibility.Visible;
         }
+
+        /// <summary>
+        /// Action link to the 1 player button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, RoutedEventArgs e)
         {
             this.init_Jeu(2);
         }
-            private void button2_Click(object sender, RoutedEventArgs e)
+        
+        /// <summary>
+        /// Action link to the 2 player button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button2_Click(object sender, RoutedEventArgs e)
         {
             this.init_Jeu(4);
         }
+        
+        /// <summary>
+        /// Action link to the 3 player button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button3_Click(object sender, RoutedEventArgs e)
         {
             this.init_Jeu(3);
         }
         
+        /// <summary>
+        /// Action link to the 4 player button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void fullscreen(object sender, RoutedEventArgs e)
         {
             this.WindowState= System.Windows.WindowState.Maximized;
         }
 
+        /// <summary>
+        /// We use this method to draw boats on the map.
+        /// </summary>
         private void BoatUpdate()
         {
             if (FacadeW.afficheScores())
@@ -341,6 +387,12 @@ namespace WPF
             }
         }
 
+        /// <summary>
+        /// Action link to a mouse click on the map.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+
         private void clickZone_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             if(FacadeW.activerCases())
@@ -363,9 +415,13 @@ namespace WPF
             }
         }
 
+        /// <summary>
+        /// When you click on "Roll the dices", this method is launch.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void LanceDes_Click(object sender, RoutedEventArgs e)
         {
-            
             LanceDes.IsEnabled = false;
             int count = 0;
             //Pour le lancer de Dés, c'est un systeme qui permet de faire des pauses.
@@ -401,11 +457,23 @@ namespace WPF
             
         }
 
+
+        /// <summary>
+        /// Display Game help.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AfficheAide(object sender, RoutedEventArgs e)
         {
             Window2 w = new Window2();
             w.Show();
         }
+
+        /// <summary>
+        /// Show instructions in case of troubles
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void EnCasDeProbleme(object sender, RoutedEventArgs e)
         {
             String s = "Si vous rencontrez des bugs ou remarquez des erreurs, et même pour toutes suggestions, n'hésitez pas à nous contacter !\n";
@@ -413,12 +481,27 @@ namespace WPF
             s += "Aurélien Texier : aurelien.texier@insa-rennes.fr\n";
             MessageBox.Show(s,"En cas de problèmes",MessageBoxButton.OK,MessageBoxImage.Information);
         }
+
+        /// <summary>
+        /// Shows informations about the application
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Apropos(object sender, RoutedEventArgs e)
         {
-            String s = "Ici il faudrait mettre les versions, auteur,...";
-            MessageBox.Show(s,"A propos");
+            String s = "Application : Canon Noir";
+            s += "\nAuteurs : Aurélien Texier - Nicolas Desfeux";
+            s += "\nEtablissement : Institut National des Sciences Appliquées de Rennes";
+            s += "\nType : Jeu de société";
+            s += "\nLangages utilisés : C++ (Moteur),C# (Affichage)";
+            MessageBox.Show(s,"A propos",MessageBoxButton.OK,MessageBoxImage.Information);
         }
 
+        /// <summary>
+        /// This method create a new game !
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void NouvellePartie(object sender, RoutedEventArgs e)
         {
             MainWindow m = new MainWindow();
@@ -426,6 +509,12 @@ namespace WPF
             m.Show();
         }
 
+
+        /// <summary>
+        /// We use this method to quit the game
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Quitter(object sender, RoutedEventArgs e)
         {
 
