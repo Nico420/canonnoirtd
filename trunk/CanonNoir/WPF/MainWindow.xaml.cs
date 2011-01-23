@@ -258,7 +258,6 @@ namespace WPF
                         myRect.StrokeThickness = 7;
                         myRect.HorizontalAlignment = HorizontalAlignment.Left;
                         myRect.VerticalAlignment = VerticalAlignment.Center;
-                        //La taille des rectangles devrait varier suivant port ou case normale
                         int y = i / 11;
                         int x = i % 11;
                         nbCasesChoix++;
@@ -344,7 +343,7 @@ namespace WPF
 
         private void clickZone_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         { 
-            if (FacadeW.activerCases())
+            if(FacadeW.activerCases())
             {
                 double a = Mouse.GetPosition(clickZone).X;
                 a /= LARGEUR_CASE;

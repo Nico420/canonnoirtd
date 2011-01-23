@@ -60,7 +60,7 @@ void Facade::setClick(int x,int y){
 	
 	this->motor->setClick(x,y);
 	this->message = this->motor->getEtat()->getMessage();
-	this->miseAJourCasesActives(this->motor->getEtat()->getCasesActives());
+	if(this->motor->getEtat()->getEtat()!=Moteur::NAVIGATION) this->miseAJourCasesActives(this->motor->getEtat()->getCasesActives());
 	if(this->motor->getEtat()->getEtat()==Moteur::CHOISIRPORT){
 		this->activeCases = true;
 	}
@@ -163,11 +163,11 @@ int* Facade::getTrajectoire(int angle, int puissance){
 	double angle_rad = 2*pi*angle/360;
 	double vx = puissance * cos((double)angle);
 	double vz = puissance * sin((double)angle);
-	int res[2*NBPOINTS];
+	int res[NBPOINTS];
 	cout<<"test"<<endl;
-	for(int i=0;i<2*NBPOINTS;i=i+2){
-		res[i] = ((-0.5*9.81*i*i))+(vz)*i;
-		res[i+1] = vx*i;
+	//On stock en i z et en i+1 x
+	for(int i=0;i<NBPOINTS;i=i+2){
+		res[i] = -0.5*9.81*i*i/(puissance*puissance*cos((double) angle)*cos((double) angle))+i*tan((double) angle);
 		cout<<res[i]<<endl;
 	}
 	return res;
