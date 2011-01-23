@@ -13,6 +13,9 @@ TirCanon::TirCanon(){
 	this->positionAttaque = make_pair(0,0);
 	this->message = "";
 	this->moteur = NULL;
+	this->angleObtenu = false;
+	this->puissanceObtenue = false;
+	this->etatsuivant = 0;
 }
 
 TirCanon::TirCanon(Moteur* mot){
@@ -25,6 +28,9 @@ TirCanon::TirCanon(Moteur* mot){
 	this->positionAttaque = make_pair(0,0);
 	this->message = "";
 	this->moteur = mot;
+	this->angleObtenu = false;
+	this->puissanceObtenue = false;
+	this->etatsuivant = 0;
 }
 
 void TirCanon::setCible(int num){
@@ -94,6 +100,11 @@ void TirCanon::calculerRelief(){
 			this->histogramme.push_back(make_pair(l,h));
 		}
 	}
+}
+
+vector<pair<int,int>> TirCanon::calculerTir(){
+	vector<pair<int,int>> res;
+	return res;
 }
 
 double TirCanon::f(int x,int x1,int x2,int y1,int y2) const{

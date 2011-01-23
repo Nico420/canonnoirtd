@@ -187,8 +187,9 @@ inline map<pair<int,int>,int>& Moteur::getCasesDeplacementBateau(){
 inline int Moteur::getAngle() const{
 	return angle;
 }
-inline void Moteur::setAngle(int ang){
-	angle = ang;
+
+inline int Moteur::getPuissance() const{
+	return puissance;
 }
 
 #endif

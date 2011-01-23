@@ -13,12 +13,12 @@
 class TirCanonUnique : public TirCanon
 {
 	private :
-
+		bool cibleChoisie;
 	public :
-		TirCanonUnique() : TirCanon(){};
+		TirCanonUnique() : TirCanon(),cibleChoisie(false){};
 		TirCanonUnique(Moteur* mot) : TirCanon(mot){};
 		void setCible(int num);
-		void execute();
+		virtual void execute();
 }; 
 
 inline void TirCanon::setCible(int num){
