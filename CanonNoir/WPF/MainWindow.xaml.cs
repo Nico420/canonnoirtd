@@ -184,11 +184,11 @@ namespace WPF
                 double b = Mouse.GetPosition(clickZone).Y;
                 b /= HAUTEUR_CASE;
                 int y = (int)b + 1;
-                //FacadeW.setClick(x, y);
+                FacadeW.setClick(x, y);
                 MessageBox.Show("" + x + " " + y);
+                Window1 w = new Window1(this);
+                w.Show();
             }
-            Window1 w = new Window1(this);
-            w.Show();
         }
 
 
@@ -342,7 +342,7 @@ namespace WPF
         }
 
         private void clickZone_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        { 
+        {
             if(FacadeW.activerCases())
             {
                 double a = Mouse.GetPosition(clickZone).X;
@@ -356,6 +356,10 @@ namespace WPF
                 this.LanceDes.IsEnabled = FacadeW.activerDes();
                 textBlock3.Text = FacadeW.getMessage();
                 double num_case = (y - 1) * 11 + x;
+            }
+            if (FacadeW.afficheBateaux())
+            {
+                this.BoatUpdate();
             }
         }
 

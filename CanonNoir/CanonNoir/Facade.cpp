@@ -98,8 +98,10 @@ void Facade::setClick(int x,int y){
 		this->affichePorts = false;
 		this->afficheBat = true;
 	}
-	else if(this->motor->getEtat()->getEtat()==Moteur::NAVIGATION){
-
+	else if(this->motor->getEtat()->getEtat()==Moteur::TIRCANONUNIQUE){
+		//this->motor->setEtat(Moteur::TIRCANONUNIQUE);
+		this->afficheCanon = true;
+		this->message="Test";
 	}
 }
 
