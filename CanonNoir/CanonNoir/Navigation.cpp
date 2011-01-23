@@ -13,6 +13,7 @@ void Navigation::execute(){
 
 void Navigation::deplacer(int x, int y){
 	cout << "Etat Navigation";
+	ostringstream mes;
 	if(this->moteur->getCasesDeplacementBateau().count(make_pair(x,y))>0){
 		int numBat = 1;
 		if(this->moteur->getNbJoueurs()==2) numBat = this->moteur->getCasesDeplacementBateau()[make_pair(x,y)];
@@ -20,7 +21,7 @@ void Navigation::deplacer(int x, int y){
 		this->moteur->getPlateau().libereCase(bat->getPosition().first,bat->getPosition().second);
 		bat->deplacer(x,y);
 		this->moteur->getPlateau().occupeCase(x,y);
-		ostringstream mes;
+		
 		mes << "Joueur";
 		mes << this->moteur->getJoueurCourant()+"\n";
 		if(this->moteur->getPlateau().getEtat(x,y)==Moteur::TIRCANONUNIQUE){
@@ -66,6 +67,13 @@ void Navigation::deplacer(int x, int y){
 				this->etatsuivant = Moteur::LANCERDESDEPLACEMENT;
 			}
 		}
+		this->setMessage(mes.str());
+	}else{
+		this->etatsuivant = Moteur::NAVIGATION;
+		mes << "Attention, vous n'avez pas choisi de une case valide !\n";
+		mes << "Joueur ";
+		mes << this->moteur->getJoueurCourant();
+		mes << ", choisissez la case où vous souhaitez vous déplacer.";
 		this->setMessage(mes.str());
 	}
 }
