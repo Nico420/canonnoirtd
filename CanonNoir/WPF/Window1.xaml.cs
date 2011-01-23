@@ -73,7 +73,7 @@ namespace WPF
             boulet.VerticalAlignment = VerticalAlignment.Center;
             zoneTir.Children.Add(boulet);
             m.FacadeW.setPuissance(puissance_int);
-            IntPtr a = new IntPtr(m.FacadeW.getTrajectoire(1,50).GetHashCode());
+            IntPtr a = new IntPtr(m.FacadeW.getTrajectoire(60,100).GetHashCode());
             int x = Marshal.ReadInt32(a);
             a += sizeof(int);
             int z = Marshal.ReadInt32(a);
@@ -86,7 +86,7 @@ namespace WPF
                 a += sizeof(int);
                 z = Marshal.ReadInt32(a);
                 a += sizeof(int);
-                t= new Thickness(x*30,z,0,0);
+                t= new Thickness(x*30,zoneTir.ActualHeight - z,0,0);
                 boulet.Margin = t;
             }
         }
