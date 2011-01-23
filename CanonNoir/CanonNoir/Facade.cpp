@@ -4,7 +4,7 @@
 #include <math.h>
 
 
-#define NBPOINTS 10
+#define NBPOINTS 100
 
 Facade::Facade(){
 	this->motor = new Moteur();
@@ -124,8 +124,20 @@ void Facade::lancerDes(){
 		this->activeCases = true;
 		this->activeDe1 = true;
 		this->activeDe2 = this->motor->getEtat()->getActiveDe2();
-		this->activeLancerDes = false;
+		bool a = this->casesDispo(this->getCasesActives());
+		if(a){
+			this->activeLancerDes = true;
+		}else{
+			this->activeLancerDes = false;
+		}
 	}
+}
+
+bool Facade::casesDispo(int* t){
+	for(int i=0;i<88;i++){
+		if(t[i]==1) return false;
+	}
+	return true;
 }
 
 void Facade::miseAJourCasesActives(std::vector<int> caseActives){
