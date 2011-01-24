@@ -6,6 +6,8 @@
 using namespace std;
 
 void TirCanonUnique::execute(){
+	cout<<"Début du execute de TirCanonUnique"<<endl;
+	cout<<"Booléen cibleChoisie : "<<cibleChoisie<<endl;
 	ostringstream mes;
 	mes << "Joueur ";
 	if(!this->cibleChoisie){
@@ -31,6 +33,7 @@ void TirCanonUnique::execute(){
 				}
 			}
 		}
+		this->cibleChoisie = true;
 		mes << this->moteur->getJoueurCourant();
 		mes << ", sélectionnez l'angle de votre tir.";
 	}
