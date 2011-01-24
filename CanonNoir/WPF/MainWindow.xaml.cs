@@ -518,11 +518,35 @@ namespace WPF
         private void Quitter(object sender, RoutedEventArgs e)
         {
 
-           MessageBoxResult m = MessageBox.Show("Etes vous sur de vouloir quitter ? (la partie ne sera perdue)","Confirmation", MessageBoxButton.YesNo,MessageBoxImage.Question);
-
-           if(m.ToString() == "Yes")
-            this.Close();
+            Close();
         }
+
+         //-----------------------------------------------------------
+ // demande au user confirmation pour quitter,
+ // renvoie true si confirmé
+ private bool AskConfirmQuitAppli()
+ {
+ // message confirmation quitter l'application
+     if (MessageBox.Show("Etes vous sur de vouloir quitter ? (la partie ne sera perdue)",
+ "Quitter ?" ,
+ MessageBoxButton.YesNo).ToString() == "No")
+ // non
+ return false;
+
+ // oui, quitter
+ return true;
+ }
+ //-----------------------------------------------------------
+ // event déclenchée par Close()
+ // déclenche ensuite event Closed sauf si annulé
+ private void MainForm_Closing(
+ object sender, System.ComponentModel.CancelEventArgs e)
+ {
+ //non confirmé, opération annulée, ne déclenche pas event Closed
+ if(AskConfirmQuitAppli()==false)
+ e.Cancel= true;
+ }
+
 
     }
 }
