@@ -12,20 +12,19 @@
 class TirCanonDuel : public TirCanon
 {
 	private :
-
 		bool premierTir;
-
+		int joueurAttaquant;
+		int joueurAttaque;
 	public :
-		TirCanonDuel() : TirCanon(),premierTir(true){};
-		TirCanonDuel(Moteur* mot) : TirCanon(mot),premierTir(true){};
-		bool estPremierTir() const;
+		TirCanonDuel() : TirCanon(),premierTir(true),joueurAttaquant(0){};
+		TirCanonDuel(Moteur* mot) : TirCanon(mot),premierTir(true),joueurAttaquant(0){};
 		void execute();
 		void echangeDuel();
+		int getEtat() const;
+};
 
-}; 
-
-inline bool TirCanonDuel::estPremierTir() const{
-	return this->premierTir;
+inline int TirCanonDuel::getEtat() const{
+	return this->etatsuivant;
 }
 
 #endif

@@ -19,7 +19,7 @@ class TirCanon : public Etat
 		std::pair<int,int> positionAttaquant;
 		std::pair<int,int> positionAttaque;
 		std::list<std::pair<double,double>> histogramme;
-		std::list<std::pair<double,double>> trajectoireTir;
+		std::vector<std::pair<double,double>> trajectoireTir;
 		bool angleObtenu;
 		bool puissanceObtenue;
 		int etatsuivant;
@@ -38,11 +38,10 @@ class TirCanon : public Etat
 		std::string getMessage() const;
 		void setAngle(int ang);
 		void setPuissance(int puis);
-		void setCible(int num);
 		bool getTirReussi() const;
-		void effectuerChangements();
 		void calculerRelief();
-		std::vector<std::pair<int,int>> calculerTir();
+		void calculerTir();
+		void effectuerChangements(int joueurAttaquant,int batAttaquant,int joueurAttaque,int batAttaque);
 }; 
 
 inline void TirCanon::setMessage(std::string mes){

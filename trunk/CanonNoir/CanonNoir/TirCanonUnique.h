@@ -19,10 +19,11 @@ class TirCanonUnique : public TirCanon
 		TirCanonUnique(Moteur* mot) : TirCanon(mot),cibleChoisie(false){};
 		void setCible(int num);
 		virtual void execute();
-}; 
+		virtual int getEtat() const;
+};
 
-inline void TirCanon::setCible(int num){
-	this->bateauAttaque = num;
+inline int TirCanonUnique::getEtat() const{
+	return this->etatsuivant;
 }
 
 #endif

@@ -23,7 +23,6 @@ Moteur::Moteur(){
 	this->plateau = Plateau::Plateau();
 	cout<<"testMoteur"<<endl;
 	this->etat= new AttenteNbJoueurs();
-
 }
 
 Moteur::~Moteur(){
@@ -149,4 +148,29 @@ void Moteur::setAngle(int ang){
 void Moteur::setPuissance(int puis){
 	puissance = puis;
 	this->execute();
+}
+
+void Moteur::setHistogramme(list<pair<double,double>>& hist){
+	int cpt = 0;
+	for(list<pair<double,double>>::iterator it=hist.begin();it!=hist.end();it++){
+		this->histogramme.at(cpt++) = it->second;
+		this->histogramme.at(cpt++) = it->first;
+	}
+}
+
+void Moteur::setTrajectoireTir(vector<pair<double,double>>& traj){
+	int cpt = 0;
+	for(vector<pair<double,double>>::iterator it=traj.begin();it!=traj.end();it++){
+		this->trajectoireTir.at(cpt++) = it->first;
+		this->trajectoireTir.at(cpt++) = it->second;
+	}
+}
+
+Bateau* Moteur::getBateau(int joueur,int numPort){
+	if(this->getJoueur(joueur).getBateau(1)->getNumPort()==numPort){
+		return this->getJoueur(joueur).getBateau(1);
+	}
+	else{
+		return this->getJoueur(joueur).getBateau(2);
+	}
 }
