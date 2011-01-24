@@ -72,8 +72,8 @@ class DLL Facade
 		bool afficheRelief();
 		bool afficheScores(){ return afficheSco;};
 		bool affichePortsLibres(){return affichePorts;};
-		void setAngle(int angle){;};
-		void setPuissance(int puissance){;};
+		void setAngle(int angle);
+		void setPuissance(int puissance);
 		void setCible(int nb);
 		void setDeplacement(int x, int y);
 		void setNbJoueurs(int nb);

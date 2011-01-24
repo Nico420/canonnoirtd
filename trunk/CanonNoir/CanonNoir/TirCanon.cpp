@@ -1,24 +1,11 @@
 #include "TirCanon.h"
 #include "Moteur.h"
+#include <iostream>
 
 using namespace std;
 
-TirCanon::TirCanon(){
-	this->angle = -1;
-	this->puissance = -1;
-	this->bateauAttaquant = 0;
-	this->bateauAttaque = 0;
-	this->tirReussi = false;
-	this->positionAttaquant = make_pair(0,0);
-	this->positionAttaque = make_pair(0,0);
-	this->message = "";
-	this->moteur = NULL;
-	this->angleObtenu = false;
-	this->puissanceObtenue = false;
-	this->etatsuivant = 0;
-}
-
 TirCanon::TirCanon(Moteur* mot){
+	this->moteur = mot;
 	this->angle = -1;
 	this->puissance = -1;
 	this->bateauAttaquant = this->moteur->getJoueurCourant();
@@ -27,15 +14,9 @@ TirCanon::TirCanon(Moteur* mot){
 	this->positionAttaquant = make_pair(0,0);
 	this->positionAttaque = make_pair(0,0);
 	this->message = "";
-	this->moteur = mot;
 	this->angleObtenu = false;
 	this->puissanceObtenue = false;
 	this->etatsuivant = 0;
-}
-
-void TirCanon::setCible(int num){
-	this->bateauAttaque = num;
-	//Fixer la position du bateau correspondante
 }
 
 void TirCanon::execute(){
@@ -53,21 +34,25 @@ void TirCanon::calculerRelief(){
 	int y2 = this->positionAttaque.second;
 	if(x1<x2){
 		inc_x = 1;
-		x = x1+1;
+		x = x1;
 	}
 	else{
 		inc_x = -1;
-		x = x1;
+		x = x1-1;
 	}
 	if(y1<y2){
 		inc_y = 1;
-		y = y1+1;
+		y = y1;
 	}
 	else{
 		inc_y = -1;
-		y = y1;
+		y = y1-1;
 	}
-	while(x*inc_x < x2*inc_x && y*inc_y < y2*inc_y){
+	cout<<"x ="<<x<<endl;
+	cout<<"x2 ="<<x2<<endl;
+	cout<<"y ="<<y<<endl;
+	cout<<"y2 ="<<y2<<endl;
+	while((x*inc_x<x2*inc_x) && (y*inc_y<=y2*inc_y)){
 		if(f(x,x1,x2,y1,y2)==(double)y){
 			intersections.push_back(pair<double,double>(x,y));
 			x += inc_x;
@@ -82,6 +67,7 @@ void TirCanon::calculerRelief(){
 			y += inc_y;
 		}
 	}
+	cout<<"Taille intersections :"<<intersections.size()<<endl;
 	if(intersections.size() >= 1){
 		xb = x1;
 		yb = y1;

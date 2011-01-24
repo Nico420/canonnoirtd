@@ -28,10 +28,14 @@ class TirCanon : public Etat
 		double g(int y,int x1,int x2,int y1,int y2) const;
 
 	public :
-		TirCanon();
+		TirCanon() : angle(-1),puissance(-1),bateauAttaquant(0),bateauAttaque(0),tirReussi(false),
+			positionAttaquant(std::make_pair(0,0)),positionAttaque(std::make_pair(0,0)),message(""),moteur(NULL),
+			angleObtenu(false),puissanceObtenue(false),etatsuivant(0) {};
 		TirCanon(Moteur* mot);
 		virtual ~TirCanon(){};
 		virtual void execute();
+		void setMessage(std::string mes);
+		std::string getMessage() const;
 		void setAngle(int ang);
 		void setPuissance(int puis);
 		void setCible(int num);
@@ -40,6 +44,14 @@ class TirCanon : public Etat
 		void calculerRelief();
 		std::vector<std::pair<int,int>> calculerTir();
 }; 
+
+inline void TirCanon::setMessage(std::string mes){
+	this->message = mes;
+}
+
+inline std::string TirCanon::getMessage() const{
+	return this->message;
+}
 
 inline void TirCanon::setAngle(int ang){
 	this->angle = ang;

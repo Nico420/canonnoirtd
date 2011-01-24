@@ -10,6 +10,7 @@ void TirCanonUnique::execute(){
 	mes << "Joueur ";
 	if(!this->cibleChoisie){
 		//Récupération de la position du bateau attaquant
+		cout<<"Récupération de la position du bateau attaquant"<<endl;
 		int x = moteur->getJoueur(moteur->getJoueurCourant()).getBateau(1)->getPosition().first;
 		int y = moteur->getJoueur(moteur->getJoueurCourant()).getBateau(1)->getPosition().second;
 		if(moteur->getPlateau().getEtat(x,y)==Moteur::TIRCANONUNIQUE){
@@ -47,6 +48,10 @@ void TirCanonUnique::execute(){
 		this->moteur->passerAuJoueurSuivant();
 		mes << this->moteur->getJoueurCourant();
 		mes << ", lancez les dés pour jouer.";
+		cout<<"Histogramme :"<<endl;
+		for(list<pair<double,double>>::iterator it=histogramme.begin();it!=histogramme.end();it++){
+			cout<<it->first<<" "<<it->second<<endl;
+		}
 	}
 	this->setMessage(mes.str());
 }

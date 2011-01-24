@@ -60,7 +60,8 @@ void Facade::setNbJoueurs(int nb){
 void Facade::setClick(int x,int y){
 	this->motor->setClick(x,y);
 	this->message = this->motor->getEtat()->getMessage();
-	if(this->motor->getEtat()->getEtat()!=Moteur::NAVIGATION) this->miseAJourCasesActives(this->motor->getEtat()->getCasesActives());
+	if(this->motor->getEtat()->getEtat()!=Moteur::NAVIGATION && this->motor->getEtat()->getEtat()!=0)
+		this->miseAJourCasesActives(this->motor->getEtat()->getCasesActives());
 	if(this->motor->getEtat()->getEtat()==Moteur::CHOISIRPORT){
 		this->activeCases = true;
 	}
@@ -99,9 +100,11 @@ void Facade::setClick(int x,int y){
 		this->afficheBat = true;
 	}
 	else if(this->motor->getEtat()->getEtat()==Moteur::TIRCANONUNIQUE){
-		//this->motor->setEtat(Moteur::TIRCANONUNIQUE);
+		this->miseAJourInfosPorts(this->motor->getPosBateaux());
+		cout<<"Construction de l'état tircanonunique"<<endl;
+		this->motor->setEtat(Moteur::TIRCANONUNIQUE);
+		cout<<"Fin construction de l'état tircanonunique"<<endl;
 		this->afficheCanon = true;
-		this->message="Test";
 	}
 }
 
@@ -136,6 +139,18 @@ void Facade::lancerDes(){
 			this->activeLancerDes = false;
 		}
 	}
+}
+
+void Facade::setAngle(int angle){
+	cout<<"Appel de setAngle dans Facade"<<endl;
+	motor->setAngle(angle);
+	this->message = this->motor->getEtat()->getMessage();
+}
+
+void Facade::setPuissance(int puissance){
+	cout<<"Appel de setPuissance dans Facade"<<endl;
+	motor->setPuissance(puissance);
+	this->message = this->motor->getEtat()->getMessage();
 }
 
 bool Facade::casesDispo(int* t){

@@ -19,11 +19,12 @@ void Navigation::deplacer(int x, int y){
 		if(this->moteur->getNbJoueurs()==2) numBat = this->moteur->getCasesDeplacementBateau()[make_pair(x,y)];
 		Bateau* bat = this->moteur->getJoueur(this->moteur->getJoueurCourant()).getBateau(numBat);
 		this->moteur->getPlateau().libereCase(bat->getPosition().first,bat->getPosition().second);
+		cout << "Deplacement du bateau"<<endl;
 		bat->deplacer(x,y);
 		this->moteur->getPlateau().occupeCase(x,y);
 		
-		mes << "Joueur";
-		mes << this->moteur->getJoueurCourant()+"\n";
+		mes << "Joueur ";
+		mes << this->moteur->getJoueurCourant();
 		if(this->moteur->getPlateau().getEtat(x,y)==Moteur::TIRCANONUNIQUE){
 			mes << ", choisissez le bateau que vous voulez attaquer.";
 			this->casesBateauxCibles.clear();
