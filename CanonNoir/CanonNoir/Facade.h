@@ -46,6 +46,8 @@ class DLL Facade
 		int de2;
 		int* casesActives;
 		int* infosBateaux;
+		double* histogramme;
+		double* trajectoireTir;
 
 	public :
 		std::string message;
@@ -54,17 +56,14 @@ class DLL Facade
 		bool activerDes(){return this->activeLancerDes;};
 		int* getCasesActives(){return this->casesActives;};
 		bool activerCases(){return this->activeCases;};
-		bool activerPorts();
 		std::string getMessage(){return this->message;};
 		bool afficheCurseurAngle();
 		bool afficherCanon(){return this->afficheCanon;};
 		bool afficheCurseurPuissance();
 		std::vector<std::pair<int,int>> getRelief();
 		bool afficheGagnant();
-		bool activerBateaux();
 		bool afficheTir();
 		int getNbJoueurs(){return this->motor->nbJoueurs;};
-		bool getAttenteNbJoueurs();
 		int* getScores(){return this->scoresBateaux;};
 		int getNbDes();
 		int* getPortsLibres();
@@ -74,17 +73,18 @@ class DLL Facade
 		bool affichePortsLibres(){return affichePorts;};
 		void setAngle(int angle);
 		void setPuissance(int puissance);
-		void setCible(int nb);
-		void setDeplacement(int x, int y);
 		void setNbJoueurs(int nb);
 		void setClick(int x,int y);
 		void lancerDes();
 		int getDes1(){return de1;};
 		int getDes2(){return de2;};
+		int getTailleTabTrajectoire() const {return motor->NBPOINTS*2;};
 		int* getBateaux(){return this->infosBateaux;};
 		void miseAJourCasesActives(std::vector<int> caseActives);
 		void miseAJourInfosPorts(std::vector<int> infos);
 		void miseAJourScores(std::vector<int> scores);
+		void miseAJourHistogramme();
+		void miseAJourTrajectoire();
 		bool casesDispo(int* t);
 		int* getTrajectoire(int angle, int puissance);
 };

@@ -3,9 +3,6 @@
 #include <iostream>
 #include <math.h>
 
-
-#define NBPOINTS 100
-
 Facade::Facade(){
 	this->motor = new Moteur();
 	int dim = this->motor->getPlateau().getLongueur()*this->motor->getPlateau().getLargeur();
@@ -13,7 +10,14 @@ Facade::Facade(){
 	for(int i=0;i<dim;i++){
 		this->casesActives[i] = 0;
 	}
-
+	int dim2 = this->motor->getPlateau().getLongueur()+this->motor->getPlateau().getLargeur();
+	this->histogramme = new double[dim2*2];
+	for(int i=0;i<dim2*2;i++){
+		this->histogramme[i] = 0;
+	}
+	for(int i=0;i<this->getTailleTabTrajectoire();i++){
+		this->trajectoireTir[i] = 0;
+	}
 	this->affichePlateau = true;
 	this->afficheCanon = false;
 	this->affichePorts = false;
@@ -152,6 +156,11 @@ void Facade::setPuissance(int puissance){
 	cout<<"Appel de setPuissance dans Facade"<<endl;
 	motor->setPuissance(puissance);
 	this->message = this->motor->getEtat()->getMessage();
+	this->miseAJourHistogramme();
+	this->miseAJourTrajectoire();
+	if(motor->getEtat()->getEtat()==Moteur::LANCERDESDEPLACEMENT){
+		motor->setEtat(Moteur::LANCERDESDEPLACEMENT);
+	}
 }
 
 bool Facade::casesDispo(int* t){
@@ -179,19 +188,22 @@ void Facade::miseAJourScores(std::vector<int> scores){
 	}
 }
 
-int* Facade::getTrajectoire(int angle, int puissance){
-	int pi=3.1415;
-	double angle_rad = 2*pi*angle/360;
-	double vx = puissance * cos((double)angle);
-	double vz = puissance * sin((double)angle);
-	int res[NBPOINTS];
-	cout<<"test"<<endl;
-	//On stock en i z et en i+1 x
-	for(int i=0;i<NBPOINTS;i=i+2){
-		res[i] = -0.5*9.81*i*i/(puissance*puissance*cos((double) angle)*cos((double) angle))+i*tan((double) angle);
-		cout<<res[i]<<endl;
+void Facade::miseAJourHistogramme(){
+	int dim = this->motor->getPlateau().getLongueur()+this->motor->getPlateau().getLargeur();
+	//Reset of histogramme
+	for(int i=0;i<dim*2;i++) this->histogramme[i] = 0;
+	int i = 0;
+	std::vector<double>::iterator it;
+	for(it=motor->getHistogramme().begin();it!=motor->getHistogramme().end();it++){
+		this->histogramme[i] = *it;
 	}
-	return res;
+}
+
+void Facade::miseAJourTrajectoire(){
+	int dim = this->getTailleTabTrajectoire();
+	for(int i=0;i<dim;i++){
+		this->trajectoireTir[i] = motor->getTrajectoireTir().at(i);
+	}
 }
 
 EXTERNC DLL Facade* Facade_New(){

@@ -47,7 +47,9 @@ void TirCanonUnique::execute(){
 		this->puissance = this->moteur->getPuissance();
 		this->puissanceObtenue = true;
 		this->calculerRelief();
+		moteur->setHistogramme(this->histogramme);
 		this->calculerTir();
+		moteur->setTrajectoireTir(this->trajectoireTir);
 		this->moteur->passerAuJoueurSuivant();
 		mes << this->moteur->getJoueurCourant();
 		mes << ", lancez les dés pour jouer.";
@@ -57,4 +59,5 @@ void TirCanonUnique::execute(){
 		}
 	}
 	this->setMessage(mes.str());
+	this->etatsuivant = Moteur::LANCERDESDEPLACEMENT;
 }

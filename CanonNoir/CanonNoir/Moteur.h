@@ -11,6 +11,7 @@
 */
 
 #include <vector>
+#include <list>
 #include "Joueur.h"
 #include "Plateau.h"
 #include "Etat.h"
@@ -38,6 +39,8 @@ class Moteur
 		int numEtatCourant;
 		int angle;
 		int puissance;
+		vector<double> histogramme;
+		vector<double> trajectoireTir;
 		vector<Joueur> joueurs;
 		Plateau plateau;
 		Etat* etat;
@@ -45,6 +48,7 @@ class Moteur
 
 	public :
 		int nbJoueurs;
+		static const int NBPOINTS = 100;
 		/**
 		*\fn Moteur()
 		*\brief default constructor
@@ -132,7 +136,12 @@ class Moteur
 		Joueur& getJoueur(int nb);
 		Plateau& getPlateau();
 		map<pair<int,int>,int>& getCasesDeplacementBateau();
+		vector<double> getHistogramme() const;
+		void setHistogramme(list<pair<double,double>>& hist);
+		vector<double> getTrajectoireTir() const;
+		void setTrajectoireTir(vector<pair<double,double>>& traj);
 		void addJoueur(int ind,int num,int nbBat,int nbPort1,int nbPort2=0);
+		Bateau* getBateau(int joueur,int numPort);
 		enum Etats { ATTENTENBJOUEURS=1,CHOISIRPORT=2,SETORDREJOUEURS=3,LANCERDESDEPLACEMENT=4,NAVIGATION=5,
 			TIRCANONDUEL=6,TIRCANONUNIQUE=7,PARTIEGAGNEE=8 };
 };
@@ -190,6 +199,14 @@ inline int Moteur::getAngle() const{
 
 inline int Moteur::getPuissance() const{
 	return puissance;
+}
+
+inline vector<double> Moteur::getHistogramme() const{
+	return this->histogramme;
+}
+
+inline vector<double> Moteur::getTrajectoireTir() const{
+	return this->trajectoireTir;
 }
 
 #endif

@@ -92,9 +92,30 @@ void TirCanon::calculerRelief(){
 	}
 }
 
-vector<pair<int,int>> TirCanon::calculerTir(){
-	vector<pair<int,int>> res;
-	return res;
+void TirCanon::calculerTir(){
+	int pi=3.1415;
+	double angle_rad = 2*pi*angle/360;
+	double vx = puissance * cos((double)angle);
+	double vz = puissance * sin((double)angle);
+	vector<pair<double,double>> res;
+	cout<<"Trajectoire :"<<endl;
+	//On stock en i z et en i+1 x
+	for(int i=0;i<moteur->NBPOINTS;i=i+2){
+		double y = -0.5*9.81*i*i/(puissance*puissance*cos((double) angle)*cos((double) angle))+i*tan((double) angle);
+		res.at(i) = make_pair(i,y);
+		cout<<res[i].first<<" "<<res[i].second<<endl;
+	}
+	moteur->setTrajectoireTir(res);
+}
+
+void TirCanon::effectuerChangements(int joueurAttaquant,int batAttaquant,int joueurAttaque,int batAttaque){
+	if(moteur->getBateau(joueurAttaque,batAttaque)->aTresorABord()){
+		moteur->getBateau(joueurAttaque,batAttaque)->enleveTresor();
+		moteur->getBateau(joueurAttaquant,batAttaquant)->donneTresor();
+	}
+	int x = moteur->getBateau(joueurAttaque,batAttaque)->getPosition().first;
+	int y = moteur->getBateau(joueurAttaque,batAttaque)->getPosition().second;
+	moteur->getJoueur(joueurAttaque).degraderBateau(x,y);
 }
 
 double TirCanon::f(int x,int x1,int x2,int y1,int y2) const{
