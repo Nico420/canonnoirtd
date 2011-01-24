@@ -35,6 +35,8 @@ namespace WPF
             this.m = m;
             angle_int = 0;
             InitializeComponent();
+            textChoixAngle.Text=m.FacadeW.getMessage();
+            displayRelief();
         }
         
         private void finCombat(object sender, RoutedEventArgs e)
@@ -60,8 +62,18 @@ namespace WPF
             this.angle_int = theta;
         }
 
+        /// <summary>
+        /// Thank to this method, we can show the montains for the shot !
+        /// </summary>
+        private void displayRelief()
+        {
+        }
+        private void displayTraj()
+        {
+        }
         private void choixPuissance(object sender, RoutedEventArgs e)
         {
+            textChoixPuiss.Text = m.FacadeW.getMessage();
             double puiss = (puiss_image.ActualHeight - Mouse.GetPosition(puiss_image).Y) / puiss_image.ActualHeight;
             int puissance_int = (int) Math.Round(puiss*100);
             valeurPuiss.Text =  "Puissance : " + puissance_int +"mètres/s";
@@ -71,7 +83,9 @@ namespace WPF
 	        double angle_rad = 2*pi*angle_int/360;
             String s="";
             double pos = 0;
+  
 	        //Display the shoot's way !
+            displayTraj();
             for(int i=0;pos>=0 && i<500;i=i+2){
                 Image boulet = new Image();
                 BitmapImage boulet_img = new BitmapImage(new Uri("Images/boulet.jpg", UriKind.Relative));
@@ -86,6 +100,18 @@ namespace WPF
                 s += pos + " ";
                 boulet.Margin = t;
 	        }
+        }
+
+        //-----------------------------------------------------------
+        // event déclenchée par Close()
+        // déclenche ensuite event Closed sauf si annulé
+        private void MainForm_Closing(
+        object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            //non confirmé, opération annulée, ne déclenche pas event Closed
+            MessageBox.Show("Vous ne pouvez pas fermer la fenêtre de Tir avant que le tir soit fini !",
+        "Impossible !", MessageBoxButton.OK, MessageBoxImage.Stop);
+                e.Cancel = true;
         }
     }
 }

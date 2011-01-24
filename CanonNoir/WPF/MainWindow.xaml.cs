@@ -202,7 +202,7 @@ namespace WPF
                 FacadeW.setClick(x, y);
                 MessageBox.Show("" + x + " " + y);
                 Window1 w = new Window1(this);
-                w.Show();
+                w.ShowDialog();
             }
         }
 
