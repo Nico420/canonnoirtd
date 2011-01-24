@@ -32,6 +32,10 @@ void TirCanon::calculerRelief(){
 	int x2 = this->positionAttaque.first;
 	int y1 = this->positionAttaquant.second;
 	int y2 = this->positionAttaque.second;
+	cout<<"x1 ="<<x1<<endl;
+	cout<<"x2 ="<<x2<<endl;
+	cout<<"y1 ="<<y1<<endl;
+	cout<<"y2 ="<<y2<<endl;
 	if(x1<x2){
 		inc_x = 1;
 		x = x1;

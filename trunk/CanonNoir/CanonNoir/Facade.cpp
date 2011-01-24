@@ -36,8 +36,8 @@ Facade::Facade(){
 Facade::~Facade(){
 	delete this->motor;
 	delete[] this->casesActives;
-	delete[] this->scoresBateaux;
-	delete[] this->infosBateaux;
+	//delete[] this->scoresBateaux;
+	//delete[] this->infosBateaux;
 }
 
 void Facade::setNbJoueurs(int nb){

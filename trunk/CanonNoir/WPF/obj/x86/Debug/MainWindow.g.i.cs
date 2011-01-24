@@ -269,12 +269,20 @@ namespace WPF {
             switch (connectionId)
             {
             case 1:
-            this.textBlock2 = ((System.Windows.Controls.TextBlock)(target));
+            
+            #line 4 "..\..\..\MainWindow.xaml"
+            ((WPF.MainWindow)(target)).Closing += new System.ComponentModel.CancelEventHandler(this.MainForm_Closing);
+            
+            #line default
+            #line hidden
             return;
             case 2:
-            this.plateau = ((System.Windows.Controls.Canvas)(target));
+            this.textBlock2 = ((System.Windows.Controls.TextBlock)(target));
             return;
             case 3:
+            this.plateau = ((System.Windows.Controls.Canvas)(target));
+            return;
+            case 4:
             
             #line 12 "..\..\..\MainWindow.xaml"
             ((System.Windows.Controls.Image)(target)).MouseLeftButtonDown += new System.Windows.Input.MouseButtonEventHandler(this.clickZone_MouseLeftButtonDown);
@@ -282,22 +290,22 @@ namespace WPF {
             #line default
             #line hidden
             return;
-            case 4:
+            case 5:
             this.clickZone = ((System.Windows.Controls.Canvas)(target));
             return;
-            case 5:
+            case 6:
             this.sideBar = ((System.Windows.Controls.Canvas)(target));
             return;
-            case 6:
+            case 7:
             this.Init = ((System.Windows.Controls.Canvas)(target));
             return;
-            case 7:
+            case 8:
             this.textBlock1 = ((System.Windows.Controls.TextBlock)(target));
             return;
-            case 8:
+            case 9:
             this.textBlock10 = ((System.Windows.Controls.TextBlock)(target));
             return;
-            case 9:
+            case 10:
             this.button1 = ((System.Windows.Controls.Button)(target));
             
             #line 20 "..\..\..\MainWindow.xaml"
@@ -306,7 +314,7 @@ namespace WPF {
             #line default
             #line hidden
             return;
-            case 10:
+            case 11:
             this.button2 = ((System.Windows.Controls.Button)(target));
             
             #line 21 "..\..\..\MainWindow.xaml"
@@ -315,7 +323,7 @@ namespace WPF {
             #line default
             #line hidden
             return;
-            case 11:
+            case 12:
             this.button3 = ((System.Windows.Controls.Button)(target));
             
             #line 22 "..\..\..\MainWindow.xaml"
@@ -324,34 +332,34 @@ namespace WPF {
             #line default
             #line hidden
             return;
-            case 12:
+            case 13:
             this.Jeu = ((System.Windows.Controls.Canvas)(target));
             return;
-            case 13:
+            case 14:
             this.titre = ((System.Windows.Controls.TextBlock)(target));
             return;
-            case 14:
+            case 15:
             this.scorebox = ((System.Windows.Controls.TextBlock)(target));
             return;
-            case 15:
+            case 16:
             this.joueurRouge = ((System.Windows.Controls.TextBlock)(target));
             return;
-            case 16:
+            case 17:
             this.joueurJaune = ((System.Windows.Controls.TextBlock)(target));
             return;
-            case 17:
+            case 18:
             this.joueurVert = ((System.Windows.Controls.TextBlock)(target));
             return;
-            case 18:
+            case 19:
             this.joueurBleu = ((System.Windows.Controls.TextBlock)(target));
             return;
-            case 19:
+            case 20:
             this.image1 = ((System.Windows.Controls.Image)(target));
             return;
-            case 20:
+            case 21:
             this.menu1 = ((System.Windows.Controls.Menu)(target));
             return;
-            case 21:
+            case 22:
             
             #line 38 "..\..\..\MainWindow.xaml"
             ((System.Windows.Controls.MenuItem)(target)).Click += new System.Windows.RoutedEventHandler(this.NouvellePartie);
@@ -359,7 +367,7 @@ namespace WPF {
             #line default
             #line hidden
             return;
-            case 22:
+            case 23:
             
             #line 39 "..\..\..\MainWindow.xaml"
             ((System.Windows.Controls.MenuItem)(target)).Click += new System.Windows.RoutedEventHandler(this.Quitter);
@@ -367,7 +375,7 @@ namespace WPF {
             #line default
             #line hidden
             return;
-            case 23:
+            case 24:
             
             #line 42 "..\..\..\MainWindow.xaml"
             ((System.Windows.Controls.MenuItem)(target)).Click += new System.Windows.RoutedEventHandler(this.AfficheAide);
@@ -375,7 +383,7 @@ namespace WPF {
             #line default
             #line hidden
             return;
-            case 24:
+            case 25:
             
             #line 43 "..\..\..\MainWindow.xaml"
             ((System.Windows.Controls.MenuItem)(target)).Click += new System.Windows.RoutedEventHandler(this.EnCasDeProbleme);
@@ -383,7 +391,7 @@ namespace WPF {
             #line default
             #line hidden
             return;
-            case 25:
+            case 26:
             
             #line 44 "..\..\..\MainWindow.xaml"
             ((System.Windows.Controls.MenuItem)(target)).Click += new System.Windows.RoutedEventHandler(this.Apropos);
@@ -391,16 +399,16 @@ namespace WPF {
             #line default
             #line hidden
             return;
-            case 26:
+            case 27:
             this.des = ((System.Windows.Controls.Canvas)(target));
             return;
-            case 27:
+            case 28:
             this.des2 = ((System.Windows.Controls.Image)(target));
             return;
-            case 28:
+            case 29:
             this.des1 = ((System.Windows.Controls.Image)(target));
             return;
-            case 29:
+            case 30:
             this.LanceDes = ((System.Windows.Controls.Button)(target));
             
             #line 50 "..\..\..\MainWindow.xaml"
@@ -409,10 +417,10 @@ namespace WPF {
             #line default
             #line hidden
             return;
-            case 30:
+            case 31:
             this.Message = ((System.Windows.Controls.TextBlock)(target));
             return;
-            case 31:
+            case 32:
             this.textBlock3 = ((System.Windows.Controls.TextBlock)(target));
             return;
             }
