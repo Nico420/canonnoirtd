@@ -16,7 +16,7 @@ class TirCanonUnique : public TirCanon
 		bool cibleChoisie;
 	public :
 		TirCanonUnique() : TirCanon(),cibleChoisie(false){};
-		TirCanonUnique(Moteur* mot) : TirCanon(mot){};
+		TirCanonUnique(Moteur* mot) : TirCanon(mot),cibleChoisie(false){};
 		void setCible(int num);
 		virtual void execute();
 }; 

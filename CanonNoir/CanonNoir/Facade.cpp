@@ -58,6 +58,7 @@ void Facade::setNbJoueurs(int nb){
 }
 
 void Facade::setClick(int x,int y){
+	cout<<"Appel de setClick dans Facade"<<endl;
 	this->motor->setClick(x,y);
 	this->message = this->motor->getEtat()->getMessage();
 	if(this->motor->getEtat()->getEtat()!=Moteur::NAVIGATION && this->motor->getEtat()->getEtat()!=0)
