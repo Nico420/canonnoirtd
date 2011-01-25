@@ -164,12 +164,19 @@ void Facade::setPuissance(int puissance){
 	cout<<"get message setpuissance facade"<<endl;
 	this->message = this->motor->getEtat()->getMessage();
 	cout<<"maj histo set puissance Facade"<<endl;
-	this->miseAJourHistogramme();
+	//this->miseAJourHistogramme();
 	cout<<"maj traj set puissance Facade"<<endl;
-	this->miseAJourTrajectoire();
+	//this->miseAJourTrajectoire();
 	if(motor->getEtat()->getEtat()==Moteur::LANCERDESDEPLACEMENT){
 		motor->setEtat(Moteur::LANCERDESDEPLACEMENT);
+		cout<<"etat changé"<<endl;
+		this->afficheBat=true;
+		this->afficheCanon=false;
+		this->activeCases=true;
+		this->activeLancerDes=true;
+		this->miseAJourInfosPorts(this->motor->getPosBateaux());
 	}
+	
 }
 
 bool Facade::casesDispo(int* t){

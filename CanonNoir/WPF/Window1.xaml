@@ -1,7 +1,7 @@
 ﻿<Window x:Class="WPF.Window1"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Window1" Height="446" Width="900" WindowStyle="SingleBorderWindow" Closing="MainForm_Closing" ResizeMode="NoResize">
+        Title="Window1" Height="446" Width="900" WindowStyle="SingleBorderWindow" ResizeMode="NoResize">
     <Grid Height="406">
         <Image Height="50" Width="70" Name="canon_image" Source="Images/canon.jpg" Margin="0,335,808,21" FlowDirection="RightToLeft" />
         <Image Height="100" Width="100" Source="Images/bateau-Caravelle.gif" Margin="766,285,12,21"/>

@@ -32,32 +32,33 @@ void TirCanon::calculerRelief(){
 	int x2 = this->positionAttaque.first;
 	int y1 = this->positionAttaquant.second;
 	int y2 = this->positionAttaque.second;
-	cout<<"x1 ="<<x1<<endl;
-	cout<<"x2 ="<<x2<<endl;
-	cout<<"y1 ="<<y1<<endl;
-	cout<<"y2 ="<<y2<<endl;
+	
 	if(x1<x2){
 		inc_x = 1;
-		x = x1;
+		x = x1+1;
 	}
 	else{
 		inc_x = -1;
-		x = x1-1;
+		x = x1;
 	}
 	if(y1<y2){
 		inc_y = 1;
-		y = y1;
+		y = y1+1;
 	}
 	else{
 		inc_y = -1;
-		y = y1-1;
+		y = y1;
 	}
-	cout<<"x ="<<x<<endl;
-	cout<<"x2 ="<<x2<<endl;
-	cout<<"y ="<<y<<endl;
+	cout<<"Position attaquant : \nx1 ="<<x1<<endl;
+	cout<<"y1 ="<<y1<<endl;
+	cout<<"inc_x ="<<inc_x<<endl;
+	cout<<"inc_y ="<<inc_y<<endl;
+	cout<<"Position attaqué : \nx2 ="<<x2<<endl;
 	cout<<"y2 ="<<y2<<endl;
-	// x >=0 ??
-	while((x*inc_x<x2*inc_x) && (y*inc_y<=y2*inc_y) && (x>0) && (y>0)){
+	cout<<"x ="<<x<<endl;
+	cout<<"y ="<<y<<endl;
+	// Cette boucle sert à créer l'intersection
+	while((x*inc_x<x2*inc_x) && (y*inc_y<=y2*inc_y) && (x>=0) && (y>=0)){
 		if(f(x,x1,x2,y1,y2)==(double)y){
 			intersections.push_back(pair<double,double>(x,y));
 			x += inc_x;
@@ -69,6 +70,7 @@ void TirCanon::calculerRelief(){
 		}
 		else{
 			intersections.push_back(pair<double,double>(g(y,x1,x2,y1,y2),y));
+			cout<<"qezrug "<<g(y,x1,x2,y1,y2)<<endl;
 			y += inc_y;
 		}
 	}
@@ -78,21 +80,28 @@ void TirCanon::calculerRelief(){
 		yb = y1;
 		cout<<"Avant push back"<<endl;
 		intersections.push_back(make_pair(x2,y2));
+		cout<<"x2 ="<<x2<<endl;
+		cout<<"y2 ="<<y2<<endl;
 		cout<<"Apres push back"<<endl;
 		it = intersections.begin();
 		int nb = intersections.size();
 		end = intersections.end();
 		cout<<"boucle for calcul relief "<<nb<<endl;
-		for(it ; it!=end; ++it){
+		for(it ; it!=end; it++){
 			xa = xb;
 			ya = yb;
 			cout<<"Debut boucle for calcul relief "<<nb<<endl;
+			//<l'erreur semble provenir d'ici.
 			xb = it->first;
 			yb = it->second;
 			cout<<"Debut boucle for calcul relief "<<nb<<endl;
 			i = min(xa,xb) +1;
 			j = min(ya,yb) +1;
 			cout<<"Milieu boucle for calcul relief "<<i<<" "<<j<<endl;
+				cout<<"xa ="<<xa<<endl;
+				cout<<"xb ="<<xb<<endl;
+				cout<<"ya ="<<ya<<endl;
+				cout<<"yb ="<<yb<<endl;
 			h = this->moteur->getPlateau().getHauteur(i,j);
 			l = sqrt((xb-xa)*(xb-xa) + (yb-ya)*(yb-ya));
 			cout<<"Milieu boucle for calcul relief "<<nb<<endl;
@@ -134,5 +143,5 @@ double TirCanon::f(int x,int x1,int x2,int y1,int y2) const{
 }
 
 double TirCanon::g(int y,int x1,int x2,int y1,int y2) const{
-	return (double)((x2-x1)*y+(x2*y1-x1*y2))/(double)(y2-y1);
+	return (x2-x1)*y-(x2*y1-x1*y2)/(y2-y1);
 }
