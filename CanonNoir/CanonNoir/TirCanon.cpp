@@ -130,8 +130,9 @@ void TirCanon::calculerTir(){
 }
 
 void TirCanon::effectuerChangements(int joueurAttaquant,int batAttaquant,int joueurAttaque,int batAttaque){
-	cout<<"debut changement"<<endl;
-	if(moteur->getBateau(joueurAttaque,batAttaque)->aTresorABord()){
+	cout<<"debut changement"<<joueurAttaquant<<batAttaquant<<endl;
+	bool tresor = moteur->getBateau(joueurAttaque,batAttaque)->aTresorABord();
+	if(tresor){
 		cout<<"debut changement tresor effectuer"<<endl;
 		moteur->getBateau(joueurAttaque,batAttaque)->enleveTresor();
 		cout<<"Tresor enlevé"<<endl;
