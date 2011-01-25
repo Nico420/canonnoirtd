@@ -8,7 +8,7 @@ TirCanon::TirCanon(Moteur* mot){
 	this->moteur = mot;
 	this->angle = -1;
 	this->puissance = -1;
-	this->bateauAttaquant = this->moteur->getJoueurCourant();
+	this->bateauAttaquant = 0;
 	this->bateauAttaque = 0;
 	this->tirReussi = false;
 	this->positionAttaquant = make_pair(0,0);
@@ -133,7 +133,9 @@ void TirCanon::calculerTir(){
 
 void TirCanon::effectuerChangements(int joueurAttaquant,int batAttaquant,int joueurAttaque,int batAttaque){
 	cout<<"debut changement"<<joueurAttaquant<<batAttaquant<<endl;
+	cout<<"debut changement"<<joueurAttaque<<batAttaque<<endl;
 	bool tresor = moteur->getBateau(joueurAttaque,batAttaque)->aTresorABord();
+	cout<<"bool tresor créer"<<endl;
 	if(tresor){
 		cout<<"debut changement tresor effectuer"<<endl;
 		moteur->getBateau(joueurAttaque,batAttaque)->enleveTresor();

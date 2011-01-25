@@ -171,9 +171,11 @@ void Moteur::setTrajectoireTir(vector<pair<double,double>>& traj){
 
 Bateau* Moteur::getBateau(int joueur,int numPort){
 	if(this->getJoueur(joueur).getBateau(1)->getNumPort()==numPort){
+		cout<<"numport1"<<endl;
 		return this->getJoueur(joueur).getBateau(1);
 	}
 	else{
+		cout<<"numport2"<<endl;
 		return this->getJoueur(joueur).getBateau(2);
 	}
 }

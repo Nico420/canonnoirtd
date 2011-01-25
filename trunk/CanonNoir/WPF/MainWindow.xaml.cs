@@ -164,6 +164,7 @@ namespace WPF
             }
             if (tresor) bateau += "-tresor";
             bateau += ".bmp";
+            //MessageBox.Show(bateau);
             //The boat will be display in a button
             Button bat = new Button();
             bat.Height = HAUTEUR_CASE - 5;

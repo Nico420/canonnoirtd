@@ -40,14 +40,14 @@ void Joueur::degraderBateau(int x,int y){
 	int i = (this->bateaux[0]->getPosition().first==x && this->bateaux[0]->getPosition().second==y)? 0 : 1;
 	if(this->bateaux[i]->getType()==3){
 		std::cout<<"dégrader Caravelle"<<std::endl;
-		delete this->bateaux[i];
 		Fregate* freg = new Fregate(this->bateaux[i]);
+		delete this->bateaux[i];
 		this->bateaux[i] = freg;
 	}
 	else if(this->bateaux[i]->getType()==2){
 		std::cout<<"dégrader fregate"<<std::endl;
-		delete this->bateaux[i];
 		Radeau* rad = new Radeau(this->bateaux[i]);
+		delete this->bateaux[i];
 		this->bateaux[i] = rad;
 	}
 	std::cout<<"fin dégrader"<<std::endl;
