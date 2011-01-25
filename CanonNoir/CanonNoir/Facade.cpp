@@ -11,11 +11,11 @@ Facade::Facade(){
 		this->casesActives[i] = 0;
 	}
 	int dim2 = this->motor->getPlateau().getLongueur()+this->motor->getPlateau().getLargeur();
-	this->histogramme = new double[dim2*2];
+	this->histogramme = new int[dim2*2];
 	for(int i=0;i<dim2*2;i++){
 		this->histogramme[i] = 0;
 	}
-	this->trajectoireTir = new double[this->getTailleTabTrajectoire()];
+	this->trajectoireTir = new int[this->getTailleTabTrajectoire()];
 	for(int i=0;i<this->getTailleTabTrajectoire();i++){
 		this->trajectoireTir[i] = 0;
 	}
@@ -206,19 +206,19 @@ void Facade::miseAJourScores(std::vector<int> scores){
 
 void Facade::miseAJourHistogramme(){
 	int dim = this->motor->getPlateau().getLongueur()+this->motor->getPlateau().getLargeur();
-	//Reset of histogramme
+	//Reset of histogram
 	for(int i=0;i<dim*2;i++) this->histogramme[i] = 0;
 	int i = 0;
 	std::vector<double>::iterator it;
 	for(it=motor->getHistogramme().begin();it!=motor->getHistogramme().end();it++){
-		this->histogramme[i] = *it;
+		this->histogramme[i] = (int)floor((*it)*100);
 	}
 }
 
 void Facade::miseAJourTrajectoire(){
 	int dim = this->getTailleTabTrajectoire();
 	for(int i=0;i<dim;i++){
-		this->trajectoireTir[i] = motor->getTrajectoireTir().at(i);
+		this->trajectoireTir[i] = (int)floor(motor->getTrajectoireTir().at(i)*100);
 	}
 }
 

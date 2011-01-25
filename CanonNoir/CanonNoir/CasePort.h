@@ -19,7 +19,6 @@
 class CasePort : public Case
 {
 	private :
-		int couleur;
 
 	public :
 		/**
@@ -34,14 +33,10 @@ class CasePort : public Case
 		*/
 		int getEtat() const;
 
-}; 
-
-inline int CasePort::getCouleur() const{
-	this->couleur;
-}
-
+};
+/*
 inline bool CasePort::estPort() const{
 	return true;
-}
+}*/
 
 #endif

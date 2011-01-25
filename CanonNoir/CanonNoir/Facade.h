@@ -46,8 +46,8 @@ class DLL Facade
 		int de2;
 		int* casesActives;
 		int* infosBateaux;
-		double* histogramme;
-		double* trajectoireTir;
+		int* histogramme;
+		int* trajectoireTir;
 
 	public :
 		std::string message;
@@ -86,8 +86,8 @@ class DLL Facade
 		void miseAJourHistogramme();
 		void miseAJourTrajectoire();
 		bool casesDispo(int* t);
-		double* getTrajectoire(){return this->trajectoireTir;};
-		double* getHistogramme(){return this->histogramme;};
+		int* getTrajectoire(){return this->trajectoireTir;};
+		int* getHistogramme(){return this->histogramme;};
 };
 
 EXTERNC DLL Facade* Facade_New();
