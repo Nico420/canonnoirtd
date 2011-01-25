@@ -69,9 +69,23 @@ namespace WPF
         private void displayRelief()
         {
             IntPtr a = new IntPtr(m.FacadeW.getHisto().GetHashCode());
-            int test = Marshal.ReadInt32(a);
-            MessageBox.Show(test.ToString());
-            a += sizeof(double);
+            a += sizeof(int);
+            a += sizeof(int);
+            a += sizeof(int);
+            a += sizeof(int);
+            a += sizeof(int);
+            a += sizeof(int);
+            a += sizeof(int);
+            a += sizeof(int);
+            int largeur = Marshal.ReadInt32(a);
+            a+=sizeof(int);
+            int hauteur = Marshal.ReadInt32(a);
+            a += sizeof(int);
+            MessageBox.Show(largeur + " " + hauteur);
+            while (largeur > 0)
+            {
+                MessageBox.Show(largeur + " " + hauteur);
+            }
         }
         private void displayTraj()
         {
@@ -107,15 +121,6 @@ namespace WPF
 	        }
 
             MessageBox.Show("Touché !");
-            this.Close();
-        }
-
-        //-----------------------------------------------------------
-        // event déclenchée par Close()
-        // déclenche ensuite event Closed sauf si annulé
-        private void MainForm_Closing(
-        object sender, System.ComponentModel.CancelEventArgs e)
-        {
             this.Close();
         }
     }

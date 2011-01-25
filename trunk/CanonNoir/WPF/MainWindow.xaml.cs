@@ -203,6 +203,13 @@ namespace WPF
                 MessageBox.Show("" + x + " " + y);
                 Window1 w = new Window1(this);
                 w.ShowDialog();
+                textBlock3.Text = FacadeW.getMessage();
+                this.setCases();
+                this.LanceDes.IsEnabled = FacadeW.activerDes();
+                if (FacadeW.afficheBateaux())
+                {
+                    this.BoatUpdate();
+                }
             }
         }
 
