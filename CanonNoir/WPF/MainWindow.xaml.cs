@@ -515,7 +515,7 @@ namespace WPF
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void Quitter(object sender, RoutedEventArgs e)
+        public void Quitter(object sender, RoutedEventArgs e)
         {
 
             Close();
@@ -524,7 +524,7 @@ namespace WPF
          //-----------------------------------------------------------
  // demande au user confirmation pour quitter,
  // renvoie true si confirmé
- private bool AskConfirmQuitAppli()
+ public bool AskConfirmQuitAppli()
  {
  // message confirmation quitter l'application
      if (MessageBox.Show("Etes vous sur de vouloir quitter ? (la partie ne sera perdue)",

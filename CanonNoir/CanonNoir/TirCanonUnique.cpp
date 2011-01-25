@@ -6,6 +6,7 @@
 using namespace std;
 
 void TirCanonUnique::execute(){
+	this->tirReussi=true;
 	cout<<"Début du execute de TirCanonUnique"<<endl;
 	cout<<"Booléen cibleChoisie : "<<cibleChoisie<<endl;
 	ostringstream mes;
@@ -22,6 +23,7 @@ void TirCanonUnique::execute(){
 			this->positionAttaquant = moteur->getJoueur(moteur->getJoueurCourant()).getBateau(2)->getPosition();
 		}
 		//Récupération du numéro du bateau choisie comme cible
+		cout<<"Récupération de la position du bateau choisi comme cible"<<endl;
 		this->positionAttaque = this->moteur->getClick();
 		for(int i=1;i<=moteur->getNbJoueurs();i++){
 			if(moteur->getJoueur(i).getBateau(1)->getPosition()==this->positionAttaque){
@@ -34,6 +36,7 @@ void TirCanonUnique::execute(){
 			}
 		}
 		this->cibleChoisie = true;
+		cout<<"fin traitement choix cible"<<endl;
 		mes << this->moteur->getJoueurCourant();
 		mes << ", sélectionnez l'angle de votre tir.";
 	}
@@ -46,9 +49,13 @@ void TirCanonUnique::execute(){
 	else if(!this->puissanceObtenue){
 		this->puissance = this->moteur->getPuissance();
 		this->puissanceObtenue = true;
+		cout<< "calculrelief" <<endl;
 		this->calculerRelief();
+		cout<< "entre les deux" <<endl;
 		moteur->setHistogramme(this->histogramme);
+		cout<< "calcultir" <<endl;
 		this->calculerTir();
+		cout<< "set Trajectoire tir unique" <<endl;
 		moteur->setTrajectoireTir(this->trajectoireTir);
 		this->moteur->passerAuJoueurSuivant();
 		mes << this->moteur->getJoueurCourant();
@@ -57,7 +64,7 @@ void TirCanonUnique::execute(){
 		for(list<pair<double,double>>::iterator it=histogramme.begin();it!=histogramme.end();it++){
 			cout<<it->first<<" "<<it->second<<endl;
 		}
+		this->etatsuivant = Moteur::LANCERDESDEPLACEMENT;
 	}
 	this->setMessage(mes.str());
-	this->etatsuivant = Moteur::LANCERDESDEPLACEMENT;
 }

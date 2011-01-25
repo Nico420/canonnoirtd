@@ -41,8 +41,12 @@ namespace Wrapper {
 			return gcnew IntPtr(FacadeW->Facade::getScores());
 		};
 
-		System::IntPtr^ getTrajectoire(int angle, int puissance){
-			return gcnew IntPtr(FacadeW->Facade::getTrajectoire(angle, puissance));
+		System::IntPtr^ getTrajectoire(){
+			return gcnew IntPtr(FacadeW->Facade::getTrajectoire());
+		};
+
+		System::IntPtr^ getHisto(){
+			return gcnew IntPtr(FacadeW->Facade::getHistogramme());
 		};
 
 
