@@ -86,7 +86,8 @@ class DLL Facade
 		void miseAJourHistogramme();
 		void miseAJourTrajectoire();
 		bool casesDispo(int* t);
-		int* getTrajectoire(int angle, int puissance);
+		double* getTrajectoire(){return this->trajectoireTir;};
+		double* getHistogramme(){return this->histogramme;};
 };
 
 EXTERNC DLL Facade* Facade_New();

@@ -60,6 +60,7 @@ namespace WPF
             puissance.Visibility = System.Windows.Visibility.Visible;
             m.FacadeW.setAngle(theta);
             this.angle_int = theta;
+            textChoixPuiss.Text = m.FacadeW.getMessage();
         }
 
         /// <summary>
@@ -67,13 +68,17 @@ namespace WPF
         /// </summary>
         private void displayRelief()
         {
+            IntPtr a = new IntPtr(m.FacadeW.getHisto().GetHashCode());
+            int test = Marshal.ReadInt32(a);
+            MessageBox.Show(test.ToString());
+            a += sizeof(double);
         }
         private void displayTraj()
         {
         }
         private void choixPuissance(object sender, RoutedEventArgs e)
         {
-            textChoixPuiss.Text = m.FacadeW.getMessage();
+            
             double puiss = (puiss_image.ActualHeight - Mouse.GetPosition(puiss_image).Y) / puiss_image.ActualHeight;
             int puissance_int = (int) Math.Round(puiss*100);
             valeurPuiss.Text =  "Puissance : " + puissance_int +"mètres/s";
@@ -100,6 +105,9 @@ namespace WPF
                 s += pos + " ";
                 boulet.Margin = t;
 	        }
+
+            MessageBox.Show("Touché !");
+            this.Close();
         }
 
         //-----------------------------------------------------------
@@ -108,10 +116,7 @@ namespace WPF
         private void MainForm_Closing(
         object sender, System.ComponentModel.CancelEventArgs e)
         {
-            //non confirmé, opération annulée, ne déclenche pas event Closed
-            MessageBox.Show("Vous ne pouvez pas fermer la fenêtre de Tir avant que le tir soit fini !",
-        "Impossible !", MessageBoxButton.OK, MessageBoxImage.Stop);
-                e.Cancel = true;
+            this.Close();
         }
     }
 }

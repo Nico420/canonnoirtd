@@ -153,9 +153,12 @@ void Moteur::setPuissance(int puis){
 void Moteur::setHistogramme(list<pair<double,double>>& hist){
 	int cpt = 0;
 	for(list<pair<double,double>>::iterator it=hist.begin();it!=hist.end();it++){
+		cout<< "debut for set histogramme moteur" <<endl;
 		this->histogramme.at(cpt++) = it->second;
 		this->histogramme.at(cpt++) = it->first;
+		cout<< "set histogramme moteur" <<endl;
 	}
+	cout<< "Fin histogramme moteur" <<endl;
 }
 
 void Moteur::setTrajectoireTir(vector<pair<double,double>>& traj){

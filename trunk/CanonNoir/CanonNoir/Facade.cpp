@@ -15,6 +15,7 @@ Facade::Facade(){
 	for(int i=0;i<dim2*2;i++){
 		this->histogramme[i] = 0;
 	}
+	this->trajectoireTir = new double[this->getTailleTabTrajectoire()];
 	for(int i=0;i<this->getTailleTabTrajectoire();i++){
 		this->trajectoireTir[i] = 0;
 	}
@@ -65,8 +66,12 @@ void Facade::setClick(int x,int y){
 	cout<<"Appel de setClick dans Facade"<<endl;
 	this->motor->setClick(x,y);
 	this->message = this->motor->getEtat()->getMessage();
-	if(this->motor->getEtat()->getEtat()!=Moteur::NAVIGATION && this->motor->getEtat()->getEtat()!=0)
+	cout<<"Début traitement"<<endl;
+	if(this->motor->getEtat()->getEtat()!=Moteur::NAVIGATION && this->motor->getEtat()->getEtat()!=0){
+		cout<<"Fin mise à jour des cases active - facade"<<endl;
 		this->miseAJourCasesActives(this->motor->getEtat()->getCasesActives());
+		
+	}
 	if(this->motor->getEtat()->getEtat()==Moteur::CHOISIRPORT){
 		this->activeCases = true;
 	}
@@ -111,6 +116,7 @@ void Facade::setClick(int x,int y){
 		cout<<"Fin construction de l'état tircanonunique"<<endl;
 		this->afficheCanon = true;
 	}
+	cout<<"Fin set click facade"<<endl;
 }
 
 void Facade::lancerDes(){
@@ -155,8 +161,11 @@ void Facade::setAngle(int angle){
 void Facade::setPuissance(int puissance){
 	cout<<"Appel de setPuissance dans Facade"<<endl;
 	motor->setPuissance(puissance);
+	cout<<"get message setpuissance facade"<<endl;
 	this->message = this->motor->getEtat()->getMessage();
+	cout<<"maj histo set puissance Facade"<<endl;
 	this->miseAJourHistogramme();
+	cout<<"maj traj set puissance Facade"<<endl;
 	this->miseAJourTrajectoire();
 	if(motor->getEtat()->getEtat()==Moteur::LANCERDESDEPLACEMENT){
 		motor->setEtat(Moteur::LANCERDESDEPLACEMENT);

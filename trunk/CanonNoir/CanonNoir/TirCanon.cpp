@@ -56,7 +56,8 @@ void TirCanon::calculerRelief(){
 	cout<<"x2 ="<<x2<<endl;
 	cout<<"y ="<<y<<endl;
 	cout<<"y2 ="<<y2<<endl;
-	while((x*inc_x<x2*inc_x) && (y*inc_y<=y2*inc_y)){
+	// x >=0 ??
+	while((x*inc_x<x2*inc_x) && (y*inc_y<=y2*inc_y) && (x>0) && (y>0)){
 		if(f(x,x1,x2,y1,y2)==(double)y){
 			intersections.push_back(pair<double,double>(x,y));
 			x += inc_x;
@@ -75,21 +76,31 @@ void TirCanon::calculerRelief(){
 	if(intersections.size() >= 1){
 		xb = x1;
 		yb = y1;
+		cout<<"Avant push back"<<endl;
 		intersections.push_back(make_pair(x2,y2));
+		cout<<"Apres push back"<<endl;
 		it = intersections.begin();
+		int nb = intersections.size();
 		end = intersections.end();
-		for( ; it!=end; ++it){
+		cout<<"boucle for calcul relief "<<nb<<endl;
+		for(it ; it!=end; ++it){
 			xa = xb;
 			ya = yb;
+			cout<<"Debut boucle for calcul relief "<<nb<<endl;
 			xb = it->first;
 			yb = it->second;
+			cout<<"Debut boucle for calcul relief "<<nb<<endl;
 			i = min(xa,xb) +1;
 			j = min(ya,yb) +1;
+			cout<<"Milieu boucle for calcul relief "<<i<<" "<<j<<endl;
 			h = this->moteur->getPlateau().getHauteur(i,j);
 			l = sqrt((xb-xa)*(xb-xa) + (yb-ya)*(yb-ya));
+			cout<<"Milieu boucle for calcul relief "<<nb<<endl;
 			this->histogramme.push_back(make_pair(l,h));
+			cout<<"Fin boucle for calcul relief "<<nb<<endl;
 		}
 	}
+	cout<<"Fin calcul relief"<<endl;
 }
 
 void TirCanon::calculerTir(){
