@@ -89,6 +89,28 @@ namespace WPF
         }
         private void displayTraj()
         {
+            IntPtr a = new IntPtr(m.FacadeW.getTrajectoire().GetHashCode());
+            int x = Marshal.ReadInt32(a);
+            a += sizeof(int);
+            int y = Marshal.ReadInt32(a);
+            a += sizeof(int);
+            for (int i = 0; i < 100; i++)
+            {
+                x = Marshal.ReadInt32(a);
+                a += sizeof(int);
+                y = Marshal.ReadInt32(a);
+                a += sizeof(int);
+                Image boulet = new Image();
+                BitmapImage boulet_img = new BitmapImage(new Uri("Images/boulet.jpg", UriKind.Relative));
+                boulet.Source = boulet_img;
+                boulet.Height = 10;
+                boulet.Width = 10;
+                boulet.HorizontalAlignment = HorizontalAlignment.Left;
+                boulet.VerticalAlignment = VerticalAlignment.Center;
+                zoneTir.Children.Add(boulet);
+                System.Windows.Thickness t = new Thickness(x, y, 0, 0);
+                boulet.Margin = t;
+            }
         }
         private void choixPuissance(object sender, RoutedEventArgs e)
         {
@@ -100,25 +122,9 @@ namespace WPF
             m.FacadeW.setPuissance(puissance_int);
             double pi=3.1415;
 	        double angle_rad = 2*pi*angle_int/360;
-            String s="";
-            double pos = 0;
-  
 	        //Display the shoot's way !
             displayTraj();
-            for(int i=0;pos>=0 && i<500;i=i+2){
-                Image boulet = new Image();
-                BitmapImage boulet_img = new BitmapImage(new Uri("Images/boulet.jpg", UriKind.Relative));
-                boulet.Source = boulet_img;
-                boulet.Height = 10;
-                boulet.Width = 10;
-                boulet.HorizontalAlignment = HorizontalAlignment.Left;
-                boulet.VerticalAlignment = VerticalAlignment.Center;
-                zoneTir.Children.Add(boulet); 
-		        pos = -0.5*9.81*i*i/(puissance_int*puissance_int*Math.Cos((double) angle_rad)*Math.Cos((double) angle_rad))+i*Math.Tan((double) angle_rad);
-                System.Windows.Thickness t = new Thickness(i * 5, zoneTir.ActualHeight - canon_image.ActualHeight - pos*2, 0, 0);
-                s += pos + " ";
-                boulet.Margin = t;
-	        }
+            
 
             MessageBox.Show("Touché !");
             this.Close();
