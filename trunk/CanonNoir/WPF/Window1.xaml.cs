@@ -24,6 +24,7 @@ namespace WPF
     {
         //Thanks to this attribut, we can access to Facade in an easy way ! m.FacadeW
         MainWindow m;
+        IntPtr traj,histo;
         int angle_int;
         public Window1()
         {
@@ -33,16 +34,24 @@ namespace WPF
         public Window1(MainWindow m)
         {
             this.m = m;
-            MessageBox.Show(m.FacadeW.getScores().GetHashCode()+"");
             angle_int = 0;
             InitializeComponent();
             textChoixAngle.Text=m.FacadeW.getMessage();
             displayRelief();
         }
+        public Window1(MainWindow m,IntPtr a,IntPtr b)
+        {
+            this.m = m;
+            this.traj = a;
+            this.histo = b;
+            angle_int = 0;
+            InitializeComponent();
+            textChoixAngle.Text = m.FacadeW.getMessage();
+            displayRelief();
+        }
         
         private void finCombat(object sender, RoutedEventArgs e)
         {
-            
             this.Close();
         }
 
@@ -69,38 +78,25 @@ namespace WPF
         /// </summary>
         private void displayRelief()
         {
-            IntPtr a = new IntPtr(m.FacadeW.getHisto().GetHashCode());
-            a += sizeof(int);
-            a += sizeof(int);
-            a += sizeof(int);
-            a += sizeof(int);
-            a += sizeof(int);
-            a += sizeof(int);
-            a += sizeof(int);
-            a += sizeof(int);
-            int largeur = Marshal.ReadInt32(a);
-            a+=sizeof(int);
-            int hauteur = Marshal.ReadInt32(a);
-            a += sizeof(int);
+            int largeur = Marshal.ReadInt32(histo);
+            histo+=sizeof(int);
+            int hauteur = Marshal.ReadInt32(histo);
+            histo += sizeof(int);
             MessageBox.Show(largeur + " " + hauteur);
-            while (largeur > 0)
-            {
-                MessageBox.Show(largeur + " " + hauteur);
-            }
         }
         private void displayTraj()
         {
-            IntPtr a = new IntPtr(m.FacadeW.getTrajectoire().GetHashCode());
-            int x = Marshal.ReadInt32(a);
-            a += sizeof(int);
-            int y = Marshal.ReadInt32(a);
-            a += sizeof(int);
+            int x = Marshal.ReadInt32(traj);
+            traj += sizeof(int);
+            int y = Marshal.ReadInt32(traj);
+            traj += sizeof(int);
+            MessageBox.Show(x + " " + y);
             for (int i = 0; i < 100; i++)
             {
-                x = Marshal.ReadInt32(a);
-                a += sizeof(int);
-                y = Marshal.ReadInt32(a);
-                a += sizeof(int);
+                x = Marshal.ReadInt32(traj);
+                traj += sizeof(int);
+                y = Marshal.ReadInt32(traj);
+                traj += sizeof(int);
                 Image boulet = new Image();
                 BitmapImage boulet_img = new BitmapImage(new Uri("Images/boulet.jpg", UriKind.Relative));
                 boulet.Source = boulet_img;
@@ -111,7 +107,7 @@ namespace WPF
                 zoneTir.Children.Add(boulet);
                 System.Windows.Thickness t = new Thickness(x, y, 0, 0);
                 boulet.Margin = t;
-                MessageBox.Show(x + " " + y);
+                
             }
         }
         private void choixPuissance(object sender, RoutedEventArgs e)

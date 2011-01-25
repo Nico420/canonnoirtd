@@ -199,9 +199,12 @@ namespace WPF
                 double b = Mouse.GetPosition(clickZone).Y;
                 b /= HAUTEUR_CASE;
                 int y = (int)b + 1;
+                //ici le relief est créé.
                 FacadeW.setClick(x, y);
                 MessageBox.Show("" + x + " " + y);
-                Window1 w = new Window1(this);
+                IntPtr histo = new IntPtr(FacadeW.getHisto().GetHashCode());
+                IntPtr traj = new IntPtr(FacadeW.getTrajectoire().GetHashCode());
+                Window1 w = new Window1(this,histo,traj);
                 w.ShowDialog();
                 textBlock3.Text = FacadeW.getMessage();
                 this.setCases();
