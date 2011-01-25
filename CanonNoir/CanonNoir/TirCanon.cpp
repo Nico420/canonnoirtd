@@ -35,19 +35,19 @@ void TirCanon::calculerRelief(){
 	
 	if(x1<x2){
 		inc_x = 1;
-		x = x1+1;
+		x = x1;
 	}
 	else{
 		inc_x = -1;
-		x = x1;
+		x = x1-1;
 	}
 	if(y1<y2){
 		inc_y = 1;
-		y = y1+1;
+		y = y1;
 	}
 	else{
 		inc_y = -1;
-		y = y1;
+		y = y1-1;
 	}
 	cout<<"Position attaquant : \nx1 ="<<x1<<endl;
 	cout<<"y1 ="<<y1<<endl;
@@ -63,10 +63,12 @@ void TirCanon::calculerRelief(){
 			intersections.push_back(pair<double,double>(x,y));
 			x += inc_x;
 			y += inc_y;
+			cout<<"x et y "<<x<<" "<<y<<endl;
 		}
 		else if(f(x,x1,x2,y1,y2)*inc_y < y*inc_y){
 			intersections.push_back(pair<double,double>(x,f(x,x1,x2,y1,y2)));
 			x += inc_x;
+			cout<<"x et f(x) "<<x<<" "<<f(x,x1,x2,y1,y2)<<endl;
 		}
 		else{
 			intersections.push_back(pair<double,double>(g(y,x1,x2,y1,y2),y));
@@ -151,5 +153,5 @@ double TirCanon::f(int x,int x1,int x2,int y1,int y2) const{
 }
 
 double TirCanon::g(int y,int x1,int x2,int y1,int y2) const{
-	return (x2-x1)*y-(x2*y1-x1*y2)/(y2-y1);
+	return ((x2-x1)*y-(x2*y1-x1*y2))/(y2-y1);
 }
