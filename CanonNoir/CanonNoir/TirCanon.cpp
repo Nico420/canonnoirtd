@@ -70,7 +70,8 @@ void TirCanon::calculerRelief(){
 		}
 		else{
 			intersections.push_back(pair<double,double>(g(y,x1,x2,y1,y2),y));
-			cout<<"qezrug "<<g(y,x1,x2,y1,y2)<<endl;
+			cout<<y<<" "<<x1<<" "<<x2<<" "<<y1<<" "<<y2<<" "<<endl;
+			cout<<"Résultat de la fonction g "<<g(y,x1,x2,y1,y2)<<endl;
 			y += inc_y;
 		}
 	}
@@ -129,12 +130,18 @@ void TirCanon::calculerTir(){
 }
 
 void TirCanon::effectuerChangements(int joueurAttaquant,int batAttaquant,int joueurAttaque,int batAttaque){
+	cout<<"debut changement"<<endl;
 	if(moteur->getBateau(joueurAttaque,batAttaque)->aTresorABord()){
+		cout<<"debut changement tresor effectuer"<<endl;
 		moteur->getBateau(joueurAttaque,batAttaque)->enleveTresor();
+		cout<<"Tresor enlevé"<<endl;
 		moteur->getBateau(joueurAttaquant,batAttaquant)->donneTresor();
+		cout<<"changement tresor effectuer"<<endl;
 	}
+	cout<<"milieu changement"<<endl;
 	int x = moteur->getBateau(joueurAttaque,batAttaque)->getPosition().first;
 	int y = moteur->getBateau(joueurAttaque,batAttaque)->getPosition().second;
+	cout<<"avant dégrader changement"<<endl;
 	moteur->getJoueur(joueurAttaque).degraderBateau(x,y);
 }
 

@@ -51,6 +51,18 @@ void TirCanonUnique::execute(){
 		mes << ", sélectionnez la puissance de votre tir.";
 	}
 	else if(!this->puissanceObtenue){
+		int joueurAttaque=0;
+		for(int i=1;i<=moteur->getNbJoueurs();i++){
+				if(moteur->getJoueur(i).getBateau(1)->getNumPort()==this->bateauAttaque){
+					joueurAttaque = moteur->getJoueur(i).getBateau(1)->getNumPort();
+				}
+				if(moteur->getNbJoueurs()==2){
+					if(moteur->getJoueur(i).getBateau(2)->getNumPort()==this->bateauAttaque){
+						joueurAttaque = moteur->getJoueur(i).getBateau(2)->getNumPort();
+					}
+				}
+		}
+
 		this->puissance = this->moteur->getPuissance();
 		this->puissanceObtenue = true;
 		cout<< "entre les deux" <<endl;
@@ -59,6 +71,9 @@ void TirCanonUnique::execute(){
 		//this->calculerTir();
 		cout<< "set Trajectoire tir unique" <<endl;
 		//moteur->setTrajectoireTir(this->trajectoireTir);
+		if(this->tirReussi){
+			this->effectuerChangements(this->moteur->getJoueurCourant(),bateauAttaquant,joueurAttaque,bateauAttaque);
+		}
 		this->moteur->passerAuJoueurSuivant();
 		mes << this->moteur->getJoueurCourant();
 		mes << ", lancez les dés pour jouer.";

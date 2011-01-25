@@ -172,7 +172,7 @@ void Facade::setPuissance(int puissance){
 		cout<<"etat changé"<<endl;
 		this->afficheBat=true;
 		this->afficheCanon=false;
-		this->activeCases=true;
+		this->activeCases=false;
 		this->activeLancerDes=true;
 		this->miseAJourInfosPorts(this->motor->getPosBateaux());
 	}
