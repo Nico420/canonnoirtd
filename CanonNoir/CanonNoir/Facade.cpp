@@ -193,13 +193,13 @@ void Facade::miseAJourCasesActives(std::vector<int> caseActives){
 }
 
 void Facade::miseAJourInfosPorts(std::vector<int> infos){
-	for(int i=0;i<infos.size();i++){
+	for(unsigned int i=0;i<infos.size();i++){
 		this->infosBateaux[i] = infos.at(i);
 	}
 }
 
 void Facade::miseAJourScores(std::vector<int> scores){
-	for(int i=0;i<scores.size();i++){
+	for(unsigned int i=0;i<scores.size();i++){
 		this->scoresBateaux[i] = scores.at(i);
 	}
 }
