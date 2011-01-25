@@ -33,6 +33,7 @@ namespace WPF
         public Window1(MainWindow m)
         {
             this.m = m;
+            MessageBox.Show(m.FacadeW.getScores().GetHashCode()+"");
             angle_int = 0;
             InitializeComponent();
             textChoixAngle.Text=m.FacadeW.getMessage();
@@ -110,6 +111,7 @@ namespace WPF
                 zoneTir.Children.Add(boulet);
                 System.Windows.Thickness t = new Thickness(x, y, 0, 0);
                 boulet.Margin = t;
+                MessageBox.Show(x + " " + y);
             }
         }
         private void choixPuissance(object sender, RoutedEventArgs e)
