@@ -86,7 +86,7 @@ class DLL Facade
 		void miseAJourHistogramme();
 		void miseAJourTrajectoire();
 		bool casesDispo(int* t);
-		int* getTrajectoire(){return this->trajectoireTir;};
+		int* getTrajectoire(){int t[3] = {1,2,3};return t;};//this->trajectoireTir;};
 		int* getHistogramme(){return this->histogramme;};
 };
 
