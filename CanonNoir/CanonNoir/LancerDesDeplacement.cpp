@@ -238,7 +238,7 @@ std::vector<int> LancerDesDeplacement::getCasesActives() const{
 }
 
 int LancerDesDeplacement::getEtat() const{
-	return Moteur::NAVIGATION;
+	return this->etatsuivant;
 }
 
 void LancerDesDeplacement::setCasesDeplacementBateau(std::set<std::pair<int,int>>& cases,int value){

@@ -22,6 +22,13 @@ void TirCanonUnique::execute(){
 		else{
 			this->positionAttaquant = moteur->getJoueur(moteur->getJoueurCourant()).getBateau(2)->getPosition();
 		}
+		if(moteur->getJoueur(moteur->getJoueurCourant()).getBateau(1)->getPosition()==positionAttaquant){
+			this->bateauAttaquant = moteur->getJoueur(moteur->getJoueurCourant()).getBateau(1)->getNumPort();
+		}
+		else{
+			cout<<"Passage dans le else (que dans le cas de 2 joueurs !"<<endl;
+			this->bateauAttaquant = moteur->getJoueur(moteur->getJoueurCourant()).getBateau(2)->getNumPort();
+		}
 		//Récupération du numéro du bateau choisie comme cible
 		cout<<"Récupération de la position du bateau choisi comme cible"<<endl;
 		this->positionAttaque = this->moteur->getClick();
@@ -54,11 +61,11 @@ void TirCanonUnique::execute(){
 		int joueurAttaque=0;
 		for(int i=1;i<=moteur->getNbJoueurs();i++){
 				if(moteur->getJoueur(i).getBateau(1)->getNumPort()==this->bateauAttaque){
-					joueurAttaque = moteur->getJoueur(i).getBateau(1)->getNumPort();
+					joueurAttaque = i;
 				}
 				if(moteur->getNbJoueurs()==2){
 					if(moteur->getJoueur(i).getBateau(2)->getNumPort()==this->bateauAttaque){
-						joueurAttaque = moteur->getJoueur(i).getBateau(2)->getNumPort();
+						joueurAttaque = i;
 					}
 				}
 		}
