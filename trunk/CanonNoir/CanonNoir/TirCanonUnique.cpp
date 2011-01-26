@@ -6,12 +6,13 @@
 using namespace std;
 
 void TirCanonUnique::execute(){
-	this->tirReussi=true;
+	//this->tirReussi=true;
 	cout<<"Début du execute de TirCanonUnique"<<endl;
 	cout<<"Booléen cibleChoisie : "<<cibleChoisie<<endl;
 	ostringstream mes;
 	mes << "Joueur ";
 	if(!this->cibleChoisie){
+		//Récupération des différents attributs nécessaires pour la suite
 		//Récupération de la position du bateau attaquant
 		cout<<"Récupération de la position du bateau attaquant"<<endl;
 		int x = moteur->getJoueur(moteur->getJoueurCourant()).getBateau(1)->getPosition().first;
@@ -29,7 +30,7 @@ void TirCanonUnique::execute(){
 			cout<<"Passage dans le else (que dans le cas de 2 joueurs !"<<endl;
 			this->bateauAttaquant = moteur->getJoueur(moteur->getJoueurCourant()).getBateau(2)->getNumPort();
 		}
-		//Récupération du numéro du bateau choisie comme cible
+		//Récupération du numéro du bateau choisi comme cible
 		cout<<"Récupération de la position du bateau choisi comme cible"<<endl;
 		this->positionAttaque = this->moteur->getClick();
 		for(int i=1;i<=moteur->getNbJoueurs();i++){
@@ -51,12 +52,14 @@ void TirCanonUnique::execute(){
 		mes << this->moteur->getJoueurCourant();
 		mes << ", sélectionnez l'angle de votre tir.";
 	}
+	//S'il y a appel de setAngle
 	else if(!this->angleObtenu){
 		this->angle = this->moteur->getAngle();
 		this->angleObtenu = true;
 		mes << this->moteur->getJoueurCourant();
 		mes << ", sélectionnez la puissance de votre tir.";
 	}
+	//S'il y a appel de setPuissance
 	else if(!this->puissanceObtenue){
 		int joueurAttaque=0;
 		for(int i=1;i<=moteur->getNbJoueurs();i++){
@@ -78,7 +81,10 @@ void TirCanonUnique::execute(){
 		this->calculerTir();
 		cout<< "set Trajectoire tir unique" <<endl;
 		moteur->setTrajectoireTir(this->trajectoireTir);
+		//On vérifie si le tir effectué est réussi
+		this->setTirReussi();
 		if(this->tirReussi){
+			//S'il est réussi, on effectue les changements qui s'en suivent
 			this->effectuerChangements(this->moteur->getJoueurCourant(),bateauAttaquant,joueurAttaque,bateauAttaque);
 		}
 		this->moteur->passerAuJoueurSuivant();

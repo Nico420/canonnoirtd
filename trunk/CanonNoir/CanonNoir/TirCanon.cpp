@@ -138,7 +138,7 @@ void TirCanon::effectuerChangements(int joueurAttaquant,int batAttaquant,int jou
 	cout<<"debut changement"<<joueurAttaque<<batAttaque<<endl;
 	bool tresor = moteur->getBateau(joueurAttaque,batAttaque)->aTresorABord();
 	cout<<"bool tresor créer"<<endl;
-	if(tresor){
+	if(tresor && moteur->getBateau(joueurAttaque,batAttaque)->getType()==2){
 		cout<<"debut changement tresor effectuer"<<endl;
 		moteur->getBateau(joueurAttaque,batAttaque)->enleveTresor();
 		cout<<"Tresor enlevé"<<endl;
@@ -158,4 +158,15 @@ double TirCanon::f(int x,int x1,int x2,int y1,int y2) const{
 
 double TirCanon::g(int y,int x1,int x2,int y1,int y2) const{
 	return ((x2-x1)*y-(x2*y1-x1*y2))/(y2-y1);
+}
+
+void TirCanon::setTirReussi(){
+	double xa = (double)this->positionAttaquant.first;
+	double ya = (double)this->positionAttaquant.second;
+	double xb = (double)this->positionAttaque.first;
+	double yb = (double)this->positionAttaque.second;
+	int lg = floor(sqrt((xb-xa)*(xb-xa) + (yb-ya)*(yb-ya)));
+	if(this->trajectoireTir.at(lg).second<2 && this->trajectoireTir.at(lg).second>-0.5){
+		this->tirReussi = true;
+	}
 }

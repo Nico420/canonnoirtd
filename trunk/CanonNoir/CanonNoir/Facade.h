@@ -43,7 +43,6 @@ class DLL Facade
 		bool affichePorts;
 		bool afficheSco;
 		bool afficheBat;
-		bool activeDe1;
 		bool activeDe2;
 		bool activeCases;
 		bool activeLancerDes;
@@ -167,7 +166,12 @@ class DLL Facade
 		*\brief gets number of the second dice that has to be displayed
 		*\return number of the second dice that is displayed after dices throwing
 		*/
-		int getDes2() const{return de2;};
+		int getDes2() const{return de2;};/**
+		*\fn bool getActiveDe2() const
+		*\brief gets if the second dice has to be displayed
+		*\return boolean true if the second dice must be displayed after throwing, else false
+		*/
+		bool getActiveDe2() const{return this->activeDe2;};
 		/**
 		*\fn int getTailleTabTrajectoire() const
 		*\brief gets the length of trajectory table in the window dressing
