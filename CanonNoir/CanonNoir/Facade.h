@@ -67,11 +67,11 @@ class DLL Facade
 		*/
 		~Facade();
 		/**
-		*\fn bool activerDes const()
+		*\fn bool activerDes()
 		*\brief gets if throwing dices button has to be activated
 		*\return boolean true if throwing dices button has to be enabled, else false
 		*/
-		bool activerDes const(){return this->activeLancerDes;};
+		bool activerDes(){return this->activeLancerDes;};
 		/**
 		*\fn int* getCasesActives() const
 		*\brief gets all squares that must be activated on displaying
@@ -215,11 +215,11 @@ class DLL Facade
 		*/
 		int* getTrajectoire() const{return this->trajectoireTir;};
 		/**
-		*\fn int* getHistogramme() const
+		*\fn int* getHistogramme()
 		*\brief gets all histogram informations necessary to display it (computed by the motor)
 		*\return a pointer on all histogram informations in order to display it
 		*/
-		int* getHistogramme() const{this->miseAJourHistogramme();return this->histogramme;};
+		int* getHistogramme(){this->miseAJourHistogramme();return this->histogramme;};
 };
 
 EXTERNC DLL Facade* Facade_New();
