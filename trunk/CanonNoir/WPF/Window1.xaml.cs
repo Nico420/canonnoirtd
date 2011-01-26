@@ -25,7 +25,7 @@ namespace WPF
         //Thanks to this attribut, we can access to Facade in an easy way ! m.FacadeW
         MainWindow m;
         IntPtr traj,histo;
-        int angle_int;
+        int angle_int,puiss_int;
         double largeur_totale;
         int[] entiers = new int[200];
 
@@ -49,6 +49,7 @@ namespace WPF
             this.traj = a;
             this.histo = b;
             angle_int = 0;
+            puiss_int = 0;
             InitializeComponent();
             textChoixAngle.Text = m.FacadeW.getMessage();
             displayRelief();
@@ -89,14 +90,32 @@ namespace WPF
             for (int i = 0; i < 36; i+=2)
             {
                 int largeur = Marshal.ReadInt32(histo);
-                liste_largeur[l1++] = (((double)largeur) / 1000); ;
-                largeur_totale += largeur;
+                liste_largeur[l1++] = (((double)largeur) / 1000);
+                largeur_totale += (((double)largeur) / 1000);
                 histo += sizeof(int);
                 int hauteur = Marshal.ReadInt32(histo);
-                double haut = (double)hauteur / 100;
+                liste_hauteur[l2++] = (((double)hauteur) / 1000);
                 histo += sizeof(int);
             }
-            distance.Text = "Distance : " + ((double)largeur_totale)/1000 + " milles nautique";
+            distance.Text = "Distance : " + largeur_totale + " milles nautique";
+            //We make the scale thanks to largeur_totale
+            double largeur_float = 0;
+
+            for (int i = 0; i < 36; i++)
+            {
+                Rectangle myRect = new System.Windows.Shapes.Rectangle();
+                myRect.Stroke = System.Windows.Media.Brushes.Black;
+                myRect.StrokeThickness = 7;
+                myRect.HorizontalAlignment = HorizontalAlignment.Left;
+                myRect.VerticalAlignment = VerticalAlignment.Center;
+                myRect.Height = liste_hauteur[i];
+                myRect.Width = liste_largeur[i];
+                
+                myRect.Margin = new Thickness(largeur_float, zoneTir.ActualHeight-liste_hauteur[i], 0, 0);
+                largeur_float += liste_largeur[i];
+                MessageBox.Show(largeur_float + ""+liste_hauteur[i]);
+                zoneTir.Children.Add(myRect);
+            }
         }
         private void displayTraj()
         {
@@ -126,7 +145,7 @@ namespace WPF
                 boulet.VerticalAlignment = VerticalAlignment.Center;
                 zoneTir.Children.Add(boulet);
                 //Il faut encore synchroniser l'affichage avec la largeur !
-                System.Windows.Thickness t = new Thickness(x, zoneTir.ActualHeight-y, 0, 0);
+                System.Windows.Thickness t = new Thickness(puiss_int*x, zoneTir.ActualHeight-(10*y), 0, 0);
                 boulet.Margin = t;
                 
             }
@@ -139,7 +158,7 @@ namespace WPF
             valeurPuiss.Text =  "Puissance : " + puissance_int +"mètres/s";
             puissance.Visibility = System.Windows.Visibility.Hidden;
             m.FacadeW.setPuissance(puissance_int);
-
+            this.puiss_int = puissance_int;
 	        //Display the shoot's way !
             displayTraj();
             

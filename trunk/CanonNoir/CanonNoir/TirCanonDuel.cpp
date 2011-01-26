@@ -23,6 +23,7 @@ void TirCanonDuel::echangeDuel(){
 }
 
 void TirCanonDuel::execute(){
+	this->tirReussi=true;
 	cout<<"Début du execute de TirCanonDuel"<<endl;
 	ostringstream mes;
 	mes << "Joueur ";
@@ -31,17 +32,19 @@ void TirCanonDuel::execute(){
 		if(this->premierTir){
 			for(int i=1;i<=moteur->getNbJoueurs();i++){
 				if(moteur->getJoueur(i).getBateau(1)->getNumPort()==this->bateauAttaque){
-					this->joueurAttaque = moteur->getJoueur(i).getBateau(1)->getNumPort();
+					this->joueurAttaque = i;
 				}
 				if(moteur->getNbJoueurs()==2){
 					if(moteur->getJoueur(i).getBateau(2)->getNumPort()==this->bateauAttaque){
-						this->joueurAttaque = moteur->getJoueur(i).getBateau(2)->getNumPort();
+						this->joueurAttaque = i;
 					}
 				}
 			}
+			
+			//We get the player's number who will attack
+			this->joueurAttaquant = this->moteur->getJoueurCourant();
 		}
-		//We get the player's number who will attack
-		this->joueurAttaquant = this->moteur->getJoueurCourant();
+
 		this->angle = this->moteur->getAngle();
 		this->angleObtenu = true;
 		mes << this->moteur->getJoueurCourant();
@@ -51,7 +54,6 @@ void TirCanonDuel::execute(){
 		this->premierTir = false;
 		this->puissance = this->moteur->getPuissance();
 		this->puissanceObtenue = true;
-		this->calculerRelief();
 		moteur->setHistogramme(this->histogramme);
 		this->calculerTir();
 		moteur->setTrajectoireTir(this->trajectoireTir);
