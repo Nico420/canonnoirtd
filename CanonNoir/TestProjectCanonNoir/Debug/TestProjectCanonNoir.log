@@ -1,0 +1,16 @@
+﻿La génération a démarré 26/01/2011 15:48:52.
+Projet "C:\Users\Aurélien\Desktop\canon noir\CanonNoir\TestProjectCanonNoir\TestProjectCanonNoir.vcxproj" sur le nœud 2 (build cible(s)).
+InitializeBuildStatus:
+  Mise à jour de l'horodatage "Debug\TestProjectCanonNoir.unsuccessfulbuild".
+GenerateTargetFrameworkMonikerAttribute:
+La cible est ignorée "GenerateTargetFrameworkMonikerAttribute", car tous les fichiers de sortie sont à jour par rapport aux fichiers d'entrée.
+ClCompile:
+  Toutes les sorties sont à jour.
+  c:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"C:\Users\Aurélien\Desktop\canon noir\CanonNoir\CanonNoir" /AI"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\DefaultTest.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /TP /FU"c:\Program Files\Microsoft Visual Studio 10.0\Common7\IDE\PublicAssemblies\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt Test_unitaire_1.cpp /clr:nostdlib 
+  Test_unitaire_1.cpp
+Test_unitaire_1.cpp(60): error C2061: erreur de syntaxe : identificateur 'Caravelle'
+Génération du projet "C:\Users\Aurélien\Desktop\canon noir\CanonNoir\TestProjectCanonNoir\TestProjectCanonNoir.vcxproj" terminée (build cible(s)) -- ÉCHEC.
+
+ÉCHEC de la build.
+
+Temps écoulé 00:00:03.62
