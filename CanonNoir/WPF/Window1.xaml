@@ -11,7 +11,10 @@
         </StackPanel>
         <StackPanel Visibility="Hidden" Height="158" HorizontalAlignment="Left" Margin="134,156,0,0" Name="puissance" VerticalAlignment="Top" Width="121" >
             <TextBlock Height="49" Name="textChoixPuiss" Text="" Width="120" TextWrapping="WrapWithOverflow" />
-            <Image Height="108" Source="images/jauge_puissance.png" Name="puiss_image" Stretch="Fill" Width="50" MouseLeftButtonDown="choixPuissance" />
+            <TextBlock Height="49" Name="text1" Text="100m/s" Width="40" HorizontalAlignment="Right" />
+            <TextBlock Height="49" Margin="0,30" Name="text2" Text="0m/s" Width="40" HorizontalAlignment="Right" />
+            
+            <Image Height="108" Margin="0,-155"  Source="images/jauge_puissance.png" Name="puiss_image" Stretch="Fill" Width="50" MouseLeftButtonDown="choixPuissance" VerticalAlignment="Top" HorizontalAlignment="Left" />
         </StackPanel>
         <Rectangle Height="21" HorizontalAlignment="Left" Margin="0,384,0,0" Stroke="Black" VerticalAlignment="Top" Width="900" Fill="Blue" />
         <TextBlock Height="26" HorizontalAlignment="Left" Margin="12,46,0,0" Name="valeurAngle" Text="" VerticalAlignment="Top" Width="169" FontWeight="Bold" FontFamily="Lucida Handwriting" />
