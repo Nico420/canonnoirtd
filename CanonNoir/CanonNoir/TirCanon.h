@@ -113,6 +113,11 @@ class TirCanon : public Etat
 		*\param batAttaque Number of the player's boat who has been attacked
 		*/
 		void effectuerChangements(int joueurAttaquant,int batAttaquant,int joueurAttaque,int batAttaque);
+		/**
+		*\fn void setTirReussi()
+		*\brief computes according to shoot trajectory if a shoot succeeded (after selection of angle and power of shoot)
+		*/
+		void setTirReussi();
 }; 
 
 inline void TirCanon::setMessage(std::string mes){

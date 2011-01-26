@@ -21,5 +21,5 @@ std::vector<int> Etat::getCasesActives() const{
 }
 
 bool Etat::getActiveDe2() const{
-	return false;
+	return true;
 }

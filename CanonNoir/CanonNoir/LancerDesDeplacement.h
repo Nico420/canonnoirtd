@@ -54,11 +54,11 @@ class LancerDesDeplacement : public LancerDes
 		*/
 		virtual std::vector<int> getCasesActives() const;
 		/**
-		*\fn bool getActiveDe2() const
+		*\fn virtual bool getActiveDe2() const
 		*\brief gets if the second dice has to be shown
 		*\return boolean true if the second dice has to be shown, else false
 		*/
-		bool getActiveDe2() const;
+		virtual bool getActiveDe2() const;
 		/**
 		*\fn void calculCasesDeplacement(int de1,int de2)
 		*\brief computes all possible destination squares according to the rules of the game

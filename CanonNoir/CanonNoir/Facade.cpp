@@ -29,7 +29,6 @@ Facade::Facade(){
 	this->nbBateaux = 0;
 	this->afficheAttenteNbJoueurs = true;
 	this->afficheJeuNormal = false;
-	this->activeDe1 = false;
 	this->activeDe2 = false;
 	this->activeCases = false;
 	this->activeLancerDes = false;
@@ -53,7 +52,6 @@ void Facade::setNbJoueurs(int nb){
 	for(int i=0;i<this->nbBateaux;i++) this->scoresBateaux[i] = -1;
 	this->afficheAttenteNbJoueurs = false;
 	this->afficheJeuNormal = true;
-	this->activeDe1 = false;
 	this->activeDe2 = false;
 	this->activeLancerDes = false;
 	this->affichePorts=true;
@@ -87,7 +85,6 @@ void Facade::setClick(int x,int y){
 		}*/
 		this->motor->setEtat(Moteur::SETORDREJOUEURS);
 		this->activeLancerDes = true;
-		this->activeDe1 = true;
 		this->activeDe2 = true;
 		this->activeCases = false;
 		this->affichePorts = false;
@@ -104,8 +101,6 @@ void Facade::setClick(int x,int y){
 		for(int i=0;i<4;i++) cout<<this->scoresBateaux[i]<<endl;
 		this->motor->setEtat(Moteur::LANCERDESDEPLACEMENT);
 		this->activeLancerDes = true;
-		this->activeDe1 = true;
-		this->activeDe2 = this->motor->getEtat()->getActiveDe2();
 		this->activeCases = false;
 		this->affichePorts = false;
 		this->afficheBat = true;
@@ -152,10 +147,9 @@ void Facade::lancerDes(){
 		cout<<"FACADE - avant miseajourCasesActives"<<endl;
 		this->miseAJourCasesActives(this->motor->getEtat()->getCasesActives());
 		cout<<"FACADE - avant miseajourCasesActives"<<endl;
+		this->activeDe2 = this->motor->getEtat()->getActiveDe2();
 		this->motor->setEtat(Moteur::NAVIGATION);
 		this->activeCases = true;
-		this->activeDe1 = true;
-		this->activeDe2 = this->motor->getEtat()->getActiveDe2();
 		this->activeLancerDes = false;
 	}
 }
@@ -218,7 +212,7 @@ void Facade::miseAJourHistogramme(){
 	cout<<"Fin boucle de remplissage histo"<<endl;
 	*/
 	cout<<motor->getHistogramme().size()<<endl;
-	for(int j=0;j<motor->getHistogramme().size();j++){
+	for(unsigned int j=0;j<motor->getHistogramme().size();j++){
 		cout<<motor->getHistogramme().at(j)<<endl;
 		this->histogramme[j] = (int)floor(motor->getHistogramme().at(j)*100);
 	}
