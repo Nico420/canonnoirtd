@@ -1,14 +1,13 @@
-﻿#ifndef JOUEUR_H
-#define JOUEUR_H
-#pragma once
-
-/**
+﻿/**
 *\file  Joueur.h
 *\brief Class corresponding to each player of the application
 *\author Nicolas DESFEUX
 *\author Aurélien TEXIER
 *\version 1.0
 */
+#ifndef JOUEUR_H
+#define JOUEUR_H
+#pragma once
 
 #include "Bateau.h"
 #include <map>
