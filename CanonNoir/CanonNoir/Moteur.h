@@ -99,8 +99,8 @@ public :
 		/**
 		*\fn void setClick(int x,int y)
 		*\brief stock the square's coordinates where the current player clicked
-		*\param x Abscissa of the square's coordinates clicked wanted to be stocked
-		*\param y Ordinate of the square's coordinates clicked wanted to be stocked
+		*\param x Abscissa of the square's coordinates clicked wanted to be stored
+		*\param y Ordinate of the square's coordinates clicked wanted to be stored
 		*/
 		void setClick(int x,int y);
 		/**
