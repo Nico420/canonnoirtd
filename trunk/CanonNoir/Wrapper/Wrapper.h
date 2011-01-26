@@ -201,6 +201,15 @@ namespace Wrapper {
 		int getDes2(){
 			return FacadeW->getDes2();
 		};
+
+		/**
+		*\fn getActiveDe2()
+		*\brief This function is used to show the good number of dice.
+		*\return True if we use the dice 2, else false.
+		*/
+		bool getActiveDe2(){
+			return FacadeW->getActiveDe2();
+		}
 	protected:
 		!WrapperFacade(){
 			Facade_Delete(FacadeW);

@@ -203,6 +203,7 @@ namespace WPF
                 int y = (int)b + 1;
                 //ici le relief est créé.
                 FacadeW.setClick(x, y);
+  
                 IntPtr histo = new IntPtr(FacadeW.getHisto().GetHashCode());
                 
                 IntPtr traj = new IntPtr(FacadeW.getTrajectoire().GetHashCode());
@@ -434,9 +435,10 @@ namespace WPF
         /// <param name="e"></param>
         private void LanceDes_Click(object sender, RoutedEventArgs e)
         {
+            des2.Visibility = System.Windows.Visibility.Visible;
             LanceDes.IsEnabled = false;
             int count = 0;
-            //Pour le lancer de Dés, c'est un systeme qui permet de faire des pauses.
+            //Thanks to the dispatcher, we can use fun display for the dice.
             DispatcherTimer _lancerDesTimer = new DispatcherTimer(DispatcherPriority.Normal);
             _lancerDesTimer.Interval = TimeSpan.FromMilliseconds(100);
             _lancerDesTimer.Tick += delegate
@@ -445,8 +447,9 @@ namespace WPF
                 int a = rdm1.Next(1, 6);
                 des1.Source = new BitmapImage(new Uri("Images/face"+a+".jpg", UriKind.Relative));
                 a = rdm1.Next(1, 6);
-                des2.Source = new BitmapImage(new Uri("Images/face" + a + ".jpg", UriKind.Relative));
-                count++;
+                
+                    des2.Source = new BitmapImage(new Uri("Images/face" + a + ".jpg", UriKind.Relative));
+                    count++;
                 if (count > 10)
                 {
                     LanceDes.IsEnabled = true;
@@ -457,7 +460,14 @@ namespace WPF
                     this.setCases();
                     textBlock3.Text = FacadeW.getMessage();
                     des1.Source = new BitmapImage(new Uri("Images/face" + FacadeW.getDes1() + ".jpg", UriKind.Relative));
-                    des2.Source = new BitmapImage(new Uri("Images/face" + FacadeW.getDes2() + ".jpg", UriKind.Relative));
+                    if (FacadeW.getActiveDe2())
+                    {
+                        des2.Source = new BitmapImage(new Uri("Images/face" + FacadeW.getDes2() + ".jpg", UriKind.Relative));
+                    }
+                    else
+                    {
+                        des2.Visibility = System.Windows.Visibility.Hidden;
+                    }
                     //MessageBox.Show(FacadeW.getDes1() + " " + FacadeW.getDes2());
                 }
             };

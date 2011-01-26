@@ -19,7 +19,7 @@
         <Rectangle Height="21" HorizontalAlignment="Left" Margin="0,384,0,0" Stroke="Black" VerticalAlignment="Top" Width="900" Fill="Blue" />
         <TextBlock Height="26" HorizontalAlignment="Left" Margin="12,46,0,0" Name="valeurAngle" Text="" VerticalAlignment="Top" Width="169" FontWeight="Bold" FontFamily="Lucida Handwriting" />
         <TextBlock Height="28" HorizontalAlignment="Left" Margin="12,12,0,0" Name="valeurPuiss" Text="" VerticalAlignment="Top" Width="169" FontWeight="Bold" FontFamily="Lucida Handwriting" />
-        <Canvas Height="307" HorizontalAlignment="Left" Margin="70,78,0,0" Name="zoneTir" VerticalAlignment="Top" Width="698"></Canvas>
+        <Canvas Height="307" HorizontalAlignment="Left" Margin="117,78,0,0" Name="zoneTir" VerticalAlignment="Top" Width="632"></Canvas>
         <TextBlock Height="19" Name="distance" Width="226" Margin="326,21,326,366" />
     </Grid>
 </Window>

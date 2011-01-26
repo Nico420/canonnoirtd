@@ -33,7 +33,7 @@ void Navigation::deplacer(int x, int y){
 		}
 		else if(this->moteur->getPlateau().getEtat(x,y)==Moteur::TIRCANONDUEL){
 			std::pair<int,int> caseOpposee = this->getCaseFaceOppose(x,y);
-			if(!this->moteur->getPlateau().estNavigable(caseOpposee.first,caseOpposee.second)){
+			if(false/*!this->moteur->getPlateau().estNavigable(caseOpposee.first,caseOpposee.second)*/){//Nous n'avons pas implémenté le tir canon Duel, faute de temps.
 				mes << ", choisissez votre angle de tir.";
 				this->etatsuivant = Moteur::TIRCANONDUEL;
 			}
