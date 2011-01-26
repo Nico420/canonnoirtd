@@ -124,6 +124,11 @@ void Facade::setClick(int x,int y){
 		cout<<"Fin construction de l'état tircanonduel"<<endl;
 		this->afficheCanon = true;
 	}
+	else if(this->motor->getEtat()->getEtat()==Moteur::PARTIEGAGNEE){
+		this->activeCases = false;
+		this->activeLancerDes = false;
+		this->miseAJourInfosPorts(this->motor->getPosBateaux());
+	}
 	cout<<"Fin set click facade"<<endl;
 }
 
