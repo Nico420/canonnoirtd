@@ -105,16 +105,19 @@ namespace WPF
             {
                 Rectangle myRect = new System.Windows.Shapes.Rectangle();
                 myRect.Stroke = System.Windows.Media.Brushes.Black;
+                myRect.Fill = System.Windows.Media.Brushes.Black;
+                myRect.RadiusX = 2;
+                myRect.RadiusY = 2;
                 myRect.StrokeThickness = 7;
                 myRect.HorizontalAlignment = HorizontalAlignment.Left;
                 myRect.VerticalAlignment = VerticalAlignment.Center;
                 myRect.Height = liste_hauteur[i]*100;
-                myRect.Width = liste_largeur[i]*100;
-                
-                myRect.Margin = new Thickness(largeur_float*i, zoneTir.ActualHeight-liste_hauteur[i], 0, 0);
-                largeur_float += liste_largeur[i]*100;
+                myRect.Width = liste_largeur[i]*1000;
+                myRect.Margin = new Thickness(largeur_float, zoneTir.Height-myRect.Height, 0, 0);
+                largeur_float += liste_largeur[i]*1000;
                 //MessageBox.Show(largeur_float + ""+liste_hauteur[i]);
                 zoneTir.Children.Add(myRect);
+                
             }
         }
         private void displayTraj()
@@ -145,7 +148,7 @@ namespace WPF
                 boulet.VerticalAlignment = VerticalAlignment.Center;
                 zoneTir.Children.Add(boulet);
                 //Il faut encore synchroniser l'affichage avec la largeur !
-                System.Windows.Thickness t = new Thickness(puiss_int*x, zoneTir.ActualHeight-(10*y), 0, 0);
+                System.Windows.Thickness t = new Thickness(puiss_int*x, 500, 0, 0);
                 boulet.Margin = t;
                 
             }
@@ -160,10 +163,10 @@ namespace WPF
             m.FacadeW.setPuissance(puissance_int);
             this.puiss_int = puissance_int;
 	        //Display the shoot's way !
-            displayTraj();
+            //displayTraj();
             
 
-            MessageBox.Show("Touché !");
+            MessageBox.Show("Fin du tir !");
             this.Close();
         }
     }
