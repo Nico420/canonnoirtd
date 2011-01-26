@@ -1,15 +1,14 @@
-﻿#ifndef RADEAU_H
-#define RADEAU_H
-
-#pragma once
-
-/**
+﻿/**
 *\file  Radeau.h
 *\brief Class corresponding to rafts of the application
 *\author Nicolas DESFEUX
 *\author Aurélien TEXIER
 *\version 1.0
 */
+#ifndef RADEAU_H
+#define RADEAU_H
+
+#pragma once
 
 #include "Bateau.h"
 

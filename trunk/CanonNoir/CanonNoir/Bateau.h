@@ -1,14 +1,13 @@
-﻿#ifndef BATEAU_H
-#define BATEAU_H
-#pragma once
-
-/**
+﻿/**
 *\file  Bateau.h
 *\brief Class corresponding to each boat of the application
 *\author Nicolas DESFEUX
 *\author Aurélien TEXIER
 *\version 1.0
 */
+#ifndef BATEAU_H
+#define BATEAU_H
+#pragma once
 
 #include <utility>
 

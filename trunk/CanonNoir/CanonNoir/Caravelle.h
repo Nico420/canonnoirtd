@@ -1,14 +1,13 @@
-﻿#ifndef CARAVELLE_H
-#define CARAVELLE_H
-#pragma once
-
-/**
+﻿/**
 *\file  Caravelle.h
 *\brief Class corresponding to caravels of the application
 *\author Nicolas DESFEUX
 *\author Aurélien TEXIER
 *\version 1.0
 */
+#ifndef CARAVELLE_H
+#define CARAVELLE_H
+#pragma once
 
 #include "Bateau.h"
 

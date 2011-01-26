@@ -1,14 +1,13 @@
-﻿#ifndef FREGATE_H
-#define FREGATE_H
-#pragma once
-
-/**
+﻿/**
 *\file  Fregate.h
 *\brief Class corresponding to frigates of the application
 *\author Nicolas DESFEUX
 *\author Aurélien TEXIER
 *\version 1.0
 */
+#ifndef FREGATE_H
+#define FREGATE_H
+#pragma once
 
 #include "Bateau.h"
 
