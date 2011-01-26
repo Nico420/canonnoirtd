@@ -55,7 +55,7 @@ void Navigation::deplacer(int x, int y){
 				this->moteur->getJoueur(this->moteur->getJoueurCourant()).setScore(x,y);
 				if(this->moteur->getJoueur(this->moteur->getJoueurCourant()).getScore(x,y)==3){
 					partieFinie = true;
-					mes << ", vous avez gagné !";
+					mes << ", vous avez gagné ! Félicitations !";
 					this->etatsuivant = Moteur::PARTIEGAGNEE;
 				}
 				this->moteur->getJoueur(this->moteur->getJoueurCourant()).rentreAuPort(x,y);
