@@ -85,9 +85,8 @@ class DLL Facade
 		void miseAJourScores(std::vector<int> scores);
 		void miseAJourHistogramme();
 		void miseAJourTrajectoire();
-		bool casesDispo(int* t);
-		int* getTrajectoire(){int t[3] = {1,2,3};return t;};//this->trajectoireTir;};
-		int* getHistogramme(){return this->histogramme;};
+		int* getTrajectoire(){return this->trajectoireTir;};
+		int* getHistogramme(){this->miseAJourHistogramme();return this->histogramme;};
 };
 
 EXTERNC DLL Facade* Facade_New();

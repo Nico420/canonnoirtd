@@ -17,6 +17,7 @@
 #include "Etat.h"
 #include "De.h"
 
+
 /**
 *\namespace std
 * Namespace gathering the entire STL library
@@ -31,6 +32,8 @@ using namespace std;
 
 class Moteur
 {
+public : 
+	static const int NBPOINTS = 100;
 	private :
 		vector<int> ordreJoueurs;
 		int joueurCourant;
@@ -48,7 +51,6 @@ class Moteur
 
 	public :
 		int nbJoueurs;
-		static const int NBPOINTS = 100;
 		/**
 		*\fn Moteur()
 		*\brief default constructor

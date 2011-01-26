@@ -75,9 +75,9 @@ void TirCanonUnique::execute(){
 		cout<< "entre les deux" <<endl;
 		//
 		cout<< "calcultir" <<endl;
-		//this->calculerTir();
+		this->calculerTir();
 		cout<< "set Trajectoire tir unique" <<endl;
-		//moteur->setTrajectoireTir(this->trajectoireTir);
+		moteur->setTrajectoireTir(this->trajectoireTir);
 		if(this->tirReussi){
 			this->effectuerChangements(this->moteur->getJoueurCourant(),bateauAttaquant,joueurAttaque,bateauAttaque);
 		}

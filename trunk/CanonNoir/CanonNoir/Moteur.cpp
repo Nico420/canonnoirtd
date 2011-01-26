@@ -23,6 +23,8 @@ Moteur::Moteur(){
 	this->plateau = Plateau::Plateau();
 	cout<<"testMoteur"<<endl;
 	this->etat= new AttenteNbJoueurs();
+	this->trajectoireTir = vector<double>(NBPOINTS*2,0);
+	this->histogramme = vector<double>(38,0);
 }
 
 Moteur::~Moteur(){
@@ -154,8 +156,8 @@ void Moteur::setHistogramme(list<pair<double,double>>& hist){
 	this->histogramme.clear();
 	for(list<pair<double,double>>::iterator it=hist.begin();it!=hist.end();it++){
 		cout<< "debut for set histogramme moteur" <<endl;
-		this->histogramme.push_back(it->second);
 		this->histogramme.push_back(it->first);
+		this->histogramme.push_back(it->second);
 		cout<< "set histogramme moteur" <<endl;
 	}
 	cout<< "Fin histogramme moteur" <<endl;
@@ -163,10 +165,12 @@ void Moteur::setHistogramme(list<pair<double,double>>& hist){
 
 void Moteur::setTrajectoireTir(vector<pair<double,double>>& traj){
 	int cpt = 0;
+	cout<< "Début traj moteur" <<endl;
 	for(vector<pair<double,double>>::iterator it=traj.begin();it!=traj.end();it++){
 		this->trajectoireTir.at(cpt++) = it->first;
 		this->trajectoireTir.at(cpt++) = it->second;
 	}
+	cout<< "Fin Trajectoire moteur" <<endl;
 }
 
 Bateau* Moteur::getBateau(int joueur,int numPort){

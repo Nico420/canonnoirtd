@@ -23,6 +23,7 @@ namespace WPF
     public partial class MainWindow : Window
     {
         public WrapperFacade FacadeW;
+        public int[] histo = new int[50];
         //1/11 of the click area. For the moment it's a constant, but we can perhaps make it dynamic.
         private static double HAUTEUR_CASE = 53.75;
 
@@ -202,10 +203,10 @@ namespace WPF
                 int y = (int)b + 1;
                 //ici le relief est créé.
                 FacadeW.setClick(x, y);
-                MessageBox.Show("" + x + " " + y);
                 IntPtr histo = new IntPtr(FacadeW.getHisto().GetHashCode());
+                
                 IntPtr traj = new IntPtr(FacadeW.getTrajectoire().GetHashCode());
-                Window1 w = new Window1(this,histo,traj);
+                Window1 w = new Window1(this,traj,histo);
                 w.ShowDialog();
                 textBlock3.Text = FacadeW.getMessage();
                 this.setCases();

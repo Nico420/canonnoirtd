@@ -120,12 +120,14 @@ void TirCanon::calculerTir(){
 	double angle_rad = 2*pi*angle/360;
 	double vx = puissance * cos((double)angle);
 	double vz = puissance * sin((double)angle);
-	vector<pair<double,double>> res;
+	vector<pair<double,double>> res(moteur->NBPOINTS);
 	cout<<"Trajectoire :"<<endl;
 	//On stock en i z et en i+1 x
-	for(int i=0;i<moteur->NBPOINTS;i=i+2){
-		double y = -0.5*9.81*i*i/(puissance*puissance*cos((double) angle)*cos((double) angle))+i*tan((double) angle);
-		res.at(i) = make_pair(i,y);
+	for(int i=0;i<moteur->NBPOINTS;i++){
+		//<<"Test traj"<<endl;
+		double y = (-0.5*9.81*i*i/(puissance*puissance*cos((double) angle)*cos((double) angle)))+i*tan((double) angle);
+		//cout<<"Test traj2 "<<y<<endl;
+		res.at(i)=make_pair(i,y);
 		cout<<res[i].first<<" "<<res[i].second<<endl;
 	}
 	moteur->setTrajectoireTir(res);
