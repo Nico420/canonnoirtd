@@ -118,8 +118,6 @@ void TirCanon::calculerRelief(){
 void TirCanon::calculerTir(){
 	int pi=3.1415;
 	double angle_rad = 2*pi*angle/360;
-	double vx = puissance * cos((double)angle);
-	double vz = puissance * sin((double)angle);
 	vector<pair<double,double>> res(moteur->NBPOINTS);
 	cout<<"Trajectoire :"<<endl;
 	//On stock en i z et en i+1 x
@@ -161,12 +159,32 @@ double TirCanon::g(int y,int x1,int x2,int y1,int y2) const{
 }
 
 void TirCanon::setTirReussi(){
+	cout<<"Tir réussi"<<endl;
 	double xa = (double)this->positionAttaquant.first;
 	double ya = (double)this->positionAttaquant.second;
 	double xb = (double)this->positionAttaque.first;
 	double yb = (double)this->positionAttaque.second;
+	cout<<"Tir réussi"<<xa<<" "<<xb<<" "<<ya<<" "<<yb<<endl;
 	int lg = floor(sqrt((xb-xa)*(xb-xa) + (yb-ya)*(yb-ya)));
-	if(this->trajectoireTir.at(lg).second<2 && this->trajectoireTir.at(lg).second>-0.5){
+	cout<<"Longueur : "<<lg<<endl;
+	/*
+	for(vector<double>::iterator it=moteur->getTrajectoireTir().begin();it!=moteur->getTrajectoireTir().end();it++){
+		if(*it==lg){
+			it++;
+			if(*it<2 && *it>-0.5){
+				cout<<"Le tir est réussi"<<endl;
+				this->tirReussi = true;
+			}
+		}
+	}
+	*/
+	int l = lg*2+1;
+	cout<<" l :"<<l<<endl;
+	bool a = this->moteur->getTrajectoireTir().at(l)<2;
+	bool b = this->moteur->getTrajectoireTir().at(l)>-0.5;
+	if(a && b){
+		cout<<"Le tir est réussi"<<endl;
 		this->tirReussi = true;
 	}
+	cout<<"Tir réussi"<<endl;
 }

@@ -80,7 +80,7 @@ void TirCanonUnique::execute(){
 		cout<< "calcultir" <<endl;
 		this->calculerTir();
 		cout<< "set Trajectoire tir unique" <<endl;
-		moteur->setTrajectoireTir(this->trajectoireTir);
+		//moteur->setTrajectoireTir(this->trajectoireTir);
 		//On vérifie si le tir effectué est réussi
 		this->setTirReussi();
 		if(this->tirReussi){

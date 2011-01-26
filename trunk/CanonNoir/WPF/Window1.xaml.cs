@@ -111,7 +111,7 @@ namespace WPF
                 myRect.StrokeThickness = 7;
                 myRect.HorizontalAlignment = HorizontalAlignment.Left;
                 myRect.VerticalAlignment = VerticalAlignment.Center;
-                myRect.Height = liste_hauteur[i]*100;
+                myRect.Height = liste_hauteur[i]*200;
                 myRect.Width = liste_largeur[i]*1000;
                 myRect.Margin = new Thickness(largeur_float, zoneTir.Height-myRect.Height, 0, 0);
                 largeur_float += liste_largeur[i]*1000;
