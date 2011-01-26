@@ -24,7 +24,7 @@ class Navigation : public Etat
 
 	public :
 		Navigation() : message(""),moteur(NULL){};
-		Navigation(Moteur* mot) : message(""),moteur(mot){};
+		Navigation(Moteur* mot) : message(""),moteur(mot),etatsuivant(-1){};
 		void execute();
 		void deplacer(int x, int y);
 		int getEtat() const;

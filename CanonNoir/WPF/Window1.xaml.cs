@@ -26,6 +26,9 @@ namespace WPF
         MainWindow m;
         IntPtr traj,histo;
         int angle_int;
+        double largeur_totale;
+        int[] entiers = new int[200];
+
         public Window1()
         {
             InitializeComponent();
@@ -35,6 +38,7 @@ namespace WPF
         {
             this.m = m;
             angle_int = 0;
+            largeur_totale = 0;
             InitializeComponent();
             textChoixAngle.Text=m.FacadeW.getMessage();
             displayRelief();
@@ -78,25 +82,41 @@ namespace WPF
         /// </summary>
         private void displayRelief()
         {
-            int largeur = Marshal.ReadInt32(histo);
-            histo+=sizeof(int);
-            int hauteur = Marshal.ReadInt32(histo);
-            histo += sizeof(int);
-            MessageBox.Show(largeur + " " + hauteur);
+            int l1 = 0;
+            int l2 = 0;
+            double[] liste_hauteur = new double[38];
+            double[] liste_largeur = new double[38];
+            for (int i = 0; i < 36; i+=2)
+            {
+                int largeur = Marshal.ReadInt32(histo);
+                liste_largeur[l1++] = (((double)largeur) / 1000); ;
+                largeur_totale += largeur;
+                histo += sizeof(int);
+                int hauteur = Marshal.ReadInt32(histo);
+                double haut = (double)hauteur / 100;
+                histo += sizeof(int);
+            }
+            distance.Text = "Distance : " + ((double)largeur_totale)/1000 + " milles nautique";
         }
         private void displayTraj()
         {
-            int x = Marshal.ReadInt32(traj);
+            int xi = Marshal.ReadInt32(traj);
             traj += sizeof(int);
-            int y = Marshal.ReadInt32(traj);
+            int yi = Marshal.ReadInt32(traj);
             traj += sizeof(int);
-            MessageBox.Show(x + " " + y);
-            for (int i = 0; i < 100; i++)
+            xi = Marshal.ReadInt32(traj);
+            traj += sizeof(int);
+            yi = Marshal.ReadInt32(traj);
+            traj += sizeof(int);
+            for (int i = 0;i < 100; i++)
             {
-                x = Marshal.ReadInt32(traj);
+                xi = Marshal.ReadInt32(traj);
                 traj += sizeof(int);
-                y = Marshal.ReadInt32(traj);
+                yi = Marshal.ReadInt32(traj);
                 traj += sizeof(int);
+                double x = (double)xi / 100;
+                double y = (double)yi / 100;
+                //MessageBox.Show("displayTraj " + x + " " + y);
                 Image boulet = new Image();
                 BitmapImage boulet_img = new BitmapImage(new Uri("Images/boulet.jpg", UriKind.Relative));
                 boulet.Source = boulet_img;
@@ -105,7 +125,8 @@ namespace WPF
                 boulet.HorizontalAlignment = HorizontalAlignment.Left;
                 boulet.VerticalAlignment = VerticalAlignment.Center;
                 zoneTir.Children.Add(boulet);
-                System.Windows.Thickness t = new Thickness(x, y, 0, 0);
+                //Il faut encore synchroniser l'affichage avec la largeur !
+                System.Windows.Thickness t = new Thickness(x, zoneTir.ActualHeight-y, 0, 0);
                 boulet.Margin = t;
                 
             }
@@ -118,8 +139,7 @@ namespace WPF
             valeurPuiss.Text =  "Puissance : " + puissance_int +"mètres/s";
             puissance.Visibility = System.Windows.Visibility.Hidden;
             m.FacadeW.setPuissance(puissance_int);
-            double pi=3.1415;
-	        double angle_rad = 2*pi*angle_int/360;
+
 	        //Display the shoot's way !
             displayTraj();
             

@@ -5,6 +5,7 @@
 #include <iostream>
 
 void LancerDesDeplacement::execute(){
+	this->etatsuivant = Moteur::NAVIGATION;
 	std::cout<<"Etat lancerDesDeplacement"<<std::endl;
 	this->moteur->lancerDes();
 	std::cout<<"lancer de dés effectue"<<std::endl;

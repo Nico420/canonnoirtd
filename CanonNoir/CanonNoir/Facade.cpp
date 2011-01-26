@@ -67,6 +67,7 @@ void Facade::setClick(int x,int y){
 	this->motor->setClick(x,y);
 	this->message = this->motor->getEtat()->getMessage();
 	cout<<"Début traitement"<<endl;
+
 	if(this->motor->getEtat()->getEtat()!=Moteur::NAVIGATION && this->motor->getEtat()->getEtat()!=0){
 		cout<<"Fin mise à jour des cases active - facade"<<endl;
 		this->miseAJourCasesActives(this->motor->getEtat()->getCasesActives());
@@ -143,12 +144,7 @@ void Facade::lancerDes(){
 		this->activeCases = true;
 		this->activeDe1 = true;
 		this->activeDe2 = this->motor->getEtat()->getActiveDe2();
-		bool a = this->casesDispo(this->getCasesActives());
-		if(a){
-			this->activeLancerDes = true;
-		}else{
-			this->activeLancerDes = false;
-		}
+		this->activeLancerDes = false;
 	}
 }
 
@@ -163,10 +159,8 @@ void Facade::setPuissance(int puissance){
 	motor->setPuissance(puissance);
 	cout<<"get message setpuissance facade"<<endl;
 	this->message = this->motor->getEtat()->getMessage();
-	cout<<"maj histo set puissance Facade"<<endl;
-	//this->miseAJourHistogramme();
 	cout<<"maj traj set puissance Facade"<<endl;
-	//this->miseAJourTrajectoire();
+	this->miseAJourTrajectoire();
 	if(motor->getEtat()->getEtat()==Moteur::LANCERDESDEPLACEMENT){
 		motor->setEtat(Moteur::LANCERDESDEPLACEMENT);
 		cout<<"etat changé"<<endl;
@@ -177,13 +171,6 @@ void Facade::setPuissance(int puissance){
 		this->miseAJourInfosPorts(this->motor->getPosBateaux());
 	}
 	
-}
-
-bool Facade::casesDispo(int* t){
-	for(int i=0;i<88;i++){
-		if(t[i]==1) return false;
-	}
-	return true;
 }
 
 void Facade::miseAJourCasesActives(std::vector<int> caseActives){
@@ -206,19 +193,32 @@ void Facade::miseAJourScores(std::vector<int> scores){
 
 void Facade::miseAJourHistogramme(){
 	int dim = this->motor->getPlateau().getLongueur()+this->motor->getPlateau().getLargeur();
-	//Reset of histogram
+	cout<<"Reset of histogram"<<endl;
 	for(int i=0;i<dim*2;i++) this->histogramme[i] = 0;
+	cout<<" finReset of histogram"<<endl;
 	int i = 0;
-	std::vector<double>::iterator it;
+	/*std::vector<double>::iterator it;
+	cout<<"Avant boucle de remplissage histo"<<endl;
 	for(it=motor->getHistogramme().begin();it!=motor->getHistogramme().end();it++){
-		this->histogramme[i] = (int)floor((*it)*100);
+		cout<<"boucle de remplissage histogram"<<endl;
+		this->histogramme[i++] = (int)floor((*it)*100);
 	}
+	cout<<"Fin boucle de remplissage histo"<<endl;
+	*/
+	cout<<motor->getHistogramme().size()<<endl;
+	for(int j=0;j<motor->getHistogramme().size();j++){
+		cout<<motor->getHistogramme().at(j)<<endl;
+		this->histogramme[j] = (int)floor(motor->getHistogramme().at(j)*100);
+	}
+	cout<<"Fin boucle de remplissage histo"<<endl;
 }
 
 void Facade::miseAJourTrajectoire(){
 	int dim = this->getTailleTabTrajectoire();
 	for(int i=0;i<dim;i++){
+		//cout<<"traj point "<<i<<endl;
 		this->trajectoireTir[i] = (int)floor(motor->getTrajectoireTir().at(i)*100);
+		
 	}
 }
 
