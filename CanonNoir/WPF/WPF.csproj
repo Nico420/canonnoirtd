@@ -134,9 +134,6 @@
     <Resource Include="Images\plateau.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\pirate.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Images\bateau-Caravelle.gif" />
     <Resource Include="Images\bateau-fregate.png" />
     <Resource Include="Images\bateau-radeau.JPG" />
