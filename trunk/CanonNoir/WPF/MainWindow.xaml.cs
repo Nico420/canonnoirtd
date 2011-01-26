@@ -421,16 +421,6 @@ namespace WPF
                 textBlock3.Text = FacadeW.getMessage();
                 double num_case = (y - 1) * 11 + x;
             }
-            if(FacadeW.afficheCanon()){
-                IntPtr histo = new IntPtr(FacadeW.getHisto().GetHashCode());
-
-                IntPtr traj = new IntPtr(FacadeW.getTrajectoire().GetHashCode());
-                Window1 w = new Window1(this, traj, histo);
-                w.ShowDialog();
-                textBlock3.Text = FacadeW.getMessage();
-                this.setCases();
-                this.LanceDes.IsEnabled = FacadeW.activerDes();
-            }
             if (FacadeW.afficheBateaux())
             {
                 this.BoatUpdate();
@@ -546,6 +536,10 @@ namespace WPF
          //-----------------------------------------------------------
  // demande au user confirmation pour quitter,
  // renvoie true si confirmé
+ /// <summary>
+ /// We use this method to ask a confirmation before quitting the game.
+ /// </summary>
+ /// <returns>True if the user really wants to Quit, else false</returns>
  public bool AskConfirmQuitAppli()
  {
  // message confirmation quitter l'application

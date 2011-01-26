@@ -10,7 +10,7 @@ namespace Wrapper {
 	public ref class WrapperFacade
 	{
 		private: 
-			Facade* FacadeW;
+			Facade* FacadeW;/*!< Facade between Motor and display*/
 	public:
 		
 		/**
@@ -67,7 +67,7 @@ namespace Wrapper {
 		};
 
 		/**
-		*\fn getScore()
+		*\fn getScores()
 		*\brief This method returns a pointer to the table that contains the current score for each player of the game.
 		*\return A pointeur to a table of integer.
 		*/
@@ -103,7 +103,7 @@ namespace Wrapper {
 		};
 
 		/**
-		*\fn 
+		*\fn affichePorts()
 		*\brief Ask the facade if the ports need to be display or not.
 		*\return True if ports need to be display, else false.
 		*/
@@ -139,30 +139,30 @@ namespace Wrapper {
 		};
 		
 		/**
-		*\fn 
-		*\brief 
-		*\param
+		*\fn afficheBateaux()
+		*\brief Asks if we need to display the boats.
+		*\return True if the boats can be displayed, else false
 		*/
 		bool afficheBateaux(){return FacadeW->afficheBateaux();};
 		
 		/**
-		*\fn 
-		*\brief 
-		*\param
+		*\fn afficheScores()
+		*\brief Asks if we need to display the scores.
+		*\return True
 		*/
 		bool afficheScores(){return true;};
 		
 		/**
-		*\fn 
-		*\brief 
-		*\param
+		*\fn setPuissance(int puissance)
+		*\brief Set the value of the shoot's power in the Facade.
+		*\param puissance The shoot's power.
 		*/
 		void setPuissance(int puissance){FacadeW->setPuissance(puissance);};
 		
 		/**
-		*\fn 
-		*\brief 
-		*\param
+		*\fn setAngle(int angle)
+		*\brief Set the value of the shoot's angle in the Facade.
+		*\param angle The shoot's angle, in degree
 		*/
 		void setAngle(int angle){FacadeW->setAngle(angle);};
 

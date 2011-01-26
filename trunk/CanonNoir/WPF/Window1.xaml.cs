@@ -108,12 +108,12 @@ namespace WPF
                 myRect.StrokeThickness = 7;
                 myRect.HorizontalAlignment = HorizontalAlignment.Left;
                 myRect.VerticalAlignment = VerticalAlignment.Center;
-                myRect.Height = liste_hauteur[i];
-                myRect.Width = liste_largeur[i];
+                myRect.Height = liste_hauteur[i]*100;
+                myRect.Width = liste_largeur[i]*100;
                 
-                myRect.Margin = new Thickness(largeur_float, zoneTir.ActualHeight-liste_hauteur[i], 0, 0);
-                largeur_float += liste_largeur[i];
-                MessageBox.Show(largeur_float + ""+liste_hauteur[i]);
+                myRect.Margin = new Thickness(largeur_float*i, zoneTir.ActualHeight-liste_hauteur[i], 0, 0);
+                largeur_float += liste_largeur[i]*100;
+                //MessageBox.Show(largeur_float + ""+liste_hauteur[i]);
                 zoneTir.Children.Add(myRect);
             }
         }
