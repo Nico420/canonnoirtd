@@ -74,8 +74,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Adaptateur.cpp" />
-    <ClCompile Include="Affichage.cpp" />
     <ClCompile Include="AttenteNbJoueurs.cpp" />
     <ClCompile Include="Bateau.cpp" />
     <ClCompile Include="Caravelle.cpp" />
@@ -104,8 +102,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Wrapper\resource.h" />
-    <ClInclude Include="Adaptateur.h" />
-    <ClInclude Include="Affichage.h" />
     <ClInclude Include="AttenteNbJoueurs.h" />
     <ClInclude Include="Bateau.h" />
     <ClInclude Include="Caravelle.h" />

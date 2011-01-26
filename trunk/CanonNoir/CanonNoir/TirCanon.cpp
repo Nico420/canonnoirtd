@@ -125,7 +125,7 @@ void TirCanon::calculerTir(){
 	//On stock en i z et en i+1 x
 	for(int i=0;i<moteur->NBPOINTS;i++){
 		//<<"Test traj"<<endl;
-		double y = (-0.5*9.81*i*i/(puissance*puissance*cos((double) angle)*cos((double) angle)))+i*tan((double) angle);
+		double y = (-0.5*9.81*i*i/(puissance*puissance*cos((double) angle_rad)*cos((double) angle_rad)))+i*tan((double) angle_rad);
 		//cout<<"Test traj2 "<<y<<endl;
 		res.at(i)=make_pair(i,y);
 		cout<<res[i].first<<" "<<res[i].second<<endl;
