@@ -54,6 +54,14 @@ class PartieGagnee : public Etat
 		*/
 		std::string getMessage() const;
 
-}; 
+};
+
+inline void PartieGagnee::setMessage(std::string mes){
+	this->message = mes;
+}
+
+inline std::string PartieGagnee::getMessage() const{
+	return this->message;
+}
 
 #endif
