@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0DF36555-B086-4B43-8F4B-7D625577B4F0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CanonNoirConceptionLib</RootNamespace>
+    <AssemblyName>CanonNoirConceptionLib</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="GeneratedCode\Adaptateur.h" />
+    <Content Include="GeneratedCode\Affichage.h" />
+    <Content Include="GeneratedCode\AttenteNbJoueurs.h" />
+    <Content Include="GeneratedCode\Bateau.h" />
+    <Content Include="GeneratedCode\Caravelle.h" />
+    <Content Include="GeneratedCode\Case.h" />
+    <Content Include="GeneratedCode\CaseCanon.h" />
+    <Content Include="GeneratedCode\CaseNormale.h" />
+    <Content Include="GeneratedCode\CasePort.h" />
+    <Content Include="GeneratedCode\CaseTresor.h" />
+    <Content Include="GeneratedCode\ChoisirPort.h" />
+    <Content Include="GeneratedCode\De.h" />
+    <Content Include="GeneratedCode\Etat.h" />
+    <Content Include="GeneratedCode\Facade.h" />
+    <Content Include="GeneratedCode\Fregate.h" />
+    <Content Include="GeneratedCode\Joueur.h" />
+    <Content Include="GeneratedCode\LancerDes.h" />
+    <Content Include="GeneratedCode\LancerDesDeplacement.h" />
+    <Content Include="GeneratedCode\Moteur.h" />
+    <Content Include="GeneratedCode\Navigation.h" />
+    <Content Include="GeneratedCode\PartieGagnee.h" />
+    <Content Include="GeneratedCode\Plateau.h" />
+    <Content Include="GeneratedCode\Radeau.h" />
+    <Content Include="GeneratedCode\SetOrdreJoueurs.h" />
+    <Content Include="GeneratedCode\TirCanonDuel.h" />
+    <Content Include="GeneratedCode\TirCanonUnique.h" />
+    <Content Include="GeneratedCode\TirerCanon.h" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
