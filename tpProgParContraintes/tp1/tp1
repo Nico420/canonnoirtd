@@ -1,0 +1,83 @@
+:- lib(ic).
+
+%Question 1.1
+
+couleurVoiture(rouge).
+couleurVoiture(vert(clair)).
+couleurVoiture(gris).
+couleurVoiture(blanc).
+
+couleurBateau(vert(_)).
+couleurBateau(noir).
+couleurBateau(blanc).
+
+
+choixCouleur(CouleurBateau,CouleurVoiture) :- 	couleurVoiture(CouleurVoiture),
+						couleurBateau(CouleurBateau),
+						CouleurVoiture=CouleurBateau.
+
+%Question 1.2
+
+/* Il parcourt les branches de l'arbre des possibilités et il coupe les branches qui ne
+s'unifient pas avec les contraintes.
+*/
+
+%Question 1.3
+
+isBetween(Var,Min,_Max) :- 	Var=Min.
+isBetween(Var,Min,Max) :- 	\=(Min,Max),
+				is(M,Min+1),
+				isBetween(Var,M,Max).
+%Question 1.4
+
+nbMaxR(10000).
+nbMinR(5000).
+nbMinC(9000).
+nbMaxC(20000).
+
+commande(NbResistance,NbCondensateur) :- 	nbMaxR(NbMaxR),nbMinR(NbMinR),nbMaxC(NbMaxC),nbMinC(NbMinC),
+						isBetween(NbResistance,NbMinR,NbMaxR),
+						isBetween(NbCondensateur,NbMinC,NbMaxC),
+						NbResistance>=NbCondensateur.
+
+%Question 1.7
+
+commande2(NbResistance,NbCondensateur) :- 	nbMaxR(NbMaxR),nbMinR(NbMinR),nbMaxC(NbMaxC),nbMinC(NbMinC),
+						NbResistance #:: NbMinR..NbMaxR,
+						NbCondensateur #:: NbMinC..NbMaxC,
+						NbResistance #>= NbCondensateur.
+
+commande3(NbResistance,NbCondensateur) :- 	nbMaxR(NbMaxR),nbMinR(NbMinR),nbMaxC(NbMaxC),nbMinC(NbMinC),
+						NbResistance #:: NbMinR..NbMaxR,
+						NbCondensateur #:: NbMinC..NbMaxC,
+						NbResistance #>= NbCondensateur,
+						labeling([NbResistance,NbCondensateur]).
+%Parler de la vitesse d'éxécution
+
+
+%Zoologie
+%Question 1.9
+
+nbChatsMax(1000).
+nbPiesMax(1000).
+
+chapie(Chats,Pies,Pattes,Tetes) :- 	nbChatsMax(NbChatsMax),
+					nbPiesMax(NbPiesMax),
+					Chats #:: 0 .. NbChatsMax,
+					Pies #:: 0 .. NbPiesMax,
+					Pattes #= Chats*4+Pies*2,
+					Tetes #= Chats+Pies,
+					labeling([Chats,Pies]).
+/*
+[eclipse 52]: chapie(2,Pies,Pattes,5).
+
+Pies = 3
+Pattes = 14
+Yes (0.00s cpu)
+*/
+
+[eclipse 53]: chapie(Chats,Pies,Pattes,Tetes),Pattes=Tetes*3.
+
+No (2.01s cpu)
+
+
