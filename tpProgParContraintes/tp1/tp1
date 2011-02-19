@@ -76,8 +76,49 @@ Pattes = 14
 Yes (0.00s cpu)
 */
 
-[eclipse 53]: chapie(Chats,Pies,Pattes,Tetes),Pattes=Tetes*3.
+/*
+[eclipse 4]: chapie(Chats,Pies,Pattes,Tetes),Pattes#=Tetes*3.
 
-No (2.01s cpu)
+Chats = 0
+Pies = 0
+Pattes = 0
+Tetes = 0
+Yes (0.00s cpu, solution 1, maybe more) ? ;
 
+Chats = 1
+Pies = 1
+Pattes = 6
+Tetes = 2
+Yes (0.00s cpu, solution 2, maybe more) ? ;
 
+Chats = 2
+Pies = 2
+Pattes = 12
+Tetes = 4
+Yes (0.00s cpu, solution 3, maybe more) ?
+*/
+
+vabs1(Val,AbsVal) :- Val#=AbsVal,
+					AbsVal#>=0.
+vabs1(Val,AbsVal) :- Val*(-1)#=AbsVal,
+					AbsVal#>0.
+
+vabs2(Val,AbsVal) :- 	Val#=AbsVal
+						or
+						Val*(-1)#=AbsVal,
+						AbsVal#>=0.
+
+faitListe([],0,_Min,_Max).
+faitListe([PremElem|ResteVarListe],Taille,Min,Max) :- 	PremElem #:: Min..Max,
+														indomain(PremElem),
+														NewTaille #= Taille-1,
+														faitListe(ResteVarListe,NewTaille,Min,Max),
+														!.
+
+faitListe2(VarListe,Taille,Min,Max) :-	dim(VarListe,[Taille]).
+
+suite([_PremElem,_DeuxElem]).
+suite([PremElem,DeuxElem,TroisElem|ResteVarListe]) :-	%faitListe([PremElem,DeuxElem,TroisElem|ResteVarListe],5,1,10),
+														vabs1(DeuxElem,AbsDeuxElem),
+														TroisElem #= AbsDeuxElem - PremElem,
+														suite([DeuxElem,TroisElem|ResteVarListe]).
