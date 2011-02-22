@@ -6,7 +6,7 @@
 
 \documentclass[11pt]{article} % use larger type; default would be 10pt
 
-\usepackage[latin1]{inputenc} % set input encoding (not needed with XeLaTeX)
+\usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
 \usepackage[T1]{fontenc}
 \usepackage{times}
 
@@ -33,72 +33,98 @@
 \tableofcontents
 \newpage
 \section{Prise en main  Les trains de Michalsky}
-L'objectif de cette section est la prise en main de l'outil Aleph. Pour cela, nous allons essayer de reproduire l'exemple du cours. Les fichiers qui nous sont fournis contiennent tout le paramètrage et les exemples nécessaires pour réaliser cette exemple. Nous allons vous donner ici le résultat de l'éxécution : 
-\lstinputlisting[caption="Exemple - Trains de Michalsky"]{exemple-train/tp2}
-Cet exemple nous permet d'identifier facilement notre espace de recherche, qui partira de la bottom clause (clause la moins générale, créé par Aleph) : 
-\begin{lstlisting}
-[ bottom clause ]
-eastbound(A) :-
-has_car(A,B),has_car(A,C),has_car(A,D),has_car(A,E),
-short(E),short(C),closed(C),long(D),
-long(B),open_car(E),open_car(D),open_car(B),
-shape(E,rectangle),shape(D,rectangle),shape(C,rectangle),shape(B,rectangle),
-wheels(E,2),wheels(D,3),wheels(C,2),wheels(B,2),
-load(E,circle,1),load(D,hexagon,1),load(C,triangle,1),load(B,rectangle,3).
-\end{lstlisting}
-et qui se poursuivra tant que l'outil n'aura pas trouvé la règle la plus efficace, et qu'il n'aura pas atteint la clause la plus spécifique. Il parcourt l'espace de recherche en faisant donc un bottom-down.
-La clause la plus générale est : 
-\begin{lstlisting}
-eastbound(A).
-\end{lstlisting}
-C'est donc de cette clause qu'il est parti pôur inférer la règle recherchée. Il infère jusqu'à trouver une règle qui caractérise correctement tout les exemples : 
-\begin{lstlisting}
-[-------------------------------------]
-[found clause]
-eastbound(A) :-
-   has_car(A,B), short(B), closed(B).
-[pos cover = 5 neg cover = 0] [pos-neg] [5]
-[clause label] [[5,0,4,5]]
-[clauses constructed] [70]
-[-------------------------------------]
-\end{lstlisting}
+\begin{figure}
+\includegraphics[width=15cm]{tp1.png}
+\caption{Arbre Prolog 1}
+\end{figure}
+\lstinputlisting[caption="test"]{tp1}
 
-\section{Une affaire de famille}
-Pour cette section, c'est à nous de créer les fichiers nécéssaire à l'inférence de la règle. On cherche à obtenir le prédicat \textit{fillede}/2, tel que fille(X,Y) soit vérifié si X est fille de Y.
-Pour cela, nous avons du d'abord écrire le fichier lu par Aleph qui permet de définir les prédicats utilisables, les relations déjà connues,... Cela définit le background knowledge de notre étude.
-\lstinputlisting[caption="family.b"]{family.b}
+Question 1.2
 
-Une fois cela fait, il nous a fallut définir des exemples positifs(X est fille de Y), et négatifs (X n'est pas fille de Y).
-\lstinputlisting[caption="Exemples positifs"]{family.f}
+/* Il parcourt les branches de l'arbre des possibilités et il coupe les branches qui ne
+s'unifient pas avec les contraintes.
+Il s'arrête quand il a parcouru toutes les possibilités, et donc il génère toutes les solutions possibles,
+toutes celles qui remplissent les contraintes.
+*/
 
-\lstinputlisting[caption="Exemples négatifs"]{family2.n}
-L'éxécution a permis de trouver une règle : 
+test commande : 
+Le temps de réponse n'est pas négligeable puisqu'il est de 7.73 secondes.
+En utilisant la trace de l'exécution, on constate que l'on est ici dans un contexte de "Generate and Test",
+qui est dans ce cas beaucoup plus coûteux en temps.
+Il génère les solutions qui sont dans les intervalles données (il y en a beaucoup !),
+puis il teste celles qui remplissent la condition >=.
+Comme on peut le constater dans le dessin de l'arbre de recherche Porlog ci-joint, Prolog rencontre
+dans son arbre de recherche beaucoup d'échecs puisqu'il génère tout, et c'est cela la cause de la perte de
+beaucoup de temps d'exécution.
 
-\lstinputlisting[caption="\textit{fillede} - version 1"]{tp2q2V1}
 
-\begin{lstlisting}
-[Rule 1] [Pos cover = 4 Neg cover = 0]
-fillede(A,B) :-
-   femme(A).
-\end{lstlisting}
-Cette règle n'est pas fausse si l'on considère uniquement les exemples qui nous avons fournit. Malgré tout, on voit bien que le sens de la règle ne correspond pas au sens que l'on veut donner au prédicat. Nous avons donc utilisé une nouvelle liste de contre-exemples : 
-\lstinputlisting[caption="Exemples négatifs"]{family.n}
-Et à l'éxécution nous avons obtenu après inférence deux nouvelles régles qui correspondent à ceux que l'on cherchait : 
-\begin{lstlisting}
-[Rule 1] [Pos cover = 2 Neg cover = 0]
-fillede(A,B) :-
-   mere(B,A), femme(A).
+ On réitère l'essai mais en mettant le prédicat >= avant le isBetween.
+test commandebis : 
 
-[Rule 2] [Pos cover = 2 Neg cover = 0]
-fillede(A,B) :-
-   pere(B,A), femme(A).
-\end{lstlisting}
+Nous sommes ici dans un cas de figure de "Constraints and Generate"
+On voit alors ici que Prolog ne peut pas trouver de solution car pour remplir la condition
+sur le >=, il y a une infinité de solutions puisqu'il ne sait pas encore dans quel intervalle travailler.
+Donc il nous répond qu'il y a une faute d'instanciation.
+Dans le cas d'avant, le isBetween permettait de lui donner un nombre fini de solutions pour les deux variables,
+et après il pouvait alors trouver les solutions qui remplissaient le >=.
+Nous sommes pour le commandeBis dans un cas de figure de "Generate and Test", puisqu'il génère les solutions sans
+regarder ce qu'il a après comme condition.
 
-\section{Les figures du Poker}
+test commande 2 :
+Ici, la réponse d'eclipse est que les intervalles réponses pour les 2 variables sont
+[9000,10000].
 
-L'objectif est de faire apprendre à une machine les différentes figures du Poker.
-Des fichiers squelettes nous été fournis.
-En les remplissant, nous avons ainsi pu obtenir : 
-\lstinputlisting[caption="entete.pl"]{poker/entete.pl}
-\lstinputlisting[caption="preparpokerdata.prl"]{poker/prepar-poker-data.prl}
+test commande 3 :
+Ici, on voit clairement que le temps de réponse est vraiment plus rapide (moins d'un centième de seconde),
+et ceci est dû au fait que le labeling, à savoir le solveur ic, regarde toutes les contraintes avant de
+générer les solutions. Ce qui signifie qu'ici, il a réduit à l'avance les intervalles de solutions minimales
+avant de générer les réponses. C'est un gain de temps énorme pour le cas ici présent puisque l'arbre de recherche
+de Prolog (dessiné ci-joint) ne rencontre jamais d'échecs car il se construit dans les bonnes intervalles.
+
+test chapie : 
+Il faut donc 3 pies et 14 pattes pour totaliser 5 têtes et deux chats.
+
+1.10 : 
+Ici, il y a donc une infinité de solutions. La première donnée par le solveur est
+{0,0,0,0} puis {1,1,6,2}, etc.
+
+vabs : 
+Les deux prédicats ont ici exactement la même attitude pour ce cas de figure.
+
+vabs2 : 
+Ici, seul la première version du prédicat donne les deux résultats corrects attendus.
+
+ Question 1.12
+
+/* Tests
+Nous n'afficherons pas les tests car ils prennent de la place.
+Pour la première version du prédicat, cela donne bien toutes les solutions possibles,
+d'abord pour les X positifs puis pour les négatifs.
+Pour la deuxième version, le prédicat donne d'abord les solution {0,0}, puis les solutions
+négatives pour X, puis les positives.
+
+*/
+
+faitListe : 
+Logique, 1 n'est pas entre Min et Max !
+
+dim : 
+Cette requête permet de visualiser les suites formées par le prédicat avec les 2 premiers
+éléments de cette suite compris entre 1 et 10. Effectivement, il semble y avoir périodicité entre le premier
+et le dixième élément (et donc une période de 9).
+
+Requête vérifiant que la suite est périodique de période 9
+(vérifie qu'il n'existe aucune suite L ayant son premier et son dixième élément différents avec les deux premiers
+éléments de la suite compris entre 1 et 10)
+
+Prolog répond bien non à cette requête. On réitère alors avec les deux premiers éléments de la suite compris
+entre 1 et 100.
+
+La réponse est toujours non.
+Enfin, on essaie avec les deux premiers éléments de la suite compris entre 1 et 1000.
+Après plus d'une minute, Prolog répond toujours non.
+
+Pour conclure, dans le prédicat suite, on remarquera que l'on est dans de la propagation et non du backtracking
+puisque l'on construit la suite au fur et à mesure du parcourt de l'arbre à l'exécution.
+Il n'y a donc pas besoin de faire appel au prédicat labeling.
 \end{document}
