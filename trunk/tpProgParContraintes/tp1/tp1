@@ -27,14 +27,6 @@ CouleurBateau = blanc
 CouleurVoiture = blanc
 Yes (0.00s cpu, solution 2)
 */
-						
-%Question 1.2
-
-/* Il parcourt les branches de l'arbre des possibilités et il coupe les branches qui ne
-s'unifient pas avec les contraintes.
-Il s'arrête quand il a parcouru toutes les possibilités, et donc il génère toutes les solutions possibles,
-toutes celles qui remplissent les contraintes.
-*/
 
 %Question 1.3
 
@@ -69,15 +61,6 @@ Yes (7.74s cpu, solution 2, maybe more) ? ;
 NbResistance = 9001
 NbCondensateur = 9001
 Yes (7.74s cpu, solution 3, maybe more) ?
-
-Le temps de réponse n'est pas négligeable puisqu'il est de 7.73 secondes.
-En utilisant la trace de l'exécution, on constate que l'on est ici dans un contexte de "Generate and Test",
-qui est dans ce cas beaucoup plus coûteux en temps.
-Il génère les solutions qui sont dans les intervalles données (il y en a beaucoup !),
-puis il teste celles qui remplissent la condition >=.
-Comme on peut le constater dans le dessin de l'arbre de recherche Porlog ci-joint, Prolog rencontre
-dans son arbre de recherche beaucoup d'échecs puisqu'il génère tout, et c'est cela la cause de la perte de
-beaucoup de temps d'exécution.
 */
 
 %Question 1.6
@@ -87,20 +70,12 @@ commandeBis(NbResistance,NbCondensateur) :- 	nbMaxR(NbMaxR),nbMinR(NbMinR),nbMax
 						isBetween(NbResistance,NbMinR,NbMaxR),
 						isBetween(NbCondensateur,NbMinC,NbMaxC).
 						
-% On réitère l'essai mais en mettant le prédicat >= avant le isBetween.
+
 /* Test
 [eclipse 82]: commandeBis(NbResistance,NbCOndensateur).
 instantiation fault in NbResistance >= NbCOndensateur
 Abort
 
-Nous sommes ici dans un cas de figure de "Constraints and Generate"
-On voit alors ici que Prolog ne peut pas trouver de solution car pour remplir la condition
-sur le >=, il y a une infinité de solutions puisqu'il ne sait pas encore dans quel intervalle travailler.
-Donc il nous répond qu'il y a une faute d'instanciation.
-Dans le cas d'avant, le isBetween permettait de lui donner un nombre fini de solutions pour les deux variables,
-et après il pouvait alors trouver les solutions qui remplissaient le >=.
-Nous sommes pour le commandeBis dans un cas de figure de "Generate and Test", puisqu'il génère les solutions sans
-regarder ce qu'il a après comme condition.
 */
 
 %Question 1.7
@@ -120,11 +95,8 @@ NbCondensateur = NbCondensateur{9000 .. 10000}
 Delayed goals:
         NbCondensateur{9000 .. 10000} - NbResistance{9000 .. 10000} #=< 0
 Yes (0.00s cpu)
-
-Ici, la réponse d'eclipse est que les intervalles réponses pour les 2 variables sont
-[9000,10000].
 */
-						
+
 %Question 1.8
 
 commande3(NbResistance,NbCondensateur) :- 	nbMaxR(NbMaxR),nbMinR(NbMinR),nbMaxC(NbMaxC),nbMinC(NbMinC),
@@ -152,12 +124,6 @@ NbResistance = 9002
 NbCondensateur = 9000
 Yes (0.00s cpu, solution 4, maybe more) ?
 
-Ici, on voit clairement que le temps de réponse est vraiment plus rapide (moins d'un centième de seconde),
-et ceci est dû au fait que le labeling, à savoir le solveur ic, regarde toutes les contraintes avant de
-générer les solutions. Ce qui signifie qu'ici, il a réduit à l'avance les intervalles de solutions minimales
-avant de générer les réponses. C'est un gain de temps énorme pour le cas ici présent puisque l'arbre de recherche
-de Prolog (dessiné ci-joint) ne rencontre jamais d'échecs car il se construit dans les bonnes intervalles.
-
 */
 						
 %Zoologie
@@ -179,8 +145,6 @@ chapie(Chats,Pies,Pattes,Tetes) :- 	nbChatsMax(NbChatsMax),
 Pies = 3
 Pattes = 14
 Yes (0.00s cpu)
-
-Il faut donc 3 pies et 14 pattes pour totaliser 5 têtes et deux chats.
 */
 
 % Question 1.10
@@ -205,9 +169,6 @@ Pies = 2
 Pattes = 12
 Tetes = 4
 Yes (0.00s cpu, solution 3, maybe more) ?
-
-Ici, il y a donc une infinité de solutions. La première donnée par le solveur est
-{0,0,0,0} puis {1,1,6,2}, etc.
 */
 
 % Question 1.11
@@ -236,7 +197,6 @@ Yes (0.00s cpu)
 Y = 2
 Yes (0.00s cpu)
 
-Les deux prédicats ont ici exactement la même attitude pour ce cas de figure.
 
 [eclipse 7]: vabs1(X,3).
 
@@ -255,19 +215,6 @@ Delayed goals:
         #=(-(X{-1.0Inf .. 1.0Inf}), 3, _302{[0, 1]})
         -(_302{[0, 1]}) - _180{[0, 1]} #=< -1
 Yes (0.00s cpu)
-
-Ici, seul la première version du prédicat donne les deux résultats corrects attendus.
-*/
-
-% Question 1.12
-
-/* Tests
-Nous n'afficherons pas les tests car ils prennent de la place.
-Pour la première version du prédicat, cela donne bien toutes les solutions possibles,
-d'abord pour les X positifs puis pour les négatifs.
-Pour la deuxième version, le prédicat donne d'abord les solution {0,0}, puis les solutions
-négatives pour X, puis les positives.
-
 */
 
 % Question 1.13
@@ -299,7 +246,7 @@ Autre test
 [eclipse 46]: faitListe([](1,6,3),T,2,8).
 
 No (0.00s cpu)
-Logique, 1 n'est pas entre Min et Max !
+
 */
 
 % Question 1.14
@@ -326,9 +273,6 @@ No (0.00s cpu)
 % dim(L,[10]),L[1]#=1,L[2]#=2,suite(L).
 % dim(L,[10]),L[1]#=3,L[2]#=7,suite(L).
 /*
-Cette requête permet de visualiser les suites formées par le prédicat avec les 2 premiers
-éléments de cette suite compris entre 1 et 10. Effectivement, il semble y avoir périodicité entre le premier
-et le dixième élément (et donc une période de 9).
  dim(L,[10]),
         Elem1#::1..10,Elem2#::1..10,
         indomain(Elem1),indomain(Elem2),
@@ -336,17 +280,13 @@ et le dixième élément (et donc une période de 9).
         suite(L).
 */
 /*
-Requête vérifiant que la suite est périodique de période 9
-(vérifie qu'il n'existe aucune suite L ayant son premier et son dixième élément différents avec les deux premiers
-éléments de la suite compris entre 1 et 10)
+
  dim(L,[10]),
         Elem1#::1..10,Elem2#::1..10,
         indomain(Elem1),indomain(Elem2),
         L[1]#=Elem1,L[2]#=Elem2,
 		L[1]#\=L[10],
         suite(L).
-Prolog répond bien non à cette requête. On réitère alors avec les deux premiers éléments de la suite compris
-entre 1 et 100.
 dim(L,[10]),
         Elem1#::1..100,Elem2#::1..100,
         indomain(Elem1),indomain(Elem2),
@@ -354,12 +294,7 @@ dim(L,[10]),
 		L[1]#\=L[10],
         suite(L).
 No (0.94s cpu)
-La réponse est toujours non.
-Enfin, on essaie avec les deux premiers éléments de la suite compris entre 1 et 1000.
-Après plus d'une minute, Prolog répond toujours non.
+
 No (93.06s cpu)
 
-Pour conclure, dans le prédicat suite, on remarquera que l'on est dans de la propagation et non du backtracking
-puisque l'on construit la suite au fur et à mesure du parcourt de l'arbre à l'exécution.
-Il n'y a donc pas besoin de faire appel au prédicat labeling.
 */
