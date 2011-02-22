@@ -1,0 +1,32 @@
+digraph G {
+	graph [bgcolor=lightyellow2, splines=true];
+	edge [color=red, arrowsize=2];
+	node [color=cyan, style=filled, shape=polygon, sides=6, fontname="Verdana",fontcolor=black];
+	A4->SUITE {width=7}
+	SUITE->A5 {width=7}	
+	A1->A2->A3->A4
+	A3->A5->B1->B2->B3->SUCCEED
+	A4->A6->A7->A9->FAIL1
+	A6->A8->A10->FAIL2
+	{ rank=same; A4 SUITE A5}
+
+
+	A1 [label="Commande(NbResistance,NbCondensateur)"];
+	A2 [label="isBetwenn(NbResistance,NbMinR,NbMaxR)"];
+	A3 [label="isBetwenn(NbResistance,5000,10000)"];
+
+SUITE [label="..."];
+B1 [label="isBetween(NbCondensateur,9000,20000)"];
+B2 [label="NbCondensateur=9000"];
+B3 [label="9000>=9000"];
+A4 [label="NbResistance=5000\nisBetween(5000,5000,10000)\n5000>=5000"];
+A5 [label="NbResistance=9000\nisBetween(9000,5000,10000)"];
+A6 [label="isBetween(NbCondensateur,9000,20000)"];
+A7 [label="NbCondensateur=9000\nisBetween(9000,9000,20000)"];
+A8 [label="NbCondensateur=9001\nisBetween(9000,9000,20000)"];
+A9 [label="5000>=9000"];
+A10 [label="5000>=9001"];
+FAIL1[label="FAIL",color="red"];
+FAIL2[label="FAIL",color="red"];
+SUCCEED[label="SUCCEED",color="green"];
+}
