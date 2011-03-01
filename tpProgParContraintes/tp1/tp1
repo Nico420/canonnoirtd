@@ -220,12 +220,12 @@ Yes (0.00s cpu)
 % Question 1.13
 
 faitListe(VarListe,Taille,Min,Max) :-	dim(VarListe,[Taille]),
-										(for(I,1,Taille),param(VarListe,Min,Max) do
-											(Elem #:: Min..Max,
-											indomain(Elem),
-											VarListe[I] #= Elem
-											)
-										).
+				(for(I,1,Taille),param(VarListe,Min,Max) do
+				(Elem #:: Min..Max,
+				indomain(Elem),
+				VarListe[I] #= Elem
+				)
+			).
 										
 /* Test
 [eclipse 45]: faitListe(L,2,1,2).

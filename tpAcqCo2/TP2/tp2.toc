@@ -1,0 +1,4 @@
+\select@language {french}
+\contentsline {section}{\numberline {1}Prise en main Les trains de Michalsky}{2}
+\contentsline {section}{\numberline {2}Une affaire de famille}{7}
+\contentsline {section}{\numberline {3}Les figures du Poker}{11}

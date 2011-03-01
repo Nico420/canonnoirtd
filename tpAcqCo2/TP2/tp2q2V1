@@ -1,0 +1,112 @@
+Contre exemple : 
+fillede(tom,ann).
+fillede(bob,tom).
+fillede(bob,mary).
+fillede(bob,ann).
+fillede(tom,mary).
+exemple : 
+fillede(mary,ann).
+fillede(rosy,mary).
+fillede(eve,tom).
+fillede(lisa,tom).
+
+A L E P H
+Version 5
+Last modified: Sun Mar 11 03:25:37 UTC 2007
+
+Manual: http://www.comlab.ox.ac.uk/oucl/groups/machlearn/Aleph/index.html
+
+[consulting pos examples] [family.f]
+[consulting neg examples] [family.n]
+[select example] [1]
+[sat] [1]
+[fillede(mary,ann)]
+[repeated literals] [38/52]
+
+[bottom clause]
+fillede(A,B) :-
+   pere(C,D), pere(C,E), pere(C,F), mere(B,A), 
+   mere(B,C), mere(A,G), femme(B), femme(A), 
+   femme(G), femme(D), femme(E), homme(C), 
+   homme(F).
+[literals] [14]
+[saturation time] [0.002]
+[reduce]
+[best label so far] [[1,0,2,1]/0]
+fillede(A,B).
+[4/5]
+fillede(A,B) :-
+   homme(C).
+[4/5]
+fillede(A,B) :-
+   pere(C,D).
+[4/5]
+fillede(A,B) :-
+   pere(C,D).
+[4/5]
+fillede(A,B) :-
+   pere(C,D).
+[4/5]
+fillede(A,B) :-
+   homme(C).
+[4/5]
+fillede(A,B) :-
+   femme(C).
+[4/5]
+fillede(A,B) :-
+   femme(C).
+[4/5]
+fillede(A,B) :-
+   femme(C).
+[4/5]
+fillede(A,B) :-
+   mere(B,A).
+[2/1]
+fillede(A,B) :-
+   mere(B,C).
+[2/4]
+fillede(A,B) :-
+   mere(A,C).
+fillede(A,B) :-
+   femme(B).
+[2/4]
+fillede(A,B) :-
+   femme(A).
+[4/0]
+[-------------------------------------]
+[found clause]
+fillede(A,B) :-
+   femme(A).
+[pos cover = 4 neg cover = 0] [pos-neg] [4]
+[clause label] [[4,0,2,4]]
+[clauses constructed] [14]
+[-------------------------------------]
+[clauses constructed] [14]
+[search time] [0.001]
+[best clause]
+fillede(A,B) :-
+   femme(A).
+[pos cover = 4 neg cover = 0] [pos-neg] [4]
+[atoms left] [0]
+[positive examples left] [0]
+[estimated time to finish (secs)] [0.0]
+
+[theory]
+
+[Rule 1] [Pos cover = 4 Neg cover = 0]
+fillede(A,B) :-
+   femme(A).
+
+[Training set performance]
+         Actual
+       +        - 
+     + 4        0        4 
+Pred 
+     - 0        5        5 
+
+       4        5        9 
+
+Accuracy = 1.0
+[Training set summary] [[4,0,0,5]]
+[time taken] [0.003]
+[total clauses constructed] [14]

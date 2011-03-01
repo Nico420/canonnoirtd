@@ -1,0 +1,536 @@
+Nouveau contre exemple : 
+
+fillede(tom,ann).
+fillede(bob,tom).
+fillede(bob,mary).
+fillede(bob,ann).
+fillede(tom,mary).
+contre-Exemple manquant :
+fillede(ann,mary).
+
+
+
+A L E P H
+Version 5
+Last modified: Sun Mar 11 03:25:37 UTC 2007
+
+Manual: http://www.comlab.ox.ac.uk/oucl/groups/machlearn/Aleph/index.html
+
+[consulting pos examples] [family.f]
+[consulting neg examples] [family.n]
+[select example] [1]
+[sat] [1]
+[fillede(mary,ann)]
+[repeated literals] [38/52]
+
+[bottom clause]
+fillede(A,B) :-
+   pere(C,D), pere(C,E), pere(C,F), mere(B,A), 
+   mere(B,C), mere(A,G), femme(B), femme(A), 
+   femme(G), femme(D), femme(E), homme(C), 
+   homme(F).
+[literals] [14]
+[saturation time] [0.00199999999999999]
+[reduce]
+[best label so far] [[1,0,2,1]/0]
+fillede(A,B).
+[4/6]
+fillede(A,B) :-
+   homme(C).
+[4/6]
+fillede(A,B) :-
+   pere(C,D).
+[4/6]
+fillede(A,B) :-
+   pere(C,D).
+[4/6]
+fillede(A,B) :-
+   pere(C,D).
+[4/6]
+fillede(A,B) :-
+   homme(C).
+[4/6]
+fillede(A,B) :-
+   femme(C).
+[4/6]
+fillede(A,B) :-
+   femme(C).
+[4/6]
+fillede(A,B) :-
+   femme(C).
+[4/6]
+fillede(A,B) :-
+   mere(B,A).
+[2/1]
+fillede(A,B) :-
+   mere(B,C).
+[2/5]
+fillede(A,B) :-
+   mere(A,C).
+fillede(A,B) :-
+   femme(B).
+[2/5]
+fillede(A,B) :-
+   femme(A).
+[4/1]
+fillede(A,B) :-
+   mere(B,A), mere(B,C).
+[2/1]
+fillede(A,B) :-
+   mere(B,A), femme(B).
+[2/1]
+fillede(A,B) :-
+   mere(B,A), femme(A).
+[2/0]
+[-------------------------------------]
+[found clause]
+fillede(A,B) :-
+   mere(B,A), femme(A).
+[pos cover = 2 neg cover = 0] [pos-neg] [2]
+[clause label] [[2,0,3,2]]
+[clauses constructed] [17]
+[-------------------------------------]
+fillede(A,B) :-
+   homme(C), pere(C,D).
+[4/6]
+fillede(A,B) :-
+   homme(C), pere(C,D).
+[4/6]
+fillede(A,B) :-
+   homme(C), pere(C,D).
+[4/6]
+fillede(A,B) :-
+   homme(C), homme(D).
+[4/6]
+fillede(A,B) :-
+   homme(C), femme(D).
+[4/6]
+fillede(A,B) :-
+   homme(C), femme(D).
+[4/6]
+fillede(A,B) :-
+   homme(C), femme(D).
+[4/6]
+fillede(A,B) :-
+   homme(C), mere(B,A).
+fillede(A,B) :-
+   homme(C), mere(B,C).
+fillede(A,B) :-
+   homme(C), femme(B).
+fillede(A,B) :-
+   homme(C), femme(A).
+[4/1]
+fillede(A,B) :-
+   pere(C,D), pere(C,E).
+[4/6]
+fillede(A,B) :-
+   pere(C,D), pere(C,E).
+[4/6]
+fillede(A,B) :-
+   pere(C,D), homme(D).
+[4/6]
+fillede(A,B) :-
+   pere(C,D), femme(E).
+[4/6]
+fillede(A,B) :-
+   pere(C,D), femme(E).
+[4/6]
+fillede(A,B) :-
+   pere(C,D), femme(E).
+[4/6]
+fillede(A,B) :-
+   pere(C,D), mere(B,A).
+fillede(A,B) :-
+   pere(C,D), mere(B,C).
+fillede(A,B) :-
+   pere(C,D), femme(B).
+fillede(A,B) :-
+   pere(C,D), femme(A).
+[4/1]
+fillede(A,B) :-
+   pere(C,D), pere(C,E).
+[4/6]
+fillede(A,B) :-
+   pere(C,D), homme(E).
+[4/6]
+fillede(A,B) :-
+   pere(C,D), femme(E).
+[4/6]
+fillede(A,B) :-
+   pere(C,D), femme(D).
+[4/6]
+fillede(A,B) :-
+   pere(C,D), femme(E).
+[4/6]
+fillede(A,B) :-
+   pere(C,D), mere(B,A).
+fillede(A,B) :-
+   pere(C,D), mere(B,C).
+fillede(A,B) :-
+   pere(C,D), femme(B).
+fillede(A,B) :-
+   pere(C,D), femme(A).
+[4/1]
+fillede(A,B) :-
+   pere(C,D), homme(E).
+[4/6]
+fillede(A,B) :-
+   pere(C,D), femme(D).
+[4/6]
+fillede(A,B) :-
+   pere(C,D), femme(E).
+[4/6]
+fillede(A,B) :-
+   pere(C,D), femme(E).
+[4/6]
+fillede(A,B) :-
+   pere(C,D), mere(B,A).
+fillede(A,B) :-
+   pere(C,D), mere(B,C).
+fillede(A,B) :-
+   pere(C,D), femme(B).
+fillede(A,B) :-
+   pere(C,D), femme(A).
+[4/1]
+fillede(A,B) :-
+   homme(C), femme(D).
+[4/6]
+fillede(A,B) :-
+   homme(C), femme(D).
+[4/6]
+fillede(A,B) :-
+   homme(C), femme(D).
+[4/6]
+fillede(A,B) :-
+   homme(C), mere(B,A).
+fillede(A,B) :-
+   homme(C), mere(B,D).
+fillede(A,B) :-
+   homme(C), femme(B).
+fillede(A,B) :-
+   homme(C), femme(A).
+[4/1]
+fillede(A,B) :-
+   femme(C), femme(D).
+[4/6]
+fillede(A,B) :-
+   femme(C), femme(D).
+[4/6]
+fillede(A,B) :-
+   femme(C), mere(B,A).
+fillede(A,B) :-
+   femme(C), mere(B,D).
+fillede(A,B) :-
+   femme(C), femme(B).
+fillede(A,B) :-
+   femme(C), femme(A).
+[4/1]
+fillede(A,B) :-
+   femme(C), femme(D).
+[4/6]
+fillede(A,B) :-
+   femme(C), mere(B,A).
+fillede(A,B) :-
+   femme(C), mere(B,D).
+fillede(A,B) :-
+   femme(C), femme(B).
+fillede(A,B) :-
+   femme(C), femme(A).
+[4/1]
+fillede(A,B) :-
+   femme(C), mere(B,A).
+fillede(A,B) :-
+   femme(C), mere(B,D).
+fillede(A,B) :-
+   femme(C), femme(B).
+fillede(A,B) :-
+   femme(C), femme(A).
+[4/1]
+fillede(A,B) :-
+   homme(C), pere(C,D), pere(C,E).
+fillede(A,B) :-
+   homme(C), pere(C,D), pere(C,E).
+fillede(A,B) :-
+   homme(C), pere(C,D), homme(D).
+fillede(A,B) :-
+   homme(C), pere(C,D), femme(E).
+fillede(A,B) :-
+   homme(C), pere(C,D), femme(E).
+fillede(A,B) :-
+   homme(C), pere(C,D), femme(E).
+fillede(A,B) :-
+   homme(C), pere(C,D), femme(A).
+fillede(A,B) :-
+   homme(C), pere(C,D), pere(C,E).
+fillede(A,B) :-
+   homme(C), pere(C,D), homme(E).
+fillede(A,B) :-
+   homme(C), pere(C,D), femme(E).
+fillede(A,B) :-
+   homme(C), pere(C,D), femme(D).
+fillede(A,B) :-
+   homme(C), pere(C,D), femme(E).
+fillede(A,B) :-
+   homme(C), pere(C,D), femme(A).
+fillede(A,B) :-
+   homme(C), pere(C,D), homme(E).
+fillede(A,B) :-
+   homme(C), pere(C,D), femme(D).
+fillede(A,B) :-
+   homme(C), pere(C,D), femme(E).
+fillede(A,B) :-
+   homme(C), pere(C,D), femme(E).
+fillede(A,B) :-
+   homme(C), pere(C,D), femme(A).
+fillede(A,B) :-
+   homme(C), homme(D), femme(E).
+fillede(A,B) :-
+   homme(C), homme(D), femme(E).
+fillede(A,B) :-
+   homme(C), homme(D), femme(E).
+fillede(A,B) :-
+   homme(C), homme(D), femme(A).
+fillede(A,B) :-
+   homme(C), femme(D), femme(E).
+fillede(A,B) :-
+   homme(C), femme(D), femme(E).
+fillede(A,B) :-
+   homme(C), femme(D), femme(A).
+fillede(A,B) :-
+   homme(C), femme(D), femme(E).
+fillede(A,B) :-
+   homme(C), femme(D), femme(A).
+fillede(A,B) :-
+   homme(C), femme(D), femme(A).
+fillede(A,B) :-
+   pere(C,D), pere(C,E), pere(C,F).
+fillede(A,B) :-
+   pere(C,D), pere(C,E), homme(D).
+fillede(A,B) :-
+   pere(C,D), pere(C,E), femme(F).
+fillede(A,B) :-
+   pere(C,D), pere(C,E), femme(E).
+fillede(A,B) :-
+   pere(C,D), pere(C,E), femme(F).
+fillede(A,B) :-
+   pere(C,D), pere(C,E), femme(A).
+fillede(A,B) :-
+   pere(C,D), pere(C,E), homme(D).
+fillede(A,B) :-
+   pere(C,D), pere(C,E), femme(E).
+fillede(A,B) :-
+   pere(C,D), pere(C,E), femme(F).
+fillede(A,B) :-
+   pere(C,D), pere(C,E), femme(F).
+fillede(A,B) :-
+   pere(C,D), pere(C,E), femme(A).
+fillede(A,B) :-
+   pere(C,D), homme(D), femme(E).
+fillede(A,B) :-
+   pere(C,D), homme(D), femme(E).
+fillede(A,B) :-
+   pere(C,D), homme(D), femme(E).
+fillede(A,B) :-
+   pere(C,D), homme(D), femme(A).
+fillede(A,B) :-
+   pere(C,D), femme(E), femme(F).
+fillede(A,B) :-
+   pere(C,D), femme(E), femme(F).
+fillede(A,B) :-
+   pere(C,D), femme(E), femme(A).
+fillede(A,B) :-
+   pere(C,D), femme(E), femme(F).
+fillede(A,B) :-
+   pere(C,D), femme(E), femme(A).
+fillede(A,B) :-
+   pere(C,D), femme(E), femme(A).
+fillede(A,B) :-
+   pere(C,D), pere(C,E), homme(F).
+fillede(A,B) :-
+   pere(C,D), pere(C,E), femme(E).
+fillede(A,B) :-
+   pere(C,D), pere(C,E), femme(D).
+fillede(A,B) :-
+   pere(C,D), pere(C,E), femme(F).
+fillede(A,B) :-
+   pere(C,D), pere(C,E), femme(A).
+fillede(A,B) :-
+   pere(C,D), homme(E), femme(F).
+fillede(A,B) :-
+   pere(C,D), homme(E), femme(D).
+fillede(A,B) :-
+   pere(C,D), homme(E), femme(F).
+fillede(A,B) :-
+   pere(C,D), homme(E), femme(A).
+fillede(A,B) :-
+   pere(C,D), femme(E), femme(D).
+fillede(A,B) :-
+   pere(C,D), femme(E), femme(F).
+fillede(A,B) :-
+   pere(C,D), femme(E), femme(A).
+fillede(A,B) :-
+   pere(C,D), femme(D), femme(E).
+fillede(A,B) :-
+   pere(C,D), femme(D), femme(A).
+fillede(A,B) :-
+   pere(C,D), femme(E), femme(A).
+fillede(A,B) :-
+   pere(C,D), homme(E), femme(D).
+fillede(A,B) :-
+   pere(C,D), homme(E), femme(F).
+fillede(A,B) :-
+   pere(C,D), homme(E), femme(F).
+fillede(A,B) :-
+   pere(C,D), homme(E), femme(A).
+fillede(A,B) :-
+   pere(C,D), femme(D), femme(E).
+fillede(A,B) :-
+   pere(C,D), femme(D), femme(E).
+fillede(A,B) :-
+   pere(C,D), femme(D), femme(A).
+fillede(A,B) :-
+   pere(C,D), femme(E), femme(F).
+fillede(A,B) :-
+   pere(C,D), femme(E), femme(A).
+fillede(A,B) :-
+   pere(C,D), femme(E), femme(A).
+fillede(A,B) :-
+   homme(C), femme(D), femme(E).
+fillede(A,B) :-
+   homme(C), femme(D), femme(E).
+fillede(A,B) :-
+   homme(C), femme(D), femme(A).
+fillede(A,B) :-
+   homme(C), femme(D), femme(E).
+fillede(A,B) :-
+   homme(C), femme(D), femme(A).
+fillede(A,B) :-
+   homme(C), femme(D), femme(A).
+fillede(A,B) :-
+   femme(C), femme(D), femme(E).
+fillede(A,B) :-
+   femme(C), femme(D), femme(A).
+fillede(A,B) :-
+   femme(C), femme(D), femme(A).
+fillede(A,B) :-
+   femme(C), femme(D), femme(A).
+[clauses constructed] [161]
+[search time] [0.007]
+[best clause]
+fillede(A,B) :-
+   mere(B,A), femme(A).
+[pos cover = 2 neg cover = 0] [pos-neg] [2]
+[atoms left] [2]
+[positive examples left] [2]
+[estimated time to finish (secs)] [0.007]
+[select example] [3]
+[sat] [3]
+[fillede(eve,tom)]
+[repeated literals] [38/52]
+
+[bottom clause]
+fillede(A,B) :-
+   pere(B,A), pere(B,C), pere(B,D), mere(E,B), 
+   mere(E,F), mere(F,G), femme(A), femme(E), 
+   femme(F), femme(G), femme(C), homme(B), 
+   homme(D).
+[literals] [14]
+[saturation time] [0.003]
+[reduce]
+[best label so far] [[1,0,2,1]/0]
+fillede(A,B).
+[2/6]
+fillede(A,B) :-
+   homme(C).
+[2/6]
+fillede(A,B) :-
+   femme(C).
+[2/6]
+fillede(A,B) :-
+   femme(C).
+[2/6]
+fillede(A,B) :-
+   mere(C,D).
+[2/6]
+fillede(A,B) :-
+   femme(C).
+[2/6]
+fillede(A,B) :-
+   mere(C,D).
+[2/6]
+fillede(A,B) :-
+   femme(C).
+[2/6]
+fillede(A,B) :-
+   pere(B,A).
+[2/1]
+fillede(A,B) :-
+   pere(B,C).
+[2/1]
+fillede(A,B) :-
+   pere(B,C).
+[2/1]
+fillede(A,B) :-
+   mere(C,B).
+[2/4]
+fillede(A,B) :-
+   femme(A).
+[2/1]
+fillede(A,B) :-
+   homme(B).
+[2/1]
+fillede(A,B) :-
+   pere(B,A), pere(B,C).
+[2/1]
+fillede(A,B) :-
+   pere(B,A), pere(B,C).
+[2/1]
+fillede(A,B) :-
+   pere(B,A), mere(C,B).
+[2/1]
+fillede(A,B) :-
+   pere(B,A), femme(A).
+[2/0]
+[-------------------------------------]
+[found clause]
+fillede(A,B) :-
+   pere(B,A), femme(A).
+[pos cover = 2 neg cover = 0] [pos-neg] [2]
+[clause label] [[2,0,3,2]]
+[clauses constructed] [18]
+[-------------------------------------]
+fillede(A,B) :-
+   pere(B,A), homme(B).
+[clauses constructed] [19]
+[search time] [0.002]
+[best clause]
+fillede(A,B) :-
+   pere(B,A), femme(A).
+[pos cover = 2 neg cover = 0] [pos-neg] [2]
+[atoms left] [0]
+[positive examples left] [0]
+[estimated time to finish (secs)] [0.0]
+
+[theory]
+
+[Rule 1] [Pos cover = 2 Neg cover = 0]
+fillede(A,B) :-
+   mere(B,A), femme(A).
+
+[Rule 2] [Pos cover = 2 Neg cover = 0]
+fillede(A,B) :-
+   pere(B,A), femme(A).
+
+[Training set performance]
+          Actual
+       +        - 
+     + 4        0        4 
+Pred 
+     - 0        6        6 
+
+       4        6        10 
+
+Accuracy = 1.0
+[Training set summary] [[4,0,0,6]]
+[time taken] [0.015]
+[total clauses constructed] [180]
