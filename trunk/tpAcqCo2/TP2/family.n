@@ -1,0 +1,6 @@
+fillede(tom,ann).
+fillede(bob,tom).
+fillede(bob,mary).
+fillede(bob,ann).
+fillede(tom,mary).
+fillede(ann,mary).

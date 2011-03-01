@@ -1,0 +1,129 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+% This is a simple template for a LaTeX document using the "article" class.
+% See "book", "report", "letter" for other types of document.
+
+\documentclass[11pt]{article} % use larger type; default would be 10pt
+
+\usepackage[latin1]{inputenc} % set input encoding (not needed with XeLaTeX)
+\usepackage[T1]{fontenc}
+\usepackage{times}
+
+\usepackage{graphicx} % support the \includegraphics command and options
+
+\usepackage[francais]{babel}
+
+\usepackage{listings}
+
+\usepackage{url}
+
+\usepackage{rotating}
+
+\usepackage[a4paper]{geometry}
+
+
+\date{\today}
+
+\title{Rapport Travaux Pratiques : \\Acquisition de connaissance 2\\ - TP 2: \\Programmation Logique Inductive}
+\author{Nicolas Desfeux\\Aurélien Texier}
+\begin{document}
+\lstset{language=Prolog,breaklines=true,numbers=left,basicstyle=\footnotesize ,numberstyle=\footnotesize}
+\maketitle
+\tableofcontents
+\newpage
+\section{Prise en main  Les trains de Michalsky}
+L'objectif de cette section est la prise en main de l'outil Aleph. Pour cela, nous allons essayer de reproduire l'exemple du cours. Les fichiers qui nous sont fournis contiennent tout le paramètrage et les exemples nécessaires pour réaliser cette exemple. Nous allons vous donner ici le résultat de l'éxécution : 
+\lstinputlisting[caption="Exemple - Trains de Michalsky"]{exemple-train/tp2}
+Cet exemple nous permet d'identifier facilement notre espace de recherche, qui partira de la bottom clause (clause la moins générale, créé par Aleph) : 
+\begin{lstlisting}
+[ bottom clause ]
+eastbound(A) :-
+has_car(A,B),has_car(A,C),has_car(A,D),has_car(A,E),
+short(E),short(C),closed(C),long(D),
+long(B),open_car(E),open_car(D),open_car(B),
+shape(E,rectangle),shape(D,rectangle),shape(C,rectangle),shape(B,rectangle),
+wheels(E,2),wheels(D,3),wheels(C,2),wheels(B,2),
+load(E,circle,1),load(D,hexagon,1),load(C,triangle,1),load(B,rectangle,3).
+\end{lstlisting}
+et qui se poursuivra tant que l'outil n'aura pas trouvé la règle la plus efficace, et qu'il n'aura pas atteint la clause la plus spécifique. Il parcourt l'espace de recherche en faisant donc un bottom-down.
+La clause la plus générale est : 
+\begin{lstlisting}
+eastbound(A).
+\end{lstlisting}
+C'est donc de cette clause qu'il est parti pôur inférer la règle recherchée. Il infère jusqu'à trouver une règle qui caractérise correctement tout les exemples : 
+\begin{lstlisting}
+[-------------------------------------]
+[found clause]
+eastbound(A) :-
+   has_car(A,B), short(B), closed(B).
+[pos cover = 5 neg cover = 0] [pos-neg] [5]
+[clause label] [[5,0,4,5]]
+[clauses constructed] [70]
+[-------------------------------------]
+\end{lstlisting}
+
+\section{Une affaire de famille}
+Pour cette section, c'est à nous de créer les fichiers nécéssaire à l'inférence de la règle. On cherche à obtenir le prédicat \textit{fillede}/2, tel que fille(X,Y) soit vérifié si X est fille de Y.
+Pour cela, nous avons du d'abord écrire le fichier lu par Aleph qui permet de définir les prédicats utilisables, les relations déjà connues,... Cela définit le background knowledge de notre étude.
+\lstinputlisting[caption="family.b"]{family.b}
+
+Une fois cela fait, il nous a fallut définir des exemples positifs(X est fille de Y), et négatifs (X n'est pas fille de Y).
+\lstinputlisting[caption="Exemples positifs"]{family.f}
+
+\lstinputlisting[caption="Exemples négatifs"]{family2.n}
+L'éxécution a permis de trouver une règle : 
+
+\lstinputlisting[caption="\textit{fillede} - version 1"]{tp2q2V1}
+
+\begin{lstlisting}
+[Rule 1] [Pos cover = 4 Neg cover = 0]
+fillede(A,B) :-
+   femme(A).
+\end{lstlisting}
+Cette règle n'est pas fausse si l'on considère uniquement les exemples qui nous avons fournit. Malgré tout, on voit bien que le sens de la règle ne correspond pas au sens que l'on veut donner au prédicat. Nous avons donc utilisé une nouvelle liste de contre-exemples : 
+\lstinputlisting[caption="Exemples négatifs"]{family.n}
+Et à l'éxécution nous avons obtenu après inférence deux nouvelles régles qui correspondent à ceux que l'on cherchait : 
+\begin{lstlisting}
+[Rule 1] [Pos cover = 2 Neg cover = 0]
+fillede(A,B) :-
+   mere(B,A), femme(A).
+
+[Rule 2] [Pos cover = 2 Neg cover = 0]
+fillede(A,B) :-
+   pere(B,A), femme(A).
+\end{lstlisting}
+
+\section{Les figures du Poker}
+
+L'objectif est de faire apprendre à une machine les différentes figures du Poker.
+Des fichiers squelettes nous été fournis.
+En les remplissant, nous avons ainsi pu obtenir : 
+\lstinputlisting[caption="entete.pl"]{poker/entete.pl}
+\lstinputlisting[caption="preparpokerdata.prl"]{poker/prepar-poker-data.prl}
+Voici le r\'esultat pour l'inf\'erence de la r\`egle suite.
+\begin{lstlisting}
+[theory]
+
+[Rule 207] [Pos cover = 44 Neg cover = 0]
+suite(A) :-
+   cartes(A,set(B,C,D,E,F)), a_suivre(E,D), a_suivre(D,B), a_suivre(C,F), 
+   a_suivre(B,C).
+
+[Training set performance]
+             Actual
+         +            -   
+     +  44           0           44  
+Pred 
+     - 12473        10974        23447 
+
+       12517        10974        23491 
+
+Accuracy = 0.469030692605679
+[Training set summary] [[44,0,12473,10974]]
+[time taken] [11.83]
+[total clauses constructed] [190]
+yes
+\end{lstlisting}
+En commentant et d\'ecommentant tour \`e tour les diff\'erentes parties du code, on peut obtenir toutes les r\`egles du poker !
+\end{document}

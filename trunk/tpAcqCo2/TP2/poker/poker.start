@@ -1,0 +1,4 @@
+:- ['/home/nicolas/Bureau/tpacqdeco2/aleph.pl'].
+:- read_all(poker).
+:- set(recordfile,'poker.res').
+:- set(verbose,0).

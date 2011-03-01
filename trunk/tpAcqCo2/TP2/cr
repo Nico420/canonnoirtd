@@ -1,0 +1,17 @@
+determination : 
+1er argument : tete de la regle que l'on essaie d'inférer
+2eme : prédicat que l'on a le doir d'utiliser
+
+modeh : c'est pour la tete. la variable est toujours fournie (+).
+
+modeb : + et - : Définir tout les prédicats que l'on a le droit d'utiliser dans les clauses du corps. variables fourni ou non(+ ou -). + variables d'entrées, - variables fournies.
+
+premier argument de mode : combien de fois le prédicat peut faire de succès (* pour on sait pas)
+
+En résultat, on a bien les 5 trains qui vont vers l'est, et les autres qui vont vers l'ouest, ce qui est correct.
+
+Question 2
+
+Bien avoir en tête que le solveur cherche la solution la plus courte, donc c'est pour cela qu'il faut être vigilant sur les exemples négatifs.
+
+
