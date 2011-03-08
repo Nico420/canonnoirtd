@@ -10,12 +10,12 @@
 :- local domain(animal(chien,serpents,renard,cheval,zebre)).
 
 domaines_maison(m(Pays,Couleur,Boisson,Voiture,Animal,Numero)) :- 
-												Pays &:: pays,
-												Couleur &:: couleur,
-												Boisson &:: boisson,
-												Voiture &:: voiture,
-												Animal &:: animal,
-												Numero #:: 1..5.
+				Pays &:: pays,
+				Couleur &:: couleur,
+				Boisson &:: boisson,
+				Voiture &:: voiture,
+				Animal &:: animal,
+				Numero #:: 1..5.
 																	
 rue(Rue) :- length(Rue,5),
 			(foreach(Elem,Rue), for(I, 1, 5), fromto([],InP,OutP,FinP), fromto([],InC,OutC,FinC), fromto([],InB,OutB,FinB), fromto([],InV,OutV,FinV), fromto([],InA,OutA,FinA)
@@ -87,30 +87,31 @@ L = [anglais, rouge, cafe, bmw, chien, espagnol, verte, the, toyota, serpents, u
 
 contraintes(R) :- 	(foreach(m(P,C,B,V,A,I),R)
 						do
-							(P &= anglais) #= (C &= rouge),
-							(P &= espagnol) #= (A &= chien),
-							(B &= cafe) #= (C &= verte),
-							(P &= ukrainien) #= (B &= the),
-							(A &= serpents) #= (V &= bmw),
-							(C &= jaune) #= (V &= toyota),
-							(B &= lait) #= (I #= 3),
-							(P &= norvegien) #= (I #= 1),
-							(B &= jusdOrange) #= (V &= honda),
-							(P &= japonais) #= (V &= datsun)
+		(P &= anglais) #= (C &= rouge),
+		(P &= espagnol) #= (A &= chien),
+		(B &= cafe) #= (C &= verte),
+		(P &= ukrainien) #= (B &= the),
+		(A &= serpents) #= (V &= bmw),
+		(C &= jaune) #= (V &= toyota),
+		(B &= lait) #= (I #= 3),
+		(P &= norvegien) #= (I #= 1),
+		(B &= jusdOrange) #= (V &= honda),
+		(P &= japonais) #= (V &= datsun)
 					).
 					
-contraintes2(R) :-	(foreach(m(_P1,C1,_B1,_V1,_A1,I1),R),param(R)
+contraintes2(R) :-	(foreach(m(P1,C1,_B1,V1,_A1,I1),R),param(R)
 						do
-							(foreach(m(_P2,C2,_B2,_V2,_A2,I2),R),param(I1,C1)
+							(foreach(m(_P2,C2,_B2,_V2,A2,I2),R),param(I1,C1,V1,P1)
 								do
-									(I1 #= I2-1) #= (C1 &= blanche),
-									(C1 &= blanche) #= (C2 &= verte),
-									(I1 #= I2-1) #= (C2 &= verte)
+		((C1 &= verte) and (C2 &= blanche)) => (I1 #=I2+1),
+		((V1 &= ford) and (A2 &= renard)) => ((I2 #=I1+1) or (I2 #=I1-1)),
+		((V1 &= toyota) and (A2 &= cheval)) => ((I2 #=I1+1) or (I2 #=I1-1)),
+		((P1 &= norvegien) and (C2 &= bleue)) => ((I2 #=I1+1) or (I2 #=I1-1))
 							)
 					).
 						
 resoudre(R) :- rue(R),contraintes(R),getVarList(R,L),labeling_symbolic(L),ecrit_maisons(R).
 
-resoudre2(R) :- rue(R),getVarList(R,L),contraintes2(R),labeling_symbolic(L),ecrit_maisons(R).
+resoudre2(R) :- rue(R),getVarList(R,L),contraintes(R),contraintes2(R),labeling_symbolic(L),ecrit_maisons(R).
 
 
