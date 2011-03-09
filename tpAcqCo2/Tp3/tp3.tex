@@ -1,0 +1,318 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+% This is a simple template for a LaTeX document using the "article" class.
+% See "book", "report", "letter" for other types of document.
+
+\documentclass[11pt]{article} % use larger type; default would be 10pt
+
+\usepackage[latin1]{inputenc} % set input encoding (not needed with XeLaTeX)
+\usepackage[T1]{fontenc}
+\usepackage{times}
+
+\usepackage{graphicx} % support the \includegraphics command and options
+
+\usepackage[francais]{babel}
+
+\usepackage{listings}
+
+\usepackage{url}
+
+\usepackage{rotating}
+
+\usepackage[a4paper]{geometry}
+
+
+\date{\today}
+
+\title{Rapport Travaux Pratiques : \\Acquisition de connaissance 2\\ - TP 3: \\Génération de règles d'association}
+\author{Nicolas Desfeux\\Aurélien Texier}
+\begin{document}
+\lstset{language=Prolog,breaklines=true,numbers=left,basicstyle=\footnotesize ,numberstyle=\footnotesize}
+\maketitle
+\tableofcontents
+\newpage
+\section{Première génération de règles d'associations}
+\paragraph{Question 1.1}
+Dans cette partie, on choisit d'étudier un ensemble de données mettant en relation la météo et le fait de jouer ou non au golf. Pour générer les règles d'association, nous allons utiliser l'algorithme \textit{APriori}.\\
+Voici le résultat fourni par Weka : 
+\begin{lstlisting}
+=== Run information ===
+
+Scheme:       weka.associations.Apriori -N 10 -T 0 -C 0.9 -D 0.05 -U 1.0 -M 0.1 -S -1.0 -c -1
+Relation:     weather.symbolic
+Instances:    14
+Attributes:   5
+              outlook
+              temperature
+              humidity
+              windy
+              play
+=== Associator model (full training set) ===
+
+
+Apriori
+=======
+
+Minimum support: 0.15 (2 instances)
+Minimum metric <confidence>: 0.9
+Number of cycles performed: 17
+
+Generated sets of large itemsets:
+
+Size of set of large itemsets L(1): 12
+
+Size of set of large itemsets L(2): 47
+
+Size of set of large itemsets L(3): 39
+
+Size of set of large itemsets L(4): 6
+
+Best rules found:
+
+ 1. outlook=overcast 4 ==> play=yes 4    conf:(1)
+ 2. temperature=cool 4 ==> humidity=normal 4    conf:(1)
+ 3. humidity=normal windy=FALSE 4 ==> play=yes 4    conf:(1)
+ 4. outlook=sunny play=no 3 ==> humidity=high 3    conf:(1)
+ 5. outlook=sunny humidity=high 3 ==> play=no 3    conf:(1)
+ 6. outlook=rainy play=yes 3 ==> windy=FALSE 3    conf:(1)
+ 7. outlook=rainy windy=FALSE 3 ==> play=yes 3    conf:(1)
+ 8. temperature=cool play=yes 3 ==> humidity=normal 3    conf:(1)
+ 9. outlook=sunny temperature=hot 2 ==> humidity=high 2    conf:(1)
+10. temperature=hot play=no 2 ==> outlook=sunny 2    conf:(1)
+\end{lstlisting}
+On voit donc que Weka trouve plusieurs règles d'associations. Les plus significatives (qui sont en accords avec le plus d'exemples) indiquent que lorsque le temps est couvert, la température moyenne, l'humidité normale et le vent nul, le joueur va probablement jouer.
+
+\paragraph{Question 1.2}
+Sur le même exemple, on va utiliser différentes mesures pour produire les règles.
+Voici les règles obtenues : 
+\begin{lstlisting}[caption="Règles produites avec le lift"]
+Best rules found:
+
+ 1. temperature=cool 4 ==> humidity=normal 4    conf:(1) < lift:(2)> lev:(0.14) [2] conv:(2)
+ 2. humidity=normal 7 ==> temperature=cool 4    conf:(0.57) < lift:(2)> lev:(0.14) [2] conv:(1.25)
+ 3. humidity=high 7 ==> play=no 4    conf:(0.57) < lift:(1.6)> lev:(0.11) [1] conv:(1.13)
+ 4. play=no 5 ==> humidity=high 4    conf:(0.8) < lift:(1.6)> lev:(0.11) [1] conv:(1.25)
+ 5. outlook=overcast 4 ==> play=yes 4    conf:(1) < lift:(1.56)> lev:(0.1) [1] conv:(1.43)
+ 6. play=yes 9 ==> outlook=overcast 4    conf:(0.44) < lift:(1.56)> lev:(0.1) [1] conv:(1.07)
+ 7. humidity=normal windy=FALSE 4 ==> play=yes 4    conf:(1) < lift:(1.56)> lev:(0.1) [1] conv:(1.43)
+ 8. play=yes 9 ==> humidity=normal windy=FALSE 4    conf:(0.44) < lift:(1.56)> lev:(0.1) [1] conv:(1.07)
+ 9. humidity=normal 7 ==> play=yes 6    conf:(0.86) < lift:(1.33)> lev:(0.11) [1] conv:(1.25)
+10. play=yes 9 ==> humidity=normal 6    conf:(0.67) < lift:(1.33)> lev:(0.11) [1] conv:(1.13)
+\end{lstlisting}
+\begin{lstlisting}[caption="Règles produites avec le leverage"]
+Best rules found:
+
+ 1. temperature=cool 4 ==> humidity=normal 4    conf:(1) lift:(2) < lev:(0.14) [2]> conv:(2)
+ 2. humidity=normal 7 ==> temperature=cool 4    conf:(0.57) lift:(2) < lev:(0.14) [2]> conv:(1.25)
+ 3. humidity=normal 7 ==> play=yes 6    conf:(0.86) lift:(1.33) < lev:(0.11) [1]> conv:(1.25)
+ 4. play=yes 9 ==> humidity=normal 6    conf:(0.67) lift:(1.33) < lev:(0.11) [1]> conv:(1.13)
+ 5. humidity=high 7 ==> play=no 4    conf:(0.57) lift:(1.6) < lev:(0.11) [1]> conv:(1.13)
+ 6. play=no 5 ==> humidity=high 4    conf:(0.8) lift:(1.6) < lev:(0.11) [1]> conv:(1.25)
+ 7. outlook=overcast 4 ==> play=yes 4    conf:(1) lift:(1.56) < lev:(0.1) [1]> conv:(1.43)
+ 8. play=yes 9 ==> outlook=overcast 4    conf:(0.44) lift:(1.56) < lev:(0.1) [1]> conv:(1.07)
+ 9. humidity=normal windy=FALSE 4 ==> play=yes 4    conf:(1) lift:(1.56) < lev:(0.1) [1]> conv:(1.43)
+10. play=yes 9 ==> humidity=normal windy=FALSE 4    conf:(0.44) lift:(1.56) < lev:(0.1) [1]> conv:(1.07)
+\end{lstlisting}
+\begin{lstlisting}[caption="Règles produites avec conviction"]
+Best rules found:
+
+ 1. temperature=cool 4 ==> humidity=normal 4    conf:(1) lift:(2) lev:(0.14) [2] < conv:(2)>
+ 2. outlook=sunny humidity=high 3 ==> play=no 3    conf:(1) lift:(2.8) lev:(0.14) [1] < conv:(1.93)>
+ 3. outlook=sunny play=no 3 ==> humidity=high 3    conf:(1) lift:(2) lev:(0.11) [1] < conv:(1.5)>
+ 4. temperature=cool play=yes 3 ==> humidity=normal 3    conf:(1) lift:(2) lev:(0.11) [1] < conv:(1.5)>
+ 5. outlook=overcast 4 ==> play=yes 4    conf:(1) lift:(1.56) lev:(0.1) [1] < conv:(1.43)>
+ 6. humidity=normal windy=FALSE 4 ==> play=yes 4    conf:(1) lift:(1.56) lev:(0.1) [1] < conv:(1.43)>
+ 7. play=no 5 ==> outlook=sunny humidity=high 3    conf:(0.6) lift:(2.8) lev:(0.14) [1] < conv:(1.31)>
+ 8. humidity=high play=no 4 ==> outlook=sunny 3    conf:(0.75) lift:(2.1) lev:(0.11) [1] < conv:(1.29)>
+ 9. outlook=rainy play=yes 3 ==> windy=FALSE 3    conf:(1) lift:(1.75) lev:(0.09) [1] < conv:(1.29)>
+10. humidity=normal 7 ==> play=yes 6    conf:(0.86) lift:(1.33) lev:(0.11) [1] < conv:(1.25)>
+\end{lstlisting}
+
+Comparer les règle produites !
+
+\paragraph{Question 1.3}
+A faire
+
+\paragraph{Question 1.4}
+A revoir
+
+\section{\'Etude de la population américaine}
+\paragraph{Question 2.1}
+La recherche des attributs pertinents par Weka donne le résultat suivant : 
+\begin{lstlisting}
+=== Run information ===
+
+Evaluator:    weka.attributeSelection.CfsSubsetEval 
+Search:       weka.attributeSelection.BestFirst -D 1 -N 5
+Relation:     adult1
+Instances:    250
+Attributes:   15
+              age
+               workclass
+               fnlwgt
+               education
+               education-num
+               marital-status
+               occupation
+               relationship
+               race
+               sex
+               capital-gain
+               capital-loss
+               hours-per-week
+               native-country
+               gain
+Evaluation mode:    evaluate on all training data
+
+
+
+=== Attribute Selection on all input data ===
+
+Search Method:
+	Best first.
+	Start set: no attributes
+	Search direction: forward
+	Stale search after 5 node expansions
+	Total number of subsets evaluated: 96
+	Merit of best subset found:    0.236
+
+Attribute Subset Evaluator (supervised, Class (nominal): 15  gain):
+	CFS Subset Evaluator
+	Including locally predictive attributes
+
+Selected attributes: 1,5,8,11 : 4
+                     age
+                      education-num
+                      relationship
+                      capital-gain
+
+
+\end{lstlisting}
+On choisit de garder les 4 attributs choisis par Weka, auquels on ajoute occupation, race, sex car ils nous semblent intéressants pour étudier leur influence sur les données.
+On garde également le gain puisque c'est celui que l'on veut expliquer.
+\paragraph{Question 2.4}
+On applique APriori avec différents paramètre, et on obtient les règles suivantes : 
+
+\begin{lstlisting}[caption="Règles produites avec conviction"]
+Best rules found:
+
+ 1.  relationship=_Husband 103 ==>  sex=_Male 103    conf:(1) lift:(1.45) lev:(0.13) [32] < conv:(32.14)>
+ 2.  relationship=_Husband  capital-gain='(-inf-704.5]' 95 ==>  sex=_Male 95    conf:(1) lift:(1.45) lev:(0.12) [29] < conv:(29.64)>
+ 3.  relationship=_Husband 103 ==>  sex=_Male  capital-gain='(-inf-704.5]' 95    conf:(0.92) lift:(1.43) lev:(0.11) [28] < conv:(4.07)>
+ 4.  education-num='(-inf-9.5]'  capital-gain='(-inf-704.5]' 100 ==>  gain=_<=50K 91    conf:(0.91) lift:(1.19) lev:(0.06) [14] < conv:(2.36)>
+ 5.  education-num='(-inf-9.5]' 108 ==>  gain=_<=50K 96    conf:(0.89) lift:(1.16) lev:(0.05) [13] < conv:(1.96)>
+ 6.  education-num='(-inf-9.5]' 108 ==>  capital-gain='(-inf-704.5]'  gain=_<=50K 91    conf:(0.84) lift:(1.15) lev:(0.05) [11] < conv:(1.61)>
+ 7.  sex=_Male 172 ==>  relationship=_Husband 103    conf:(0.6) lift:(1.45) lev:(0.13) [32] < conv:(1.44)>
+ 8.  gain=_<=50K 191 ==>  capital-gain='(-inf-704.5]' 183    conf:(0.96) lift:(1.03) lev:(0.02) [4] < conv:(1.44)>
+ 9.  sex=_Male  capital-gain='(-inf-704.5]' 161 ==>  relationship=_Husband 95    conf:(0.59) lift:(1.43) lev:(0.11) [28] < conv:(1.41)>
+10.  sex=_Male 172 ==>  relationship=_Husband  capital-gain='(-inf-704.5]' 95    conf:(0.55) lift:(1.45) lev:(0.12) [29] < conv:(1.37)>
+\end{lstlisting}
+\begin{lstlisting}[caption="Règles produites avec confidence"]
+Best rules found:
+
+ 1.  relationship=_Husband 103 ==>  sex=_Male 103    conf:(1)
+ 2.  relationship=_Husband  capital-gain='(-inf-704.5]' 95 ==>  sex=_Male 95    conf:(1)
+ 3.  gain=_<=50K 191 ==>  capital-gain='(-inf-704.5]' 183    conf:(0.96)
+ 4.  race=_White  gain=_<=50K 153 ==>  capital-gain='(-inf-704.5]' 146    conf:(0.95)
+ 5.  sex=_Male  gain=_<=50K 123 ==>  capital-gain='(-inf-704.5]' 117    conf:(0.95)
+ 6.  race=_White  sex=_Male  gain=_<=50K 102 ==>  capital-gain='(-inf-704.5]' 97    conf:(0.95)
+ 7.  education-num='(-inf-9.5]'  gain=_<=50K 96 ==>  capital-gain='(-inf-704.5]' 91    conf:(0.95)
+ 8.  race=_White  sex=_Male 141 ==>  capital-gain='(-inf-704.5]' 132    conf:(0.94)
+ 9.  sex=_Male 172 ==>  capital-gain='(-inf-704.5]' 161    conf:(0.94)
+10.  education-num='(-inf-9.5]' 108 ==>  capital-gain='(-inf-704.5]' 100    conf:(0.93)
+\end{lstlisting}
+
+\begin{lstlisting}[caption="Règles produites avec le lift"]
+Best rules found:
+
+ 1.  relationship=_Husband 103 ==>  sex=_Male 103    conf:(1) < lift:(1.45)> lev:(0.13) [32] conv:(32.14)
+ 2.  sex=_Male 172 ==>  relationship=_Husband 103    conf:(0.6) < lift:(1.45)> lev:(0.13) [32] conv:(1.44)
+ 3.  sex=_Male 172 ==>  relationship=_Husband  capital-gain='(-inf-704.5]' 95    conf:(0.55) < lift:(1.45)> lev:(0.12) [29] conv:(1.37)
+ 4.  relationship=_Husband  capital-gain='(-inf-704.5]' 95 ==>  sex=_Male 95    conf:(1) < lift:(1.45)> lev:(0.12) [29] conv:(29.64)
+ 5.  relationship=_Husband 103 ==>  sex=_Male  capital-gain='(-inf-704.5]' 95    conf:(0.92) < lift:(1.43)> lev:(0.11) [28] conv:(4.07)
+ 6.  sex=_Male  capital-gain='(-inf-704.5]' 161 ==>  relationship=_Husband 95    conf:(0.59) < lift:(1.43)> lev:(0.11) [28] conv:(1.41)
+ 7.  education-num='(-inf-9.5]'  capital-gain='(-inf-704.5]' 100 ==>  gain=_<=50K 91    conf:(0.91) < lift:(1.19)> lev:(0.06) [14] conv:(2.36)
+ 8.  gain=_<=50K 191 ==>  education-num='(-inf-9.5]'  capital-gain='(-inf-704.5]' 91    conf:(0.48) < lift:(1.19)> lev:(0.06) [14] conv:(1.13)
+ 9.  education-num='(-inf-9.5]' 108 ==>  gain=_<=50K 96    conf:(0.89) < lift:(1.16)> lev:(0.05) [13] conv:(1.96)
+10.  gain=_<=50K 191 ==>  education-num='(-inf-9.5]' 96    conf:(0.5) < lift:(1.16)> lev:(0.05) [13] conv:(1.13)
+\end{lstlisting}
+
+\begin{lstlisting}[caption="Règles produites avec leverage"]
+
+Best rules found:
+
+ 1.  relationship=_Husband 103 ==>  sex=_Male 103    conf:(1) lift:(1.45) < lev:(0.13) [32]> conv:(32.14)
+ 2.  sex=_Male 172 ==>  relationship=_Husband 103    conf:(0.6) lift:(1.45) < lev:(0.13) [32]> conv:(1.44)
+ 3.  sex=_Male 172 ==>  relationship=_Husband  capital-gain='(-inf-704.5]' 95    conf:(0.55) lift:(1.45) < lev:(0.12) [29]> conv:(1.37)
+ 4.  relationship=_Husband  capital-gain='(-inf-704.5]' 95 ==>  sex=_Male 95    conf:(1) lift:(1.45) < lev:(0.12) [29]> conv:(29.64)
+ 5.  relationship=_Husband 103 ==>  sex=_Male  capital-gain='(-inf-704.5]' 95    conf:(0.92) lift:(1.43) < lev:(0.11) [28]> conv:(4.07)
+ 6.  sex=_Male  capital-gain='(-inf-704.5]' 161 ==>  relationship=_Husband 95    conf:(0.59) lift:(1.43) < lev:(0.11) [28]> conv:(1.41)
+ 7.  relationship=_Husband 103 ==>  race=_White  sex=_Male 85    conf:(0.83) lift:(1.46) < lev:(0.11) [26]> conv:(2.36)
+ 8.  race=_White  sex=_Male 141 ==>  relationship=_Husband 85    conf:(0.6) lift:(1.46) < lev:(0.11) [26]> conv:(1.45)
+ 9.  relationship=_Husband  race=_White 85 ==>  sex=_Male 85    conf:(1) lift:(1.45) < lev:(0.11) [26]> conv:(26.52)
+10.  sex=_Male 172 ==>  relationship=_Husband  race=_White 85    conf:(0.49) lift:(1.45) < lev:(0.11) [26]> conv:(1.29)
+
+\end{lstlisting}
+
+Reste à comparer les résultats !
+\paragraph{Question 2.5}
+
+Voici le résultat que l'on obtient lorsque l'on passe l'option car à true et la mesure à confidence : 
+\begin{lstlisting}
+
+=== Run information ===
+
+Scheme:       weka.associations.Apriori -N 10 -T 0 -C 0.9 -D 0.05 -U 1.0 -M 0.1 -S -1.0 -A -c -1
+Relation:     adult1-weka.filters.unsupervised.attribute.Remove-R2-3,6,12-14-weka.filters.unsupervised.attribute.Remove-R2-weka.filters.unsupervised.attribute.Discretize-F-B3-M-1.0-Rfirst-last
+Instances:    250
+Attributes:   8
+              age
+               education-num
+               occupation
+               relationship
+               race
+               sex
+               capital-gain
+               gain
+=== Associator model (full training set) ===
+
+
+Apriori
+=======
+
+Minimum support: 0.1 (25 instances)
+Minimum metric <confidence>: 0.9
+Number of cycles performed: 18
+
+Generated sets of large itemsets:
+
+Size of set of large itemsets L(1): 23
+
+Size of set of large itemsets L(2): 54
+
+Size of set of large itemsets L(3): 44
+
+Size of set of large itemsets L(4): 13
+
+Best rules found:
+
+ 1. age='(-inf-31.5]'  education-num='(-inf-9.5]' 38 ==>  gain=_<=50K 38    conf:(1)
+ 2.  relationship=_Own-child 36 ==>  gain=_<=50K 36    conf:(1)
+ 3. age='(-inf-31.5]'  education-num='(-inf-9.5]'  capital-gain='(-inf-704.5]' 36 ==>  gain=_<=50K 36    conf:(1)
+ 4.  relationship=_Own-child  capital-gain='(-inf-704.5]' 35 ==>  gain=_<=50K 35    conf:(1)
+ 5. age='(-inf-31.5]'  education-num='(-inf-9.5]'  race=_White 34 ==>  gain=_<=50K 34    conf:(1)
+ 6. age='(-inf-31.5]'  relationship=_Own-child 32 ==>  gain=_<=50K 32    conf:(1)
+ 7. age='(-inf-31.5]'  education-num='(-inf-9.5]'  race=_White  capital-gain='(-inf-704.5]' 32 ==>  gain=_<=50K 32    conf:(1)
+ 8. age='(-inf-31.5]'  relationship=_Own-child  capital-gain='(-inf-704.5]' 31 ==>  gain=_<=50K 31    conf:(1)
+ 9.  relationship=_Own-child  race=_White 30 ==>  gain=_<=50K 30    conf:(1)
+10.  relationship=_Own-child  race=_White  capital-gain='(-inf-704.5]' 29 ==>  gain=_<=50K 29    conf:(1)
+
+\end{lstlisting}
+\section{\'Etude d'articles de presse}
+\paragraph{Question 3.1}
+L'étape particulière d'Apriori qui joue dans la complexité des calculs est l'étape 1 (trouver tous les itemsets) car 200 mots signifie une complexité
+en 2 puissance 200 !
+\paragraph{Question 3.2}
+\lstinputlisting[caption="Méthode"]{txt2weka_etud.pl}
+\end{document}
