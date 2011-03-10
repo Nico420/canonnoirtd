@@ -63,6 +63,8 @@ foreach my $a (@tabMots){
 }
 print FICHOUT "\n";
 }
+
+print "Fin creation\n";
 # Rappel : 
 # ($line =~ m/\s$i\s/)
 # ^ caractère de début de ligne

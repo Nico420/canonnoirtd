@@ -129,13 +129,13 @@ Best rules found:
 10. humidity=normal 7 ==> play=yes 6    conf:(0.86) lift:(1.33) lev:(0.11) [1] < conv:(1.25)>
 \end{lstlisting}
 
-Comparer les règle produites !
+On constate que les règles produites avec les différentes mesures ne sont pas les mêmes ! En fait, on retrouve globalement les mêmes règles quelque soit les mesures, par contre, elles n'apparaissent pas dans le même ordre. Les différentes mesures donnent entre les règles différent. En effet, les règles produites par un ensemble ne peuvent pas être totalement différentes suivant la mesure que l'on utilise ! 
 
 \paragraph{Question 1.3}
 A faire
 
 \paragraph{Question 1.4}
-A revoir
+La mesure de conviction est une règle assez similaire au lift. Par contre, on s'intéresse ici aux exemples où la partie droite de la règle n'est pas respectée.
 
 \section{\'Etude de la population américaine}
 \paragraph{Question 2.1}
@@ -314,5 +314,13 @@ Best rules found:
 L'étape particulière d'Apriori qui joue dans la complexité des calculs est l'étape 1 (trouver tous les itemsets) car 200 mots signifie une complexité
 en 2 puissance 200 !
 \paragraph{Question 3.2}
+Pour construire un fichier utilisable par Weka, nous avons travaillé les données à l'aide du script suivant : 
 \lstinputlisting[caption="Méthode"]{txt2weka_etud.pl}
+L'exécution de ce script nous fournit un fichier avec : 
+\begin{itemize}
+\item{Sur la première ligne} : La liste des mots recherché dans les différents articles.
+\item{Sur les lignes suivantes} : La présence de ces différents mots dans les différents article.
+\end{itemize}
+Il faut se représenter ce fichier comme un tableau avec dans lequel, pour chaque article, on indique la présence ou l'abscence des mots que l'on a d'abord identifié.\\
+Ce fichier, nous pouvons ensuite l'utiliser dans Weka, afin d'en faire l'analyse, et de générer des règles d'associations.
 \end{document}
