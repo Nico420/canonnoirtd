@@ -1,0 +1,24 @@
+getVarList([],[]).
+getVarList([m(P,C,B,V,A,_I)|Rest],[P,C,B,V,A | Liste]) :- getVarList(Rest,Liste).
+
+labeling_symbolic(Liste) :- (foreach(Elem,Liste)
+							do
+								ic_symbolic:indomain(Elem)
+							).
+
+/* Test
+
+rue(R),getVarList(R,L),labeling_symbolic(L).
+
+R = [m(anglais, rouge, cafe, bmw, chien, 1), m(espagnol, verte, the, toyota, serpents, 2), m(ukrainien, blanche, lait, ford, renard, 3), m(norvegien, jaune, jusdOrange, honda, cheval, 4), m(japonais, bleue, eau, datsun, zebre, 5)]
+L = [anglais, rouge, cafe, bmw, chien, espagnol, verte, the, toyota, serpents, ukrainien, blanche, lait, ford, renard, norvegien, jaune, jusdOrange, honda, ...]
+Yes (0.00s cpu, solution 1, maybe more) ? ;
+
+R = [m(anglais, rouge, cafe, bmw, chien, 1), m(espagnol, verte, the, toyota, serpents, 2), m(ukrainien, blanche, lait, ford, renard, 3), m(norvegien, jaune, jusdOrange, honda, zebre, 4), m(japonais, bleue, eau, datsun, cheval, 5)]
+L = [anglais, rouge, cafe, bmw, chien, espagnol, verte, the, toyota, serpents, ukrainien, blanche, lait, ford, renard, norvegien, jaune, jusdOrange, honda, ...]
+Yes (0.00s cpu, solution 2, maybe more) ? ;
+
+R = [m(anglais, rouge, cafe, bmw, chien, 1), m(espagnol, verte, the, toyota, serpents, 2), m(ukrainien, blanche, lait, ford, renard, 3), m(norvegien, jaune, jusdOrange, datsun, cheval, 4), m(japonais, bleue, eau, honda, zebre, 5)]
+L = [anglais, rouge, cafe, bmw, chien, espagnol, verte, the, toyota, serpents, ukrainien, blanche, lait, ford, renard, norvegien, jaune, jusdOrange, datsun, ...
+
+*/

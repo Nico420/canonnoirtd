@@ -1,0 +1,16 @@
+ecrit_maisons(Rue) :- 	(foreach(Elem,Rue)
+						do
+							writeln(Elem)
+						).
+% Permet de tester l'affichage
+% Ruetest = [m(anglais,rouge,cafe,bmw,chien,1),m(norvegien,bleue,lait,honda,zebre,2)]
+
+/* Test
+[eclipse 48]: Ruetest = [m(anglais,rouge,cafe,bmw,chien,1),m(norvegien,bleue,lait,honda,zebre,2)],ecrit_maisons(Ruetest).
+m(anglais, rouge, cafe, bmw, chien, 1)
+m(norvegien, bleue, lait, honda, zebre, 2)
+
+Ruetest = [m(anglais, rouge, cafe, bmw, chien, 1), m(norvegien, bleue, lait, honda, zebre, 2)]
+Yes (0.00s cpu)
+
+*/

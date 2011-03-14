@@ -1,0 +1,7 @@
+domaines_maison(m(Pays,Couleur,Boisson,Voiture,Animal,Numero)) :- 
+			Pays &:: pays,
+			Couleur &:: couleur,
+			Boisson &:: boisson,
+			Voiture &:: voiture,
+			Animal &:: animal,
+			Numero #:: 1..5.
