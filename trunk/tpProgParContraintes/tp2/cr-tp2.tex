@@ -1,0 +1,73 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+% This is a simple template for a LaTeX document using the "article" class.
+% See "book", "report", "letter" for other types of document.
+
+\documentclass[11pt]{article} % use larger type; default would be 10pt
+
+\usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
+\usepackage[T1]{fontenc}
+\usepackage{times}
+
+\usepackage{graphicx} % support the \includegraphics command and options
+
+\usepackage[francais]{babel}
+
+\usepackage{listings}
+
+\usepackage{url}
+
+\usepackage{rotating}
+
+\usepackage[a4paper]{geometry}
+
+
+\date{\today}
+
+\title{Rapport Travaux Pratiques : \\Programmation par Contraintes\\ - TP 2 : \\\textbf{Contraintes Logiques}}
+\author{Nicolas Desfeux\\Aurélien Texier}
+\begin{document}
+\lstset{language=Prolog,breaklines=true,numbers=left,basicstyle=\footnotesize ,numberstyle=\footnotesize}
+\maketitle
+\paragraph{} Dans ce T.P., nous allons utiliser les contraintes et les domaines finis pour résoudre un problème. Nous allons tenter, à partir des informations (contraintes) qui nous sont fournies, de déduire d'autres informations.\\
+Pour cela, nous allons définir plusieurs prédicats qui nous permettront au final d'obtenir les informations que nous cherchons.
+
+\paragraph{Question 1.1}
+Nous allons définir les différents domaines dont nous allons avoir besoin au cours de notre problème.
+\lstinputlisting[caption="Domaines"]{domaines}
+
+\paragraph{Question 1.2}
+Nous avons également besoin de définir des prédicats qui permettent de contraindre le domaine des variables qui composent une maison.
+\lstinputlisting[caption="Domaines maisons"]{domaine_maison}
+
+\paragraph{Question 1.3}
+Ce prédicat permet de définir la liste des maisons, tout en posant les différentes contraintes que l'on a précédement définies. C'est également grâce à ce prédicat que l'on pose les numéros des maisons.
+\lstinputlisting[caption="Prédicat \textit{\textbf{rue(?Rue)}}"]{rue}
+
+\paragraph{Question 1.4}
+Ce prédicat va permettre un affichage clair des maisons.
+\lstinputlisting[caption="Prédicat \textit{\textbf{ecrit\_maison(?Rue)}}"]{ecrit_maison}
+
+\paragraph{Question 1.5}
+On définit ici un prédicat qui permet de récupérer la liste des variables du problème.\\
+On utilise ensuite un prédicat de labeling, qui va permettre de labeliser les variables par rapport aux différents domaines que l'on a définit.
+\lstinputlisting[caption="Prédicat \textit{\textbf{getVarList(+List)}}"]{getVarList}
+
+\paragraph{Question 1.6}
+Le prédicat resoudre va permettre de trouver une solution respectant les contraintes de domaines, mais pas les contraintes du problèmes.
+\lstinputlisting[caption="Prédicat \textit{\textbf{resoudre(?Rue)}}"]{resoudre}
+\paragraph{Question 1.7}
+Maintenant, nous définissons les différentes contraintes, et un prédicat pouvant les utiliser.
+\lstinputlisting[caption="Définition des contraintes et prédicat de résolution"]{final}
+
+\paragraph{Question 1.8}
+On obtient donc la réponse aux questions posées par le problème : \\\\
+\centering{
+\textbf{Le \textit{japonais} possède un \textit{zèbre} et le \textit{norvégien} boit  de \textit{l'eau}}
+}
+\newpage
+
+\section{Code Complet, avec l'ensemble des tests}
+\lstinputlisting[caption="TP2"]{tp2.pl}
+\end{document}

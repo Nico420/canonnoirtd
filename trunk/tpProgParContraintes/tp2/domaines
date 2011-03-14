@@ -1,0 +1,5 @@
+:- local domain(pays(anglais,espagnol,ukrainien,norvegien,japonais)).
+:- local domain(couleur(rouge,verte,blanche,jaune,bleue)).
+:- local domain(boisson(cafe,the,lait,jusdOrange,eau)).
+:- local domain(voiture(bmw,toyota,ford,honda,datsun)).
+:- local domain(animal(chien,serpents,renard,cheval,zebre)).

@@ -1,0 +1,25 @@
+rue(Rue) :- length(Rue,5),
+			(foreach(Elem,Rue), for(I, 1, 5), fromto([],InP,OutP,FinP), fromto([],InC,OutC,FinC), fromto([],InB,OutB,FinB), fromto([],InV,OutV,FinV), fromto([],InA,OutA,FinA)
+			do
+				domaines_maison(Elem),
+				Elem = m(P,C,B,V,A,I),
+				OutP=[P|InP],
+				OutC=[C|InC],
+				OutB=[B|InB],
+				OutV=[V|InV],
+				OutA=[A|InA]
+			),
+			ic_symbolic:alldifferent(FinP),
+			ic_symbolic:alldifferent(FinC),
+			ic_symbolic:alldifferent(FinB),
+			ic_symbolic:alldifferent(FinV),
+			ic_symbolic:alldifferent(FinA).
+
+/*Tests
+[eclipse 42]: rue(R).
+
+R = [m(_296{[anglais, espagnol, ukrainien, norvegien, japonais]}, _400{[rouge, verte, blanche, jaune, bleue]}, _504{[cafe, the, lait, jusdOrange, eau]}, _608{[bmw, toyota, ford, honda, datsun]}, _712{[chien, serpents, renard, cheval, zebre]}, 1), m(_894{[anglais, espagnol, ukrainien, norvegien, japonais]}, _998{[rouge, verte, blanche, jaune, bleue]}, _1102{[cafe, the, lait, jusdOrange, eau]}, _1206{[bmw, toyota, ford, honda, datsun]}, _1310{[chien, serpents, renard, cheval, zebre]}, 2), m(_1492{[anglais, espagnol, ukrainien, norvegien, japonais]}, _1596{[rouge, verte, blanche, jaune, bleue]}, _1700{[cafe, the, lait, jusdOrange, eau]}, _1804{[bmw, toyota, ford, honda, datsun]}, _1908{[chien, serpents, renard, cheval, zebre]}, 3), m(_2090{[anglais, espagnol, ukrainien, norvegien, japonais]}, _2194{[rouge, verte, blanche, jaune, bleue]}, _2298{[cafe, the, lait, jusdOrange, eau]}, _2402{[bmw, toyota, ford, honda, datsun]}, _2506{[chien, serpents, renard, cheval, zebre]}, 4), m(_2688{[anglais, espagnol, ukrainien, norvegien, japonais]}, _2792{[rouge, verte, blanche, jaune, bleue]}, _2896{[cafe, the, lait, jusdOrange, eau]}, _3000{[bmw, toyota, ford, honda, datsun]}, _3104{[chien, serpents, renard, cheval, zebre]}, 5)]
+
+There are 30 delayed goals. Do you want to see them? (y/n) 
+Yes (0.10s cpu)
+*/
