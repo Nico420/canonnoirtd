@@ -92,7 +92,7 @@ Yes (0.00s cpu)
 */
 
 
-solve(Taches,Fin) :-				taches(Taches),
+solve(Taches,Fin) :-	taches(Taches),
 						domaines(Taches,Fin),
 						precedences(Taches),
 						getVarList(Taches,Fin,Liste),
@@ -134,19 +134,20 @@ conflits(Taches) :- dim(Taches,[Dim]),
 			(for(Indice,1,Dim),param(Taches,Dim)
 			do
 				Elem is Taches[Indice],
-				I2 is Indice+1, /*Il faut assurer que les indices soient différents, sinon on va se retrouver à comparer deux fois la meme tâches*/
+				I2 is Indice+1,
+				/*Il faut assurer que les indices soient differents, sinon on va se retrouver a comparer deux fois la meme taches*/
 				(for(I,I2,Dim),param(Taches,Elem)
 				do		
 					Elem2 is Taches[I],
-					test(Elem,Elem2)
+					machinesDifferentes(Elem,Elem2)
 				)
 			).
 
-test(tache(_,_,M1,_),tache(_,_,M2,_)):- \=(M1,M2),!.
-test(tache(Duree,_,M,Debut),tache(Duree2,_,M,Debut2)) :- ((Debut #>= Debut2+Duree2) or (Debut+Duree #=< Debut2)).
+machinesDifferentes(tache(_,_,M1,_),tache(_,_,M2,_)):- \=(M1,M2),!.
+machinesDifferentes(tache(Duree,_,M,Debut),tache(Duree2,_,M,Debut2)) :- ((Debut #>= Debut2+Duree2) or (Debut+Duree #=< Debut2)).
 
 
-solve2(Taches,Fin) :-				taches(Taches),
+solve2(Taches,Fin) :-	taches(Taches),
 						domaines(Taches,Fin),
 						precedences(Taches),
 						conflits(Taches),
@@ -177,6 +178,6 @@ Yes (0.00s cpu, solution 1, maybe more) ?
 /*Question 3.8
 
 Oui, la solution est la meilleure !
-Prolog résoud les contraintes en incrémentant le début des tâches, jusqu'à obtenir le respect des contraintes.
+Prolog resoud les contraintes en incrementant le debut des taches, jusqu'a obtenir le respect des contraintes.
 
 */
