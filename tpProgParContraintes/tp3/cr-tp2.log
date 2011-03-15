@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=pdflatex 2011.3.14)  14 MAR 2011 14:14
+This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=pdflatex 2011.3.14)  15 MAR 2011 16:59
 entering extended mode
 **cr-tp2.tex
 
@@ -496,34 +496,34 @@ s.pl" [2])
 ("C:\Users\Aurélien\Desktop\projet_canon _noir\tpProgParContraintes\tp3\getVarL
 ist.pl" [3])
 ("C:\Users\Aurélien\Desktop\projet_canon _noir\tpProgParContraintes\tp3\solve1.
-pl")
+pl" [4])
 ("C:\Users\Aurélien\Desktop\projet_canon _noir\tpProgParContraintes\tp3\precede
-nces.pl" [4])
+nces.pl" [5])
 ("C:\Users\Aurélien\Desktop\projet_canon _noir\tpProgParContraintes\tp3\conflit
-s.pl" [5]) [6]
+s.pl" [6] [7]) [8]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 69.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 70.
 
 ("C:\Users\Aurélien\Desktop\projet_canon _noir\tpProgParContraintes\tp3\tp3.pl"
-[7] [8] [9] [10]) [11]
+[9] [10] [11] [12]) [13]
 ("C:\Users\Aurélien\Desktop\projet_canon _noir\tpProgParContraintes\tp3\cr-tp2.
 aux") ) 
 Here is how much of TeX's memory you used:
  4649 strings out of 494053
  61500 string characters out of 3146176
- 304063 words of memory out of 3000000
+ 317063 words of memory out of 3000000
  7854 multiletter control sequences out of 15000+200000
  37797 words of font info for 49 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 30i,6n,40p,598b,1744s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 30i,6n,40p,744b,1744s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/P
 rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Prog
 ram Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (
 x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX
  2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on cr-tp2.pdf (11 pages, 81561 bytes).
+Output written on cr-tp2.pdf (13 pages, 86547 bytes).
 PDF statistics:
- 55 PDF objects out of 1000 (max. 8388607)
+ 62 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

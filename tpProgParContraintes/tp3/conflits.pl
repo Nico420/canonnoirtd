@@ -23,7 +23,7 @@ solve2(Taches,Fin) :-	taches(Taches),
 						labeling(Liste),
 						affiche(Taches).
 /*
-[eclipse 78]: taches(T), solve2(T, Fin).
+[eclipse 10]: solve2(Taches,Fin).
 tache(3, [], m1, 0)
 tache(8, [], m1, 29)
 tache(8, [4, 5], m1, 9)
@@ -37,7 +37,45 @@ tache(6, [9, 12], m2, 37)
 tache(3, [1], m2, 9)
 tache(6, [7, 8], m2, 25)
 
-T = [](tache(3, [], m1, 0), tache(8, [], m1, 29), tache(8, [4, 5], m1, 9), tache(6, [], m2, 0), tache(3, [1], m2, 6), tache(4, [1, 7], m1, 25), tache(8, [3, 5], m1, 17), tache(6, [4], m2, 12), tache(6, [6, 7], m2, 31), tache(6, [9, 12], m2, 37), tache(3, [1], m2, 9), tache(6, [7, 8], m2, 25))
+Taches = [](tache(3, [], m1, 0), tache(8, [], m1, 29), tache(8, [4, 5], m1, 9), tache(6, [], m2, 0), tache(3, [1], m2, 6), tache(4, [1, 7], m1, 25), tache(8, [3, 5], m1, 17), tache(6, [4], m2, 12), tache(6, [6, 7], m2, 31), tache(6, [9, 12], m2, 37), tache(3, [1], m2, 9), tache(6, [7, 8], m2, 25))
 Fin = 43
-Yes (0.00s cpu, solution 1, maybe more) ? 
+Yes (0.01s cpu, solution 1, maybe more) ? ;
+tache(3, [], m1, 1)
+tache(8, [], m1, 29)
+tache(8, [4, 5], m1, 9)
+tache(6, [], m2, 0)
+tache(3, [1], m2, 6)
+tache(4, [1, 7], m1, 25)
+tache(8, [3, 5], m1, 17)
+tache(6, [4], m2, 12)
+tache(6, [6, 7], m2, 31)
+tache(6, [9, 12], m2, 37)
+tache(3, [1], m2, 9)
+tache(6, [7, 8], m2, 25)
+
+Taches = [](tache(3, [], m1, 1), tache(8, [], m1, 29), tache(8, [4, 5], m1, 9), tache(6, [], m2, 0), tache(3, [1], m2, 6), tache(4, [1, 7], m1, 25), tache(8, [3, 5], m1, 17), tache(6, [4], m2, 12), tache(6, [6, 7], m2, 31), tache(6, [9, 12], m2, 37), tache(3, [1], m2, 9), tache(6, [7, 8], m2, 25))
+Fin = 43
+Yes (0.01s cpu, solution 2, maybe more) ? ;
+tache(3, [], m1, 2)
+tache(8, [], m1, 29)
+tache(8, [4, 5], m1, 9)
+tache(6, [], m2, 0)
+tache(3, [1], m2, 6)
+tache(4, [1, 7], m1, 25)
+tache(8, [3, 5], m1, 17)
+tache(6, [4], m2, 12)
+tache(6, [6, 7], m2, 31)
+tache(6, [9, 12], m2, 37)
+tache(3, [1], m2, 9)
+tache(6, [7, 8], m2, 25)
+
+Taches = [](tache(3, [], m1, 2), tache(8, [], m1, 29), tache(8, [4, 5], m1, 9), tache(6, [], m2, 0), tache(3, [1], m2, 6), tache(4, [1, 7], m1, 25), tache(8, [3, 5], m1, 17), tache(6, [4], m2, 12), tache(6, [6, 7], m2, 31), tache(6, [9, 12], m2, 37), tache(3, [1], m2, 9), tache(6, [7, 8], m2, 25))
+Fin = 43
+Yes (0.01s cpu, solution 3, maybe more) ?
+*/
+
+/*
+[eclipse 11]: solve2(Taches,42).
+
+No (0.00s cpu)
 */

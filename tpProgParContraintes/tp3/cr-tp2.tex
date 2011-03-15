@@ -49,21 +49,22 @@ Voici le prédicat \textit{getVarList(+Taches,?Fin,?List)} qui permet de récup�
 \lstinputlisting[caption="getVarList"]{getVarList.pl}
 
 \paragraph{Question 3.5}
-On définit le prédicat \textit{solve(?Taches,?Fin)} qui permet, en utilisant les trois prédicats précédents, de trouver un ordonnancement qui respecte les contraintes de domaines définies.
+On définit le prédicat \textit{solve(?Taches,?Fin)} qui permet, en utilisant les trois prédicats précédents, de trouver un ordonnancement qui respecte les contraintes de domaines définies.\\
+Le test effectué atteste bien la conformité du prédicat car solve rend bien comme première solution toutes les tâches avec des débuts à 0, puis il incrémente chacune comme solutions suivantes. Il unifie Fin à 8 puisque c'est la durée de la tâche la plus longue, ce qui est logique aussi.
 \lstinputlisting[caption="solve1"]{solve1.pl}
 
 \paragraph{Question 3.6}
-On définit ici un prédicat \textit{precedences(+Taches)} qui contraint chaque tâche à démarrer après la fin de ses tâches préliminaires.\\ On modifie alors solve pour prendre en compte ces contraintes.
+On définit ici un prédicat \textit{precedences(+Taches)} qui contraint chaque tâche à démarrer après la fin de ses tâches préliminaires.\\ On modifie alors solve pour prendre en compte ces contraintes.\\ Les résultats de solve sont bien conformes car les deux premières tâches commencent à 0 puisqu'elles n'ont besoin d'aucune autre tâche effectuée au préalable pour s'effectuer. La tâche 5 qui a besoin de la tâche 1 effectuée commence bien à 3, qui est la durée de la tâche 1. Tout est donc correct.\\ On peut donc en conclure que sans la contrainte des machines différentes qui va suivre, la solution optimale prendrait 38 unités de temps pour se faire (car le solveur unifie Fin à 38).
 \lstinputlisting[caption="precedences"]{precedences.pl}
 
 \paragraph{Question 3.7}
-Enfin, on définit le prédicat \textit{conflits(+Taches)} qui impose que, sur une machine, deux tâches ne se déroulent pas en même temps.\\ On modifie solve de la même manière qu'à la question précédente pour obtenir une solution du problème prenant en compte cette dernière contrainte.
+Enfin, on définit le prédicat \textit{conflits(+Taches)} qui impose que, sur une machine, deux tâches ne se déroulent pas en même temps.\\ On modifie solve de la même manière qu'à la question précédente pour obtenir une solution du problème prenant en compte cette dernière contrainte.\\ Enfin, avec cette dernière contrainte, on obtient une solution qui dure un peu plus longtemps, 43 unités de temps.
 \lstinputlisting[caption="conflits"]{conflits.pl}
 
 \paragraph{Question 3.8}
 Oui, la solution est la meilleure !
 Prolog résoud les contraintes en incrémentant le début des tâches, jusqu'à obtenir le respect des contraintes.
-Comme il incrémente, la première trouvée est forcément la solution optimale au problème, à savoir l'ordonnancement des tâches au plus tôt.
+Comme il incrémente, la première trouvée est forcément la solution optimale au problème, à savoir l'ordonnancement des tâches au plus tôt. \\ Pour vérifier tout de même, nous avons, dans nos tests de la question précédente, effectué une requête de \textit{solve2} avec Fin à 42 (au lieu de la solution donnée qui est 43), et le solveur nous répond No, ce qui justifie bien qu'il n'y a pas de solution plus courte pour ce problème d'ordonnancement.
 \newpage
 
 \section{Code Complet, avec l'ensemble des tests}

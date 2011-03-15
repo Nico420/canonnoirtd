@@ -87,10 +87,7 @@ T = [](tache(3, [], m1, _238), tache(8, [], m1, _243), tache(8, [4, 5], m1, _248
 Fin = Fin
 L = [Fin, _319, _312, _303, _294, _287, _278, _269, _262, _257, _248, _243, _238]
 Yes (0.00s cpu)
-
-
 */
-
 
 solve(Taches,Fin) :-	taches(Taches),
 						domaines(Taches,Fin),
@@ -128,8 +125,8 @@ tache(6, [7, 8], m2, 22)
 
 T = [](tache(3, [], m1, 0), tache(8, [], m1, 0), tache(8, [4, 5], m1, 6), tache(6, [], m2, 0), tache(3, [1], m2, 3), tache(4, [1, 7], m1, 22), tache(8, [3, 5], m1, 14), tache(6, [4], m2, 6), tache(6, [6, 7], m2, 26), tache(6, [9, 12], m2, 32), tache(3, [1], m2, 3), tache(6, [7, 8], m2, 22))
 Fin = 38
-
 */
+
 conflits(Taches) :- dim(Taches,[Dim]),
 			(for(Indice,1,Dim),param(Taches,Dim)
 			do
@@ -145,7 +142,6 @@ conflits(Taches) :- dim(Taches,[Dim]),
 
 machinesDifferentes(tache(_,_,M1,_),tache(_,_,M2,_)):- \=(M1,M2),!.
 machinesDifferentes(tache(Duree,_,M,Debut),tache(Duree2,_,M,Debut2)) :- ((Debut #>= Debut2+Duree2) or (Debut+Duree #=< Debut2)).
-
 
 solve2(Taches,Fin) :-	taches(Taches),
 						domaines(Taches,Fin),
@@ -173,7 +169,6 @@ T = [](tache(3, [], m1, 0), tache(8, [], m1, 29), tache(8, [4, 5], m1, 9), tache
 Fin = 43
 Yes (0.00s cpu, solution 1, maybe more) ? 
 */
-
 
 /*Question 3.8
 
