@@ -64,7 +64,7 @@ Enfin, on définit le prédicat \textit{conflits(+Taches)} qui impose que, sur u
 \paragraph{Question 3.8}
 Oui, la solution est la meilleure !
 Prolog résoud les contraintes en incrémentant le début des tâches, jusqu'à obtenir le respect des contraintes.
-Comme il incrémente, la première trouvée est forcément la solution optimale au problème, à savoir l'ordonnancement des tâches au plus tôt. \\ Pour vérifier tout de même, nous avons, dans nos tests de la question précédente, effectué une requête de \textit{solve2} avec Fin à 42 (au lieu de la solution donnée qui est 43), et le solveur nous répond No, ce qui justifie bien qu'il n'y a pas de solution plus courte pour ce problème d'ordonnancement.
+Comme il incrémente, la première trouvée est candidate pour la solution optimale au problème, à savoir l'ordonnancement des tâches au plus tôt. Seulement, rien ne nous assure que la première est la meilleure, car cela dépend de l'ordre de la déclaration des tâches au début, dans le prédicat \textit{taches(?Taches)}.\\ Pour vérifier donc, nous avons, dans nos tests de la question précédente, effectué une requête de \textit{solve2} avec Fin à 42 (au lieu de la solution donnée qui est 43), et le solveur nous répond No, ce qui justifie bien qu'il n'y a pas de solution plus courte pour ce problème d'ordonnancement. Donc nous avons eu dans notre cas la solution optimale.
 \newpage
 
 \section{Code Complet, avec l'ensemble des tests}
