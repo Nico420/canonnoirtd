@@ -9,9 +9,16 @@ precedences(Taches) :-	dim(Taches,[Dim]),
 					Debut #>= Debut2+Duree2
 				)
 			).
+			
+solve(Taches,Fin) :-	taches(Taches),
+						domaines(Taches,Fin),
+						precedences(Taches),
+						getVarList(Taches,Fin,Liste),
+						labeling(Liste),
+						affiche(Taches).
 
 /*
-[eclipse 44]: taches(T), solve(T, Fin).
+[eclipse 44]: solve(T, Fin).
 tache(3, [], m1, 0)
 tache(8, [], m1, 0)
 tache(8, [4, 5], m1, 6)
