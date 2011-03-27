@@ -1,0 +1,71 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+% This is a simple template for a LaTeX document using the "article" class.
+% See "book", "report", "letter" for other types of document.
+
+\documentclass[11pt]{article} % use larger type; default would be 10pt
+
+\usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
+\usepackage[T1]{fontenc}
+\usepackage{times}
+
+\usepackage{graphicx} % support the \includegraphics command and options
+
+\usepackage[francais]{babel}
+
+\usepackage{listings}
+
+\usepackage{url}
+
+\usepackage{rotating}
+
+\usepackage[a4paper]{geometry}
+
+
+\date{\today}
+
+\title{Rapport Travaux Pratiques : \\Programmation par Contraintes\\ - TP 4 : \\\textbf{Contraintes Logiques}}
+\author{Nicolas Desfeux\\Aurélien Texier}
+\begin{document}
+\lstset{language=Prolog,breaklines=true,numbers=left,basicstyle=\footnotesize ,numberstyle=\footnotesize}
+\maketitle
+\paragraph{} Dans ce T.P., nous allons utiliser la programmation par contraintes pour faire un planning pour organiser une régate, planning qui respecte certaines contraintes.
+
+\paragraph{Question 4.1}
+Nous définissons ici un prédicat \textit{getData(?TailleEquipes,?NbEquipes,?CapaBateaux,?NbBateaux,?NbConf)} qui unifie les variables passées en paramètres avec les données du problème.
+\lstinputlisting[caption="getData"]{getdata.pl}
+
+\paragraph{Question 4.2}
+Nous définissons ici un prédicat \textit{defineVars(?T,+NbEquipes,+NbConf,+NbBateaux)} qui unifie T au tableau des variables et contraint le domaine des variables.
+\lstinputlisting[caption="defineVars"]{definevars.pl}
+
+\paragraph{Question 4.3}
+Nous définissons ici un prédicat \textit{getVarList(+T,?L)} qui construit la liste L des variables contenues dans le tableau T. La liste des variables contient les variables de la première colonne suivies de celles de la seconde colonne, etc.
+\lstinputlisting[caption="getVarList"]{getvarlist.pl}
+
+\paragraph{Question 4.4}
+Nous définissons ici un prédicat \textit{solve(?T)} qui résoud le problème des régates où seules les contraintes de domaines sont posées.
+\lstinputlisting[caption="solve1"]{solve1.pl}
+
+\paragraph{Question 4.5}
+Nous définissons ici un prédicat \textit{pasMemeBateaux(+T,+NbEquipes,+NbConf)} qui impose qu'une même équipe ne retourne pas deux fois sur le même bateau. On modifie ensuite le prédicat \textit{solve} pour qu'il prenne en compte cette nouvelle contrainte.
+\lstinputlisting[caption="pasMemeBateaux"]{pasmemebateaux.pl}
+
+\paragraph{Question 4.6}
+Nous définissons ici un prédicat \textit{pasMemePartenaires(+T,+NbEquipes,+NbConf)} qui impose qu'une même équipe ne se retrouve pas deux fois avec la même équipe. On modifie une nouvelle fois le prédicat  \textit{solve} pour qu'il prenne en compte cette nouvelle contrainte.
+\lstinputlisting[caption="pasMemePartenaires"]{pasmemepartenaires.pl}
+
+\paragraph{Question 4.7}
+Nous définissons ici un prédicat \textit{capaBateaux(+T,+TailleEquipes,+NbEquipes,+CapaBateaux,+NbBateaux,+NbConf)} qui vérifie que les capacités des bateaux sont respectées lors de chaque confrontation. On modifie une nouvelle fois le prédicat  \textit{solve} pour qu'il prenne en compte cette nouvelle contrainte.
+\lstinputlisting[caption="capaBateaux"]{capabateaux.pl}
+
+\paragraph{Question 4.8}
+On passe ici à un problème de taille réelle. On dispose dorénavant de 13 voiliers et de 29 équipes qui doivent effectuer la régate comportant 7 confrontations.
+\lstinputlisting[caption="Problème de taille réelle et labeling"]{q8.pl}
+
+\newpage
+
+\section{Code Complet, avec l'ensemble des tests}
+\lstinputlisting[caption="TP4"]{tp4.pl}
+\end{document}

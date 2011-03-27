@@ -67,7 +67,9 @@ T = []([](_484{1 .. 3}, _553{1 .. 3}, _622{1 .. 3}), [](_693{1 .. 3}, _762{1 .. 
 L = [_484{1 .. 3}, _693{1 .. 3}, _902{1 .. 3}, _1111{1 .. 3}, _553{1 .. 3}, _762{1 .. 3}, _971{1 .. 3}, _1180{1 .. 3}, _622{1 .. 3}, _831{1 .. 3}, _1040{1 .. 3}, _1249{1 .. 3}]
 Yes (0.00s cpu)
 */
-	
+
+% Q4.4
+
 solve1(T) :-
 	getData(_TailleEquipes,NbEquipes,_CapaBateaux,NbBateaux,NbConf),
 	defineVars(T,NbEquipes,NbConf,NbBateaux),
@@ -201,6 +203,8 @@ Yes (0.01s cpu, solution 2, maybe more) ? ;
 T = []([](1, 2, 3), [](3, 1, 2), [](2, 3, 1), [](1, 3, 2))
 Yes (0.01s cpu, solution 3, maybe more) ?
 */
+
+% Q4.8
 
 getData2(TailleEquipes,NbEquipes,CapaBateaux,NbBateaux,NbConf):-
 	TailleEquipes = [](7,6,5,5,5,4,4,4,4,4,4,4,4,3,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2),
