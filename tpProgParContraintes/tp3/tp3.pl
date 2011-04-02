@@ -89,7 +89,12 @@ L = [Fin, _319, _312, _303, _294, _287, _278, _269, _262, _257, _248, _243, _238
 Yes (0.00s cpu)
 */
 
+<<<<<<< .mine
+
 solve(Taches,Fin) :-	taches(Taches),
+=======
+solve(Taches,Fin) :-	taches(Taches),
+>>>>>>> .r272
 						domaines(Taches,Fin),
 						precedences(Taches),
 						getVarList(Taches,Fin,Liste),
