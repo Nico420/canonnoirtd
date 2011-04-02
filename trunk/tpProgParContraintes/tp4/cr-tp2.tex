@@ -61,7 +61,8 @@ Nous définissons ici un prédicat \textit{capaBateaux(+T,+TailleEquipes,+NbEqui
 \lstinputlisting[caption="capaBateaux"]{capabateaux.pl}
 
 \paragraph{Question 4.8}
-On passe ici à un problème de taille réelle. On dispose dorénavant de 13 voiliers et de 29 équipes qui doivent effectuer la régate comportant 7 confrontations.
+On passe ici à un problème de taille réelle. On dispose dorénavant de 13 voiliers et de 29 équipes qui doivent effectuer la régate comportant 7 confrontations.\\
+Le temps d'exécution étant relativement long, il nous a été proposé d'améliorer le labeling. Pour cela, nous avons mélanger la liste des varaibles obtenu après \textit{getVarList}, en alternant simplement les grosses et les petites équipes. Le gain sur le temps d'exécution est relativement important, puisqu'il est quasiment de 10 !
 \lstinputlisting[caption="Problème de taille réelle et labeling"]{q8.pl}
 
 \newpage
