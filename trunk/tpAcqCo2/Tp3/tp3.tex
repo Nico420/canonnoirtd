@@ -132,8 +132,19 @@ Best rules found:
 On constate que les règles produites avec les différentes mesures ne sont pas les mêmes ! En fait, on retrouve globalement les mêmes règles quelque soit les mesures, par contre, elles n'apparaissent pas dans le même ordre. Les différentes mesures donnent entre les règles différent. En effet, les règles produites par un ensemble ne peuvent pas être totalement différentes suivant la mesure que l'on utilise ! 
 
 \paragraph{Question 1.3}
-A faire
-
+On vérifie les calculs pour la règle suivante : \\
+$
+temperature = cool \Rightarrow humidity = normal\\
+confidence(temperature = cool \Rightarrow humidity = normal) = \frac{N_{temp=cool \wedge humidity = normal}}{N_{temp=cool}} = \frac{4}{4} = 1\\
+$\\La confidence est juste !\\$
+lift(temperature = cool \Rightarrow humidity = normal) = N_{\Omega}*
+																  \frac{N_{temp=cool \wedge humidity = normal}}{N_{temp=cool} * N_{humidity = normal}} \\
+																  = 14* \frac{4}{4*7}	=2	
+$\\Le lift est juste !\\$
+leverage(temperature = cool \Rightarrow humidity = normal)\\
+Pr(A,B) - Pr(A)*Pr(B) = \\
+\frac{N_{temp=cool \wedge humidity = normal}}{N_{\Omega}} - \frac{N_{temp=cool * humidity = normal}}{{N_{\Omega}}^2}=\frac{4}{12}-\frac{4*7}{144}=0.138						
+$\\ Le leverage est bon (aux arrondis près).
 \paragraph{Question 1.4}
 La mesure de conviction est une règle assez similaire au lift. Par contre, on s'intéresse ici aux exemples où la partie droite de la règle n'est pas respectée.
 
@@ -255,7 +266,15 @@ Best rules found:
 
 \end{lstlisting}
 
-Reste à comparer les résultats !
+Pour différents jeux de paramètres, on obtient souvent les mêmes règles. Par contre, l'ordre des règles n'est pas forcément le même. Voici quelques exemples de règles produites, que nous allons interpréter : 
+\begin{itemize}
+\item Produite par confidence\\relationship = \_Husband 103 ==> sex =\_Male 103
+		conf : ( 1 )\\Cette règle indique que le fait d'être un Husband implique que l'on soit un homme. La règle n'a pas forcément d'intérêt, mais est tout à fait logique et vraie pour notre ensemble de données
+\item Produite par le lift\\gain =\_<=50K 191 ==> education-num= ' (-inf -9.5 ] ' 96
+conf : (0.5 ) < lift
+: (1.16) > lev : (0.05) [13] conv : (1.13)\\Le gain est inférieur à 50K implique que le niveau d'éducation est faible. Le gain et le niveau d'éducation sont assez corrélé puisque le lift est supérieur à 1.		
+\end{itemize}
+
 \paragraph{Question 2.5}
 
 Voici le résultat que l'on obtient lorsque l'on passe l'option car à true et la mesure à confidence : 
@@ -318,9 +337,98 @@ Pour construire un fichier utilisable par Weka, nous avons travaillé les données
 \lstinputlisting[caption="Méthode"]{txt2weka_etud.pl}
 L'exécution de ce script nous fournit un fichier avec : 
 \begin{itemize}
-\item{Sur la première ligne} : La liste des mots recherché dans les différents articles.
-\item{Sur les lignes suivantes} : La présence de ces différents mots dans les différents article.
+\item{Sur la première ligne} : La liste des mots recherchées dans les différents articles.
+\item{Sur les lignes suivantes} : La présence de ces différents mots dans les différents articles.
 \end{itemize}
-Il faut se représenter ce fichier comme un tableau avec dans lequel, pour chaque article, on indique la présence ou l'abscence des mots que l'on a d'abord identifié.\\
-Ce fichier, nous pouvons ensuite l'utiliser dans Weka, afin d'en faire l'analyse, et de générer des règles d'associations.
+Il faut se représenter ce fichier comme un tableau dans lequel, pour chaque article, on indique la présence ou l'absence des mots que l'on a d'abord identifiés.\\
+Ce fichier, nous pouvons ensuite l'utiliser dans Weka, afin d'en faire l'analyse, et de générer des règles d'associations.\\
+\begin{lstlisting}
+=== Run information ===
+
+Scheme:       weka.associations.Apriori -N 20 -T 1 -C 1.1 -D 0.05 -U 0.5 -M 0.05 -S -1.0 -c -1
+Relation:     tp3
+Instances:    468
+Attributes:   200
+              [list of attributes omitted]
+=== Associator model (full training set) ===
+
+
+Apriori
+=======
+
+Minimum support: 0.15 (70 instances)
+Minimum metric <lift>: 1.1
+Number of cycles performed: 7
+
+Generated sets of large itemsets:
+
+Size of set of large itemsets L(1): 37
+
+Size of set of large itemsets L(2): 23
+
+Size of set of large itemsets L(3): 2
+
+Best rules found:
+
+ 1.  ministre=_true 73 ==>  ministre=_true 73    conf:(1) < lift:(6.41)> lev:(0.13) [61] conv:(61.61)
+ 2.  ministre=_true 73 ==>  ministre=_true 73    conf:(1) < lift:(6.41)> lev:(0.13) [61] conv:(61.61)
+ 3.  élection=_true 76 ==>  élection=_true 76    conf:(1) < lift:(6.16)> lev:(0.14) [63] conv:(63.66)
+ 4.  élection=_true 76 ==>  élection=_true 76    conf:(1) < lift:(6.16)> lev:(0.14) [63] conv:(63.66)
+ 5.  campagne=_true 77 ==>  campagne=_true 77    conf:(1) < lift:(6.08)> lev:(0.14) [64] conv:(64.33)
+ 6.  campagne=_true 77 ==>  campagne=_true 77    conf:(1) < lift:(6.08)> lev:(0.14) [64] conv:(64.33)
+ 7.  campagne=_true 77 ==>  camp=_true  campagne=_true 77    conf:(1) < lift:(6.08)> lev:(0.14) [64] conv:(64.33)
+ 8.  campagne=_true  camp=_true 77 ==>  campagne=_true 77    conf:(1) < lift:(6.08)> lev:(0.14) [64] conv:(64.33)
+ 9.  campagne=_true 77 ==>  campagne=_true  camp=_true 77    conf:(1) < lift:(6.08)> lev:(0.14) [64] conv:(64.33)
+10.  camp=_true  campagne=_true 77 ==>  campagne=_true 77    conf:(1) < lift:(6.08)> lev:(0.14) [64] conv:(64.33)
+11.  campagne=_true 77 ==>  camp=_true 77    conf:(1) < lift:(4.93)> lev:(0.13) [61] conv:(61.37)
+12.  camp=_true 95 ==>  campagne=_true 77    conf:(0.81) < lift:(4.93)> lev:(0.13) [61] conv:(4.18)
+13.  camp=_true 95 ==>  campagne=_true 77    conf:(0.81) < lift:(4.93)> lev:(0.13) [61] conv:(4.18)
+14.  campagne=_true 77 ==>  camp=_true 77    conf:(1) < lift:(4.93)> lev:(0.13) [61] conv:(61.37)
+15.  camp=_true 95 ==>  campagne=_true  campagne=_true 77    conf:(0.81) < lift:(4.93)> lev:(0.13) [61] conv:(4.18)
+16.  campagne=_true  campagne=_true 77 ==>  camp=_true 77    conf:(1) < lift:(4.93)> lev:(0.13) [61] conv:(61.37)
+17.  euro=_true 136 ==>  européen=_true 71    conf:(0.52) < lift:(3.44)> lev:(0.11) [50] conv:(1.75)
+18.  européen=_true 71 ==>  euro=_true 71    conf:(1) < lift:(3.44)> lev:(0.11) [50] conv:(50.37)
+19.  candidat=_true 91 ==>  président=_true 70    conf:(0.77) < lift:(2.2)> lev:(0.08) [38] conv:(2.69)
+20.  président=_true 164 ==>  candidat=_true 70    conf:(0.43) < lift:(2.2)> lev:(0.08) [38] conv:(1.39)
+
+\end{lstlisting}
+On a choisi après plusieurs essais de choisir le lift comme critère de sélection car il nous paraissait celui qui donnait les meilleurs résultats.
+Toutes les règles générées ne sont pas fortement intéressantes dans le sens où certaines disent que la présence d'un mot entraîne la présence du même mot (comme par exemple avec "campagne". Cependant, on voit quand même des résultats beaucoup plus intéressants comme par exemple la présence du mot "candidat" qui entraîne la présence du mot "président".
+Nous avons ensuite essayé de générer 300 règles pour voir ce que l'on obtenait parmi les règles qui n'utilisent pas le même mot, et l'on a pu en découvrir certaines autres très intéressantes également. Les voici :
+
+\begin{lstlisting}
+  3. chirac=true 57 ==>  chirac=_true  président=_true 49    conf:(0.86) < lift:(8.21)> lev:(0.09) [43] conv:(5.67)
+ 11.  présidentiel=_true 64 ==>  présidentiel=_true  président=_true 64    conf:(1) < lift:(7.31)> lev:(0.12) [55] conv:(55.25)
+ 15.  présidentiel=_true 64 ==>  candidat=_true  présidentiel=_true 48    conf:(0.75) < lift:(7.31)> lev:(0.09) [41] conv:(3.38)
+ 19.  présidentiel=_true 64 ==>  candidat=_true  présidentiel=_true  président=_true 48    conf:(0.75) < lift:(7.31)> lev:(0.09) [41] conv:(3.38)
+ 20.  présidentiel=_true  candidat=_true 48 ==>  présidentiel=_true  président=_true 48    conf:(1) < lift:(7.31)> lev:(0.09) [41] conv:(41.44)
+ 21.  présidentiel=_true 64 ==>  présidentiel=_true  candidat=_true  président=_true 48    conf:(0.75) < lift:(7.31)> lev:(0.09) [41] conv:(3.38)
+ 22.  candidat=_true  présidentiel=_true 48 ==>  présidentiel=_true  président=_true 48    conf:(1) < lift:(7.31)> lev:(0.09) [41] conv:(41.44)
+ 23.  présidentiel=_true  président=_true 64 ==>  candidat=_true  présidentiel=_true 48    conf:(0.75) < lift:(7.31)> lev:(0.09) [41] conv:(3.38)
+ 24.  présidentiel=_true  candidat=_true  président=_true 48 ==>  présidentiel=_true 48    conf:(1) < lift:(7.31)> lev:(0.09) [41] conv:(41.44)
+ 25.  présidentiel=_true  président=_true 64 ==>  présidentiel=_true  candidat=_true 48    conf:(0.75) < lift:(7.31)> lev:(0.09) [41] conv:(3.38)
+ 47.  ministre=_true 73 ==>  président=_true  ministre=_true 48    conf:(0.66) < lift:(6.41)> lev:(0.09) [40] conv:(2.52)
+ 50.  président=_true  ministre=_true 48 ==>  ministre=_true 48    conf:(1) < lift:(6.41)> lev:(0.09) [40] conv:(40.51)
+ 51.  ministre=_true 73 ==>  politique=_true  ministre=_true 47    conf:(0.64) < lift:(6.41)> lev:(0.08) [39] conv:(2.43)
+ 55.  candidat=_true  campagne=_true 55 ==>  président=_true  camp=_true 48    conf:(0.87) < lift:(6.28)> lev:(0.09) [40] conv:(5.92)
+ 56.  président=_true  camp=_true 65 ==>  candidat=_true  campagne=_true 48    conf:(0.74) < lift:(6.28)> lev:(0.09) [40] conv:(3.19)
+ 63.  élection=_true 76 ==>  président=_true  élection=_true 61    conf:(0.8) < lift:(6.16)> lev:(0.11) [51] conv:(4.13)
+268.  international=_true 63 ==>  national=_true 63    conf:(1) < lift:(2.82)> lev:(0.09) [40] conv:(40.65)
+271.  candidat=_true 91 ==>  social=_true 47    conf:(0.52) < lift:(2.49)> lev:(0.06) [28] conv:(1.6)
+272.  social=_true 97 ==>  candidat=_true 47    conf:(0.48) < lift:(2.49)> lev:(0.06) [28] conv:(1.53)
+277.  président=_true 164 ==>  candidat=_true  campagne=_true  camp=_true 48    conf:(0.29) < lift:(2.49)> lev:(0.06) [28] conv:(1.24)
+285. chirac=true 57 ==>  président=_true 49    conf:(0.86) < lift:(2.45)> lev:(0.06) [29] conv:(4.11)
+286.  président=_true 164 ==> chirac=true 49    conf:(0.3) < lift:(2.45)> lev:(0.06) [29] conv:(1.24)
+297.  jospin=_true 59 ==>  président=_true 47    conf:(0.8) < lift:(2.27)> lev:(0.06) [26] conv:(2.95)
+298.  président=_true 164 ==>  jospin=_true 47    conf:(0.29) < lift:(2.27)> lev:(0.06) [26] conv:(1.21)
+\end{lstlisting}
+Lorsque l'on génère des règles avec le , on obtient des règles différentes, comme par exemple : 
+\begin{lstlisting}
+conseil=_true 93 ==>  président=_true 62    conf:(0.67) lift:(1.9) lev:(0.06) [29] < conv:(1.89)>
+front=_true 73 ==>  national=_true 49    conf:(0.67) lift:(1.89) lev:(0.05) [23] < conv:(1.88)>
+loi=_false  art=_false 109 ==>  eau=_false 75    conf:(0.69) lift:(1.74) lev:(0.07) [31] < conv:(1.88)>
+national=_true  droit=_true 72 ==>  politique=_true 47    conf:(0.65) lift:(2.01) lev:(0.05) [23] < conv:(1.87)>
+candidat=_true 91 ==>  président=_true  camp=_true 50    conf:(0.55) lift:(3.96) lev:(0.08) [37] < conv:(1.87)>
+\end{lstlisting}
+On constate que certaines absences de mots entraînent l'absence d'autres mots,, ce qui est différents des règles produites par le lift.
 \end{document}
