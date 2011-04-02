@@ -1,0 +1,10 @@
+src [Parts] "catalogue_Comics.csv" *
+mv "catalogue_Comics.csv" "'Nom série' is \"2 soeurs\"" personnage
+mv "catalogue_Comics.csv" "'Nom série' is \"24 Heures chrono\"" personnage
+mv "catalogue_Comics.csv" "'Nom série' is \"A History of Violence\"" personnage
+mv "catalogue_Comics.csv" "'Nom série' is \"A l'ombre des tours mortes\"" personnage
+mv "catalogue_Comics.csv" "'Nom série' is \"The Fountain\"" personnage
+mv "catalogue_Comics.csv" "'Nom série' is \"The Quitter\"" personnage
+mv "catalogue_Comics.csv" "'Nom série' is \"Thunderdogs\"" personnage
+mv "catalogue_Comics.csv" "'Nom série' is \"Tu m'aimeras encore si je fais pipi au lit ?\"" personnage
+show personnage
