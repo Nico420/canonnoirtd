@@ -1,0 +1,4 @@
+('Nom série' contains "blanche" or 'Nom série' contains "noir" or 'Nom série' contains "vie " or 'Nom série' contains "mort") and not 'Nom série' contains "une" and not 'Nom série' contains "la" 
+
+Points positifs : arborescence donc recherche facilitée et plus rapide et navigation possible contrairement aux BDD
+Points négatifs : gros travail pour entrer les données, 
