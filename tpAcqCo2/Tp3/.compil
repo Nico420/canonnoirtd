@@ -1,2 +1,3 @@
 pdflatex tp3.tex
+pdflatex tp3.tex
 rm *.aux *.log *.toc

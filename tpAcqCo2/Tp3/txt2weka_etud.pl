@@ -55,9 +55,9 @@ foreach my $a (@tabMots){
 		$virg=", ";
 	}	
 	if($ligne=~ ".*$a.*"){
-		print FICHOUT $virg."1";
+		print FICHOUT $virg."true";
 	}else{
-		print FICHOUT $virg."0";
+		print FICHOUT $virg."false";
 	}
 	
 }
