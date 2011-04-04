@@ -1,0 +1,43 @@
+vabs1(Val,AbsVal) :- Val#=AbsVal,
+					AbsVal#>=0,
+					labeling([Val,AbsVal]).
+vabs1(Val,AbsVal) :- Val*(-1)#=AbsVal,
+					AbsVal#>0,
+					labeling([Val,AbsVal]).
+
+vabs2(0,0).
+vabs2(Val,AbsVal) :- 	Val#=AbsVal
+						or
+						Val*(-1)#=AbsVal,
+						AbsVal#>0,
+						labeling([Val,AbsVal]).
+						
+/* Tests
+[eclipse 5]: vabs1(-2,Y).
+
+Y = 2
+Yes (0.00s cpu)
+[eclipse 6]: vabs2(-2,Y).
+
+Y = 2
+Yes (0.00s cpu)
+
+
+[eclipse 7]: vabs1(X,3).
+
+X = 3
+Yes (0.00s cpu, solution 1, maybe more) ? ;
+
+X = -3
+Yes (0.00s cpu, solution 2)
+[eclipse 8]: vabs2(X,3).
+
+X = X{-1.0Inf .. 1.0Inf}
+
+
+Delayed goals:
+        #=(X{-1.0Inf .. 1.0Inf}, 3, _180{[0, 1]})
+        #=(-(X{-1.0Inf .. 1.0Inf}), 3, _302{[0, 1]})
+        -(_302{[0, 1]}) - _180{[0, 1]} #=< -1
+Yes (0.00s cpu)
+*/

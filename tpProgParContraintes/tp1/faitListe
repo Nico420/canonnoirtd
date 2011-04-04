@@ -1,0 +1,29 @@
+faitListe(VarListe,Taille,Min,Max) :-	dim(VarListe,[Taille]),
+	(for(I,1,Taille),param(VarListe,Min,Max) do
+	(Elem #:: Min..Max,
+	indomain(Elem),
+	VarListe[I] #= Elem
+	)
+	).
+										
+/* Test
+[eclipse 45]: faitListe(L,2,1,2).
+
+L = [](1, 1)
+Yes (0.00s cpu, solution 1, maybe more) ? ;
+
+L = [](1, 2)
+Yes (0.00s cpu, solution 2, maybe more) ? ;
+
+L = [](2, 1)
+Yes (0.00s cpu, solution 3, maybe more) ? ;
+
+L = [](2, 2)
+Yes (0.00s cpu, solution 4)
+
+Autre test
+[eclipse 46]: faitListe([](1,6,3),T,2,8).
+
+No (0.00s cpu)
+
+*/

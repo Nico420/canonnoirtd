@@ -1,0 +1,17 @@
+suite(ListVar) :-	dim(ListVar,[Taille]),
+					(for(I,1,Taille-2),param(ListVar) do
+						(Temp #= ListVar[I+1],
+						vabs1(Temp,VabsDeuxElem),
+						ListVar[I+2] #= VabsDeuxElem - ListVar[I]
+						)
+					).
+/* Test
+[eclipse 47]: suite([](3,-5,2)).
+
+Yes (0.00s cpu)
+
+Autre test
+[eclipse 48]: suite([](2,2,3)).
+
+No (0.00s cpu)
+*/

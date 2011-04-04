@@ -1,0 +1,12 @@
+commandeBis(NbResistance,NbCondensateur) :- 	nbMaxR(NbMaxR),nbMinR(NbMinR),nbMaxC(NbMaxC),nbMinC(NbMinC),
+						NbResistance>=NbCondensateur,
+						isBetween(NbResistance,NbMinR,NbMaxR),
+						isBetween(NbCondensateur,NbMinC,NbMaxC).
+						
+
+/* Test
+[eclipse 82]: commandeBis(NbResistance,NbCOndensateur).
+instantiation fault in NbResistance >= NbCOndensateur
+Abort
+
+*/

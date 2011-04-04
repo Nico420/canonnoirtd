@@ -1,0 +1,16 @@
+commande2(NbResistance,NbCondensateur) :- 	nbMaxR(NbMaxR),nbMinR(NbMinR),nbMaxC(NbMaxC),nbMinC(NbMinC),
+						NbResistance #:: NbMinR..NbMaxR,
+						NbCondensateur #:: NbMinC..NbMaxC,
+						NbResistance #>= NbCondensateur.
+
+/* Tests
+[eclipse 92]: commande2(NbResistance,NbCondensateur).
+
+NbResistance = NbResistance{9000 .. 10000}
+NbCondensateur = NbCondensateur{9000 .. 10000}
+
+
+Delayed goals:
+        NbCondensateur{9000 .. 10000} - NbResistance{9000 .. 10000} #=< 0
+Yes (0.00s cpu)
+*/

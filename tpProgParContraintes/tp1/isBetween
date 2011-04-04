@@ -1,0 +1,4 @@
+isBetween(Var,Min,_Max) :- 	Var=Min.
+isBetween(Var,Min,Max) :- 	\=(Min,Max),
+				is(M,Min+1),
+				isBetween(Var,M,Max).

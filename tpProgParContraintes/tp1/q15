@@ -1,0 +1,28 @@
+% dim(L,[10]),L[1]#=1,L[2]#=2,suite(L).
+% dim(L,[10]),L[1]#=3,L[2]#=7,suite(L).
+/*
+ dim(L,[10]),
+        Elem1#::1..10,Elem2#::1..10,
+        indomain(Elem1),indomain(Elem2),
+        L[1]#=Elem1,L[2]#=Elem2,
+        suite(L).
+*/
+/*
+
+ dim(L,[10]),
+        Elem1#::1..10,Elem2#::1..10,
+        indomain(Elem1),indomain(Elem2),
+        L[1]#=Elem1,L[2]#=Elem2,
+		L[1]#\=L[10],
+        suite(L).
+dim(L,[10]),
+        Elem1#::1..100,Elem2#::1..100,
+        indomain(Elem1),indomain(Elem2),
+        L[1]#=Elem1,L[2]#=Elem2,
+		L[1]#\=L[10],
+        suite(L).
+No (0.94s cpu)
+
+No (93.06s cpu)
+
+*/

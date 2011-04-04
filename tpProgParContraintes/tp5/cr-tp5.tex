@@ -1,0 +1,80 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+% This is a simple template for a LaTeX document using the "article" class.
+% See "book", "report", "letter" for other types of document.
+
+\documentclass[11pt]{article} % use larger type; default would be 10pt
+
+\usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
+\usepackage[T1]{fontenc}
+\usepackage{times}
+
+\usepackage{graphicx} % support the \includegraphics command and options
+
+\usepackage[francais]{babel}
+
+\usepackage{listings}
+
+\usepackage{url}
+
+\usepackage{rotating}
+
+\usepackage[a4paper]{geometry}
+
+
+\date{\today}
+
+\title{Rapport Travaux Pratiques : \\Programmation par Contraintes\\ - TP 5 : \\\textbf{Contraindre puis chercher}}
+\author{Nicolas Desfeux\\Aurélien Texier}
+\begin{document}
+\lstset{language=Prolog,breaklines=true,numbers=left,basicstyle=\footnotesize ,numberstyle=\footnotesize}
+\maketitle
+\paragraph{} Dans ce TP, nous allons chercher à résoudre un problème de gestion de production. Pour cela, nous allons utiliser la programmation par contraintes.
+
+\section{Le problème}
+Le problème que nous allons résoudre concerne une unité de production pour différentes gammes de téléphones mobiles.\\
+L'objectif est de trouver quels fabrications il faut lancer pour obtenir un bénéfice maximum.\\
+Voici les données qui nous sont fournies : \\
+Pour chaque type gamme, nous avons : 
+\begin{itemize}
+\item Le nombre de techniciens de la gamme,
+\item La quantité de téléphone que l'on peut produire par jour,
+\item Le bénéfice obtenu.
+\end{itemize}
+
+\section{Modéliser et contraindre}
+\paragraph{Question 5.1}
+On définit ici différents prédicats qui créent l'ensembles des données et des variables du problème.
+\lstinputlisting[caption="Définition des 3 vecteurs de valeurs et du vecteur de variables"]{defVect.pl}
+\paragraph{Question 5.2}
+Le code suivant permet de définir les prédicats permettant d'exprimer : 
+\begin{itemize}
+\item Le nombre toal d'ouvriers nécéssaire,
+\item Le vecteur de bénéfice total par sorte de téléphones,
+\item Le profit total.
+\end{itemize}
+\lstinputlisting[caption="Différents prédicats utiles à la résolution du problème"]{opVect.pl}
+\paragraph{Question 5.3} 
+On a défini le prédicat pose\_contraintes comme une succesion de prédicats. Contrairement aux T.P. précédents, nous n'avons pas créé de prédicat solve, qui aurait appelé (entre autre), pose\_contrainte.
+\lstinputlisting[caption="Prédicat \textbf{pose\_contraintes}"]{poseContrainte.pl}
+\section{Optimiser}
+\subsection{Branch and bound dans ECLiPSe}
+\paragraph{Question 5.4} Il faut toujours faire un labeling dans le but,
+car il faut que les variables aient ete instanciees.
+\lstinputlisting[caption="Prédicat \textbf{test} avec minimize"]{5-4.pl}
+
+
+\subsection{Application à notre problème}
+\paragraph{Question 5.5} Pour trouver le profit maximum, on crée une variable que l'on cherche à minimaliser, et l'on pose comme contrainte qu'elle soit égale à l'opposé du profit. On obtient ainsi le profit maximum.
+\lstinputlisting[caption="Prédicat \textbf{pose\_contrainte} avec maximisation du profit"]{5-5.pl}
+Nous avons choisi d'appeler le minimize lors de l'appel de la fonction principale.
+\paragraph{Question 5.6}
+Pour cette question, il nous est demandé de changer la politique de l'entreprise. On choisit de créer un seuil pour le profit, et minimiser le nombre d'employés.
+\lstinputlisting[caption="Prédicat \textbf{pose\_contrainte2} avec seuil pour le profit et minimisation du nombre d'ouvriers"]{5-6.pl}
+Pour obtenir ce résultat, nous avons juste rajouter une contrainte pour le seuil du profit, et une recherche du minimum pour le nombre d'ouvrier.
+\newpage
+
+\section{Code Complet, avec l'ensemble des tests}
+\lstinputlisting[caption="TP5"]{tp5.pl}
+\end{document}

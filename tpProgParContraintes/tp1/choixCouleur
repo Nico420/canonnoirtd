@@ -1,0 +1,26 @@
+
+couleurVoiture(rouge).
+couleurVoiture(vert(clair)).
+couleurVoiture(gris).
+couleurVoiture(blanc).
+
+couleurBateau(vert(_)).
+couleurBateau(noir).
+couleurBateau(blanc).
+
+
+choixCouleur(CouleurBateau,CouleurVoiture) :- 	couleurVoiture(CouleurVoiture),
+						couleurBateau(CouleurBateau),
+						CouleurVoiture=CouleurBateau.
+
+/* Tests
+[eclipse 78]: choixCouleur(CouleurBateau,CouleurVoiture).
+
+CouleurBateau = vert(clair)
+CouleurVoiture = vert(clair)
+Yes (0.00s cpu, solution 1, maybe more) ? ;
+
+CouleurBateau = blanc
+CouleurVoiture = blanc
+Yes (0.00s cpu, solution 2)
+*/
