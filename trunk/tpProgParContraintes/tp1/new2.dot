@@ -1,0 +1,30 @@
+digraph G {
+	graph [bgcolor=lightyellow2, splines=true];
+	edge [color=red, arrowsize=2];
+	node [color=cyan, style=filled, shape=polygon, sides=6, fontname="Verdana",fontcolor=black];
+		
+	A1->A2
+	A2->A3 [label=">="]
+A3->B1
+A3->B2
+A3->B3
+B1->SUCCEED
+B2->SUCCEED2
+B3->SUCCEED3
+B2->SUITE {width=7}
+	SUITE->B3 {width=7}
+	{ rank=same; B1 B2 B3 SUITE}
+
+
+	A1 [label="Commande2(NbResistance,NbCondensateur)"];
+	A2 [label="NbResistance::5000...10000\nNbCondensateur::9000...20000"];
+	A3 [label="NbResistance::9000...10000\nNbCondensateur::9000...10000\nCommande3(9000...10000,9000...10000)"];
+
+SUITE [label="..."];
+B1 [label="labelling([9000,9000])\nCommande3(9000,9000)"];
+B2 [label="labelling([9001,9000])\nCommande3(9001,9000)"];
+B3 [label="labelling([10000,10000])\nCommande3(10000,10000)"];
+SUCCEED[label="SUCCEED",color="green"];
+SUCCEED2[label="SUCCEED",color="green"];
+SUCCEED3[label="SUCCEED",color="green"];
+}

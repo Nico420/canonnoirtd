@@ -62,14 +62,14 @@ test(X,Y,Z,W) :-
 	
 /* Question 5.4
 Il faut toujours faire un labeling dans le but,
-car il faut que les variables aient été instanciées.
+car il faut que les variables aient ete instanciees.
 
 [eclipse 53]: minimize(test(X,Y,Z,W),X).
 bb_min: search did not instantiate cost variable
 Aborting execution ...
 Abort
 
-Avec le labeling sur [X,Y,Z,W], cela fonctionne, Prolog trouve les réponses
+Avec le labeling sur [X,Y,Z,W], cela fonctionne, Prolog trouve les reponses
 
 [eclipse 57]: test(X,Y,Z,W),labeling([X,Y,Z,W]).
 
@@ -86,7 +86,7 @@ W = 1
 Yes (0.00s cpu, solution 2, maybe more) ? ;
 */
 
-/* Question 5.5
+/* Test
 
 [eclipse 71]: P2#=P*(-1), minimize(pose_contraintes(F,N,P),P2).
 Found a solution with cost 0

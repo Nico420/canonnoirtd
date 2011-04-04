@@ -1,0 +1,10 @@
+nbChatsMax(1000).
+nbPiesMax(1000).
+
+chapie(Chats,Pies,Pattes,Tetes) :- 	nbChatsMax(NbChatsMax),
+					nbPiesMax(NbPiesMax),
+					Chats #:: 0 .. NbChatsMax,
+					Pies #:: 0 .. NbPiesMax,
+					Pattes #= Chats*4+Pies*2,
+					Tetes #= Chats+Pies,
+					labeling([Chats,Pies]).

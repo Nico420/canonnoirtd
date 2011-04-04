@@ -1,0 +1,25 @@
+nbMaxR(10000).
+nbMinR(5000).
+nbMinC(9000).
+nbMaxC(20000).
+
+commande(NbResistance,NbCondensateur) :- 	nbMaxR(NbMaxR),nbMinR(NbMinR),nbMaxC(NbMaxC),nbMinC(NbMinC),
+						isBetween(NbResistance,NbMinR,NbMaxR),
+						isBetween(NbCondensateur,NbMinC,NbMaxC),
+						NbResistance>=NbCondensateur.
+						
+/* Tests
+[eclipse 79]: commande(NbResistance,NbCondensateur).
+
+NbResistance = 9000
+NbCondensateur = 9000
+Yes (7.73s cpu, solution 1, maybe more) ? ;
+
+NbResistance = 9001
+NbCondensateur = 9000
+Yes (7.74s cpu, solution 2, maybe more) ? ;
+
+NbResistance = 9001
+NbCondensateur = 9001
+Yes (7.74s cpu, solution 3, maybe more) ?
+*/

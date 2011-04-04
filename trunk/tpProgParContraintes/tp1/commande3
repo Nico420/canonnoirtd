@@ -1,0 +1,26 @@
+commande3(NbResistance,NbCondensateur) :- 	nbMaxR(NbMaxR),nbMinR(NbMinR),nbMaxC(NbMaxC),nbMinC(NbMinC),
+						NbResistance #:: NbMinR..NbMaxR,
+						NbCondensateur #:: NbMinC..NbMaxC,
+						NbResistance #>= NbCondensateur,
+						labeling([NbResistance,NbCondensateur]).
+
+/* Tests
+[eclipse 91]: commande3(NbResistance,NbCondensateur).
+
+NbResistance = 9000
+NbCondensateur = 9000
+Yes (0.00s cpu, solution 1, maybe more) ? ;
+
+NbResistance = 9001
+NbCondensateur = 9000
+Yes (0.00s cpu, solution 2, maybe more) ? ;
+
+NbResistance = 9001
+NbCondensateur = 9001
+Yes (0.00s cpu, solution 3, maybe more) ? ;
+
+NbResistance = 9002
+NbCondensateur = 9000
+Yes (0.00s cpu, solution 4, maybe more) ?
+
+*/
