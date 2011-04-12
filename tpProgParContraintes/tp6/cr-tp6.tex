@@ -1,0 +1,48 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+% This is a simple template for a LaTeX document using the "article" class.
+% See "book", "report", "letter" for other types of document.
+
+\documentclass[11pt]{article} % use larger type; default would be 10pt
+
+\usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
+\usepackage[T1]{fontenc}
+\usepackage{times}
+
+\usepackage{graphicx} % support the \includegraphics command and options
+
+\usepackage[francais]{babel}
+
+\usepackage{listings}
+
+\usepackage{url}
+
+\usepackage{rotating}
+
+\usepackage[a4paper]{geometry}
+
+
+\date{\today}
+
+\title{Rapport Travaux Pratiques : \\Programmation par Contraintes\\ - TP 6 : \\\textbf{Sur une balançoire}}
+\author{Nicolas Desfeux\\Aurélien Texier}
+\begin{document}
+\lstset{language=Prolog,breaklines=true,numbers=left,basicstyle=\footnotesize ,numberstyle=\footnotesize}
+\maketitle
+\paragraph{} Dans ce TP, nous allons chercher à appliquer ce que nous avons appris à un problème de la vie réelle (aussi vraisemblable soit il !).
+
+\section{Trouver une solution au problème}
+\paragraph{Question 6.1} Trouver une solution
+\paragraph{Question 6.2} Demander à Eclipse
+\paragraph{Question 6.3} Il existe une symétrie entre les solutions du problème. Une solution qui place 5 personnes à droite possède une symétrie si l'on met ces 5 personnes à gauche. Il n'est donc pas forcément utile de les faire rechercher par Eclipse !\\
+Pour éliminer cette symétrie, nous avons choisi de créer une nouvelle contrainte
+
+\lstinputlisting{test.pl}
+\section{Trouver la meilleure solution}
+\paragraph{Question 6.4}
+\newpage
+
+\section{Code Complet, avec l'ensemble des tests}
+\lstinputlisting[caption="TP6"]{tp6.pl}
+\end{document}
