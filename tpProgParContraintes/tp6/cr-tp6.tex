@@ -30,17 +30,50 @@
 \begin{document}
 \lstset{language=Prolog,breaklines=true,numbers=left,basicstyle=\footnotesize ,numberstyle=\footnotesize}
 \maketitle
-\paragraph{} Dans ce TP, nous allons chercher à appliquer ce que nous avons appris à un problème de la vie réelle (aussi vraisemblable soit il !).
-
+\paragraph{} Dans ce TP, nous allons chercher à appliquer ce que nous avons appris à un problème de la vie réelle (aussi vraisemblable soit il !). Le problème modélise une balançoire à seize places (huit de chaque coté), qu'un famille de dix personnes veut utiliser. Il y a plusieurs règles à respecter pour cette balançoire : 
+\begin{itemize}
+\item La balançoire doit être équilibré (calcul du moments des forces);
+\item La maman et le papa souhaite encadrer leurs enfants pour les surveiller;
+\item Dan et Max doivent être assis chacun devant un parent.
+\item Il doit y avoir 5 personnes de chaque coté.
+\end{itemize}
+\tableofcontents
+\newpage
 \section{Trouver une solution au problème}
-\paragraph{Question 6.1} Trouver une solution
-\paragraph{Question 6.2} Demander à Eclipse
+\paragraph{Question 6.1} Nous avons procéder comme pour les problèmes précédents pour résoudre celui ci. Vous retrouverez donc les étapes suivantes : définition des variables, définitions des domaines, pose des contraintes.
+\lstinputlisting[caption="Solution 1"]{sol1.pl}
+\paragraph{Question 6.2} Voici une solution possible : \\
+\begin{lstlisting}
+P = [](-6, -5, -4, -8, 2, 5, 3, 6, -7, 1)
+Yes (0.13s cpu, solution 1, maybe more) ? ;
+\end{lstlisting}
+Eclipse a besoin de 0.02s pour trouver ce premier résultat. Il y en a bien sur d'autres.
 \paragraph{Question 6.3} Il existe une symétrie entre les solutions du problème. Une solution qui place 5 personnes à droite possède une symétrie si l'on met ces 5 personnes à gauche. Il n'est donc pas forcément utile de les faire rechercher par Eclipse !\\
 Pour éliminer cette symétrie, nous avons choisi de créer une nouvelle contrainte
-
 \lstinputlisting{test.pl}
+Et nous avons juste eu besoin d'adapter le prédicat solve.
+\lstinputlisting[caption="Solution 2"]{sol2.pl}
+Le gain de temps est assez impressionnant. Avec la solution 1, il faut 0.13s à Eclipse pour trouver une solution, alors que pour la solution 2, 0.02s suffisent !
 \section{Trouver la meilleure solution}
-\paragraph{Question 6.4}
+\paragraph{Question 6.4} On cherche maintenant à trouver la meilleur solution, c'est à dire un solution qui minimise les normes des moments des forces pour la balançoire.
+Pour cela, nous avons effectuer deux modifications dans notre code. Nous avons ajouté le calcul du moment des forces sur chque coté de la balançoire. Nous avons aussi modifier notre prédicat solve, afin qu'il permettent de rechercher le minimum des moments de forces que l'on vient de calculer.
+\lstinputlisting[caption="Solution 3"]{sol3.pl}
+Dans le prédicat balancoireEquilibree2, on effectue le calcul de la norme du moment des forces sur un coté de la balançoire. Dans notre problème, il suffit de calculer un seul coté, puisque l'on impose que la balançoire soit équilibrée !
+
+\subsection*{Utilisation du prédicat \textbf{search/6}}
+Dans cette partie, nous avons utiliser le prédicat search qui va nous permettre de controler l'énumération de Eclipse (en influent sur l'ordre dans lequel on instancie les variables, et sur l'ordre dans lequel chaque valeur du domaine d'une variable est testée).
+\paragraph{Version 1} \og Pour réussir, essaie d'abord là où tu as le plus de chances d'échouer \fg. Ici, les premières varaibles testée sont celles qui interviennent dans le plus de contraintes.
+\lstinputlisting[caption="Version 1"]{version1.pl} Ici, il semble que most\_constrained soit plus adapte que occurrence, vu la vitesse de reponse (2.13s au lieu de 2.50s)
+\paragraph{Version 2}
+Ici on vise a essayer de mettre les places les plus au centre en premier,
+parce que c'est dans ce cas que l'on minimise le mieux le moment total.
+\lstinputlisting[caption="Version 2"]{version2.pl}
+\paragraph{Version 3}
+Cette version est une combinaison des versions précédentes.
+\lstinputlisting[caption="Version 3"]{version3.pl}
+Le résultat n'est pas satisfaisant ici.
+\paragraph{Version 4} Cette version est basé sur les heuristiques de choix de l'ordre des variables.
+\lstinputlisting[caption="Version 4"]{version4.pl}
 \newpage
 
 \section{Code Complet, avec l'ensemble des tests}
