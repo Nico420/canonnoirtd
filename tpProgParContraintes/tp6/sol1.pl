@@ -87,10 +87,10 @@ solve(Places) :-
 [eclipse 29]: solve(P).
 
 P = [](-6, -5, -4, -8, 2, 5, 3, 6, -7, 1)
-Yes (0.13s cpu, solution 1, maybe more) ? ;
+Yes (0.02s cpu, solution 1, maybe more) ? ;
 
 P = [](-6, -5, -1, 8, 5, 7, 3, -8, -7, 1)
-Yes (0.15s cpu, solution 2, maybe more) ? ;
+Yes (0.02s cpu, solution 2, maybe more) ? ;
 
 P = [](-6, -5, 1, -8, -2, 6, 5, 7, -7, 4)
 Yes (0.02s cpu, solution 3, maybe more) ? 
