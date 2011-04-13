@@ -30,12 +30,12 @@
 \begin{document}
 \lstset{language=Prolog,breaklines=true,numbers=left,basicstyle=\footnotesize ,numberstyle=\footnotesize}
 \maketitle
-\paragraph{} Dans ce TP, nous allons chercher à appliquer ce que nous avons appris à un problème de la vie réelle (aussi vraisemblable soit il !). Le problème modélise une balançoire à seize places (huit de chaque coté), qu'un famille de dix personnes veut utiliser. Il y a plusieurs règles à respecter pour cette balançoire : 
+\paragraph{} Dans ce TP, nous allons chercher à appliquer ce que nous avons appris à un problème de la vie réelle (aussi vraisemblable soit-il !). Le problème modélise une balançoire à seize places (huit de chaque côté), qu'une famille de dix personnes veut utiliser. Il y a plusieurs règles à respecter pour cette balançoire : 
 \begin{itemize}
-\item La balançoire doit être équilibré (calcul du moments des forces);
-\item La maman et le papa souhaite encadrer leurs enfants pour les surveiller;
+\item La balançoire doit être équilibrée (calcul du moments des forces);
+\item La maman et le papa souhaitent encadrer leurs enfants pour les surveiller;
 \item Dan et Max doivent être assis chacun devant un parent.
-\item Il doit y avoir 5 personnes de chaque coté.
+\item Il doit y avoir 5 personnes de chaque côté.
 \end{itemize}
 \tableofcontents
 \newpage
@@ -47,13 +47,13 @@
 P = [](-6, -5, -4, -8, 2, 5, 3, 6, -7, 1)
 Yes (0.13s cpu, solution 1, maybe more) ? ;
 \end{lstlisting}
-Eclipse a besoin de 0.02s pour trouver ce premier résultat. Il y en a bien sur d'autres.
+Eclipse a besoin de 0.13s pour trouver ce premier résultat. Il y en a bien sur d'autres.
 \paragraph{Question 6.3} Il existe une symétrie entre les solutions du problème. Une solution qui place 5 personnes à droite possède une symétrie si l'on met ces 5 personnes à gauche. Il n'est donc pas forcément utile de les faire rechercher par Eclipse !\\
 Pour éliminer cette symétrie, nous avons choisi de créer une nouvelle contrainte
 \lstinputlisting{test.pl}
 Et nous avons juste eu besoin d'adapter le prédicat solve.
 \lstinputlisting[caption="Solution 2"]{sol2.pl}
-Le gain de temps est assez impressionnant. Avec la solution 1, il faut 0.13s à Eclipse pour trouver une solution, alors que pour la solution 2, 0.02s suffisent !
+
 \section{Trouver la meilleure solution}
 \paragraph{Question 6.4} On cherche maintenant à trouver la meilleur solution, c'est à dire un solution qui minimise les normes des moments des forces pour la balançoire.
 Pour cela, nous avons effectuer deux modifications dans notre code. Nous avons ajouté le calcul du moment des forces sur chque coté de la balançoire. Nous avons aussi modifier notre prédicat solve, afin qu'il permettent de rechercher le minimum des moments de forces que l'on vient de calculer.
@@ -73,7 +73,8 @@ Cette version est une combinaison des versions précédentes.
 \lstinputlisting[caption="Version 3"]{version3.pl}
 Le résultat n'est pas satisfaisant ici.
 \paragraph{Version 4} Cette version est basé sur les heuristiques de choix de l'ordre des variables.
-\lstinputlisting[caption="Version 4"]{version4.pl}
+L'idée ici est de trier la liste des variables dans l'ordre décroissant des poids, pour que lorsque le solveur trouve un score des variables à instancier égal, il prenne les variables dans l'ordre décroissant de leur poids respectif.\\
+\textit{Nous n'avons pas réussi à implémenter cette version.}
 \newpage
 
 \section{Code Complet, avec l'ensemble des tests}
