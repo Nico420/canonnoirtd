@@ -1,0 +1,1379 @@
+%!PS-Adobe-3.0
+%%Title: ChatClientImpl.java, ChatServerImpl.java, ChatServer.java
+%%For: Desfeux Nicolas
+%%Creator: a2ps version 4.14
+%%CreationDate: Fri Feb 11 14:40:18 2011
+%%BoundingBox: 24 24 571 818
+%%DocumentData: Clean7Bit
+%%Orientation: Landscape
+%%Pages: 4
+%%PageOrder: Ascend
+%%DocumentMedia: A4 595 842 0 () ()
+%%DocumentNeededResources: font Courier
+%%+ font Courier-Bold
+%%+ font Courier-BoldOblique
+%%+ font Courier-Oblique
+%%+ font Helvetica
+%%+ font Helvetica-Bold
+%%+ font Symbol
+%%+ font Times-Bold
+%%+ font Times-Roman
+%%DocumentProcessColors: Black 
+%%DocumentSuppliedResources: procset a2ps-a2ps-hdr
+%%+ procset a2ps-black+white-Prolog
+%%+ encoding ISO-8859-1Encoding
+%%EndComments
+/a2psdict 200 dict def
+a2psdict begin
+%%BeginProlog
+%%Copyright: (c) 1988, 89, 90, 91, 92, 93 Miguel Santana
+%%Copyright: (c) 1995, 96, 97, 98 Akim Demaille, Miguel Santana
+% Check PostScript language level.
+/languagelevel where {
+  pop /gs_languagelevel languagelevel def
+} {
+  /gs_languagelevel 1 def
+} ifelse
+
+% EPSF import as in the Red Book
+/BeginInclude {
+  /b4_Inc_state save def    		% Save state for cleanup
+  /dict_count countdictstack def	% Count objects on dict stack
+  /op_count count 1 sub def		% Count objects on operand stack 
+  userdict begin
+    0 setgray 0 setlinecap
+    1 setlinewidth 0 setlinejoin
+    10 setmiterlimit [ ] 0 setdash newpath
+    gs_languagelevel 1 ne {
+      false setstrokeadjust false setoverprint 
+    } if
+} bind def
+
+/EndInclude {
+  count op_count sub { pos } repeat	% Clean up stacks
+  countdictstack dict_count sub { end } repeat
+  b4_Inc_state restore
+} bind def
+
+/BeginEPSF {
+  BeginInclude
+  /showpage { } def
+} bind def
+
+/EndEPSF {
+  EndInclude
+} bind def
+
+% Page prefeed
+/page_prefeed {         % bool -> -
+  statusdict /prefeed known {
+    statusdict exch /prefeed exch put
+  } {
+    pop
+  } ifelse
+} bind def
+
+/deffont {
+  findfont exch scalefont def
+} bind def
+
+/reencode_font {
+  findfont reencode 2 copy definefont pop def
+} bind def
+
+% Function c-show (str => -)
+% centers text only according to x axis.
+/c-show { 
+  dup stringwidth pop
+  2 div neg 0 rmoveto
+  show
+} bind def
+
+% Function l-show (str => -)
+% prints texts so that it ends at currentpoint
+/l-show {
+  dup stringwidth pop neg 
+  0 
+  rmoveto show
+} bind def
+
+% center-fit show (str w => -)
+% show centered, and scale currentfont so that the width is less than w
+/cfshow {
+  exch dup stringwidth pop
+  % If the title is too big, try to make it smaller
+  3 2 roll 2 copy
+  gt
+  { % if, i.e. too big
+    exch div
+    currentfont exch scalefont setfont
+  } { % ifelse
+    pop pop 
+  }
+  ifelse
+  c-show			% center title
+} bind def
+
+% Return the y size of the current font
+% - => fontsize
+/currentfontsize {
+  currentfont /FontType get 0 eq {
+    currentfont /FontMatrix get 3 get
+  }{
+    currentfont /FontMatrix get 3 get 1000 mul
+  } ifelse
+} bind def
+
+% reencode the font
+% <encoding-vector> <fontdict> -> <newfontdict>
+/reencode { %def
+  dup length 5 add dict begin
+    { %forall
+      % <vector> <key> <val>
+      1 index /FID ne 
+      { def }{ pop pop } ifelse
+    } forall
+    /Encoding exch def % -
+
+    % Use the font's bounding box to determine the ascent, descent,
+    % and overall height; don't forget that these values have to be
+    % transformed using the font's matrix.
+    % We use `load' because sometimes BBox is executable, sometimes not.
+    % Since we need 4 numbers an not an array avoid BBox from being executed
+    /FontBBox load aload pop
+    FontMatrix transform /Ascent exch def pop
+    FontMatrix transform /Descent exch def pop
+    /FontHeight Ascent Descent sub def
+
+    % Get the underline position and thickness if they're defined.
+    % Use 1 if they are not defined.
+    currentdict /FontInfo 2 copy known
+    { get
+      /UnderlinePosition 2 copy % <FontInfo> /UP <FontInfo> /UP
+      2 copy known
+      { get }{ pop pop 1 } ifelse
+      0 exch FontMatrix transform exch pop
+      def % <FontInfo>
+
+      /UnderlineThickness 2 copy % <FontInfo> /UT <FontInfo> /UT
+      2 copy known
+      { get }{ pop pop 1 } ifelse
+      0 exch FontMatrix transform exch pop
+      def % <FontInfo>
+      pop % -
+    }{ pop pop
+    } ifelse
+
+    currentdict
+  end 
+} bind def
+
+% composite fonts for ASCII-EUC mixed string
+% Version 1.2 1/31/1990
+% Orignal Ken'ichi HANDA (handa@etl.go.jp)
+% Modified Norio Katayama (katayama@rd.nacsis.ac.jp),1998
+% Extend & Fix Koji Nakamaru (maru@on.cs.keio.ac.jp), 1999
+% Anyone can freely copy, modify, distribute this program.
+
+/copyfont {	% font-dic extra-entry-count  copyfont  font-dic
+	1 index maxlength add dict begin
+	{	1 index /FID ne 2 index /UniqueID ne and
+		{def} {pop pop} ifelse
+	} forall
+	currentdict
+	end
+} bind def
+
+/compositefont { % ASCIIFontName EUCFontName RomanScale RomanOffset Rot(T/F) compositefont font
+    /RomanRotation exch def
+    /RomanOffset exch def
+    /RomanScale exch def
+    userdict /fixeucfont_dict known not {
+	userdict begin
+	    /fixeucfont_dict 2 dict begin
+		/UpperByteEncoding [
+		    16#00 1 16#20 { pop 0 } for
+		    16#21 1 16#28 { 16#20 sub } for
+		    16#29 1 16#2F { pop 0 } for
+		    16#30 1 16#74 { 16#27 sub } for
+		    16#75 1 16#FF { pop 0 } for
+		] def
+	        /LowerByteEncoding [
+		    16#00 1 16#A0 { pop /.notdef } for
+		    16#A1 1 16#FE { 16#80 sub 16 2 string cvrs
+				    (cXX) dup 1 4 -1 roll
+				    putinterval cvn } for
+		    /.notdef
+		] def
+		currentdict
+	    end def
+	end
+    } if
+    findfont dup /FontType get 0 eq {
+	14 dict begin
+	    %
+	    % 7+8 bit EUC font
+	    %
+	    12 dict begin
+		/EUCFont exch def
+		/FontInfo (7+8 bit EUC font) readonly def
+		/PaintType 0 def
+		/FontType 0 def
+		/FontMatrix matrix def
+		% /FontName
+		/Encoding fixeucfont_dict /UpperByteEncoding get def
+		/FMapType 2 def
+		EUCFont /WMode known
+		{ EUCFont /WMode get /WMode exch def }
+		{ /WMode 0 def } ifelse
+		/FDepVector [
+		    EUCFont /FDepVector get 0 get
+		    [ 16#21 1 16#28 {} for 16#30 1 16#74 {} for ]
+		    {
+			13 dict begin
+			    /EUCFont EUCFont def
+			    /UpperByte exch 16#80 add def	
+			    % /FontName
+			    /FontInfo (EUC lower byte font) readonly def
+			    /PaintType 0 def
+			    /FontType 3 def
+			    /FontMatrix matrix def
+			    /FontBBox {0 0 0 0} def
+			    /Encoding
+				fixeucfont_dict /LowerByteEncoding get def
+			    % /UniqueID
+			    % /WMode
+			    /BuildChar {
+				gsave
+				exch dup /EUCFont get setfont
+				/UpperByte get
+				2 string
+				dup 0 4 -1 roll put
+				dup 1 4 -1 roll put
+				dup stringwidth setcharwidth
+				0 0 moveto show
+				grestore
+			    } bind def
+			    currentdict
+			end
+			/lowerbytefont exch definefont
+		    } forall
+		] def
+		currentdict
+	    end
+	    /eucfont exch definefont
+	    exch
+	    findfont 1 copyfont dup begin
+		RomanRotation {
+			/FontMatrix FontMatrix
+			[ 0 RomanScale neg RomanScale 0 RomanOffset neg 0 ]
+			matrix concatmatrix def
+		}{
+			/FontMatrix FontMatrix
+			[ RomanScale 0 0 RomanScale 0 RomanOffset ] matrix concatmatrix
+			def
+			/CDevProc
+			    {pop pop pop pop 0 exch -1000 exch 2 div 880} def
+		} ifelse
+	    end
+	    /asciifont exch definefont
+	    exch
+	    /FDepVector [ 4 2 roll ] def
+	    /FontType 0 def
+	    /WMode 0 def
+	    /FMapType 4 def
+	    /FontMatrix matrix def
+	    /Encoding [0 1] def
+	    /FontBBox {0 0 0 0} def
+%	    /FontHeight 1.0 def % XXXX
+	    /FontHeight RomanScale 1.0 ge { RomanScale }{ 1.0 } ifelse def
+	    /Descent -0.3 def   % XXXX
+	    currentdict
+	end
+	/tmpfont exch definefont
+	pop
+	/tmpfont findfont
+    }{
+	pop findfont 0 copyfont
+    } ifelse
+} def	
+
+/slantfont {	% FontName slant-degree  slantfont  font'
+    exch findfont 1 copyfont begin
+    [ 1 0 4 -1 roll 1 0 0 ] FontMatrix exch matrix concatmatrix
+    /FontMatrix exch def
+    currentdict
+    end
+} def
+
+% Function print line number (<string> # -)
+/# {
+  gsave
+    sx cw mul neg 2 div 0 rmoveto
+    f# setfont
+    c-show
+  grestore
+} bind def
+
+% -------- Some routines to enlight plain b/w printings ---------
+
+% Underline
+% width --
+/dounderline {
+  currentpoint
+  gsave
+    moveto
+    0 currentfont /Descent get currentfontsize mul rmoveto
+    0 rlineto
+    stroke
+  grestore
+} bind def
+
+% Underline a string
+% string --
+/dounderlinestring {
+  stringwidth pop
+  dounderline
+} bind def
+
+/UL {
+  /ul exch store
+} bind def
+
+% Draw a box of WIDTH wrt current font
+% width --
+/dobox {
+  currentpoint
+  gsave
+    newpath
+    moveto
+    0 currentfont /Descent get currentfontsize mul rmoveto
+    dup 0 rlineto
+    0 currentfont /FontHeight get currentfontsize mul rlineto
+    neg 0 rlineto
+    closepath
+    stroke
+  grestore
+} bind def
+
+/BX {
+  /bx exch store
+} bind def
+
+% Box a string
+% string --
+/doboxstring {
+  stringwidth pop
+  dobox
+} bind def
+
+%
+% ------------- Color routines ---------------
+%
+/FG /setrgbcolor load def
+
+% Draw the background
+% width --
+/dobackground {
+  currentpoint
+  gsave
+    newpath
+    moveto
+    0 currentfont /Descent get currentfontsize mul rmoveto
+    dup 0 rlineto
+    0 currentfont /FontHeight get currentfontsize mul rlineto
+    neg 0 rlineto
+    closepath
+    bgcolor aload pop setrgbcolor
+    fill
+  grestore
+} bind def
+
+% Draw bg for a string
+% string --
+/dobackgroundstring {
+  stringwidth pop
+  dobackground
+} bind def
+
+
+/BG {
+  dup /bg exch store
+  { mark 4 1 roll ] /bgcolor exch store } if
+} bind def
+
+
+/Show {
+  bg { dup dobackgroundstring } if
+  ul { dup dounderlinestring } if
+  bx { dup doboxstring } if
+  show
+} bind def
+
+% Function T(ab), jumps to the n-th tabulation in the current line
+/T {
+  cw mul x0 add
+  bg { dup currentpoint pop sub dobackground } if
+  ul { dup currentpoint pop sub dounderline } if
+  bx { dup currentpoint pop sub dobox } if
+  y0 moveto
+} bind def
+
+% Function n: move to the next line
+/n {
+  /y0 y0 bfs sub store
+  x0 y0 moveto
+} bind def
+
+% Function N: show and move to the next line
+/N {
+  Show
+  /y0 y0 bfs sub store
+  x0 y0 moveto
+} bind def
+
+/S {
+  Show
+} bind def
+
+%%BeginResource: procset a2ps-a2ps-hdr 2.0 2
+%%Copyright: (c) 1988, 89, 90, 91, 92, 93 Miguel Santana
+%%Copyright: (c) 1995, 96, 97, 98 Akim Demaille, Miguel Santana
+% Function title: prints page header.
+% <ct> <rt> <lt> are passed as argument
+/title { 
+  % 1. Draw the background
+  x v get y v get moveto
+  gsave
+    0 th 2 div neg rmoveto 
+    th setlinewidth
+    0.95 setgray
+    pw 0 rlineto stroke
+  grestore
+  % 2. Border it
+  gsave
+    0.7 setlinewidth
+    pw 0 rlineto
+    0 th neg rlineto
+    pw neg 0 rlineto
+    closepath stroke
+  grestore
+  % stk: ct rt lt
+  x v get y v get th sub 1 add moveto
+%%IncludeResource: font Helvetica
+  fHelvetica fnfs 0.8 mul scalefont setfont
+  % 3. The left title
+  gsave
+    dup stringwidth pop fnfs 0.8 mul add exch % leave space took on stack
+    fnfs 0.8 mul hm rmoveto
+    show			% left title
+  grestore
+  exch
+  % stk: ct ltw rt
+  % 4. the right title
+  gsave
+    dup stringwidth pop fnfs 0.8 mul add exch % leave space took on stack
+    dup
+    pw exch stringwidth pop fnfs 0.8 mul add sub
+    hm
+    rmoveto
+    show			% right title
+  grestore
+  % stk: ct ltw rtw
+  % 5. the center title
+  gsave
+    pw 3 1 roll
+    % stk: ct pw ltw rtw
+    3 copy 
+    % Move to the center of the left room
+    sub add 2 div hm rmoveto
+    % What is the available space in here?
+    add sub fnfs 0.8 mul sub fnfs 0.8 mul sub
+    % stk: ct space_left
+%%IncludeResource: font Helvetica-Bold
+  fHelvetica-Bold fnfs scalefont setfont
+    cfshow
+  grestore
+} bind def
+
+% Function border: prints virtual page border
+/border { %def
+  gsave				% print four sides
+    0 setgray
+    x v get y v get moveto
+    0.7 setlinewidth		% of the square
+    pw 0 rlineto
+    0 ph neg rlineto
+    pw neg 0 rlineto
+    closepath stroke
+  grestore
+} bind def
+
+% Function water: prints a water mark in background
+/water { %def
+  gsave
+    scx scy moveto rotate
+%%IncludeResource: font Times-Bold
+  fTimes-Bold 100 scalefont setfont
+    .97 setgray
+    dup stringwidth pop 2 div neg -50 rmoveto
+    show
+  grestore
+} bind def
+
+% Function rhead: prints the right header
+/rhead {  %def
+  lx ly moveto
+  fHelvetica fnfs 0.8 mul scalefont setfont
+  l-show
+} bind def
+
+% Function footer (cf rf lf -> -)
+/footer {
+  fHelvetica fnfs 0.8 mul scalefont setfont
+  dx dy moveto
+  show
+
+  snx sny moveto
+  l-show
+  
+  fnx fny moveto
+  c-show
+} bind def
+%%EndResource
+%%BeginResource: procset a2ps-black+white-Prolog 2.0 1
+
+% Function T(ab), jumps to the n-th tabulation in the current line
+/T { 
+  cw mul x0 add y0 moveto
+} bind def
+
+% Function n: move to the next line
+/n { %def
+  /y0 y0 bfs sub store
+  x0 y0 moveto
+} bind def
+
+% Function N: show and move to the next line
+/N {
+  Show
+  /y0 y0 bfs sub store
+  x0 y0 moveto
+}  bind def
+
+/S {
+  Show
+} bind def
+
+/p {
+  false UL
+  false BX
+  fCourier bfs scalefont setfont
+  Show
+} bind def
+
+/sy {
+  false UL
+  false BX
+  fSymbol bfs scalefont setfont
+  Show
+} bind def
+
+/k {
+  false UL
+  false BX
+  fCourier-Oblique bfs scalefont setfont
+  Show
+} bind def
+
+/K {
+  false UL
+  false BX
+  fCourier-Bold bfs scalefont setfont
+  Show
+} bind def
+
+/c {
+  false UL
+  false BX
+  fCourier-Oblique bfs scalefont setfont
+  Show
+} bind def
+
+/C {
+  false UL
+  false BX
+  fCourier-BoldOblique bfs scalefont setfont
+  Show 
+} bind def
+
+/l {
+  false UL
+  false BX
+  fHelvetica bfs scalefont setfont
+  Show
+} bind def
+
+/L {
+  false UL
+  false BX
+  fHelvetica-Bold bfs scalefont setfont
+  Show 
+} bind def
+
+/str{
+  false UL
+  false BX
+  fTimes-Roman bfs scalefont setfont
+  Show
+} bind def
+
+/e{
+  false UL
+  true BX
+  fHelvetica-Bold bfs scalefont setfont
+  Show
+} bind def
+
+%%EndResource
+%%EndProlog
+%%BeginSetup
+%%IncludeResource: font Courier
+%%IncludeResource: font Courier-Oblique
+%%IncludeResource: font Courier-Bold
+%%IncludeResource: font Times-Roman
+%%IncludeResource: font Symbol
+%%IncludeResource: font Courier-BoldOblique
+%%BeginResource: encoding ISO-8859-1Encoding
+/ISO-8859-1Encoding [
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef 
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef 
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef 
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef 
+/space /exclam /quotedbl /numbersign /dollar /percent /ampersand /quoteright 
+/parenleft /parenright /asterisk /plus /comma /minus /period /slash 
+/zero /one /two /three /four /five /six /seven 
+/eight /nine /colon /semicolon /less /equal /greater /question 
+/at /A /B /C /D /E /F /G 
+/H /I /J /K /L /M /N /O 
+/P /Q /R /S /T /U /V /W 
+/X /Y /Z /bracketleft /backslash /bracketright /asciicircum /underscore 
+/quoteleft /a /b /c /d /e /f /g 
+/h /i /j /k /l /m /n /o 
+/p /q /r /s /t /u /v /w 
+/x /y /z /braceleft /bar /braceright /asciitilde /.notdef 
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef 
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef 
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef 
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef 
+/space /exclamdown /cent /sterling /currency /yen /brokenbar /section 
+/dieresis /copyright /ordfeminine /guillemotleft /logicalnot /hyphen /registered /macron 
+/degree /plusminus /twosuperior /threesuperior /acute /mu /paragraph /bullet 
+/cedilla /onesuperior /ordmasculine /guillemotright /onequarter /onehalf /threequarters /questiondown 
+/Agrave /Aacute /Acircumflex /Atilde /Adieresis /Aring /AE /Ccedilla 
+/Egrave /Eacute /Ecircumflex /Edieresis /Igrave /Iacute /Icircumflex /Idieresis 
+/Eth /Ntilde /Ograve /Oacute /Ocircumflex /Otilde /Odieresis /multiply 
+/Oslash /Ugrave /Uacute /Ucircumflex /Udieresis /Yacute /Thorn /germandbls 
+/agrave /aacute /acircumflex /atilde /adieresis /aring /ae /ccedilla 
+/egrave /eacute /ecircumflex /edieresis /igrave /iacute /icircumflex /idieresis 
+/eth /ntilde /ograve /oacute /ocircumflex /otilde /odieresis /divide 
+/oslash /ugrave /uacute /ucircumflex /udieresis /yacute /thorn /ydieresis 
+] def
+%%EndResource
+% Initialize page description variables.
+/sh 595 def
+/sw 842 def
+/llx 24 def
+/urx 818 def
+/ury 571 def
+/lly 24 def
+/#copies 1 def
+/th 15.000000 def
+/fnfs 11 def
+/bfs 8.005733 def
+/cw 4.803440 def
+
+% Dictionary for ISO-8859-1 support
+/iso1dict 8 dict begin
+  /fCourier ISO-8859-1Encoding /Courier reencode_font
+  /fCourier-Bold ISO-8859-1Encoding /Courier-Bold reencode_font
+  /fCourier-BoldOblique ISO-8859-1Encoding /Courier-BoldOblique reencode_font
+  /fCourier-Oblique ISO-8859-1Encoding /Courier-Oblique reencode_font
+  /fHelvetica ISO-8859-1Encoding /Helvetica reencode_font
+  /fHelvetica-Bold ISO-8859-1Encoding /Helvetica-Bold reencode_font
+  /fTimes-Bold ISO-8859-1Encoding /Times-Bold reencode_font
+  /fTimes-Roman ISO-8859-1Encoding /Times-Roman reencode_font
+currentdict end def
+/bgcolor [ 0 0 0 ] def
+/bg false def
+/ul false def
+/bx false def
+% The font for line numbering
+/f# /Helvetica findfont bfs .6 mul scalefont def
+/fSymbol /Symbol findfont def
+/hm fnfs 0.25 mul def
+/pw
+   cw 81.400000 mul
+def
+/ph
+   501.959430 th add
+def
+/pmw urx llx sub pw 2 mul sub 1 div def
+/pmh 0 def
+/v 0 def
+/x [
+  0
+  dup pmw add pw add
+] def
+/y [
+  pmh ph add 0 mul ph add
+  dup
+] def
+/scx sw 2 div def
+/scy sh 2 div def
+/snx urx def
+/sny lly 2 add def
+/dx llx def
+/dy sny def
+/fnx scx def
+/fny dy def
+/lx snx def
+/ly ury fnfs 0.8 mul sub def
+/sx 0 def
+/tab 8 def
+/x0 0 def
+/y0 0 def
+%%EndSetup
+
+%%Page: (1-2) 1
+%%BeginPageSetup
+/pagesave save def
+sh 0 translate 90 rotate
+%%EndPageSetup
+iso1dict begin
+gsave
+llx lly 12 add translate
+/v 0 store
+/x0 x v get 3.362408 add sx cw mul add store
+/y0 y v get bfs th add sub store
+x0 y0 moveto
+(package) K
+( chat;) p n
+() N
+(import) K
+( java.net.MalformedURLException;) p n
+(import) K
+( java.net.InetAddress;) p n
+(import) K
+( java.net.UnknownHostException;) p n
+(import) K
+( java.rmi.Naming;) p n
+(import) K
+( java.rmi.NotBoundException;) p n
+(import) K
+( java.rmi.RemoteException;) p n
+(import) K
+( java.io.*;) p n
+() N
+(/**) C n
+( * This class describes the client object that handles the communications with) N
+( * the server) N
+( */) N
+() p n
+(public) K
+( ) p
+(class) K
+( ) p
+(ChatClientImpl) L
+( ) p
+(extends) K
+( Thread {) p n
+() S 8 T () S
+(/**) C n
+() S 8 T ( * The name of the user who sends messages using this client) N
+() S 8 T ( */) N
+() p n
+() S 8 T () S
+(protected) K
+( String user;) p n
+() N
+() S 8 T () S
+(/**) C n
+() S 8 T ( * Remote reference to the server) N
+() S 8 T ( */) N
+() p n
+() S 8 T () S
+(protected) K
+( ChatServer theServer;) p n
+() N
+() S 8 T () S
+(/**) C n
+() S 8 T ( * We create and initialise an object for user <code>user</code> in orde) N
+(r to) N
+() S 8 T ( * speak to the server which can be found at the URL passed as a second) N
+() S 8 T ( * parameter) N
+() S 8 T ( */) N
+() p n
+() S 8 T () S
+(public) K
+( ChatClientImpl\(String user, ChatServer server\)) p n
+() S 8 T () S 16 T () S 24 T () S
+(throws) K
+( RemoteException {) p n
+() S 8 T () S 16 T (this.user = user;) N
+() S 8 T () S 16 T (this.theServer = server;) N
+() N
+() S 8 T () S 16 T (this.start\(\);) N
+() S 8 T () S 16 T (this.sendMessage\(\);) N
+() S 8 T (}) N
+() N
+() S 8 T () S
+(public) K
+( ) p
+(static) K
+( ) p
+(void) k
+( main\(String[] args\) {) p n
+() S 8 T () S 16 T (String url;) N
+() S 8 T () S 16 T (String server_name;) N
+() S 8 T () S 16 T (String user;) N
+() S 8 T () S 16 T (String adresseClient;) N
+() S 8 T () S 16 T (String ad_server = ") S
+( ) str
+(";) p n
+() S 8 T () S 16 T () S
+(// Checks the arguments passed on the command line and prints ou) c n
+(t) N
+() p 8 T () S 16 T () S
+(// a help message if there are not enough arguments \(2\)) c n
+() p 8 T () S 16 T () S
+(if) K
+( \(args.length < 2\) {) p n
+() S 8 T () S 16 T () S 24 T (System.out.println\(") S
+(Usage: client <server URL> <username>) str
+("\);) p n
+() S 8 T () S 16 T () S 24 T () S
+(return) K
+(;) p n
+() S 8 T () S 16 T (} ) S
+(else) K
+( {) p n
+() S 8 T () S 16 T () S 24 T (server_name = args[0];) N
+() S 8 T () S 16 T () S 24 T (user = args[1];) N
+() S 8 T () S 16 T (}) N
+() S 8 T () S 16 T () S
+(try) K
+( {) p n
+() S 8 T () S 16 T () S 24 T (System.out.println\(") S
+( ad_server ) str
+(" + ad_server\);) p n
+(ChatClientImpl.java) (Page 1/3) (11 f\303\251vr. 11 14:24) title
+border
+/v 1 store
+/x0 x v get 3.362408 add sx cw mul add store
+/y0 y v get bfs th add sub store
+x0 y0 moveto
+() p 8 T () S 16 T () S 24 T (ad_server = InetAddress.getByName\(server_name\).getHostAd) N
+(dress\(\);) N
+() S 8 T () S 16 T (} ) S
+(catch) K
+( \(UnknownHostException e\) {) p n
+() S 8 T () S 16 T () S 24 T () S
+(return) K
+(;) p n
+() S 8 T () S 16 T (}) N
+() N
+() S 8 T () S 16 T (url = ") S
+(rmi://) str
+(" + ad_server + ") p
+(/simpleChatServer) str
+(";) p n
+() S 8 T () S 16 T () S
+(// Tries to connect to the server) c n
+() p 8 T () S 16 T () S
+(try) K
+( {) p n
+() S 8 T () S 16 T () S 24 T () S
+(// Lookups up the server object using the rmiregistry) c n
+() p 8 T () S 16 T () S 24 T (ChatServer server = \(ChatServer\) Naming.lookup\(url\);) N
+() S 8 T () S 16 T () S 24 T () S
+(if) K
+( \(server != ) p
+(null) k
+(\) {) p n
+() S 8 T () S 16 T () S 24 T () S 32 T (System.out.println\(") S
+(Server found at URL ) str
+(" + url\);) p n
+() N
+() S 8 T () S 16 T () S 24 T () S 32 T () S
+(// Server is found, let's create the client obje) c n
+(ct) N
+() p 8 T () S 16 T () S 24 T () S 32 T (ChatClientImpl theClient = ) S
+(new) K
+( ChatClientImpl\(us) p n
+(er, server\);) N
+() S 8 T () S 16 T () S 24 T (} ) S
+(else) K
+( {) p n
+() S 8 T () S 16 T () S 24 T () S 32 T (System.out.println\(") S
+(No server found at URL ) str
+(" + url\);) p n
+() S 8 T () S 16 T () S 24 T (}) N
+() S 8 T () S 16 T (} ) S
+(catch) K
+( \(MalformedURLException e\) {) p n
+() S 8 T () S 16 T () S 24 T (System.out.println\(") S
+(URL is not a valid one: ) str
+(" + url\);) p n
+() S 8 T () S 16 T (} ) S
+(catch) K
+( \(NotBoundException e\) {) p n
+() S 8 T () S 16 T () S 24 T (System.out.println\(") S
+(No server bound with this URL: ) str
+(" + url\);) p n
+() S 8 T () S 16 T (} ) S
+(catch) K
+( \(RemoteException e\) {) p n
+() S 8 T () S 16 T () S 24 T (System.out.println\(") S
+(Error, client cannot find server: ) str
+(" + e\);) p n
+() S 8 T () S 16 T (}) N
+() N
+() S 8 T () S 16 T () S
+(return) K
+(;) p n
+() S 8 T (}) N
+() N
+() S 8 T () S
+(/**) C n
+() S 8 T ( * Get all the messages from the server and asks the user interface to) N
+() S 8 T ( * display them nb_msg nombre de messages d\303\251j\303\240 consultes Permet de) N
+() S 8 T ( * d\303\251terminer quels sont les nouveaux messages) N
+() S 8 T ( * ) N
+() S 8 T ( * @throws RemoteException) N
+() S 8 T ( */) N
+() p 8 T () S
+(protected) K
+( ) p
+(int) k
+( displayAllMessages\() p
+(int) k
+( nb_msg\) ) p
+(throws) K
+( RemoteException {) p n
+() S 8 T () S 16 T (String[] mes = this.theServer.getAllMessages\(\);) N
+() S 8 T () S 16 T () S
+(for) K
+( \() p
+(int) k
+( i = nb_msg; i < mes.length; i++\) {) p n
+() S 8 T () S 16 T () S 24 T (System.out.println\(mes[i]\);) N
+() S 8 T () S 16 T (}) N
+() S 8 T () S 16 T () S
+(return) K
+( mes.length;) p n
+() S 8 T (}) N
+() N
+() S 8 T () S
+(/**) C n
+() S 8 T ( * Adds a new message to the server) N
+() S 8 T ( */) N
+() p n
+() S 8 T () S
+(protected) K
+( ) p
+(void) k
+( sendMessage\(\) {) p n
+() S 8 T () S 16 T (String line;) N
+() S 8 T () S 16 T (BufferedReader clavier = ) S
+(new) K
+( BufferedReader\() p
+(new) K
+( InputStreamReade) p n
+(r\() N
+() S 8 T () S 16 T () S 24 T () S 32 T (System.in\)\);) N
+() S 8 T () S 16 T () S
+(while) K
+( \() p
+(true) k
+(\) {) p n
+() N
+() S 8 T () S 16 T () S 24 T () S
+(try) K
+( {) p n
+() S 8 T () S 16 T () S 24 T () S 32 T (System.out.println\(") S
+(Tape une ligne ) str
+("\);) p n
+() S 8 T () S 16 T () S 24 T () S 32 T (line = clavier.readLine\(\);) N
+() N
+(ChatClientImpl.java) (Page 2/3) (11 f\303\251vr. 11 14:24) title
+border
+grestore
+(Imprim\303\251 par Desfeux Nicolas) rhead
+(ChatClientImpl.java) (1/4) (vendredi 11 f\303\251vrier 2011) footer
+end % of iso1dict
+pagesave restore
+showpage
+%%Page: (3) 2
+%%BeginPageSetup
+/pagesave save def
+sh 0 translate 90 rotate
+%%EndPageSetup
+iso1dict begin
+gsave
+llx lly 12 add translate
+/v 0 store
+/x0 x v get 3.362408 add sx cw mul add store
+/y0 y v get bfs th add sub store
+x0 y0 moveto
+() p 8 T () S 16 T () S 24 T () S 32 T (line = ") S
+([) str
+(" + this.user + ") p
+(] ) str
+(" + line;) p n
+() N
+() S 8 T () S 16 T () S 24 T () S 32 T () S
+(// Remote call) c n
+() p 8 T () S 16 T () S 24 T () S 32 T (this.theServer.addNewMessage\(line\);) N
+() S 8 T () S 16 T () S 24 T (} ) S
+(catch) K
+( \(RemoteException e\) {) p n
+() S 8 T () S 16 T () S 24 T () S 32 T (System.out) N
+() S 8 T () S 16 T () S 24 T () S 32 T () S 40 T () S 48 T (.println\(") S
+(Problem while sending a messag) str n
+(e to the server: ) S
+(") p n
+() S 8 T () S 16 T () S 24 T () S 32 T () S 40 T () S 48 T () S 56 T () S 64 T (+ e\);) N
+() S 8 T () S 16 T () S 24 T (} ) S
+(catch) K
+( \(IOException ex\) {) p n
+() S 8 T () S 16 T () S 24 T () S 32 T (System.err.println\(") S
+(IO Problem ) str
+(" + ex\);) p n
+() S 8 T () S 16 T () S 24 T (}) N
+() S 8 T () S 16 T (}) N
+() S 8 T (}) N
+() N
+() S 8 T () S
+(public) K
+( ) p
+(void) k
+( run\(\) {) p n
+() S 8 T () S 16 T () S
+(int) k
+( nombre_messages = 0;) p n
+() S 8 T () S 16 T () S
+(while) K
+( \() p
+(true) k
+(\) {) p n
+() S 8 T () S 16 T () S 24 T () S
+(try) K
+( {) p n
+() S 8 T () S 16 T () S 24 T () S 32 T (nombre_messages = displayAllMessages\(nombre_mess) N
+(ages\);) N
+() S 8 T () S 16 T () S 24 T (} ) S
+(catch) K
+( \(RemoteException e1\) {) p n
+() S 8 T () S 16 T () S 24 T () S 32 T () S
+(// TODO Auto-generated catch block) c n
+() p 8 T () S 16 T () S 24 T () S 32 T (e1.printStackTrace\(\);) N
+() S 8 T () S 16 T () S 24 T (}) N
+() S 8 T () S 16 T () S 24 T () S
+(try) K
+( {) p n
+() S 8 T () S 16 T () S 24 T () S 32 T (Thread.sleep\(300\);) N
+() S 8 T () S 16 T () S 24 T (} ) S
+(catch) K
+( \(InterruptedException e\) {) p n
+() S 8 T () S 16 T () S 24 T () S 32 T (System.err.println\(") S
+(Problem while sleep) str
+("\);) p n
+() S 8 T () S 16 T () S 24 T (}) N
+() S 8 T () S 16 T (}) N
+() S 8 T (}) N
+(}) N
+(ChatClientImpl.java) (Page 3/3) (11 f\303\251vr. 11 14:24) title
+border
+grestore
+(Imprim\303\251 par Desfeux Nicolas) rhead
+(ChatClientImpl.java) (2/4) (vendredi 11 f\303\251vrier 2011) footer
+end % of iso1dict
+pagesave restore
+showpage
+%%Page: (1-2) 3
+%%BeginPageSetup
+/pagesave save def
+sh 0 translate 90 rotate
+%%EndPageSetup
+iso1dict begin
+gsave
+llx lly 12 add translate
+/v 0 store
+/x0 x v get 3.362408 add sx cw mul add store
+/y0 y v get bfs th add sub store
+x0 y0 moveto
+(package) K
+( chat;) p n
+() N
+(import) K
+( java.net.MalformedURLException;) p n
+(import) K
+( java.net.InetAddress;) p n
+(import) K
+( java.net.UnknownHostException;) p n
+(import) K
+( java.rmi.AlreadyBoundException;) p n
+(import) K
+( java.rmi.Naming;) p n
+(import) K
+( java.rmi.RemoteException;) p n
+(import) K
+( java.rmi.registry.LocateRegistry;) p n
+(import) K
+( java.rmi.server.UnicastRemoteObject;) p n
+(import) K
+( java.util.Vector;) p n
+() N
+(/**) C n
+(*   This class provides an implementation for the server) N
+(*/) N
+() p n
+(public) K
+( ) p
+(class) K
+( ) p
+(ChatServerImpl) L
+( ) p
+(extends) K
+( UnicastRemoteObject ) p
+(implements) K
+( ChatServer {) p n
+() S 8 T () S
+(/**) C n
+() S 8 T (* This Vector object holds all the messages in the list) N
+() S 8 T (*/) N
+() p n
+() S 8 T () S
+(protected) K
+( Vector allMessages;) p n
+() S 8 T () N
+() N
+() S 8 T () S
+(/**) C n
+() S 8 T (*   Creates and initialised the server object) N
+() S 8 T (*/) N
+() p n
+() S 8 T () S
+(public) K
+( ChatServerImpl\(\) ) p
+(throws) K
+( RemoteException {) p n
+() S 8 T () S 16 T (this.allMessages = ) S
+(new) K
+( Vector\(\);) p n
+() S 8 T (}) N
+() N
+() N
+() S 8 T () S
+(/**) C n
+() S 8 T (*   Implementation of the remote method by which the client) N
+() S 8 T (*   retrieves the list of all messages) N
+() S 8 T (*/) N
+() p n
+() S 8 T () S
+(public) K
+( String[] getAllMessages\(\) ) p
+(throws) K
+( RemoteException {) p n
+() S 8 T () S 16 T (String[] result = ) S
+(new) K
+( String[this.allMessages.size\(\)];) p n
+() S 8 T () S 16 T (this.allMessages.copyInto\(result\);) N
+() S 8 T () S 16 T () S
+(return) K
+( result;) p n
+() S 8 T (}) N
+() N
+() S 8 T () S
+(/**) C n
+() S 8 T (*   Implementation of the remote method by which the client) N
+() S 8 T (*   adds a new message to the list) N
+() S 8 T (*/) N
+() p n
+() S 8 T () S
+(public) K
+( ) p
+(void) k
+( addNewMessage\(String m\) ) p
+(throws) K
+( RemoteException {) p n
+() S 8 T (    System.out.println\(") S
+(J'ai un truc ) str
+("+m\);) p n
+() S 8 T (    this.allMessages.addElement\(m\);) N
+() S 8 T (    ) S
+(return) K
+(;) p n
+() S 8 T (}) N
+() N
+() S 8 T () S
+(public) K
+( ) p
+(static) K
+( ) p
+(void) k
+( main\(String[] args\) {) p n
+() S 8 T () S 16 T (String url;) N
+() N
+() S 8 T () S 16 T () S
+(// If the user did not provide as a command-line argument the UR) c n
+(L) N
+() p 8 T () S 16 T () S
+(// where the server should be registered, let's display an error) c n
+( message) N
+(ChatServerImpl.java) (Page 1/2) (11 f\303\251vr. 11 14:39) title
+border
+/v 1 store
+/x0 x v get 3.362408 add sx cw mul add store
+/y0 y v get bfs th add sub store
+x0 y0 moveto
+() p 8 T () S 16 T () S
+(// and exit the program) c n
+() p 8 T () S 16 T () S
+(try) K
+( {) p n
+() S 8 T () S 16 T (  url = ") S
+(rmi://) str
+("+ InetAddress.getLocalHost\(\)) p n
+() S 8 T () S 16 T (    .getHostAddress\(\) + ") S
+(/simpleChatServer) str
+(";) p n
+() S 8 T () S 16 T (} ) S
+(catch) K
+( \(UnknownHostException e\) {) p n
+() S 8 T () S 16 T (  ) S
+(return) K
+(;) p n
+() S 8 T () S 16 T (}) N
+() N
+() S 8 T () S 16 T () S
+(// Creates the server object) c n
+() p 8 T () S 16 T () S
+(try) K
+( {) p n
+() S 8 T () S 16 T () S 24 T (ChatServerImpl theServer = ) S
+(new) K
+( ChatServerImpl\(\);) p n
+() S 8 T () S 16 T () S 24 T () S
+(// To avoir to start ./registry) c n
+() p 8 T () S 16 T () S 24 T (LocateRegistry.createRegistry\(1099\);) N
+() S 8 T () S 16 T () S 24 T (Naming.bind\(url, theServer\);) N
+() S 8 T () S 16 T () S 24 T (System.out.println\(") S
+(Server started and registered with URL ) str
+(" + url\);) p n
+() S 8 T () S 16 T (} ) S
+(catch) K
+( \(MalformedURLException e\) {) p n
+() S 8 T () S 16 T () S 24 T (System.out.println\(") S
+(The following URL is not valid: ) str
+(" + url\);) p n
+() S 8 T () S 16 T (} ) S
+(catch) K
+( \(AlreadyBoundException e\) {) p n
+() S 8 T () S 16 T () S 24 T (System.out.println\() N
+() S 8 T () S 16 T () S 24 T () S 32 T (") S
+(Another server is already registered with URL ) str
+(" + url\);) p n
+() S 8 T () S 16 T (} ) S
+(catch) K
+( \(RemoteException e\) {) p n
+() S 8 T () S 16 T () S 24 T (System.out.println\(") S
+(Error, the server could not be launched: ) str
+(" + e\);) p n
+() S 8 T () S 16 T (}) N
+() N
+() S 8 T () S 16 T () S
+(return) K
+(;) p n
+() S 8 T (}) N
+(}) N
+(ChatServerImpl.java) (Page 2/2) (11 f\303\251vr. 11 14:39) title
+border
+grestore
+(Imprim\303\251 par Desfeux Nicolas) rhead
+(ChatServerImpl.java) (3/4) (vendredi 11 f\303\251vrier 2011) footer
+end % of iso1dict
+pagesave restore
+showpage
+%%Page: (1) 4
+%%BeginPageSetup
+/pagesave save def
+sh 0 translate 90 rotate
+%%EndPageSetup
+iso1dict begin
+gsave
+llx lly 12 add translate
+/v 0 store
+/x0 x v get 3.362408 add sx cw mul add store
+/y0 y v get bfs th add sub store
+x0 y0 moveto
+(package) K
+( chat;) p n
+() N
+(import) K
+( java.rmi.Remote;) p n
+(import) K
+( java.rmi.RemoteException;) p n
+() N
+(/**) C n
+(*   This is the remote interface that describes the methods) N
+(*   that the client can call on the server) N
+(*/) N
+() p n
+(public) K
+( ) p
+(interface) K
+( ) p
+(ChatServer) L
+( ) p
+(extends) K
+( Remote {) p n
+() N
+() N
+() S 8 T () S
+(/**) C n
+() S 8 T (*   The client retrieves all the messages that are on the server) N
+() S 8 T (*/) N
+(    ) p
+(public) K
+( String[] getAllMessages\(\) ) p
+(throws) K
+( RemoteException;) p n
+() N
+() S 8 T () S
+(/**) C n
+() S 8 T (*   The client adds a new message to the list) N
+() S 8 T (*/) N
+(    ) p
+(public) K
+( ) p
+(void) k
+( addNewMessage\(String m\) ) p
+(throws) K
+( RemoteException;) p n
+() N
+() N
+(}) N
+(ChatServer.java) (Page 1/1) (11 f\303\251vr. 11 13:06) title
+border
+grestore
+(Imprim\303\251 par Desfeux Nicolas) rhead
+(ChatServer.java) (4/4) (vendredi 11 f\303\251vrier 2011) footer
+end % of iso1dict
+pagesave restore
+showpage
+
+%%Trailer
+end
+%%EOF
